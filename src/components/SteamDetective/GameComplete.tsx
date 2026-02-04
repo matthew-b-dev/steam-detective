@@ -285,7 +285,7 @@ export const GameComplete: React.FC<GameCompleteProps> = ({
                   userPercentile={userPercentile}
                   onCopyToShare={onCopyToShare}
                   isLoading={scoresLoading}
-                  text={'Copy both Case Files'}
+                  text={'Share both Case Files'}
                 />
               )}
 
