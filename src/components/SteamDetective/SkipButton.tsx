@@ -1,9 +1,5 @@
 import { useRef } from 'react';
-import {
-  ForwardIcon,
-  NoSymbolIcon,
-  XMarkIcon,
-} from '@heroicons/react/24/solid';
+import { ForwardIcon, XMarkIcon } from '@heroicons/react/24/solid';
 import { MAX_CLUES } from './utils';
 
 interface SkipButtonProps {
