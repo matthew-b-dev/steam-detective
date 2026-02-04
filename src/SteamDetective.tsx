@@ -21,7 +21,6 @@ import {
 import blueGamesFolderIcon from './assets/games-folder-48.png';
 import greenGamesFolderIcon from './assets/green-games-folder-48.png';
 import analyzeIcon from './assets/analyze-48.png';
-import calendarIcon from './assets/calendar-48.png';
 
 // Preload images hook
 const useImagePreloader = (src: string) => {
@@ -42,7 +41,6 @@ interface SteamDetectiveGameProps {
   puzzleDate: string;
   easyTotalGuesses?: number;
   expertCaseStarted?: boolean;
-  onCopyEasyOnly?: () => void;
 }
 
 const SteamDetectiveGame: React.FC<SteamDetectiveGameProps> = ({
@@ -51,7 +49,6 @@ const SteamDetectiveGame: React.FC<SteamDetectiveGameProps> = ({
   puzzleDate,
   easyTotalGuesses,
   expertCaseStarted,
-  onCopyEasyOnly,
 }) => {
   const [flashGuesses, setFlashGuesses] = useState(false);
   const prevShowCluesRef = useRef<boolean[]>([
@@ -222,49 +219,44 @@ const SteamDetectiveGame: React.FC<SteamDetectiveGameProps> = ({
     }
   }, [showClues, state.isComplete]);
 
-  const handleCopyToShare = useCallback(
-    (compact: boolean = false) => {
-      // Generate emoji representation of guesses
-      const generateEmojiText = (totalGuesses: number) => {
-        if (totalGuesses === 7) {
-          return '🟥 🟥 🟥 🟥 🟥 🟥';
-        }
-        const emojis = [];
-        for (let i = 1; i <= 6; i++) {
-          if (i < totalGuesses) {
-            emojis.push('🟥');
-          } else if (i === totalGuesses) {
-            emojis.push('✅');
-          } else {
-            emojis.push('⬜');
-          }
-        }
-        return emojis.join(' ');
-      };
-
-      let emojiText = '';
-      if (
-        caseFile === 'expert' &&
-        easyTotalGuesses !== undefined &&
-        easyTotalGuesses > 0
-      ) {
-        // For expert mode, include both easy and expert scores
-        const easyEmoji = generateEmojiText(easyTotalGuesses);
-        const expertEmoji = generateEmojiText(state.totalGuesses);
-        emojiText = `1️⃣  ${easyEmoji} \n2️⃣  ${expertEmoji}`;
-      } else {
-        // For easy mode, just show the easy score
-        emojiText = `${generateEmojiText(state.totalGuesses)} 📁 #1`;
+  const handleCopyToShare = useCallback(() => {
+    // Generate emoji representation of guesses
+    const generateEmojiText = (totalGuesses: number) => {
+      if (totalGuesses === 7) {
+        return '🟥🟥🟥🟥🟥🟥';
       }
+      const emojis = [];
+      for (let i = 1; i <= 6; i++) {
+        if (i < totalGuesses) {
+          emojis.push('🟥');
+        } else if (i === totalGuesses) {
+          emojis.push('✅');
+        } else {
+          emojis.push('⬜');
+        }
+      }
+      return emojis.join('');
+    };
 
-      const shareText = compact
-        ? `<https://metagamedaily.com/> #SteamDetective ${emojiText.replace('\n', ' ')}`
-        : `https://metagamedaily.com/\n${puzzleDate} #SteamDetective 🔍🕵️ #MetaGameDaily\n${emojiText}`;
-      navigator.clipboard.writeText(shareText);
-      toast.success('Copied to clipboard!');
-    },
-    [state.totalGuesses, puzzleDate, caseFile, easyTotalGuesses],
-  );
+    let emojiText = '';
+    if (
+      caseFile === 'expert' &&
+      easyTotalGuesses !== undefined &&
+      easyTotalGuesses > 0
+    ) {
+      // For expert mode, include both easy and expert scores
+      const easyEmoji = generateEmojiText(easyTotalGuesses);
+      const expertEmoji = generateEmojiText(state.totalGuesses);
+      emojiText = `1️⃣  ${easyEmoji} \n2️⃣  ${expertEmoji}`;
+    } else {
+      // For easy mode, just show the easy score
+      emojiText = `${generateEmojiText(state.totalGuesses)} 📁 #1`;
+    }
+
+    const shareText = `https://steamdetective.wtf/\n${puzzleDate} 🕵️ #SteamDetective\n${emojiText}`;
+    navigator.clipboard.writeText(shareText);
+    toast.success('Copied to clipboard!');
+  }, [state.totalGuesses, puzzleDate, caseFile, easyTotalGuesses]);
 
   const handleScoreSent = useCallback(() => {
     setState({ ...state, scoreSent: true });
@@ -277,40 +269,40 @@ const SteamDetectiveGame: React.FC<SteamDetectiveGameProps> = ({
       isComplete={state.isComplete}
       showClues={showClues}
     >
-      <div className="relative max-w-[970px] mx-auto px-1 md:px-4">
+      <div className='relative max-w-[970px] mx-auto px-1 md:px-4'>
         {caseFile === 'easy' && (
-          <div className="relative flex justify-center items-center mb-4">
-            <h2 className="text-lg text-white sm:text-2xl mb-[-5px] sm:py-0 sm:mb-0 font-bold">
-              <div className="flex items-center">
+          <div className='relative flex justify-center items-center mb-4'>
+            <h2 className='text-lg text-white sm:text-2xl mb-[-5px] sm:py-0 sm:mb-0 font-bold'>
+              <div className='flex items-center'>
                 <img
                   src={greenGamesFolderIcon}
                   className={`transition-opacity duration-200 ${blueIconLoaded ? 'opacity-100' : 'opacity-0'}`}
                 />
-                <div className="pl-1">
-                  Case File #1 <span className="text-gray-500/70">of 2</span>
+                <div className='pl-1'>
+                  Case File #1 <span className='text-gray-500/70'>of 2</span>
                 </div>
               </div>
             </h2>
           </div>
         )}
         {caseFile === 'expert' && (
-          <div className="relative flex justify-center items-center mb-4 mt-8">
-            <h2 className="text-lg text-white sm:text-2xl mb-[-5px] sm:py-0 sm:mb-0 font-bold">
-              <div className="flex items-center">
+          <div className='relative flex justify-center items-center mb-4 mt-8'>
+            <h2 className='text-lg text-white sm:text-2xl mb-[-5px] sm:py-0 sm:mb-0 font-bold'>
+              <div className='flex items-center'>
                 <img
                   src={blueGamesFolderIcon}
                   className={`transition-opacity duration-200 ${greenIconLoaded ? 'opacity-100' : 'opacity-0'}`}
                 />
-                <div className="pl-1">
-                  Case File <span className="text-md">#</span>2{' '}
-                  <span className="text-gray-500/70">of 2</span>
+                <div className='pl-1'>
+                  Case File <span className='text-md'>#</span>2{' '}
+                  <span className='text-gray-500/70'>of 2</span>
                 </div>
               </div>
             </h2>
           </div>
         )}
         {!state.isComplete && (
-          <div className="mb-4 pt-4 font-semibold text-sm sm:text-base">
+          <div className='mb-4 pt-4 font-semibold text-sm sm:text-base'>
             <span
               className={`px-2 py-1 mr-1 rounded transition-colors duration-200 text-white ${
                 flashGuesses ? 'bg-orange-300' : 'bg-zinc-800'
@@ -318,7 +310,7 @@ const SteamDetectiveGame: React.FC<SteamDetectiveGameProps> = ({
             >
               {state.guessesRemaining}
             </span>
-            <span className="text-white">
+            <span className='text-white'>
               {`guess${state.guessesRemaining === 1 ? '' : 'es'} remaining`}
             </span>
           </div>
@@ -327,16 +319,16 @@ const SteamDetectiveGame: React.FC<SteamDetectiveGameProps> = ({
           <GameInput onGuess={handleGuess} previousGuesses={state.guesses} />
         )}
         {!state.isComplete && (
-          <div className="mb-6 relative flex justify-center items-end">
-            <div className="flex absolute left-0 font-semibold text-md sm:text-base mb-[-18px]">
-              <img src={analyzeIcon} className="w-8 h-8" />
-              <div className="pt-1 text-white">Clue #{state.currentClue}</div>
+          <div className='mb-6 relative flex justify-center items-end'>
+            <div className='flex absolute left-0 font-semibold text-md sm:text-base mb-[-18px]'>
+              <img src={analyzeIcon} className='w-8 h-8' />
+              <div className='pt-1 text-white'>Clue #{state.currentClue}</div>
             </div>
             <SkipButton onClick={handleSkip} currentClue={state.currentClue} />
           </div>
         )}
         {!state.isComplete && state.guesses.length > 0 && (
-          <div className="max-w-[600px] pb-3">
+          <div className='max-w-[600px] pb-3'>
             <MissedGuesses missedGuesses={state.guesses} />
           </div>
         )}
@@ -352,7 +344,6 @@ const SteamDetectiveGame: React.FC<SteamDetectiveGameProps> = ({
           caseFile={caseFile}
           onStartExpertCase={onStartExpertCase}
           expertCaseStarted={expertCaseStarted}
-          onCopyEasyOnly={onCopyEasyOnly}
         />
         <ClueContainer />
       </div>
@@ -365,6 +356,7 @@ interface SteamDetectiveProps {
 }
 
 const SteamDetective: React.FC<SteamDetectiveProps> = ({
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars, no-unused-vars
   onResetPuzzle: _,
 }) => {
   const puzzleDate = getPuzzleDate();
@@ -437,73 +429,33 @@ const SteamDetective: React.FC<SteamDetectiveProps> = ({
     }
   }, []);
 
-  // Handle copying only the easy score (for expert mode share)
-  const handleCopyEasyOnly = useCallback(() => {
-    const easyGuesses = getEasyTotalGuesses();
-    const puzzleDateFormatted = getPuzzleDate();
-
-    // Generate emoji representation of easy score only
-    const generateEmojiText = (totalGuesses: number) => {
-      if (totalGuesses === 7) {
-        return '🟥 🟥 🟥 🟥 🟥 🟥';
-      }
-      const emojis = [];
-      for (let i = 1; i <= 6; i++) {
-        if (i < totalGuesses) {
-          emojis.push('⬛');
-        } else if (i === totalGuesses) {
-          emojis.push('✅');
-        } else {
-          emojis.push('⬜');
-        }
-      }
-      return emojis.join(' ');
-    };
-
-    const emojiText = generateEmojiText(easyGuesses);
-    const shareText = `https://metagamedaily.com/\n${puzzleDateFormatted} #SteamDetective 🔍🕵️ #MetaGameDaily\n${emojiText} 📁 #1`;
-    navigator.clipboard.writeText(shareText);
-    toast.success('Copied to clipboard!');
-  }, [getEasyTotalGuesses]);
-
   const handleResetPuzzle = async () => {
     localStorage.removeItem('steam-detective-state');
     window?.location?.reload?.();
   };
 
-  const calendarIconLoaded = useImagePreloader(calendarIcon);
-
   return (
-    <div className="text-[#c7d5e0]">
-      <Toaster position="top-center" />
-      <div className="flex justify-center items-center  mb-4">
-        <img
-          src={calendarIcon}
-          className={`w-6 h-6 mr-2 ${calendarIconLoaded ? 'opacity-100' : 'opacity-0'}`}
-        />
-
-        <span className="text-lg font-semibold font-medium">{puzzleDate}</span>
-      </div>
-      <hr className="h-[1px] bg-gray-700 border-none mb-4"></hr>
+    <div className='text-[#c7d5e0]'>
+      <Toaster position='top-center' />
+      <hr className='h-[1px] bg-gray-700 border-none mb-4'></hr>
 
       {/* Expert Case File - Renders ABOVE easy when shown */}
       <AnimatePresence>
         {showExpertCase && (
           <motion.div
-            id="expert-case-section"
+            id='expert-case-section'
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.5, ease: 'easeInOut' }}
-            className="mb-8"
+            className='mb-8'
           >
             <SteamDetectiveGame
-              caseFile="expert"
+              caseFile='expert'
               puzzleDate={puzzleDate}
               easyTotalGuesses={getEasyTotalGuesses()}
-              onCopyEasyOnly={handleCopyEasyOnly}
             />
-            <hr className="h-[2px] bg-gradient-to-r from-transparent via-gray-500 to-transparent border-none my-8 opacity-50" />
+            <hr className='h-[2px] bg-gradient-to-r from-transparent via-gray-500 to-transparent border-none my-8 opacity-50' />
           </motion.div>
         )}
       </AnimatePresence>
@@ -514,7 +466,7 @@ const SteamDetective: React.FC<SteamDetectiveProps> = ({
         transition={{ duration: 0.5, ease: 'easeInOut' }}
       >
         <SteamDetectiveGame
-          caseFile="easy"
+          caseFile='easy'
           onStartExpertCase={handleStartExpertCase}
           puzzleDate={puzzleDate}
           expertCaseStarted={hasExpertCaseStarted()}
@@ -523,7 +475,7 @@ const SteamDetective: React.FC<SteamDetectiveProps> = ({
 
       {/* Show reset button if expert is shown */}
       {showExpertCase && (
-        <div className="flex justify-center mb-4">
+        <div className='flex justify-center mb-4'>
           <ResetPuzzleButton onResetPuzzle={handleResetPuzzle} />
         </div>
       )}

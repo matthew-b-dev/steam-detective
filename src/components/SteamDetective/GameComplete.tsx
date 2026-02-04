@@ -25,7 +25,6 @@ interface GameCompleteProps {
   caseFile: 'easy' | 'expert';
   onStartExpertCase?: () => void;
   expertCaseStarted?: boolean;
-  onCopyEasyOnly?: () => void;
 }
 
 const DEBUG_LOADING = false;
@@ -295,18 +294,18 @@ export const GameComplete: React.FC<GameCompleteProps> = ({
                       window.scrollTo({ top: 0, behavior: 'smooth' });
                       onStartExpertCase();
                     }}
-                    className='w-full px-4 py-2 rounded bg-green-700 hover:bg-green-600 text-white text-sm font-semibold flex items-center justify-center gap-2 disabled:bg-gray-600 disabled:cursor-not-allowed disabled:opacity-50'
+                    className='w-full flex items-center justify-center px-4 py-2 rounded bg-green-700 hover:bg-green-600 text-white text-sm font-semibold flex items-center justify-center gap-2 disabled:bg-gray-600 disabled:cursor-not-allowed disabled:opacity-50'
                   >
-                    <span>
+                    <span className='block '>
+                      Continue to{' '}
                       <span>
-                        Continue to{' '}
                         <img
-                          className='inline w-7 h-7 ml-2 mr-[2px] relative top-[-2px]'
+                          className='inline w-7 h-7 ml-2 mr-[2px] relative'
                           src={blueGamesFolderIcon}
                         />
                         <span className=''>Case File #2</span>
-                        <PlayIcon className='inline w-5 h-5 ml-4 mr-1' />
                       </span>
+                      <PlayIcon className='inline w-5 h-5 ml-4 mr-1' />
                     </span>
                   </button>
                 )}

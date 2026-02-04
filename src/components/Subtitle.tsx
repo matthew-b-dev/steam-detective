@@ -21,7 +21,7 @@ const Subtitle = () => {
     if (!isMobile) return content;
 
     if (typeof content === 'string') {
-      return content.replace(/\p{Emoji}/gu, '');
+      return content.replace(/\p{Emoji}/gu, '').trim();
     }
 
     // Handle React elements (like fragments)
@@ -32,7 +32,7 @@ const Subtitle = () => {
       if (element.props?.children) {
         const children = element.props.children;
         if (typeof children === 'string') {
-          return children.replace(/\p{Emoji}/gu, '');
+          return children.replace(/\p{Emoji}/gu, '').trim();
         }
       }
     }
@@ -46,7 +46,7 @@ const Subtitle = () => {
   if (shouldAnimate) {
     return (
       <motion.p
-        className='text-gray-400 text-xs py-0 sm:text-sm sm:mt-1'
+        className='text-gray-400 text-xs py-0 sm:text-sm sm:mt-1 text-left'
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{
           opacity: 1,
@@ -69,7 +69,7 @@ const Subtitle = () => {
   }
 
   return (
-    <p className='text-gray-400 text-xs py-0 sm:text-sm sm:mt-1'>
+    <p className='text-gray-400 text-xs py-0 sm:text-sm sm:mt-1 text-left'>
       {processedContent}
     </p>
   );

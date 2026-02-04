@@ -1,13 +1,30 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { QuestionMarkCircleIcon } from '@heroicons/react/16/solid';
 import './App.css';
 import SteamDetective from './SteamDetective';
 import Subtitle from './components/Subtitle';
 import HelpModal from './components/HelpModal';
+import { getPuzzleDate } from './utils';
+import calendarIcon from './assets/calendar-48.png';
+
+// Preload images hook
+const useImagePreloader = (src: string) => {
+  const [loaded, setLoaded] = useState(false);
+
+  useEffect(() => {
+    const img = new Image();
+    img.onload = () => setLoaded(true);
+    img.src = src;
+  }, [src]);
+
+  return loaded;
+};
 
 function App() {
   const [showResetConfirm, setShowResetConfirm] = useState(false);
   const [showHelp, setShowHelp] = useState(false);
+  const puzzleDate = getPuzzleDate();
+  const calendarIconLoaded = useImagePreloader(calendarIcon);
 
   const handleResetPuzzle = () => {
     setShowResetConfirm(true);
@@ -27,37 +44,55 @@ function App() {
       <div className='flex flex-col items-center w-full px-1 sm:px-4 flex-1'>
         <div className='w-full max-w-[750px] p-2 sm:p-6'>
           <div className='relative mb-2 sm:mb-6'>
-            <div className='text-center flex flex-col items-center'>
-              <h1
-                className='text-lg sm:text-4xl mb-[-5px] sm:py-0 sm:mb-0 font-black'
-                style={{
-                  fontFamily: 'Playfair Display, serif',
-                  letterSpacing: '-0.04em',
-                }}
-              >
-                Steam<span className='text-gray-300'>Detective</span>
-              </h1>
-              <p
-                className='text-gray-400 text-sm hidden sm:block relative top-[-8px] left-[-4px]'
-                style={{
-                  letterSpacing: '-0.04em',
-                }}
-              >
-                <span className='underline decoration-2 decoration-zinc-700'>
-                  A daily <i>Steam game</i> puzzle
-                </span>
-              </p>
-              <Subtitle />
+            <div className='flex items-start justify-between sm:justify-center gap-2 sm:gap-0'>
+              <div className='flex flex-col items-start sm:items-center flex-1 sm:flex-initial'>
+                <h1
+                  className='text-lg sm:text-4xl mb-[-5px] sm:py-0 sm:mb-0 font-black relative right-[-2px] sm:right-[0px]'
+                  style={{
+                    fontFamily: 'Playfair Display, serif',
+                    letterSpacing: '-0.04em',
+                  }}
+                >
+                  <span className='text-gray-300'>Steam</span>Detective
+                </h1>
+                <p
+                  className='text-gray-400 text-sm hidden sm:block relative top-[-8px] left-[-4px]'
+                  style={{
+                    letterSpacing: '-0.04em',
+                  }}
+                >
+                  <span className='underline decoration-2 decoration-zinc-700'>
+                    A daily <i>Steam game</i> guessing puzzle
+                  </span>
+                </p>
+                <Subtitle />
+              </div>
+              <div className='flex items-center gap-2 sm:absolute sm:right-0 sm:top-1/2 sm:-translate-y-1/2'>
+                <div
+                  className={`flex items-center sm:hidden ${calendarIconLoaded ? 'opacity-100' : 'opacity-0'}`}
+                >
+                  <img
+                    src={calendarIcon}
+                    className='w-5 h-5 mr-1.5'
+                    alt='Calendar'
+                  />
+                  <span className='text-sm font-semibold'>{puzzleDate}</span>
+                </div>
+                <button
+                  className='text-gray-400 hover:text-gray-300 transition-colors flex items-center gap-1 px-2 bg-none sm:border-1 sm:border-gray-700 sm:px-3 sm:py-1'
+                  onClick={() => setShowHelp(true)}
+                >
+                  <QuestionMarkCircleIcon className='h-6 w-6 sm:h-4 sm:w-4' />
+                  <span className='text-sm font-semibold hidden sm:inline relative top-[-1px]'>
+                    How to play
+                  </span>
+                </button>
+              </div>
             </div>
-            <button
-              className='absolute right-0 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-300 transition-colors flex items-center gap-1 px-2 bg-none sm:border-1 sm:border-gray-700 sm:px-3 sm:py-1'
-              onClick={() => setShowHelp(true)}
-            >
-              <QuestionMarkCircleIcon className='h-6 w-6 sm:h-4 sm:w-4' />
-              <span className='text-sm font-semibold hidden sm:inline relative top-[-1px]'>
-                How to play
-              </span>
-            </button>
+            <div className='hidden sm:flex justify-center items-center mt-4'>
+              <img src={calendarIcon} className='w-6 h-6 mr-2' alt='Calendar' />
+              <span className='text-lg font-semibold'>{puzzleDate}</span>
+            </div>
           </div>
           <SteamDetective onResetPuzzle={handleResetPuzzle} />
         </div>
@@ -89,11 +124,7 @@ function App() {
         </div>
       )}
 
-      <HelpModal
-        isOpen={showHelp}
-        onClose={() => setShowHelp(false)}
-        gameMode='detective'
-      />
+      <HelpModal isOpen={showHelp} onClose={() => setShowHelp(false)} />
     </div>
   );
 }

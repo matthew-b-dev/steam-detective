@@ -5,7 +5,7 @@ export const DATE_OVERRIDE: string | null = null; // '2026-02-04' to test specif
 export const STEAM_DETECTIVE_DEMO_DAYS: {
   [date: string]: string | { easy: string; expert: string };
 } = {
-  '2026-02-02': {
+  '2026-02-04': {
     easy: 'My Time at Portia',
     expert: 'ASTRONEER',
   },
