@@ -140,7 +140,11 @@ export const GameComplete: React.FC<GameCompleteProps> = ({
           </div>
         </h2>
         {caseFile === 'easy' ? (
-          <div className='text-center text-gray-400'>Try Case File #2!</div>
+          <div
+            className={`${correct ? 'hidden' : ''} text-center text-gray-400`}
+          >
+            Try Case File #2!
+          </div>
         ) : null}
 
         {/* Loading State */}
@@ -297,15 +301,15 @@ export const GameComplete: React.FC<GameCompleteProps> = ({
                     className='w-full flex items-center justify-center px-4 py-2 rounded bg-green-700 hover:bg-green-600 text-white text-sm font-semibold flex items-center justify-center gap-2 disabled:bg-gray-600 disabled:cursor-not-allowed disabled:opacity-50'
                   >
                     <span className='block '>
+                      <PlayIcon className='inline w-5 h-5 ml-4 mr-1' />
                       Continue to{' '}
-                      <span>
+                      <span className='bg-gray-800/20 ml-2 py-1 px-2 rounded'>
                         <img
-                          className='inline w-7 h-7 ml-2 mr-[2px] relative'
+                          className='inline w-7 h-7 mr-[2px] relative top-[-1px]'
                           src={blueGamesFolderIcon}
                         />
                         <span className=''>Case File #2</span>
                       </span>
-                      <PlayIcon className='inline w-5 h-5 ml-4 mr-1' />
                     </span>
                   </button>
                 )}

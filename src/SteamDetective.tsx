@@ -319,8 +319,8 @@ const SteamDetectiveGame: React.FC<SteamDetectiveGameProps> = ({
           <GameInput onGuess={handleGuess} previousGuesses={state.guesses} />
         )}
         {!state.isComplete && (
-          <div className='mb-6 relative flex justify-center items-end'>
-            <div className='flex absolute left-0 font-semibold text-md sm:text-base mb-[-18px]'>
+          <div className='mb-12 sm:mb-6 relative flex justify-center items-end'>
+            <div className='flex absolute left-0 font-semibold text-md sm:text-base mb-[-40px] sm:mb-[-18px]'>
               <img src={analyzeIcon} className='w-8 h-8' />
               <div className='pt-1 text-white'>Clue #{state.currentClue}</div>
             </div>
@@ -413,6 +413,26 @@ const SteamDetective: React.FC<SteamDetectiveProps> = ({
     return false;
   }, []);
 
+  // Check if both case files are complete
+  const areBothCasesComplete = useCallback((): boolean => {
+    try {
+      const saved = localStorage.getItem('steam-detective-state');
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        const currentPuzzleDate = getUtcDateString();
+        if (parsed.puzzleDate === currentPuzzleDate) {
+          const easyComplete = parsed.steamDetective?.isComplete || false;
+          const expertComplete =
+            parsed.steamDetectiveExpert?.isComplete || false;
+          return easyComplete && expertComplete;
+        }
+      }
+    } catch (error) {
+      console.error('Failed to check if both cases are complete:', error);
+    }
+    return false;
+  }, []);
+
   const handleStartExpertCase = useCallback(() => {
     setShowExpertCase(true);
 
@@ -473,8 +493,8 @@ const SteamDetective: React.FC<SteamDetectiveProps> = ({
         />
       </motion.div>
 
-      {/* Show reset button if expert is shown */}
-      {showExpertCase && (
+      {/* Show reset button if expert is shown AND both cases are complete */}
+      {showExpertCase && areBothCasesComplete() && (
         <div className='flex justify-center mb-4'>
           <ResetPuzzleButton onResetPuzzle={handleResetPuzzle} />
         </div>

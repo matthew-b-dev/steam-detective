@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import { QuestionMarkCircleIcon } from '@heroicons/react/16/solid';
 import './App.css';
 import SteamDetective from './SteamDetective';
-import Subtitle from './components/Subtitle';
 import HelpModal from './components/HelpModal';
 import { getPuzzleDate } from './utils';
 import calendarIcon from './assets/calendar-48.png';
@@ -23,7 +22,7 @@ const useImagePreloader = (src: string) => {
 function App() {
   const [showResetConfirm, setShowResetConfirm] = useState(false);
   const [showHelp, setShowHelp] = useState(false);
-  const puzzleDate = getPuzzleDate();
+  const puzzleDate = getPuzzleDate(false);
   const calendarIconLoaded = useImagePreloader(calendarIcon);
 
   const handleResetPuzzle = () => {
@@ -53,19 +52,41 @@ function App() {
                     letterSpacing: '-0.04em',
                   }}
                 >
-                  <span className='text-gray-300'>Steam</span>Detective
+                  <span className='text-gray-300'>Steam</span>
+                  Detective
+                  <span
+                    style={{
+                      fontFamily: 'serif',
+                      letterSpacing: '-0.03em',
+                    }}
+                    className='text-gray-500'
+                  >
+                    <span className=''>.</span>
+                    <span className='italic'>wtf</span>
+                  </span>
+                  {/*
+                  <span
+                    style={{ letterSpacing: '0.0em' }}
+                    className='font-bold ml-1 hidden sm:inline absolute top-4 text-gray-400 text-[22px] leading-[16px] pl-0 pr-1 pb-[2px] rounded leading-tight'
+                  >
+                    .wtf
+                  </span>
+                  */}
                 </h1>
                 <p
-                  className='text-gray-400 text-sm hidden sm:block relative top-[-8px] left-[-4px]'
+                  className='text-gray-400 text-sm block pl-[2px] sm:pl-0 relative top-[-4px] sm:top-[-8px]'
                   style={{
                     letterSpacing: '-0.04em',
                   }}
                 >
                   <span className='underline decoration-2 decoration-zinc-700'>
-                    A daily <i>Steam game</i> guessing puzzle
+                    A daily{' '}
+                    <span className='hidden sm:inline'>
+                      <i>Steam game</i>
+                    </span>{' '}
+                    trivia puzzle
                   </span>
                 </p>
-                <Subtitle />
               </div>
               <div className='flex items-center gap-2 sm:absolute sm:right-0 sm:top-1/2 sm:-translate-y-1/2'>
                 <div
@@ -76,7 +97,9 @@ function App() {
                     className='w-5 h-5 mr-1.5'
                     alt='Calendar'
                   />
-                  <span className='text-sm font-semibold'>{puzzleDate}</span>
+                  <span className='text-xs sm:text-sm font-semibold'>
+                    {puzzleDate} (UTC)
+                  </span>
                 </div>
                 <button
                   className='text-gray-400 hover:text-gray-300 transition-colors flex items-center gap-1 px-2 bg-none sm:border-1 sm:border-gray-700 sm:px-3 sm:py-1'
@@ -89,9 +112,11 @@ function App() {
                 </button>
               </div>
             </div>
-            <div className='hidden sm:flex justify-center items-center mt-4'>
+            <div className='hidden sm:flex justify-center items-center'>
               <img src={calendarIcon} className='w-6 h-6 mr-2' alt='Calendar' />
-              <span className='text-lg font-semibold'>{puzzleDate}</span>
+              <span className='text-lg font-semibold'>
+                {puzzleDate} <span className='text-gray-300'>(UTC)</span>
+              </span>
             </div>
           </div>
           <SteamDetective onResetPuzzle={handleResetPuzzle} />

@@ -1,5 +1,9 @@
 import type { ReactNode } from 'react';
-import { DATE_OVERRIDE, STEAM_DETECTIVE_DEMO_DAYS } from './demos';
+import {
+  DATE_OVERRIDE,
+  STEAM_DETECTIVE_DEMO_DAYS,
+  getDateFromRoute,
+} from './demos';
 
 // Subtitle configuration
 export interface SubtitleConfig {
@@ -200,7 +204,13 @@ export const isCloseGuess = (guess: string, targetName: string): boolean => {
  * Get the current UTC date string (YYYY-MM-DD)
  */
 export const getUtcDateString = (): string => {
+  // Check for route-based date override first (e.g., /test/2026-02-03)
+  const routeDate = getDateFromRoute();
+  if (routeDate) return routeDate;
+
+  // Check for hardcoded DATE_OVERRIDE constant
   if (DATE_OVERRIDE) return DATE_OVERRIDE;
+
   const now = new Date();
   const year = now.getUTCFullYear();
   const month = String(now.getUTCMonth() + 1).padStart(2, '0');
@@ -211,13 +221,13 @@ export const getUtcDateString = (): string => {
 /**
  * Get formatted puzzle date for display
  */
-export const getPuzzleDate = (): string => {
+export const getPuzzleDate = (showYear: boolean = true): string => {
   const utcDate = getUtcDateString();
   const date = new Date(utcDate + 'T00:00:00Z');
   return date.toLocaleDateString('en-US', {
     month: 'short',
     day: 'numeric',
-    year: 'numeric',
+    year: showYear ? 'numeric' : undefined,
     timeZone: 'UTC',
   });
 };

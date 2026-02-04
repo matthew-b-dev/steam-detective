@@ -1,5 +1,9 @@
 import { useRef } from 'react';
-import { ForwardIcon } from '@heroicons/react/24/solid';
+import {
+  ForwardIcon,
+  NoSymbolIcon,
+  XMarkIcon,
+} from '@heroicons/react/24/solid';
 import { MAX_CLUES } from './utils';
 
 interface SkipButtonProps {
@@ -11,7 +15,7 @@ export const SkipButton: React.FC<SkipButtonProps> = ({
   onClick,
   currentClue,
 }) => {
-  const buttonText = currentClue >= MAX_CLUES ? 'Give Up' : 'Skip';
+  const buttonText = currentClue >= MAX_CLUES ? 'Give Up' : 'Skip to next Clue';
   const isGiveUp = currentClue >= MAX_CLUES;
   const lastClickTime = useRef<number>(0);
 
@@ -28,11 +32,12 @@ export const SkipButton: React.FC<SkipButtonProps> = ({
     <button
       onClick={handleClick}
       className={`${
-        isGiveUp
-          ? 'bg-red-700 hover:bg-red-600'
-          : 'bg-zinc-700 hover:bg-zinc-600'
-      } text-white px-6 py-2 rounded transition-colors inline-flex items-center gap-2`}
+        isGiveUp ? 'bg-red-700 hover:bg-red-600' : 'bg-gray-500/20'
+      } text-white px-6 py-2 rounded transition-colors inline-flex items-center gap-2 border-1 border-gray-700`}
     >
+      <XMarkIcon
+        className={`w-5 h-5 relative top-[1px] ${isGiveUp ? 'text-white' : 'text-red-500'}`}
+      />
       {buttonText}
       {!isGiveUp && <ForwardIcon className='w-4 h-4' />}
     </button>

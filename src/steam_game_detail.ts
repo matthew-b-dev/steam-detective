@@ -4690,10 +4690,11 @@ export const steamGameDetails: SteamGameMap = {
   },
   '268910': {
     name: 'Cuphead',
+    clueOrder: ['desc', 'details', 'tags'],
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/268910/ss_e3096a5555cb77d88db165c83d5ef3a24af1354a.600x338.jpg?t=1709068852',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/268910/ss_1bfaa0d236aa99cdc31234aa7aad314898e3d10e.600x338.jpg?t=1709068852',
     shortDescription:
-      '||Cuphead|| is a classic run and gun action game heavily focused on boss battles. Inspired by cartoons of the 1930s, the visuals and audio are painstakingly created with the same techniques of the era, i.e. traditional hand drawn cel animation, watercolor backgrounds, and original jazz recordings.',
+      '||Cuphead|| is a classic run and gun action game heavily focused on boss battles. Inspired by ||cartoons|| of the 1930s, the visuals and audio are painstakingly created with the same techniques of the era, i.e. traditional ||hand drawn cel animation||, ||watercolor|| backgrounds, and original jazz recordings.',
     releaseDate: 'Sep 29, 2017',
     developer: 'Studio MDHR Entertainment Inc.',
     publisher: 'Studio MDHR Entertainment Inc.',
@@ -4729,7 +4730,6 @@ export const steamGameDetails: SteamGameMap = {
       'Souls-like',
       'Funny',
     ],
-    blurredUserTags: ['Cartoon', 'Hand-drawn'],
     appId: 268910,
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/268910/ss_615455299355eaf552c638c7ea5b24a8b46e02dd.600x338.jpg?t=1709068852',
@@ -4846,8 +4846,8 @@ export const steamGameDetails: SteamGameMap = {
     },
     userTags: [
       'Open World',
-      'Open World Survival Craft',
       'Space',
+      'Open World Survival Craft',
       'Exploration',
       'Sci-fi',
       'Survival',

@@ -1,6 +1,6 @@
 # Steam Detective
 
-A daily Steam game guessing puzzle. Uncover clues to identify the mystery game!
+A daily Steam game trivia puzzle. Uncover clues to identify the mystery game!
 
 ## Features
 
