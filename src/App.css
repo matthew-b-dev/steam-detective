@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#root {
+  width: 100vw;
+  min-height: 100vh;
+}
+
+.diagonal-pattern-bg {
+  background-color: #101012;
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 35px,
+    rgba(255, 255, 255, 0.008) 35px,
+    rgba(255, 255, 255, 0.008) 70px
+  );
+  background-attachment: fixed;
+}
+
+html,
+body {
+  background-color: #101012;
+  margin: 0;
+  padding: 0;
+}
