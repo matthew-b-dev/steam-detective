@@ -18,7 +18,7 @@ export const SkipButton: React.FC<SkipButtonProps> = ({
   const handleClick = () => {
     const now = Date.now();
     if (now - lastClickTime.current < 400) {
-      return; // Throttle: ignore clicks within 400ms
+      return; // Throttle: ignore clicks within 400ms to prevent accidental clics
     }
     lastClickTime.current = now;
     onClick();
@@ -28,7 +28,7 @@ export const SkipButton: React.FC<SkipButtonProps> = ({
     <button
       onClick={handleClick}
       className={`${
-        isGiveUp ? 'bg-red-700 hover:bg-red-600' : 'bg-gray-500/20'
+        isGiveUp ? 'bg-red-700 hover:bg-red-600' : 'bg-transparent'
       } text-white px-6 py-2 rounded transition-colors inline-flex items-center gap-2 border-1 border-gray-700`}
     >
       <XMarkIcon

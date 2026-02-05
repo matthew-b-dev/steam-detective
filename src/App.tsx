@@ -118,7 +118,7 @@ function App() {
               </div>
               <div className='flex items-center gap-2 sm:absolute sm:right-0 sm:top-1/2 sm:-translate-y-1/2'>
                 <button
-                  className='text-gray-400 hover:text-gray-300 transition-colors flex items-center gap-1 px-2 bg-none sm:border-1 sm:border-gray-700 sm:px-3 sm:py-1'
+                  className='text-gray-400 hover:text-gray-300 transition-colors flex items-center gap-1 px-2 bg-transparent sm:border-1 sm:border-gray-700 sm:px-3 sm:py-1'
                   onClick={() => setShowHelp(true)}
                 >
                   <QuestionMarkCircleIcon className='h-6 w-6 sm:h-4 sm:w-4' />
