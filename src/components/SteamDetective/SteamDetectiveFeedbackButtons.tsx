@@ -39,18 +39,6 @@ const SteamDetectiveFeedbackButtons: React.FC<
         <div className='flex flex-wrap gap-2 justify-center mt-2'>
           <button
             className='px-3 py-1.5 rounded text-xs font-semibold transition-colors bg-gray-700 hover:bg-gray-600 text-white'
-            onClick={() => handleFeedback('steam_more')}
-          >
-            🕵️ SteamDetective more often
-          </button>
-          <button
-            className='px-3 py-1.5 rounded text-xs font-semibold transition-colors bg-gray-700 hover:bg-gray-600 text-white'
-            onClick={() => handleFeedback('steam_less')}
-          >
-            👎 SteamDetective less often
-          </button>
-          <button
-            className='px-3 py-1.5 rounded text-xs font-semibold transition-colors bg-gray-700 hover:bg-gray-600 text-white'
             onClick={() => handleFeedback('perfect')}
           >
             ⭐️ Great

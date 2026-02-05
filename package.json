@@ -11,15 +11,18 @@
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
+    "@internationalized/date": "^3.11.0",
     "@supabase/supabase-js": "^2.91.0",
     "apexcharts": "^5.3.6",
     "framer-motion": "^12.27.0",
     "fslightbox-react": "^2.0.2",
     "react": "^19.2.0",
     "react-apexcharts": "^1.9.0",
+    "react-aria": "^3.46.0",
     "react-dom": "^19.2.0",
     "react-hot-toast": "^2.6.0",
-    "react-select": "^5.10.2"
+    "react-select": "^5.10.2",
+    "react-stately": "^3.44.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",

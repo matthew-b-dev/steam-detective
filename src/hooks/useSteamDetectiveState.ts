@@ -4,6 +4,7 @@ import {
   getUtcDateString,
   loadSteamDetectiveState,
   saveSteamDetectiveState,
+  clearPuzzleState,
   type SteamDetectiveState as SteamDetectiveStateType,
 } from '../utils';
 
@@ -22,7 +23,7 @@ export const useSteamDetectiveState = (
     const savedState = loadSteamDetectiveState(puzzleDate, caseFile);
     // Migration: if game is complete but missing revealedTitle, clear and reload
     if (savedState && savedState.isComplete && !savedState?.revealedTitle) {
-      localStorage.removeItem('steam-detective-state');
+      clearPuzzleState(puzzleDate);
       window?.location?.reload?.();
       return {
         puzzleDate,

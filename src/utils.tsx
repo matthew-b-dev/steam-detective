@@ -36,15 +36,19 @@ export interface SteamDetectiveState {
   revealedTitle?: string; // The game title for this puzzle
 }
 
-// Unified storage structure
+// Unified storage structure (per date)
 export interface UnifiedGameState {
-  puzzleDate: string;
   steamDetective?: SteamDetectiveState;
   steamDetectiveExpert?: SteamDetectiveState;
   expertStarted?: boolean; // Track if user has clicked to start expert case
 }
 
-const STORAGE_KEY = 'steam-detective-state';
+/**
+ * Get the storage key for a specific puzzle date
+ */
+const getStorageKey = (puzzleDate: string): string => {
+  return `steam-detective-state-${puzzleDate}`;
+};
 
 /**
  * Load Steam Detective state from localStorage
@@ -54,14 +58,11 @@ export const loadSteamDetectiveState = (
   caseFile: 'easy' | 'expert' = 'easy',
 ): SteamDetectiveState | null => {
   try {
-    const saved = localStorage.getItem(STORAGE_KEY);
+    const storageKey = getStorageKey(currentPuzzleDate);
+    const saved = localStorage.getItem(storageKey);
     if (!saved) return null;
 
     const unifiedState: UnifiedGameState = JSON.parse(saved);
-    // Only restore if it's the same puzzle date
-    if (unifiedState.puzzleDate !== currentPuzzleDate) {
-      return null;
-    }
 
     // Select the appropriate state based on case file
     const stateToLoad =
@@ -100,30 +101,24 @@ export const saveSteamDetectiveState = (
   caseFile: 'easy' | 'expert' = 'easy',
 ): void => {
   try {
-    const saved = localStorage.getItem(STORAGE_KEY);
+    const storageKey = getStorageKey(puzzleDate);
+    const saved = localStorage.getItem(storageKey);
     let unifiedState: UnifiedGameState;
 
     if (saved) {
-      const parsed = JSON.parse(saved);
-      // If puzzle date has changed, reset all game states
-      if (parsed.puzzleDate !== puzzleDate) {
-        unifiedState = { puzzleDate };
-      } else {
-        unifiedState = parsed;
-      }
+      unifiedState = JSON.parse(saved);
     } else {
-      unifiedState = { puzzleDate };
+      unifiedState = {};
     }
 
-    // Update puzzle date and appropriate Steam Detective state
-    unifiedState.puzzleDate = puzzleDate;
+    // Update appropriate Steam Detective state
     if (caseFile === 'easy') {
       unifiedState.steamDetective = state;
     } else {
       unifiedState.steamDetectiveExpert = state;
     }
 
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(unifiedState));
+    localStorage.setItem(storageKey, JSON.stringify(unifiedState));
   } catch (error) {
     console.error('Failed to save Steam Detective state:', error);
   }
@@ -214,7 +209,7 @@ export const isCloseGuess = (guess: string, targetName: string): boolean => {
  * Get the current UTC date string (YYYY-MM-DD)
  */
 export const getUtcDateString = (): string => {
-  // Check for route-based date override first (e.g., /test/2026-02-03)
+  // Check for route-based date override first (e.g., /d/2026-02-03)
   const routeDate = getDateFromRoute();
   if (routeDate) return routeDate;
 
@@ -297,15 +292,11 @@ export const hasExpertCase = (utcDate: string): boolean => {
  */
 export const loadExpertStarted = (currentPuzzleDate: string): boolean => {
   try {
-    const saved = localStorage.getItem(STORAGE_KEY);
+    const storageKey = getStorageKey(currentPuzzleDate);
+    const saved = localStorage.getItem(storageKey);
     if (!saved) return false;
 
     const unifiedState: UnifiedGameState = JSON.parse(saved);
-
-    // Only return true if it's the same puzzle date
-    if (unifiedState.puzzleDate !== currentPuzzleDate) {
-      return false;
-    }
 
     return unifiedState.expertStarted || false;
   } catch (error) {
@@ -319,26 +310,49 @@ export const loadExpertStarted = (currentPuzzleDate: string): boolean => {
  */
 export const saveExpertStarted = (puzzleDate: string): void => {
   try {
-    const saved = localStorage.getItem(STORAGE_KEY);
+    const storageKey = getStorageKey(puzzleDate);
+    const saved = localStorage.getItem(storageKey);
     let unifiedState: UnifiedGameState;
 
     if (saved) {
-      const parsed = JSON.parse(saved);
-      // If puzzle date has changed, reset all game states
-      if (parsed.puzzleDate !== puzzleDate) {
-        unifiedState = { puzzleDate };
-      } else {
-        unifiedState = parsed;
-      }
+      unifiedState = JSON.parse(saved);
     } else {
-      unifiedState = { puzzleDate };
+      unifiedState = {};
     }
 
-    unifiedState.puzzleDate = puzzleDate;
     unifiedState.expertStarted = true;
 
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(unifiedState));
+    localStorage.setItem(storageKey, JSON.stringify(unifiedState));
   } catch (error) {
     console.error('Failed to save expert started flag:', error);
+  }
+};
+
+/**
+ * Clear state for a specific puzzle date
+ */
+export const clearPuzzleState = (puzzleDate: string): void => {
+  try {
+    const storageKey = getStorageKey(puzzleDate);
+    localStorage.removeItem(storageKey);
+  } catch (error) {
+    console.error('Failed to clear puzzle state:', error);
+  }
+};
+
+/**
+ * Get the full unified state for a puzzle date
+ */
+export const getUnifiedState = (
+  puzzleDate: string,
+): UnifiedGameState | null => {
+  try {
+    const storageKey = getStorageKey(puzzleDate);
+    const saved = localStorage.getItem(storageKey);
+    if (!saved) return null;
+    return JSON.parse(saved);
+  } catch (error) {
+    console.error('Failed to get unified state:', error);
+    return null;
   }
 };

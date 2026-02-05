@@ -67,12 +67,24 @@ Up to bat:
 */
 
 /**
- * Extract date from URL route pattern /test/YYYY-MM-DD
+ * Extract date from URL route pattern /d/YYYY-MM-DD
  * Returns null if pattern not found or date is invalid
+ * Handles both direct paths and GitHub Pages SPA redirected paths (/?/...)
  */
 export const getDateFromRoute = (): string | null => {
-  const path = window.location.pathname;
-  const match = path.match(/\/test\/(\d{4}-\d{2}-\d{2})/);
+  // Check direct pathname first
+  let path = window.location.pathname;
+  let match = path.match(/\/d\/(\d{4}-\d{2}-\d{2})/);
+
+  // If not found in pathname, check for GitHub Pages SPA redirect pattern (/?/...)
+  if (!match) {
+    const search = window.location.search;
+    const redirectMatch = search.match(/\?\/(.+)/);
+    if (redirectMatch) {
+      path = '/' + redirectMatch[1].replace(/~and~/g, '&');
+      match = path.match(/\/d\/(\d{4}-\d{2}-\d{2})/);
+    }
+  }
 
   if (match && match[1]) {
     // Validate date format

@@ -7,7 +7,11 @@ import { ClueDescription } from './ClueDescription';
 import { ClueDetails } from './ClueDetails';
 import { ClueTags } from './ClueTags';
 
-export const ClueContainer: React.FC = () => {
+interface ClueContainerProps {
+  caseFile: 'easy' | 'expert';
+}
+
+export const ClueContainer: React.FC<ClueContainerProps> = ({ caseFile }) => {
   const { dailyGame, censoredDescription, isComplete, showClues } =
     useSteamDetectiveGame();
 
@@ -29,7 +33,11 @@ export const ClueContainer: React.FC = () => {
   };
 
   return (
-    <div className=' mx-auto pb-12'>
+    <div
+      id={`clue-container-${caseFile}`}
+      data-clue-container={caseFile}
+      className='mx-auto pb-12'
+    >
       <motion.div
         layout
         className='bg-[#17222f] rounded shadow-[0_20px_50px_rgba(0,0,0,1)] overflow-hidden'

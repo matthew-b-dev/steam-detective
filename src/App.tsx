@@ -3,9 +3,9 @@ import { QuestionMarkCircleIcon } from '@heroicons/react/16/solid';
 import './App.css';
 import SteamDetective from './SteamDetective';
 import HelpModal from './components/HelpModal';
-import { getPuzzleDate } from './utils';
+import PuzzleDatePicker from './components/PuzzleDatePicker';
+import { getUtcDateString, clearPuzzleState } from './utils';
 import { fetchSteamDetectiveScores } from './lib/supabaseClient';
-import calendarIcon from './assets/calendar-48.png';
 import analyzeIcon from './assets/analyze-48.png';
 import blueGamesFolderIcon from './assets/games-folder-48.png';
 import greenGamesFolderIcon from './assets/green-games-folder-48.png';
@@ -14,7 +14,6 @@ import greenGamesFolderIcon from './assets/green-games-folder-48.png';
 const usePreloadAllAssets = () => {
   useEffect(() => {
     const imagesToPreload = [
-      calendarIcon,
       analyzeIcon,
       blueGamesFolderIcon,
       greenGamesFolderIcon,
@@ -27,23 +26,11 @@ const usePreloadAllAssets = () => {
   }, []);
 };
 
-// Preload images hook
-const useImagePreloader = (src: string) => {
-  const [loaded, setLoaded] = useState(false);
-
-  useEffect(() => {
-    const img = new Image();
-    img.onload = () => setLoaded(true);
-    img.src = src;
-  }, [src]);
-
-  return loaded;
-};
-
 function App() {
   const [showResetConfirm, setShowResetConfirm] = useState(false);
   const [showHelp, setShowHelp] = useState(false);
-  const puzzleDate = getPuzzleDate(false);
+  const [showDatePicker, setShowDatePicker] = useState(false);
+  const currentPuzzleDateStr = getUtcDateString();
 
   // Preload all assets when app mounts
   usePreloadAllAssets();
@@ -60,19 +47,23 @@ function App() {
     fetchScores();
   }, []);
 
-  const calendarIconLoaded = useImagePreloader(calendarIcon);
-
   const handleResetPuzzle = () => {
     setShowResetConfirm(true);
   };
 
   const confirmReset = () => {
-    localStorage.removeItem('steam-detective-state');
+    const currentPuzzleDate = getUtcDateString();
+    clearPuzzleState(currentPuzzleDate);
     window.location.reload();
   };
 
   const cancelReset = () => {
     setShowResetConfirm(false);
+  };
+
+  const handleDateSelect = (dateStr: string) => {
+    // Navigate to the selected date
+    window.location.href = `/d/${dateStr}`;
   };
 
   return (
@@ -126,18 +117,6 @@ function App() {
                 </p>
               </div>
               <div className='flex items-center gap-2 sm:absolute sm:right-0 sm:top-1/2 sm:-translate-y-1/2'>
-                <div
-                  className={`flex items-center sm:hidden ${calendarIconLoaded ? 'opacity-100' : 'opacity-0'}`}
-                >
-                  <img
-                    src={calendarIcon}
-                    className='w-5 h-5 mr-1.5'
-                    alt='Calendar'
-                  />
-                  <span className='text-xs sm:text-sm font-semibold'>
-                    {puzzleDate} (UTC)
-                  </span>
-                </div>
                 <button
                   className='text-gray-400 hover:text-gray-300 transition-colors flex items-center gap-1 px-2 bg-none sm:border-1 sm:border-gray-700 sm:px-3 sm:py-1'
                   onClick={() => setShowHelp(true)}
@@ -149,14 +128,11 @@ function App() {
                 </button>
               </div>
             </div>
-            <div className='hidden sm:flex justify-center items-center'>
-              <img src={calendarIcon} className='w-6 h-6 mr-2' alt='Calendar' />
-              <span className='text-lg font-semibold'>
-                {puzzleDate} <span className='text-gray-300'>(UTC)</span>
-              </span>
-            </div>
           </div>
-          <SteamDetective onResetPuzzle={handleResetPuzzle} />
+          <SteamDetective
+            onResetPuzzle={handleResetPuzzle}
+            onDatePickerClick={() => setShowDatePicker(true)}
+          />
         </div>
       </div>
 
@@ -187,6 +163,12 @@ function App() {
       )}
 
       <HelpModal isOpen={showHelp} onClose={() => setShowHelp(false)} />
+      <PuzzleDatePicker
+        isOpen={showDatePicker}
+        onClose={() => setShowDatePicker(false)}
+        currentPuzzleDate={currentPuzzleDateStr}
+        onDateSelect={handleDateSelect}
+      />
     </div>
   );
 }
