@@ -101,9 +101,19 @@ export const saveSteamDetectiveState = (
 ): void => {
   try {
     const saved = localStorage.getItem(STORAGE_KEY);
-    const unifiedState: UnifiedGameState = saved
-      ? JSON.parse(saved)
-      : { puzzleDate };
+    let unifiedState: UnifiedGameState;
+
+    if (saved) {
+      const parsed = JSON.parse(saved);
+      // If puzzle date has changed, reset all game states
+      if (parsed.puzzleDate !== puzzleDate) {
+        unifiedState = { puzzleDate };
+      } else {
+        unifiedState = parsed;
+      }
+    } else {
+      unifiedState = { puzzleDate };
+    }
 
     // Update puzzle date and appropriate Steam Detective state
     unifiedState.puzzleDate = puzzleDate;
@@ -310,9 +320,19 @@ export const loadExpertStarted = (currentPuzzleDate: string): boolean => {
 export const saveExpertStarted = (puzzleDate: string): void => {
   try {
     const saved = localStorage.getItem(STORAGE_KEY);
-    const unifiedState: UnifiedGameState = saved
-      ? JSON.parse(saved)
-      : { puzzleDate };
+    let unifiedState: UnifiedGameState;
+
+    if (saved) {
+      const parsed = JSON.parse(saved);
+      // If puzzle date has changed, reset all game states
+      if (parsed.puzzleDate !== puzzleDate) {
+        unifiedState = { puzzleDate };
+      } else {
+        unifiedState = parsed;
+      }
+    } else {
+      unifiedState = { puzzleDate };
+    }
 
     unifiedState.puzzleDate = puzzleDate;
     unifiedState.expertStarted = true;

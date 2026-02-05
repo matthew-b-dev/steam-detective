@@ -20,7 +20,8 @@ export const useSteamDetectiveState = (
   // Load or initialize state
   const loadState = useCallback((): SteamDetectiveState => {
     const savedState = loadSteamDetectiveState(puzzleDate, caseFile);
-    if (savedState && !savedState?.revealedTitle) {
+    // Migration: if game is complete but missing revealedTitle, clear and reload
+    if (savedState && savedState.isComplete && !savedState?.revealedTitle) {
       localStorage.removeItem('steam-detective-state');
       window?.location?.reload?.();
       return {
@@ -32,18 +33,18 @@ export const useSteamDetectiveState = (
         guesses: [],
         totalGuesses: 0,
         scoreSent: false,
-        revealedTitle: gameName,
       };
     }
     if (savedState) {
       return {
         puzzleDate,
         ...savedState,
-        revealedTitle: gameName, // Always update with current game's name
+        // Only include revealedTitle if game is complete
+        ...(savedState.isComplete && { revealedTitle: gameName }),
       };
     }
 
-    // Return default state
+    // Return default state (no revealedTitle until game is complete)
     return {
       puzzleDate,
       currentClue: 1,
@@ -53,7 +54,6 @@ export const useSteamDetectiveState = (
       guesses: [],
       totalGuesses: 0,
       scoreSent: false,
-      revealedTitle: gameName,
     };
   }, [puzzleDate, gameName, caseFile]);
 
@@ -61,8 +61,13 @@ export const useSteamDetectiveState = (
 
   // Save state to localStorage whenever it changes
   useEffect(() => {
-    const { puzzleDate: _, ...stateWithoutDate } = state;
-    saveSteamDetectiveState(state.puzzleDate, stateWithoutDate, caseFile);
+    const { puzzleDate: _, revealedTitle, ...stateWithoutDate } = state;
+    // Only include revealedTitle if game is complete
+    const stateToSave =
+      state.isComplete && revealedTitle
+        ? { ...stateWithoutDate, revealedTitle }
+        : stateWithoutDate;
+    saveSteamDetectiveState(state.puzzleDate, stateToSave, caseFile);
   }, [state, caseFile]);
 
   return { state, setState };

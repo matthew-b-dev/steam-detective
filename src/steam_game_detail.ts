@@ -3233,7 +3233,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/235600/ss_b85d9cae27471119f88a58ce6de1ae56ce8f4fba.600x338.jpg?t=1764775433',
     shortDescription:
-      'In this stealth-action thriller, a terrorist group known as the Engineers launches the Blacklist, a series of escalating attacks on US interests. Only one man can stop them: legendary covert agent Sam Fisher.',
+      'In this stealth-action thriller, a terrorist group known as the Engineers launches the Blacklist, a series of escalating attacks on US interests. Only one man can stop them: legendary covert agent ||Sam Fisher||.',
     releaseDate: 'Aug 20, 2013',
     developer: 'Ubisoft Toronto',
     publisher: 'Ubisoft',

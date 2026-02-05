@@ -70,3 +70,27 @@ button:focus-visible {
 .animate-shake {
   animation: shake 0.5s ease-in-out;
 }
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  background: transparent;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+
+  background-color: #101211;
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 35px,
+    rgba(255, 255, 255, 0.008) 35px,
+    rgba(255, 255, 255, 0.008) 70px
+  );
+}

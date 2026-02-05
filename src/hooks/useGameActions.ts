@@ -34,6 +34,7 @@ export const useGameActions = ({
           isComplete: true,
           isCorrect: false,
           totalGuesses: 7, // DNF counts as 7
+          revealedTitle: gameName, // Reveal the answer when game ends
         };
       }
 
@@ -44,7 +45,7 @@ export const useGameActions = ({
         totalGuesses: newTotalGuesses,
       };
     });
-  }, [state.isComplete, setState]);
+  }, [state.isComplete, setState, gameName]);
 
   const handleGuess = useCallback(
     (selected: GameOption | null) => {
@@ -59,7 +60,7 @@ export const useGameActions = ({
       // Show toast BEFORE setState to avoid it being called multiple times
       if (!isCorrect && newClue <= MAX_CLUES) {
         if (isClose) {
-          toast.error('Close guess! Try something similar.', {
+          toast.error('🤏 Close guess! Try something similar.', {
             duration: 5000,
             icon: '',
           });
@@ -83,6 +84,7 @@ export const useGameActions = ({
             isComplete: true,
             isCorrect: true,
             totalGuesses: newTotalGuesses,
+            revealedTitle: gameName, // Reveal the answer when player wins
           };
         } else {
           const newClue = prev.currentClue + 1;
@@ -94,6 +96,7 @@ export const useGameActions = ({
               isComplete: true,
               isCorrect: false,
               totalGuesses: 7, // DNF counts as 7
+              revealedTitle: gameName, // Reveal the answer when player loses
             };
           }
 
