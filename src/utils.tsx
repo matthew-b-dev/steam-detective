@@ -153,12 +153,26 @@ const levenshteinDistance = (str1: string, str2: string): number => {
   return dp[len1][len2];
 };
 
+// Special series/franchises where guesses containing the series name are considered "close"
+export const CLOSE_GUESS_SERIES = [
+  'super mario',
+  'final fantasy',
+  'the legend of zelda',
+];
+
 /**
  * Check if a guess is close to the target game name
  */
 export const isCloseGuess = (guess: string, targetName: string): boolean => {
   const guessLower = guess.toLowerCase();
   const targetLower = targetName.toLowerCase();
+
+  // Special case: if both contain a known series/franchise name, consider them close
+  for (const series of CLOSE_GUESS_SERIES) {
+    if (guessLower.includes(series) && targetLower.includes(series)) {
+      return true;
+    }
+  }
 
   // Check if one contains the other (for partial matches)
   if (targetLower.includes(guessLower) || guessLower.includes(targetLower)) {

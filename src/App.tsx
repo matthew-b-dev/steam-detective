@@ -149,9 +149,9 @@ function App() {
       {showResetConfirm && (
         <div className='fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50'>
           <div className='bg-zinc-800 p-6 rounded-lg shadow-xl max-w-md'>
-            <h2 className='text-xl font-bold mb-4'>Reset Today's Puzzle?</h2>
+            <h2 className='text-xl font-bold mb-4'>Reset this Puzzle?</h2>
             <p className='mb-6 text-gray-300'>
-              This will clear your progress for today's puzzle. Are you sure?
+              This will clear your progress for this puzzle. Are you sure?
             </p>
             <div className='flex gap-4 justify-end'>
               <button

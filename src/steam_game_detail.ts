@@ -3504,9 +3504,10 @@ export const steamGameDetails: SteamGameMap = {
   '238460': {
     name: 'BattleBlock Theater',
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/238460/ss_b5a52d1a1db2642255f95263c0f41860e2985556.600x338.jpg?t=1733782954',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/238460/ss_be0bf2d71121a8e9e59bd6fb6f433d53c8b4eb3b.600x338.jpg?t=1733782954',
     shortDescription:
       "Welcome to ||BattleBlock Theater||! You've got no where to go but up...on stage. Play single player or co-op to free your friends and save Hatty Hattington! Jump, solve and battle your way through a mysterious theater inhabited by highly technological felines.",
+    blurScreenshotQuarter: 'bottom',
     releaseDate: 'May 15, 2014',
     developer: 'The Behemoth',
     publisher: 'The Behemoth',
@@ -6978,7 +6979,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/418370/ss_d07fd9fca3644350782356667ce78d436c574680.600x338.jpg?t=1769125301',
     shortDescription:
-      'Fear and isolation seep through the walls of an abandoned southern farmhouse. "7" marks a new beginning for survival horror with the “Isolated View” of the visceral new first-person perspective.',
+      'Fear and isolation seep through the walls of an abandoned southern farmhouse. ||"7"|| marks a new beginning for survival horror with the “Isolated View” of the visceral new first-person perspective.',
     releaseDate: 'Jan 23, 2017',
     developer: 'CAPCOM Co., Ltd.',
     publisher: 'CAPCOM Co., Ltd.',
@@ -7513,9 +7514,10 @@ export const steamGameDetails: SteamGameMap = {
       'RPG',
       'Great Soundtrack',
     ],
+    blurredUserTags: ['Immersive Sim'],
     appId: 480490,
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/480490/ss_ff6b4efb3add6ea9a1d67f5c6c0fae6661ed9fd8.600x338.jpg?t=1750785331',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/480490/ss_976f1d181de3dc8bc86c78fe900c98be457d0942.600x338.jpg?t=1750785331',
   },
   '482400': {
     name: 'System Shock',
@@ -7558,6 +7560,7 @@ export const steamGameDetails: SteamGameMap = {
       'Kickstarter',
       'Survival',
     ],
+    blurredUserTags: ['Remake'],
     appId: 482400,
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/482400/ss_d8f11b2d84bb30139af1ebbb239e0bc84863a36d.600x338.jpg?t=1769786947',
@@ -8911,7 +8914,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/648350/ss_0e5d96d2e970b62ab3df2ace87d772dffaa2bef8.600x338.jpg?t=1750957705',
     shortDescription:
-      'Place yourself at the heart of the Jurassic franchise and build your own Jurassic World. Bioengineer dinosaurs that think, feel and react intelligently to the world around them and face threats posed by espionage, breakouts and devastating tropical storms in an uncertain world where life always finds a way.',
+      'Place yourself at the heart of the ||Jurassic|| franchise and build your own ||Jurassic|| World. Bioengineer dinosaurs that think, feel and react intelligently to the world around them and face threats posed by espionage, breakouts and devastating tropical storms in an uncertain world where life always finds a way.',
     releaseDate: 'Jun 11, 2018',
     developer: 'Frontier Developments',
     publisher: 'Frontier Developments',
@@ -8947,6 +8950,7 @@ export const steamGameDetails: SteamGameMap = {
       'Casual',
       'Adventure',
     ],
+    blurredUserTags: ['Dinosaurs'],
     appId: 648350,
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/648350/ss_3104ffdbca844907f82a7d3d1706a9ca9bccd117.600x338.jpg?t=1750957705',
@@ -11951,7 +11955,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1210320/ss_a5197ad5bb35e9899c9e751820cdb9dbc0ceb308.600x338.jpg?t=1765364005',
     shortDescription:
-      "||Potion Craft|| is an alchemist simulator where you physically interact with your tools and ingredients to brew potions. You're in full control of the whole shop: invent new recipes, attract customers and experiment to your heart's content. Just remember: the whole town is counting on you.",
+      "||Potion Craft|| is an ||alchemist simulator|| where you physically interact with your tools and ingredients to brew ||potions||. You're in full control of the whole shop: invent new recipes, attract customers and experiment to your heart's content. Just remember: the whole town is counting on you.",
     releaseDate: 'Dec 13, 2022',
     developer: 'niceplay games',
     publisher: 'tinyBuild',
@@ -13096,7 +13100,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1462040/ss_20a352a2c20dd4bfb08fa131dc4c2e763510f584.600x338.jpg?t=1746070920',
     shortDescription:
-      'Cloud Strife, an ex-SOLDIER operative, descends on the mako-powered city of Midgar. The world of the timeless classic FINAL FANTASY VII is reborn, using cutting-edge graphics technology, a new battle system and an additional adventure featuring Yuffie Kisaragi.',
+      'Cloud Strife, an ex-SOLDIER operative, descends on the mako-powered city of Midgar. The world of the timeless classic ||FINAL FANTASY VII|| is reborn, using cutting-edge graphics technology, a new battle system and an additional adventure featuring Yuffie Kisaragi.',
     releaseDate: 'Jun 17, 2022',
     developer: 'Square Enix',
     publisher: 'Square Enix',
@@ -14648,7 +14652,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1971650/ss_063d6228ccd9256814aec0cd46ebb4c093b56fea.600x338.jpg?t=1766123396',
     shortDescription:
-      'This game is a brand-new entry in the OCTOPATH TRAVELER series, the first installment of which was initially released in 2018 and sold over 3 million copies worldwide.',
+      'This game is a brand-new entry in the ||OCTOPATH TRAVELER|| series, the first installment of which was initially released in 2018 and sold over 3 million copies worldwide.',
     releaseDate: 'Feb 24, 2023',
     developer: 'Square Enix, ACQUIRE Corp.',
     publisher: 'Square Enix',
@@ -14684,6 +14688,7 @@ export const steamGameDetails: SteamGameMap = {
       'Singleplayer',
       'Emotional',
     ],
+    blurredUserTags: ['2.5D'],
     appId: 1971650,
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1971650/ss_dd347306294990fbb93e88a9fb6d694a7a2eec13.600x338.jpg?t=1766123396',

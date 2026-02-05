@@ -40,6 +40,8 @@ TRULY DONE
     a
   Harder:
     Magicka
+  Very Hard:
+    Going Medieval
 
 XCOM 2
 Mount and Blade II: Bannerlord
@@ -50,6 +52,7 @@ Frostpunk
 The Long Dark
 Life is Strange - Episode 1
 Far Cry 4
+STAR WARS: The Old Republic
 
 
 Up to bat:
@@ -69,6 +72,12 @@ Up to bat:
     Brawlhalla
     SMITE
 
+
+
+    '2026-02-05': {
+    easy: "No Man's Sky",
+    expert: 'Cuphead',
+  },
 */
 
 /**
@@ -109,8 +118,8 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
   [date: string]: string | { easy: string; expert: string };
 } = {
   '2026-02-05': {
-    easy: "No Man's Sky",
-    expert: 'Cuphead',
+    easy: 'Persona 3 Reload',
+    expert: 'Prey',
   },
   '2026-02-06': {
     easy: 'ASTRONEER',

@@ -23,6 +23,9 @@ const PuzzleDatePicker: React.FC<PuzzleDatePickerProps> = ({
   const utcDay = now.getUTCDate();
   const realUtcDate = new CalendarDate(utcYear, utcMonth, utcDay);
 
+  // Minimum selectable date: Feb 2, 2026 UTC
+  const minDate = new CalendarDate(2026, 2, 2);
+
   // Parse the current puzzle date
   const [puzzleYear, puzzleMonth, puzzleDay] = currentPuzzleDate
     .split('-')
@@ -64,6 +67,17 @@ const PuzzleDatePicker: React.FC<PuzzleDatePickerProps> = ({
   };
 
   const goToPreviousMonth = () => {
+    const prevMonth = currentMonth === 1 ? 12 : currentMonth - 1;
+    const prevYear = currentMonth === 1 ? currentYear - 1 : currentYear;
+
+    // Don't allow navigating before the minimum date month
+    if (
+      prevYear < minDate.year ||
+      (prevYear === minDate.year && prevMonth < minDate.month)
+    ) {
+      return;
+    }
+
     if (currentMonth === 1) {
       setCurrentMonth(12);
       setCurrentYear(currentYear - 1);
@@ -98,8 +112,12 @@ const PuzzleDatePicker: React.FC<PuzzleDatePickerProps> = ({
 
   const isDateDisabled = (day: number): boolean => {
     const date = new CalendarDate(currentYear, currentMonth, day);
-    // Disable if date is strictly after today (future dates) OR if it's the current puzzle date
-    return date.compare(realUtcDate) > 0 || isCurrentPuzzle(day);
+    // Disable if date is before minimum date, after today (future dates), OR if it's the current puzzle date
+    return (
+      date.compare(minDate) < 0 ||
+      date.compare(realUtcDate) > 0 ||
+      isCurrentPuzzle(day)
+    );
   };
 
   const monthNames = [
@@ -120,6 +138,10 @@ const PuzzleDatePicker: React.FC<PuzzleDatePickerProps> = ({
   const canGoNext =
     currentYear < realUtcDate.year ||
     (currentYear === realUtcDate.year && currentMonth < realUtcDate.month);
+
+  const canGoPrevious =
+    currentYear > minDate.year ||
+    (currentYear === minDate.year && currentMonth > minDate.month);
 
   return (
     <motion.div
@@ -156,6 +178,7 @@ const PuzzleDatePicker: React.FC<PuzzleDatePickerProps> = ({
               <div className='flex items-center justify-between mb-4'>
                 <button
                   onClick={goToPreviousMonth}
+                  disabled={!canGoPrevious}
                   className='px-3 py-1 bg-zinc-700 hover:bg-zinc-600 rounded text-sm disabled:opacity-50 disabled:cursor-not-allowed'
                 >
                   ◀
