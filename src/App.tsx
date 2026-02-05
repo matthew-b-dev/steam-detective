@@ -4,6 +4,7 @@ import './App.css';
 import SteamDetective from './SteamDetective';
 import HelpModal from './components/HelpModal';
 import { getPuzzleDate } from './utils';
+import { fetchSteamDetectiveScores } from './lib/supabaseClient';
 import calendarIcon from './assets/calendar-48.png';
 import analyzeIcon from './assets/analyze-48.png';
 import blueGamesFolderIcon from './assets/games-folder-48.png';
@@ -46,6 +47,18 @@ function App() {
 
   // Preload all assets when app mounts
   usePreloadAllAssets();
+  // Fetch today's 'easy' steam_scores when app mounts
+  useEffect(() => {
+    const fetchScores = async () => {
+      try {
+        await fetchSteamDetectiveScores('easy');
+      } catch (error) {
+        console.error('Error fetching initial scores:', error);
+      }
+    };
+
+    fetchScores();
+  }, []);
 
   const calendarIconLoaded = useImagePreloader(calendarIcon);
 
