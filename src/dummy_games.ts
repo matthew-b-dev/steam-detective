@@ -285,7 +285,6 @@ export const dummyGames: string[] = [
   'Heroes of the Storm',
   'NBA 2K16',
   'Boxboy',
-  'Dishonored: Definitive Edition',
   'Etrian Mystery Dungeon',
   'Resident Evil: Revelations 2 - Episode 1: Penal Colony',
   'Utawarerumono: Mask of Deception',

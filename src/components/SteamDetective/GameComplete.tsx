@@ -161,7 +161,7 @@ export const GameComplete: React.FC<GameCompleteProps> = ({
                 window.scrollTo({ top: 0, behavior: 'smooth' });
                 onStartExpertCase();
               }}
-              className='w-full flex items-center justify-center px-4 py-2 rounded bg-green-700 hover:bg-green-600 text-white text-sm font-semibold flex items-center justify-center gap-2 disabled:bg-gray-600 disabled:cursor-not-allowed disabled:opacity-50'
+              className='w-full px-4 py-2 rounded bg-green-700 hover:bg-green-600 text-white text-sm font-semibold flex items-center justify-center gap-2 disabled:bg-gray-600 disabled:cursor-not-allowed disabled:opacity-50'
             >
               <span className='block'>
                 <PlayIcon className='inline w-5 h-5 mr-1 mt-[-1px]' />
