@@ -153,7 +153,32 @@ export const GameComplete: React.FC<GameCompleteProps> = ({
             Try Case File #2!
           </div>
         ) : null}
-
+        <div className='my-4 mx-auto max-w-[450px]'>
+          {/* Expert Case File Button - only show for easy mode and if expert hasn't started */}
+          {caseFile === 'easy' && onStartExpertCase && !expertCaseStarted && (
+            <button
+              onClick={() => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                onStartExpertCase();
+              }}
+              className='w-full flex items-center justify-center px-4 py-2 rounded bg-green-700 hover:bg-green-600 text-white text-sm font-semibold flex items-center justify-center gap-2 disabled:bg-gray-600 disabled:cursor-not-allowed disabled:opacity-50'
+            >
+              <span className='block'>
+                <PlayIcon className='inline w-5 h-5 mr-1 mt-[-1px]' />
+              </span>
+              <span className='block '>
+                <span className='mr-2 pb-2 whitespace-nowrap'>Continue to</span>{' '}
+                <span className='bg-gray-800/20 py-1 px-2 rounded whitespace-nowrap'>
+                  <img
+                    className='inline w-7 h-7 mr-[2px] relative top-[-1px]'
+                    src={blueGamesFolderIcon}
+                  />
+                  <span className=''>Case File #2</span>
+                </span>
+              </span>
+            </button>
+          )}
+        </div>
         {/* Loading State */}
         {scoresLoading && (
           <motion.div
@@ -297,35 +322,6 @@ export const GameComplete: React.FC<GameCompleteProps> = ({
                   text={'Share both Case Files'}
                 />
               )}
-
-              {/* Expert Case File Button - only show for easy mode and if expert hasn't started */}
-              {caseFile === 'easy' &&
-                onStartExpertCase &&
-                !expertCaseStarted && (
-                  <button
-                    onClick={() => {
-                      window.scrollTo({ top: 0, behavior: 'smooth' });
-                      onStartExpertCase();
-                    }}
-                    className='w-full flex items-center justify-center px-4 py-2 rounded bg-green-700 hover:bg-green-600 text-white text-sm font-semibold flex items-center justify-center gap-2 disabled:bg-gray-600 disabled:cursor-not-allowed disabled:opacity-50'
-                  >
-                    <span className='block'>
-                      <PlayIcon className='inline w-5 h-5 mr-1 mt-[-1px]' />
-                    </span>
-                    <span className='block '>
-                      <span className='mr-2 pb-2 whitespace-nowrap'>
-                        Continue to
-                      </span>{' '}
-                      <span className='bg-gray-800/20 py-1 px-2 rounded whitespace-nowrap'>
-                        <img
-                          className='inline w-7 h-7 mr-[2px] relative top-[-1px]'
-                          src={blueGamesFolderIcon}
-                        />
-                        <span className=''>Case File #2</span>
-                      </span>
-                    </span>
-                  </button>
-                )}
 
               {/* Compact Copy Button (experimental)
               <button

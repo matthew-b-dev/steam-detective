@@ -14879,8 +14879,8 @@ export const steamGameDetails: SteamGameMap = {
     shortDescription:
       'Dive into the Dark Hour and awaken the depths of your heart. ||Persona 3 Reload|| is a captivating reimagining of the genre-defining RPG, reborn for the modern era with cutting-edge graphics and gameplay.',
     releaseDate: 'Feb 1, 2024',
-    developer: 'ATLUS',
-    publisher: 'SEGA',
+    developer: '||ATLUS||',
+    publisher: '||SEGA||',
     tags: ['Adventure', 'RPG', 'Strategy'],
     features: [],
     recentReviewSummary: {
@@ -14891,6 +14891,7 @@ export const steamGameDetails: SteamGameMap = {
       count: 19663,
       rating: 'Overwhelmingly Positive',
     },
+    blurredUserTags: ['Anime'],
     userTags: [
       'JRPG',
       'RPG',
