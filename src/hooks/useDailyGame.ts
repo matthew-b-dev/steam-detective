@@ -36,17 +36,18 @@ export const useDailyGame = (caseFile: 'easy' | 'expert' = 'easy') => {
     );
     const gameIds = eligibleGames.map(([id]) => id);
 
-    // Simple hash function (same as getDailyGames)
+    // Simple hash function - include caseFile to get different games for easy vs expert
+    const hashInput = `${utcDate}-${caseFile}`;
     let hash = 0;
-    for (let i = 0; i < utcDate.length; i++) {
-      hash = (hash * 31 + utcDate.charCodeAt(i)) % 100000;
+    for (let i = 0; i < hashInput.length; i++) {
+      hash = (hash * 31 + hashInput.charCodeAt(i)) % 100000;
     }
 
     // Use hash to select a game
     const selectedIndex = hash % gameIds.length;
     const selectedId = gameIds[selectedIndex];
     return steamGameDetails[selectedId];
-  }, [utcDate]);
+  }, [utcDate, caseFile]);
 
   return dailyGame;
 };

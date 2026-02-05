@@ -53,6 +53,21 @@ export const useGameActions = ({
       const isCorrect = selected.value === gameName;
       const isClose = !isCorrect && isCloseGuess(selected.value, gameName);
 
+      // Calculate new clue before setState to determine if we should show toast
+      const newClue = state.currentClue + 1;
+
+      // Show toast BEFORE setState to avoid it being called multiple times
+      if (!isCorrect && newClue <= MAX_CLUES) {
+        if (isClose) {
+          toast.error('Close guess! Try something similar.', {
+            duration: 5000,
+            icon: '',
+          });
+        } else {
+          toast.error('Incorrect guess!');
+        }
+      }
+
       setState((prev) => {
         const newGuesses = [...prev.guesses, { name: selected.value, isClose }];
         const newGuessesRemaining = prev.guessesRemaining - 1;
@@ -71,18 +86,6 @@ export const useGameActions = ({
           };
         } else {
           const newClue = prev.currentClue + 1;
-
-          // Only show toast if this is not the final guess (all clues not yet revealed)  
-          if (newClue <= MAX_CLUES) {
-            if (isClose) {
-              toast.error('Close guess! Try something similar.', {
-                duration: 5000,
-                icon: '',
-              });
-            } else {
-              toast.error('Incorrect guess!');
-            }
-          }
 
           if (newClue > MAX_CLUES) {
             return {
@@ -104,7 +107,7 @@ export const useGameActions = ({
         }
       });
     },
-    [state.isComplete, gameName, setState],
+    [state.isComplete, state.currentClue, gameName, setState],
   );
 
   return { handleSkip, handleGuess };

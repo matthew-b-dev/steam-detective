@@ -5,6 +5,26 @@ import SteamDetective from './SteamDetective';
 import HelpModal from './components/HelpModal';
 import { getPuzzleDate } from './utils';
 import calendarIcon from './assets/calendar-48.png';
+import analyzeIcon from './assets/analyze-48.png';
+import blueGamesFolderIcon from './assets/games-folder-48.png';
+import greenGamesFolderIcon from './assets/green-games-folder-48.png';
+
+// Preload all asset images when app mounts
+const usePreloadAllAssets = () => {
+  useEffect(() => {
+    const imagesToPreload = [
+      calendarIcon,
+      analyzeIcon,
+      blueGamesFolderIcon,
+      greenGamesFolderIcon,
+    ];
+
+    imagesToPreload.forEach((src) => {
+      const img = new Image();
+      img.src = src;
+    });
+  }, []);
+};
 
 // Preload images hook
 const useImagePreloader = (src: string) => {
@@ -23,6 +43,10 @@ function App() {
   const [showResetConfirm, setShowResetConfirm] = useState(false);
   const [showHelp, setShowHelp] = useState(false);
   const puzzleDate = getPuzzleDate(false);
+
+  // Preload all assets when app mounts
+  usePreloadAllAssets();
+
   const calendarIconLoaded = useImagePreloader(calendarIcon);
 
   const handleResetPuzzle = () => {
@@ -59,9 +83,9 @@ function App() {
                       fontFamily: 'serif',
                       letterSpacing: '-0.03em',
                     }}
-                    className='text-gray-500'
+                    className='text-gray-400 sm:text-gray-500'
                   >
-                    <span className=''>.</span>
+                    <span>.</span>
                     <span className='italic'>wtf</span>
                   </span>
                   {/*

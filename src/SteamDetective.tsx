@@ -204,7 +204,7 @@ const SteamDetectiveGame: React.FC<SteamDetectiveGameProps> = ({
       currentLowestPosition > prevLowestPosition &&
       currentLowestPosition >= 0
     ) {
-      const scrollAmount = window.innerHeight * 0.25; // 25% of viewport height
+      const scrollAmount = 150; // 150px scroll
 
       // Delay scroll to ensure DOM has updated with new content
       setTimeout(() => {
@@ -213,10 +213,10 @@ const SteamDetectiveGame: React.FC<SteamDetectiveGameProps> = ({
           behavior: 'smooth',
         });
       }, 100);
-
-      // Update ref for next comparison
-      prevShowCluesRef.current = showClues;
     }
+
+    // Always update ref after comparison, regardless of whether we scrolled
+    prevShowCluesRef.current = showClues;
   }, [showClues, state.isComplete]);
 
   const handleCopyToShare = useCallback(() => {

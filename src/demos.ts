@@ -91,12 +91,16 @@ export const getDateFromRoute = (): string | null => {
 export const STEAM_DETECTIVE_DEMO_DAYS: {
   [date: string]: string | { easy: string; expert: string };
 } = {
+  '2026-02-03': {
+    easy: 'Bastion',
+    expert: 'ASTRONEER',
+  },
   '2026-02-04': {
     easy: "No Man's Sky",
     expert: 'Cuphead',
   },
-  '2026-02-03': {
-    easy: 'Bastion',
-    expert: 'ASTRONEER',
+  '2026-02-05': {
+    easy: 'ASTRONEER',
+    expert: 'Age of Empires II',
   },
 };
