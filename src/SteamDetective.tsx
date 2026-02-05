@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback, useRef } from 'react';
+import { useState, useEffect, useCallback, useRef, useMemo } from 'react';
 import { Toaster } from 'react-hot-toast';
 import toast from 'react-hot-toast';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -6,6 +6,7 @@ import {
   getPuzzleDate,
   getTimeUntilNextGame,
   getUtcDateString,
+  getRealUtcDateString,
   clearPuzzleState,
   getUnifiedState,
   saveExpertStarted,
@@ -284,7 +285,14 @@ const SteamDetectiveGame: React.FC<SteamDetectiveGameProps> = ({
       emojiText = `${generateEmojiText(state.totalGuesses)} 📁 #1`;
     }
 
-    const shareText = `https://steamdetective.wtf/\n${puzzleDate} 🕵️ #SteamDetective\n${emojiText}`;
+    // Include /d/{date} in URL if puzzle date is not today
+    const realToday = getRealUtcDateString();
+    const rawPuzzleDate = getUtcDateString(); // YYYY-MM-DD format
+    const baseUrl =
+      rawPuzzleDate === realToday
+        ? 'https://steamdetective.wtf/'
+        : `https://steamdetective.wtf/d/${rawPuzzleDate}`;
+    const shareText = `${baseUrl}\n${puzzleDate} 🕵️ #SteamDetective\n${emojiText}`;
     navigator.clipboard.writeText(shareText);
     toast.success('Copied to clipboard!');
   }, [state.totalGuesses, puzzleDate, caseFile, easyTotalGuesses]);
@@ -292,6 +300,40 @@ const SteamDetectiveGame: React.FC<SteamDetectiveGameProps> = ({
   const handleScoreSent = useCallback(() => {
     setState({ ...state, scoreSent: true });
   }, [state, setState]);
+
+  const caseFileHeader = useMemo(() => {
+    return (
+      <h2 className='text-lg text-white sm:text-2xl mb-[-5px] sm:py-0 sm:mb-0 font-bold'>
+        <div className='flex items-center'>
+          <img
+            src={
+              caseFile === 'easy' ? greenGamesFolderIcon : blueGamesFolderIcon
+            }
+            className={`transition-opacity duration-200 ${
+              caseFile === 'easy'
+                ? blueIconLoaded
+                  ? 'opacity-100'
+                  : 'opacity-0'
+                : greenIconLoaded
+                  ? 'opacity-100'
+                  : 'opacity-0'
+            }`}
+          />
+          <div className='pl-1'>
+            Case File{' '}
+            {caseFile === 'easy' ? (
+              '#1'
+            ) : (
+              <>
+                <span className='text-md'>#</span>2
+              </>
+            )}{' '}
+            <span className='text-gray-500/70'>of 2</span>
+          </div>
+        </div>
+      </h2>
+    );
+  }, [blueIconLoaded, caseFile, greenIconLoaded]);
 
   return (
     <SteamDetectiveGameProvider
@@ -301,68 +343,48 @@ const SteamDetectiveGame: React.FC<SteamDetectiveGameProps> = ({
       showClues={showClues}
     >
       <div className='relative max-w-[970px] mx-auto px-1 md:px-4'>
-        {caseFile === 'easy' && (
-          <div className='relative flex justify-center items-center mb-2'>
-            <h2 className='text-lg text-white sm:text-2xl mb-[-5px] sm:py-0 sm:mb-0 font-bold'>
-              <div className='flex items-center'>
-                <img
-                  src={greenGamesFolderIcon}
-                  className={`transition-opacity duration-200 ${blueIconLoaded ? 'opacity-100' : 'opacity-0'}`}
-                />
-                <div className='pl-1'>
-                  Case File #1 <span className='text-gray-500/70'>of 2</span>
-                </div>
-              </div>
-            </h2>
+        <div className='bg-zinc-800/40 px-4 pt-1 sm:pt-3 rounded-t-3xl'>
+          <div
+            className={`relative flex justify-center items-center ${state.isComplete ? 'pb-2' : ''}`}
+          >
+            {caseFileHeader}
           </div>
-        )}
-        {caseFile === 'expert' && (
-          <div className='relative flex justify-center items-center mb-4 mt-8'>
-            <h2 className='text-lg text-white sm:text-2xl mb-[-5px] sm:py-0 sm:mb-0 font-bold'>
-              <div className='flex items-center'>
-                <img
-                  src={blueGamesFolderIcon}
-                  className={`transition-opacity duration-200 ${greenIconLoaded ? 'opacity-100' : 'opacity-0'}`}
-                />
-                <div className='pl-1'>
-                  Case File <span className='text-md'>#</span>2{' '}
-                  <span className='text-gray-500/70'>of 2</span>
-                </div>
-              </div>
-            </h2>
-          </div>
-        )}
-        {!state.isComplete && (
-          <div className='mb-4 pt-4 font-semibold text-sm sm:text-base'>
-            <span
-              className={`px-2 py-1 mr-1 rounded transition-colors duration-200 text-white ${
-                flashGuesses ? 'bg-orange-300' : 'bg-zinc-800'
-              }`}
-            >
-              {state.guessesRemaining}
-            </span>
-            <span className='text-white'>
-              {`guess${state.guessesRemaining === 1 ? '' : 'es'} remaining`}
-            </span>
-          </div>
-        )}
-        {!state.isComplete && (
-          <GameInput onGuess={handleGuess} previousGuesses={state.guesses} />
-        )}
-        {!state.isComplete && (
-          <div className='mb-12 sm:mb-6 relative flex justify-center items-end'>
-            <div className='flex absolute left-0 font-semibold text-md sm:text-base mb-[-40px] sm:mb-[-18px]'>
-              <img src={analyzeIcon} className='w-8 h-8' />
-              <div className='pt-1 text-white'>Clue #{state.currentClue}</div>
+
+          {!state.isComplete && (
+            <div className='mb-4 pt-2 font-semibold text-sm sm:text-base'>
+              <span
+                className={`px-2 py-1 mr-1 rounded transition-colors duration-200 text-white ${
+                  flashGuesses ? 'bg-orange-300' : 'bg-zinc-800'
+                }`}
+              >
+                {state.guessesRemaining}
+              </span>
+              <span className='text-white'>
+                {`guess${state.guessesRemaining === 1 ? '' : 'es'} remaining`}
+              </span>
             </div>
-            <SkipButton onClick={handleSkip} currentClue={state.currentClue} />
-          </div>
-        )}
-        {!state.isComplete && state.guesses.length > 0 && (
-          <div className='max-w-[600px] pb-3'>
-            <MissedGuesses missedGuesses={state.guesses} />
-          </div>
-        )}
+          )}
+          {!state.isComplete && (
+            <GameInput onGuess={handleGuess} previousGuesses={state.guesses} />
+          )}
+          {!state.isComplete && (
+            <div className='pb-12 sm:pb-6 relative flex justify-center items-end'>
+              <div className='flex absolute left-0 font-semibold text-md sm:text-base mb-[-40px] sm:mb-[-18px]'>
+                <img src={analyzeIcon} className='w-8 h-8' />
+                <div className='pt-1 text-white'>Clue #{state.currentClue}</div>
+              </div>
+              <SkipButton
+                onClick={handleSkip}
+                currentClue={state.currentClue}
+              />
+            </div>
+          )}
+          {!state.isComplete && state.guesses.length > 0 && (
+            <div className='max-w-[600px] pb-3'>
+              <MissedGuesses missedGuesses={state.guesses} />
+            </div>
+          )}
+        </div>
         <GameComplete
           show={state.isComplete}
           gameName={dailyGame.name}

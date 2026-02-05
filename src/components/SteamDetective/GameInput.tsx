@@ -79,7 +79,7 @@ export const GameInput: React.FC<GameInputProps> = ({
   };
 
   return (
-    <div className='mb-6'>
+    <div className='mb-3'>
       <Select
         options={filteredOptions}
         value={guess}

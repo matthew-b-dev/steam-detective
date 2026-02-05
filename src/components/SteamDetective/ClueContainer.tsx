@@ -40,7 +40,7 @@ export const ClueContainer: React.FC<ClueContainerProps> = ({ caseFile }) => {
     >
       <motion.div
         layout
-        className='bg-[#17222f] rounded shadow-[0_20px_50px_rgba(0,0,0,1)] overflow-hidden'
+        className='bg-[#17222f] rounded-b-xl shadow-[0_20px_50px_rgba(0,0,0,1)] overflow-hidden'
       >
         <ClueTitle
           title={dailyGame.name}

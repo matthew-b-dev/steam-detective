@@ -11,7 +11,7 @@ import ShareButton from '../ShareButton';
 import SteamDetectiveFeedbackButtons from './SteamDetectiveFeedbackButtons';
 import { MAX_CLUES } from './utils';
 import blueGamesFolderIcon from '../../assets/games-folder-48.png';
-import { PlayIcon } from '@heroicons/react/24/solid';
+import { PlayIcon, StarIcon } from '@heroicons/react/24/solid';
 
 interface GameCompleteProps {
   show: boolean;
@@ -115,14 +115,21 @@ export const GameComplete: React.FC<GameCompleteProps> = ({
   if (!show) return null;
 
   return (
-    <div className='max-w-[600px] mx-auto pb-4'>
+    <div className='mx-auto'>
       <motion.div
         layout
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.3 }}
-        className={`bg-zinc-800 rounded overflow-hidden p-4 ${caseFile === 'easy' ? 'min-h-[324px]' : 'min-h-[475px]'}`}
+        className={`bg-zinc-800 overflow-hidden p-4 ${caseFile === 'easy' ? 'min-h-[324px]' : 'min-h-[475px]'}`}
       >
+        {/* Perfect Badge */}
+        {totalGuesses === 1 && (
+          <div className='flex items-center justify-center gap-1 mb-2'>
+            <StarIcon className='w-5 h-5 text-yellow-500' />
+            <span className='text-white font-semibold'>Perfect</span>
+          </div>
+        )}
         {/* Game Name */}
         <h2 className={`text-md font-semibold text-center text-white`}>
           {preDisplayNameContent}
@@ -300,10 +307,14 @@ export const GameComplete: React.FC<GameCompleteProps> = ({
                     }}
                     className='w-full flex items-center justify-center px-4 py-2 rounded bg-green-700 hover:bg-green-600 text-white text-sm font-semibold flex items-center justify-center gap-2 disabled:bg-gray-600 disabled:cursor-not-allowed disabled:opacity-50'
                   >
+                    <span className='block'>
+                      <PlayIcon className='inline w-5 h-5 mr-1 mt-[-1px]' />
+                    </span>
                     <span className='block '>
-                      <PlayIcon className='inline w-5 h-5 ml-4 mr-1' />
-                      Continue to{' '}
-                      <span className='bg-gray-800/20 ml-2 py-1 px-2 rounded'>
+                      <span className='mr-2 pb-2 whitespace-nowrap'>
+                        Continue to
+                      </span>{' '}
+                      <span className='bg-gray-800/20 py-1 px-2 rounded whitespace-nowrap'>
                         <img
                           className='inline w-7 h-7 mr-[2px] relative top-[-1px]'
                           src={blueGamesFolderIcon}

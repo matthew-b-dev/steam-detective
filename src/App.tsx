@@ -4,8 +4,13 @@ import './App.css';
 import SteamDetective from './SteamDetective';
 import HelpModal from './components/HelpModal';
 import PuzzleDatePicker from './components/PuzzleDatePicker';
-import { getUtcDateString, clearPuzzleState } from './utils';
+import {
+  getUtcDateString,
+  clearPuzzleState,
+  getRealUtcDateString,
+} from './utils';
 import { fetchSteamDetectiveScores } from './lib/supabaseClient';
+import { getDateFromRoute } from './demos';
 import analyzeIcon from './assets/analyze-48.png';
 import blueGamesFolderIcon from './assets/games-folder-48.png';
 import greenGamesFolderIcon from './assets/green-games-folder-48.png';
@@ -34,6 +39,18 @@ function App() {
 
   // Preload all assets when app mounts
   usePreloadAllAssets();
+
+  // Check if URL has /d/{date} matching today, and if so, redirect to /
+  useEffect(() => {
+    const routeDate = getDateFromRoute();
+    const realToday = getRealUtcDateString();
+
+    if (routeDate && routeDate === realToday) {
+      // Remove the /d/... part from the URL
+      window.history.replaceState({}, '', '/');
+    }
+  }, []);
+
   // Fetch today's 'easy' steam_scores when app mounts
   useEffect(() => {
     const fetchScores = async () => {

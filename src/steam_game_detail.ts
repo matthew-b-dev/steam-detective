@@ -5277,7 +5277,7 @@ export const steamGameDetails: SteamGameMap = {
   '291550': {
     name: 'Brawlhalla',
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/291550/e7ac3d3f2ae1ac0a5c267156ce3276c1687ec414/ss_e7ac3d3f2ae1ac0a5c267156ce3276c1687ec414.600x338.jpg?t=1769004985',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/291550/ss_d64ca2ffbf516452a52ac9ff1ea87eee3e8bdaf2.600x338.jpg?t=1769004985',
     shortDescription:
       "An epic platform fighter for up to 8 players online or local. Try casual free-for-alls, ranked matches, or invite friends to a private room. And it's free! Play cross-platform with millions of players on PlayStation, Xbox, Nintendo Switch, iOS, Android & Steam! Frequent updates. Over sixty Legends.",
     releaseDate: 'Oct 17, 2017',
@@ -5315,9 +5315,10 @@ export const steamGameDetails: SteamGameMap = {
       'Singleplayer',
       'Indie',
     ],
+    blurredUserTags: ['2D Platformer', 'Platformer'],
     appId: 291550,
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/291550/ss_0c26935bbd6b25fe83feaab0e94a8cc69bbe6f63.600x338.jpg?t=1769004985',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/291550/ss_33818f04a830ca57edc62d9534b1556362beef64.600x338.jpg?t=1769004985',
   },
   '292030': {
     name: 'The Witcher 3: Wild Hunt',
@@ -6425,7 +6426,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/386360/ss_9104a5770367ff37d3cd0e488b0866e8284874e5.600x338.jpg?t=1764627618',
     shortDescription:
-      "Join 40+ million players in ||SMITE||, the Battleground of the Gods! Wield Thor's hammer, turn your foes to stone as Medusa, or flex your divine power as one of 100+ other mythological icons. Become a God and play FREE today!",
+      "Join 40+ million players in ||SMITE||, the Battleground of the ||Gods||! Wield ||Thor's hammer||, turn your foes to stone as ||Medusa||, or flex your ||divine|| power as one of 100+ other ||mythological|| icons. Become a ||God|| and play FREE today!",
     releaseDate: 'Sep 8, 2015',
     developer: 'Titan Forge Games',
     publisher: 'Hi-Rez Studios',
@@ -6471,6 +6472,7 @@ export const steamGameDetails: SteamGameMap = {
       'Casual',
       'Strategy RPG',
     ],
+    blurredUserTags: ['Mythology', 'Third Person'],
     appId: 386360,
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/386360/ss_b49630110e5c4603dc4d5a46acda198a8b2a5dde.600x338.jpg?t=1764627618',

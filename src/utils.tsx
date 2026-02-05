@@ -206,13 +206,9 @@ export const isCloseGuess = (guess: string, targetName: string): boolean => {
 };
 
 /**
- * Get the current UTC date string (YYYY-MM-DD)
+ * Get today's real UTC date string in YYYY-MM-DD format (ignoring route override)
  */
-export const getUtcDateString = (): string => {
-  // Check for route-based date override first (e.g., /d/2026-02-03)
-  const routeDate = getDateFromRoute();
-  if (routeDate) return routeDate;
-
+export const getRealUtcDateString = (): string => {
   // Check for hardcoded DATE_OVERRIDE constant
   if (DATE_OVERRIDE) return DATE_OVERRIDE;
 
@@ -221,6 +217,17 @@ export const getUtcDateString = (): string => {
   const month = String(now.getUTCMonth() + 1).padStart(2, '0');
   const day = String(now.getUTCDate()).padStart(2, '0');
   return `${year}-${month}-${day}`;
+};
+
+/**
+ * Get current UTC date string in YYYY-MM-DD format
+ */
+export const getUtcDateString = (): string => {
+  // Check for route-based date override first (e.g., /d/2026-02-03)
+  const routeDate = getDateFromRoute();
+  if (routeDate) return routeDate;
+
+  return getRealUtcDateString();
 };
 
 /**
