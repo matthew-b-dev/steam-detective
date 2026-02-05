@@ -199,10 +199,14 @@ const SteamDetectiveGame: React.FC<SteamDetectiveGameProps> = ({
 
     // If a new clue has become the lowest (higher canonical position number), scroll down
     // Exception: don't scroll on the first clue
+    // Only auto-scroll if user is at the top or within 50px of the top
+    const isNearTop = window.scrollY <= 50;
+
     if (
       !isFirstClue &&
       currentLowestPosition > prevLowestPosition &&
-      currentLowestPosition >= 0
+      currentLowestPosition >= 0 &&
+      isNearTop
     ) {
       const scrollAmount = 150; // 150px scroll
 
