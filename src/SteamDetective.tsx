@@ -328,7 +328,7 @@ const SteamDetectiveGame: React.FC<SteamDetectiveGameProps> = ({
                 <span className='text-md'>#</span>2
               </>
             )}{' '}
-            <span className='text-gray-500/70'>of 2</span>
+            <span className='text-gray-500'>of 2</span>
           </div>
         </div>
       </h2>
@@ -495,7 +495,7 @@ const SteamDetective: React.FC<SteamDetectiveProps> = ({
       {/* Date Picker Button */}
       <div className='flex justify-center mb-0'>
         <button
-          className='flex items-center mb-2 bg-transparent cursor-pointer border-gray-700 hover:text-white transition-opacity '
+          className='flex items-center mb-2 bg-transparent cursor-pointer border-zinc-700 hover:text-white transition-opacity '
           onClick={onDatePickerClick}
         >
           <img src={calendarIcon} className='w-6 h-6 mr-2' alt='Calendar' />

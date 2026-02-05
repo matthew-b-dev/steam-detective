@@ -109,14 +109,6 @@ function App() {
                     <span>.</span>
                     <span className='italic'>wtf</span>
                   </span>
-                  {/*
-                  <span
-                    style={{ letterSpacing: '0.0em' }}
-                    className='font-bold ml-1 hidden sm:inline absolute top-4 text-gray-400 text-[22px] leading-[16px] pl-0 pr-1 pb-[2px] rounded leading-tight'
-                  >
-                    .wtf
-                  </span>
-                  */}
                 </h1>
                 <p
                   className='text-gray-400 text-sm block pl-[2px] sm:pl-0 relative top-[-4px] sm:top-[-8px]'
@@ -135,7 +127,7 @@ function App() {
               </div>
               <div className='flex items-center gap-2 sm:absolute sm:right-0 sm:top-1/2 sm:-translate-y-1/2'>
                 <button
-                  className='text-gray-400 hover:text-gray-300 transition-colors flex items-center gap-1 px-2 bg-transparent sm:border-1 sm:border-gray-700 sm:px-3 sm:py-1'
+                  className='text-gray-400 hover:text-gray-300 transition-colors flex items-center gap-1 px-2 bg-transparent sm:border-1 sm:border-zinc-700 sm:px-3 sm:py-1'
                   onClick={() => setShowHelp(true)}
                 >
                   <QuestionMarkCircleIcon className='h-6 w-6 sm:h-4 sm:w-4' />
