@@ -2928,6 +2928,7 @@ export const steamGameDetails: SteamGameMap = {
       count: 0,
       rating: 'Very Positive',
     },
+    clueOrder: ['desc', 'details', 'tags'],
     allReviewSummary: {
       count: 1138,
       rating: 'Very Positive',
@@ -2954,6 +2955,7 @@ export const steamGameDetails: SteamGameMap = {
       'Parkour',
       'Ninja',
     ],
+    blurredUserTags: ['Looter Shooter'],
     appId: 230410,
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/230410/ss_0a541a8bf59e212870ea8d82260ac1b3ae2d0354.600x338.jpg?t=1765508208',

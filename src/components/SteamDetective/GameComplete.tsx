@@ -178,8 +178,9 @@ export const GameComplete: React.FC<GameCompleteProps> = ({
               {caseFile === 'easy' ? '#1' : '#2'}
             </div>
             {/* Bar Chart */}
-            <div className='mb-0 bg-zinc-800 rounded-lg px-2 max-w-[500px] mx-auto'>
+            <div className='mb-0 bg-zinc-800 rounded-lg px-2 max-w-[500px] mx-auto overflow-visible'>
               <Chart
+                className='pl-2'
                 options={{
                   responsive: [
                     {
@@ -241,6 +242,7 @@ export const GameComplete: React.FC<GameCompleteProps> = ({
                     title: {
                       text: 'Players',
                       rotate: -90,
+                      offsetX: 4,
                       style: {
                         color: '#9ca3af',
                         fontSize: '12px',

@@ -55,6 +55,8 @@ Far Cry 4
 Up to bat:
   Easy:
     DARK SOULS II
+    Warframe
+
   Great:
   
   Harder: 

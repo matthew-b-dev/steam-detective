@@ -345,7 +345,7 @@ const SteamDetectiveGame: React.FC<SteamDetectiveGameProps> = ({
       <div className='relative max-w-[970px] mx-auto px-1 md:px-4'>
         <div className='bg-zinc-800/40 px-4 pt-1 sm:pt-3 rounded-t-3xl'>
           <div
-            className={`relative flex justify-center items-center ${state.isComplete ? 'pb-2' : ''}`}
+            className={`relative flex justify-center items-center pb-4 sm:pb-6 ${state.isComplete ? 'pb-2 sm:pb-4' : ''}`}
           >
             {caseFileHeader}
           </div>
