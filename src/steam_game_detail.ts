@@ -409,7 +409,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/24240/ss_cffb7789a44915293bf16b79f9278b34dacdb9d7.600x338.jpg?t=1766064903',
     shortDescription:
-      'Take on the role of a hardened career criminal executing intense, dynamic ||heists|| in constant pursuit of the next "||big score||"',
+      'Take on the role of a hardened ||career criminal|| executing intense, dynamic ||heists|| in constant pursuit of the next "||big score||"',
     releaseDate: 'Oct 20, 2011',
     developer: 'OVERKILL - a Starbreeze Studio.',
     publisher: 'Starbreeze Entertainment',
@@ -1340,9 +1340,14 @@ export const steamGameDetails: SteamGameMap = {
       'FPS',
       'Historical',
       'World War II',
+      'Old School',
+      'First-Person',
       'Gore',
       'Shooter',
-      'First-Person',
+      'Story Rich',
+      'Sci-fi',
+      'Stealth',
+      'War',
     ],
     appId: 201810,
     secondaryScreenshot:
@@ -1435,13 +1440,15 @@ export const steamGameDetails: SteamGameMap = {
     appId: 202970,
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/202970/ss_aa5f28d5d5fb0956c5de65b0a3e2a115b8283321.600x338.jpg?t=1748037715',
+    debugNotes: 'delete',
+    debugProcessed: true,
   },
   '203140': {
     name: 'Hitman: Absolution',
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/203140/ss_02033e4c2383bee25e72d2591fac1b436f5483f4.600x338.jpg?t=1734461136',
     shortDescription:
-      'The original assassin is back! Betrayed by the Agency and hunted by the police, ||Agent 47|| finds himself pursuing redemption in a corrupt and twisted world.',
+      'The original ||assassin|| is back! Betrayed by the ||Agency|| and hunted by the police, ||Agent 47|| finds himself pursuing redemption in a corrupt and twisted world.',
     releaseDate: 'Nov 19, 2012',
     developer: 'Io-Interactive A/S',
     publisher: 'Io-Interactive A/S',
@@ -1476,6 +1483,11 @@ export const steamGameDetails: SteamGameMap = {
     appId: 203140,
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/203140/ss_9474fb068b723003f15ee205e05f819f116cc64a.600x338.jpg?t=1734461136',
+    blurredUserTags: ['Stealth', 'Assassin'],
+    clueOrder: ['desc', 'tags', 'details'],
+    difficulty: 'Medium',
+    fun: true,
+    debugProcessed: true,
   },
   '203160': {
     name: 'Tomb Raider Game of the Year',
@@ -1518,13 +1530,15 @@ export const steamGameDetails: SteamGameMap = {
     appId: 203160,
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/203160/ss_cd920308517efb19c11b44e251af89e40fb412d5.600x338.jpg?t=1765220424',
+    debugNotes: 'delete',
+    debugProcessed: true,
   },
   '203770': {
     name: 'Crusader Kings II',
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/203770/ss_14a34ce83f71c1b0dcf7d69e5526306ebadc0829.600x338.jpg?t=1740566844',
     shortDescription:
-      'Explore one of the defining periods in world history in an experience crafted by the masters of Grand Strategy.',
+      'Explore one of the defining periods in ||world history|| in an experience crafted by the masters of ||Grand Strategy||.',
     releaseDate: 'Feb 14, 2012',
     developer: 'Paradox Development Studio',
     publisher: 'Paradox Interactive',
@@ -1559,13 +1573,17 @@ export const steamGameDetails: SteamGameMap = {
     appId: 203770,
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/203770/ss_95adbfc039f26bcde1588e5c01c7197c9d84d428.600x338.jpg?t=1740566844',
+    clueOrder: ['desc', 'details', 'tags'],
+    difficulty: 'Medium',
+    fun: true,
+    debugProcessed: true,
   },
   '204100': {
     name: 'Max Payne 3',
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/204100/ss_84fc2ba217ce04ec4b782f9f5ccc09d20980f220.600x338.jpg?t=1718391374',
     shortDescription:
-      'No longer a New York City cop, ||Max Payne|| moves to São Paulo to protect a wealthy family in an effort to finally escape his troubled past. This complete edition of ||Max Payne 3|| includes the complete original game and all previously released downloadable content.',
+      '||No longer a New York City|| cop, ||Max Payne|| moves to ||São Paulo|| to ||protect a wealthy family|| in an effort to finally escape his ||troubled past||. This complete edition of ||Max Payne 3|| includes the complete original game and all previously released downloadable content.',
     releaseDate: 'May 31, 2012',
     developer: 'Rockstar Studios',
     publisher: 'Rockstar Games',
@@ -1601,6 +1619,10 @@ export const steamGameDetails: SteamGameMap = {
     appId: 204100,
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/204100/ss_b442d79fbc45be2cb773d3de6f7b40fa5f126588.600x338.jpg?t=1718391374',
+    clueOrder: ['desc', 'tags', 'details'],
+    fun: true,
+    difficulty: 'Hard',
+    debugProcessed: true,
   },
   '204300': {
     name: 'Awesomenauts',
@@ -1642,6 +1664,8 @@ export const steamGameDetails: SteamGameMap = {
     appId: 204300,
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/204300/ss_a47f24e6e25320d9c59834d83f89f03b79c75587.600x338.jpg?t=1763057499',
+    debugNotes: 'delete',
+    debugProcessed: true,
   },
   '204360': {
     name: 'Castle Crashers',
@@ -1649,7 +1673,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/204360/ss_a800d5bc5b31d84fb940c7d0449f1aea05ac3e0e.600x338.jpg?t=1764096331',
     shortDescription:
-      'Hack, slash, and smash your way to victory in this award winning 2D arcade adventure from ||The Behemoth||!',
+      '||Hack||, ||slash||, and smash your way to victory in this award winning 2D ||arcade adventure|| from The Behemoth!',
     releaseDate: 'Sep 26, 2012',
     developer: 'The Behemoth',
     publisher: 'The Behemoth',
@@ -1684,13 +1708,17 @@ export const steamGameDetails: SteamGameMap = {
     appId: 204360,
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/204360/ss_aa619ba113280fd78ddb6a6c36a435a1bd673773.600x338.jpg?t=1764096331',
+    clueOrder: ['details', 'desc', 'tags'],
+    difficulty: 'Hard',
+    fun: true,
+    debugProcessed: true,
   },
   '204880': {
     name: 'Sins of a Solar Empire: Rebellion',
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/204880/ss_d018361380a56bcc8b6fd4a6395df5c114c3e188.600x338.jpg?t=1759332956',
     shortDescription:
-      'Command a space-faring empire in ||Sins of a Solar Empire: Rebellion||, the new stand-alone expansion that combines 4X depth with real-time strategy gameplay.',
+      'Command a space-faring empire in ||Sins of a Solar Empire||: ||Rebellion||, the new stand-alone expansion that combines 4X depth with real-time strategy gameplay.',
     releaseDate: 'Jun 12, 2012',
     developer: 'Ironclad Games Corporation, Stardock Entertainment',
     publisher: 'Stardock Entertainment',
@@ -1725,16 +1753,20 @@ export const steamGameDetails: SteamGameMap = {
     appId: 204880,
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/204880/ss_9fcff4b2ac0a5baa67543446b8767278bc1c7c01.600x338.jpg?t=1759332956',
+    clueOrder: ['details', 'desc', 'tags'],
+    difficulty: 'Expert',
+    fun: true,
+    debugProcessed: true,
   },
   '205100': {
     name: 'Dishonored',
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/205100/ss_409bb8591d4c8278815510d9be737b57dfc57e06.600x338.jpg?t=1750785977',
     shortDescription:
-      "||Dishonored|| is an immersive first-person action game that casts you as a supernatural assassin driven by revenge. With ||Dishonored||'s flexible combat system, creatively eliminate your targets as you combine the supernatural abilities, weapons and unusual gadgets at your disposal.",
+      "||Dishonored|| is an ||immersive|| first-person ||action|| game that casts you as a ||supernatural assassin|| driven by revenge. With ||Dishonored||'s ||flexible combat|| system, ||creatively|| eliminate your ||targets|| as you combine the ||supernatural abilities||, weapons and ||unusual gadgets|| at your disposal.",
     releaseDate: 'Oct 8, 2012',
-    developer: 'Arkane Studios',
-    publisher: 'Bethesda Softworks',
+    developer: '||Arkane|| Studios',
+    publisher: '||Bethesda|| Softworks',
     tags: ['Action', 'Adventure'],
     features: [],
     allReviewSummary: {
@@ -1766,6 +1798,11 @@ export const steamGameDetails: SteamGameMap = {
     appId: 205100,
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/205100/ss_32d76a6ff4b216410b90ff2cdb7107a28a1baed2.600x338.jpg?t=1750785977',
+    clueOrder: ['desc', 'details', 'tags'],
+    blurredUserTags: ['Stealth', 'Assassin'],
+    difficulty: 'Medium',
+    fun: true,
+    debugProcessed: true,
   },
   '206420': {
     name: 'Saints Row IV: Re-Elected',
@@ -1807,13 +1844,15 @@ export const steamGameDetails: SteamGameMap = {
     appId: 206420,
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/206420/ss_92e54253c19f9536c3932caa7b8b581cea74e665.600x338.jpg?t=1764670979',
+    debugNotes: 'delete',
+    debugProcessed: true,
   },
   '207610': {
     name: 'The Walking Dead',
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/207610/ss_7a2c18f45ed5c6464ae803ae49c32bf3717ae375.600x338.jpg?t=1729702559',
     shortDescription:
-      "A five-part adventure horror series set in the same universe as Robert Kirkman's award-winning comic book series.",
+      "A ||five||-part ||adventure horror|| series set in the same universe as Robert ||Kirkman's|| award-winning ||comic book|| series.",
     releaseDate: 'Apr 24, 2012',
     developer: 'Telltale Games',
     publisher: 'Skybound Games',
@@ -1848,13 +1887,18 @@ export const steamGameDetails: SteamGameMap = {
     appId: 207610,
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/207610/ss_b8880868558943bf6b8e1aa94fe9ab51ea04472a.600x338.jpg?t=1729702559',
+    blurredUserTags: ['Zombies'],
+    clueOrder: ['desc', 'tags', 'details'],
+    difficulty: 'Hard',
+    fun: true,
+    debugProcessed: true,
   },
   '211420': {
     name: 'DARK SOULS',
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/211420/ss_5efe46f2e2c65040f529a0d0e7069d6b8bb8e175.600x338.jpg?t=1721682669',
     shortDescription:
-      '||Dark Souls|| will be the most deeply challenging game you play this year. Can you live through a million deaths and earn your legacy?',
+      '||Dark Souls|| will be the most ||deeply challenging|| game you play this year. Can you ||live|| through a ||million deaths|| and earn your ||legacy||?',
     releaseDate: 'Aug 24, 2012',
     developer: 'FromSoftware, Inc.',
     publisher: 'Bandai Namco Entertainment',
@@ -1889,6 +1933,9 @@ export const steamGameDetails: SteamGameMap = {
     appId: 211420,
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/211420/ss_c34cdf130b9ac71c99196007d1e78c05305652b9.600x338.jpg?t=1721682669',
+    blurredUserTags: ['Souls-like', 'Unforgiving', 'Difficult'],
+    debugNotes: 'delete',
+    debugProcessed: true,
   },
   '211500': {
     name: 'RaceRoom Racing Experience',
@@ -1930,13 +1977,15 @@ export const steamGameDetails: SteamGameMap = {
     appId: 211500,
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/211500/e0154ef6c14ed0b043d100765f50a0dff2490cdf/ss_e0154ef6c14ed0b043d100765f50a0dff2490cdf.600x338.jpg?t=1764085909',
+    debugNotes: 'delete',
+    debugProcessed: true,
   },
   '211820': {
     name: 'Starbound',
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/211820/ss_2dcc1e0c07f7597edc6556b31b8df9902fddac1a.600x338.jpg?t=1767622909',
     shortDescription:
-      "You've fled your home, only to find yourself lost in space with a damaged ship. Your only option is to beam down to the planet below, repair your ship and set off to explore the universe...",
+      "You've fled your home, only to find yourself ||lost in space|| with a damaged ||ship||. Your only option is to ||beam|| down to the ||planet below||, repair your ||ship|| and set off to explore the ||universe||...",
     releaseDate: 'Jul 22, 2016',
     developer: 'Chucklefish',
     publisher: 'Chucklefish',
@@ -1971,6 +2020,11 @@ export const steamGameDetails: SteamGameMap = {
     appId: 211820,
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/211820/ss_c8bb844f59b490bbfee6d179879e47272044ca34.600x338.jpg?t=1767622909',
+    blurredUserTags: ['Space'],
+    clueOrder: ['desc', 'tags', 'details'],
+    difficulty: 'Hard',
+    fun: true,
+    debugProcessed: true,
   },
   '212070': {
     name: 'Star Conflict',
@@ -2019,13 +2073,15 @@ export const steamGameDetails: SteamGameMap = {
     appId: 212070,
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/212070/ss_105e8c2b405e3a02107fdaa3855adf2e99937896.600x338.jpg?t=1768288657',
+    debugNotes: 'delete',
+    debugProcessed: true,
   },
   '212500': {
     name: 'The Lord of the Rings Online',
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/212500/14cb88d7e83bb005fff04e066932bc1e38d90d7d/ss_14cb88d7e83bb005fff04e066932bc1e38d90d7d.600x338.jpg?t=1764807180',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/212500/ss_c375fd975744d35037452d73febd0420d8c1b192.600x338.jpg?t=1764807180',
     shortDescription:
-      "Join the world's greatest fellowship of players in the award-winning online re-creation of J. R. R. Tolkien's legendary Middle-earth.",
+      "||Join the world's|| greatest ||fellowship|| of players in the award-winning ||online|| re-creation of ||J. R. R. Tolkien's|| legendary ||Middle-earth||.",
     releaseDate: 'Jun 6, 2012',
     developer: 'Standing Stone Games',
     publisher: 'Daybreak Game Company LLC',
@@ -2065,14 +2121,40 @@ export const steamGameDetails: SteamGameMap = {
     ],
     appId: 212500,
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/212500/077868d89520d44778b8b1e477e00ee85abb8426/ss_077868d89520d44778b8b1e477e00ee85abb8426.600x338.jpg?t=1764807180',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/212500/ss_4f9b8230fbc590240dea849d70b120c58fd42a97.600x338.jpg?t=1764807180',
+    blurredUserTags: [
+      'Free to Play',
+      'MMORPG',
+      'Massively Multiplayer',
+      'Adventure',
+      'Multiplayer',
+      'Character Customization',
+      'Open World',
+      'Exploration',
+      'Action',
+      'Story Rich',
+      'Online Co-Op',
+      'Co-op',
+      'Survival',
+      'Third Person',
+      'Singleplayer',
+      'PvP',
+      'Dark Fantasy',
+      'Fantasy',
+      'RPG',
+    ],
+    clueOrder: ['details', 'desc'],
+    debugNotes: '',
+    difficulty: 'Hard',
+    fun: true,
+    debugProcessed: true,
   },
   '212680': {
     name: 'FTL: Faster Than Light',
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/212680/ss_052d698926073e8d407a864f0e63a486af24ec0d.600x338.jpg?t=1748969356',
     shortDescription:
-      'This "spaceship simulation roguelike-like" allows you to take your ship and crew on an adventure through a randomly generated galaxy filled with glory and bitter defeat.',
+      '||This "spaceship simulation roguelike-like" allows you|| to take your ||ship|| and crew ||on an adventure through a randomly generated galaxy filled with|| glory ||and bitter|| defeat.',
     releaseDate: 'Sep 14, 2012',
     developer: 'Subset Games',
     publisher: 'Subset Games',
@@ -2107,13 +2189,18 @@ export const steamGameDetails: SteamGameMap = {
     appId: 212680,
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/212680/ss_779ba1fda143fc42a8eb1212830ad855422e84ad.600x338.jpg?t=1748969356',
+    blurredUserTags: ['Space', 'Sci-fi'],
+    clueOrder: ['details', 'desc', 'tags'],
+    difficulty: 'Hard',
+    fun: true,
+    debugProcessed: true,
   },
   '213670': {
     name: 'South Park: The Stick of Truth',
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/213670/ss_0c331dee16e7b6b9fa6af4dd06c413d72c4b4764.600x338.jpg?t=1765228309',
     shortDescription:
-      "From the perilous battlefields of the fourth-grade playground, a young hero will rise, destined to be ||South Park||'s savior. From the creators of ||South Park||, Trey Parker and Matt Stone, comes an epic quest to become… cool. Introducing ||South Park: The Stick of Truth||.For a thousand years, the battle has been waged.",
+      "From the perilous battlefields of the ||fourth-grade playground||, a ||young|| hero will rise, destined to be ||South Park||'s savior. From the creators of ||South Park||, ||Trey Parker|| and ||Matt Stone||, ||comes an epic quest|| to become… cool. Introducing ||South Park: The Stick of Truth||. For a thousand years, the battle has been waged.",
     releaseDate: 'Mar 3, 2014',
     developer: 'Obsidian Entertainment',
     publisher: 'Ubisoft',
@@ -2148,13 +2235,17 @@ export const steamGameDetails: SteamGameMap = {
     appId: 213670,
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/213670/ss_0b8823375d6ecb0969df1e79bf0beee6f1faebdc.600x338.jpg?t=1765228309',
+    clueOrder: ['desc', 'details', 'tags'],
+    difficulty: 'Medium',
+    fun: true,
+    debugProcessed: true,
   },
   '214490': {
     name: 'Alien: Isolation',
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/214490/ss_5ff8ca35914eca8f51f3303cf5d94a9f85279e2a.600x338.jpg?t=1763647113',
     shortDescription:
-      'Discover the true meaning of fear in ||Alien: Isolation||, a survival horror set in an atmosphere of constant dread and mortal danger.',
+      'Discover the true meaning of ||fear|| in ||Alien: Isolation||, a survival ||horror|| set in an atmosphere of constant dread and mortal danger.',
     releaseDate: 'Oct 6, 2014',
     developer: 'Creative Assembly',
     publisher: 'SEGA',
@@ -2189,6 +2280,10 @@ export const steamGameDetails: SteamGameMap = {
     appId: 214490,
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/214490/ss_e514869415e3bd913be3f6c0e419cea9f0be17a3.600x338.jpg?t=1763647113',
+    clueOrder: ['desc', 'details', 'tags'],
+    difficulty: 'Hard',
+    fun: true,
+    debugProcessed: true,
   },
   '218230': {
     name: 'PlanetSide 2',
@@ -9015,7 +9110,6 @@ export const steamGameDetails: SteamGameMap = {
       'Adventure',
       'Great Soundtrack',
     ],
-    blurredUserTags: ['RTS', 'Historical', 'Medieval', 'Resource Management'],
     appId: 813780,
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/813780/ss_1033024a26f0a7ed277865201aed9bb471b54320.600x338.jpg?t=1767895383',
