@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { CalendarDate } from '@internationalized/date';
 import { motion } from 'framer-motion';
 
@@ -34,6 +34,22 @@ const PuzzleDatePicker: React.FC<PuzzleDatePickerProps> = ({
   const [currentMonth, setCurrentMonth] = useState(realUtcDate.month);
   const [currentYear, setCurrentYear] = useState(realUtcDate.year);
   const [isLoading, setIsLoading] = useState(false);
+
+  // Reset loading state when page is restored from back-forward cache
+  useEffect(() => {
+    const handlePageShow = (event: PageTransitionEvent) => {
+      // If the page was restored from bfcache, reset the loading state
+      if (event.persisted) {
+        setIsLoading(false);
+      }
+    };
+
+    window.addEventListener('pageshow', handlePageShow);
+
+    return () => {
+      window.removeEventListener('pageshow', handlePageShow);
+    };
+  }, []);
 
   if (!isOpen) return null;
 
