@@ -122,10 +122,10 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     expert: 'Prey',
   },
   '2026-02-06': {
-    easy: 'ASTRONEER',
-    expert: 'Age of Empires II',
+    easy: 'Wolfenstein: The New Order',
+    expert: 'Arma 3',
   },
-  '2026-02-07': {
+  '2010-02-01': {
     easy: 'Bastion',
     expert: 'ASTRONEER',
   },

@@ -45,6 +45,7 @@ export const steamGameDetails: SteamGameMap = {
     appId: 570,
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/570/ss_7ab506679d42bfc0c0e40639887176494e0466d9.600x338.jpg?t=1769535998',
+    debugProcessed: true,
   },
   '620': {
     name: 'Portal 2',
@@ -86,6 +87,7 @@ export const steamGameDetails: SteamGameMap = {
     appId: 620,
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/620/ss_6a4f5afdaa98402de9cf0b59fed27bab3256a6f4.600x338.jpg?t=1745363004',
+    debugProcessed: true,
   },
   '730': {
     name: 'Counter-Strike 2',
@@ -127,6 +129,7 @@ export const steamGameDetails: SteamGameMap = {
     appId: 730,
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/730/ss_d830cfd0550fbb64d80e803e93c929c3abb02056.600x338.jpg?t=1749053861',
+    debugProcessed: true,
   },
   '4920': {
     name: 'Natural Selection 2',
@@ -168,6 +171,9 @@ export const steamGameDetails: SteamGameMap = {
     appId: 4920,
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4920/ss_742bc553cb1dbdf30267fc27d9ee1c0bdca0e618.600x338.jpg?t=1747384807',
+    debugNotes: 'remove RTS tag. not an rts',
+    blurredUserTags: [],
+    debugProcessed: true,
   },
   '8870': {
     name: 'BioShock Infinite',
@@ -210,13 +216,14 @@ export const steamGameDetails: SteamGameMap = {
     appId: 8870,
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/8870/ss_c6f3fbf3e9f4cb1777462150203a7174608dfcd9.600x338.jpg?t=1728673518',
+    debugProcessed: true,
   },
   '9200': {
     name: 'RAGE',
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/9200/ss_f531a899e9781f423efab9ec108ae2822c6117dc.600x338.jpg?t=1706806214',
     shortDescription:
-      "Powered by id's revolutionary id Tech 5 technology, ||RAGE|| is an intense first-person shooter with breakneck vehicle combat, an expansive world to explore, and jaw-dropping graphics!",
+      'Powered by ||id\'s|| revolutionary "||id Tech|| 5" technology, ||RAGE|| is an intense first-person shooter with breakneck ||vehicle|| combat, an expansive world to explore, and jaw-dropping graphics!',
     releaseDate: 'Oct 3, 2011',
     developer: 'id Software',
     publisher: 'Bethesda Softworks',
@@ -251,13 +258,16 @@ export const steamGameDetails: SteamGameMap = {
     appId: 9200,
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/9200/ss_e030a96ebaef76393acde360ebd8d9499984e9fd.600x338.jpg?t=1706806214',
+    clueOrder: ['desc', 'tags', 'details'],
+    blurredUserTags: ['Post-apocalyptic'],
+    debugProcessed: true,
   },
   '19680': {
     name: 'Alice: Madness Returns',
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/19680/ss_948c256c34f6ef5773599991ba196749db6e35ab.600x338.jpg?t=1655743771',
     shortDescription:
-      "||Alice: Madness Returns|| is a third-person, single-player, action adventure platformer. Visit the grim reality of Victorian London and travel to the beautiful yet ghastly Wonderland to uncover the root of ||Alice's madness||.",
+      "||Alice: Madness Returns|| is a third-person, single-player, action adventure platformer. Visit the grim reality of Victorian London and travel to the beautiful yet ghastly ||Wonderland|| to uncover the root of ||Alice's madness||.",
     releaseDate: 'Jun 17, 2011',
     developer: 'Spicy Horse Games',
     publisher: 'Electronic Arts',
@@ -292,6 +302,10 @@ export const steamGameDetails: SteamGameMap = {
     appId: 19680,
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/19680/ss_d4f04aecb7121fbbfa0117a39eda525ed8f619ac.600x338.jpg?t=1655743771',
+    clueOrder: ['desc', 'details', 'tags'],
+    difficulty: 'Hard',
+    fun: true,
+    debugProcessed: true,
   },
   '20920': {
     name: 'The Witcher 2: Assassins of Kings',
@@ -333,13 +347,17 @@ export const steamGameDetails: SteamGameMap = {
     appId: 20920,
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/20920/ss_2bce7b672342632a75cb9a6d225fa0b1d04455d8.600x338.jpg?t=1761657279',
+    blurredUserTags: ['Nudity'],
+    debugNotes: 'delete',
+    difficulty: 'Easy',
+    debugProcessed: true,
   },
   '24200': {
     name: 'DC Universe Online',
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/24200/ss_99116ecfec2858f6f24fcc33ae12ee731bccef60.600x338.jpg?t=1769546832',
     shortDescription:
-      '||DC Universe Online|| is a Free-to-Play, massive multiplayer online action game set in the popular DC Universe. Become one of a new breed of Heroes or Villains and wield incredible powers as you go to war with legendary characters such as Batman, Superman, Lex Luthor and The Joker.',
+      '||DC Universe Online|| is a Free-to-Play, massive multiplayer online action game set in the popular ||DC Universe||. Become one of a new breed of Heroes ||or Villains|| and wield ||incredible powers|| as you go to war with legendary characters such as ||Batman||, ||Superman||, ||Lex Luthor|| and The ||Joker||.',
     releaseDate: 'Nov 2, 2011',
     developer: 'Dimensional Ink Games',
     publisher: 'Daybreak Game Company',
@@ -380,13 +398,18 @@ export const steamGameDetails: SteamGameMap = {
     appId: 24200,
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/24200/ss_18ad8e61bc4f5e52ffe3dab3857c26ff316c95a5.600x338.jpg?t=1769546832',
+    blurredUserTags: ['Superhero'],
+    clueOrder: ['desc', 'details', 'tags'],
+    difficulty: 'Hard',
+    fun: true,
+    debugProcessed: true,
   },
   '24240': {
     name: 'PAYDAY The Heist',
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/24240/ss_cffb7789a44915293bf16b79f9278b34dacdb9d7.600x338.jpg?t=1766064903',
     shortDescription:
-      'Take on the role of a hardened career criminal executing intense, dynamic heists in constant pursuit of the next “big score”',
+      'Take on the role of a hardened career criminal executing intense, dynamic ||heists|| in constant pursuit of the next "||big score||"',
     releaseDate: 'Oct 20, 2011',
     developer: 'OVERKILL - a Starbreeze Studio.',
     publisher: 'Starbreeze Entertainment',
@@ -421,6 +444,12 @@ export const steamGameDetails: SteamGameMap = {
     appId: 24240,
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/24240/ss_25968960c677941cbb96190cab79e1565fac57a2.600x338.jpg?t=1766064903',
+    blurredUserTags: ['Heist'],
+    debugNotes: 'move stealth tag near top',
+    difficulty: 'Medium',
+    clueOrder: ['desc', 'details', 'tags'],
+    fun: true,
+    debugProcessed: true,
   },
   '35450': {
     name: 'Red Orchestra 2: Heroes of Stalingrad with Rising Storm',
@@ -461,6 +490,8 @@ export const steamGameDetails: SteamGameMap = {
     appId: 35450,
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/35450/ss_03d2fcf1c9c904ace169c7d7800a942fee1dc3e4.600x338.jpg?t=1552425243',
+    debugNotes: 'delete',
+    debugProcessed: true,
   },
   '39210': {
     name: 'FINAL FANTASY XIV Online',
@@ -502,13 +533,15 @@ export const steamGameDetails: SteamGameMap = {
     appId: 39210,
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/39210/ss_2899439a93eb6a2997d79c9cc90ff4a647d0cd43.600x338.jpg?t=1766135185',
+    debugNotes: 'delete',
+    debugProcessed: true,
   },
   '41070': {
     name: 'Serious Sam 3: BFE',
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/41070/ss_7b281512d67a5220d4eef494234943771ddca71b.600x338.jpg?t=1728688460',
     shortDescription:
-      '||Serious Sam 3: BFE|| is a prequel to the original indie fast action FPS and Game of the Year sensation - ||Serious Sam: The First Encounter||!',
+      '||Serious Sam|| 3||: BFE|| is a prequel to the original indie fast action FPS and Game of the Year sensation - ||Serious Sam: The First Encounter||!',
     releaseDate: 'Nov 22, 2011',
     developer: 'Croteam',
     publisher: 'Devolver Digital',
@@ -543,13 +576,18 @@ export const steamGameDetails: SteamGameMap = {
     appId: 41070,
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/41070/ss_7c27d177655d862036f028d0975a1e5b89916bda.600x338.jpg?t=1728688460',
+    clueOrder: ['desc', 'details', 'tags'],
+    difficulty: 'Expert',
+    debugNotes: 'move aliens near top',
+    fun: true,
+    debugProcessed: true,
   },
   '42910': {
     name: 'Magicka',
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/42910/ss_514e6d7484e979f1879b59b4a1443d52bfde7cb1.600x338.jpg?t=1726497076',
     shortDescription:
-      '||Magicka|| is a satirical action-adventure game set in a rich fantasy world based on Norse mythology. The player assumes the role of a wizard from a sacred order tasked with stopping an evil sorcerer who has thrown the world into turmoil, his foul creations besieging the forces of good.',
+      '||Magicka|| is a satirical action-adventure game set in a rich fantasy world based on ||Norse|| mythology. The player assumes the role of a ||wizard|| from a sacred order tasked with stopping an evil ||sorcerer|| who has thrown the world into turmoil, his foul creations besieging the forces of good.',
     releaseDate: 'Jan 25, 2011',
     developer: 'Arrowhead Game Studios',
     publisher: 'Paradox Interactive',
@@ -584,12 +622,16 @@ export const steamGameDetails: SteamGameMap = {
     appId: 42910,
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/42910/ss_e1d4017ccb5a3387b76807298dad84c719614765.600x338.jpg?t=1726497076',
+    difficulty: 'Hard',
+    clueOrder: ['desc', 'details', 'tags'],
+    fun: true,
+    debugProcessed: true,
   },
   '48000': {
     name: 'LIMBO',
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/48000/ss_d33513ed37acf1073ea92f182b76e165101bfdac.600x338.jpg?t=1761819450',
-    shortDescription: "Uncertain of his sister's fate, a boy enters ||LIMBO||",
+    shortDescription: "Uncertain of his sister's fate, a boy ||enters LIMBO||.",
     releaseDate: 'Aug 2, 2011',
     developer: 'Playdead',
     publisher: 'Playdead',
@@ -624,6 +666,11 @@ export const steamGameDetails: SteamGameMap = {
     appId: 48000,
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/48000/ss_402b32434e4bb1a8445397aa24b1b893fe3d257f.600x338.jpg?t=1761819450',
+    blurredUserTags: ['Puzzle-Platformer', 'Puzzle', 'Dark'],
+    clueOrder: ['desc', 'details', 'tags'],
+    difficulty: 'Hard',
+    fun: true,
+    debugProcessed: true,
   },
   '49520': {
     name: 'Borderlands 2',
@@ -665,13 +712,15 @@ export const steamGameDetails: SteamGameMap = {
     appId: 49520,
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/49520/ss_2f27a18562fbf4a91943c3968b35db5ac1caf5ad.600x338.jpg?t=1751931279',
+    debugNotes: 'delete',
+    debugProcessed: true,
   },
   '50130': {
     name: 'Mafia II',
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/50130/ss_2cc0eb89007eee950b5f7d87ca15957868fdebfb.600x338.jpg?t=1746717708',
     shortDescription:
-      "Vito Scaletta has started to make a name for himself on the streets of Empire Bay as someone who can be trusted to get a job done. Together with his buddy Joe, he is working to prove himself to the Mafia, quickly escalating up the family ladder with crimes of larger reward, status and consequence… the life as a wise guy isn't quite as...",
+      "||Vito Scaletta|| has started to make a name for himself on the ||streets|| of ||Empire Bay|| as someone who can be trusted to get ||a job done||. Together with his buddy ||Joe||, he is working to prove himself to ||the Mafia||, quickly escalating up the ||family|| ladder with ||crimes|| of larger reward, status and consequence… the life as a ||wise guy|| isn't quite as ||untouchable|| as it seems.",
     releaseDate: 'Mar 22, 2011',
     developer: '2K Czech',
     publisher: '2K',
@@ -706,13 +755,17 @@ export const steamGameDetails: SteamGameMap = {
     appId: 50130,
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/50130/ss_dc895125ba77f0fe72646204097ac2d830a3f7b9.600x338.jpg?t=1746717708',
+    clueOrder: ['desc', 'details', 'tags'],
+    difficulty: 'Hard',
+    fun: true,
+    debugProcessed: true,
   },
   '55150': {
     name: 'Warhammer 40,000: Space Marine',
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/55150/ss_202b5dc08cb1df78b019faa2ee714907013e9b92.600x338.jpg?t=1750947979',
     shortDescription:
-      'In ||Warhammer 40,000 Space Marine|| you are Captain Titus, a ||Space Marine|| of the Ultramarines chapter and a seasoned veteran of countless battles.',
+      'In ||Warhammer 40,000 Space Marine|| you are Captain ||Titus||, a ||Space Marine|| of the ||Ultramarines|| chapter and a seasoned veteran of countless battles.',
     releaseDate: 'Sep 5, 2011',
     developer: 'Relic Entertainment',
     publisher: 'Relic Entertainment',
@@ -744,17 +797,21 @@ export const steamGameDetails: SteamGameMap = {
       'Controller',
       'Violent',
     ],
-    blurredUserTags: ['Warhammer 40K', 'Games Workshop'],
+    blurredUserTags: ['Warhammer 40K'],
     appId: 55150,
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/55150/ss_9d33a17ab1d49067fceee6ee9bdee75744e0b702.600x338.jpg?t=1750947979',
+    clueOrder: ['desc', 'details', 'tags'],
+    difficulty: 'Hard',
+    fun: true,
+    debugProcessed: true,
   },
   '55230': {
     name: 'Saints Row: The Third',
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/55230/ss_e861c75bec732e56378e13209a8a402476891c67.600x338.jpg?t=1764671029',
     shortDescription:
-      'Get ready for the most out-landish gameplay scenarios ever seen as the Third Street Saints take on the Syndicate!',
+      'Get ready for the most ||out-landish gameplay|| scenarios ever seen as the ||Third Street Saints|| take on the ||Syndicate||!',
     releaseDate: 'Nov 14, 2011',
     developer: 'Volition',
     publisher: 'Deep Silver',
@@ -789,6 +846,11 @@ export const steamGameDetails: SteamGameMap = {
     appId: 55230,
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/55230/ss_718766019fb13440e16fc8801ef8a76a0d4c690a.600x338.jpg?t=1764671029',
+    blurredUserTags: ['Comedy', 'Funny'],
+    clueOrder: ['desc', 'details', 'tags'],
+    difficulty: 'Medium',
+    fun: true,
+    debugProcessed: true,
   },
   '72850': {
     name: 'The Elder Scrolls V: Skyrim',
@@ -830,13 +892,15 @@ export const steamGameDetails: SteamGameMap = {
     appId: 72850,
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/72850/ss_b16a3740e032afe1c4b0477174eae7af8444b85d.600x338.jpg?t=1721923139',
+    debugNotes: 'delete',
+    debugProcessed: true,
   },
   '105600': {
     name: 'Terraria',
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/105600/ss_8c03886f214d2108cafca13845533eaa3d87d83f.600x338.jpg?t=1769844435',
     shortDescription:
-      'Dig, fight, explore, build! Nothing is impossible in this action-packed adventure game. Four Pack also available!',
+      '||Dig||, fight, ||explore||, ||build||! Nothing is impossible in this action-packed adventure game. Four Pack also available!',
     releaseDate: 'May 16, 2011',
     developer: 'Re-Logic',
     publisher: 'Re-Logic',
@@ -871,6 +935,11 @@ export const steamGameDetails: SteamGameMap = {
     appId: 105600,
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/105600/ss_ae168a00ab08104ba266dc30232654d4b3c919e5.600x338.jpg?t=1769844435',
+    blurredUserTags: ['2D', 'Pixel Graphics'],
+    clueOrder: ['desc', 'tags', 'details'],
+    difficulty: 'Medium',
+    fun: true,
+    debugProcessed: true,
   },
   '107100': {
     name: 'Bastion',
@@ -912,13 +981,15 @@ export const steamGameDetails: SteamGameMap = {
     appId: 107100,
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/107100/ss_490170c42afe389fb80324b5c29f9b704d87943e.600x338.jpg?t=1729113932',
+    debugNotes: 'delete',
+    debugProcessed: true,
   },
   '107410': {
     name: 'Arma 3',
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/107410/ss_e9220742c6b786efc9145c58ce7b276af891e9d5.600x338.jpg?t=1764155321',
     shortDescription:
-      "Experience true combat gameplay in a massive military sandbox. Deploying a wide variety of single- and multiplayer content, over 20 vehicles and 40 weapons, and limitless opportunities for content creation, this is the PC's premier military game. Authentic, diverse, open - ||Arma 3|| sends you to war.",
+      "Experience ||true combat|| gameplay in a ||massive military|| sandbox. Deploying a wide variety of single- and multiplayer content, over 20 ||vehicles|| and 40 ||weapon||s, and limitless opportunities for ||content creation||, this is the PC's ||premier military|| game. ||Authentic||, diverse, open - ||Arma 3|| sends you ||to war||.",
     releaseDate: 'Sep 12, 2013',
     developer: 'Bohemia Interactive',
     publisher: 'Bohemia Interactive',
@@ -953,6 +1024,11 @@ export const steamGameDetails: SteamGameMap = {
     appId: 107410,
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/107410/ss_089dfd05121614ca3a887f49e89c14fa210847ac.600x338.jpg?t=1764155321',
+    blurredUserTags: ['Military', 'Tactical', 'War'],
+    clueOrder: ['desc', 'tags', 'details'],
+    difficulty: 'Hard',
+    fun: true,
+    debugProcessed: true,
   },
   '108600': {
     name: 'Project Zomboid',
@@ -993,6 +1069,8 @@ export const steamGameDetails: SteamGameMap = {
     appId: 108600,
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/108600/ss_eca8be032b3f5508bf5bea74cfbc823a4df047ce.600x338.jpg?t=1762369969',
+    debugNotes: 'delete',
+    debugProcessed: true,
   },
   '109600': {
     name: 'Neverwinter',
@@ -1040,6 +1118,8 @@ export const steamGameDetails: SteamGameMap = {
     appId: 109600,
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/109600/ss_fb7861288b09baeb079dcaf531de196488e0e05a.600x338.jpg?t=1764090086',
+    debugNotes: 'delete',
+    debugProcessed: true,
   },
   '113400': {
     name: 'APB Reloaded',
@@ -1081,6 +1161,8 @@ export const steamGameDetails: SteamGameMap = {
     appId: 113400,
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/113400/ss_3ebb84f4ff88434fc7eb242e161e3a612416dbef.600x338.jpg?t=1768694391',
+    debugNotes: 'delete',
+    debugProcessed: true,
   },
   '113420': {
     name: 'Fallen Earth Classic',
@@ -1122,12 +1204,14 @@ export const steamGameDetails: SteamGameMap = {
     appId: 113420,
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/113420/ss_a858c5502c83c576610d6c1cea671e203c6d262a.600x338.jpg?t=1645468079',
+    debugNotes: 'delete',
+    debugProcessed: true,
   },
   '115320': {
     name: 'Prototype 2',
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/115320/ss_9f302432e700dcbef4c4826104c04f28cc5b165e.600x338.jpg?t=1655761001',
-    shortDescription: 'Become the ultimate shape-shifting weapon!',
+    shortDescription: 'Become the ultimate ||shape||-||shifting|| weapon!',
     releaseDate: 'Jul 24, 2012',
     developer: 'Radical Entertainment',
     publisher: 'Activision',
@@ -1162,13 +1246,18 @@ export const steamGameDetails: SteamGameMap = {
     appId: 115320,
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/115320/ss_4ce08b05421fbacaa129a869ed518aeafafa5863.600x338.jpg?t=1655761001',
+    clueOrder: ['desc', 'details', 'tags'],
+    blurredUserTags: ['Superhero', 'Zombies'],
+    difficulty: 'Hard',
+    fun: true,
+    debugProcessed: true,
   },
   '200710': {
     name: 'Torchlight II',
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/200710/ss_06b3b8b537e3766cbb6026c6273d78344327ad24.600x338.jpg?t=1767670785',
     shortDescription:
-      'The adventure continues in ||Torchlight II||! An Action RPG filled with epic battles, bountiful treasure, and a fully randomized world. Bring your friends along for the journey with online and LAN multiplayer.',
+      'The adventure continues in ||Torchlight II||! An ||Action RPG|| filled with epic battles, bountiful treasure, and a fully randomized world. Bring your friends along for the journey with online and ||LAN multiplayer||.',
     releaseDate: 'Sep 20, 2012',
     developer: 'Runic Games',
     publisher: 'XD',
@@ -1203,13 +1292,18 @@ export const steamGameDetails: SteamGameMap = {
     appId: 200710,
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/200710/ss_b2af8160bcd97a395a28b8f16251947233401a02.600x338.jpg?t=1767670785',
+    blurredUserTags: ['Dungeon Crawler'],
+    clueOrder: ['details', 'desc', 'tags'],
+    fun: true,
+    debugProcessed: true,
+    difficulty: 'Hard',
   },
   '201810': {
     name: 'Wolfenstein: The New Order',
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/201810/ss_5a2e74c1d7290052d36a340fd22b350690e20069.600x338.jpg?t=1750784496',
     shortDescription:
-      '||Wolfenstein: The New Order|| reignites the series that created the first-person shooter genre. ||Wolfenstein|| offers a deep game narrative packed with action, adventure and first-person combat.',
+      '||Wolfenstein: The New Order reignites the series|| that ||created the first-person shooter|| genre. ||Wolfenstein|| offers a deep game ||narrative|| packed with ||action||, ||adventure|| and ||first-person combat||.',
     releaseDate: 'May 19, 2014',
     developer: 'MachineGames',
     publisher: 'Bethesda Softworks',
@@ -1241,11 +1335,22 @@ export const steamGameDetails: SteamGameMap = {
       'Robots',
       'Epic',
     ],
-    blurredUserTags: ['Alternate History'],
-
+    blurredUserTags: [
+      'Alternate History',
+      'FPS',
+      'Historical',
+      'World War II',
+      'Gore',
+      'Shooter',
+      'First-Person',
+    ],
     appId: 201810,
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/201810/ss_0c5739cdf9028d1feade84f370b7f75d7e090f59.600x338.jpg?t=1750784496',
+    clueOrder: ['desc', 'tags', 'details'],
+    difficulty: 'Hard',
+    fun: true,
+    debugProcessed: true,
   },
   '201870': {
     name: "Assassin's Creed Revelations",
@@ -1287,6 +1392,8 @@ export const steamGameDetails: SteamGameMap = {
     appId: 201870,
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/201870/ss_08575a6a8651d8e9b159153cc0a8175b7b181345.600x338.jpg?t=1739176298',
+    debugNotes: 'delete',
+    debugProcessed: true,
   },
   '202970': {
     name: 'Call of Duty: Black Ops II',
@@ -4864,7 +4971,6 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'May 18, 2015',
     developer: '||CD PROJEKT RED||',
     publisher: '||CD PROJEKT RED||',
-    overrideCensoredTitle: 'T||he|| W||itcher|| ||3: Wild Hunt||',
     blurScreenshotQuarter: 'bottom',
     tags: ['RPG'],
     features: [],
@@ -8909,7 +9015,7 @@ export const steamGameDetails: SteamGameMap = {
       'Adventure',
       'Great Soundtrack',
     ],
-    blurredUserTags: ['Classic'],
+    blurredUserTags: ['RTS', 'Historical', 'Medieval', 'Resource Management'],
     appId: 813780,
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/813780/ss_1033024a26f0a7ed277865201aed9bb471b54320.600x338.jpg?t=1767895383',
