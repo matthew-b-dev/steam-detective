@@ -1303,7 +1303,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/201810/ss_5a2e74c1d7290052d36a340fd22b350690e20069.600x338.jpg?t=1750784496',
     shortDescription:
-      '||Wolfenstein: The New Order reignites the series|| that ||created the first-person shooter|| genre. ||Wolfenstein|| offers a deep game ||narrative|| packed with ||action||, ||adventure|| and ||first-person combat||.',
+      '||Wolfenstein: The New Order|| reignites ||the series|| that created ||the first-person shooter|| genre. ||Wolfenstein|| offers a deep game ||narrative|| packed with ||action||, ||adventure|| and ||first-person combat||.',
     releaseDate: 'May 19, 2014',
     developer: 'MachineGames',
     publisher: 'Bethesda Softworks',
