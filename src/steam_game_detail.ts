@@ -8909,6 +8909,7 @@ export const steamGameDetails: SteamGameMap = {
       'Adventure',
       'Great Soundtrack',
     ],
+    blurredUserTags: ['Classic'],
     appId: 813780,
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/813780/ss_1033024a26f0a7ed277865201aed9bb471b54320.600x338.jpg?t=1767895383',
