@@ -13,8 +13,18 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.apexcharts-yaxis-title text {
-  transform-origin: 0px -8px;
+/* Styles that apply ONLY if the browser supports -webkit-appearance: none; (i.e., Chrome, Safari, Edge) */
+@supports (-webkit-appearance: none) {
+  .apexcharts-yaxis-title text {
+    transform-origin: 0px -12px;
+  }
+}
+
+/* Firefox only */
+@supports (-moz-appearance: none) {
+  .apexcharts-yaxis-title text {
+    transform-origin: 0px 0px;
+  }
 }
 
 a {

@@ -267,7 +267,6 @@ export const GameComplete: React.FC<GameCompleteProps> = ({
                     title: {
                       text: 'Players',
                       rotate: -90,
-                      offsetX: 4,
                       style: {
                         color: '#9ca3af',
                         fontSize: '12px',
