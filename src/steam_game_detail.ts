@@ -16,10 +16,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Valve',
     tags: ['Action', 'Strategy', 'Free To Play'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 6101,
       rating: 'Very Positive',
@@ -61,10 +57,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Valve',
     tags: ['Action', 'Adventure'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
     allReviewSummary: {
       count: 167153,
       rating: 'Overwhelmingly Positive',
@@ -106,10 +98,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Valve',
     tags: ['Action', 'Free To Play'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 1404606,
       rating: 'Very Positive',
@@ -151,10 +139,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Unknown Worlds Entertainment, KRAFTON, Inc.',
     tags: ['Action', 'Indie', 'Strategy'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 5382,
       rating: 'Very Positive',
@@ -197,10 +181,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: '2K',
     tags: ['Action'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 46690,
       rating: 'Very Positive',
@@ -242,10 +222,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Bethesda Softworks',
     tags: ['Action'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Mostly Positive',
-    },
     allReviewSummary: {
       count: 6581,
       rating: 'Mostly Positive',
@@ -287,10 +263,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Electronic Arts',
     tags: ['Action', 'Adventure'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 10137,
       rating: 'Very Positive',
@@ -332,10 +304,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'CD PROJEKT RED, 1C-SoftClub',
     tags: ['RPG'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 25449,
       rating: 'Very Positive',
@@ -383,10 +351,6 @@ export const steamGameDetails: SteamGameMap = {
       'Free To Play',
     ],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Mostly Positive',
-    },
     allReviewSummary: {
       count: 117,
       rating: 'Mostly Positive',
@@ -428,10 +392,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Starbreeze Entertainment',
     tags: ['Action'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 8571,
       rating: 'Very Positive',
@@ -472,10 +432,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Tripwire Interactive',
     tags: ['Action', 'Massively Multiplayer', 'Simulation'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 11285,
       rating: 'Very Positive',
@@ -517,10 +473,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Square Enix',
     tags: ['Massively Multiplayer', 'RPG'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 59427,
       rating: 'Very Positive',
@@ -562,10 +514,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Devolver Digital',
     tags: ['Action', 'Indie'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 5796,
       rating: 'Very Positive',
@@ -607,10 +555,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Paradox Interactive',
     tags: ['Action', 'RPG'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 8588,
       rating: 'Very Positive',
@@ -651,10 +595,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Playdead',
     tags: ['Action', 'Adventure', 'Indie'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 12458,
       rating: 'Very Positive',
@@ -696,10 +636,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: '2K, Aspyr (Mac), Aspyr (Linux)',
     tags: ['Action', 'RPG'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 121595,
       rating: 'Very Positive',
@@ -741,10 +677,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: '2K',
     tags: ['Action'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 10081,
       rating: 'Very Positive',
@@ -786,10 +718,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Relic Entertainment',
     tags: ['Action'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 11585,
       rating: 'Very Positive',
@@ -832,10 +760,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Deep Silver',
     tags: ['Action'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 18836,
       rating: 'Very Positive',
@@ -877,10 +801,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Bethesda Softworks',
     tags: ['RPG'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 101741,
       rating: 'Very Positive',
@@ -922,10 +842,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Re-Logic',
     tags: ['Action', 'Adventure', 'Indie', 'RPG'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
     allReviewSummary: {
       count: 578724,
       rating: 'Overwhelmingly Positive',
@@ -967,10 +883,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Supergiant Games',
     tags: ['Action', 'Indie', 'RPG'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
     allReviewSummary: {
       count: 17492,
       rating: 'Overwhelmingly Positive',
@@ -1012,10 +924,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Bohemia Interactive',
     tags: ['Action', 'Simulation', 'Strategy'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 109290,
       rating: 'Very Positive',
@@ -1057,10 +965,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'The Indie Stone',
     tags: ['Indie', 'RPG', 'Simulation'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 142429,
       rating: 'Very Positive',
@@ -1107,10 +1011,6 @@ export const steamGameDetails: SteamGameMap = {
       'Free To Play',
     ],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Mixed',
-    },
     allReviewSummary: {
       count: 108,
       rating: 'Mixed',
@@ -1152,10 +1052,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Little Orbit',
     tags: ['Action', 'Massively Multiplayer', 'Free To Play'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Mixed',
-    },
     allReviewSummary: {
       count: 171,
       rating: 'Mixed',
@@ -1197,10 +1093,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Little Orbit',
     tags: ['Free To Play', 'Massively Multiplayer', 'RPG'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Mixed',
-    },
     allReviewSummary: {
       count: 25,
       rating: 'Mixed',
@@ -1241,10 +1133,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Activision',
     tags: ['Action', 'Adventure'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Mostly Positive',
-    },
     allReviewSummary: {
       count: 4237,
       rating: 'Mostly Positive',
@@ -1286,10 +1174,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'XD',
     tags: ['Action', 'Adventure', 'Indie', 'RPG'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 17294,
       rating: 'Very Positive',
@@ -1331,10 +1215,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Bethesda Softworks',
     tags: ['Action'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 25070,
       rating: 'Very Positive',
@@ -1378,10 +1258,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Ubisoft',
     tags: ['Action', 'Adventure'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 6112,
       rating: 'Very Positive',
@@ -1423,10 +1299,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Activision',
     tags: ['Action'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 12133,
       rating: 'Very Positive',
@@ -1468,10 +1340,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Io-Interactive A/S',
     tags: ['Action'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 13112,
       rating: 'Very Positive',
@@ -1514,10 +1382,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Crystal Dynamics, Feral Interactive (Mac)',
     tags: ['Action', 'Adventure'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 50385,
       rating: 'Very Positive',
@@ -1559,10 +1423,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Paradox Interactive',
     tags: ['RPG', 'Simulation', 'Strategy', 'Free To Play'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 22381,
       rating: 'Very Positive',
@@ -1604,10 +1464,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Rockstar Games',
     tags: ['Action'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 23275,
       rating: 'Very Positive',
@@ -1650,10 +1506,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Atari',
     tags: ['Action', 'Indie', 'Strategy'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 6987,
       rating: 'Very Positive',
@@ -1696,10 +1548,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'The Behemoth',
     tags: ['Action', 'Adventure', 'Casual', 'Indie', 'RPG'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
     allReviewSummary: {
       count: 44093,
       rating: 'Overwhelmingly Positive',
@@ -1741,10 +1589,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Stardock Entertainment',
     tags: ['Action', 'Indie', 'Simulation', 'Strategy'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 7283,
       rating: 'Very Positive',
@@ -1786,10 +1630,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Bethesda Softworks',
     tags: ['Action', 'Adventure'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
     allReviewSummary: {
       count: 37801,
       rating: 'Overwhelmingly Positive',
@@ -1831,10 +1671,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Deep Silver',
     tags: ['Action', 'Adventure'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 23282,
       rating: 'Very Positive',
@@ -1876,10 +1712,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Skybound Games',
     tags: ['Adventure'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
     allReviewSummary: {
       count: 23904,
       rating: 'Overwhelmingly Positive',
@@ -1921,10 +1753,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Bandai Namco Entertainment',
     tags: ['Action', 'RPG'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 32675,
       rating: 'Very Positive',
@@ -1966,10 +1794,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'KW Studios, RaceRoom Entertainment AG',
     tags: ['Racing', 'Simulation', 'Sports', 'Free To Play'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 669,
       rating: 'Very Positive',
@@ -2011,10 +1835,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Chucklefish',
     tags: ['Action', 'Adventure', 'Casual', 'Indie', 'RPG'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 51618,
       rating: 'Very Positive',
@@ -2063,10 +1883,6 @@ export const steamGameDetails: SteamGameMap = {
       'Free To Play',
     ],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Mixed',
-    },
     allReviewSummary: {
       count: 83,
       rating: 'Mixed',
@@ -2114,10 +1930,6 @@ export const steamGameDetails: SteamGameMap = {
       'Free To Play',
     ],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 97,
       rating: 'Very Positive',
@@ -2159,10 +1971,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Subset Games',
     tags: ['Indie', 'Simulation', 'Strategy'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
     allReviewSummary: {
       count: 45872,
       rating: 'Overwhelmingly Positive',
@@ -2204,10 +2012,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Ubisoft',
     tags: ['Action', 'Adventure', 'RPG'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
     allReviewSummary: {
       count: 29934,
       rating: 'Overwhelmingly Positive',
@@ -2249,10 +2053,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'SEGA',
     tags: ['Action'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 25689,
       rating: 'Very Positive',
@@ -2294,10 +2094,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Daybreak Game Company',
     tags: ['Action', 'Massively Multiplayer', 'Free To Play'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Mostly Positive',
-    },
     allReviewSummary: {
       count: 330,
       rating: 'Mostly Positive',
@@ -2339,10 +2135,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Starbreeze Entertainment',
     tags: ['Action', 'RPG'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 173578,
       rating: 'Very Positive',
@@ -2384,10 +2176,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Devolver Digital',
     tags: ['Action', 'Indie'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
     allReviewSummary: {
       count: 40150,
       rating: 'Overwhelmingly Positive',
@@ -2429,10 +2217,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Torn Banner Studios',
     tags: ['Action', 'Indie'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 22011,
       rating: 'Very Positive',
@@ -2474,10 +2258,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Klei Entertainment',
     tags: ['Adventure', 'Indie', 'Simulation'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
     allReviewSummary: {
       count: 32723,
       rating: 'Overwhelmingly Positive',
@@ -2519,10 +2299,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Crate Entertainment',
     tags: ['Action', 'Adventure', 'Indie', 'RPG'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
     allReviewSummary: {
       count: 38371,
       rating: 'Overwhelmingly Positive',
@@ -2564,10 +2340,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Private Division',
     tags: ['Indie', 'Simulation'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
     allReviewSummary: {
       count: 74295,
       rating: 'Overwhelmingly Positive',
@@ -2609,10 +2381,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Ubisoft',
     tags: ['Action', 'Adventure'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 40779,
       rating: 'Very Positive',
@@ -2654,10 +2422,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Capcom',
     tags: ['Action', 'Adventure'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Mostly Positive',
-    },
     allReviewSummary: {
       count: 13061,
       rating: 'Mostly Positive',
@@ -2699,10 +2463,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'New World Interactive',
     tags: ['Action', 'Indie', 'Strategy'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 35619,
       rating: 'Very Positive',
@@ -2744,10 +2504,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Team Psykskallar',
     tags: ['Action', 'Adventure', 'Indie'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Mostly Positive',
-    },
     allReviewSummary: {
       count: 126,
       rating: 'Mostly Positive',
@@ -2789,10 +2545,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Lever Games',
     tags: ['Action', 'Indie', 'Free To Play'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 288,
       rating: 'Very Positive',
@@ -2834,10 +2586,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Square Enix',
     tags: ['Action', 'Adventure'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 44482,
       rating: 'Very Positive',
@@ -2879,10 +2627,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'SCS Software',
     tags: ['Indie', 'Simulation'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
     allReviewSummary: {
       count: 136744,
       rating: 'Overwhelmingly Positive',
@@ -2924,10 +2668,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Digital Extremes',
     tags: ['Action', 'RPG', 'Free To Play'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     clueOrder: ['desc', 'details', 'tags'],
     allReviewSummary: {
       count: 1138,
@@ -2971,10 +2711,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Relic Entertainment',
     tags: ['Strategy'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 28046,
       rating: 'Very Positive',
@@ -3016,10 +2752,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Tripwire Interactive',
     tags: ['Action'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 41702,
       rating: 'Very Positive',
@@ -3061,10 +2793,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Paradox Interactive',
     tags: ['Indie', 'Simulation', 'Strategy'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 33628,
       rating: 'Very Positive',
@@ -3106,10 +2834,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Lo-Fi Games',
     tags: ['Action', 'Indie', 'RPG', 'Simulation', 'Strategy'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
     allReviewSummary: {
       count: 45695,
       rating: 'Overwhelmingly Positive',
@@ -3151,10 +2875,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Warner Bros. Games, Warner Bros. Interactive Entertainment',
     tags: ['Action', 'Adventure'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 25847,
       rating: 'Very Positive',
@@ -3196,10 +2916,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Fatshark',
     tags: ['Action', 'Indie'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 7841,
       rating: 'Very Positive',
@@ -3241,10 +2957,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Ubisoft',
     tags: ['Action', 'Adventure'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Mostly Positive',
-    },
     allReviewSummary: {
       count: 8157,
       rating: 'Mostly Positive',
@@ -3286,10 +2998,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Gaijin Network Ltd',
     tags: ['Action', 'Massively Multiplayer', 'Simulation', 'Free To Play'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Mixed',
-    },
     allReviewSummary: {
       count: 807,
       rating: 'Mixed',
@@ -3332,10 +3040,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'BANDAI NAMCO Entertainment, FromSoftware, Inc.',
     tags: ['Action', 'RPG'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 14975,
       rating: 'Very Positive',
@@ -3377,10 +3081,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Paradox Interactive',
     tags: ['Simulation', 'Strategy'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 47201,
       rating: 'Very Positive',
@@ -3422,10 +3122,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Rebellion',
     tags: ['Action', 'Adventure'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Mostly Positive',
-    },
     allReviewSummary: {
       count: 6946,
       rating: 'Mostly Positive',
@@ -3467,10 +3163,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Red Barrels',
     tags: ['Action', 'Adventure', 'Indie'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
     allReviewSummary: {
       count: 27456,
       rating: 'Overwhelmingly Positive',
@@ -3513,10 +3205,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'The Behemoth',
     tags: ['Action', 'Adventure', 'Casual', 'Indie'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
     allReviewSummary: {
       count: 23291,
       rating: 'Overwhelmingly Positive',
@@ -3565,10 +3253,6 @@ export const steamGameDetails: SteamGameMap = {
       'Free To Play',
     ],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 545,
       rating: 'Very Positive',
@@ -3611,10 +3295,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: '3909',
     tags: ['Adventure', 'Indie'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
     allReviewSummary: {
       count: 38553,
       rating: 'Overwhelmingly Positive',
@@ -3656,10 +3336,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Techland',
     tags: ['Action', 'RPG'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 94607,
       rating: 'Very Positive',
@@ -3701,10 +3377,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Bennett Foddy',
     tags: ['Action'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 40252,
       rating: 'Very Positive',
@@ -3746,10 +3418,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Warner Bros. Interactive Entertainment, Warner Bros. Games',
     tags: [],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 32410,
       rating: 'Very Positive',
@@ -3791,10 +3459,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Endnight Games Ltd',
     tags: ['Action', 'Adventure', 'Indie', 'Simulation'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
     allReviewSummary: {
       count: 174258,
       rating: 'Overwhelmingly Positive',
@@ -3835,10 +3499,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Shining Rock Software LLC',
     tags: ['Indie', 'Simulation', 'Strategy'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 25530,
       rating: 'Very Positive',
@@ -3880,10 +3540,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Kunos Simulazioni',
     tags: ['Indie', 'Racing', 'Simulation', 'Sports'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 56633,
       rating: 'Very Positive',
@@ -3925,10 +3581,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Fulqrum Publishing',
     tags: ['Action', 'Simulation', 'Strategy'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 16332,
       rating: 'Very Positive',
@@ -3970,10 +3622,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Keen Software House',
     tags: ['Action', 'Indie', 'Simulation', 'Strategy'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 66831,
       rating: 'Very Positive',
@@ -4014,10 +3662,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Autumn Games',
     tags: ['Action', 'Indie'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 11827,
       rating: 'Very Positive',
@@ -4059,10 +3703,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Ndemic Creations',
     tags: ['Casual', 'Indie', 'Simulation', 'Strategy'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 24219,
       rating: 'Very Positive',
@@ -4104,10 +3744,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Nicalis, Inc.',
     tags: ['Action'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
     allReviewSummary: {
       count: 138397,
       rating: 'Overwhelmingly Positive',
@@ -4149,10 +3785,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'The Fun Pimps Entertainment LLC',
     tags: ['Action', 'Adventure', 'Indie', 'RPG', 'Simulation', 'Strategy'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 122882,
       rating: 'Very Positive',
@@ -4194,10 +3826,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Facepunch Studios',
     tags: ['Action', 'Adventure', 'Indie', 'Massively Multiplayer', 'RPG'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 511757,
       rating: 'Very Positive',
@@ -4238,10 +3866,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Psyonix LLC',
     tags: ['Action', 'Indie', 'Racing', 'Sports'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 226075,
       rating: 'Very Positive',
@@ -4283,10 +3907,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Paradox Interactive',
     tags: ['Simulation', 'Strategy'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 97997,
       rating: 'Very Positive',
@@ -4328,10 +3948,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Devolver Digital, Croteam',
     tags: ['Action', 'Adventure', 'Indie'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
     allReviewSummary: {
       count: 16865,
       rating: 'Overwhelmingly Positive',
@@ -4381,10 +3997,6 @@ export const steamGameDetails: SteamGameMap = {
     tags: ['Action', 'Indie', 'RPG', 'Simulation', 'Strategy'],
     features: [],
     clueOrder: ['tags', 'desc', 'details'],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 94927,
       rating: 'Very Positive',
@@ -4425,10 +4037,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Xbox Game Studios',
     tags: ['Action'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
     allReviewSummary: {
       count: 13437,
       rating: 'Overwhelmingly Positive',
@@ -4470,10 +4078,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: '2K, Aspyr (Linux)',
     tags: ['Action', 'RPG'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Mostly Positive',
-    },
     allReviewSummary: {
       count: 18796,
       rating: 'Mostly Positive',
@@ -4515,10 +4119,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Red Hook Studios',
     tags: ['Indie', 'RPG', 'Strategy'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 55211,
       rating: 'Very Positive',
@@ -4567,10 +4167,6 @@ export const steamGameDetails: SteamGameMap = {
       'Free To Play',
     ],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Mostly Positive',
-    },
     allReviewSummary: {
       count: 145,
       rating: 'Mostly Positive',
@@ -4612,10 +4208,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Unknown Worlds Entertainment',
     tags: ['Adventure', 'Indie'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
     allReviewSummary: {
       count: 171713,
       rating: 'Overwhelmingly Positive',
@@ -4657,10 +4249,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: '2K',
     tags: ['Strategy'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 43588,
       rating: 'Very Positive',
@@ -4703,10 +4291,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Studio MDHR Entertainment Inc.',
     tags: ['Action', 'Indie'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
     allReviewSummary: {
       count: 61483,
       rating: 'Overwhelmingly Positive',
@@ -4748,10 +4332,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'SCS Software',
     tags: ['Indie', 'Simulation'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
     allReviewSummary: {
       count: 89396,
       rating: 'Overwhelmingly Positive',
@@ -4793,10 +4373,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Ammobox Studios',
     tags: ['Action', 'Indie'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 9971,
       rating: 'Very Positive',
@@ -4839,10 +4415,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Hello Games',
     tags: ["Action', 'Adventure"],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 176571,
       rating: 'Very Positive',
@@ -4884,10 +4456,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Paradox Interactive',
     tags: ['Simulation', 'Strategy'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 73966,
       rating: 'Very Positive',
@@ -4929,10 +4497,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: '11 bit studios',
     tags: ['Adventure', 'Indie', 'Simulation'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 22706,
       rating: 'Very Positive',
@@ -4974,10 +4538,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: '||BeamNG||',
     tags: ['Racing', 'Simulation'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
     allReviewSummary: {
       count: 188364,
       rating: 'Overwhelmingly Positive',
@@ -5018,10 +4578,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Berserk Games',
     tags: ['Casual', 'Indie', 'RPG', 'Simulation', 'Strategy'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
     allReviewSummary: {
       count: 30466,
       rating: 'Overwhelmingly Positive',
@@ -5063,10 +4619,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Deep Silver',
     tags: ['Action'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 26183,
       rating: 'Very Positive',
@@ -5108,10 +4660,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'KONAMI',
     tags: ['Action', 'Adventure'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 40977,
       rating: 'Very Positive',
@@ -5153,10 +4701,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: '2K, Aspyr (Mac), Aspyr (Linux)',
     tags: ['Strategy'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 104588,
       rating: 'Very Positive',
@@ -5198,10 +4742,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'AMPLITUDE Studios',
     tags: ['RPG', 'Strategy'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 9191,
       rating: 'Very Positive',
@@ -5243,10 +4783,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Ubisoft',
     tags: ['Action', 'Adventure'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Mostly Positive',
-    },
     allReviewSummary: {
       count: 24467,
       rating: 'Mostly Positive',
@@ -5288,10 +4824,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Ubisoft',
     tags: ['Action', 'Indie', 'Free To Play'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 1573,
       rating: 'Very Positive',
@@ -5338,10 +4870,6 @@ export const steamGameDetails: SteamGameMap = {
     features: [],
     clueOrder: ['desc', 'tags', 'details'],
     blurredUserTags: ['Nudity', 'Mature'],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
     allReviewSummary: {
       count: 231995,
       rating: 'Overwhelmingly Positive',
@@ -5383,10 +4911,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Ludeon Studios',
     tags: ['Indie', 'Simulation', 'Strategy'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
     allReviewSummary: {
       count: 114139,
       rating: 'Overwhelmingly Positive',
@@ -5429,10 +4953,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Ubisoft',
     tags: ['Action', 'Adventure'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 23033,
       rating: 'Very Positive',
@@ -5474,10 +4994,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Smartly Dressed Games',
     tags: ['Action', 'Adventure', 'Casual', 'Indie', 'Free To Play'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 2859,
       rating: 'Very Positive',
@@ -5520,10 +5036,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Hinterland Studio Inc.',
     tags: ['Adventure', 'Indie', 'Simulation', 'Strategy'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 38612,
       rating: 'Very Positive',
@@ -5564,10 +5076,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Bethesda Softworks',
     tags: ['Action', 'Adventure', 'Massively Multiplayer', 'RPG'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 72763,
       rating: 'Very Positive',
@@ -5609,10 +5117,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Rebellion',
     tags: ['Action', 'Adventure'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 15350,
       rating: 'Very Positive',
@@ -5655,10 +5159,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Square Enix',
     tags: ['Action', 'Adventure'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
     allReviewSummary: {
       count: 53652,
       rating: 'Overwhelmingly Positive',
@@ -5700,10 +5200,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'RobTop Games',
     tags: ['Action', 'Indie'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 236303,
       rating: 'Very Positive',
@@ -5745,10 +5241,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Klei Entertainment',
     tags: ['Action', 'Adventure', 'Indie', 'RPG', 'Simulation', 'Strategy'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
     allReviewSummary: {
       count: 79966,
       rating: 'Overwhelmingly Positive',
@@ -5790,10 +5282,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: '11 bit studios',
     tags: ['Simulation', 'Strategy'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     clueOrder: ['desc', 'tags', 'details'],
     allReviewSummary: {
       count: 37656,
@@ -5836,10 +5324,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Spiderling Studios',
     tags: ['Indie', 'Simulation'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
     allReviewSummary: {
       count: 22675,
       rating: 'Overwhelmingly Positive',
@@ -5882,10 +5366,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Studio Wildcard, Snail Games USA',
     tags: ['Action', 'Adventure', 'Indie', 'Massively Multiplayer', 'RPG'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 251971,
       rating: 'Very Positive',
@@ -5926,10 +5406,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'BANDAI NAMCO Entertainment',
     tags: ['Action', 'Adventure'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 16932,
       rating: 'Very Positive',
@@ -5971,10 +5447,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'WB Games',
     tags: ['Action', 'Adventure', 'RPG'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 35083,
       rating: 'Very Positive',
@@ -6024,10 +5496,6 @@ export const steamGameDetails: SteamGameMap = {
       'Strategy',
     ],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Mostly Positive',
-    },
     allReviewSummary: {
       count: 51819,
       rating: 'Mostly Positive',
@@ -6069,10 +5537,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Ubisoft',
     tags: ['Action', 'Free To Play'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 626692,
       rating: 'Very Positive',
@@ -6115,10 +5579,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'System Era Softworks',
     tags: ['Adventure', 'Indie'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 52640,
       rating: 'Very Positive',
@@ -6160,10 +5620,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Team Cherry',
     tags: ['Action', 'Adventure', 'Indie'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
     allReviewSummary: {
       count: 170192,
       rating: 'Overwhelmingly Positive',
@@ -6205,10 +5661,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'FromSoftware, Inc., Bandai Namco Entertainment',
     tags: ['Action'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 104371,
       rating: 'Very Positive',
@@ -6256,10 +5708,6 @@ export const steamGameDetails: SteamGameMap = {
       'Simulation',
     ],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Mostly Positive',
-    },
     allReviewSummary: {
       count: 53468,
       rating: 'Mostly Positive',
@@ -6300,10 +5748,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Bethesda Softworks',
     tags: ['RPG'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 177657,
       rating: 'Very Positive',
@@ -6345,10 +5789,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Warhorse Studios, Deep Silver',
     tags: ['Action', 'Adventure', 'RPG'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 59937,
       rating: 'Very Positive',
@@ -6390,10 +5830,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Bethesda Softworks',
     tags: ['Action'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
     allReviewSummary: {
       count: 82336,
       rating: 'Overwhelmingly Positive',
@@ -6445,10 +5881,6 @@ export const steamGameDetails: SteamGameMap = {
       'Free To Play',
     ],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Mostly Positive',
-    },
     allReviewSummary: {
       count: 752,
       rating: 'Mostly Positive',
@@ -6491,10 +5923,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Axolot Games',
     tags: ['Action', 'Adventure', 'Indie', 'Simulation'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 45517,
       rating: 'Very Positive',
@@ -6535,10 +5963,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'BANDAI NAMCO Entertainment',
     tags: ['Action', 'Sports'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 30527,
       rating: 'Very Positive',
@@ -6580,10 +6004,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Crystal Dynamics',
     tags: ['Action', 'Adventure'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 30196,
       rating: 'Very Positive',
@@ -6625,10 +6045,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'tobyfox',
     tags: ['Indie', 'RPG'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
     allReviewSummary: {
       count: 156054,
       rating: 'Overwhelmingly Positive',
@@ -6670,10 +6086,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'AMPLITUDE Studios',
     tags: ['Strategy'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 9297,
       rating: 'Very Positive',
@@ -6715,10 +6127,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Paradox Interactive',
     tags: ['Simulation', 'Strategy'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 118112,
       rating: 'Very Positive',
@@ -6760,10 +6168,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Bethesda Softworks',
     tags: ['Action'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 19093,
       rating: 'Very Positive',
@@ -6805,10 +6209,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Deep Silver',
     tags: ['Action'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 33125,
       rating: 'Very Positive',
@@ -6850,10 +6250,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'ConcernedApe',
     tags: ['Indie', 'RPG', 'Simulation'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
     allReviewSummary: {
       count: 375494,
       rating: 'Overwhelmingly Positive',
@@ -6895,10 +6291,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Ninja Theory',
     tags: ['Action', 'Adventure', 'Indie'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 28221,
       rating: 'Very Positive',
@@ -6940,10 +6332,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Red Barrels',
     tags: ['Action', 'Adventure', 'Indie'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 10309,
       rating: 'Very Positive',
@@ -6985,10 +6373,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'CAPCOM Co., Ltd.',
     tags: ['Action', 'Adventure'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 28207,
       rating: 'Very Positive',
@@ -7030,10 +6414,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'BANDAI NAMCO Entertainment',
     tags: ['Adventure'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 18604,
       rating: 'Very Positive',
@@ -7075,10 +6455,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Playstack',
     tags: ['Action', 'Adventure', 'RPG', 'Simulation'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
     allReviewSummary: {
       count: 24893,
       rating: 'Overwhelmingly Positive',
@@ -7119,10 +6495,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Wube Software LTD.',
     tags: ['Casual', 'Indie', 'Simulation', 'Strategy'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
     allReviewSummary: {
       count: 112679,
       rating: 'Overwhelmingly Positive',
@@ -7164,10 +6536,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Monomi Park',
     tags: ['Action', 'Adventure', 'Indie', 'Simulation'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
     allReviewSummary: {
       count: 63625,
       rating: 'Overwhelmingly Positive',
@@ -7208,10 +6576,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Larian Studios',
     tags: ['Adventure', 'RPG', 'Strategy'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
     allReviewSummary: {
       count: 81331,
       rating: 'Overwhelmingly Positive',
@@ -7259,10 +6623,6 @@ export const steamGameDetails: SteamGameMap = {
       'Free To Play',
     ],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Mostly Positive',
-    },
     allReviewSummary: {
       count: 3284,
       rating: 'Mostly Positive',
@@ -7304,10 +6664,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Ubisoft',
     tags: ['Action', 'Adventure'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 24009,
       rating: 'Very Positive',
@@ -7349,10 +6705,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Klei Entertainment',
     tags: ['Indie', 'Simulation'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
     allReviewSummary: {
       count: 47621,
       rating: 'Overwhelmingly Positive',
@@ -7394,10 +6746,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Shiro Games',
     tags: ['Adventure', 'Indie', 'Simulation', 'Strategy'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 22909,
       rating: 'Very Positive',
@@ -7439,10 +6787,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Curve Games',
     tags: ['Adventure', 'Casual', 'Indie', 'Simulation'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
     allReviewSummary: {
       count: 30195,
       rating: 'Overwhelmingly Positive',
@@ -7484,10 +6828,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Bethesda Softworks',
     tags: ['Action', 'Adventure'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 21449,
       rating: 'Very Positive',
@@ -7530,10 +6870,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Atari, Nightdive Studios',
     tags: ['Action', 'Adventure'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 7334,
       rating: 'Very Positive',
@@ -7576,10 +6912,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'BetaDwarf',
     tags: ['Action', 'Adventure', 'Indie', 'RPG', 'Strategy', 'Free To Play'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Mostly Positive',
-    },
     allReviewSummary: {
       count: 659,
       rating: 'Mostly Positive',
@@ -7621,10 +6953,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Frontier Developments, Aspyr (Mac)',
     tags: ['Action', 'Adventure', 'Casual', 'Simulation', 'Strategy'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 30825,
       rating: 'Very Positive',
@@ -7666,10 +6994,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Bandai Namco Entertainment',
     tags: ['Action', 'Simulation'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 21486,
       rating: 'Very Positive',
@@ -7711,10 +7035,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Stunlock Studios',
     tags: ['Action', 'Free To Play'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 9851,
       rating: 'Very Positive',
@@ -7755,10 +7075,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Landfall',
     tags: ['Indie', 'Simulation', 'Strategy'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
     allReviewSummary: {
       count: 80004,
       rating: 'Overwhelmingly Positive',
@@ -7800,10 +7116,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Amistech Games',
     tags: ['Indie', 'Racing', 'Simulation'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 35061,
       rating: 'Very Positive',
@@ -7844,10 +7156,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Avalanche Studios',
     tags: ['Adventure', 'Simulation', 'Sports'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 60176,
       rating: 'Very Positive',
@@ -7889,10 +7197,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Square Enix',
     tags: ['Action', 'RPG'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 48045,
       rating: 'Very Positive',
@@ -7934,10 +7238,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Coffee Stain Publishing',
     tags: ['Adventure', 'Indie', 'Simulation', 'Strategy'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
     allReviewSummary: {
       count: 127791,
       rating: 'Overwhelmingly Positive',
@@ -7978,10 +7278,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'SEGA',
     tags: ['Indie', 'Simulation'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 12448,
       rating: 'Very Positive',
@@ -8023,10 +7319,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Valve',
     tags: ['Action', 'Adventure'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
     allReviewSummary: {
       count: 60002,
       rating: 'Overwhelmingly Positive',
@@ -8068,10 +7360,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Coffee Stain Publishing',
     tags: ['Action'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
     allReviewSummary: {
       count: 167087,
       rating: 'Overwhelmingly Positive',
@@ -8113,10 +7401,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Fatshark',
     tags: ['Action', 'Indie', 'RPG'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 43327,
       rating: 'Very Positive',
@@ -8158,10 +7442,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Focus Entertainment',
     tags: ['Action'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 58709,
       rating: 'Very Positive',
@@ -8203,10 +7483,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'CAPCOM Co., Ltd.',
     tags: ['Action'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 112636,
       rating: 'Very Positive',
@@ -8248,10 +7524,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Ubisoft',
     tags: ['Action', 'Adventure', 'RPG'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 35314,
       rating: 'Very Positive',
@@ -8293,10 +7565,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Motion Twin',
     tags: ['Action', 'Adventure', 'Indie'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
     allReviewSummary: {
       count: 42951,
       rating: 'Overwhelmingly Positive',
@@ -8338,10 +7606,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'SEGA',
     tags: ['Action', 'Strategy'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 50614,
       rating: 'Very Positive',
@@ -8383,10 +7647,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'CAPCOM Co., Ltd.',
     tags: ['Action'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
     allReviewSummary: {
       count: 36805,
       rating: 'Overwhelmingly Positive',
@@ -8428,10 +7688,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Daedalic Entertainment',
     tags: ['Action', 'Indie', 'Simulation', 'Strategy'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
     allReviewSummary: {
       count: 26846,
       rating: 'Overwhelmingly Positive',
@@ -8472,10 +7728,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Eek! Games, LLC',
     tags: ['Adventure', 'Casual', 'Indie', 'RPG', 'Simulation'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 6216,
       rating: 'Very Positive',
@@ -8517,10 +7769,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Frozen District, PlayWay S.A.',
     tags: ['Indie', 'Simulation'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 44692,
       rating: 'Very Positive',
@@ -8562,10 +7810,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Arc Games, THQ Nordic',
     tags: ['Action', 'Adventure', 'RPG'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 23783,
       rating: 'Very Positive',
@@ -8607,10 +7851,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Beat Games',
     tags: ['Indie'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
     allReviewSummary: {
       count: 52731,
       rating: 'Overwhelmingly Positive',
@@ -8651,10 +7891,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'The Irregular Corporation',
     tags: ['Indie', 'Simulation'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 19590,
       rating: 'Very Positive',
@@ -8696,10 +7932,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Gearbox Publishing',
     tags: ['Action', 'Indie'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
     allReviewSummary: {
       count: 157514,
       rating: 'Overwhelmingly Positive',
@@ -8740,10 +7972,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'ZA/UM',
     tags: ['RPG'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 54500,
       rating: 'Very Positive',
@@ -8785,10 +8013,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Square Enix',
     tags: ['RPG'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 17229,
       rating: 'Very Positive',
@@ -8830,10 +8054,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Numantian Games',
     tags: ['Strategy'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 18587,
       rating: 'Very Positive',
@@ -8875,10 +8095,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Mega Crit',
     tags: ['Indie', 'Strategy'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
     allReviewSummary: {
       count: 71948,
       rating: 'Overwhelmingly Positive',
@@ -8920,10 +8136,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Frontier Developments',
     tags: ['Simulation', 'Strategy'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 23209,
       rating: 'Very Positive',
@@ -8966,10 +8178,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Axolot Games',
     tags: ['Adventure', 'Indie', 'Simulation'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 126197,
       rating: 'Very Positive',
@@ -9010,10 +8218,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Focus Entertainment',
     tags: ['Adventure', 'Casual', 'Indie', 'RPG', 'Simulation'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 11981,
       rating: 'Very Positive',
@@ -9056,10 +8260,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Bandai Namco Entertainment',
     tags: ['Action'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 25536,
       rating: 'Very Positive',
@@ -9101,10 +8301,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Bandai Namco Entertainment',
     tags: ['Action', 'RPG'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 18717,
       rating: 'Very Positive',
@@ -9146,10 +8342,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Team Salvato',
     tags: ['Casual', 'Free To Play', 'Indie'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 210,
       rating: 'Very Positive',
@@ -9191,10 +8383,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Frontier Developments',
     tags: ['Casual', 'Simulation', 'Strategy'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 40973,
       rating: 'Very Positive',
@@ -9243,10 +8431,6 @@ export const steamGameDetails: SteamGameMap = {
       'Free To Play',
     ],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Mostly Positive',
-    },
     allReviewSummary: {
       count: 96,
       rating: 'Mostly Positive',
@@ -9287,10 +8471,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Team17',
     tags: ['Action', 'Casual', 'Indie'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 13871,
       rating: 'Very Positive',
@@ -9332,10 +8512,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Kinetic Games',
     tags: ['Action', 'Indie'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
     allReviewSummary: {
       count: 345405,
       rating: 'Overwhelmingly Positive',
@@ -9376,10 +8552,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Bandai Namco Entertainment',
     tags: ['Action', 'RPG'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 10974,
       rating: 'Very Positive',
@@ -9421,10 +8593,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Crystal Dynamics',
     tags: ['Action', 'Adventure'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 22703,
       rating: 'Very Positive',
@@ -9466,10 +8634,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Focus Entertainment',
     tags: ['Action', 'Adventure'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 20623,
       rating: 'Very Positive',
@@ -9511,10 +8675,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Annapurna Interactive',
     tags: ['Action', 'Adventure'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
     allReviewSummary: {
       count: 48223,
       rating: 'Overwhelmingly Positive',
@@ -9557,10 +8717,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'PlayWay S.A.',
     tags: ['Action', 'Adventure', 'Simulation'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
     allReviewSummary: {
       count: 9912,
       rating: 'Overwhelmingly Positive',
@@ -9602,10 +8758,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Bethesda Softworks',
     tags: ['Action'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 118837,
       rating: 'Very Positive',
@@ -9647,10 +8799,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Hooded Horse',
     tags: ['Simulation', 'Strategy'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 7903,
       rating: 'Very Positive',
@@ -9693,10 +8841,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Ubisoft',
     tags: ['Action', 'Adventure', 'RPG'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 57090,
       rating: 'Very Positive',
@@ -9739,10 +8883,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Xbox Game Studios',
     tags: ['Strategy'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
     allReviewSummary: {
       count: 58756,
       rating: 'Overwhelmingly Positive',
@@ -9785,10 +8925,6 @@ export const steamGameDetails: SteamGameMap = {
       'Activision (Excluding Japan and Asia), FromSoftware, Inc. (Japan), 方块游戏 (Asia)',
     tags: ['Action', 'Adventure'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 84178,
       rating: 'Very Positive',
@@ -9830,10 +8966,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Creepy Jar',
     tags: ['Action', 'Adventure', 'Indie', 'Simulation'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 24328,
       rating: 'Very Positive',
@@ -9875,10 +9007,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Panic',
     tags: ['Action', 'Indie'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
     allReviewSummary: {
       count: 9721,
       rating: 'Overwhelmingly Positive',
@@ -9920,10 +9048,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Unknown Worlds Entertainment',
     tags: ['Adventure', 'Indie'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 52544,
       rating: 'Very Positive',
@@ -9965,10 +9089,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Bandai Namco Entertainment Inc.',
     tags: ['Action', 'RPG'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 17535,
       rating: 'Very Positive',
@@ -10010,10 +9130,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'BANDAI NAMCO Entertainment',
     tags: ['Adventure'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 15168,
       rating: 'Very Positive',
@@ -10055,10 +9171,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'IO Interactive A/S',
     tags: ['Action'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 13803,
       rating: 'Very Positive',
@@ -10100,10 +9212,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Cygames, Inc.',
     tags: ['Action', 'Adventure', 'RPG'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 10885,
       rating: 'Very Positive',
@@ -10145,10 +9253,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Nolla Games',
     tags: ['Action', 'Adventure', 'Indie', 'RPG', 'Simulation'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
     allReviewSummary: {
       count: 45502,
       rating: 'Overwhelmingly Positive',
@@ -10190,10 +9294,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'CAPCOM Co., Ltd.',
     tags: ['Action'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
     allReviewSummary: {
       count: 49105,
       rating: 'Overwhelmingly Positive',
@@ -10235,10 +9335,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Coffee Stain Publishing',
     tags: ['Action', 'Adventure', 'Indie', 'RPG'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 251627,
       rating: 'Very Positive',
@@ -10279,10 +9375,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Warner Bros. Games, Warner Bros. Interactive Entertainment',
     tags: ['Action', 'Adventure'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 26057,
       rating: 'Very Positive',
@@ -10324,10 +9416,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Innersloth',
     tags: ['Casual'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 368079,
       rating: 'Very Positive',
@@ -10369,10 +9457,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'FYQD-Studio, PLAYISM',
     tags: ['Action', 'Adventure', 'Indie'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 5380,
       rating: 'Very Positive',
@@ -10413,10 +9497,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Xbox Game Studios',
     tags: ['Action', 'Adventure'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 39432,
       rating: 'Very Positive',
@@ -10457,10 +9537,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Thunder Lotus',
     tags: ['Adventure', 'Indie', 'Simulation'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
     allReviewSummary: {
       count: 18133,
       rating: 'Overwhelmingly Positive',
@@ -10502,10 +9578,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Kitfox Games',
     tags: ['Indie', 'Simulation', 'Strategy'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
     allReviewSummary: {
       count: 23186,
       rating: 'Overwhelmingly Positive',
@@ -10547,10 +9619,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Warner Bros. Games, Warner Bros. Interactive Entertainment',
     tags: ['Action'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 25092,
       rating: 'Very Positive',
@@ -10593,10 +9661,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Xbox Game Studios',
     tags: ['Action'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 158661,
       rating: 'Very Positive',
@@ -10638,10 +9702,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Warner Bros. Games',
     tags: ['Action', 'Adventure', 'RPG'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 138359,
       rating: 'Very Positive',
@@ -10683,10 +9743,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Mythwright',
     tags: ['Indie', 'RPG', 'Simulation', 'Strategy'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 7880,
       rating: 'Very Positive',
@@ -10727,10 +9783,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Team Cherry',
     tags: ['Action', 'Adventure', 'Indie'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 133480,
       rating: 'Very Positive',
@@ -10751,10 +9803,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: '2K',
     tags: ['Action', 'Adventure'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 27164,
       rating: 'Very Positive',
@@ -10796,10 +9844,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Xbox Game Studios',
     tags: ['Action'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
     allReviewSummary: {
       count: 30233,
       rating: 'Overwhelmingly Positive',
@@ -10841,10 +9885,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Mechanistry',
     tags: ['Indie', 'Simulation', 'Strategy'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
     allReviewSummary: {
       count: 20579,
       rating: 'Overwhelmingly Positive',
@@ -10885,10 +9925,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'KRAFTON, Inc.',
     tags: ['Adventure', 'Casual', 'Indie', 'RPG', 'Simulation'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 15407,
       rating: 'Very Positive',
@@ -10930,10 +9966,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Pathea Games, Focus Entertainment, PM Studios, Inc., DMM Games',
     tags: ['Adventure', 'Casual', 'Indie', 'RPG', 'Simulation'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 8903,
       rating: 'Very Positive',
@@ -10975,10 +10007,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Larian Studios',
     tags: ['Adventure', 'RPG', 'Strategy'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
     allReviewSummary: {
       count: 432941,
       rating: 'Overwhelmingly Positive',
@@ -11020,10 +10048,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'CD PROJEKT RED',
     tags: ['RPG'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 364684,
       rating: 'Very Positive',
@@ -11065,10 +10089,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Devolver Digital',
     tags: ['Adventure', 'Indie', 'Strategy'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
     allReviewSummary: {
       count: 73862,
       rating: 'Overwhelmingly Positive',
@@ -11110,10 +10130,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Square Enix',
     tags: ['Action', 'Adventure', 'RPG'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 11088,
       rating: 'Very Positive',
@@ -11155,10 +10171,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Stray Fawn Publishing, WhisperGames',
     tags: ['Simulation', 'Strategy'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 3686,
       rating: 'Very Positive',
@@ -11199,10 +10211,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'ROCKFISH Games',
     tags: ['Action', 'Adventure', 'RPG', 'Simulation'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 6930,
       rating: 'Very Positive',
@@ -11244,10 +10252,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Toplitz Productions',
     tags: ['Action', 'Adventure', 'Indie', 'RPG', 'Simulation'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 18219,
       rating: 'Very Positive',
@@ -11289,10 +10293,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: '505 Games',
     tags: ['Action'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 19100,
       rating: 'Very Positive',
@@ -11334,10 +10334,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Supergiant Games',
     tags: ['Action', 'Indie', 'RPG'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
     allReviewSummary: {
       count: 60073,
       rating: 'Overwhelmingly Positive',
@@ -11378,10 +10374,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Supergiant Games',
     tags: ['Action', 'Indie', 'RPG'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
     allReviewSummary: {
       count: 137815,
       rating: 'Overwhelmingly Positive',
@@ -11423,10 +10415,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'PlayStation Publishing LLC',
     tags: ['Action', 'Adventure', 'RPG'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 51322,
       rating: 'Very Positive',
@@ -11468,10 +10456,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Humble Games',
     tags: ['Adventure', 'Casual', 'Indie', 'RPG', 'Simulation', 'Strategy'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 13000,
       rating: 'Very Positive',
@@ -11513,10 +10497,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Paradox Interactive',
     tags: ['RPG', 'Simulation', 'Strategy'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 47351,
       rating: 'Very Positive',
@@ -11558,10 +10538,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Tuxedo Labs',
     tags: ['Action', 'Indie', 'Simulation', 'Strategy'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
     allReviewSummary: {
       count: 70088,
       rating: 'Overwhelmingly Positive',
@@ -11603,10 +10579,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Fair Games ApS',
     tags: ['Action', 'Adventure', 'Indie', 'RPG'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 11363,
       rating: 'Very Positive',
@@ -11647,10 +10619,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Electronic Arts',
     tags: ['Action', 'Adventure'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 80089,
       rating: 'Very Positive',
@@ -11692,10 +10660,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Xbox Game Studios',
     tags: ['Action', 'Adventure'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 143612,
       rating: 'Very Positive',
@@ -11737,10 +10701,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Rockstar Games',
     tags: ['Action', 'Adventure'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 282320,
       rating: 'Very Positive',
@@ -11782,10 +10742,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: '505 Games',
     tags: ['Action', 'Adventure'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 19163,
       rating: 'Very Positive',
@@ -11827,10 +10783,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Frozen District',
     tags: ['Casual', 'Indie', 'Simulation'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 8280,
       rating: 'Very Positive',
@@ -11872,10 +10824,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'CAPCOM Co., Ltd.',
     tags: ['Action'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 42024,
       rating: 'Very Positive',
@@ -11917,10 +10865,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Maxim Karpenko',
     tags: ['Indie', 'Simulation'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
     allReviewSummary: {
       count: 26630,
       rating: 'Overwhelmingly Positive',
@@ -11961,10 +10905,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'tinyBuild',
     tags: ['Indie', 'Simulation'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 15700,
       rating: 'Very Positive',
@@ -12006,10 +10946,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Duoyi Games',
     tags: ['Action', 'Adventure', 'Indie', 'RPG'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
     allReviewSummary: {
       count: 36025,
       rating: 'Overwhelmingly Positive',
@@ -12050,10 +10986,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Quantic Dream',
     tags: ['Action', 'Adventure'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 48530,
       rating: 'Very Positive',
@@ -12095,10 +11027,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Electronic Arts',
     tags: ['Adventure', 'Casual', 'Simulation', 'Free To Play'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 45722,
       rating: 'Very Positive',
@@ -12140,10 +11068,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'New Blood Interactive',
     tags: ['Action', 'Indie'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
     allReviewSummary: {
       count: 128790,
       rating: 'Overwhelmingly Positive',
@@ -12184,10 +11108,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Electronic Arts',
     tags: ['Action'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
     allReviewSummary: {
       count: 91144,
       rating: 'Overwhelmingly Positive',
@@ -12229,10 +11149,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Sabotage Studio',
     tags: ['Adventure', 'Indie', 'RPG'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 6108,
       rating: 'Very Positive',
@@ -12274,10 +11190,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Frontier Developments',
     tags: ['Simulation', 'Strategy'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 19543,
       rating: 'Very Positive',
@@ -12319,10 +11231,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'FromSoftware, Inc., Bandai Namco Entertainment',
     tags: ['Action', 'RPG'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 420937,
       rating: 'Very Positive',
@@ -12364,10 +11272,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Giants Software',
     tags: ['Simulation'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 24815,
       rating: 'Very Positive',
@@ -12409,10 +11313,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'PlayStation Publishing LLC',
     tags: ['Action', 'Adventure'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 35150,
       rating: 'Very Positive',
@@ -12454,10 +11354,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Electronic Arts',
     tags: ['Action', 'Adventure', 'Racing'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Mostly Positive',
-    },
     allReviewSummary: {
       count: 7819,
       rating: 'Mostly Positive',
@@ -12499,10 +11395,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Miju Games',
     tags: ['Adventure'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
     allReviewSummary: {
       count: 33324,
       rating: 'Overwhelmingly Positive',
@@ -12544,10 +11436,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'ArenaNet, NCSOFT',
     tags: ['Adventure', 'Massively Multiplayer', 'RPG', 'Free To Play'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 305,
       rating: 'Very Positive',
@@ -12589,10 +11477,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Electronic Arts',
     tags: ['Massively Multiplayer', 'RPG', 'Free To Play'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 364,
       rating: 'Very Positive',
@@ -12634,10 +11518,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Xbox Game Studios',
     tags: ['Racing'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 53618,
       rating: 'Very Positive',
@@ -12679,10 +11559,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Red Barrels',
     tags: ['Action', 'Adventure', 'Indie'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 35328,
       rating: 'Very Positive',
@@ -12724,10 +11600,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Devolver Digital',
     tags: ['Action', 'Adventure', 'Indie', 'Strategy'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
     allReviewSummary: {
       count: 55680,
       rating: 'Overwhelmingly Positive',
@@ -12769,10 +11641,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Newnight ',
     tags: ['Action', 'Adventure', 'Indie', 'Simulation'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 110479,
       rating: 'Very Positive',
@@ -12813,10 +11681,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Electronic Arts',
     tags: ['Action', 'RPG'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 38752,
       rating: 'Very Positive',
@@ -12858,10 +11722,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Annapurna Interactive',
     tags: ['Adventure', 'Indie'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
     allReviewSummary: {
       count: 76087,
       rating: 'Overwhelmingly Positive',
@@ -12903,10 +11763,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Hooded Horse',
     tags: ['Simulation', 'Strategy'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
     allReviewSummary: {
       count: 17860,
       rating: 'Overwhelmingly Positive',
@@ -12948,10 +11804,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'OppaiMan Studios',
     tags: ['Adventure', 'Indie'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 2769,
       rating: 'Very Positive',
@@ -12972,10 +11824,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Gamirror Games',
     tags: ['Indie', 'Simulation', 'Strategy'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
     allReviewSummary: {
       count: 23942,
       rating: 'Overwhelmingly Positive',
@@ -13016,10 +11864,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Electronic Arts',
     tags: ['Action', 'Adventure'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
     allReviewSummary: {
       count: 44835,
       rating: 'Overwhelmingly Positive',
@@ -13061,10 +11905,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'WSS playground, Alliance Arts',
     tags: ['Adventure', 'Indie'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
     allReviewSummary: {
       count: 15605,
       rating: 'Overwhelmingly Positive',
@@ -13106,10 +11946,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Square Enix',
     tags: ['Action', 'Adventure', 'RPG'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 17617,
       rating: 'Very Positive',
@@ -13151,10 +11987,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Focus Entertainment',
     tags: ['Adventure', 'Simulation'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 17126,
       rating: 'Very Positive',
@@ -13196,10 +12028,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Awaken Realms',
     tags: ['Action', 'Adventure', 'Indie', 'RPG'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 14918,
       rating: 'Very Positive',
@@ -13242,10 +12070,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Xbox Game Studios',
     tags: ['Strategy'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 27065,
       rating: 'Very Positive',
@@ -13287,10 +12111,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Shiro Games',
     tags: ['Adventure', 'Indie', 'RPG', 'Strategy'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 12801,
       rating: 'Very Positive',
@@ -13332,10 +12152,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Xbox Game Studios',
     tags: ['Action', 'Adventure', 'Racing', 'Simulation', 'Sports'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 87552,
       rating: 'Very Positive',
@@ -13377,10 +12193,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Team17',
     tags: ['Adventure', 'RPG'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
     allReviewSummary: {
       count: 29690,
       rating: 'Overwhelmingly Positive',
@@ -13422,10 +12234,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Squanch Games, Inc.',
     tags: ['Action', 'Adventure'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 12667,
       rating: 'Very Positive',
@@ -13467,10 +12275,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Devolver Digital',
     tags: ['Casual', 'Indie', 'Strategy'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 4597,
       rating: 'Very Positive',
@@ -13512,10 +12316,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'PlayStation Publishing LLC',
     tags: ['Action', 'Adventure', 'RPG'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
     allReviewSummary: {
       count: 57221,
       rating: 'Overwhelmingly Positive',
@@ -13557,10 +12357,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Stunlock Studios',
     tags: ['Action', 'Adventure', 'Massively Multiplayer'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 53089,
       rating: 'Very Positive',
@@ -13602,10 +12398,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Fireshine Games, bilibili',
     tags: ['Action', 'Adventure', 'Indie', 'RPG', 'Simulation'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 21997,
       rating: 'Very Positive',
@@ -13647,10 +12439,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Pocketpair',
     tags: ['Action', 'Adventure', 'Indie', 'RPG'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
     allReviewSummary: {
       count: 147973,
       rating: 'Overwhelmingly Positive',
@@ -13691,10 +12479,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'NEOWIZ',
     tags: ['Action', 'Adventure', 'RPG'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 25444,
       rating: 'Very Positive',
@@ -13736,10 +12520,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Monomi Park',
     tags: ['Action', 'Adventure', 'Casual', 'Indie', 'Simulation'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 22215,
       rating: 'Very Positive',
@@ -13780,10 +12560,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'IO Interactive A/S',
     tags: ['Action', 'Adventure'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 26114,
       rating: 'Very Positive',
@@ -13825,10 +12601,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'PlayStation Publishing LLC',
     tags: ['Adventure'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 8912,
       rating: 'Very Positive',
@@ -13870,10 +12642,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'tobyfox',
     tags: ['Indie', 'RPG'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
     allReviewSummary: {
       count: 60249,
       rating: 'Overwhelmingly Positive',
@@ -13915,10 +12683,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'SEGA',
     tags: ['RPG'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
     allReviewSummary: {
       count: 30910,
       rating: 'Overwhelmingly Positive',
@@ -13960,10 +12724,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Electronic Arts',
     tags: ['Action', 'Adventure'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 28329,
       rating: 'Very Positive',
@@ -14005,10 +12765,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Mob Entertainment',
     tags: ['Action', 'Adventure', 'Indie'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 16278,
       rating: 'Very Positive',
@@ -14050,10 +12806,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Deep Silver',
     tags: ['Action', 'Adventure', 'RPG'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 58107,
       rating: 'Very Positive',
@@ -14095,10 +12847,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Bandai Namco Entertainment',
     tags: ['Action'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 27985,
       rating: 'Very Positive',
@@ -14140,10 +12888,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'poncle',
     tags: ['Action', 'Casual', 'Indie', 'RPG'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
     allReviewSummary: {
       count: 125128,
       rating: 'Overwhelmingly Positive',
@@ -14185,10 +12929,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Embark Studios',
     tags: ['Action'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 157502,
       rating: 'Very Positive',
@@ -14209,10 +12949,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'PlayStation Publishing LLC',
     tags: ['Action', 'Adventure', 'Casual'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
     allReviewSummary: {
       count: 51001,
       rating: 'Overwhelmingly Positive',
@@ -14254,10 +12990,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'PlayStation Publishing LLC',
     tags: ['Action', 'Adventure'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 19186,
       rating: 'Very Positive',
@@ -14299,10 +13031,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: ' 505 Games',
     tags: ['Action', 'Adventure'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 17312,
       rating: 'Very Positive',
@@ -14344,10 +13072,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'MINTROCKET',
     tags: ['Adventure', 'Casual', 'RPG', 'Simulation'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
     allReviewSummary: {
       count: 46847,
       rating: 'Overwhelmingly Positive',
@@ -14389,10 +13113,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'FromSoftware, Inc., Bandai Namco Entertainment Inc.',
     tags: ['Action'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 39246,
       rating: 'Very Positive',
@@ -14434,10 +13154,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Kepler Interactive',
     tags: ['Action', 'RPG'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
     allReviewSummary: {
       count: 92954,
       rating: 'Overwhelmingly Positive',
@@ -14480,10 +13196,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Xbox Game Studios',
     tags: ['Strategy'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 9412,
       rating: 'Very Positive',
@@ -14525,10 +13237,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Blobfish',
     tags: ['Action', 'Casual', 'Indie', 'RPG'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
     allReviewSummary: {
       count: 28735,
       rating: 'Overwhelmingly Positive',
@@ -14570,10 +13278,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Secret Mode',
     tags: ['Action', 'Indie'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 34838,
       rating: 'Very Positive',
@@ -14614,10 +13318,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Zeekerss',
     tags: ['Action', 'Adventure', 'Indie'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
     allReviewSummary: {
       count: 272061,
       rating: 'Overwhelmingly Positive',
@@ -14658,10 +13358,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Square Enix',
     tags: ['RPG'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 4423,
       rating: 'Very Positive',
@@ -14704,10 +13400,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Electronic Arts',
     tags: ['Action', 'Adventure'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
     allReviewSummary: {
       count: 20739,
       rating: 'Overwhelmingly Positive',
@@ -14749,10 +13441,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'CAPCOM Co., Ltd.',
     tags: ['Action', 'Adventure'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
     allReviewSummary: {
       count: 56148,
       rating: 'Overwhelmingly Positive',
@@ -14794,10 +13482,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'KONAMI',
     tags: ['Action', 'Adventure'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
     allReviewSummary: {
       count: 20894,
       rating: 'Overwhelmingly Positive',
@@ -14839,10 +13523,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'NPC Studio',
     tags: ['Indie', 'RPG', 'Simulation'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
     allReviewSummary: {
       count: 18836,
       rating: 'Overwhelmingly Positive',
@@ -14883,10 +13563,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: '||SEGA||',
     tags: ['Adventure', 'RPG', 'Strategy'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
     allReviewSummary: {
       count: 19663,
       rating: 'Overwhelmingly Positive',
@@ -14929,10 +13605,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Owlcat Games',
     tags: ['Action', 'Adventure', 'Indie', 'RPG', 'Strategy'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 16539,
       rating: 'Very Positive',
@@ -14974,10 +13646,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Pounce Light',
     tags: ['Casual', 'Indie', 'Simulation'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
     allReviewSummary: {
       count: 12804,
       rating: 'Overwhelmingly Positive',
@@ -15019,10 +13687,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'PlayStation Publishing LLC',
     tags: ['Action', 'Adventure'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 35131,
       rating: 'Very Positive',
@@ -15064,10 +13728,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'PlayStation Publishing LLC',
     tags: ['Action', 'Adventure', 'RPG'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 13515,
       rating: 'Very Positive',
@@ -15109,10 +13769,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'intiny',
     tags: ['Adventure', 'Indie', 'RPG', 'Simulation', 'Strategy'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 1492,
       rating: 'Very Positive',
@@ -15154,10 +13810,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Game Science',
     tags: ['Action', 'Adventure', 'RPG'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 67154,
       rating: 'Very Positive',
@@ -15199,10 +13851,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Playstack',
     tags: ['Casual', 'Indie', 'Strategy'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
     allReviewSummary: {
       count: 95739,
       rating: 'Overwhelmingly Positive',
@@ -15244,10 +13892,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'PlayStation Publishing LLC',
     tags: ['Action', 'RPG'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 10025,
       rating: 'Very Positive',
@@ -15289,10 +13933,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'IndieArk, Shochiku (Japan)',
     tags: ['Adventure', 'Indie', 'RPG', 'Simulation'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
     allReviewSummary: {
       count: 24573,
       rating: 'Overwhelmingly Positive',
@@ -15334,10 +13974,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'AdHoc Studio',
     tags: ['Action', 'Adventure', 'Casual', 'Indie', 'Strategy'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
     allReviewSummary: {
       count: 95484,
       rating: 'Overwhelmingly Positive',
@@ -15358,10 +13994,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Nokta Games',
     tags: ['Casual', 'Indie', 'Simulation'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 31657,
       rating: 'Very Positive',
@@ -15402,10 +14034,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Landfall',
     tags: ['Action', 'Adventure', 'Indie'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 31697,
       rating: 'Very Positive',
@@ -15447,10 +14075,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Bethesda Softworks',
     tags: ['Action'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 15025,
       rating: 'Very Positive',
@@ -15492,10 +14116,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Curve Animation',
     tags: ['Casual', 'Indie', 'Simulation', 'Strategy'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 14503,
       rating: 'Very Positive',
@@ -15536,10 +14156,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'The Astronauts',
     tags: ['Action'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 9485,
       rating: 'Very Positive',
@@ -15580,10 +14196,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'TVGS',
     tags: ['Action', 'Indie', 'Simulation', 'Strategy'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
     allReviewSummary: {
       count: 176336,
       rating: 'Overwhelmingly Positive',
@@ -15624,10 +14236,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'semiwork',
     tags: ['Action'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
     allReviewSummary: {
       count: 117920,
       rating: 'Overwhelmingly Positive',
@@ -15668,10 +14276,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'PlayStation Publishing LLC (excluding China)',
     tags: ['Action', 'Adventure', 'RPG'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
     allReviewSummary: {
       count: 14621,
       rating: 'Overwhelmingly Positive',
@@ -15692,10 +14296,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Aggro Crab, Landfall',
     tags: ['Action', 'Adventure', 'Indie'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
     allReviewSummary: {
       count: 114576,
       rating: 'Overwhelmingly Positive',
@@ -15716,10 +14316,6 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Nuggets Entertainment',
     tags: ['Action', 'Adventure', 'Indie'],
     features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
     allReviewSummary: {
       count: 24796,
       rating: 'Very Positive',

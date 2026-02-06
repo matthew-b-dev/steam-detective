@@ -29,7 +29,7 @@ export const SkipButton: React.FC<SkipButtonProps> = ({
       onClick={handleClick}
       className={`${
         isGiveUp ? 'bg-red-700 hover:bg-red-600' : 'bg-transparent'
-      } text-white px-6 py-2 rounded transition-colors w-full sm:w-[222px] mb-4 sm:mb-3 flex justify-center items-center gap-2 border-1 border-gray-700`}
+      } text-white px-6 py-2 rounded transition-colors w-full whitespace-nowrap sm:max-w-[222px] mb-4 sm:mb-3 flex justify-center items-center gap-2 border-1 border-gray-700`}
     >
       <XMarkIcon
         className={`w-5 h-5 relative top-[1px] ${isGiveUp ? 'text-white' : 'text-red-500'}`}

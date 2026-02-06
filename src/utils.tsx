@@ -158,6 +158,7 @@ export const CLOSE_GUESS_SERIES = [
   'super mario',
   'final fantasy',
   'the legend of zelda',
+  'age of empires',
 ];
 
 /**
