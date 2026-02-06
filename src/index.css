@@ -13,6 +13,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.apexcharts-yaxis-title text {
+  transform-origin: 0px -8px;
+}
+
 a {
   font-weight: 500;
   text-decoration: inherit;
