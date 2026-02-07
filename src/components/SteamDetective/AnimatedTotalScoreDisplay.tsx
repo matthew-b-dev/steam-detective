@@ -59,6 +59,12 @@ const AnimatedTotalScoreDisplay: React.FC<AnimatedTotalScoreDisplayProps> = ({
     const others: { x: number; y: number }[] = [];
     let userPlaced = false;
 
+    // Place user's dot at the bottom (y=0)
+    const user = [{ x: totalScore, y: 0 }];
+
+    // Initialize count for user's score since they occupy y=0
+    scoreCounts[totalScore] = 1;
+
     // Sort scores so we process them in order
     const sorted = [...todayScores].sort((a, b) => a - b);
 
@@ -69,7 +75,7 @@ const AnimatedTotalScoreDisplay: React.FC<AnimatedTotalScoreDisplayProps> = ({
       finalCounts[score]++; // Track total count
 
       if (score === totalScore && !userPlaced) {
-        // Skip user's score for now, we'll place it last at this value
+        // Skip user's score on first occurrence since it's already placed at y=0
         userPlaced = true;
         continue;
       }
@@ -80,10 +86,6 @@ const AnimatedTotalScoreDisplay: React.FC<AnimatedTotalScoreDisplayProps> = ({
         scoreCounts[score]++;
       }
     }
-
-    // Place user's dot on top of the stack (capped)
-    const userY = Math.min(scoreCounts[totalScore] || 0, MAX_STACK_HEIGHT - 1);
-    const user = [{ x: totalScore, y: userY }];
 
     // Identify scores with overflow (more players than visible dots)
     const overflows: Record<number, number> = {};
@@ -131,7 +133,7 @@ const AnimatedTotalScoreDisplay: React.FC<AnimatedTotalScoreDisplayProps> = ({
         },
         events: {},
       },
-      colors: ['#6b7280', '#22c55e'], // gray for others, green for user
+      colors: ['#3b82f6', '#22c55e'], // blue for others, green for user
       markers: {
         size: [7, 11],
         strokeWidth: [0, 2],
@@ -190,33 +192,61 @@ const AnimatedTotalScoreDisplay: React.FC<AnimatedTotalScoreDisplayProps> = ({
       },
       legend: { show: false },
       annotations: {
-        points: Object.entries(scoreOverflows).map(([score, totalCount]) => ({
-          x: Number(score),
-          y: MAX_STACK_HEIGHT,
-          marker: {
-            size: 0,
-          },
-          label: {
-            text: `(+${totalCount - MAX_STACK_HEIGHT})`,
-            borderColor: 'transparent',
-            offsetY: -5,
-            style: {
-              background: 'transparent',
-              color: '#9ca3af',
-              fontSize: '13px',
-              fontWeight: 600,
-              padding: {
-                left: 2,
-                right: 2,
-                top: 0,
-                bottom: 0,
+        points: [
+          // Overflow count labels
+          ...Object.entries(scoreOverflows).map(([score, totalCount]) => ({
+            x: Number(score),
+            y: MAX_STACK_HEIGHT,
+            marker: {
+              size: 0,
+            },
+            label: {
+              text: `(+${totalCount - MAX_STACK_HEIGHT})`,
+              borderColor: 'transparent',
+              offsetY: -5,
+              style: {
+                background: 'transparent',
+                color: '#9ca3af',
+                fontSize: '13px',
+                fontWeight: 600,
+                padding: {
+                  left: 2,
+                  right: 2,
+                  top: 0,
+                  bottom: 0,
+                },
+              },
+            },
+          })),
+          // "You" label for user's point
+          {
+            x: userScoreData[0].x,
+            y: userScoreData[0].y,
+            marker: {
+              size: 0,
+            },
+            label: {
+              text: 'You',
+              borderColor: 'transparent',
+              offsetY: 28,
+              style: {
+                background: 'transparent',
+                color: '#ffffff',
+                fontSize: '12px',
+                fontWeight: 700,
+                padding: {
+                  left: 2,
+                  right: 2,
+                  top: 0,
+                  bottom: 0,
+                },
               },
             },
           },
-        })),
+        ],
       },
     }),
-    [maxY, scoreOverflows],
+    [maxY, scoreOverflows, userScoreData],
   );
 
   const chartSeries = useMemo(
@@ -399,7 +429,7 @@ const AnimatedTotalScoreDisplay: React.FC<AnimatedTotalScoreDisplayProps> = ({
               type='scatter'
               height={95 + maxY * 18}
             />
-            <div className='flex justify-between text-[10px] text-gray-500 mt-[-4px]'>
+            <div className='flex justify-between text-[14px] text-gray-500 mt-[-4px]'>
               <span>Worst</span>
               <span>Best</span>
             </div>

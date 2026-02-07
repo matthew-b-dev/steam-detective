@@ -8,6 +8,7 @@ import {
   getUtcDateString,
   clearPuzzleState,
   getRealUtcDateString,
+  isDateSelectable,
 } from './utils';
 import { getDateFromRoute } from './demos';
 import analyzeIcon from './assets/analyze-48.png';
@@ -40,13 +41,17 @@ function App() {
   usePreloadAllAssets();
 
   // Check if URL has /d/{date} matching today, and if so, redirect to /
+  // Also redirect if the date is not within the selectable range
   useEffect(() => {
     const routeDate = getDateFromRoute();
     const realToday = getRealUtcDateString();
 
-    if (routeDate && routeDate === realToday) {
-      // Remove the /d/... part from the URL
-      window.history.replaceState({}, '', '/');
+    if (routeDate) {
+      // If route date matches today or is not selectable, redirect to /
+      if (routeDate === realToday || !isDateSelectable(routeDate)) {
+        // Force a full page reload to properly load today's puzzle state
+        window.location.href = '/';
+      }
     }
   }, []);
 

@@ -92,6 +92,14 @@ export const GameComplete: React.FC<GameCompleteProps> = ({
       return;
     }
 
+    // If player scored 0 points (didn't solve), skip the animation
+    // since the score doesn't change
+    if (currentCaseScore === 0) {
+      setAnimatedScore(newTotalScore);
+      setScoreAnimationComplete(true);
+      return;
+    }
+
     // Start animation after a brief delay
     const startDelay = setTimeout(() => {
       const duration = 1500; // 1.5 seconds

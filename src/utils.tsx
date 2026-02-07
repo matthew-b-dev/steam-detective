@@ -247,6 +247,17 @@ export const getRealUtcDateString = (): string => {
 };
 
 /**
+ * Check if a date string is within the selectable range
+ * Min: 2026-02-04, Max: Real UTC date
+ */
+export const isDateSelectable = (dateStr: string): boolean => {
+  const minDate = '2026-02-04';
+  const maxDate = getRealUtcDateString();
+
+  return dateStr >= minDate && dateStr <= maxDate;
+};
+
+/**
  * Get current UTC date string in YYYY-MM-DD format
  */
 export const getUtcDateString = (): string => {
