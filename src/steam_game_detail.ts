@@ -1674,7 +1674,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/204360/ss_a800d5bc5b31d84fb940c7d0449f1aea05ac3e0e.600x338.jpg?t=1764096331',
     shortDescription:
-      '||Hack||, ||slash||, and smash your way to victory in this award winning 2D ||arcade adventure|| from The Behemoth!',
+      'Hack, slash, and smash your way to victory in this award winning 2D ||arcade|| adventure from The Behemoth!',
     releaseDate: 'Sep 26, 2012',
     developer: 'The Behemoth',
     publisher: 'The Behemoth',
@@ -2082,7 +2082,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/212500/ss_c375fd975744d35037452d73febd0420d8c1b192.600x338.jpg?t=1764807180',
     shortDescription:
-      "||Join the world's|| greatest ||fellowship|| of players in the award-winning ||online|| re-creation of ||J. R. R. Tolkien's|| legendary ||Middle-earth||.",
+      "Join the world's greatest ||fellowship|| of players in the award-winning ||online|| re-creation of ||J. R. R. Tolkien's|| legendary ||Middle-earth||.",
     releaseDate: 'Jun 6, 2012',
     developer: 'Standing Stone Games',
     publisher: 'Daybreak Game Company LLC',
@@ -2139,7 +2139,6 @@ export const steamGameDetails: SteamGameMap = {
       'Singleplayer',
       'PvP',
       'Dark Fantasy',
-      'Fantasy',
       'RPG',
       'Multiplayer',
     ],
