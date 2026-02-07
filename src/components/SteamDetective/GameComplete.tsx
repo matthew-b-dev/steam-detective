@@ -9,6 +9,21 @@ import {
 } from '../../utils';
 import { MAX_CLUES } from './utils';
 import { PlayIcon, StarIcon } from '@heroicons/react/24/solid';
+import blueGamesFolderIcon from '../../assets/games-folder-48.png';
+import greenGamesFolderIcon from '../../assets/green-games-folder-48.png';
+import purpleGamesFolderIcon from '../../assets/purple-games-folder-48.png';
+import redGamesFolderIcon from '../../assets/red-games-folder-48.png';
+
+// Map case file numbers to their folder icons
+const getCaseFileIcon = (caseFileNumber: number): string => {
+  const iconMap: Record<number, string> = {
+    1: blueGamesFolderIcon,
+    2: greenGamesFolderIcon,
+    3: purpleGamesFolderIcon,
+    4: redGamesFolderIcon,
+  };
+  return iconMap[caseFileNumber] || blueGamesFolderIcon;
+};
 
 interface GameCompleteProps {
   show: boolean;
@@ -237,6 +252,11 @@ export const GameComplete: React.FC<GameCompleteProps> = ({
               <span className='block'>
                 <span className='mr-2 pb-2 whitespace-nowrap'>Continue to</span>{' '}
                 <span className='bg-gray-800/20 py-1 px-2 rounded whitespace-nowrap'>
+                  <img
+                    src={getCaseFileIcon(caseFileNumber + 1)}
+                    className='inline w-6 h-6 mr-1 mt-[-2px]'
+                    alt='Folder icon'
+                  />
                   Case File #{caseFileNumber + 1}
                 </span>
               </span>

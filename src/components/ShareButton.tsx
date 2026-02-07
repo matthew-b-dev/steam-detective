@@ -19,7 +19,7 @@ const ShareButton: React.FC<ShareButtonProps> = ({
 
   return (
     <button
-      className='w-full px-4 py-2 rounded bg-green-700 hover:bg-green-600 text-white text-sm font-semibold flex items-center justify-center gap-2 disabled:bg-gray-600 disabled:cursor-not-allowed disabled:opacity-50'
+      className='w-full sm:max-w-[300px] px-4 py-2 rounded bg-green-700 hover:bg-green-600 text-white text-sm font-semibold flex items-center justify-center gap-2 disabled:bg-gray-600 disabled:cursor-not-allowed disabled:opacity-50'
       onClick={handleShareClick}
       disabled={isLoading}
     >

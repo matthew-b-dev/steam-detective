@@ -30,18 +30,47 @@ import {
   GameComplete,
   FinalGameComplete,
 } from './components/SteamDetective';
+import blueGamesFolderIcon from './assets/games-folder-48.png';
 import greenGamesFolderIcon from './assets/green-games-folder-48.png';
+import purpleGamesFolderIcon from './assets/purple-games-folder-48.png';
+import redGamesFolderIcon from './assets/red-games-folder-48.png';
 import analyzeIcon from './assets/analyze-48.png';
 
-// Preload images hook
-const useImagePreloader = (src: string) => {
+// Map case file numbers to their folder icons
+const getCaseFileIcon = (caseFileNumber: number): string => {
+  const iconMap: Record<number, string> = {
+    1: blueGamesFolderIcon,
+    2: greenGamesFolderIcon,
+    3: purpleGamesFolderIcon,
+    4: redGamesFolderIcon,
+  };
+  return iconMap[caseFileNumber] || blueGamesFolderIcon;
+};
+
+// Preload all folder icons
+const usePreloadFolderIcons = () => {
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
-    const img = new Image();
-    img.onload = () => setLoaded(true);
-    img.src = src;
-  }, [src]);
+    const icons = [
+      blueGamesFolderIcon,
+      greenGamesFolderIcon,
+      purpleGamesFolderIcon,
+      redGamesFolderIcon,
+    ];
+
+    let loadedCount = 0;
+    icons.forEach((src) => {
+      const img = new Image();
+      img.onload = () => {
+        loadedCount++;
+        if (loadedCount === icons.length) {
+          setLoaded(true);
+        }
+      };
+      img.src = src;
+    });
+  }, []);
 
   return loaded;
 };
@@ -69,8 +98,8 @@ const SteamDetectiveGame: React.FC<SteamDetectiveGameProps> = ({
     false,
   ]);
 
-  // Preload folder icon
-  const iconLoaded = useImagePreloader(greenGamesFolderIcon);
+  // Preload folder icons
+  const iconsLoaded = usePreloadFolderIcons();
 
   const dailyGame = useDailyGame(caseFileNumber);
   const censoredDescription = useCensoredDescription(
@@ -236,9 +265,9 @@ const SteamDetectiveGame: React.FC<SteamDetectiveGameProps> = ({
       <h2 className='text-lg text-white sm:text-2xl mb-[-5px] sm:py-0 sm:mb-0 font-bold'>
         <div className='flex items-center'>
           <img
-            src={greenGamesFolderIcon}
+            src={getCaseFileIcon(caseFileNumber)}
             className={`transition-opacity duration-200 ${
-              iconLoaded ? 'opacity-100' : 'opacity-0'
+              iconsLoaded ? 'opacity-100' : 'opacity-0'
             }`}
           />
           <div className='pl-1'>
@@ -248,7 +277,7 @@ const SteamDetectiveGame: React.FC<SteamDetectiveGameProps> = ({
         </div>
       </h2>
     );
-  }, [iconLoaded, caseFileNumber]);
+  }, [iconsLoaded, caseFileNumber]);
 
   return (
     <SteamDetectiveGameProvider

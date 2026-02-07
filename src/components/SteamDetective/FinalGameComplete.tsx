@@ -187,13 +187,14 @@ const FinalGameComplete: React.FC<FinalGameCompleteProps> = ({
               ))}
             </div>
           )}
-
-          {/* Share Button */}
-          <ShareButton
-            userPercentile={userPercentile}
-            onCopyToShare={handleCopyToShare}
-            isLoading={scoresLoading}
-          />
+          <div className='flex justify-center'>
+            {/* Share Button */}
+            <ShareButton
+              userPercentile={userPercentile}
+              onCopyToShare={handleCopyToShare}
+              isLoading={scoresLoading}
+            />
+          </div>
 
           {/* Feedback Buttons */}
           <SteamDetectiveFeedbackButtons isOpen={show} />

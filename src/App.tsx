@@ -14,6 +14,9 @@ import { getDateFromRoute } from './demos';
 import analyzeIcon from './assets/analyze-48.png';
 import blueGamesFolderIcon from './assets/games-folder-48.png';
 import greenGamesFolderIcon from './assets/green-games-folder-48.png';
+import redGamesFolderIcon from './assets/red-games-folder-48.png';
+import purpleGamesFolderIcon from './assets/purple-games-folder-48.png';
+import { pingSupabase } from './lib/supabaseClient';
 
 // Preload all asset images when app mounts
 const usePreloadAllAssets = () => {
@@ -22,6 +25,8 @@ const usePreloadAllAssets = () => {
       analyzeIcon,
       blueGamesFolderIcon,
       greenGamesFolderIcon,
+      redGamesFolderIcon,
+      purpleGamesFolderIcon,
     ];
 
     imagesToPreload.forEach((src) => {
@@ -39,6 +44,11 @@ function App() {
 
   // Preload all assets when app mounts
   usePreloadAllAssets();
+
+  // Fetch first score ID on mount
+  useEffect(() => {
+    pingSupabase();
+  }, []);
 
   // Check if URL has /d/{date} matching today, and if so, redirect to /
   // Also redirect if the date is not within the selectable range
@@ -98,7 +108,7 @@ function App() {
                     className='text-gray-400 sm:text-gray-500'
                   >
                     <span>.</span>
-                    <span className='italic'>wtf</span>
+                    <span className='italic text-yellow-500'>wtf</span>
                   </span>
                 </h1>
                 <p
