@@ -91,10 +91,13 @@ export const ClueScreenshot: React.FC<ClueScreenshotProps> = ({
                       height: '25%',
                       backdropFilter: 'blur(20px)',
                       WebkitBackdropFilter: 'blur(20px)',
+                      backgroundColor: isMobileViewport
+                        ? 'rgba(0, 0, 0, 0.5)'
+                        : 'transparent',
                     }}
                   >
                     <div
-                      className='text-white font-bold text-4xl tracking-widest'
+                      className='text-white font-bold text-xl sm:text-4xl tracking-widest'
                       style={{
                         textShadow:
                           '0 0 40px rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 0, 0, 0.3), 0 0 10px rgba(0, 0, 0, 0.3)',
