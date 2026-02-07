@@ -9,7 +9,6 @@ import {
   clearPuzzleState,
   getRealUtcDateString,
 } from './utils';
-import { fetchSteamDetectiveScores } from './lib/supabaseClient';
 import { getDateFromRoute } from './demos';
 import analyzeIcon from './assets/analyze-48.png';
 import blueGamesFolderIcon from './assets/games-folder-48.png';
@@ -49,19 +48,6 @@ function App() {
       // Remove the /d/... part from the URL
       window.history.replaceState({}, '', '/');
     }
-  }, []);
-
-  // Fetch today's 'easy' steam_scores when app mounts
-  useEffect(() => {
-    const fetchScores = async () => {
-      try {
-        await fetchSteamDetectiveScores('easy');
-      } catch (error) {
-        console.error('Error fetching initial scores:', error);
-      }
-    };
-
-    fetchScores();
   }, []);
 
   const handleResetPuzzle = () => {

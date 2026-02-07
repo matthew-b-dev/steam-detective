@@ -8,7 +8,7 @@ import { ClueDetails } from './ClueDetails';
 import { ClueTags } from './ClueTags';
 
 interface ClueContainerProps {
-  caseFile: 'easy' | 'expert';
+  caseFile: 'easy' | 'expert' | `casefile-${number}`;
 }
 
 export const ClueContainer: React.FC<ClueContainerProps> = ({ caseFile }) => {

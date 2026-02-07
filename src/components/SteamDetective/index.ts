@@ -2,6 +2,8 @@ export { GameInput } from './GameInput';
 export { SkipButton } from './SkipButton';
 export { ClueContainer } from './ClueContainer';
 export { default as GameComplete } from './GameComplete';
+export { default as FinalGameComplete } from './FinalGameComplete';
+export { default as AnimatedTotalScoreDisplay } from './AnimatedTotalScoreDisplay';
 export { ClueTitle } from './ClueTitle';
 export { ClueScreenshot } from './ClueScreenshot';
 export { ClueDescription } from './ClueDescription';

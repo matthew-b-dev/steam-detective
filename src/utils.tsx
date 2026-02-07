@@ -38,9 +38,15 @@ export interface SteamDetectiveState {
 
 // Unified storage structure (per date)
 export interface UnifiedGameState {
-  steamDetective?: SteamDetectiveState;
-  steamDetectiveExpert?: SteamDetectiveState;
-  expertStarted?: boolean; // Track if user has clicked to start expert case
+  caseFile1?: SteamDetectiveState;
+  caseFile2?: SteamDetectiveState;
+  caseFile3?: SteamDetectiveState;
+  caseFile4?: SteamDetectiveState;
+  caseFileScores?: number[]; // Scores for each completed case file [score1, score2, score3, score4]
+  currentCaseFile?: number; // Track which case file user is on (1-4)
+  allCasesComplete?: boolean; // Track if all 4 cases are complete
+  totalScoreSent?: boolean; // Track if the total score has been sent to the database
+  caseFileAnimationsPlayed?: boolean[]; // Track which case files have played their score animation [cf1, cf2, cf3, cf4]
 }
 
 /**
@@ -55,7 +61,7 @@ const getStorageKey = (puzzleDate: string): string => {
  */
 export const loadSteamDetectiveState = (
   currentPuzzleDate: string,
-  caseFile: 'easy' | 'expert' = 'easy',
+  caseFile: number = 1, // Now 1-4
 ): SteamDetectiveState | null => {
   try {
     const storageKey = getStorageKey(currentPuzzleDate);
@@ -65,10 +71,10 @@ export const loadSteamDetectiveState = (
     const unifiedState: UnifiedGameState = JSON.parse(saved);
 
     // Select the appropriate state based on case file
-    const stateToLoad =
-      caseFile === 'easy'
-        ? unifiedState.steamDetective
-        : unifiedState.steamDetectiveExpert;
+    const caseFileKey = `caseFile${caseFile}` as keyof UnifiedGameState;
+    const stateToLoad = unifiedState[caseFileKey] as
+      | SteamDetectiveState
+      | undefined;
 
     // Migrate old guesses format (string[]) to new format (MissedGuess[])
     if (stateToLoad && stateToLoad.guesses) {
@@ -98,7 +104,7 @@ export const loadSteamDetectiveState = (
 export const saveSteamDetectiveState = (
   puzzleDate: string,
   state: SteamDetectiveState,
-  caseFile: 'easy' | 'expert' = 'easy',
+  caseFile: number = 1, // Now 1-4
 ): void => {
   try {
     const storageKey = getStorageKey(puzzleDate);
@@ -111,12 +117,13 @@ export const saveSteamDetectiveState = (
       unifiedState = {};
     }
 
-    // Update appropriate Steam Detective state
-    if (caseFile === 'easy') {
-      unifiedState.steamDetective = state;
-    } else {
-      unifiedState.steamDetectiveExpert = state;
-    }
+    // Update appropriate case file state
+    const caseFileKey = `caseFile${caseFile}` as
+      | 'caseFile1'
+      | 'caseFile2'
+      | 'caseFile3'
+      | 'caseFile4';
+    unifiedState[caseFileKey] = state;
 
     localStorage.setItem(storageKey, JSON.stringify(unifiedState));
   } catch (error) {
@@ -284,54 +291,45 @@ export const getTimeUntilNextGame = (): { h: number; m: number } => {
 
 /**
  * Get the demo index for a given date
+ * Returns the case file number (1-4) if a demo is configured for this date and case file
  */
 export const getDemoIndexForSteamDetective = (
   utcDate: string,
-  caseFile: 'easy' | 'expert',
+  caseFile: number, // 1-4
 ): number | null => {
   const demoConfig = STEAM_DETECTIVE_DEMO_DAYS[utcDate];
 
   if (!demoConfig) return null;
 
-  // If it's a string, it's easy-only
-  if (typeof demoConfig === 'string') {
-    return caseFile === 'easy' ? 0 : null;
+  const caseFileKey = `caseFile${caseFile}` as
+    | 'caseFile1'
+    | 'caseFile2'
+    | 'caseFile3'
+    | 'caseFile4';
+
+  // Check if this case file has a demo game configured
+  if (demoConfig[caseFileKey]) {
+    return caseFile - 1; // Return 0-indexed for array access
   }
 
-  // If it's an object, check which case file
-  return caseFile === 'easy' ? 0 : 1;
+  return null;
 };
 
 /**
- * Check if there's an expert case available
+ * Get current case file number (1-4)
  */
-export const hasExpertCase = (utcDate: string): boolean => {
-  const demoConfig = STEAM_DETECTIVE_DEMO_DAYS[utcDate];
-  return typeof demoConfig === 'object' && 'expert' in demoConfig;
+export const getCurrentCaseFile = (puzzleDate: string): number => {
+  const state = getUnifiedState(puzzleDate);
+  return state?.currentCaseFile || 1;
 };
 
 /**
- * Load expert started flag from localStorage
+ * Save current case file to localStorage
  */
-export const loadExpertStarted = (currentPuzzleDate: string): boolean => {
-  try {
-    const storageKey = getStorageKey(currentPuzzleDate);
-    const saved = localStorage.getItem(storageKey);
-    if (!saved) return false;
-
-    const unifiedState: UnifiedGameState = JSON.parse(saved);
-
-    return unifiedState.expertStarted || false;
-  } catch (error) {
-    console.error('Failed to load expert started flag:', error);
-    return false;
-  }
-};
-
-/**
- * Save expert started flag to localStorage
- */
-export const saveExpertStarted = (puzzleDate: string): void => {
+export const saveCurrentCaseFile = (
+  puzzleDate: string,
+  caseFile: number,
+): void => {
   try {
     const storageKey = getStorageKey(puzzleDate);
     const saved = localStorage.getItem(storageKey);
@@ -343,12 +341,141 @@ export const saveExpertStarted = (puzzleDate: string): void => {
       unifiedState = {};
     }
 
-    unifiedState.expertStarted = true;
+    unifiedState.currentCaseFile = caseFile;
 
     localStorage.setItem(storageKey, JSON.stringify(unifiedState));
   } catch (error) {
-    console.error('Failed to save expert started flag:', error);
+    console.error('Failed to save current case file:', error);
   }
+};
+
+/**
+ * Save case file score to localStorage
+ */
+export const saveCaseFileScore = (
+  puzzleDate: string,
+  caseFileNumber: number,
+  score: number,
+): void => {
+  try {
+    const storageKey = getStorageKey(puzzleDate);
+    const saved = localStorage.getItem(storageKey);
+    let unifiedState: UnifiedGameState;
+
+    if (saved) {
+      unifiedState = JSON.parse(saved);
+    } else {
+      unifiedState = {};
+    }
+
+    if (!unifiedState.caseFileScores) {
+      unifiedState.caseFileScores = [];
+    }
+
+    // Store score at index (caseFileNumber - 1)
+    unifiedState.caseFileScores[caseFileNumber - 1] = score;
+
+    localStorage.setItem(storageKey, JSON.stringify(unifiedState));
+  } catch (error) {
+    console.error('Failed to save case file score:', error);
+  }
+};
+
+/**
+ * Get total score across all completed case files
+ */
+export const getTotalScore = (puzzleDate: string): number => {
+  const state = getUnifiedState(puzzleDate);
+  if (!state?.caseFileScores) return 0;
+
+  return state.caseFileScores.reduce((sum, score) => sum + (score || 0), 0);
+};
+
+/**
+ * Mark all cases as complete
+ */
+export const saveAllCasesComplete = (puzzleDate: string): void => {
+  try {
+    const storageKey = getStorageKey(puzzleDate);
+    const saved = localStorage.getItem(storageKey);
+    let unifiedState: UnifiedGameState;
+
+    if (saved) {
+      unifiedState = JSON.parse(saved);
+    } else {
+      unifiedState = {};
+    }
+
+    unifiedState.allCasesComplete = true;
+
+    localStorage.setItem(storageKey, JSON.stringify(unifiedState));
+  } catch (error) {
+    console.error('Failed to save all cases complete:', error);
+  }
+};
+
+/**
+ * Mark total score as sent to database
+ */
+export const saveTotalScoreSent = (puzzleDate: string): void => {
+  try {
+    const storageKey = getStorageKey(puzzleDate);
+    const saved = localStorage.getItem(storageKey);
+    let unifiedState: UnifiedGameState;
+
+    if (saved) {
+      unifiedState = JSON.parse(saved);
+    } else {
+      unifiedState = {};
+    }
+
+    unifiedState.totalScoreSent = true;
+
+    localStorage.setItem(storageKey, JSON.stringify(unifiedState));
+  } catch (error) {
+    console.error('Failed to save total score sent:', error);
+  }
+};
+
+/**
+ * Mark case file animation as played
+ */
+export const saveCaseFileAnimationPlayed = (
+  puzzleDate: string,
+  caseFileNumber: number,
+): void => {
+  try {
+    const storageKey = getStorageKey(puzzleDate);
+    const saved = localStorage.getItem(storageKey);
+    let unifiedState: UnifiedGameState;
+
+    if (saved) {
+      unifiedState = JSON.parse(saved);
+    } else {
+      unifiedState = {};
+    }
+
+    if (!unifiedState.caseFileAnimationsPlayed) {
+      unifiedState.caseFileAnimationsPlayed = [];
+    }
+
+    unifiedState.caseFileAnimationsPlayed[caseFileNumber - 1] = true;
+
+    localStorage.setItem(storageKey, JSON.stringify(unifiedState));
+  } catch (error) {
+    console.error('Failed to save case file animation played:', error);
+  }
+};
+
+/**
+ * Check if case file animation has been played
+ */
+export const hasCaseFileAnimationPlayed = (
+  puzzleDate: string,
+  caseFileNumber: number,
+): boolean => {
+  const state = getUnifiedState(puzzleDate);
+  return state?.caseFileAnimationsPlayed?.[caseFileNumber - 1] || false;
 };
 
 /**
@@ -377,5 +504,45 @@ export const getUnifiedState = (
   } catch (error) {
     console.error('Failed to get unified state:', error);
     return null;
+  }
+};
+
+/**
+ * Get rank emoji based on rank and total players
+ */
+export const getRankEmoji = (rank: number, totalPlayers: number): string => {
+  const rankEmojiMap: { [key: number]: string } = {
+    1: '🥇',
+    2: '🥈',
+    3: '🥉',
+  };
+
+  return rankEmojiMap[rank] || (rank === totalPlayers ? '💀' : '🏅');
+};
+
+/**
+ * Get percentile message based on user's performance
+ */
+export const getPercentileMessage = (
+  percentile: number,
+  score: number,
+  todayScores: number[],
+): string => {
+  // Check if tied for first place
+  const highestScore = Math.max(...todayScores);
+
+  if (score === highestScore) {
+    const countAtTop = todayScores.filter((s) => s === highestScore).length;
+
+    if (countAtTop > 1) {
+      return "🥇 You're tied for rank #1 today. 🥇";
+    }
+    return "🥇 So far, you're rank #1 today. 🥇";
+  }
+
+  if (percentile === 0) {
+    return "That's the worst score today. 🤷";
+  } else {
+    return `That's better than ${percentile}% of players.`;
   }
 };

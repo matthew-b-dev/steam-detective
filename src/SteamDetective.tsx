@@ -1,15 +1,17 @@
 import { useState, useEffect, useCallback, useRef, useMemo } from 'react';
 import { Toaster } from 'react-hot-toast';
-import toast from 'react-hot-toast';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   getPuzzleDate,
   getTimeUntilNextGame,
   getUtcDateString,
-  getRealUtcDateString,
   clearPuzzleState,
   getUnifiedState,
-  saveExpertStarted,
+  saveCurrentCaseFile,
+  getCurrentCaseFile,
+  getTotalScore,
+  saveAllCasesComplete,
+  type SteamDetectiveState,
 } from './utils';
 import PuzzleDateTime from './components/PuzzleDateTime';
 import ResetPuzzleButton from './components/ResetPuzzleButton';
@@ -26,8 +28,8 @@ import {
   SkipButton,
   ClueContainer,
   GameComplete,
+  FinalGameComplete,
 } from './components/SteamDetective';
-import blueGamesFolderIcon from './assets/games-folder-48.png';
 import greenGamesFolderIcon from './assets/green-games-folder-48.png';
 import analyzeIcon from './assets/analyze-48.png';
 
@@ -45,19 +47,17 @@ const useImagePreloader = (src: string) => {
 };
 
 interface SteamDetectiveGameProps {
-  caseFile: 'easy' | 'expert';
-  onStartExpertCase?: () => void;
-  puzzleDate: string;
-  easyTotalGuesses?: number;
-  expertCaseStarted?: boolean;
+  caseFileNumber: number; // 1-4
+  onContinueToNextCase?: () => void;
+  previousTotalScore?: number;
+  isCurrentCaseFile?: boolean;
 }
 
 const SteamDetectiveGame: React.FC<SteamDetectiveGameProps> = ({
-  caseFile,
-  onStartExpertCase,
-  puzzleDate,
-  easyTotalGuesses,
-  expertCaseStarted,
+  caseFileNumber,
+  onContinueToNextCase,
+  previousTotalScore = 0,
+  isCurrentCaseFile = true,
 }) => {
   const [flashGuesses, setFlashGuesses] = useState(false);
   const prevShowCluesRef = useRef<boolean[]>([
@@ -69,16 +69,18 @@ const SteamDetectiveGame: React.FC<SteamDetectiveGameProps> = ({
     false,
   ]);
 
-  // Preload folder icons
-  const blueIconLoaded = useImagePreloader(blueGamesFolderIcon);
-  const greenIconLoaded = useImagePreloader(greenGamesFolderIcon);
+  // Preload folder icon
+  const iconLoaded = useImagePreloader(greenGamesFolderIcon);
 
-  const dailyGame = useDailyGame(caseFile);
+  const dailyGame = useDailyGame(caseFileNumber);
   const censoredDescription = useCensoredDescription(
     dailyGame.shortDescription,
   );
 
-  const { state, setState } = useSteamDetectiveState(dailyGame.name, caseFile);
+  const { state, setState } = useSteamDetectiveState(
+    dailyGame.name,
+    caseFileNumber,
+  );
   const { handleSkip, handleGuess } = useGameActions({
     state,
     setState,
@@ -94,17 +96,14 @@ const SteamDetectiveGame: React.FC<SteamDetectiveGameProps> = ({
     }
   }, [state.guessesRemaining, state.isComplete]);
 
-  // Scroll to top when game is completed (both easy and expert)
+  // Scroll to top when game is completed
   useEffect(() => {
     if (state.isComplete) {
-      // Force scroll to top with multiple attempts to ensure it happens
-      // First immediate scroll
       window.scrollTo({
         top: 0,
         behavior: 'instant',
       });
 
-      // Then smooth scroll after a delay to override any competing scrolls
       setTimeout(() => {
         window.scrollTo({
           top: 0,
@@ -115,39 +114,31 @@ const SteamDetectiveGame: React.FC<SteamDetectiveGameProps> = ({
   }, [state.isComplete]);
 
   // Determine which clues to show based on custom clue order
-  // Default order: tags, details, desc (clues 1-3), then screenshot1, screenshot2, title (clues 4-6)
   const clueOrder = dailyGame.clueOrder || ['tags', 'details', 'desc'];
 
-  // Map custom order to showClues array [showClue1=tags, showClue2=details, showClue3=desc, showClue4=screenshot1, showClue5=screenshot2, showClue6=title]
   const clueMapping: Record<string, number> = {
     tags: 1,
     details: 2,
     desc: 3,
   };
 
-  // Create mapping from currentClue to which canonical clues should be shown
   const getShowClues = (): boolean[] => {
-    const result = [false, false, false, false, false, false]; // [tags, details, desc, screenshot1, screenshot2, title]
+    const result = [false, false, false, false, false, false];
 
     if (state.isComplete) {
       return [true, true, true, true, true, true];
     }
 
-    // Show clues based on current clue and custom order
     for (let i = 0; i < state.currentClue && i < 6; i++) {
       if (i < 3) {
-        // First 3 clues use custom order
         const clueType = clueOrder[i];
-        const clueIndex = clueMapping[clueType] - 1; // Convert to 0-indexed
+        const clueIndex = clueMapping[clueType] - 1;
         result[clueIndex] = true;
       } else if (i === 3) {
-        // Clue 4: first screenshot
         result[3] = true;
       } else if (i === 4) {
-        // Clue 5: second screenshot
         result[4] = true;
       } else if (i === 5) {
-        // Clue 6: title
         result[5] = true;
       }
     }
@@ -159,12 +150,10 @@ const SteamDetectiveGame: React.FC<SteamDetectiveGameProps> = ({
 
   // Auto-scroll down when a new clue becomes the lowest displayed clue
   useEffect(() => {
-    // Don't auto-scroll down when the game is complete (we want to scroll up instead)
     if (state.isComplete) {
       return;
     }
 
-    // Canonical positions (lower number = higher on page, higher number = lower on page)
     const canonicalPositions = {
       title: 0,
       screenshot1: 1,
@@ -174,7 +163,6 @@ const SteamDetectiveGame: React.FC<SteamDetectiveGameProps> = ({
       tags: 5,
     };
 
-    // Map showClues indices to canonical clue names
     const clueNames = [
       'tags',
       'details',
@@ -184,7 +172,6 @@ const SteamDetectiveGame: React.FC<SteamDetectiveGameProps> = ({
       'title',
     ];
 
-    // Get the canonical position of the lowest currently shown clue
     const getLowestPosition = (clues: boolean[]): number => {
       let lowestPosition = -1;
       clues.forEach((shown, index) => {
@@ -202,15 +189,11 @@ const SteamDetectiveGame: React.FC<SteamDetectiveGameProps> = ({
     const prevLowestPosition = getLowestPosition(prevShowCluesRef.current);
     const currentLowestPosition = getLowestPosition(showClues);
 
-    // Check if this is the first clue (all previous clues were false)
     const isFirstClue = prevShowCluesRef.current.every((clue) => !clue);
-    // If a new clue has become the lowest (higher canonical position number), scroll down
-    // Exception: don't scroll on the first clue
-    // Check if the clue container is outside viewport or near the bottom
+
     const getClueContainerElement = () => {
-      // Find the specific clue container for the current case file
       return document.querySelector(
-        `[data-clue-container="${caseFile}"]`,
+        `[data-clue-container="casefile-${caseFileNumber}"]`,
       ) as HTMLElement;
     };
 
@@ -222,7 +205,6 @@ const SteamDetectiveGame: React.FC<SteamDetectiveGameProps> = ({
       const viewportHeight = window.innerHeight;
       const containerBottom = rect.bottom;
 
-      // Check if bottom is outside viewport (below) or within 150px of bottom
       return (
         containerBottom > viewportHeight ||
         containerBottom > viewportHeight - 150
@@ -237,7 +219,6 @@ const SteamDetectiveGame: React.FC<SteamDetectiveGameProps> = ({
     ) {
       const scrollAmount = 220;
 
-      // Delay scroll to ensure DOM has updated with new content
       setTimeout(() => {
         window.scrollBy({
           top: scrollAmount,
@@ -246,94 +227,28 @@ const SteamDetectiveGame: React.FC<SteamDetectiveGameProps> = ({
       }, 100);
     }
 
-    // Always update ref after comparison, regardless of whether we scrolled
     prevShowCluesRef.current = showClues;
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [showClues, state.isComplete]);
-
-  const handleCopyToShare = useCallback(() => {
-    // Generate emoji representation of guesses
-    const generateEmojiText = (totalGuesses: number) => {
-      if (totalGuesses === 7) {
-        return '🟥🟥🟥🟥🟥🟥';
-      }
-      const emojis = [];
-      for (let i = 1; i <= 6; i++) {
-        if (i < totalGuesses) {
-          emojis.push('🟥');
-        } else if (i === totalGuesses) {
-          emojis.push('✅');
-        } else {
-          emojis.push('⬜');
-        }
-      }
-      return emojis.join('');
-    };
-
-    let emojiText = '';
-    if (
-      caseFile === 'expert' &&
-      easyTotalGuesses !== undefined &&
-      easyTotalGuesses > 0
-    ) {
-      // For expert mode, include both easy and expert scores
-      const easyEmoji = generateEmojiText(easyTotalGuesses);
-      const expertEmoji = generateEmojiText(state.totalGuesses);
-      emojiText = `1️⃣  ${easyEmoji} \n2️⃣  ${expertEmoji}`;
-    } else {
-      // For easy mode, just show the easy score
-      emojiText = `${generateEmojiText(state.totalGuesses)} 📁 #1`;
-    }
-
-    // Include /d/{date} in URL if puzzle date is not today
-    const realToday = getRealUtcDateString();
-    const rawPuzzleDate = getUtcDateString(); // YYYY-MM-DD format
-    const baseUrl =
-      rawPuzzleDate === realToday
-        ? 'https://steamdetective.wtf/'
-        : `https://steamdetective.wtf/d/${rawPuzzleDate}`;
-    const shareText = `${baseUrl}\n${puzzleDate} 🕵️ #SteamDetective\n${emojiText}`;
-    navigator.clipboard.writeText(shareText);
-    toast.success('Copied to clipboard!');
-  }, [state.totalGuesses, puzzleDate, caseFile, easyTotalGuesses]);
-
-  const handleScoreSent = useCallback(() => {
-    setState({ ...state, scoreSent: true });
-  }, [state, setState]);
 
   const caseFileHeader = useMemo(() => {
     return (
       <h2 className='text-lg text-white sm:text-2xl mb-[-5px] sm:py-0 sm:mb-0 font-bold'>
         <div className='flex items-center'>
           <img
-            src={
-              caseFile === 'easy' ? greenGamesFolderIcon : blueGamesFolderIcon
-            }
+            src={greenGamesFolderIcon}
             className={`transition-opacity duration-200 ${
-              caseFile === 'easy'
-                ? blueIconLoaded
-                  ? 'opacity-100'
-                  : 'opacity-0'
-                : greenIconLoaded
-                  ? 'opacity-100'
-                  : 'opacity-0'
+              iconLoaded ? 'opacity-100' : 'opacity-0'
             }`}
           />
           <div className='pl-1'>
-            Case File{' '}
-            {caseFile === 'easy' ? (
-              '#1'
-            ) : (
-              <>
-                <span className='text-md'>#</span>2
-              </>
-            )}{' '}
-            <span className='text-gray-500'>of 2</span>
+            Case File #{caseFileNumber}{' '}
+            <span className='text-gray-500'>of 4</span>
           </div>
         </div>
       </h2>
     );
-  }, [blueIconLoaded, caseFile, greenIconLoaded]);
+  }, [iconLoaded, caseFileNumber]);
 
   return (
     <SteamDetectiveGameProvider
@@ -390,15 +305,13 @@ const SteamDetectiveGame: React.FC<SteamDetectiveGameProps> = ({
           gameName={dailyGame.name}
           appId={dailyGame.appId}
           totalGuesses={state.totalGuesses}
-          onCopyToShare={handleCopyToShare}
-          scoreSent={state.scoreSent}
-          onScoreSent={handleScoreSent}
           blurTitleAndAsAmpersand={dailyGame.blurTitleAndAsAmpersand}
-          caseFile={caseFile}
-          onStartExpertCase={onStartExpertCase}
-          expertCaseStarted={expertCaseStarted}
+          caseFileNumber={caseFileNumber}
+          onContinueToNextCase={onContinueToNextCase}
+          previousTotalScore={previousTotalScore}
+          isCurrentCaseFile={isCurrentCaseFile}
         />
-        <ClueContainer caseFile={caseFile} />
+        <ClueContainer caseFile={`casefile-${caseFileNumber}`} />
       </div>
     </SteamDetectiveGameProvider>
   );
@@ -419,73 +332,119 @@ const SteamDetective: React.FC<SteamDetectiveProps> = ({
     getTimeUntilNextGame(),
   );
 
-  // Check if expert case file has been started by looking for saved state in localStorage
-  const [showExpertCase, setShowExpertCase] = useState(() => {
+  // Get current case file from state (1-4)
+  const [currentCaseFile, setCurrentCaseFile] = useState(() => {
     const currentPuzzleDate = getUtcDateString();
-    const state = getUnifiedState(currentPuzzleDate);
-    return !!state?.expertStarted;
+    return getCurrentCaseFile(currentPuzzleDate);
   });
 
-  // Track if both cases are complete with state (not just a callback)
-  const [bothCasesComplete, setBothCasesComplete] = useState(() => {
+  // Check if all cases are complete
+  const [allCasesComplete, setAllCasesComplete] = useState(() => {
     const currentPuzzleDate = getUtcDateString();
     const state = getUnifiedState(currentPuzzleDate);
-    if (state) {
-      const easyComplete = state.steamDetective?.isComplete || false;
-      const expertComplete = state.steamDetectiveExpert?.isComplete || false;
-      return easyComplete && expertComplete;
-    }
-    return false;
+    return !!state?.allCasesComplete;
   });
 
-  // Poll localStorage to detect when both cases are complete
+  // Track if final game complete has been shown
+  // Initialize based on whether all cases are complete
+  const [showFinalGameComplete, setShowFinalGameComplete] = useState(() => {
+    const currentPuzzleDate = getUtcDateString();
+    const state = getUnifiedState(currentPuzzleDate);
+    return !!state?.allCasesComplete; // Show immediately if already complete
+  });
+  const hasScheduledFinalComplete = useRef(false);
+
+  // Poll localStorage to detect when current case file completes
   useEffect(() => {
     const checkCompletion = () => {
       const currentPuzzleDate = getUtcDateString();
       const state = getUnifiedState(currentPuzzleDate);
       if (state) {
-        const easyComplete = state.steamDetective?.isComplete || false;
-        const expertComplete = state.steamDetectiveExpert?.isComplete || false;
-        const areBothComplete = easyComplete && expertComplete;
-        if (areBothComplete !== bothCasesComplete) {
-          setBothCasesComplete(areBothComplete);
+        // Check if current case file is complete
+        const caseFileKey = `caseFile${currentCaseFile}` as keyof typeof state;
+        const caseFileState = state[caseFileKey] as
+          | SteamDetectiveState
+          | undefined;
+
+        if (caseFileState?.isComplete && currentCaseFile === 4) {
+          // Case file 4 is complete - show final game complete immediately
+          if (!allCasesComplete) {
+            setAllCasesComplete(true);
+            saveAllCasesComplete(currentPuzzleDate);
+          }
+
+          // Show final game complete immediately (score sending is handled by FinalGameComplete)
+          if (!hasScheduledFinalComplete.current && !showFinalGameComplete) {
+            hasScheduledFinalComplete.current = true;
+            setShowFinalGameComplete(true);
+          }
         }
       }
     };
 
-    // Check immediately
     checkCompletion();
-
-    // Poll every 500ms to detect changes
     const interval = setInterval(checkCompletion, 500);
     return () => clearInterval(interval);
-  }, [bothCasesComplete]);
+  }, [currentCaseFile, allCasesComplete, showFinalGameComplete]);
 
-  // Get easy game's total guesses directly from localStorage (not from a separate state hook)
-  const getEasyTotalGuesses = useCallback((): number => {
-    const currentPuzzleDate = getUtcDateString();
-    const state = getUnifiedState(currentPuzzleDate);
-    return state?.steamDetective?.totalGuesses || 0;
-  }, []);
-
-  // Check if expert case has been started
-  const hasExpertCaseStarted = useCallback((): boolean => {
-    const currentPuzzleDate = getUtcDateString();
-    const state = getUnifiedState(currentPuzzleDate);
-    return !!state?.expertStarted;
-  }, []);
-
-  const handleStartExpertCase = useCallback(() => {
-    setShowExpertCase(true);
-    const currentPuzzleDate = getUtcDateString();
-    saveExpertStarted(currentPuzzleDate);
-  }, []);
+  const handleContinueToNextCase = useCallback(() => {
+    const nextCaseFile = currentCaseFile + 1;
+    if (nextCaseFile <= 4) {
+      setCurrentCaseFile(nextCaseFile);
+      const currentPuzzleDate = getUtcDateString();
+      saveCurrentCaseFile(currentPuzzleDate, nextCaseFile);
+    }
+  }, [currentCaseFile]);
 
   const handleResetPuzzle = async () => {
     const currentPuzzleDate = getUtcDateString();
     clearPuzzleState(currentPuzzleDate);
     window?.location?.reload?.();
   };
+
+  // Generate share text (no longer needed - handled in FinalGameComplete)
+  // const handleCopyToShare = useCallback(() => { ... }, []);
+
+  // Get missed case files
+  const getMissedCaseFiles = useCallback(() => {
+    const currentPuzzleDate = getUtcDateString();
+    const state = getUnifiedState(currentPuzzleDate);
+    const missed: Array<{ caseNumber: number; gameName: string }> = [];
+
+    if (!state) return missed;
+
+    for (let i = 1; i <= 4; i++) {
+      const caseFileKey = `caseFile${i}` as keyof typeof state;
+      const caseFileState = state[caseFileKey] as
+        | SteamDetectiveState
+        | undefined;
+      if (caseFileState && caseFileState.totalGuesses === 7) {
+        // This case file was missed (7 guesses = DNF)
+        missed.push({
+          caseNumber: i,
+          gameName: caseFileState.revealedTitle || `Case File #${i}`,
+        });
+      }
+    }
+
+    return missed;
+  }, []);
+
+  // Get previous total score for a case file
+  const getPreviousTotalScore = useCallback((caseFileNumber: number) => {
+    const currentPuzzleDate = getUtcDateString();
+    const state = getUnifiedState(currentPuzzleDate);
+
+    if (!state || !state.caseFileScores) return 0;
+
+    // Sum scores for all case files before this one
+    let total = 0;
+    for (let i = 0; i < caseFileNumber - 1; i++) {
+      total += state.caseFileScores[i] || 0;
+    }
+
+    return total;
+  }, []);
 
   return (
     <div className='text-[#c7d5e0]'>
@@ -505,43 +464,68 @@ const SteamDetective: React.FC<SteamDetectiveProps> = ({
         </button>
       </div>
 
-      {/* Expert Case File - Renders ABOVE easy when shown */}
+      {/* Final Game Complete - shown after case file 4, appears at TOP */}
       <AnimatePresence>
-        {showExpertCase && (
+        {showFinalGameComplete && (
           <motion.div
-            id='expert-case-section'
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.5, ease: 'easeInOut' }}
-            className='mb-8'
           >
-            <SteamDetectiveGame
-              caseFile='expert'
-              puzzleDate={puzzleDate}
-              easyTotalGuesses={getEasyTotalGuesses()}
+            <FinalGameComplete
+              show={showFinalGameComplete}
+              totalScore={getTotalScore(getUtcDateString())}
+              missedCaseFiles={getMissedCaseFiles()}
             />
-            <hr className='h-[2px] bg-gradient-to-r from-transparent via-gray-500 to-transparent border-none my-8 opacity-50' />
           </motion.div>
         )}
       </AnimatePresence>
 
-      {/* Easy Case File */}
-      <motion.div
-        animate={{ y: showExpertCase ? 0 : 0 }}
-        transition={{ duration: 0.5, ease: 'easeInOut' }}
-      >
-        <SteamDetectiveGame
-          caseFile='easy'
-          onStartExpertCase={handleStartExpertCase}
-          puzzleDate={puzzleDate}
-          expertCaseStarted={hasExpertCaseStarted()}
-        />
-      </motion.div>
+      {/* Render case files in reverse order (newest at top) */}
+      {Array.from({ length: currentCaseFile }, (_, index) => {
+        const caseNumber = currentCaseFile - index;
+        const isCurrentCase = caseNumber === currentCaseFile;
+        const isNewestCase = index === 0;
 
-      {/* Show reset button if expert is shown AND both cases are complete */}
-      {showExpertCase && bothCasesComplete && (
-        <div className='flex justify-center mb-4'>
+        const caseContent = (
+          <div key={caseNumber}>
+            <SteamDetectiveGame
+              caseFileNumber={caseNumber}
+              onContinueToNextCase={
+                isCurrentCase && caseNumber < 4
+                  ? handleContinueToNextCase
+                  : undefined
+              }
+              previousTotalScore={getPreviousTotalScore(caseNumber)}
+              isCurrentCaseFile={isCurrentCase}
+            />
+            {caseNumber > 1 && (
+              <hr className='h-[2px] bg-gradient-to-r from-transparent via-gray-500 to-transparent border-none my-8 opacity-50' />
+            )}
+          </div>
+        );
+
+        // Animate the newest case file (when it first appears)
+        if (isNewestCase && caseNumber > 1) {
+          return (
+            <AnimatePresence key={caseNumber}>
+              <motion.div
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, ease: 'easeInOut' }}
+              >
+                {caseContent}
+              </motion.div>
+            </AnimatePresence>
+          );
+        }
+
+        return caseContent;
+      })}
+
+      {/* Show reset button if all cases are complete */}
+      {allCasesComplete && (
+        <div className='flex justify-center mb-4 mt-4'>
           <ResetPuzzleButton onResetPuzzle={handleResetPuzzle} />
         </div>
       )}

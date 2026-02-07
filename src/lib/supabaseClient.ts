@@ -24,6 +24,39 @@ export const sendFeedback = async (
   }
 };
 
+// New function for sending scores to the scores table
+export const sendNewSteamScore = async (playerScore: number): Promise<void> => {
+  console.log('sending score: ', playerScore);
+  const { error } = await supabase.from('scores').insert({
+    created_at: getUtcDateString(),
+    score: playerScore,
+    gametype: 'steam',
+  });
+
+  if (error) {
+    console.error('Error sending score:', error);
+  }
+};
+
+// New function for fetching scores from the scores table
+export const fetchNewSteamScores = async (): Promise<number[]> => {
+  const today = getUtcDateString();
+
+  const { data, error } = await supabase
+    .from('scores')
+    .select('score')
+    .eq('created_at', today)
+    .eq('gametype', 'steam');
+
+  if (error) {
+    console.error('Error fetching steam scores:', error);
+    throw error;
+  }
+
+  return data?.map((row) => row.score) ?? [];
+};
+
+// Legacy functions - kept for backwards compatibility but no longer used
 export const sendSteamDetectiveScore = async (
   guesses: number,
   caseFile: 'easy' | 'expert' = 'easy',

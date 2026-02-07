@@ -14,13 +14,13 @@ export interface SteamDetectiveState extends SteamDetectiveStateType {
 
 export const useSteamDetectiveState = (
   gameName?: string,
-  caseFile: 'easy' | 'expert' = 'easy',
+  caseFileNumber: number = 1, // Now 1-4
 ) => {
   const puzzleDate = getUtcDateString();
 
   // Load or initialize state
   const loadState = useCallback((): SteamDetectiveState => {
-    const savedState = loadSteamDetectiveState(puzzleDate, caseFile);
+    const savedState = loadSteamDetectiveState(puzzleDate, caseFileNumber);
     // Migration: if game is complete but missing revealedTitle, clear and reload
     if (savedState && savedState.isComplete && !savedState?.revealedTitle) {
       clearPuzzleState(puzzleDate);
@@ -56,7 +56,7 @@ export const useSteamDetectiveState = (
       totalGuesses: 0,
       scoreSent: false,
     };
-  }, [puzzleDate, gameName, caseFile]);
+  }, [puzzleDate, gameName, caseFileNumber]);
 
   const [state, setState] = useState<SteamDetectiveState>(loadState);
 
@@ -68,8 +68,8 @@ export const useSteamDetectiveState = (
       state.isComplete && revealedTitle
         ? { ...stateWithoutDate, revealedTitle }
         : stateWithoutDate;
-    saveSteamDetectiveState(state.puzzleDate, stateToSave, caseFile);
-  }, [state, caseFile]);
+    saveSteamDetectiveState(state.puzzleDate, stateToSave, caseFileNumber);
+  }, [state, caseFileNumber]);
 
   return { state, setState };
 };
