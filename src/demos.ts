@@ -125,6 +125,10 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     easy: 'Wolfenstein: The New Order',
     expert: 'South Park: The Stick of Truth',
   },
+  '2026-02-07': {
+    easy: 'Rocket League',
+    expert: 'The Lord of the Rings Online',
+  },
   '2010-02-01': {
     easy: 'Bastion',
     expert: 'ASTRONEER',

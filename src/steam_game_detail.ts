@@ -2101,13 +2101,13 @@ export const steamGameDetails: SteamGameMap = {
       'Free to Play',
       'MMORPG',
       'Massively Multiplayer',
+      'Based On A Novel',
       'Open World',
       'Fantasy',
       'RPG',
       'Adventure',
       'Multiplayer',
       'Character Customization',
-      'Based On A Novel',
       'Exploration',
       'Action',
       'Story Rich',
@@ -2123,11 +2123,9 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/212500/ss_4f9b8230fbc590240dea849d70b120c58fd42a97.600x338.jpg?t=1764807180',
     blurredUserTags: [
-      'Free to Play',
       'MMORPG',
       'Massively Multiplayer',
       'Adventure',
-      'Multiplayer',
       'Character Customization',
       'Open World',
       'Exploration',
@@ -2142,8 +2140,9 @@ export const steamGameDetails: SteamGameMap = {
       'Dark Fantasy',
       'Fantasy',
       'RPG',
+      'Multiplayer',
     ],
-    clueOrder: ['details', 'desc'],
+    clueOrder: ['tags', 'desc', 'details'],
     debugNotes: '',
     difficulty: 'Hard',
     fun: true,
@@ -2154,7 +2153,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/212680/ss_052d698926073e8d407a864f0e63a486af24ec0d.600x338.jpg?t=1748969356',
     shortDescription:
-      '||This "spaceship simulation roguelike-like" allows you|| to take your ||ship|| and crew ||on an adventure through a randomly generated galaxy filled with|| glory ||and bitter|| defeat.',
+      '||This "spaceship|| simulation ||roguelike-like" allows you|| to take your ship and crew ||on an adventure through a randomly generated galaxy filled with|| glory and bitter defeat.',
     releaseDate: 'Sep 14, 2012',
     developer: 'Subset Games',
     publisher: 'Subset Games',
@@ -4060,9 +4059,9 @@ export const steamGameDetails: SteamGameMap = {
   '252950': {
     name: 'Rocket League',
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/252950/002820f64f665e2cb81861bb43d32a726d0bc411/ss_002820f64f665e2cb81861bb43d32a726d0bc411.600x338.jpg?t=1765385510',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/252950/44886516c82f68039ffbb4e6478e64bf9fa0fa84/ss_44886516c82f68039ffbb4e6478e64bf9fa0fa84.600x338.jpg?t=1765385510',
     shortDescription:
-      '||Rocket League|| is a high-powered hybrid of arcade-style soccer and vehicular mayhem with easy-to-understand controls and fluid, physics-driven competition. ||Rocket League|| includes casual and competitive Online Matches, a fully-featured offline Season Mode, special “Mutators” that let you change the rules entirely, hockey and...',
+      '||Rocket League is a|| high-powered hybrid of ||arcade-style soccer|| and ||vehicular mayhem|| with ||easy-to-understand controls and fluid, physics-driven|| competition. ||Rocket League|| includes casual ||and competitive|| Online ||Matches||.',
     releaseDate: 'Jul 6, 2015',
     developer: 'Psyonix LLC',
     publisher: 'Psyonix LLC',
@@ -4097,6 +4096,11 @@ export const steamGameDetails: SteamGameMap = {
     appId: 252950,
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/252950/b329f16495a5b9fa17158775f2a5a31998db040b/ss_b329f16495a5b9fa17158775f2a5a31998db040b.600x338.jpg?t=1765385510',
+    blurredUserTags: ['Football (Soccer)', 'Football (American)', 'Racing'],
+    fun: true,
+    debugProcessed: true,
+    clueOrder: ['desc', 'tags', 'details'],
+    difficulty: 'Medium',
   },
   '255710': {
     name: 'Cities: Skylines',
@@ -4179,6 +4183,7 @@ export const steamGameDetails: SteamGameMap = {
     appId: 257510,
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/257510/ss_56f8a07f7c2ac684cfec3b17bc0668c24b905b4b.600x338.jpg?t=1744327639',
+    blurredUserTags: [],
   },
   '261550': {
     name: 'Mount and Blade II: Bannerlord',

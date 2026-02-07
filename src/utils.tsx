@@ -156,6 +156,7 @@ const levenshteinDistance = (str1: string, str2: string): number => {
 // Special series/franchises where guesses containing the series name are considered "close"
 export const CLOSE_GUESS_SERIES = [
   'super mario',
+  'the lord of the rings',
   'final fantasy',
   'the legend of zelda',
   'age of empires',
