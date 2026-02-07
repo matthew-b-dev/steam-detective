@@ -142,7 +142,7 @@ const FinalGameComplete: React.FC<FinalGameCompleteProps> = ({
 
     const rankEmoji = getRankEmoji(userRank, todayScores.length);
     const rankText =
-      todayScores.length > 1
+      todayScores.length > 1 && userRank > 0
         ? ` | ${rankEmoji} Rank #${userRank} of ${todayScores.length}`
         : '';
 

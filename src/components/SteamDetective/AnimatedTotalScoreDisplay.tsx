@@ -363,9 +363,11 @@ const AnimatedTotalScoreDisplay: React.FC<AnimatedTotalScoreDisplayProps> = ({
                     transition={{ duration: 0.3 }}
                   >
                     {rankEmoji}{' '}
-                    {isTiedForWorst
-                      ? `Rank ${totalPlayers}/${totalPlayers}`
-                      : `Rank #${userRank} out of ${totalPlayers}`}
+                    {userRank === 0
+                      ? 'Unknown Rank'
+                      : isTiedForWorst
+                        ? `Rank ${totalPlayers}/${totalPlayers}`
+                        : `Rank #${userRank} out of ${totalPlayers}`}
                   </motion.div>
                 )}
               </AnimatePresence>
