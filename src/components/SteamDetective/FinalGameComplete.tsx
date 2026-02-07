@@ -161,7 +161,7 @@ const FinalGameComplete: React.FC<FinalGameCompleteProps> = ({
       transition={{ duration: 0.5 }}
       className='mx-auto mt-4 px-1 md:px-4'
     >
-      <div className='bg-zinc-800/40 rounded-lg p-3 md:p-6 mb-6 min-h-[509px]'>
+      <div className='bg-zinc-800/40 rounded-lg p-3 md:p-6 mb-6 min-h-[466px]'>
         {/* Score Animation */}
         <AnimatedTotalScoreDisplay
           totalScore={totalScore}

@@ -26,10 +26,10 @@ interface GameCompleteProps {
 const calculateScore = (totalGuesses: number): number => {
   const scoreMap: Record<number, number> = {
     1: 100,
-    2: 87,
-    3: 74,
-    4: 61,
-    5: 48,
+    2: 85,
+    3: 75,
+    4: 60,
+    5: 45,
     6: 35,
     7: 0, // DNF
   };

@@ -201,6 +201,12 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile4?: string;
   };
 } = {
+  '2026-02-04': {
+    caseFile1: 'Bastion',
+    caseFile2: 'The Walking Dead',
+    caseFile3: 'Rust',
+    caseFile4: 'Magicka',
+  },
   '2026-02-05': {
     caseFile1: 'Persona 3 Reload',
     caseFile2: 'Prey',
@@ -218,11 +224,5 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile2: 'The Lord of the Rings Online',
     caseFile3: 'Prototype 2',
     caseFile4: 'ASTRONEER',
-  },
-  '2010-02-01': {
-    caseFile1: 'Bastion',
-    caseFile2: 'ASTRONEER',
-    caseFile3: 'Rust',
-    caseFile4: 'Magicka',
   },
 };

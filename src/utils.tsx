@@ -167,6 +167,10 @@ export const CLOSE_GUESS_SERIES = [
   'final fantasy',
   'the legend of zelda',
   'age of empires',
+  'bioshock',
+  'persona',
+  'south park',
+  'prototype',
 ];
 
 /**
@@ -527,21 +531,30 @@ export const getPercentileMessage = (
   percentile: number,
   score: number,
   todayScores: number[],
+  puzzleDate?: string,
 ): string => {
   // Check if tied for first place
   const highestScore = Math.max(...todayScores);
+
+  // Determine if this is today's puzzle or a past puzzle
+  const isToday = !puzzleDate || puzzleDate === getRealUtcDateString();
+  const dateText = isToday ? 'today' : `on ${puzzleDate}`;
 
   if (score === highestScore) {
     const countAtTop = todayScores.filter((s) => s === highestScore).length;
 
     if (countAtTop > 1) {
-      return "🥇 You're tied for rank #1 today. 🥇";
+      return isToday
+        ? "🥇 You're tied for rank #1 today. 🥇"
+        : `🥇 Rank #1 for ${puzzleDate}. 🥇`;
     }
-    return "🥇 So far, you're rank #1 today. 🥇";
+    return isToday
+      ? "🥇 So far, you're rank #1 today. 🥇"
+      : `🥇 Rank #1 for ${puzzleDate}. 🥇`;
   }
 
   if (percentile === 0) {
-    return "That's the worst score today. 🤷";
+    return `That's the worst score ${dateText}. 🤷`;
   } else {
     return `That's better than ${percentile}% of players.`;
   }

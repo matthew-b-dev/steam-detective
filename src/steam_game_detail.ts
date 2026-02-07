@@ -978,6 +978,7 @@ export const steamGameDetails: SteamGameMap = {
       'Twin Stick Shooter',
       'Controller',
     ],
+    blurredUserTags: ['Dynamic Narration', 'Narration'],
     appId: 107100,
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/107100/ss_490170c42afe389fb80324b5c29f9b704d87943e.600x338.jpg?t=1729113932',
@@ -3522,6 +3523,7 @@ export const steamGameDetails: SteamGameMap = {
       'Difficult',
       'Adventure',
     ],
+    blurredUserTags: ['Political', 'Puzzle', 'Dystopian'],
     appId: 239030,
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/239030/ss_a1d08145ac2d3e85e8db440ccfeb7f7ad3c8247a.600x338.jpg?t=1678266428',
@@ -4052,6 +4054,7 @@ export const steamGameDetails: SteamGameMap = {
       'Post-apocalyptic',
       'Simulation',
     ],
+    blurredUserTags: ['PvP'],
     appId: 252490,
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/252490/ss_e825b087b95e51c3534383cfd75ad6e8038147c3.600x338.jpg?t=1761667247',
@@ -7038,6 +7041,7 @@ export const steamGameDetails: SteamGameMap = {
       count: 21449,
       rating: 'Very Positive',
     },
+    blurScreenshotQuarter: 'bottom',
     userTags: [
       'Sci-fi',
       'Immersive Sim',
@@ -8460,7 +8464,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/678950/ss_3d48baf2e7aaf087afbab1c4268637df528eb2c8.600x338.jpg?t=1733508969',
     shortDescription:
-      '||DRAGON BALL FighterZ|| is born from what makes the DRAGON BALL series so loved and famous: endless spectacular fights with its all-powerful fighters.',
+      '||DRAGON BALL FighterZ|| is born from what makes the ||DRAGON BALL|| series so loved and famous: endless spectacular fights with its all-powerful fighters.',
     releaseDate: 'Jan 26, 2018',
     developer: 'Arc System Works',
     publisher: 'Bandai Namco Entertainment',
@@ -8492,6 +8496,7 @@ export const steamGameDetails: SteamGameMap = {
       'Adventure',
       "Beat 'em up",
     ],
+    blurredUserTags: ['Anime'],
     appId: 678950,
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/678950/ss_1702e9bc7ba4ce2dce2555c8d63612aafb5c757a.600x338.jpg?t=1733508969',

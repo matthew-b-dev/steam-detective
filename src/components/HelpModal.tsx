@@ -44,8 +44,8 @@ const HelpModal: React.FC<HelpModalProps> = ({ isOpen, onClose }) => {
             <b>Partially-censored game title</b>.
           </li>
           <li>
-            Every day there are two "<b>Case Files</b>" (games) to solve. Try to
-            guess the game with <b>as few clues as possible</b> for the best
+            Every day there are four "<b>Case Files</b>" (games) to solve. Try
+            to guess the game with <b>as few clues as possible</b> for the best
             score!
           </li>
           <li>

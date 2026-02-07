@@ -1,6 +1,10 @@
 import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { getPercentileMessage, getRankEmoji } from '../../utils';
+import {
+  getPercentileMessage,
+  getRankEmoji,
+  getUtcDateString,
+} from '../../utils';
 import Chart from 'react-apexcharts';
 import type { ApexOptions } from 'apexcharts';
 
@@ -46,7 +50,7 @@ const AnimatedTotalScoreDisplay: React.FC<AnimatedTotalScoreDisplayProps> = ({
 
   // Stack dots vertically when scores are the same
   // Cap stacking at MAX_STACK_HEIGHT to prevent chart from getting too tall
-  const MAX_STACK_HEIGHT = 8;
+  const MAX_STACK_HEIGHT = 4;
 
   // Build dot plot data: separate user's score from others
   const { otherScoresData, userScoreData, scoreOverflows } = useMemo(() => {
@@ -98,10 +102,10 @@ const AnimatedTotalScoreDisplay: React.FC<AnimatedTotalScoreDisplayProps> = ({
     };
   }, [todayScores, totalScore]);
 
-  // Calculate max Y for axis range (capped at 8)
+  // Calculate max Y for axis range (capped at 4)
   const maxY = useMemo(() => {
     const all = [...otherScoresData, ...userScoreData];
-    return Math.min(Math.max(...all.map((d) => d.y), 0), 8);
+    return Math.min(Math.max(...all.map((d) => d.y), 0), 4);
   }, [otherScoresData, userScoreData]);
 
   const chartOptions: ApexOptions = useMemo(
@@ -290,7 +294,7 @@ const AnimatedTotalScoreDisplay: React.FC<AnimatedTotalScoreDisplayProps> = ({
 
   if (scoresLoading) {
     return (
-      <div className='mb-6 p-4 bg-zinc-800 rounded-lg min-h-[340px]'>
+      <div className='mb-6 p-4 bg-zinc-800 rounded-lg min-h-[277px]'>
         <div className='flex flex-col items-center justify-center h-32'>
           <div className='animate-spin rounded-full h-8 w-8 border-b-2 border-green-500'></div>
           <p className='text-sm text-gray-400 mt-2'>Loading scores...</p>
@@ -300,7 +304,7 @@ const AnimatedTotalScoreDisplay: React.FC<AnimatedTotalScoreDisplayProps> = ({
   }
 
   return (
-    <div className='mb-6 p-4 bg-zinc-800 rounded-lg min-h-[340px]'>
+    <div className='mb-6 p-4 bg-zinc-800 rounded-lg min-h-[277px]'>
       {/* Large animated score */}
       <AnimatePresence>
         {showBigScore && (
@@ -356,51 +360,52 @@ const AnimatedTotalScoreDisplay: React.FC<AnimatedTotalScoreDisplayProps> = ({
         )}
       </AnimatePresence>
 
-      {todayScores.length > 1 && (
-        <>
-          {/* Rank message */}
-          <AnimatePresence>
-            {showRank && userPercentile !== null && (
-              <motion.p
-                className='text-center text-sm text-green-400 mb-3'
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{
-                  opacity: 1,
-                  scale: 1,
-                }}
-                transition={{
-                  duration: 0.3,
-                  ease: 'easeOut',
-                }}
-              >
-                {getPercentileMessage(userPercentile, totalScore, todayScores)}
-              </motion.p>
+      {/* Rank message */}
+      <AnimatePresence>
+        {showRank && userPercentile !== null && (
+          <motion.p
+            className='text-center text-sm text-green-400 mb-3'
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{
+              opacity: 1,
+              scale: 1,
+            }}
+            transition={{
+              duration: 0.3,
+              ease: 'easeOut',
+            }}
+          >
+            {getPercentileMessage(
+              userPercentile,
+              totalScore,
+              todayScores,
+              getUtcDateString(),
             )}
-          </AnimatePresence>
+          </motion.p>
+        )}
+      </AnimatePresence>
 
-          {/* Dot Plot */}
-          <AnimatePresence>
-            {showHistogram && (
-              <motion.div
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4 }}
-              >
-                <Chart
-                  options={chartOptions}
-                  series={chartSeries}
-                  type='scatter'
-                  height={95 + maxY * 18}
-                />
-                <div className='flex justify-between text-[10px] text-gray-500 px-3 mt-[-4px]'>
-                  <span>Worst</span>
-                  <span>Best</span>
-                </div>
-              </motion.div>
-            )}
-          </AnimatePresence>
-        </>
-      )}
+      {/* Dot Plot */}
+      <AnimatePresence>
+        {showHistogram && (
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4 }}
+          >
+            <Chart
+              options={chartOptions}
+              series={chartSeries}
+              type='scatter'
+              height={95 + maxY * 18}
+            />
+            <div className='flex justify-between text-[10px] text-gray-500 mt-[-4px]'>
+              <span>Worst</span>
+              <span>Best</span>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 };

@@ -23,8 +23,8 @@ const PuzzleDatePicker: React.FC<PuzzleDatePickerProps> = ({
   const utcDay = now.getUTCDate();
   const realUtcDate = new CalendarDate(utcYear, utcMonth, utcDay);
 
-  // Minimum selectable date: Feb 2, 2026 UTC
-  const minDate = new CalendarDate(2026, 2, 2);
+  // Minimum selectable date: Feb 4, 2026 UTC
+  const minDate = new CalendarDate(2026, 2, 4);
 
   // Parse the current puzzle date
   const [puzzleYear, puzzleMonth, puzzleDay] = currentPuzzleDate
