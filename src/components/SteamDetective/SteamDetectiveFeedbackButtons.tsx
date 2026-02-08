@@ -85,28 +85,28 @@ const SteamDetectiveFeedbackButtons: React.FC<
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.1 }}
-            className='flex flex-wrap gap-2 justify-center mt-2 pt-[4px]'
+            className='flex flex-wrap gap-1 sm:gap-2 justify-center mt-2 pt-[4px]'
           >
             <button
-              className='px-3 py-1.5 rounded text-xs font-semibold transition-colors bg-gray-700 hover:bg-gray-600 text-white'
+              className='px-1 sm:px-3 py-1.5 rounded text-xs font-semibold transition-colors bg-gray-700 hover:bg-gray-600 text-white'
               onClick={handleCustomFeedback}
             >
               💬 Other
             </button>
             <button
-              className='px-3 py-1.5 rounded text-xs font-semibold transition-colors bg-gray-700 hover:bg-gray-600 text-white'
+              className='px-1 sm:px-3 py-1.5 rounded text-xs font-semibold transition-colors bg-gray-700 hover:bg-gray-600 text-white'
               onClick={() => handleFeedback('perfect')}
             >
               ⭐️ Great
             </button>
             <button
-              className='px-3 py-1.5 rounded text-xs font-semibold transition-colors bg-gray-700 hover:bg-gray-600 text-white'
+              className='px-1 sm:px-3 py-1.5 rounded text-xs font-semibold transition-colors bg-gray-700 hover:bg-gray-600 text-white'
               onClick={() => handleFeedback('too_easy')}
             >
               😴 Too easy
             </button>
             <button
-              className='px-3 py-1.5 rounded text-xs font-semibold transition-colors bg-gray-700 hover:bg-gray-600 text-white'
+              className='px-1 sm:px-3 py-1.5 rounded text-xs font-semibold transition-colors bg-gray-700 hover:bg-gray-600 text-white'
               onClick={() => handleFeedback('too_hard')}
             >
               😵‍💫 Too hard
@@ -131,27 +131,29 @@ const SteamDetectiveFeedbackButtons: React.FC<
                 }
               }}
               placeholder='Enter feedback...'
-              className='flex-1 px-3 py-[0px] text-sm bg-white border border-gray-600 rounded-lg text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent'
+              className='flex-1 min-w-0 px-3 py-[0px] text-sm bg-white border border-gray-600 rounded-lg text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent'
               maxLength={100}
               autoFocus
             />
-            <button
-              className='px-3 leading-[1] py-2 rounded text-xs font-semibold transition-colors bg-gray-700 hover:bg-gray-600 text-white whitespace-nowrap'
-              onClick={() => {
-                setShowCustomInput(false);
-                setCustomFeedback('');
-              }}
-              disabled={isSending}
-            >
-              Cancel
-            </button>
-            <button
-              className='px-3 py-2 leading-[1] rounded text-xs font-semibold transition-colors bg-blue-600 hover:bg-blue-500 text-white disabled:bg-gray-600 disabled:cursor-not-allowed whitespace-nowrap'
-              onClick={handleSendCustomFeedback}
-              disabled={isSending || !customFeedback.trim()}
-            >
-              {isSending ? 'Sending...' : 'Send'}
-            </button>
+            <div className='flex gap-2'>
+              <button
+                className='px-3 leading-[1] py-2 rounded text-xs font-semibold transition-colors bg-gray-700 hover:bg-gray-600 text-white whitespace-nowrap'
+                onClick={() => {
+                  setShowCustomInput(false);
+                  setCustomFeedback('');
+                }}
+                disabled={isSending}
+              >
+                Cancel
+              </button>
+              <button
+                className='px-3 py-2 leading-[1] rounded text-xs font-semibold transition-colors bg-blue-600 hover:bg-blue-500 text-white disabled:bg-gray-600 disabled:cursor-not-allowed whitespace-nowrap'
+                onClick={handleSendCustomFeedback}
+                disabled={isSending || !customFeedback.trim()}
+              >
+                {isSending ? 'Sending...' : 'Send'}
+              </button>
+            </div>
           </motion.div>
         ) : (
           <motion.p

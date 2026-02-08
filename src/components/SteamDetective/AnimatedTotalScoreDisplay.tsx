@@ -48,71 +48,67 @@ const AnimatedTotalScoreDisplay: React.FC<AnimatedTotalScoreDisplayProps> = ({
 
   const rankEmoji = getRankEmoji(userRank, totalPlayers);
 
-  // Build dot plot data: separate user's score from others
-  const { otherScoresData, userScoreData, scoreOverflows, MAX_STACK_HEIGHT } =
-    useMemo(() => {
-      // Stack dots vertically when scores are the same
-      // Cap stacking at MAX_STACK_HEIGHT to prevent chart from getting too tall
-      // Use more compact layout when there are many scores (>55)
-      const MAX_STACK_HEIGHT = todayScores.length > 55 ? 6 : 4;
+  // Build dot plot data: alternating stack above/below center
+  const { otherScoresData, userScoreData, maxExtent } = useMemo(() => {
+    const STACK_STEP = 0.7; // vertical distance between stacked dots
+    const PROXIMITY = 25; // scores within this range share a stack
+    const others: { x: number; y: number }[] = [];
 
-      const scoreCounts: Record<number, number> = {};
-      const finalCounts: Record<number, number> = {}; // Track total count per score
-      const others: { x: number; y: number }[] = [];
-      let userPlaced = false;
+    // User dot always centered vertically
+    const user = [{ x: totalScore, y: 0 }];
 
-      // Place user's dot at the bottom (y=0)
-      const user = [{ x: totalScore, y: 0 }];
+    const sorted = [...todayScores].sort((a, b) => a - b);
 
-      // Initialize count for user's score since they occupy y=0
-      scoreCounts[totalScore] = 1;
+    // Remove first occurrence of user's score
+    const userIndex = sorted.indexOf(totalScore);
+    const allScores =
+      userIndex >= 0
+        ? [...sorted.slice(0, userIndex), ...sorted.slice(userIndex + 1)]
+        : sorted;
 
-      // Sort scores so we process them in order
-      const sorted = [...todayScores].sort((a, b) => a - b);
+    // Track stacking per cluster of nearby scores
+    const clusters: { anchor: number; count: number }[] = [];
 
-      for (const score of sorted) {
-        if (!scoreCounts[score]) scoreCounts[score] = 0;
-        if (!finalCounts[score]) finalCounts[score] = 0;
-
-        finalCounts[score]++; // Track total count
-
-        if (score === totalScore && !userPlaced) {
-          // Skip user's score on first occurrence since it's already placed at y=0
-          userPlaced = true;
-          continue;
-        }
-
-        // Only add dots up to MAX_STACK_HEIGHT
-        if (scoreCounts[score] < MAX_STACK_HEIGHT) {
-          others.push({ x: score, y: scoreCounts[score] });
-          scoreCounts[score]++;
-        }
+    const getCluster = (score: number) => {
+      for (const c of clusters) {
+        if (Math.abs(score - c.anchor) <= PROXIMITY) return c;
       }
+      return null;
+    };
 
-      // Identify scores with overflow (more players than visible dots)
-      const overflows: Record<number, number> = {};
-      Object.keys(finalCounts).forEach((scoreStr) => {
-        const score = parseInt(scoreStr);
-        const total = finalCounts[score];
-        if (total > MAX_STACK_HEIGHT) {
-          overflows[score] = total;
-        }
-      });
+    // User's score occupies position 0 in its cluster
+    clusters.push({ anchor: totalScore, count: 1 });
 
-      return {
-        otherScoresData: others,
-        userScoreData: user,
-        scoreOverflows: overflows,
-        MAX_STACK_HEIGHT,
-      };
-    }, [todayScores, totalScore]);
+    for (const s of allScores) {
+      let cluster = getCluster(s);
+      if (!cluster) {
+        // New cluster; first dot goes at center
+        cluster = { anchor: s, count: 0 };
+        clusters.push(cluster);
+        others.push({ x: s, y: 0 });
+      } else {
+        // Alternate above and below: count 1→+1, 2→-1, 3→+2, 4→-2, ...
+        const n = cluster.count;
+        const level = Math.ceil(n / 2);
+        const y = n % 2 === 1 ? level * STACK_STEP : -level * STACK_STEP;
+        others.push({ x: s, y });
+      }
+      cluster.count++;
+    }
 
-  // Calculate max Y for axis range
-  const maxY = useMemo(() => {
-    const all = [...otherScoresData, ...userScoreData];
-    const cap = todayScores.length > 55 ? 6 : 4;
-    return Math.min(Math.max(...all.map((d) => d.y), 0), cap);
-  }, [otherScoresData, userScoreData, todayScores.length]);
+    // Compute max extent for dynamic axis range
+    const allY = [...others.map((d) => Math.abs(d.y)), 0];
+    const maxExtent = Math.max(...allY);
+
+    return {
+      otherScoresData: others,
+      userScoreData: user,
+      maxExtent,
+    };
+  }, [todayScores, totalScore]);
+
+  // Dynamic y bounds: at least 2, otherwise maxExtent + padding
+  const yBound = Math.max(2, maxExtent + 0.8);
 
   const chartOptions: ApexOptions = useMemo(
     () => ({
@@ -135,11 +131,34 @@ const AnimatedTotalScoreDisplay: React.FC<AnimatedTotalScoreDisplayProps> = ({
             speed: 400,
           },
         },
-        events: {},
+        events: {
+          // Reorder SVG so yaxis annotation fill renders behind data dots
+          mounted: (chartCtx: { el: HTMLElement }) => {
+            const el = chartCtx.el;
+            const yAnnotations = el.querySelector(
+              '.apexcharts-yaxis-annotations',
+            );
+            const grid = el.querySelector('.apexcharts-grid');
+            if (yAnnotations && grid && grid.parentNode) {
+              grid.parentNode.insertBefore(yAnnotations, grid.nextSibling);
+            }
+          },
+          updated: (chartCtx: { el: HTMLElement }) => {
+            const el = chartCtx.el;
+            const yAnnotations = el.querySelector(
+              '.apexcharts-yaxis-annotations',
+            );
+            const grid = el.querySelector('.apexcharts-grid');
+            if (yAnnotations && grid && grid.parentNode) {
+              grid.parentNode.insertBefore(yAnnotations, grid.nextSibling);
+            }
+          },
+        },
       },
       colors: ['#3b82f6', '#22c55e'], // blue for others, green for user
       markers: {
-        size: [todayScores.length > 55 ? 5 : 7, 11],
+        // User dot size is the second element of this array:
+        size: [todayScores.length >= 50 ? 5 : 7, 8],
         strokeWidth: [0, 2],
         strokeColors: ['transparent', '#ffffff'],
         hover: { size: undefined, sizeOffset: 0 },
@@ -150,7 +169,7 @@ const AnimatedTotalScoreDisplay: React.FC<AnimatedTotalScoreDisplayProps> = ({
       },
       grid: {
         show: false,
-        padding: { left: 10, right: 10, top: 18, bottom: -5 },
+        padding: { left: 10, right: 10, top: 5, bottom: -5 },
       },
       xaxis: {
         min: 0,
@@ -160,15 +179,15 @@ const AnimatedTotalScoreDisplay: React.FC<AnimatedTotalScoreDisplayProps> = ({
           style: { colors: '#9ca3af', fontSize: '11px' },
           formatter: (val: string) => `${parseInt(val)}`,
         },
-        axisBorder: { show: true, color: '#4b5563' },
-        axisTicks: { show: true, color: '#4b5563' },
+        axisBorder: { show: false },
+        axisTicks: { show: false },
         crosshairs: { show: false },
         tooltip: { enabled: false },
       },
       yaxis: {
         show: false,
-        min: -0.5,
-        max: maxY + 1,
+        min: -yBound,
+        max: yBound,
       },
       tooltip: {
         enabled: true,
@@ -196,32 +215,25 @@ const AnimatedTotalScoreDisplay: React.FC<AnimatedTotalScoreDisplayProps> = ({
       },
       legend: { show: false },
       annotations: {
+        // Full-height vertical lines at each tick position
+        xaxis: [0, 100, 200, 300, 400].map((val) => ({
+          x: val,
+          borderColor: '#374151',
+          strokeDashArray: 0,
+          opacity: 0.7,
+        })),
+        // Horizontal lines at top and bottom bounding the data
+        yaxis: [
+          {
+            y: -yBound + 0.3,
+            y2: yBound - 0.3,
+            borderColor: '#4b5563',
+            strokeDashArray: 2,
+            fillColor: '#000000',
+            opacity: 0.15,
+          },
+        ],
         points: [
-          // Overflow count labels
-          ...Object.entries(scoreOverflows).map(([score, totalCount]) => ({
-            x: Number(score),
-            y: MAX_STACK_HEIGHT,
-            marker: {
-              size: 0,
-            },
-            label: {
-              text: `(+${totalCount - MAX_STACK_HEIGHT})`,
-              borderColor: 'transparent',
-              offsetY: -5,
-              style: {
-                background: 'transparent',
-                color: '#9ca3af',
-                fontSize: '13px',
-                fontWeight: 600,
-                padding: {
-                  left: 2,
-                  right: 2,
-                  top: 0,
-                  bottom: 0,
-                },
-              },
-            },
-          })),
           // "You" label for user's point
           {
             x: userScoreData[0].x,
@@ -232,12 +244,13 @@ const AnimatedTotalScoreDisplay: React.FC<AnimatedTotalScoreDisplayProps> = ({
             label: {
               text: 'You',
               borderColor: 'transparent',
-              offsetY: 28,
+              offsetY: 30,
               style: {
                 background: 'transparent',
                 color: '#ffffff',
                 fontSize: '12px',
                 fontWeight: 700,
+                cssClass: 'z-[9999] [text-shadow:_0_1px_4px_rgba(0,0,0,1)]',
                 padding: {
                   left: 2,
                   right: 2,
@@ -250,7 +263,7 @@ const AnimatedTotalScoreDisplay: React.FC<AnimatedTotalScoreDisplayProps> = ({
         ],
       },
     }),
-    [todayScores.length, maxY, scoreOverflows, userScoreData, MAX_STACK_HEIGHT],
+    [todayScores.length, userScoreData, yBound],
   );
 
   const chartSeries = useMemo(
@@ -433,7 +446,7 @@ const AnimatedTotalScoreDisplay: React.FC<AnimatedTotalScoreDisplayProps> = ({
               options={chartOptions}
               series={chartSeries}
               type='scatter'
-              height={95 + maxY * (todayScores.length > 55 ? 9 : 18)}
+              height={Math.max(120, 80 + yBound * 18)}
             />
             <div className='flex justify-between text-[14px] text-gray-500 mt-[-4px]'>
               <span>Worst</span>

@@ -53,25 +53,6 @@ export const fetchNewSteamScores = async (): Promise<number[]> => {
   return data?.map((row) => row.score) ?? [];
 };
 
-// Ping supabase
-export const pingSupabase = async (): Promise<number | null> => {
-  const today = getUtcDateString();
-
-  const { data, error } = await supabase
-    .from('steam_scores')
-    .select('id')
-    .eq('created_at', today)
-    .limit(1)
-    .single();
-
-  if (error) {
-    console.error('Error fetching first score id:', error);
-    return null;
-  }
-
-  return data?.id ?? null;
-};
-
 // Legacy functions - kept for backwards compatibility but no longer used
 export const sendSteamDetectiveScore = async (
   guesses: number,

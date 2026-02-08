@@ -16,7 +16,6 @@ import blueGamesFolderIcon from './assets/games-folder-48.png';
 import greenGamesFolderIcon from './assets/green-games-folder-48.png';
 import redGamesFolderIcon from './assets/red-games-folder-48.png';
 import purpleGamesFolderIcon from './assets/purple-games-folder-48.png';
-import { pingSupabase } from './lib/supabaseClient';
 
 // Preload all asset images when app mounts
 const usePreloadAllAssets = () => {
@@ -44,11 +43,6 @@ function App() {
 
   // Preload all assets when app mounts
   usePreloadAllAssets();
-
-  // Fetch first score ID on mount
-  useEffect(() => {
-    pingSupabase();
-  }, []);
 
   // Check if URL has /d/{date} matching today, and if so, redirect to /
   // Also redirect if the date is not within the selectable range
