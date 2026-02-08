@@ -25,6 +25,7 @@ export interface SteamGame {
   userTags: string[];
   blurredUserTags?: string[]; // User tags that should be blurred/redacted
   blurScreenshotQuarter?: 'top' | 'bottom'; // If specified, blurs the top or bottom quarter of screenshots (applies to both)
+  transformScreenshotScale?: number; // If specified, applies transform: scale(#) to the big screenshot
   blurTitleAndAsAmpersand?: boolean; // If true, replace 'and' with '&' in the title
   overrideCensoredTitle?: string; // Manually define censored title with || markers for custom censoring
   clueOrder?: ('desc' | 'details' | 'tags')[]; // Custom order for first 3 clues. Last 3 are always: screenshot1, screenshot2, title. Default: ['tags', 'details', 'desc']

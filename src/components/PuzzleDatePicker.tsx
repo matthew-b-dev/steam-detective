@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { CalendarDate } from '@internationalized/date';
 import { motion } from 'framer-motion';
+import { isLocalhost } from '../utils';
 
 interface PuzzleDatePickerProps {
   isOpen: boolean;
@@ -129,9 +130,11 @@ const PuzzleDatePicker: React.FC<PuzzleDatePickerProps> = ({
   const isDateDisabled = (day: number): boolean => {
     const date = new CalendarDate(currentYear, currentMonth, day);
     // Disable if date is before minimum date, after today (future dates), OR if it's the current puzzle date
+    // On localhost, allow future dates
+    const isFuture = date.compare(realUtcDate) > 0;
     return (
       date.compare(minDate) < 0 ||
-      date.compare(realUtcDate) > 0 ||
+      (!isLocalhost() && isFuture) ||
       isCurrentPuzzle(day)
     );
   };

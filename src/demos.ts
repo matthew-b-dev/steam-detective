@@ -155,4 +155,10 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile3: 'Mad Max',
     caseFile4: 'PAYDAY The Heist',
   },
+  '2026-02-09': {
+    caseFile3: 'Call of Duty: Black Ops II',
+    caseFile1: 'Timberborn',
+    caseFile2: 'Dyson Sphere Program',
+    caseFile4: 'FINAL FANTASY XIV Online',
+  },
 };

@@ -495,10 +495,11 @@ export const steamGameDetails: SteamGameMap = {
   },
   '39210': {
     name: 'FINAL FANTASY XIV Online',
+    clueOrder: ['desc', 'tags', 'details'],
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/39210/ss_a70cbc9141d47a6e97f03da381a05bda44ceb847.600x338.jpg?t=1766135185',
     shortDescription:
-      'Join over 30 million adventurers worldwide and take part in an epic and ever-changing FINAL FANTASY. Experience an unforgettable story, exhilarating battles, and a myriad of captivating environments to explore.',
+      '||Join|| over 30 million adventurers ||worldwide and take part in an epic and ever-changing FINAL FANTASY. Experience an unforgettable story, exhilarating battles, and a myriad of captivating environments to explore.||',
     releaseDate: 'Feb 18, 2014',
     developer: 'Square Enix',
     publisher: 'Square Enix',
@@ -1406,8 +1407,9 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/202970/ss_ac2194dfb623d65003f54450fb1824e5f181b27e.600x338.jpg?t=1748037715',
     shortDescription:
-      'Pushing the boundaries of what fans have come to expect from the record-setting entertainment franchise, ||Call of Duty: Black Ops II|| propels players into a near future Cold War',
+      'Pushing the boundaries of what fans have come to expect from the record-setting entertainment franchise, ||Call of Duty: Black Ops II|| propels players into a near future ||Cold War||',
     releaseDate: 'Nov 12, 2012',
+    clueOrder: ['details', 'desc', 'tags'],
     developer: 'Treyarch',
     publisher: 'Activision',
     tags: ['Action'],
@@ -10091,11 +10093,13 @@ export const steamGameDetails: SteamGameMap = {
   },
   '1062090': {
     name: 'Timberborn',
+    transformScreenshotScale: 1.2,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1062090/ss_480ff44e833c92e27f4ad152b0bda1cb0af5e0b5.600x338.jpg?t=1769164624',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1062090/ss_51878d51dabef9b91ee8914a008a52697ef922df.600x338.jpg?t=1769164624',
     shortDescription:
-      'Humans are long gone. In a world struck by droughts and toxic waste, will your lumberpunk beavers do any better? A sandbox city-building game featuring ingenious animals, vertical architecture, water physics, and terraforming. Contains high amounts of wood.',
+      '||Humans|| are long gone. In a world struck by droughts and toxic waste, will your lumber||punk|| ||beaver||s do any better? A sandbox city-building game featuring ||ingenious|| ||animal||s, vertical architecture, ||water|| physics, and terraforming. Contains high amounts of ||wood||.',
     releaseDate: 'Sep 15, 2021',
+    clueOrder: ['desc', 'tags', 'details'],
     developer: 'Mechanistry',
     publisher: 'Mechanistry',
     tags: ['Indie', 'Simulation', 'Strategy'],
@@ -12031,10 +12035,11 @@ export const steamGameDetails: SteamGameMap = {
   '1366540': {
     name: 'Dyson Sphere Program',
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1366540/ss_7886f76352c9e2bf2bf2fe74434b8a50bb3312d3.600x338.jpg?t=1765532615',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1366540/ss_ca1c8ba11e539cbeb8f4d91f6685b0fa01ddf705.600x338.jpg?t=1765532615',
     shortDescription:
-      'Build the most efficient intergalactic factory in space simulation strategy game ||Dyson Sphere Program||! Harness the power of stars, collect resources, plan and design production lines and develop your interstellar factory from a small space workshop to a galaxy-wide industrial empire.',
+      'Build the most efficient intergalactic ||factory|| in space simulation strategy game ||Dyson Sphere Program||! Harness the power of stars, collect resources, plan and design ||production|| lines and develop your interstellar ||factory|| from a small space workshop to a galaxy-wide industrial empire.',
     releaseDate: 'Jan 20, 2021',
+    clueOrder: ['desc', 'details', 'tags'],
     developer: 'Youthcat Studio',
     publisher: 'Gamirror Games',
     tags: ['Indie', 'Simulation', 'Strategy'],
@@ -12066,7 +12071,7 @@ export const steamGameDetails: SteamGameMap = {
     ],
     appId: 1366540,
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1366540/ss_ca1c8ba11e539cbeb8f4d91f6685b0fa01ddf705.600x338.jpg?t=1765532615',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1366540/ss_7886f76352c9e2bf2bf2fe74434b8a50bb3312d3.600x338.jpg?t=1765532615',
   },
   '1426210': {
     name: 'It Takes Two',

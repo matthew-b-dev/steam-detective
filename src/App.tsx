@@ -9,6 +9,7 @@ import {
   clearPuzzleState,
   getRealUtcDateString,
   isDateSelectable,
+  isLocalhost,
 } from './utils';
 import { getDateFromRoute } from './demos';
 import analyzeIcon from './assets/analyze-48.png';
@@ -52,7 +53,11 @@ function App() {
 
     if (routeDate) {
       // If route date matches today or is not selectable, redirect to /
-      if (routeDate === realToday || !isDateSelectable(routeDate)) {
+      // On localhost, skip the selectable check to allow future dates
+      if (
+        routeDate === realToday ||
+        (!isLocalhost() && !isDateSelectable(routeDate))
+      ) {
         // Force a full page reload to properly load today's puzzle state
         window.location.href = '/';
       }

@@ -166,6 +166,7 @@ export const CLOSE_GUESS_SERIES = [
   'the lord of the rings',
   'final fantasy',
   'payday',
+  'call of duty',
   'the legend of zelda',
   'age of empires',
   'bioshock',
@@ -252,9 +253,18 @@ export const getRealUtcDateString = (): string => {
  * Check if a date string is within the selectable range
  * Min: 2026-02-04, Max: Real UTC date
  */
+export const isLocalhost = (): boolean =>
+  window.location.hostname === 'localhost' ||
+  window.location.hostname === '127.0.0.1';
+
 export const isDateSelectable = (dateStr: string): boolean => {
   const minDate = '2026-02-04';
   const maxDate = getRealUtcDateString();
+
+  // On localhost, allow any date at or after minDate (including future)
+  if (isLocalhost()) {
+    return dateStr >= minDate;
+  }
 
   return dateStr >= minDate && dateStr <= maxDate;
 };

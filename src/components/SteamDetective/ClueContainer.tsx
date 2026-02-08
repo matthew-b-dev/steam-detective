@@ -58,6 +58,7 @@ export const ClueContainer: React.FC<ClueContainerProps> = ({ caseFile }) => {
             showClue5 && dailyGame.secondaryScreenshot !== undefined
           }
           blurScreenshotQuarter={dailyGame.blurScreenshotQuarter}
+          transformScreenshotScale={dailyGame.transformScreenshotScale}
           onSwapScreenshots={handleSwapScreenshots}
           isComplete={isComplete}
         />

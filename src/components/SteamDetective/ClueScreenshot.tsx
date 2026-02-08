@@ -15,6 +15,7 @@ interface ClueScreenshotProps {
   showSecondary?: boolean;
   onSwapScreenshots?: () => void;
   blurScreenshotQuarter?: 'top' | 'bottom';
+  transformScreenshotScale?: number;
   isComplete?: boolean;
 }
 
@@ -25,6 +26,7 @@ export const ClueScreenshot: React.FC<ClueScreenshotProps> = ({
   showSecondary = false,
   onSwapScreenshots,
   blurScreenshotQuarter,
+  transformScreenshotScale,
   isComplete = false,
 }) => {
   const bothShown = showSecondary && secondaryScreenshot;
@@ -78,6 +80,11 @@ export const ClueScreenshot: React.FC<ClueScreenshotProps> = ({
                   className='w-full h-full object-cover block'
                   draggable={false}
                   onContextMenu={(e) => e.preventDefault()}
+                  style={
+                    transformScreenshotScale
+                      ? { transform: `scale(${transformScreenshotScale})` }
+                      : undefined
+                  }
                   initial={{ filter: 'blur(10px)' }}
                   animate={{
                     filter: isMobileViewport
