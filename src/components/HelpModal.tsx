@@ -41,7 +41,7 @@ const HelpModal: React.FC<HelpModalProps> = ({ isOpen, onClose }) => {
             The clues include: <b>User-defined tags</b>, <b>Game Details</b>{' '}
             (reviews, release date, developer, publisher), <b>Description</b>,{' '}
             <b>Screenshot #1</b>, <b>Screenshot #2</b>, and{' '}
-            <b>Partially-censored game title</b>.
+            <b>Partially-redacted game title</b>.
           </li>
           <li>
             Every day there are four "<b>Case Files</b>" (games) to solve. Try
