@@ -3,7 +3,7 @@ import App from './App.tsx';
 import './index.css';
 import { supabase } from './lib/supabaseClient';
 
-document.title = 'SteamDetective';
+document.title = 'SteamDetective.wtf';
 
 // Log page view exactly once per page load (skip on localhost)
 (async () => {
