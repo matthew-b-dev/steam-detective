@@ -80,8 +80,13 @@ function App() {
   };
 
   const handleDateSelect = (dateStr: string) => {
-    // Navigate to the selected date
-    window.location.href = `/d/${dateStr}`;
+    // If they clicked Today
+    if (dateStr === getRealUtcDateString()) {
+      window.location.href = `/`;
+    } else {
+      // Navigate to the selected date
+      window.location.href = `/d/${dateStr}`;
+    }
   };
 
   return (

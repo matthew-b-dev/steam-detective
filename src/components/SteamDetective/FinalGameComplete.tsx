@@ -137,8 +137,8 @@ const FinalGameComplete: React.FC<FinalGameCompleteProps> = ({
     const rawPuzzleDate = getUtcDateString();
     const baseUrl =
       rawPuzzleDate === realToday
-        ? 'https://steamdetective.wtf/'
-        : `https://steamdetective.wtf/d/${rawPuzzleDate}`;
+        ? 'https://SteamDetective.wtf/'
+        : `https://SteamDetective.wtf/d/${rawPuzzleDate}`;
 
     const rankEmoji = getRankEmoji(userRank, todayScores.length);
     const rankText =
