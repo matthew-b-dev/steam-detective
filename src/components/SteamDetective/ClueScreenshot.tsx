@@ -186,17 +186,19 @@ export const ClueScreenshot: React.FC<ClueScreenshotProps> = ({
             )}
 
             {/* Brightness Toggle */}
-            <div className='ml-auto flex items-center gap-2'>
-              <LightBulbOutline className='w-5 h-5 text-white' />
-              <button
-                onClick={() => setIsBrightened(!isBrightened)}
-                className={`relative inline-flex items-center flex-shrink-0 cursor-pointer rounded-full transition-colors duration-200 ease-in-out ${
+            <div
+              className='ml-auto flex items-center gap-2 cursor-pointer'
+              onClick={() => setIsBrightened(!isBrightened)}
+              role='switch'
+              aria-checked={isBrightened}
+              aria-label='Brighten screenshot'
+            >
+              <LightBulbOutline className='w-5 h-5 text-gray-400' />
+              <div
+                className={`relative inline-flex items-center flex-shrink-0 rounded-full transition-colors duration-200 ease-in-out ${
                   isBrightened ? 'bg-yellow-500' : 'bg-gray-600'
                 }`}
                 style={{ width: 43, height: 24, padding: 2 }}
-                role='switch'
-                aria-checked={isBrightened}
-                aria-label='Brighten screenshot'
               >
                 <span
                   className='pointer-events-none block rounded-full bg-white shadow transition-transform duration-200 ease-in-out'
@@ -208,7 +210,7 @@ export const ClueScreenshot: React.FC<ClueScreenshotProps> = ({
                       : 'translateX(0px)',
                   }}
                 />
-              </button>
+              </div>
               <LightBulbSolid className='w-5 h-5 text-white' />
             </div>
           </div>
