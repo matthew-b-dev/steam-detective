@@ -53,8 +53,8 @@ const AnimatedTotalScoreDisplay: React.FC<AnimatedTotalScoreDisplayProps> = ({
     useMemo(() => {
       // Stack dots vertically when scores are the same
       // Cap stacking at MAX_STACK_HEIGHT to prevent chart from getting too tall
-      // Use more compact layout when there are many scores (>25)
-      const MAX_STACK_HEIGHT = todayScores.length > 25 ? 6 : 4;
+      // Use more compact layout when there are many scores (>55)
+      const MAX_STACK_HEIGHT = todayScores.length > 55 ? 6 : 4;
 
       const scoreCounts: Record<number, number> = {};
       const finalCounts: Record<number, number> = {}; // Track total count per score
@@ -110,7 +110,7 @@ const AnimatedTotalScoreDisplay: React.FC<AnimatedTotalScoreDisplayProps> = ({
   // Calculate max Y for axis range
   const maxY = useMemo(() => {
     const all = [...otherScoresData, ...userScoreData];
-    const cap = todayScores.length > 25 ? 6 : 4;
+    const cap = todayScores.length > 55 ? 6 : 4;
     return Math.min(Math.max(...all.map((d) => d.y), 0), cap);
   }, [otherScoresData, userScoreData, todayScores.length]);
 
@@ -139,7 +139,7 @@ const AnimatedTotalScoreDisplay: React.FC<AnimatedTotalScoreDisplayProps> = ({
       },
       colors: ['#3b82f6', '#22c55e'], // blue for others, green for user
       markers: {
-        size: [todayScores.length > 25 ? 5 : 7, 11],
+        size: [todayScores.length > 55 ? 5 : 7, 11],
         strokeWidth: [0, 2],
         strokeColors: ['transparent', '#ffffff'],
         hover: { size: undefined, sizeOffset: 0 },
@@ -433,7 +433,7 @@ const AnimatedTotalScoreDisplay: React.FC<AnimatedTotalScoreDisplayProps> = ({
               options={chartOptions}
               series={chartSeries}
               type='scatter'
-              height={95 + maxY * (todayScores.length > 25 ? 9 : 18)}
+              height={95 + maxY * (todayScores.length > 55 ? 9 : 18)}
             />
             <div className='flex justify-between text-[14px] text-gray-500 mt-[-4px]'>
               <span>Worst</span>
