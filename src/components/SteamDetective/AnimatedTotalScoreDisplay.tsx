@@ -341,7 +341,7 @@ const AnimatedTotalScoreDisplay: React.FC<AnimatedTotalScoreDisplayProps> = ({
 
   if (scoresLoading) {
     return (
-      <div className='mb-6 p-4 bg-zinc-800 rounded-lg min-h-[277px]'>
+      <div className='mb-6 p-4 bg-zinc-800 rounded-lg min-h-[256px]'>
         <div className='flex flex-col items-center justify-center h-32'>
           <div className='animate-spin rounded-full h-8 w-8 border-b-2 border-green-500'></div>
           <p className='text-sm text-gray-400 mt-2'>Loading scores...</p>
@@ -351,7 +351,7 @@ const AnimatedTotalScoreDisplay: React.FC<AnimatedTotalScoreDisplayProps> = ({
   }
 
   return (
-    <div className='mb-6 p-4 bg-zinc-800 rounded-lg min-h-[277px]'>
+    <div className='mb-6 p-4 bg-zinc-800 rounded-lg min-h-[256px]'>
       {/* Large animated score */}
       <AnimatePresence>
         {showBigScore && (
@@ -413,7 +413,7 @@ const AnimatedTotalScoreDisplay: React.FC<AnimatedTotalScoreDisplayProps> = ({
       <AnimatePresence>
         {showRank && userPercentile !== null && (
           <motion.p
-            className='text-center text-sm text-green-400 mb-3'
+            className='text-center text-sm text-green-400'
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{
               opacity: 1,
