@@ -149,4 +149,10 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile3: 'The Lord of the Rings Online',
     caseFile4: 'Prototype 2',
   },
+  '2026-02-08': {
+    caseFile1: 'DARK SOULS II',
+    caseFile2: 'Company of Heroes 2',
+    caseFile3: 'Mad Max',
+    caseFile4: 'PAYDAY The Heist',
+  },
 };

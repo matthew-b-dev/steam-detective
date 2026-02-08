@@ -423,6 +423,7 @@ export const steamGameDetails: SteamGameMap = {
       'FPS',
       'Action',
       'Co-op',
+      'Stealth',
       'Heist',
       'Multiplayer',
       'Crime',
@@ -444,7 +445,6 @@ export const steamGameDetails: SteamGameMap = {
     appId: 24240,
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/24240/ss_25968960c677941cbb96190cab79e1565fac57a2.600x338.jpg?t=1766064903',
-    blurredUserTags: ['Heist'],
     debugNotes: 'move stealth tag near top',
     difficulty: 'Medium',
     clueOrder: ['desc', 'details', 'tags'],
@@ -2906,10 +2906,11 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/231430/ss_253565696b43f08520ea65dc805cda964ee0976e.600x338.jpg?t=1750947634',
     shortDescription:
-      'Experience the ultimate WWII RTS platform with COH2 and its standalone expansions. This package includes the base game, which you can then upgrade by purchasing The Western Front Armies, Ardennes Assault and/or The British Forces.',
+      'Experience the ultimate ||WWII RTS|| platform with ||COH2|| and its standalone expansions. This package includes the base game, which you can then upgrade by purchasing The Western Front ||Armies||, Ardennes ||Assault|| and/or ||The|| British ||Forces||.',
     releaseDate: 'Jun 25, 2013',
     developer: 'Relic Entertainment',
     publisher: 'Relic Entertainment',
+    clueOrder: ['desc', 'details', 'tags'],
     tags: ['Strategy'],
     features: [],
     allReviewSummary: {
@@ -3067,6 +3068,7 @@ export const steamGameDetails: SteamGameMap = {
   },
   '234140': {
     name: 'Mad Max',
+    clueOrder: ['desc', 'details', 'tags'],
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/234140/ss_b8abff49c2bb74a12ca6659d991df6d8bd8ce9e1.600x338.jpg?t=1763747885',
     shortDescription:
@@ -3111,7 +3113,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/235540/ss_4625ab030356a0a9d5f05af4a109578813d592da.600x338.jpg?t=1761316136',
     shortDescription:
-      'Vermintide is an epic co-operative action combat adventure set in the End Times of the iconic ||Warhammer|| Fantasy world.',
+      '||Vermintide|| is an epic co-operative action combat adventure set in the End Times of the iconic ||Warhammer|| Fantasy world.',
     releaseDate: 'Oct 23, 2015',
     developer: 'Fatshark',
     publisher: 'Fatshark',
@@ -3125,10 +3127,10 @@ export const steamGameDetails: SteamGameMap = {
       'Action',
       'Online Co-Op',
       'Co-op',
+      'Games Workshop',
+      'Warhammer',
       'Dark Fantasy',
       'First-Person',
-      'Games Workshop',
-      'Gore',
       'Multiplayer',
       'FPS',
       'Fantasy',
@@ -3234,7 +3236,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/236430/ss_811a32f3abdf906cce50e204e849880e71583740.600x338.jpg?t=1726158600',
     shortDescription:
-      'Developed by ||FROM SOFTWARE||, ||DARK SOULS II|| is the highly anticipated sequel to the gruelling 2011 breakout hit ||Dark Souls||. The unique old-school ||action RPG|| experience captivated imaginations of gamers worldwide with incredible challenge and intense emotional reward.',
+      'Developed by ||FROM SOFTWARE||, ||DARK SOULS II|| is the highly anticipated sequel to the gruelling ||2011|| breakout hit ||Dark Souls||. The unique old-school ||action RPG|| experience captivated imaginations of gamers worldwide with incredible ||challenge|| and intense emotional reward.',
     releaseDate: 'Apr 25, 2014',
     clueOrder: ['desc', 'tags', 'details'],
     developer: 'FromSoftware, Inc.',
@@ -3267,6 +3269,7 @@ export const steamGameDetails: SteamGameMap = {
       'Open World',
       'Dark',
     ],
+    blurredUserTags: ['Souls-like'],
     appId: 236430,
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/236430/ss_abbbb6c1a1878f591e6a895a17a1870c62380161.600x338.jpg?t=1726158600',
@@ -5362,8 +5365,9 @@ export const steamGameDetails: SteamGameMap = {
     shortDescription:
       '||Episode 1|| now FREE! ||Life is Strange|| is an award-winning and critically acclaimed episodic adventure game that allows the player to rewind time and affect the past, present and future.',
     releaseDate: 'Jan 29, 2015',
-    developer: 'DONTNOD Entertainment',
+    blurredUserTags: ['Female Protagonist'],
     clueOrder: ['desc', 'tags', 'details'],
+    developer: 'DONTNOD Entertainment',
     publisher: 'Square Enix',
     tags: ['Action', 'Adventure'],
     features: [],
@@ -7609,6 +7613,7 @@ export const steamGameDetails: SteamGameMap = {
     developer: 'Fatshark',
     publisher: 'Fatshark',
     tags: ['Action', 'Indie', 'RPG'],
+    clueOrder: ['desc', 'details', 'tags'],
     features: [],
     allReviewSummary: {
       count: 43327,

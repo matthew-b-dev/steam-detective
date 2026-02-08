@@ -165,11 +165,13 @@ export const CLOSE_GUESS_SERIES = [
   'super mario',
   'the lord of the rings',
   'final fantasy',
+  'payday',
   'the legend of zelda',
   'age of empires',
   'bioshock',
   'persona',
   'south park',
+  'dark souls',
   'prototype',
 ];
 
