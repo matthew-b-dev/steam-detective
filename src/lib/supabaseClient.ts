@@ -7,16 +7,13 @@ export const supabase = createClient(
 );
 
 export const sendFeedback = async (
-  feedbackType:
-    | 'perfect'
-    | 'too_easy'
-    | 'too_hard'
-    | 'steam_more'
-    | 'steam_less',
+  feedbackType: string,
+  customText?: string,
 ): Promise<void> => {
   const { error } = await supabase.from('feedback').insert({
     created_at: getUtcDateString(),
-    feedback: feedbackType,
+    feedback_type: feedbackType,
+    feedback_text: feedbackType === 'custom' ? customText : null,
   });
 
   if (error) {
