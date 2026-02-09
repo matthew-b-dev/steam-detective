@@ -161,4 +161,10 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile2: 'Dyson Sphere Program',
     caseFile4: 'FINAL FANTASY XIV Online',
   },
+  '2026-02-10': {
+    caseFile1: 'War Thunder',
+    caseFile2: 'Torchlight II',
+    caseFile3: "Tom Clancy's Splinter Cell Blacklist",
+    caseFile4: 'Remnant: From the Ashes',
+  },
 };

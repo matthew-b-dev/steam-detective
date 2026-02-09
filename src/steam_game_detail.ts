@@ -1256,10 +1256,11 @@ export const steamGameDetails: SteamGameMap = {
   },
   '200710': {
     name: 'Torchlight II',
+    clueOrder: ['desc', 'details', 'tags'],
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/200710/ss_06b3b8b537e3766cbb6026c6273d78344327ad24.600x338.jpg?t=1767670785',
     shortDescription:
-      'The adventure continues in ||Torchlight II||! An ||Action RPG|| filled with epic battles, bountiful treasure, and a fully randomized world. Bring your friends along for the journey with online and ||LAN multiplayer||.',
+      'The adventure continues in ||Torchlight II||! An Action RPG filled with epic battles, bountiful treasure, and a fully randomized world. Bring your friends along for the journey with online and LAN multiplayer.',
     releaseDate: 'Sep 20, 2012',
     developer: 'Runic Games',
     publisher: 'XD',
@@ -1294,8 +1295,6 @@ export const steamGameDetails: SteamGameMap = {
     appId: 200710,
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/200710/ss_b2af8160bcd97a395a28b8f16251947233401a02.600x338.jpg?t=1767670785',
-    blurredUserTags: ['Dungeon Crawler'],
-    clueOrder: ['details', 'desc', 'tags'],
     fun: true,
     debugProcessed: true,
     difficulty: 'Hard',
@@ -3156,11 +3155,12 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/235600/ss_b85d9cae27471119f88a58ce6de1ae56ce8f4fba.600x338.jpg?t=1764775433',
     shortDescription:
-      'In this stealth-action thriller, a terrorist group known as the Engineers launches the Blacklist, a series of escalating attacks on US interests. Only one man can stop them: legendary covert agent ||Sam Fisher||.',
+      'In this stealth-action thriller, a terrorist group known as the Engineers launches the ||Blacklist||, a series of escalating attacks on US interests. Only one man can stop them: legendary covert agent Sam ||Fisher||.',
     releaseDate: 'Aug 20, 2013',
     developer: 'Ubisoft Toronto',
     publisher: 'Ubisoft',
     tags: ['Action', 'Adventure'],
+    clueOrder: ['desc', 'details', 'tags'],
     features: [],
     allReviewSummary: {
       count: 8157,
@@ -3203,16 +3203,16 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'Gaijin Network Ltd',
     tags: ['Action', 'Massively Multiplayer', 'Simulation', 'Free To Play'],
     features: [],
+    clueOrder: ['tags', 'desc', 'details'],
     allReviewSummary: {
-      count: 807,
-      rating: 'Mixed',
+      count: 297125,
+      rating: 'Mostly Positive',
     },
     userTags: [
       'Free to Play',
       'Simulation',
       'Vehicular Combat',
       'Combat',
-      'World War II',
       'Flight',
       'VR',
       'War',
@@ -8025,6 +8025,7 @@ export const steamGameDetails: SteamGameMap = {
     developer: 'Gunfire Games',
     publisher: 'Arc Games, THQ Nordic',
     tags: ['Action', 'Adventure', 'RPG'],
+    clueOrder: ['tags', 'desc', 'details'],
     features: [],
     allReviewSummary: {
       count: 23783,

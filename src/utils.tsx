@@ -174,6 +174,8 @@ export const CLOSE_GUESS_SERIES = [
   'south park',
   'dark souls',
   'prototype',
+  'torchlight',
+  'splinter cell',
 ];
 
 /**
