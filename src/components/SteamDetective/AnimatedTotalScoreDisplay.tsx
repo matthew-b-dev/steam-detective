@@ -29,12 +29,16 @@ const AnimatedTotalScoreDisplay: React.FC<AnimatedTotalScoreDisplayProps> = ({
   const [showRank, setShowRank] = useState(false);
   const [showHistogram, setShowHistogram] = useState(false);
 
-  // Calculate user's rank
-  const sortedScores = [...todayScores].sort((a, b) => b - a);
+  // Cap the number of scores to the last 200 (newest) for chart rendering
+  const cappedScores =
+    todayScores.length > 200 ? todayScores.slice(-200) : todayScores;
 
-  const minScore = Math.min(...todayScores);
+  // Calculate user's rank
+  const sortedScores = [...cappedScores].sort((a, b) => b - a);
+
+  const minScore = Math.min(...cappedScores);
   const isWorstScore = totalScore === minScore;
-  const countAtBottom = todayScores.filter((s) => s === minScore).length;
+  const countAtBottom = cappedScores.filter((s) => s === minScore).length;
   const isTiedForWorst = isWorstScore && countAtBottom > 1;
 
   const totalPlayers = todayScores.length;
@@ -53,7 +57,8 @@ const AnimatedTotalScoreDisplay: React.FC<AnimatedTotalScoreDisplayProps> = ({
     useMemo(() => {
       // Adjust stack step based on dot size - smaller dots need less spacing
       const STACK_STEP =
-        todayScores.length > 85 ? 0.4 : todayScores.length >= 50 ? 0.6 : 0.7;
+        cappedScores.length > 85 ? 0.2 : cappedScores.length >= 50 ? 0.6 : 0.7;
+      const MAX_STACK_LEVEL = 2; // Max vertical levels before using jitter (allows 5 dots: center + 4 stacked)
       const PROXIMITY = 25; // scores within this range share a stack
       const CLUSTER_THRESHOLD = 5; // scores with 5+ exact duplicates get merged into larger dot
       const others: { x: number; y: number }[] = [];
@@ -62,7 +67,7 @@ const AnimatedTotalScoreDisplay: React.FC<AnimatedTotalScoreDisplayProps> = ({
       // User dot always centered vertically
       const user = [{ x: totalScore, y: 0 }];
 
-      const sorted = [...todayScores].sort((a, b) => a - b);
+      const sorted = [...cappedScores].sort((a, b) => a - b);
 
       // Remove first occurrence of user's score
       const userIndex = sorted.indexOf(totalScore);
@@ -117,11 +122,20 @@ const AnimatedTotalScoreDisplay: React.FC<AnimatedTotalScoreDisplayProps> = ({
           clusters.push(cluster);
           others.push({ x: s, y: 0 });
         } else {
-          // Alternate above and below: count 1→+1, 2→-1, 3→+2, 4→-2, ...
+          // Alternate above and below: count 1,+1, 2,-1, 3,+2, 4,-2, ...
           const n = cluster.count;
           const level = Math.ceil(n / 2);
-          const y = n % 2 === 1 ? level * STACK_STEP : -level * STACK_STEP;
-          others.push({ x: s, y });
+
+          // If stack exceeds max level, use deterministic jitter instead
+          if (level > MAX_STACK_LEVEL) {
+            // Use score and count to create deterministic offset
+            const seed = (s * 17 + n * 31) % 100;
+            const jitter = (seed / 100 - 0.5) * 0.4; // Deterministic offset +/-0.2
+            others.push({ x: s, y: jitter });
+          } else {
+            const y = n % 2 === 1 ? level * STACK_STEP : -level * STACK_STEP;
+            others.push({ x: s, y });
+          }
         }
         cluster.count++;
       }
@@ -136,7 +150,7 @@ const AnimatedTotalScoreDisplay: React.FC<AnimatedTotalScoreDisplayProps> = ({
         userScoreData: user,
         maxExtent,
       };
-    }, [todayScores, totalScore]);
+    }, [cappedScores, totalScore]);
 
   // Dynamic y bounds: at least 2, otherwise maxExtent + padding
   const yBound = Math.max(2, maxExtent + 0.8);
@@ -191,8 +205,11 @@ const AnimatedTotalScoreDisplay: React.FC<AnimatedTotalScoreDisplayProps> = ({
         // Array: [normal others, clustered others, user]
         // For 5x area: radius = sqrt(5) * normal_radius ≈ 2.236 * normal_radius
         size: [
-          todayScores.length > 85 ? 3 : todayScores.length >= 50 ? 5 : 7,
-          todayScores.length > 85 ? 7 : todayScores.length >= 50 ? 11 : 16,
+          // normal dots
+          todayScores.length > 85 ? 3 : todayScores.length >= 50 ? 4 : 5,
+          // clustered dots (5+)
+          todayScores.length > 85 ? 7 : todayScores.length >= 50 ? 10 : 13,
+          // user dot
           8,
         ],
         strokeWidth: [0, 0, 2],
@@ -205,7 +222,7 @@ const AnimatedTotalScoreDisplay: React.FC<AnimatedTotalScoreDisplayProps> = ({
       },
       grid: {
         show: false,
-        padding: { left: 10, right: 10, top: 5, bottom: -5 },
+        padding: { left: 10, right: 10, top: -20, bottom: -5 },
       },
       xaxis: {
         min: 0,
