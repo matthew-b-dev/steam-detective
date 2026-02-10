@@ -57,7 +57,7 @@ const AnimatedTotalScoreDisplay: React.FC<AnimatedTotalScoreDisplayProps> = ({
     useMemo(() => {
       // Adjust stack step based on dot size - smaller dots need less spacing
       const STACK_STEP =
-        cappedScores.length > 85 ? 0.2 : cappedScores.length >= 50 ? 0.6 : 0.7;
+        cappedScores.length > 85 ? 0.2 : cappedScores.length >= 50 ? 0.4 : 0.5;
       const MAX_STACK_LEVEL = 2; // Max vertical levels before using jitter (allows 5 dots: center + 4 stacked)
       const PROXIMITY = 25; // scores within this range share a stack
       const CLUSTER_THRESHOLD = 5; // scores with 5+ exact duplicates get merged into larger dot
