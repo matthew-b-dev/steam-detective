@@ -167,4 +167,11 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile3: "Tom Clancy's Splinter Cell Blacklist",
     caseFile4: 'Remnant: From the Ashes',
   },
+  '2026-02-11': {
+    caseFile1: 'Balatro',
+    caseFile2: 'Plague Inc: Evolved',
+    caseFile3: 'Sea of Stars',
+    caseFile4: 'The Talos Principle',
+  },
+  // Two Point Hospital
 };

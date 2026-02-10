@@ -3904,8 +3904,9 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/246620/ss_9a5c4d45543113ad9de9d9b928f6fadf1fa17d25.600x338.jpg?t=1765804786',
     shortDescription:
-      "||Plague Inc: Evolved|| is a unique mix of high strategy and terrifyingly realistic simulation. Your pathogen has just infected 'Patient Zero' - now you must bring about the end of human history by evolving a deadly, global Plague whilst adapting against everything humanity can do to defend itself.",
+      "||Plague Inc: Evolved|| is a unique mix of high strategy and terrifyingly realistic simulation. Your ||pathogen|| has just infected 'Patient Zero' - now you must bring about the end of human history by evolving a deadly, global ||Plague|| whilst adapting against everything humanity can do to defend itself.",
     releaseDate: 'Feb 18, 2016',
+    clueOrder: ['desc', 'tags', 'details'],
     developer: 'Ndemic Creations',
     publisher: 'Ndemic Creations',
     tags: ['Casual', 'Indie', 'Simulation', 'Strategy'],
@@ -11365,6 +11366,7 @@ export const steamGameDetails: SteamGameMap = {
     shortDescription:
       '||Sea of Stars|| is a turn-based RPG inspired by the classics. It tells the story of two Children of the Solstice who will combine the powers of the sun and moon to perform Eclipse Magic, the only force capable of fending off the monstrous creations of the evil alchemist known as The Fleshmancer.',
     releaseDate: 'Aug 28, 2023',
+    clueOrder: ['desc', 'details', 'tags'],
     developer: 'Sabotage Studio',
     publisher: 'Sabotage Studio',
     tags: ['Adventure', 'Indie', 'RPG'],
@@ -12012,26 +12014,6 @@ export const steamGameDetails: SteamGameMap = {
     appId: 1336490,
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1336490/ss_c5e7f55444d87f26921736f2d228c092f4dda5f2.600x338.jpg?t=1769170122',
-  },
-  '1350650': {
-    name: 'FreshWomen - Season 1',
-    primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1350650/ss_bbff260497ec6730e76d6d7f20732f8884c595cc.600x338.jpg?t=1755804848',
-    shortDescription:
-      'FreshWomen is a choice-driven adult Visual Novel focusing on the best parts of life. Become a freshman attending Minerva Bay College, romance girls and solve a mysterious incident. Your journey will be filled with comedy, drama, and lots of sex.',
-    releaseDate: 'Aug 19, 2022',
-    developer: 'Pantsu Interactive',
-    publisher: 'OppaiMan Studios',
-    tags: ['Adventure', 'Indie'],
-    features: [],
-    allReviewSummary: {
-      count: 2769,
-      rating: 'Very Positive',
-    },
-    userTags: [],
-    appId: 1350650,
-    secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1350650/ss_06cac7276a2233bb86c03e4bb4e8dd72aa37bfcd.600x338.jpg?t=1755804848',
   },
   '1366540': {
     name: 'Dyson Sphere Program',
@@ -14066,8 +14048,9 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2379780/96208723dbedef49d71bf1b0a74aee1689018c50/ss_96208723dbedef49d71bf1b0a74aee1689018c50.600x338.jpg?t=1762516142',
     shortDescription:
-      'The poker roguelike. ||Balatro|| is a hypnotically satisfying deckbuilder where you play illegal poker hands, discover game-changing jokers, and trigger adrenaline-pumping, outrageous combos.',
+      'The ||poker|| ||rogue||-like. ||Balatro|| is a hypnotically satisfying ||deckbuilder|| where you play illegal ||poker hands||, discover game-changing ||jokers||, and ||trigger|| adrenaline-pumping, outrageous combos.',
     releaseDate: 'Feb 20, 2024',
+    clueOrder: ['details', 'desc', 'tags'],
     developer: 'LocalThunk',
     publisher: 'Playstack',
     tags: ['Casual', 'Indie', 'Strategy'],
