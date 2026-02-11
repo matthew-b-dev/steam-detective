@@ -176,6 +176,9 @@ export const CLOSE_GUESS_SERIES = [
   'prototype',
   'torchlight',
   'splinter cell',
+  'watch',
+  'crusader kings',
+  'max payne',
 ];
 
 /**

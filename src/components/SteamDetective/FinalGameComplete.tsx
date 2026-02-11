@@ -143,7 +143,7 @@ const FinalGameComplete: React.FC<FinalGameCompleteProps> = ({
     const rankEmoji = getRankEmoji(userRank, todayScores.length);
     const rankText =
       todayScores.length > 1 && userRank > 0
-        ? ` | ${rankEmoji} Rank #${userRank} of ${todayScores.length}`
+        ? `  ${rankEmoji} Rank #${userRank} of ${todayScores.length}`
         : '';
 
     const shareText = `${baseUrl} 🕵️\n${caseFileEmojis.join('\n')}\n🏆 ${totalScore} points${rankText}`;

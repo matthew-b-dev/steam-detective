@@ -1540,8 +1540,9 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/203770/ss_14a34ce83f71c1b0dcf7d69e5526306ebadc0829.600x338.jpg?t=1740566844',
     shortDescription:
-      'Explore one of the defining periods in ||world history|| in an experience crafted by the masters of ||Grand Strategy||.',
+      'Explore one of the defining periods in ||world history|| in an experience crafted by the masters of Grand Strategy.',
     releaseDate: 'Feb 14, 2012',
+    clueOrder: ['details', 'desc', 'tags'],
     developer: 'Paradox Development Studio',
     publisher: 'Paradox Interactive',
     tags: ['RPG', 'Simulation', 'Strategy', 'Free To Play'],
@@ -1575,7 +1576,6 @@ export const steamGameDetails: SteamGameMap = {
     appId: 203770,
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/203770/ss_95adbfc039f26bcde1588e5c01c7197c9d84d428.600x338.jpg?t=1740566844',
-    clueOrder: ['desc', 'details', 'tags'],
     difficulty: 'Medium',
     fun: true,
     debugProcessed: true,
@@ -1585,10 +1585,11 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/204100/ss_84fc2ba217ce04ec4b782f9f5ccc09d20980f220.600x338.jpg?t=1718391374',
     shortDescription:
-      '||No longer a New York City|| cop, ||Max Payne|| moves to ||São Paulo|| to ||protect a wealthy family|| in an effort to finally escape his ||troubled past||. This complete edition of ||Max Payne 3|| includes the complete original game and all previously released downloadable content.',
+      'No longer a New York City cop, ||Max Payne|| moves to ||São Paulo|| to protect a wealthy family in an effort to finally escape his troubled past. This complete edition of ||Max Payne 3|| includes the complete original game and all previously released downloadable content.',
     releaseDate: 'May 31, 2012',
     developer: 'Rockstar Studios',
     publisher: 'Rockstar Games',
+    clueOrder: ['desc', 'tags', 'details'],
     tags: ['Action'],
     features: [],
     allReviewSummary: {
@@ -1601,7 +1602,6 @@ export const steamGameDetails: SteamGameMap = {
       'Third-Person Shooter',
       'Bullet Time',
       'Story Rich',
-      'Multiplayer',
       'Shooter',
       'Cinematic',
       'Third Person',
@@ -1621,7 +1621,6 @@ export const steamGameDetails: SteamGameMap = {
     appId: 204100,
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/204100/ss_b442d79fbc45be2cb773d3de6f7b40fa5f126588.600x338.jpg?t=1718391374',
-    clueOrder: ['desc', 'tags', 'details'],
     fun: true,
     difficulty: 'Hard',
     debugProcessed: true,
@@ -6870,8 +6869,9 @@ export const steamGameDetails: SteamGameMap = {
   },
   '447040': {
     name: 'Watch_Dogs 2',
+    searchTerms: ['watch dogs 2'],
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/447040/ss_8071f719fea2d45baa805449ec550395db700118.600x338.jpg?t=1751986887',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/447040/ss_b93d600b2a0372d6b5a5d191b46654ba489819d1.600x338.jpg?t=1751986887',
     shortDescription:
       'Welcome to San Francisco. Play as Marcus, a brilliant young hacker, and join the most notorious hacker group, DedSec. Your objective: execute the biggest hack of history.',
     releaseDate: 'Nov 28, 2016',
@@ -6889,7 +6889,7 @@ export const steamGameDetails: SteamGameMap = {
       'Illuminati',
       'Multiplayer',
       'Parkour',
-      'Action',
+      'Sequel',
       'Stealth',
       'Third Person',
       'Shooter',
@@ -6907,7 +6907,7 @@ export const steamGameDetails: SteamGameMap = {
     ],
     appId: 447040,
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/447040/ss_b93d600b2a0372d6b5a5d191b46654ba489819d1.600x338.jpg?t=1751986887',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/447040/ss_8071f719fea2d45baa805449ec550395db700118.600x338.jpg?t=1751986887',
   },
   '457140': {
     name: 'Oxygen Not Included',
@@ -9220,7 +9220,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/837470/ss_deb5b83b07d3f7c1050ea46b51117109da06952b.600x338.jpg?t=1699052664',
     shortDescription:
-      "It's a lovely morning in the village and you are a horrible goose.",
+      "It's a lovely morning in the village and you are a horrible ||goose||.",
     releaseDate: 'Sep 23, 2020',
     developer: 'House House',
     publisher: 'Panic',
@@ -14050,7 +14050,7 @@ export const steamGameDetails: SteamGameMap = {
     shortDescription:
       'The ||poker|| ||rogue||-like. ||Balatro|| is a hypnotically satisfying ||deckbuilder|| where you play illegal ||poker hands||, discover game-changing ||jokers||, and ||trigger|| adrenaline-pumping, outrageous combos.',
     releaseDate: 'Feb 20, 2024',
-    clueOrder: ['details', 'desc', 'tags'],
+    clueOrder: ['desc', 'details', 'tags'],
     developer: 'LocalThunk',
     publisher: 'Playstack',
     tags: ['Casual', 'Indie', 'Strategy'],
