@@ -146,7 +146,8 @@ function App() {
           </div>
           {config.showMaintenanceAlert ? (
             <div className='bg-yellow-500 text-black px-4 py-3 rounded-lg font-semibold text-center'>
-              Cloudflare issues. Check back soon
+              The hosting provider is currently having issues. It will be up
+              shortly!
             </div>
           ) : (
             <SteamDetective
