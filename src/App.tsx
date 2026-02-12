@@ -4,6 +4,7 @@ import './App.css';
 import SteamDetective from './SteamDetective';
 import HelpModal from './components/HelpModal';
 import PuzzleDatePicker from './components/PuzzleDatePicker';
+import { config } from './config';
 import {
   getUtcDateString,
   clearPuzzleState,
@@ -89,7 +90,7 @@ function App() {
   };
 
   return (
-    <div className='min-h-screen w-full flex flex-col diagonal-pattern-bg overflow-x-hidden'>
+    <div className='min-h-screen w-full flex flex-col overflow-x-hidden'>
       <div className='flex flex-col items-center w-full px-1 sm:px-4 flex-1'>
         <div className='w-full max-w-[750px] p-2 sm:p-6'>
           <div className='relative mb-2 sm:mb-6'>
@@ -143,10 +144,16 @@ function App() {
               </div>
             </div>
           </div>
-          <SteamDetective
-            onResetPuzzle={handleResetPuzzle}
-            onDatePickerClick={() => setShowDatePicker(true)}
-          />
+          {config.showMaintenanceAlert ? (
+            <div className='bg-yellow-500 text-black px-4 py-3 rounded-lg font-semibold text-center'>
+              Cloudflare issues. Check back soon
+            </div>
+          ) : (
+            <SteamDetective
+              onResetPuzzle={handleResetPuzzle}
+              onDatePickerClick={() => setShowDatePicker(true)}
+            />
+          )}
         </div>
       </div>
 
