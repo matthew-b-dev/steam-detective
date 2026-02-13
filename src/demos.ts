@@ -120,7 +120,7 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile1: 'DOOM: The Dark Ages',
     caseFile2: 'Two Point Hospital',
     caseFile3: 'Resident Evil 7 Biohazard',
-    caseFile4: 'Dredge',
+    caseFile4: 'DREDGE',
   },
 }; // SILENT HILL 2
 // PlanetSide 2
