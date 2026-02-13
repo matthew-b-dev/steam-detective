@@ -179,6 +179,8 @@ export const CLOSE_GUESS_SERIES = [
   'watch',
   'crusader kings',
   'max payne',
+  'doom',
+  'resident evil',
 ];
 
 /**

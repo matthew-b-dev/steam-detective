@@ -116,5 +116,11 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile3: 'Max Payne 3',
     caseFile4: 'Untitled Goose Game',
   },
-  // Two point hospital
-};
+  '2026-02-13': {
+    caseFile1: 'DOOM: The Dark Ages',
+    caseFile2: 'Two Point Hospital',
+    caseFile3: 'Resident Evil 7 Biohazard',
+    caseFile4: 'Dredge',
+  },
+}; // SILENT HILL 2
+// PlanetSide 2

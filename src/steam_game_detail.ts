@@ -6581,7 +6581,8 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/418370/ss_d07fd9fca3644350782356667ce78d436c574680.600x338.jpg?t=1769125301',
     shortDescription:
-      'Fear and isolation seep through the walls of an abandoned southern farmhouse. ||"7"|| marks a new beginning for survival horror with the “Isolated View” of the visceral new first-person perspective.',
+      'Fear and isolation seep through the walls of an abandoned southern farmhouse. ||"7" marks a new beginning for survival horror with the “Isolated View” of the visceral|| new first-person perspective.',
+    clueOrder: ['desc', 'tags', 'details'],
     releaseDate: 'Jan 23, 2017',
     developer: 'CAPCOM Co., Ltd.',
     publisher: 'CAPCOM Co., Ltd.',
@@ -7485,12 +7486,13 @@ export const steamGameDetails: SteamGameMap = {
   },
   '535930': {
     name: 'Two Point Hospital',
+    clueOrder: ['desc', 'tags', 'details'],
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/535930/ss_513fe00a570aae8aa17f0c7c34441d900ecea67d.600x338.jpg?t=1763648286',
     shortDescription:
-      'Design stunning hospitals, cure peculiar illnesses and manage troublesome staff as you spread your budding healthcare organisation across Two Point County.',
+      'Design stunning ||hospitals||, cure peculiar ||illnesses|| and manage troublesome staff as you spread your budding ||healthcare|| organisation across ||Two Point|| County.',
     releaseDate: 'Aug 29, 2018',
-    developer: 'Two Point Studios',
+    developer: '||Tw||o P||oint|| Studios',
     publisher: 'SEGA',
     tags: ['Indie', 'Simulation'],
     features: [],
@@ -13434,8 +13436,9 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1942280/ss_79be0eea0299da76bc50cef160fb669509f74e0b.600x338.jpg?t=1769873247',
     shortDescription:
-      '||Brotato|| is a top-down arena shooter roguelite where you play a potato wielding up to 6 weapons at a time to fight off hordes of aliens. Choose from a variety of traits and items to create unique builds and survive until help arrives.',
+      '||Brotato|| is a top-down arena shooter roguelite where you play a ||potato|| wielding up to 6 weapons at a time to fight off hordes of aliens. Choose from a variety of traits and items to create unique builds and survive until help arrives.',
     releaseDate: 'Jun 23, 2023',
+    clueOrder: ['desc', 'details', 'tags'],
     developer: 'Blobfish',
     publisher: 'Blobfish',
     tags: ['Action', 'Casual', 'Indie', 'RPG'],
@@ -13681,6 +13684,7 @@ export const steamGameDetails: SteamGameMap = {
     shortDescription:
       'Investigating a letter from his late wife, James returns to where they made so many memories - ||Silent Hill||. What he finds is a ghost town, prowled by disturbing monsters and cloaked in deep fog. Confront the monsters, solve puzzles, and search for traces of your wife in this remake of ||SILENT HILL 2||.',
     releaseDate: 'Oct 7, 2024',
+    clueOrder: ['details', 'desc', 'tags'],
     developer: 'Bloober Team SA',
     publisher: 'KONAMI',
     tags: ['Action', 'Adventure'],
@@ -14275,6 +14279,7 @@ export const steamGameDetails: SteamGameMap = {
     shortDescription:
       "||DOOM: The Dark Ages|| is the prequel to the critically acclaimed ||DOOM (2016)|| and ||DOOM Eternal|| that tells an epic cinematic story worthy of the ||DOOM|| Slayer's legend. Players will step into the blood-stained boots of the ||DOOM|| Slayer, in this never-before-seen dark and sinister medieval war against Hell.",
     releaseDate: 'May 14, 2025',
+    clueOrder: ['desc', 'tags', 'details'],
     developer: 'id Software',
     publisher: 'Bethesda Softworks',
     tags: ['Action'],

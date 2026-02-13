@@ -977,7 +977,6 @@ export const dummyGames: string[] = [
   'Touken Ranbu Warriors',
   'Star Ocean: The Second Story R',
   'Red Dead Redemption',
-  'Resident Evil 4: Separate Ways',
   'The Expanse: A Telltale Series',
   'Mega Man Battle Network Legacy Collection',
   'The Legend of Heroes: Trails into Reverie',
