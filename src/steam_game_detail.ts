@@ -14277,7 +14277,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3017860/ss_ba66d42e3d1ea78e5b085682484210b390eb9ccc.600x338.jpg?t=1768344167',
     shortDescription:
-      "||DOOM: The Dark Ages|| is the prequel to the critically acclaimed ||DOOM (2016)|| and ||DOOM Eternal|| that tells an epic cinematic story worthy of the ||DOOM|| Slayer's legend. Players will step into the blood-stained boots of the ||DOOM|| Slayer, in this never-before-seen dark and sinister medieval war against Hell.",
+      "||DOOM: The Dark Ages|| is the prequel to the critically acclaimed ||DOOM (2016)|| and ||DOOM Eternal|| that tells an epic cinematic story worthy of the ||DOOM|| Slayer's legend. Players will step into the blood-stained boots of the ||DOOM|| Slayer, in this never-before-seen dark and sinister medieval war against ||Hell||.",
     releaseDate: 'May 14, 2025',
     clueOrder: ['desc', 'tags', 'details'],
     developer: 'id Software',
