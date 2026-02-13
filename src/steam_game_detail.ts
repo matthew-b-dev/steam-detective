@@ -632,10 +632,11 @@ export const steamGameDetails: SteamGameMap = {
     name: 'LIMBO',
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/48000/ss_d33513ed37acf1073ea92f182b76e165101bfdac.600x338.jpg?t=1761819450',
-    shortDescription: "Uncertain of his sister's fate, a boy ||enters LIMBO||.",
+    shortDescription: "Uncertain of his sister's fate, a boy enters ||LIMBO||.",
     releaseDate: 'Aug 2, 2011',
     developer: 'Playdead',
     publisher: 'Playdead',
+    clueOrder: ['details', 'tags', 'desc'],
     tags: ['Action', 'Adventure', 'Indie'],
     features: [],
     allReviewSummary: {
@@ -667,8 +668,7 @@ export const steamGameDetails: SteamGameMap = {
     appId: 48000,
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/48000/ss_402b32434e4bb1a8445397aa24b1b893fe3d257f.600x338.jpg?t=1761819450',
-    blurredUserTags: ['Puzzle-Platformer', 'Puzzle', 'Dark'],
-    clueOrder: ['desc', 'details', 'tags'],
+    blurredUserTags: ['Dark', 'Horror'],
     difficulty: 'Hard',
     fun: true,
     debugProcessed: true,
@@ -9830,7 +9830,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/975370/ss_a1478493de292f1c57a9522d00ee5b692ce0e4c7.600x338.jpg?t=1769694731',
   },
   '976310': {
-    name: 'Mortal Kombat 11',
+    name: 'Mortal Kombat 11',
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/976310/ss_e5cd8debd74027dbfafd9729fc32986a63393333.600x338.jpg?t=1747925751',
     shortDescription:
@@ -9912,47 +9912,6 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/976730/ss_62bbd86f4735893ef6cd53206cf8c93f87eb86ec.600x338.jpg?t=1740682623',
   },
-  '990080': {
-    name: 'Hogwarts Legacy',
-    primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/990080/ss_725bf58485beb4aa37a3a69c1e2baa69bf3e4653.600x338.jpg?t=1765473525',
-    shortDescription:
-      '||Hogwarts Legacy|| is an immersive, open-world action RPG. Now you can take control of the action and be at the center of your own adventure in the wizarding world.',
-    releaseDate: 'Feb 10, 2023',
-    developer: 'Avalanche Software',
-    publisher: 'Warner Bros. Games',
-    tags: ['Action', 'Adventure', 'RPG'],
-    features: [],
-    allReviewSummary: {
-      count: 138359,
-      rating: 'Very Positive',
-    },
-    userTags: [
-      'Magic',
-      'Open World',
-      'Fantasy',
-      'Singleplayer',
-      'Adventure',
-      'RPG',
-      'Character Customization',
-      'Exploration',
-      'Story Rich',
-      'Third Person',
-      'Action-Adventure',
-      'Atmospheric',
-      'Action RPG',
-      'Action',
-      'Combat',
-      'Choices Matter',
-      'Puzzle',
-      'Great Soundtrack',
-      'Dark',
-      'Family Friendly',
-    ],
-    appId: 990080,
-    secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/990080/ss_df93b5e8a183f7232d68be94ae78920a90de1443.600x338.jpg?t=1765473525',
-  },
   '1029780': {
     name: 'Going Medieval',
     primaryScreenshot:
@@ -9995,10 +9954,11 @@ export const steamGameDetails: SteamGameMap = {
   },
   '1030300': {
     name: 'Hollow Knight: Silksong',
+    clueOrder: ['desc', 'tags', 'details'],
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1030300/26950369fe4b03c2268620eb9815c8a246aa0b06/ss_26950369fe4b03c2268620eb9815c8a246aa0b06.600x338.jpg?t=1764916587',
     shortDescription:
-      'Discover a vast, haunted kingdom in ||Hollow Knight: Silksong||! Explore, fight and survive as you ascend to the peak of a land ruled by silk and song.',
+      'Discover a vast, haunted kingdom in ||Hollow Knight: Silksong||! Explore, fight and survive as you ascend to the peak of a land ruled by ||silk|| and song.',
     releaseDate: 'Sep 4, 2025',
     developer: 'Team Cherry',
     publisher: 'Team Cherry',
@@ -10755,9 +10715,10 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1167630/ss_b140eeaf8e489dfa4451411ae23c28a0ecb26729.600x338.jpg?t=1763977691',
     shortDescription:
-      'Prepare the perfect heist in this simulated and fully destructible voxel world. Tear down walls with vehicles or explosives to create shortcuts. Stack objects to reach higher. Use the environment to your advantage in the most creative way you can think of.',
+      'Prepare the perfect heist in this simulated and ||fully destructible|| voxel world. ||Tear down walls with vehicles or explosives|| to create shortcuts. Use the environment to your advantage ||in the most creative way you can think of||.',
     releaseDate: 'Apr 21, 2022',
     developer: 'Tuxedo Labs',
+    clueOrder: ['tags', 'details', 'desc'],
     publisher: 'Tuxedo Labs',
     tags: ['Action', 'Indie', 'Simulation', 'Strategy'],
     features: [],
@@ -10779,13 +10740,19 @@ export const steamGameDetails: SteamGameMap = {
       'Simulation',
       'Action',
       'Puzzle',
-      'Driving',
-      'Indie',
-      'Replay Value',
-      'Multiplayer',
-      'Tactical',
-      'Immersive Sim',
-      'Puzzle-Platformer',
+    ],
+    blurredUserTags: [
+      'Destruction',
+      'Sandbox',
+      'Voxel',
+      'First-Person',
+      'Singleplayer',
+      'Open World',
+      'Realistic',
+      '3D',
+      'Simulation',
+      'Action',
+      'Puzzle',
     ],
     appId: 1167630,
     secondaryScreenshot:
@@ -11165,6 +11132,7 @@ export const steamGameDetails: SteamGameMap = {
     shortDescription:
       '||Gunfire Reborn|| is a level-based adventure game featuring FPS, Roguelite and RPG. Players can control heroes with various abilities to experience diverse Build gameplay, use various weapons to explore procedurally-generated levels. You can play the game alone, or join 4-player coop.',
     releaseDate: 'Nov 17, 2021',
+    clueOrder: ['desc', 'details', 'tags'],
     developer: 'Duoyi Games',
     publisher: 'Duoyi Games',
     tags: ['Action', 'Adventure', 'Indie', 'RPG'],
@@ -11940,9 +11908,10 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1332010/ss_88e209a90c2039fa76bca6fa08c641365be38d50.600x338.jpg?t=1733260906',
     shortDescription:
-      'Lost, alone and separated from family, a ||stray|| cat must untangle an ancient mystery to escape a long-forgotten cybercity and find their way home.',
+      'Lost, alone and separated from family, ||a stray cat|| must untangle an ancient mystery to escape a long-forgotten cybercity and find their way home.',
     releaseDate: 'Jul 19, 2022',
     developer: 'BlueTwelve Studio',
+    clueOrder: ['desc', 'details', 'tags'],
     publisher: 'Annapurna Interactive',
     tags: ['Adventure', 'Indie'],
     features: [],
@@ -11950,6 +11919,7 @@ export const steamGameDetails: SteamGameMap = {
       count: 76087,
       rating: 'Overwhelmingly Positive',
     },
+    blurredUserTags: ['Cats'],
     userTags: [
       'Cats',
       'Adventure',
@@ -12433,7 +12403,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1583230/ss_669dcc1c0928edf635e9f451c6a7eca7c044df15.600x338.jpg?t=1752869049',
     shortDescription:
-      "HIGH ON KNIFE DLC OUT NOW!! - Humanity is being threatened by an alien cartel who wants to use them as drugs. It's up to you to rescue and partner with charismatic, talking guns, take down Garmantuous and his gang, and save the world!",
+      "Humanity is being threatened by an alien cartel who wants to use them as drugs. It's up to you to rescue and partner with charismatic, talking guns, take down Garmantuous and his gang, and save the world!",
     releaseDate: 'Dec 13, 2022',
     developer: 'Squanch Games, Inc.',
     publisher: 'Squanch Games, Inc.',
@@ -12841,8 +12811,9 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1671210/ss_b19eda9efcabf0fe27741eb126427048541780f0.600x338.jpg?t=1749252480',
     shortDescription:
-      'Dive into the parallel story to UNDERTALE! Fight or spare your way through action-packed battles as you explore a mysterious world alongside an endearing cast of new and familiar characters. Chapters 1-4 will be available on launch, with more planned as free updates!',
+      'Dive into the parallel story to ||UNDERTALE||! ||Fight or spare|| your way through action-packed battles as you explore a mysterious world alongside an endearing cast of new and familiar characters.',
     releaseDate: 'Jun 4, 2025',
+    clueOrder: ['desc', 'tags', 'desc'],
     developer: 'tobyfox',
     publisher: 'tobyfox',
     tags: ['Indie', 'RPG'],
@@ -13925,7 +13896,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2215430/ss_d60e16422fc1605181e0fedee3e2cfc1e02c750e.600x338.jpg?t=1763409398',
   },
   '2322010': {
-    name: 'God of War Ragnarök',
+    name: 'God of War Ragnarok',
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2322010/ss_7c59382e67eadf779e0e15c3837ee91158237f11.600x338.jpg?t=1750909504',
     shortDescription:

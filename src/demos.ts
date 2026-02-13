@@ -122,5 +122,12 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile3: 'Resident Evil 7 Biohazard',
     caseFile4: 'DREDGE',
   },
+  '2026-02-14': {
+    caseFile1: 'Teardown',
+    caseFile2: 'Gunfire Reborn',
+    caseFile3: 'LIMBO',
+    caseFile4: 'Stray',
+  },
 }; // SILENT HILL 2
 // PlanetSide 2
+// DELTARUNE
