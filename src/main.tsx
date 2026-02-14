@@ -5,12 +5,13 @@ import { supabase } from './lib/supabaseClient';
 
 document.title = 'SteamDetective.wtf';
 
+const isLocalhost =
+  window.location.hostname === 'localhost' ||
+  window.location.hostname === '127.0.0.1';
+
 // Log page view exactly once per page load (skip on localhost)
 (async () => {
-  if (
-    !window.location.hostname.includes('localhost') &&
-    window.location.hostname !== '127.0.0.1'
-  ) {
+  if (!isLocalhost) {
     await supabase.from('page_views').insert([
       {
         path: window.location.pathname,
@@ -22,4 +23,16 @@ document.title = 'SteamDetective.wtf';
   }
 })();
 
-ReactDOM.createRoot(document.getElementById('root')!).render(<App />);
+// Render the refine tool on localhost at /refine, otherwise render the main app
+const isRefinePage = isLocalhost && window.location.pathname === '/refine';
+
+if (isRefinePage) {
+  import('./refine/RefinePage').then(({ RefinePage }) => {
+    document.title = 'Refine SteamDetective';
+    ReactDOM.createRoot(document.getElementById('root')!).render(
+      <RefinePage />,
+    );
+  });
+} else {
+  ReactDOM.createRoot(document.getElementById('root')!).render(<App />);
+}

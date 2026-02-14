@@ -4,6 +4,7 @@ import {
   STEAM_DETECTIVE_DEMO_DAYS,
   getDateFromRoute,
 } from './demos';
+import { CLOSE_GUESS_SERIES } from './steam_game_detail';
 
 // Subtitle configuration
 export interface SubtitleConfig {
@@ -159,29 +160,6 @@ const levenshteinDistance = (str1: string, str2: string): number => {
 
   return dp[len1][len2];
 };
-
-// Special series/franchises where guesses containing the series name are considered "close"
-export const CLOSE_GUESS_SERIES = [
-  'super mario',
-  'the lord of the rings',
-  'final fantasy',
-  'payday',
-  'call of duty',
-  'the legend of zelda',
-  'age of empires',
-  'bioshock',
-  'persona',
-  'south park',
-  'dark souls',
-  'prototype',
-  'torchlight',
-  'splinter cell',
-  'watch',
-  'crusader kings',
-  'max payne',
-  'doom',
-  'resident evil',
-];
 
 /**
  * Check if a guess is close to the target game name

@@ -33,8 +33,9 @@ export interface SteamGame {
   features: string[];
   allReviewSummary: ReviewSummary;
   debugProcessed?: true;
+  debugRefined?: true;
+  debugDelete?: true;
   difficulty?: string;
-  fun?: boolean;
   debugNotes?: string;
 }
 

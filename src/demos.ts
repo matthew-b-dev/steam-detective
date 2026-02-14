@@ -128,6 +128,13 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile3: 'LIMBO',
     caseFile4: 'Stray',
   },
+  '2026-02-15': {
+    caseFile1: 'RAGE',
+    caseFile2: 'DC Universe Online',
+    caseFile3: 'Mafia II',
+    caseFile4: 'Terraria',
+  },
 }; // SILENT HILL 2
 // PlanetSide 2
 // DELTARUNE
+//

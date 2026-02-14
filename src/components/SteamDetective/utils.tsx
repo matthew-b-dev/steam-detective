@@ -10,7 +10,7 @@ export const getReviewColorClass = (rating: string): string => {
     case 'Mostly Positive':
       return 'text-[#66c0f4]';
     case 'Mixed':
-      return 'text-[#a1a1a1]';
+      return 'text-[#b9A074]';
     case 'Negative':
     case 'Mostly Negative':
       return 'text-[#a94442]';
