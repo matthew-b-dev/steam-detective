@@ -10,6 +10,7 @@ interface RefineNavbarProps {
   onPrev: () => void;
   onSearch: (name: string) => void;
   onExport: () => void;
+  onRandomize: () => void;
 }
 
 export const RefineNavbar: React.FC<RefineNavbarProps> = ({
@@ -22,6 +23,7 @@ export const RefineNavbar: React.FC<RefineNavbarProps> = ({
   onPrev,
   onSearch,
   onExport,
+  onRandomize,
 }) => {
   const [searchText, setSearchText] = useState('');
 
@@ -87,6 +89,14 @@ export const RefineNavbar: React.FC<RefineNavbarProps> = ({
           Go
         </button>
       </form>
+
+      {/* Randomize */}
+      <button
+        onClick={onRandomize}
+        className='px-3 py-1 bg-orange-700 hover:bg-orange-600 rounded text-sm font-semibold'
+      >
+        Randomize
+      </button>
 
       {/* Export */}
       <button

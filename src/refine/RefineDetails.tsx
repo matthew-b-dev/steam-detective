@@ -191,7 +191,7 @@ export const RefineDetails: React.FC<RefineDetailsProps> = ({
                 title={mode === 'refine' ? 'Click to edit' : undefined}
               >
                 {game.allReviewSummary.rating}{' '}
-                <span className='text-[#8f98a0] text-sm'>
+                <span className='text-[#bcc6ce] text-sm'>
                   ({game.allReviewSummary.count.toLocaleString()})
                 </span>
               </div>

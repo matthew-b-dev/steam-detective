@@ -18,7 +18,7 @@ export const getReviewColorClass = (rating: string): string => {
     case 'Very Negative':
       return 'text-[#a94442]';
     default:
-      return 'text-[#8f98a0]';
+      return 'text-[#bcc6ce]';
   }
 };
 

@@ -103,7 +103,7 @@ export const ClueDetails: React.FC<ClueDetailsProps> = ({
               className={`text-sm ${getReviewColorClass(allReviewSummary.rating)}`}
             >
               {allReviewSummary.rating}{' '}
-              <span className='text-[#8f98a0] text-sm'>
+              <span className='text-[#bcc6ce] text-sm'>
                 ({allReviewSummary.count.toLocaleString()})
               </span>
             </div>

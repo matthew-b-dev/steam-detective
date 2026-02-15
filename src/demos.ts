@@ -134,7 +134,16 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile3: 'Mafia II',
     caseFile4: 'Terraria',
   },
-}; // SILENT HILL 2
+  '2026-02-16': {
+    caseFile1: 'R.E.P.O.',
+    caseFile2: 'Subnautica: Below Zero',
+    caseFile3: 'Slime Rancher',
+    caseFile4: 'XCOM 2',
+  },
+  // 2-17 Hard: Paper's, Please
+};
+
+// SILENT HILL 2
 // PlanetSide 2
 // DELTARUNE
 //

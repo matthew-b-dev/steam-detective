@@ -1,9 +1,11 @@
-import { useState, useMemo, useCallback } from 'react';
+import { useState, useMemo, useCallback, useEffect } from 'react';
 import type { SteamGame } from '../types';
 import type { SteamGameMap } from '../steam_game_detail';
 import { steamGameDetails, CLOSE_GUESS_SERIES } from '../steam_game_detail';
 import { RefineNavbar } from './RefineNavbar.tsx';
 import { RefineGameView } from './RefineGameView.tsx';
+
+const GAME_ORDER_KEY = 'steam-detective-game-order';
 
 /**
  * Deep clone a SteamGameMap so mutations don't touch the original import.
@@ -35,19 +37,61 @@ export const RefinePage: React.FC = () => {
   const [closeGuessSeries, setCloseGuessSeries] = useState<string[]>(() => [
     ...CLOSE_GUESS_SERIES,
   ]);
-
-  // Filter appIds based on mode
-  const appIds = useMemo(() => {
-    const allIds = Object.keys(games);
-    if (mode === 'choose') {
-      return allIds.filter((id) => games[id].debugRefined === true);
+  // Initialize customOrder from localStorage or fallback to Object.keys
+  const [customOrder, setCustomOrder] = useState<string[]>(() => {
+    const stored = localStorage.getItem(GAME_ORDER_KEY);
+    if (stored) {
+      try {
+        const parsed = JSON.parse(stored);
+        // Filter out any appIds that no longer exist in steamGameDetails
+        const validIds = parsed.filter((id: string) => id in steamGameDetails);
+        // If we have valid IDs, use them; otherwise fall back to default
+        if (validIds.length > 0) {
+          return validIds;
+        }
+      } catch {
+        // Fall through to default
+      }
     }
-    return allIds;
-  }, [games, mode]);
+    return Object.keys(steamGameDetails);
+  });
+
+  // Save customOrder to localStorage whenever it changes
+  useEffect(() => {
+    localStorage.setItem(GAME_ORDER_KEY, JSON.stringify(customOrder));
+  }, [customOrder]);
+
+  // Filter appIds based on mode - use customOrder which preserves file/randomized order
+  const appIds = useMemo(() => {
+    if (mode === 'choose') {
+      // In choose mode, only show refined games
+      return customOrder.filter((id) => games[id].debugRefined === true);
+    }
+    // In refine mode, use the customOrder as-is (preserves file order or randomization)
+    return customOrder;
+  }, [games, mode, customOrder]);
 
   const [currentIndex, setCurrentIndex] = useState(() => {
-    // Start at the first game that is NOT debugRefined (refine mode)
-    const idx = Object.values(games).findIndex((g) => !g.debugRefined);
+    // Start at the first game in customOrder that is NOT debugRefined
+    const stored = localStorage.getItem(GAME_ORDER_KEY);
+    let order: string[];
+    if (stored) {
+      try {
+        const parsed = JSON.parse(stored);
+        // Filter out any appIds that no longer exist
+        order = parsed.filter((id: string) => id in steamGameDetails);
+        if (order.length === 0) {
+          order = Object.keys(steamGameDetails);
+        }
+      } catch {
+        order = Object.keys(steamGameDetails);
+      }
+    } else {
+      order = Object.keys(steamGameDetails);
+    }
+
+    const gameMap = steamGameDetails;
+    const idx = order.findIndex((id) => !gameMap[id].debugRefined);
     return idx >= 0 ? idx : 0;
   });
 
@@ -65,13 +109,36 @@ export const RefinePage: React.FC = () => {
 
   const goToGameByName = useCallback(
     (name: string) => {
-      const idx = Object.values(games).findIndex(
-        (g) => g.name.toLowerCase() === name.toLowerCase(),
+      const idx = appIds.findIndex(
+        (id) => games[id].name.toLowerCase() === name.toLowerCase(),
       );
       if (idx >= 0) setCurrentIndex(idx);
     },
-    [games],
+    [games, appIds],
   );
+
+  // Randomize game order (keeping refined games at the front)
+  const handleRandomize = useCallback(() => {
+    const confirmed = window.confirm(
+      'Are you sure you want to randomize the order of non-refined games? Refined games will remain at the front.',
+    );
+    if (!confirmed) return;
+
+    const allIds = Object.keys(games);
+    const refined = allIds.filter((id) => games[id].debugRefined === true);
+    const notRefined = allIds.filter((id) => !games[id].debugRefined);
+
+    // Fisher-Yates shuffle only the non-refined games
+    const shuffled = [...notRefined];
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+
+    // Combine refined (in their current order) + shuffled non-refined
+    setCustomOrder([...refined, ...shuffled]);
+    setCurrentIndex(0);
+  }, [games]);
 
   // Update a single game property
   const updateGame = useCallback((appId: string, patch: Partial<SteamGame>) => {
@@ -93,7 +160,9 @@ export const RefinePage: React.FC = () => {
     lines.push('');
     lines.push('export const steamGameDetails: SteamGameMap = {');
 
-    for (const [appId, game] of Object.entries(games)) {
+    // Use customOrder which already has the correct order (file order or randomized)
+    for (const appId of customOrder) {
+      const game = games[appId];
       if (game.debugDelete) continue; // skip deleted games
 
       lines.push(`  '${appId}': {`);
@@ -192,7 +261,7 @@ export const RefinePage: React.FC = () => {
     a.download = 'steam_game_detail.ts';
     a.click();
     URL.revokeObjectURL(url);
-  }, [games, closeGuessSeries]);
+  }, [games, closeGuessSeries, customOrder]);
 
   return (
     <div className='min-h-screen bg-[#1b2838] text-white'>
@@ -209,6 +278,7 @@ export const RefinePage: React.FC = () => {
         onPrev={goPrev}
         onSearch={goToGameByName}
         onExport={handleExport}
+        onRandomize={handleRandomize}
       />
       <div className='max-w-[800px] mx-auto px-4 pt-4 pb-16'>
         {currentGame && (
