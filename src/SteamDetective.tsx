@@ -102,18 +102,19 @@ const SteamDetectiveGame: React.FC<SteamDetectiveGameProps> = ({
   const iconsLoaded = usePreloadFolderIcons();
 
   const dailyGame = useDailyGame(caseFileNumber);
+
   const censoredDescription = useCensoredDescription(
-    dailyGame.shortDescription,
+    dailyGame?.shortDescription || '',
   );
 
   const { state, setState } = useSteamDetectiveState(
-    dailyGame.name,
+    dailyGame?.name || '',
     caseFileNumber,
   );
   const { handleSkip, handleGuess } = useGameActions({
     state,
     setState,
-    gameName: dailyGame.name,
+    gameName: dailyGame?.name || '',
   });
 
   // Flash animation when guesses remaining changes
@@ -143,7 +144,7 @@ const SteamDetectiveGame: React.FC<SteamDetectiveGameProps> = ({
   }, [state.isComplete]);
 
   // Determine which clues to show based on custom clue order
-  const clueOrder = dailyGame.clueOrder || ['tags', 'details', 'desc'];
+  const clueOrder = dailyGame?.clueOrder || ['tags', 'details', 'desc'];
 
   const clueMapping: Record<string, number> = {
     tags: 1,
@@ -279,6 +280,12 @@ const SteamDetectiveGame: React.FC<SteamDetectiveGameProps> = ({
     );
   }, [iconsLoaded, caseFileNumber]);
 
+  // If there's no demo configured for this date, don't render anything
+  // The parent component will handle showing the "brb" message
+  if (!dailyGame) {
+    return null;
+  }
+
   return (
     <SteamDetectiveGameProvider
       dailyGame={dailyGame}
@@ -360,6 +367,9 @@ const SteamDetective: React.FC<SteamDetectiveProps> = ({
   const [timeLeft] = useState<{ h: number; m: number }>(() =>
     getTimeUntilNextGame(),
   );
+
+  // Check if this is a demo day or if we should show "brb"
+  const dailyGameCheck = useDailyGame(1);
 
   // Get current case file from state (1-4)
   const [currentCaseFile, setCurrentCaseFile] = useState(() => {
@@ -480,10 +490,29 @@ const SteamDetective: React.FC<SteamDetectiveProps> = ({
       <Toaster position='top-center' />
       <hr className='h-[1px] bg-gray-700 border-none mb-3'></hr>
 
+      {/* If no demo configured for this date, show "brb" post-it note */}
+      {!dailyGameCheck && (
+        <>
+          <div className='mt-12 mb-3'>
+            <div className='note yellow min-h-[200px]'>
+              <div className='flex'>
+                working on it &nbsp;<span className='rotate-90'>:)</span>
+              </div>
+            </div>
+            <div className='text-gray-200 text-xl text-center mt-3 font-bold'>
+              <h2 className='text-xl font-bold'>While you wait ...</h2>
+              <div className='font-normal text-gray-300'>
+                Try a puzzle from the past!
+              </div>
+            </div>
+          </div>
+        </>
+      )}
+
       {/* Date Picker Button */}
       <div className='flex justify-center mb-0'>
         <button
-          className='flex items-center mb-2 bg-transparent cursor-pointer border-zinc-700 hover:text-white transition-opacity '
+          className={`flex items-center mb-2 cursor-pointer hover:text-white transition-opacity ${!dailyGameCheck ? 'bg-green-700 text-white' : 'bg-transparent border-zinc-700'}`}
           onClick={onDatePickerClick}
         >
           <img src={calendarIcon} className='w-6 h-6 mr-2' alt='Calendar' />
@@ -493,74 +522,79 @@ const SteamDetective: React.FC<SteamDetectiveProps> = ({
         </button>
       </div>
 
-      {/* Final Game Complete - shown after case file 4, appears at TOP */}
-      <AnimatePresence>
-        {showFinalGameComplete && (
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, ease: 'easeInOut' }}
-          >
-            <FinalGameComplete
-              show={showFinalGameComplete}
-              totalScore={getTotalScore(getUtcDateString())}
-              missedCaseFiles={getMissedCaseFiles()}
-            />
-          </motion.div>
-        )}
-      </AnimatePresence>
-
-      {/* Render case files in reverse order (newest at top) */}
-      {Array.from({ length: currentCaseFile }, (_, index) => {
-        const caseNumber = currentCaseFile - index;
-        const isCurrentCase = caseNumber === currentCaseFile;
-        const isNewestCase = index === 0;
-
-        const caseContent = (
-          <div key={caseNumber}>
-            <SteamDetectiveGame
-              caseFileNumber={caseNumber}
-              onContinueToNextCase={
-                isCurrentCase && caseNumber < 4
-                  ? handleContinueToNextCase
-                  : undefined
-              }
-              previousTotalScore={getPreviousTotalScore(caseNumber)}
-              isCurrentCaseFile={isCurrentCase}
-            />
-            {caseNumber > 1 && (
-              <hr className='h-[2px] bg-gradient-to-r from-transparent via-gray-500 to-transparent border-none my-8 opacity-50' />
-            )}
-          </div>
-        );
-
-        // Animate the newest case file (when it first appears)
-        if (isNewestCase && caseNumber > 1) {
-          return (
-            <AnimatePresence key={caseNumber}>
+      {/* Only render game content if there's a demo */}
+      {dailyGameCheck && (
+        <>
+          {/* Final Game Complete - shown after case file 4, appears at TOP */}
+          <AnimatePresence>
+            {showFinalGameComplete && (
               <motion.div
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, ease: 'easeInOut' }}
               >
-                {caseContent}
+                <FinalGameComplete
+                  show={showFinalGameComplete}
+                  totalScore={getTotalScore(getUtcDateString())}
+                  missedCaseFiles={getMissedCaseFiles()}
+                />
               </motion.div>
-            </AnimatePresence>
-          );
-        }
+            )}
+          </AnimatePresence>
 
-        return caseContent;
-      })}
+          {/* Render case files in reverse order (newest at top) */}
+          {Array.from({ length: currentCaseFile }, (_, index) => {
+            const caseNumber = currentCaseFile - index;
+            const isCurrentCase = caseNumber === currentCaseFile;
+            const isNewestCase = index === 0;
 
-      {/* Show reset button if all cases are complete */}
-      {allCasesComplete && (
-        <div className='flex justify-center mb-4 mt-4'>
-          <ResetPuzzleButton onResetPuzzle={handleResetPuzzle} />
-        </div>
+            const caseContent = (
+              <div key={caseNumber}>
+                <SteamDetectiveGame
+                  caseFileNumber={caseNumber}
+                  onContinueToNextCase={
+                    isCurrentCase && caseNumber < 4
+                      ? handleContinueToNextCase
+                      : undefined
+                  }
+                  previousTotalScore={getPreviousTotalScore(caseNumber)}
+                  isCurrentCaseFile={isCurrentCase}
+                />
+                {caseNumber > 1 && (
+                  <hr className='h-[2px] bg-gradient-to-r from-transparent via-gray-500 to-transparent border-none my-8 opacity-50' />
+                )}
+              </div>
+            );
+
+            // Animate the newest case file (when it first appears)
+            if (isNewestCase && caseNumber > 1) {
+              return (
+                <AnimatePresence key={caseNumber}>
+                  <motion.div
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, ease: 'easeInOut' }}
+                  >
+                    {caseContent}
+                  </motion.div>
+                </AnimatePresence>
+              );
+            }
+
+            return caseContent;
+          })}
+
+          {/* Show reset button if all cases are complete */}
+          {allCasesComplete && (
+            <div className='flex justify-center mb-4 mt-4'>
+              <ResetPuzzleButton onResetPuzzle={handleResetPuzzle} />
+            </div>
+          )}
+        </>
       )}
-
-      <PuzzleDateTime puzzleDate={puzzleDate} timeLeft={timeLeft} />
-
+      {dailyGameCheck && (
+        <PuzzleDateTime puzzleDate={puzzleDate} timeLeft={timeLeft} />
+      )}
       <SteamDetectiveFooter />
     </div>
   );

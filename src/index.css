@@ -108,3 +108,29 @@ body::before {
     rgba(255, 255, 255, 0.008) 70px
   );
 }
+/* Post-it note styles */
+.note {
+  color: #333;
+  position: relative;
+  width: 280px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Gochi Hand', cursive;
+  font-size: 30px;
+  box-shadow: 0px 20px 11px 0px rgba(0, 0, 0, 0.8);
+}
+
+.yellow {
+  background: #ffca28;
+  background-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.35) 0%,
+    rgba(0, 0, 0, 0.05) 30%,
+    transparent 60%
+  );
+  -webkit-transform: rotate(6deg);
+  -moz-transform: rotate(6deg);
+  -o-transform: rotate(6deg);
+  -ms-transform: rotate(6deg);
+  transform: rotate(6deg);
+}

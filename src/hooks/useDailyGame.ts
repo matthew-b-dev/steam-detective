@@ -1,13 +1,19 @@
 import { useMemo } from 'react';
 import { steamGameDetails } from '../steam_game_detail';
 import { getUtcDateString } from '../utils';
-import { STEAM_DETECTIVE_DEMO_DAYS } from '../demos';
+import { STEAM_DETECTIVE_DEMO_DAYS, getDateFromRoute } from '../demos';
 
 export const useDailyGame = (caseFileNumber: number = 1) => {
   // caseFileNumber is 1-4
   const utcDate = getUtcDateString();
 
   const dailyGame = useMemo(() => {
+    // If we're on a route date (not today) and there's no demo configured, return null
+    const routeDate = getDateFromRoute();
+    if (routeDate && !STEAM_DETECTIVE_DEMO_DAYS[utcDate]) {
+      return null;
+    }
+
     // Check if this is a demo day with a hardcoded game
     if (STEAM_DETECTIVE_DEMO_DAYS[utcDate]) {
       const demoConfig = STEAM_DETECTIVE_DEMO_DAYS[utcDate];
