@@ -502,7 +502,7 @@ const SteamDetective: React.FC<SteamDetectiveProps> = ({
             <div className='text-gray-200 text-xl text-center mt-3 font-bold'>
               <h2 className='text-xl font-bold'>While you wait ...</h2>
               <div className='font-normal text-gray-300'>
-                Try a puzzle from the past!
+                Try case files from the past!
               </div>
             </div>
           </div>
