@@ -4,7 +4,9 @@
   "version": "0.0.1",
   "type": "module",
   "scripts": {
+    "predev": "node scripts/generate-optimized-games.js",
     "dev": "vite",
+    "prebuild": "node scripts/generate-optimized-games.js --production",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"

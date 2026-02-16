@@ -4,7 +4,7 @@ import {
   STEAM_DETECTIVE_DEMO_DAYS,
   getDateFromRoute,
 } from './demos';
-import { CLOSE_GUESS_SERIES } from './steam_game_detail';
+import { CLOSE_GUESS_SERIES } from './steam_game_detail.generated';
 
 // Subtitle configuration
 export interface SubtitleConfig {

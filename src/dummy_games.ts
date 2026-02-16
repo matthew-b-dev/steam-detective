@@ -173,7 +173,6 @@ export const dummyGames: string[] = [
   'OlliOlli',
   'Chariot',
   "Schrodinger's Cat and the Raiders of the Lost Quark",
-  'The Binding of Isaac: Rebirth',
   'Guilty Gear Xrd -SIGN-',
   "Don't Starve: Console Edition",
   'NES Remix 2',

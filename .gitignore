@@ -23,3 +23,7 @@ dist-ssr
 *.sln
 *.sw?
 .env
+
+# Generated files
+src/steam_game_detail.generated.ts
+src/all_game_names.generated.ts

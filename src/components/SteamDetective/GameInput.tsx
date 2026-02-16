@@ -1,7 +1,6 @@
 import { useState, useMemo } from 'react';
 import Select from 'react-select';
-import { steamGameDetails } from '../../steam_game_detail';
-import { dummyGames } from '../../dummy_games';
+import { allGameNames, gameSearchTerms } from '../../all_game_names.generated';
 import type { MissedGuess } from '../../utils';
 
 export interface GameOption {
@@ -27,33 +26,9 @@ export const GameInput: React.FC<GameInputProps> = ({
 
   // Create game options for react-select
   const gameOptions: GameOption[] = useMemo(() => {
-    // Get all real steam game names with searchTerms
-    const realGames = Object.values(steamGameDetails).map((game) => ({
-      name: game.name,
-      searchTerms: game.searchTerms || [],
-    }));
-
-    // Combine real games and decoy games
-    const allGameNames = new Set<string>();
-    const gameMap = new Map<string, string[]>();
-
-    // Add real games (with searchTerms)
-    realGames.forEach((game) => {
-      allGameNames.add(game.name);
-      gameMap.set(game.name, game.searchTerms);
-    });
-
-    // Add decoy games (no duplicates)
-    dummyGames.forEach((gameName) => {
-      if (!allGameNames.has(gameName)) {
-        allGameNames.add(gameName);
-        gameMap.set(gameName, []);
-      }
-    });
-
     // Filter out previously guessed games
     const previousGuessesSet = new Set(previousGuesses.map((g) => g.name));
-    const availableGameNames = Array.from(allGameNames).filter(
+    const availableGameNames = allGameNames.filter(
       (name) => !previousGuessesSet.has(name),
     );
 
@@ -62,7 +37,7 @@ export const GameInput: React.FC<GameInputProps> = ({
       .map((name) => ({
         value: name,
         label: name,
-        searchTerms: gameMap.get(name) || [],
+        searchTerms: gameSearchTerms[name] || [],
       }))
       .sort((a, b) => a.label.localeCompare(b.label));
   }, [previousGuesses]);
