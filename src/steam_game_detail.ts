@@ -6455,7 +6455,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1868140/ss_783e1f6c2d4c358fb494d055c47c0e888922abd5.600x338.jpg',
     shortDescription:
-      '||DAVE THE DIVER|| is a casual, singleplayer adventure RPG featuring ||deep-sea exploration and fishing|| during the day and ||sushi restaurant management|| at night. Join ||Dave|| and ||his quirky|| friends as they ||seek to uncover the secrets of|| the mysterious ||Blue Hole||.',
+      '||DAVE THE DIVER|| is a casual, singleplayer adventure RPG featuring ||deep-sea|| exploration ||and fishing|| during the day and ||sushi restaurant|| management at night. Join ||Dave|| and ||his quirky|| friends as they ||seek to uncover the secrets of|| the mysterious ||Blue Hole||.',
     releaseDate: 'Jun 28, 2023',
     developer: 'MINTROCKET',
     publisher: 'MINTROCKET',

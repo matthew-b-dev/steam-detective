@@ -141,8 +141,8 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile4: 'XCOM 2',
   },
   '2026-02-17': {
-    caseFile1: 'Days Gone',
-    caseFile2: 'DAVE THE DIVER',
+    caseFile1: 'DAVE THE DIVER',
+    caseFile2: 'Days Gone',
     caseFile3: 'Papers, Please',
     caseFile4: 'Noita',
   },
