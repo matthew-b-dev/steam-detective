@@ -2451,7 +2451,7 @@ export const steamGameDetails: SteamGameMap = {
     name: 'XCOM 2',
     appId: 268500,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/268500/ss_a95cdbe487dbabf6621962fc92f438e26c5fdfd3.600x338.jpg',
+      'https://images.igdb.com/igdb/image/upload/t_720p/sc828t.webp',
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/268500/ss_ca76303e136d2ea500b8e6546d4319502ae8862a.600x338.jpg',
     shortDescription:

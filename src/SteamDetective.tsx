@@ -508,7 +508,6 @@ const SteamDetective: React.FC<SteamDetectiveProps> = ({
           </div>
         </>
       )}
-
       {/* Date Picker Button */}
       <div className='flex justify-center mb-0'>
         <button
