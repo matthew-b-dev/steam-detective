@@ -14,7 +14,7 @@ const isLocalhost =
   if (!isLocalhost) {
     await supabase.from('page_views').insert([
       {
-        path: window.location.pathname,
+        path: `${window.location.pathname}${window.location.search ?? ''}`,
         referrer: document.referrer,
         user_agent: navigator.userAgent,
         app_name: 'steam',
