@@ -1,14 +1,3 @@
-/**
- * Build script to optimize game data for production
- *
- * This script:
- * 1. Extracts all game names used in demo days from demos.ts
- * 2. In PRODUCTION: Filters steam_game_detail.ts to only include demo games
- * 3. In DEVELOPMENT: Includes all games for easier testing
- * 4. Generates all_game_names.generated.ts with ALL game names for autocomplete
- * 5. Generates steam_game_detail.generated.ts with necessary game details
- */
-
 import { readFileSync, writeFileSync } from 'fs';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
