@@ -1,5 +1,5 @@
 import { useMemo } from 'react';
-import { steamGameDetails } from '../steam_game_detail';
+import { steamGameDetails } from '../steam_game_detail.generated';
 import { getUtcDateString } from '../utils';
 import { STEAM_DETECTIVE_DEMO_DAYS } from '../demos';
 

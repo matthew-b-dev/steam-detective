@@ -101,7 +101,7 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
   '2026-02-10': {
     caseFile1: 'War Thunder',
     caseFile2: 'Torchlight II',
-    caseFile3: "Tom Clancy's Splinter Cell Blacklist",
+    caseFile3: 'DELTARUNE',
     caseFile4: 'Remnant: From the Ashes',
   },
   '2026-02-11': {
