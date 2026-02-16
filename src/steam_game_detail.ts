@@ -2869,7 +2869,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/239030/ss_a1d08145ac2d3e85e8db440ccfeb7f7ad3c8247a.600x338.jpg',
     shortDescription:
-      'Congratulations. The ||October labor|| lottery is complete. Your name was pulled. For immediate placement, report to the Ministry of ||Admission|| at ||Grestin Border Checkpoint||. An apartment will be provided for you and your family in East ||Grestin||. Expect a Class-8 dwelling.',
+      'Congratulations. The October labor lottery is complete. Your name was pulled. For immediate placement, report to the Ministry of ||Admission|| at ||Grestin Border Checkpoint||. An apartment will be provided for you and your family in East Grestin. Expect a Class-8 dwelling.',
     releaseDate: 'Aug 8, 2013',
     developer: 'Lucas Pope',
     publisher: '3909',
@@ -2901,8 +2901,8 @@ export const steamGameDetails: SteamGameMap = {
       'Difficult',
       'Adventure',
     ],
-    blurredUserTags: ['Dystopian', 'Puzzle', 'Point & Click'],
-    clueOrder: ['desc', 'details', 'tags'],
+    blurredUserTags: ['Puzzle'],
+    clueOrder: ['details', 'desc', 'tags'],
     debugProcessed: true,
     debugRefined: true,
     difficulty: 'Hard',
@@ -3102,7 +3102,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1259420/ss_4a1a39d5559909424ed36414070477a96c91e92c.600x338.jpg',
     shortDescription:
-      '||Ride|| and fight into a deadly, post ||pandemic America||. Play as D||eacon|| St. ||John||, a drifter and bounty hunter who ||rides|| the broken road, fighting to survive while searching for a reason to live in this open-world action-adventure game.',
+      'Ride and fight into a deadly, post ||pandemic America||. Play as D||eacon|| St. ||John||, a drifter and bounty hunter who ||rides|| the broken road, fighting to survive while searching for a reason to live in this open-world action-adventure game.',
     releaseDate: 'May 17, 2021',
     developer: 'Bend Studio',
     publisher: 'PlayStation Publishing LLC',
@@ -3134,7 +3134,8 @@ export const steamGameDetails: SteamGameMap = {
       'Gore',
       'Cinematic',
     ],
-    clueOrder: ['desc', 'details', 'tags'],
+    clueOrder: ['details', 'desc', 'tags'],
+    searchTerms: ["day's gone"],
     debugProcessed: true,
     debugRefined: true,
     difficulty: 'Easy',
@@ -6454,7 +6455,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1868140/ss_783e1f6c2d4c358fb494d055c47c0e888922abd5.600x338.jpg',
     shortDescription:
-      '||DAVE THE DIVER|| is a casual, singleplayer adventure RPG featuring deep-sea exploration and fishing during the day and sushi restaurant management at night. Join Dave and his quirky friends as they seek to uncover the secrets of the mysterious Blue Hole.',
+      '||DAVE THE DIVER|| is a casual, singleplayer adventure RPG featuring ||deep-sea exploration and fishing|| during the day and ||sushi restaurant management|| at night. Join ||Dave|| and ||his quirky|| friends as they ||seek to uncover the secrets of|| the mysterious ||Blue Hole||.',
     releaseDate: 'Jun 28, 2023',
     developer: 'MINTROCKET',
     publisher: 'MINTROCKET',
@@ -6486,6 +6487,11 @@ export const steamGameDetails: SteamGameMap = {
       'Action',
       'Indie',
     ],
+    blurredUserTags: ['Fishing', 'Underwater'],
+    clueOrder: ['desc', 'details', 'tags'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Medium',
   },
   '412020': {
     name: 'Metro Exodus',
@@ -7117,7 +7123,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/962130/ss_432b22f117321d942d5bbb4ee49d2acc37b4baf2.600x338.jpg',
     shortDescription:
-      'The world is a vast, beautiful and dangerous place – especially when you have been shrunk to the size of an ant. Can you thrive alongside the hordes of giant insects, fighting to survive the perils of the backyard?',
+      'The world is a vast, beautiful and dangerous place – especially when you have been ||shrunk|| to the ||size|| of an ||ant||. Can you thrive alongside the hordes of ||giant insects||, fighting to survive the perils of ||the backyard||?',
     releaseDate: 'Sep 27, 2022',
     developer: 'Obsidian Entertainment',
     publisher: 'Xbox Game Studios',
@@ -7148,6 +7154,10 @@ export const steamGameDetails: SteamGameMap = {
       'Cute',
       'Funny',
     ],
+    clueOrder: ['details', 'desc', 'tags'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
   },
   '391540': {
     name: 'Undertale',
@@ -7775,13 +7785,14 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/881100/ss_626b401fd6d78ab335ecb8ff1e4b0a8ce7d25f66.600x338.jpg',
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/881100/ss_96308c4c5951740a0e46e0aa66e67bd04e99286a.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/881100/ss_a2797d36d19106bde83824e84dfb6694aeed6bba.600x338.jpg',
     shortDescription:
       "||Noita|| is a magical action roguelite set in a world where every pixel is physically simulated. Fight, explore, melt, burn, freeze and evaporate your way through the procedurally generated world using spells you've created yourself.",
     releaseDate: 'Oct 15, 2020',
     developer: 'Nolla Games',
     publisher: 'Nolla Games',
     tags: ['Action', 'Adventure', 'Indie', 'RPG', 'Simulation'],
+    clueOrder: ['tags', 'details', 'desc'],
     features: [],
     allReviewSummary: {
       count: 45502,

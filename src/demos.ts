@@ -140,10 +140,14 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile3: 'Slime Rancher',
     caseFile4: 'XCOM 2',
   },
-  // 2-17 Hard: Paper's, Please
+  '2026-02-17': {
+    caseFile1: 'Days Gone',
+    caseFile2: 'DAVE THE DIVER',
+    caseFile3: 'Papers, Please',
+    caseFile4: 'Noita',
+  },
 };
 
-// SILENT HILL 2
 // PlanetSide 2
 // DELTARUNE
 //
