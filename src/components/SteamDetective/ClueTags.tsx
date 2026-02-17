@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { useMemo } from 'react';
 import { clueVariants } from './utils';
 
 interface ClueTagsProps {
@@ -34,6 +35,17 @@ export const ClueTags: React.FC<ClueTagsProps> = ({
   show,
   isComplete = false,
 }) => {
+  // Memoize censored tags so they don't re-scramble on every render
+  const censoredTagsMap = useMemo(() => {
+    const map = new Map<string, string>();
+    tags.forEach((tag) => {
+      if (blurredTags.includes(tag)) {
+        map.set(tag, censorText(tag));
+      }
+    });
+    return map;
+  }, [tags, blurredTags]);
+
   return (
     <motion.div
       layout
@@ -50,7 +62,9 @@ export const ClueTags: React.FC<ClueTagsProps> = ({
         <div className='flex flex-wrap gap-[2px]'>
           {tags.slice(0, 10).map((tag, index) => {
             const isBlurred = !isComplete && blurredTags.includes(tag);
-            const displayText = isBlurred ? censorText(tag) : tag;
+            const displayText = isBlurred
+              ? censoredTagsMap.get(tag) || tag
+              : tag;
             return (
               <span
                 key={index}
