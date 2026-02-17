@@ -4,6 +4,11 @@ A daily Steam game trivia puzzle. Uncover clues to identify the mystery game!
 
 Play the live version at https://steamdetective.wtf
 
+## Demo
+
+![firefox_E57pnrFvkG](https://github.com/user-attachments/assets/3dd19e3c-b3a4-4ba3-8982-ecdc0e6275b1)
+
+
 ## Features
 
 - **Daily Puzzles**: New games to guess every day
