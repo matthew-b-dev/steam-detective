@@ -3102,7 +3102,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1259420/ss_4a1a39d5559909424ed36414070477a96c91e92c.600x338.jpg',
     shortDescription:
-      'Ride and fight into a deadly, post ||pandemic America||. Play as D||eacon|| St. ||John||, a drifter and bounty hunter who ||rides|| the broken road, fighting to survive while searching for a reason to live in this open-world action-adventure game.',
+      'Ride and fight into a deadly, post ||pandemic America||. Play as ||Deacon St. John||, a ||drifter and|| bounty hunter who ||rides|| the broken road, fighting to survive while searching for a reason to live in this open-world action-adventure game.',
     releaseDate: 'May 17, 2021',
     developer: 'Bend Studio',
     publisher: 'PlayStation Publishing LLC',
