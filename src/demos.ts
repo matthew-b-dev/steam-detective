@@ -146,8 +146,13 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile3: 'Papers, Please',
     caseFile4: 'Noita',
   },
+  '2026-02-18': {
+    caseFile1: 'Grounded',
+    caseFile2: 'Far Cry 3',
+    caseFile3: 'Human Fall Flat',
+    caseFile4: 'Dwarf Fortress',
+  },
 };
 
+// Euro Truck Simulator 2
 // PlanetSide 2
-// DELTARUNE
-//
