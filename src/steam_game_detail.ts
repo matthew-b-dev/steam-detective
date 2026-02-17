@@ -3986,7 +3986,6 @@ export const steamGameDetails: SteamGameMap = {
       'Casual',
       'Split Screen',
       'Singleplayer',
-
       'Simulation',
     ],
     debugProcessed: true,
@@ -4134,7 +4133,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/860510/ss_a17e682e91c93695f2855be46428c4fc04c997f3.600x338.jpg',
     shortDescription:
-      "||||Little Nightmares II|||| is the second game in a series that has thrilled and captivated millions of players worldwide since 2017. Now it's your turn to try to survive this critically acclaimed entry in the most charming horror series ever made.",
+      "||Little Nightmares II|| is the second game in a series that has thrilled and captivated millions of players worldwide since 2017. Now it's your turn to try to survive this critically acclaimed entry in the most charming horror series ever made.",
     releaseDate: 'Feb 10, 2021',
     developer: 'Tarsier Studios',
     publisher: 'BANDAI NAMCO Entertainment',
@@ -4166,6 +4165,9 @@ export const steamGameDetails: SteamGameMap = {
       'Co-op',
       'Violent',
     ],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Hard',
   },
   '582010': {
     name: 'Monster Hunter: World',
@@ -6707,7 +6709,6 @@ export const steamGameDetails: SteamGameMap = {
   '975370': {
     name: 'Dwarf Fortress',
     appId: 975370,
-    clueOrder: ['details', 'tags', 'desc'],
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/975370/ss_98914e3d8d8cc28ddd94052fedef226ed1bba172.600x338.jpg',
     secondaryScreenshot:
@@ -6746,6 +6747,7 @@ export const steamGameDetails: SteamGameMap = {
       'Exploration',
     ],
     blurredUserTags: ['Dwarf'],
+    clueOrder: ['details', 'tags', 'desc'],
     debugProcessed: true,
     debugRefined: true,
     difficulty: 'Easy',
@@ -7745,6 +7747,9 @@ export const steamGameDetails: SteamGameMap = {
       'Loot',
     ],
     clueOrder: ['desc', 'details', 'tags'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Hard',
   },
   '225540': {
     name: 'Just Cause 3',
@@ -7754,7 +7759,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/225540/ss_ae30914f50d33b12e5c1d65426cc94ed4e497bfa.600x338.jpg',
     shortDescription:
-      'With over 1000 km² of complete freedom from sky to seabed, Rico Rodriguez returns to unleash chaos in the most creative and explosive ways imaginable.',
+      'With over 1000 km² of complete freedom from sky to seabed, ||Rico Rodriguez|| returns to unleash chaos in the most creative and explosive ways imaginable.',
     releaseDate: 'Nov 30, 2015',
     developer: 'Avalanche Studios',
     publisher: 'Square Enix',
@@ -7786,6 +7791,11 @@ export const steamGameDetails: SteamGameMap = {
       'Moddable',
       'RPG',
     ],
+    blurredUserTags: ['Destruction'],
+    clueOrder: ['details', 'tags', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Hard',
   },
   '270880': {
     name: 'American Truck Simulator',
@@ -10089,6 +10099,9 @@ export const steamGameDetails: SteamGameMap = {
       'Action',
       'Simulation',
     ],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Hard',
   },
   '242920': {
     name: 'Banished',
@@ -10342,7 +10355,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/435150/ss_34a428cdd26113e8645b77331d9fc82fcc50a4a2.600x338.jpg',
     shortDescription:
-      "The critically acclaimed RPG that raised the bar, from the creators of Baldur's Gate 3. Gather your party. Master deep, tactical combat. Venture as a party of up to four - but know that only one of you will have the chance to become a God.",
+      "The critically acclaimed RPG that raised the bar, from the creators of ||Baldur's Gate 3||. Gather your party. Master deep, tactical combat. Venture as a party of up to four - but know that only one of you will have the chance to become a God.",
     releaseDate: 'Sep 14, 2017',
     developer: 'Larian Studios',
     publisher: 'Larian Studios',
@@ -10383,7 +10396,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/548430/5ffa803484da48da16db9006d7f4313db8999c2a/ss_5ffa803484da48da16db9006d7f4313db8999c2a.600x338.jpg',
     shortDescription:
-      '||Deep Rock Galactic|| is a 1-4 player co-op FPS featuring dwarven space miners, procedurally-generated destructible environments, and endless hordes of alien monsters. Explore cave systems, mine for minerals, and work together to survive!',
+      '||Deep Rock Galactic|| is a 1-4 player co-op FPS featuring ||dwarven|| space ||miners||, procedurally-generated destructible environments, and endless hordes of ||alien monsters||. Explore ||cave systems||, ||mine|| for ||minerals||, and work together to survive!',
     releaseDate: 'May 13, 2020',
     developer: 'Ghost Ship Games',
     publisher: 'Coffee Stain Publishing',
@@ -10415,6 +10428,10 @@ export const steamGameDetails: SteamGameMap = {
       'Dark',
       'Action Roguelike',
     ],
+    clueOrder: ['details', 'desc', 'tags'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Hard',
   },
   '291550': {
     name: 'Brawlhalla',
@@ -10760,7 +10777,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1623730/ss_a9fa84f0c21bc536f00925ab4586e8c4f587c2b7.600x338.jpg',
     shortDescription:
-      'Fight, farm, build and work alongside mysterious creatures called "Pals" in this completely new multiplayer, open world survival and crafting game!',
+      'Fight, farm, build and ||work|| alongside mysterious ||creatures|| called "||Pals||" in this completely new multiplayer, ||open world survival|| and crafting game!',
     releaseDate: 'Jan 18, 2024',
     developer: 'Pocketpair',
     publisher: 'Pocketpair',
@@ -10791,6 +10808,10 @@ export const steamGameDetails: SteamGameMap = {
       'Exploration',
       'Farming',
     ],
+    clueOrder: ['desc', 'details', 'tags'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Medium',
   },
   '239140': {
     name: 'Dying Light',
@@ -10881,7 +10902,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/588650/ss_7bde51ea6c8f6289e85ea1d8c1c941e1f8bfee91.600x338.jpg',
     shortDescription:
-      "||Dead Cells|| is a roguelite, metroidvania inspired, action-platformer. You'll explore a sprawling, ever-changing castle... assuming you're able to fight your way past its keepers in 2D souls-lite combat. No checkpoints. Kill, die, learn, repeat.",
+      "||Dead Cells is a roguelite, metroidvania inspired, action-platformer. You'll explore a sprawling, ever-changing castle||... assuming you're able to fight your way past its keepers in 2D souls-lite combat. No checkpoints. Kill, die, learn, repeat.",
     releaseDate: 'Aug 6, 2018',
     developer: 'Motion Twin',
     publisher: 'Motion Twin',
@@ -10913,6 +10934,10 @@ export const steamGameDetails: SteamGameMap = {
       'Funny',
       'Indie',
     ],
+    clueOrder: ['desc', 'tags', 'details'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Medium',
   },
   '535930': {
     name: 'Two Point Hospital',

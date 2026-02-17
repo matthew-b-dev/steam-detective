@@ -149,10 +149,12 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
   '2026-02-18': {
     caseFile1: 'Grounded',
     caseFile2: 'Far Cry 3',
-    caseFile3: 'Human Fall Flat',
-    caseFile4: 'Dwarf Fortress',
+    caseFile3: 'Deep Rock Galactic',
+    caseFile4: 'Dead Cells',
   },
 };
 
 // Euro Truck Simulator 2
 // PlanetSide 2
+// caseFile3: 'Just Cause 3',
+// caseFile4: 'Dwarf Fortress',
