@@ -6707,7 +6707,7 @@ export const steamGameDetails: SteamGameMap = {
   '975370': {
     name: 'Dwarf Fortress',
     appId: 975370,
-    clueOrder: ['desc', 'tags', 'details'],
+    clueOrder: ['details', 'tags', 'desc'],
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/975370/ss_98914e3d8d8cc28ddd94052fedef226ed1bba172.600x338.jpg',
     secondaryScreenshot:
@@ -6726,7 +6726,7 @@ export const steamGameDetails: SteamGameMap = {
     userTags: [
       'Dwarf',
       'Colony Sim',
-      'Strategy',
+      'Immersive',
       'Simulation',
       'Base-Building',
       'City Builder',
