@@ -2,6 +2,8 @@
 
 A daily Steam game trivia puzzle. Uncover clues to identify the mystery game!
 
+Play the live version at https://steamdetective.wtf
+
 ## Features
 
 - **Daily Puzzles**: New games to guess every day
