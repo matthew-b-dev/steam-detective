@@ -152,9 +152,16 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile3: 'Deep Rock Galactic',
     caseFile4: 'Dead Cells',
   },
+  '2026-02-19': {
+    caseFile1: "Baldur's Gate 3",
+    caseFile2: 'Geometry Dash',
+    caseFile3: 'Dwarf Fortress',
+    caseFile4: 'Valheim',
+  },
 };
 
 // Euro Truck Simulator 2
-// PlanetSide 2
-// caseFile3: 'Just Cause 3',
+// Palworld
+// caseFile3: Oxygen Not Included
+// 'Just Cause 3',
 // caseFile4: 'Dwarf Fortress',

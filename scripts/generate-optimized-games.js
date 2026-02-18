@@ -73,12 +73,12 @@ let unusedGameNames = [];
 // Parse the full object to extract game entries
 const gameDetailsObj = gameDetailsMatch[1];
 const gameEntryMatches = gameDetailsObj.matchAll(
-  /'(\d+)':\s*{[\s\S]+?name:\s*'([^']+)'[\s\S]+?^  },$/gm,
+  /'(\d+)':\s*{[\s\S]+?name:\s*(['"])(.+?)\2[\s\S]+?^  },$/gm,
 );
 
 for (const match of gameEntryMatches) {
   const appId = match[1];
-  const gameName = match[2];
+  const gameName = match[3];
   allGameNames.push(gameName);
 
   // Try to extract searchTerms for this game
