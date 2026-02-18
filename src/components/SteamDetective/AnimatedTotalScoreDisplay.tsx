@@ -53,104 +53,119 @@ const AnimatedTotalScoreDisplay: React.FC<AnimatedTotalScoreDisplayProps> = ({
   const rankEmoji = getRankEmoji(userRank, totalPlayers);
 
   // Build dot plot data: alternating stack above/below center
-  const { otherScoresData, clusteredScoresData, userScoreData, maxExtent } =
-    useMemo(() => {
-      // Adjust stack step based on dot size - smaller dots need less spacing
-      const STACK_STEP =
-        cappedScores.length > 85 ? 0.2 : cappedScores.length >= 50 ? 0.4 : 0.5;
-      const MAX_STACK_LEVEL = 2; // Max vertical levels before using jitter (allows 5 dots: center + 4 stacked)
-      const PROXIMITY = 25; // scores within this range share a stack
-      const CLUSTER_THRESHOLD = 5; // scores with 5+ exact duplicates get merged into larger dot
-      const others: { x: number; y: number }[] = [];
-      const clustered: { x: number; y: number }[] = [];
+  const {
+    otherScoresData,
+    clusteredScoresData,
+    clustered10PlusScoresData,
+    userScoreData,
+    maxExtent,
+  } = useMemo(() => {
+    // Adjust stack step based on dot size - smaller dots need less spacing
+    const STACK_STEP =
+      cappedScores.length > 85 ? 0.2 : cappedScores.length >= 50 ? 0.4 : 0.5;
+    const MAX_STACK_LEVEL = 2; // Max vertical levels before using jitter (allows 5 dots: center + 4 stacked)
+    const PROXIMITY = 25; // scores within this range share a stack
+    const CLUSTER_THRESHOLD_5 = 5; // scores with 5-9 exact duplicates get merged into larger dot
+    const CLUSTER_THRESHOLD_10 = 10; // scores with 10+ exact duplicates get merged into even larger dot
+    const others: { x: number; y: number }[] = [];
+    const clustered: { x: number; y: number }[] = [];
+    const clustered10Plus: { x: number; y: number }[] = [];
 
-      // User dot always centered vertically
-      const user = [{ x: totalScore, y: 0 }];
+    // User dot always centered vertically
+    const user = [{ x: totalScore, y: 0 }];
 
-      const sorted = [...cappedScores].sort((a, b) => a - b);
+    const sorted = [...cappedScores].sort((a, b) => a - b);
 
-      // Remove first occurrence of user's score
-      const userIndex = sorted.indexOf(totalScore);
-      const allScores =
-        userIndex >= 0
-          ? [...sorted.slice(0, userIndex), ...sorted.slice(userIndex + 1)]
-          : sorted;
+    // Remove first occurrence of user's score
+    const userIndex = sorted.indexOf(totalScore);
+    const allScores =
+      userIndex >= 0
+        ? [...sorted.slice(0, userIndex), ...sorted.slice(userIndex + 1)]
+        : sorted;
 
-      // Count exact duplicates for each score
-      const scoreCounts = new Map<number, number>();
-      for (const s of allScores) {
-        scoreCounts.set(s, (scoreCounts.get(s) || 0) + 1);
+    // Count exact duplicates for each score
+    const scoreCounts = new Map<number, number>();
+    for (const s of allScores) {
+      scoreCounts.set(s, (scoreCounts.get(s) || 0) + 1);
+    }
+
+    // Track stacking per cluster of nearby scores
+    // Each entry: { anchor: number, count: number } — anchor is the first score in the cluster
+    const clusters: { anchor: number; count: number }[] = [];
+
+    const getCluster = (score: number) => {
+      for (const c of clusters) {
+        if (Math.abs(score - c.anchor) <= PROXIMITY) return c;
+      }
+      return null;
+    };
+
+    // User's score occupies position 0 in its cluster
+    clusters.push({ anchor: totalScore, count: 1 });
+
+    // Track which scores have been processed (to avoid duplicates in clustered array)
+    const processedClustered = new Set<number>();
+
+    for (const s of allScores) {
+      const count = scoreCounts.get(s)!;
+
+      // If this exact score appears 10+ times, add ONE extra large dot (only once per unique score)
+      if (count >= CLUSTER_THRESHOLD_10 && !processedClustered.has(s)) {
+        clustered10Plus.push({ x: s, y: 0 });
+        processedClustered.add(s);
+        continue; // Skip adding to normal dots
       }
 
-      // Track stacking per cluster of nearby scores
-      // Each entry: { anchor: number, count: number } — anchor is the first score in the cluster
-      const clusters: { anchor: number; count: number }[] = [];
+      // If this exact score appears 5-9 times, add ONE large dot (only once per unique score)
+      if (count >= CLUSTER_THRESHOLD_5 && !processedClustered.has(s)) {
+        clustered.push({ x: s, y: 0 });
+        processedClustered.add(s);
+        continue; // Skip adding to normal dots
+      }
 
-      const getCluster = (score: number) => {
-        for (const c of clusters) {
-          if (Math.abs(score - c.anchor) <= PROXIMITY) return c;
-        }
-        return null;
-      };
+      // Skip if already added to clustered
+      if (processedClustered.has(s)) {
+        continue;
+      }
 
-      // User's score occupies position 0 in its cluster
-      clusters.push({ anchor: totalScore, count: 1 });
+      // Normal stacking for scores with < 5 duplicates
+      let cluster = getCluster(s);
+      if (!cluster) {
+        // New cluster; first dot goes at center
+        cluster = { anchor: s, count: 0 };
+        clusters.push(cluster);
+        others.push({ x: s, y: 0 });
+      } else {
+        // Alternate above and below: count 1,+1, 2,-1, 3,+2, 4,-2, ...
+        const n = cluster.count;
+        const level = Math.ceil(n / 2);
 
-      // Track which scores have been processed (to avoid duplicates in clustered array)
-      const processedClustered = new Set<number>();
-
-      for (const s of allScores) {
-        const count = scoreCounts.get(s)!;
-
-        // If this exact score appears 5+ times, add ONE large dot (only once per unique score)
-        if (count >= CLUSTER_THRESHOLD && !processedClustered.has(s)) {
-          clustered.push({ x: s, y: 0 });
-          processedClustered.add(s);
-          continue; // Skip adding to normal dots
-        }
-
-        // Skip if already added to clustered
-        if (processedClustered.has(s)) {
-          continue;
-        }
-
-        // Normal stacking for scores with < 5 duplicates
-        let cluster = getCluster(s);
-        if (!cluster) {
-          // New cluster; first dot goes at center
-          cluster = { anchor: s, count: 0 };
-          clusters.push(cluster);
-          others.push({ x: s, y: 0 });
+        // If stack exceeds max level, use deterministic jitter instead
+        if (level > MAX_STACK_LEVEL) {
+          // Use score and count to create deterministic offset
+          const seed = (s * 17 + n * 31) % 100;
+          const jitter = (seed / 100 - 0.5) * 0.4; // Deterministic offset +/-0.2
+          others.push({ x: s, y: jitter });
         } else {
-          // Alternate above and below: count 1,+1, 2,-1, 3,+2, 4,-2, ...
-          const n = cluster.count;
-          const level = Math.ceil(n / 2);
-
-          // If stack exceeds max level, use deterministic jitter instead
-          if (level > MAX_STACK_LEVEL) {
-            // Use score and count to create deterministic offset
-            const seed = (s * 17 + n * 31) % 100;
-            const jitter = (seed / 100 - 0.5) * 0.4; // Deterministic offset +/-0.2
-            others.push({ x: s, y: jitter });
-          } else {
-            const y = n % 2 === 1 ? level * STACK_STEP : -level * STACK_STEP;
-            others.push({ x: s, y });
-          }
+          const y = n % 2 === 1 ? level * STACK_STEP : -level * STACK_STEP;
+          others.push({ x: s, y });
         }
-        cluster.count++;
       }
+      cluster.count++;
+    }
 
-      // Compute max extent for dynamic axis range
-      const allY = [...others.map((d) => Math.abs(d.y)), 0];
-      const maxExtent = Math.max(...allY);
+    // Compute max extent for dynamic axis range
+    const allY = [...others.map((d) => Math.abs(d.y)), 0];
+    const maxExtent = Math.max(...allY);
 
-      return {
-        otherScoresData: others,
-        clusteredScoresData: clustered,
-        userScoreData: user,
-        maxExtent,
-      };
-    }, [cappedScores, totalScore]);
+    return {
+      otherScoresData: others,
+      clusteredScoresData: clustered,
+      clustered10PlusScoresData: clustered10Plus,
+      userScoreData: user,
+      maxExtent,
+    };
+  }, [cappedScores, totalScore]);
 
   // Dynamic y bounds: at least 2, otherwise maxExtent + padding
   const yBound = Math.max(2, maxExtent + 0.8);
@@ -200,20 +215,24 @@ const AnimatedTotalScoreDisplay: React.FC<AnimatedTotalScoreDisplayProps> = ({
           },
         },
       },
-      colors: ['#3b82f6', '#3b82f6', '#22c55e'], // blue for normal others, blue for clustered, green for user
+      colors: ['#3b82f6', '#3b82f6', '#3b82f6', '#22c55e'], // blue for normal others, blue for 5+ clustered, blue for 10+ clustered, green for user
       markers: {
-        // Array: [normal others, clustered others, user]
+        // Array: [normal others, 5+ clustered others, 10+ clustered others, user]
         // For 5x area: radius = sqrt(5) * normal_radius ≈ 2.236 * normal_radius
+        // For 10+ area: 33% bigger than 5+ dot
         size: [
           // normal dots
           todayScores.length > 85 ? 3 : todayScores.length >= 50 ? 4 : 5,
-          // clustered dots (5+)
+          // 5+ clustered dots
           todayScores.length > 85 ? 7 : todayScores.length >= 50 ? 10 : 13,
+          // 10+ clustered dots (33% bigger than 5+)
+          todayScores.length > 85 ? 9 : todayScores.length >= 50 ? 13 : 17,
           // user dot
           8,
         ],
-        strokeWidth: [0, 0, 2],
-        strokeColors: ['transparent', 'transparent', '#ffffff'],
+        strokeWidth: [0, 0, 0, 2],
+        strokeColors: ['transparent', 'transparent', 'transparent', '#ffffff'],
+        fillOpacity: [1, 1, 0.6, 1], // 10+ dots more transparent
         hover: { size: undefined, sizeOffset: 0 },
       },
       states: {
@@ -251,9 +270,11 @@ const AnimatedTotalScoreDisplay: React.FC<AnimatedTotalScoreDisplayProps> = ({
             formatter: (seriesName: string) =>
               seriesName === 'You'
                 ? '⭐ You:'
-                : seriesName === 'Others (5+)'
-                  ? '5+ Players:'
-                  : 'Score:',
+                : seriesName === 'Others (10+)'
+                  ? '10+ Players:'
+                  : seriesName === 'Others (5+)'
+                    ? '5+ Players:'
+                    : 'Score:',
           },
           formatter: (
             _val: number,
@@ -334,11 +355,20 @@ const AnimatedTotalScoreDisplay: React.FC<AnimatedTotalScoreDisplayProps> = ({
         data: clusteredScoresData,
       },
       {
+        name: 'Others (10+)',
+        data: clustered10PlusScoresData,
+      },
+      {
         name: 'You',
         data: userScoreData,
       },
     ],
-    [otherScoresData, clusteredScoresData, userScoreData],
+    [
+      otherScoresData,
+      clusteredScoresData,
+      clustered10PlusScoresData,
+      userScoreData,
+    ],
   );
 
   // Animate score counting and sequence
