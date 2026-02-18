@@ -232,7 +232,7 @@ const AnimatedTotalScoreDisplay: React.FC<AnimatedTotalScoreDisplayProps> = ({
         ],
         strokeWidth: [0, 0, 0, 2],
         strokeColors: ['transparent', 'transparent', 'transparent', '#ffffff'],
-        fillOpacity: [1, 1, 0.6, 1], // 10+ dots more transparent
+        fillOpacity: [1, 0.6, 0.6, 1], // 5+ and 10+ dots more transparent
         hover: { size: undefined, sizeOffset: 0 },
       },
       states: {
