@@ -6746,7 +6746,6 @@ export const steamGameDetails: SteamGameMap = {
       'Difficult',
       'Exploration',
     ],
-    blurredUserTags: ['Dwarf'],
     clueOrder: ['desc', 'tags', 'details'],
     debugProcessed: true,
     debugRefined: true,
