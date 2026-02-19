@@ -344,7 +344,6 @@ export const dummyGames: string[] = [
   'Shiren the Wanderer: The Tower of Fortune and the Dice of Fate',
   'Final Fantasy Explorers',
   'EARTHLOCK',
-  'Ori and the Blind Forest: Definitive Edition',
   'Digimon Story: Cyber Sleuth',
   'Clustertruck',
   'Sword Art Online: Hollow Realization',

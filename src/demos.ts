@@ -158,10 +158,15 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile3: 'Dwarf Fortress',
     caseFile4: 'Valheim',
   },
+  '2026-02-20': {
+    caseFile1: 'Euro Truck Simulator 2',
+    caseFile2: 'Palworld',
+    caseFile4: 'Ori and the Will of the Wisps',
+    caseFile3: 'Getting Over It with Bennett Foddy',
+  },
 };
 
 // Euro Truck Simulator 2
 // Palworld
 // caseFile3: Oxygen Not Included
 // 'Just Cause 3',
-// caseFile4: 'Dwarf Fortress',
