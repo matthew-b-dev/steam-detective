@@ -22,12 +22,23 @@ export const sendFeedback = async (
 };
 
 // New function for sending scores to the scores table
-export const sendNewSteamScore = async (playerScore: number): Promise<void> => {
-  console.log('sending score: ', playerScore);
+export const sendNewSteamScore = async (
+  playerScore: number,
+  caseGuesses?: [number, number, number, number],
+): Promise<void> => {
+  console.log('sending score: ', playerScore, caseGuesses);
   const { error } = await supabase.from('scores').insert({
     created_at: getUtcDateString(),
     score: playerScore,
     gametype: 'steam',
+    ...(caseGuesses
+      ? {
+          case1_guesses: caseGuesses[0],
+          case2_guesses: caseGuesses[1],
+          case3_guesses: caseGuesses[2],
+          case4_guesses: caseGuesses[3],
+        }
+      : {}),
   });
 
   if (error) {

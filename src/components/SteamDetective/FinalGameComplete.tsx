@@ -54,7 +54,16 @@ const FinalGameComplete: React.FC<FinalGameCompleteProps> = ({
         if (!hasSentScoreThisSession.current && !state?.totalScoreSent) {
           hasSentScoreThisSession.current = true; // Prevent duplicate sends
           try {
-            await sendNewSteamScore(totalScore);
+            // Collect per-case-file guess counts from saved state
+            const caseGuesses = state
+              ? ([
+                  state.caseFile1?.totalGuesses ?? 7,
+                  state.caseFile2?.totalGuesses ?? 7,
+                  state.caseFile3?.totalGuesses ?? 7,
+                  state.caseFile4?.totalGuesses ?? 7,
+                ] as [number, number, number, number])
+              : undefined;
+            await sendNewSteamScore(totalScore, caseGuesses);
             saveTotalScoreSent(currentPuzzleDate);
           } catch (error) {
             console.error('Error sending score:', error);
