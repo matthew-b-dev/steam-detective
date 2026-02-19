@@ -2826,7 +2826,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/892970/ss_cd0262c5abf8a90ee5e1059acafc5a92b6be0e73.600x338.jpg',
     shortDescription:
-      "A brutal exploration and survival game for 1-10 players, set in a procedurally-generated purgatory inspired by ||viking|| culture. Battle, build, and conquer your way to a saga worthy of ||Odin's|| patronage!",
+      "A brutal exploration and survival game for 1-10 players, set in a procedurally-generated purgatory inspired by ||viking|| culture. Battle, build, and conquer your way to a saga worthy of Odin's patronage!",
     releaseDate: 'Feb 2, 2021',
     developer: 'Iron Gate AB',
     publisher: 'Coffee Stain Publishing',
