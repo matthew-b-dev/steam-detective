@@ -226,7 +226,7 @@ const AnimatedTotalScoreDisplay: React.FC<AnimatedTotalScoreDisplayProps> = ({
           // 5+ clustered dots
           todayScores.length > 85 ? 7 : todayScores.length >= 50 ? 10 : 13,
           // 10+ clustered dots (33% bigger than 5+)
-          todayScores.length > 85 ? 9 : todayScores.length >= 50 ? 13 : 17,
+          todayScores.length > 85 ? 12 : todayScores.length >= 50 ? 17 : 23,
           // user dot
           8,
         ],
