@@ -36,6 +36,28 @@ const PuzzleDatePicker: React.FC<PuzzleDatePickerProps> = ({
   const [currentYear, setCurrentYear] = useState(realUtcDate.year);
   const [isLoading, setIsLoading] = useState(false);
 
+  // Scan localStorage for completed puzzle dates whenever the modal opens
+  const completedDates = React.useMemo(() => {
+    if (!isOpen) return new Set<string>();
+    const completed = new Set<string>();
+    const prefix = 'steam-detective-state-';
+    for (let i = 0; i < localStorage.length; i++) {
+      const key = localStorage.key(i);
+      if (key && key.startsWith(prefix)) {
+        const dateStr = key.slice(prefix.length);
+        try {
+          const state = JSON.parse(localStorage.getItem(key) ?? '{}');
+          if (state.allCasesComplete === true) {
+            completed.add(dateStr);
+          }
+        } catch {
+          // ignore malformed entries
+        }
+      }
+    }
+    return completed;
+  }, [isOpen]);
+
   // Reset loading state when page is restored from back-forward cache
   useEffect(() => {
     const handlePageShow = (event: PageTransitionEvent) => {
@@ -119,6 +141,11 @@ const PuzzleDatePicker: React.FC<PuzzleDatePickerProps> = ({
     setCurrentYear(nextYear);
   };
 
+  const isCompleted = (day: number): boolean => {
+    const dateStr = `${currentYear}-${String(currentMonth).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+    return completedDates.has(dateStr);
+  };
+
   const isCurrentPuzzle = (day: number): boolean => {
     return (
       currentYear === puzzleYear &&
@@ -162,6 +189,11 @@ const PuzzleDatePicker: React.FC<PuzzleDatePickerProps> = ({
     currentYear > minDate.year ||
     (currentYear === minDate.year && currentMonth > minDate.month);
 
+  const todayIsSelected =
+    realUtcDate.year === puzzleYear &&
+    realUtcDate.month === puzzleMonth &&
+    realUtcDate.day === puzzleDay;
+
   return (
     <motion.div
       className='fixed inset-0 bg-black bg-opacity-50 flex items-start pt-14 justify-center z-50'
@@ -171,7 +203,7 @@ const PuzzleDatePicker: React.FC<PuzzleDatePickerProps> = ({
       transition={{ duration: 0.2 }}
     >
       <motion.div
-        className='bg-zinc-800 p-6 rounded-lg shadow-xl max-w-md w-full mx-4'
+        className='bg-zinc-800 p-6 rounded-lg shadow-xl max-w-md w-full mx-0 sm:mx-4'
         onClick={(e) => e.stopPropagation()}
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -229,12 +261,16 @@ const PuzzleDatePicker: React.FC<PuzzleDatePickerProps> = ({
                       <button
                         onClick={() => handleDayClick(day)}
                         disabled={isDateDisabled(day)}
-                        className={`w-full h-full rounded hover:bg-zinc-700 disabled:cursor-not-allowed disabled:hover:bg-transparent transition-colors ${
-                          isCurrentPuzzle(day)
-                            ? 'border-2 border-blue-500 text-blue-400 font-bold'
-                            : isDateDisabled(day)
-                              ? 'text-gray-600'
-                              : ''
+                        className={`w-full h-full rounded disabled:cursor-not-allowed transition-colors ${
+                          isCurrentPuzzle(day) && isCompleted(day)
+                            ? 'bg-green-950 border-2 border-white text-green-100 font-bold'
+                            : isCurrentPuzzle(day)
+                              ? 'border-2 border-blue-500 text-blue-400 font-bold hover:bg-zinc-700'
+                              : isCompleted(day)
+                                ? 'bg-green-800 hover:bg-green-700 text-green-100 font-semibold'
+                                : isDateDisabled(day)
+                                  ? 'text-gray-600 disabled:hover:bg-transparent'
+                                  : 'hover:bg-zinc-700'
                         }`}
                       >
                         {day}
@@ -247,28 +283,41 @@ const PuzzleDatePicker: React.FC<PuzzleDatePickerProps> = ({
               </div>
             </div>
 
-            <div className='mt-4 flex justify-end'>
-              <button
-                onClick={() => {
-                  const todayStr = `${realUtcDate.year}-${String(realUtcDate.month).padStart(2, '0')}-${String(realUtcDate.day).padStart(2, '0')}`;
-                  setIsLoading(true);
-                  onDateSelect(todayStr);
-                }}
-                disabled={
-                  realUtcDate.year === puzzleYear &&
-                  realUtcDate.month === puzzleMonth &&
-                  realUtcDate.day === puzzleDay
-                }
-                className='px-4 py-2 mr-2 bg-green-700 hover:bg-green-600 rounded transition disabled:opacity-50 disabled:cursor-not-allowed'
+            <div className='mt-4 flex justify-between'>
+              <div
+                id='calendar-legend'
+                className='text-xs text-gray-400 flex flex-col justify-center gap-1'
               >
-                Today
-              </button>
-              <button
-                onClick={onClose}
-                className='px-4 py-2 bg-zinc-700 hover:bg-zinc-600 rounded transition'
-              >
-                Close
-              </button>
+                <div className='flex items-center gap-2'>
+                  <div className='w-4 h-4 rounded bg-green-800 flex-shrink-0' />
+                  <span>Complete</span>
+                </div>
+                <div className='flex items-center gap-2'>
+                  <div className='w-4 h-4 rounded bg-[#1a1a1a] flex-shrink-0' />
+                  <span>Incomplete</span>
+                </div>
+              </div>
+              <div className='flex'>
+                {!todayIsSelected && (
+                  <button
+                    onClick={() => {
+                      const todayStr = `${realUtcDate.year}-${String(realUtcDate.month).padStart(2, '0')}-${String(realUtcDate.day).padStart(2, '0')}`;
+                      setIsLoading(true);
+                      onDateSelect(todayStr);
+                    }}
+                    className='px-3 py-1 mr-2 text-sm text-black bg-yellow-500 hover:bg-yellow-600 rounded transition disabled:opacity-50 disabled:cursor-not-allowed'
+                  >
+                    Today
+                  </button>
+                )}
+
+                <button
+                  onClick={onClose}
+                  className='px-3 py-1 text-sm bg-zinc-700 hover:bg-zinc-600 rounded transition'
+                >
+                  Close
+                </button>
+              </div>
             </div>
           </>
         )}

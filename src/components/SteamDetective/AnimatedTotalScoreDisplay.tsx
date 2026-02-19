@@ -464,7 +464,7 @@ const AnimatedTotalScoreDisplay: React.FC<AnimatedTotalScoreDisplayProps> = ({
               <AnimatePresence>
                 {showBigRank && todayScores.length > 1 && (
                   <motion.div
-                    className='text-white text-2xl font-semibold mt-3'
+                    className='text-white text-lg sm:text-2xl font-semibold mt-3'
                     initial={{ opacity: 0, y: -10 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0 }}
