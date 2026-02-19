@@ -4089,7 +4089,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/227300/ss_e040f74641ac21f15e3ec7c2415fc8b4de0b6bf9.600x338.jpg',
     shortDescription:
-      'Travel across Europe as king of the road, a ||trucker|| who delivers important ||cargo|| across impressive distances! With dozens of cities to explore, your endurance, skill and speed will all be pushed to their limits.',
+      'Travel across Europe as king of the ||road||, a ||trucker|| who ||delivers|| important ||cargo|| across impressive distances! With dozens of ||cities|| to explore, your endurance, skill and ||speed|| will all be pushed to their limits.',
     releaseDate: 'Oct 12, 2012',
     developer: 'SCS Software',
     publisher: 'SCS Software',
