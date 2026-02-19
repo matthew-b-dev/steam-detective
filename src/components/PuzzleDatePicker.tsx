@@ -154,6 +154,25 @@ const PuzzleDatePicker: React.FC<PuzzleDatePickerProps> = ({
     );
   };
 
+  const isBeforeMinDate = (day: number): boolean => {
+    const date = new CalendarDate(currentYear, currentMonth, day);
+    return date.compare(minDate) < 0;
+  };
+
+  const getDayClassName = (day: number): string => {
+    const base = 'w-full h-full rounded transition-colors';
+    if (isCurrentPuzzle(day) && isCompleted(day))
+      return `${base} bg-green-950 border-2 border-white text-green-100 font-bold`;
+    if (isCurrentPuzzle(day))
+      return `${base} border-2 border-blue-500 text-blue-400 font-bold hover:bg-zinc-700`;
+    if (isCompleted(day))
+      return `${base} bg-green-800 hover:bg-green-700 text-green-100 font-semibold`;
+    if (isBeforeMinDate(day)) return `${base} text-gray-600 cursor-not-allowed`;
+    if (isDateDisabled(day))
+      return `${base} text-gray-600 disabled:cursor-not-allowed disabled:hover:bg-transparent`;
+    return `${base} hover:bg-zinc-700`;
+  };
+
   const isDateDisabled = (day: number): boolean => {
     const date = new CalendarDate(currentYear, currentMonth, day);
     // Disable if date is before minimum date, after today (future dates), OR if it's the current puzzle date
@@ -256,25 +275,26 @@ const PuzzleDatePicker: React.FC<PuzzleDatePickerProps> = ({
                   </div>
                 ))}
                 {days.map((day, index) => (
-                  <div key={index} className='aspect-square'>
+                  <div key={index} className='aspect-square relative group'>
                     {day !== null ? (
-                      <button
-                        onClick={() => handleDayClick(day)}
-                        disabled={isDateDisabled(day)}
-                        className={`w-full h-full rounded disabled:cursor-not-allowed transition-colors ${
-                          isCurrentPuzzle(day) && isCompleted(day)
-                            ? 'bg-green-950 border-2 border-white text-green-100 font-bold'
-                            : isCurrentPuzzle(day)
-                              ? 'border-2 border-blue-500 text-blue-400 font-bold hover:bg-zinc-700'
-                              : isCompleted(day)
-                                ? 'bg-green-800 hover:bg-green-700 text-green-100 font-semibold'
-                                : isDateDisabled(day)
-                                  ? 'text-gray-600 disabled:hover:bg-transparent'
-                                  : 'hover:bg-zinc-700'
-                        }`}
-                      >
-                        {day}
-                      </button>
+                      <>
+                        <button
+                          onClick={() => {
+                            if (!isBeforeMinDate(day)) handleDayClick(day);
+                          }}
+                          disabled={
+                            isDateDisabled(day) && !isBeforeMinDate(day)
+                          }
+                          className={getDayClassName(day)}
+                        >
+                          {day}
+                        </button>
+                        {isBeforeMinDate(day) && (
+                          <div className='pointer-events-none absolute bottom-full left-1/2 -translate-x-1/2 mb-1 w-max max-w-[11rem] rounded bg-zinc-900 border border-zinc-600 px-2 py-1 text-xs text-gray-300 text-center invisible group-hover:visible group-focus-within:visible z-10'>
+                            The first ever puzzle was Feb 4, 2026.
+                          </div>
+                        )}
+                      </>
                     ) : (
                       <div />
                     )}
