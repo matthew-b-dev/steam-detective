@@ -237,10 +237,11 @@ function useCountUp(
 // ─── Stat tile ───────────────────────────────────────────────────────────────
 const StatTile: React.FC<{
   label: string;
+  overrideLabelStyle?: string;
   value: React.ReactNode;
   overrideValueStyle?: string;
   sublabel?: React.ReactNode;
-}> = ({ label, value, overrideValueStyle, sublabel }) => (
+}> = ({ label, value, overrideValueStyle, overrideLabelStyle, sublabel }) => (
   <div className='flex flex-col items-center bg-zinc-800 rounded-lg px-3 py-3 min-w-0'>
     <span
       className={
@@ -249,7 +250,12 @@ const StatTile: React.FC<{
     >
       {value}
     </span>
-    <span className='text-[11px] text-zinc-400 text-center leading-tight mt-1'>
+    <span
+      className={
+        overrideLabelStyle ??
+        'text-[11px] text-zinc-400 text-center leading-tight mt-1'
+      }
+    >
       {label}
     </span>
     {sublabel && (
@@ -497,6 +503,7 @@ const StatsModal: React.FC<StatsModalProps> = ({ isOpen, onClose }) => {
                   <div className='grid grid-cols-1 gap-2 mb-4'>
                     <StatTile
                       label='Avg Score / Game'
+                      overrideLabelStyle='text-[14px] text-zinc-400 text-center leading-tight mt-1'
                       overrideValueStyle='text-xl sm:text-2xl font-black text-white'
                       value={
                         stats.averageScore !== null ? (
