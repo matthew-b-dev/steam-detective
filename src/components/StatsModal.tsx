@@ -8,6 +8,7 @@ import {
 } from '@heroicons/react/16/solid';
 import { DocumentDuplicateIcon } from '@heroicons/react/24/solid';
 import type { UnifiedGameState } from '../utils';
+import { isLocalhost } from '../utils';
 import useBodyScrollLock from '../hooks/useBodyScrollLock';
 import { sendFeedback } from '../lib/supabaseClient';
 
@@ -18,6 +19,7 @@ interface StatsModalProps {
 
 const LAUNCH_DATE = '2026-02-04';
 const STORAGE_KEY_PREFIX = 'steam-detective-state-';
+const IS_PROD = !isLocalhost();
 
 function getAllPuzzleDates(): string[] {
   const start = new Date(LAUNCH_DATE + 'T00:00:00Z');
@@ -299,7 +301,7 @@ const StatsModal: React.FC<StatsModalProps> = ({ isOpen, onClose }) => {
         ? `🏆 ${stats.averageScore} Avg Score per Day`
         : null;
     const shareText = [
-      'https://SteamDetective.wtf\n🕵️ My stats',
+      'https://SteamDetective.wtf\n🕵️ My overall stats',
       `🗓️ ${stats.daysFullyCompleted} ${stats.daysFullyCompleted === 1 ? 'Day' : 'Days'} Completed`,
       `🎯 ${solveRatePct !== null ? `${solveRatePct}% Case Solve Rate` : 'No cases played'}`,
       avgStr,
@@ -316,11 +318,11 @@ const StatsModal: React.FC<StatsModalProps> = ({ isOpen, onClose }) => {
       document.body.removeChild(el);
     });
     toast.success('Stats copied to clipboard!');
-    sendFeedback('custom', '`[Stats]` Copied Stats to Share');
+    if (IS_PROD) sendFeedback('custom', '`[Stats]` Copied Stats to Share');
   };
 
   const handleExport = async () => {
-    sendFeedback('custom', '`[Stats]` Exported Data');
+    if (IS_PROD) sendFeedback('custom', '`[Stats]` Exported Data');
     const data = getAllSteamDetectiveStorage();
     const json = JSON.stringify(data);
     try {
@@ -406,7 +408,7 @@ const StatsModal: React.FC<StatsModalProps> = ({ isOpen, onClose }) => {
       }
       setIsImporting(true);
       sessionStorage.setItem('steam-detective-import-success', '1');
-      sendFeedback('custom', '`[Stats]` Imported Data');
+      if (IS_PROD) sendFeedback('custom', '`[Stats]` Imported Data');
       setTimeout(() => window.location.reload(), 500);
     } catch {
       setImportError('Could not parse data. Please paste a valid export.');
