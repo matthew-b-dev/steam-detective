@@ -164,9 +164,15 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile4: 'Ori and the Will of the Wisps',
     caseFile3: 'Getting Over It with Bennett Foddy',
   },
+  '2026-02-21': {
+    caseFile1: "Sid Meier's Civilization VI",
+    caseFile2: 'Risk of Rain 2',
+    caseFile3: 'RimWorld',
+    caseFile4: 'PAYDAY 2',
+  },
 };
-
-// Euro Truck Simulator 2
-// Palworld
+// MEd:  Totally Accurate Battle Simulator
+// Easy : Kerbal Space Program
+// HARD: Don't Starve
 // caseFile3: Oxygen Not Included
 // 'Just Cause 3',

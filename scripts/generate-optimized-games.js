@@ -157,10 +157,10 @@ const dummyGamesContent = readFileSync(
 // Extract game names from the array (more robust than eval)
 const dummyGamesArray = [];
 const dummyGameMatches = dummyGamesContent.matchAll(
-  /^\s*['"]([^'"]+)['"],?\s*$/gm,
+  /^\s*(?:"([^"]+)"|'([^']+)')\s*,?\s*$/gm,
 );
 for (const match of dummyGameMatches) {
-  dummyGamesArray.push(match[1]);
+  dummyGamesArray.push(match[1] || match[2]);
 }
 
 console.log(`✅ Found ${dummyGamesArray.length} dummy games`);
