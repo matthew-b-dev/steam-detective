@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import toast from 'react-hot-toast';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
@@ -9,6 +9,7 @@ import {
 import { DocumentDuplicateIcon } from '@heroicons/react/24/solid';
 import type { UnifiedGameState } from '../utils';
 import useBodyScrollLock from '../hooks/useBodyScrollLock';
+import { sendFeedback } from '../lib/supabaseClient';
 
 interface StatsModalProps {
   isOpen: boolean;
@@ -151,6 +152,29 @@ function computeStats(): ComputedStats {
   };
 }
 
+// Control points: [score, percentile of players beaten]
+// 185 → 50%, 250 → 80%, 300 → 90%, 330 → 99%
+const PERCENTILE_POINTS: [number, number][] = [
+  [0, 0],
+  [185, 50],
+  [250, 80],
+  [300, 90],
+  [330, 99],
+];
+
+function scoreToPercentile(score: number): number {
+  if (score <= PERCENTILE_POINTS[0][0]) return 0;
+  if (score >= PERCENTILE_POINTS[PERCENTILE_POINTS.length - 1][0]) return 99;
+  for (let i = 1; i < PERCENTILE_POINTS.length; i++) {
+    const [x0, y0] = PERCENTILE_POINTS[i - 1];
+    const [x1, y1] = PERCENTILE_POINTS[i];
+    if (score <= x1) {
+      return Math.round(y0 + ((score - x0) / (x1 - x0)) * (y1 - y0));
+    }
+  }
+  return 99;
+}
+
 function getAllSteamDetectiveStorage(): Record<string, string> {
   const data: Record<string, string> = {};
   for (let i = 0; i < localStorage.length; i++) {
@@ -162,16 +186,77 @@ function getAllSteamDetectiveStorage(): Record<string, string> {
   return data;
 }
 
+// ─── Count-up animation hook ────────────────────────────────────────────────
+function useCountUp(
+  target: number,
+  duration: number = 800,
+  decimalPlaces: number = 0,
+): number {
+  const [current, setCurrent] = useState(0);
+  const rafRef = useRef<number | null>(null);
+
+  useEffect(() => {
+    if (rafRef.current !== null) {
+      cancelAnimationFrame(rafRef.current);
+      rafRef.current = null;
+    }
+
+    if (target === 0) return;
+
+    const startTime = performance.now();
+    const animate = (now: number) => {
+      const elapsed = now - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const easeOut = 1 - Math.pow(1 - progress, 3);
+      const raw = easeOut * target;
+      const factor = Math.pow(10, decimalPlaces);
+      const value =
+        decimalPlaces === 0
+          ? Math.floor(raw)
+          : Math.round(raw * factor) / factor;
+      setCurrent(value);
+      if (progress < 1) {
+        rafRef.current = requestAnimationFrame(animate);
+      } else {
+        setCurrent(target);
+        rafRef.current = null;
+      }
+    };
+    rafRef.current = requestAnimationFrame(animate);
+    return () => {
+      if (rafRef.current !== null) {
+        cancelAnimationFrame(rafRef.current);
+        rafRef.current = null;
+      }
+    };
+  }, [target, duration, decimalPlaces]);
+
+  return current;
+}
+
 // ─── Stat tile ───────────────────────────────────────────────────────────────
-const StatTile: React.FC<{ label: string; value: string | number }> = ({
-  label,
-  value,
-}) => (
+const StatTile: React.FC<{
+  label: string;
+  value: React.ReactNode;
+  overrideValueStyle?: string;
+  sublabel?: React.ReactNode;
+}> = ({ label, value, overrideValueStyle, sublabel }) => (
   <div className='flex flex-col items-center bg-zinc-800 rounded-lg px-3 py-3 min-w-0'>
-    <span className='text-2xl font-black text-white'>{value}</span>
+    <span
+      className={
+        overrideValueStyle ?? 'text-lg sm:text-2xl font-black text-white'
+      }
+    >
+      {value}
+    </span>
     <span className='text-[11px] text-zinc-400 text-center leading-tight mt-1'>
       {label}
     </span>
+    {sublabel && (
+      <span className='text-[11px] text-zinc-400 text-center leading-tight mt-1'>
+        {sublabel}
+      </span>
+    )}
   </div>
 );
 
@@ -198,20 +283,21 @@ const StatsModal: React.FC<StatsModalProps> = ({ isOpen, onClose }) => {
       stats.totalGamesPlayed > 0
         ? Math.round((stats.totalGamesSolved / stats.totalGamesPlayed) * 100)
         : null;
+    /* Not shown until I can figure out some kind of forgiveness system
     const streakStr =
       stats.currentStreak > 0
         ? `🔥 ${stats.currentStreak} Day Streak (Best: ${stats.bestStreak})`
-        : `🔥 0 Day Streak (Best: ${stats.bestStreak})`;
+        : `🔥 0 Day Streak (Best: ${stats.bestStreak})`;*/
     const avgStr =
       stats.averageScore !== null
         ? `🏆 ${stats.averageScore} Avg Score per Day`
         : null;
     const shareText = [
-      '🕵️ https://SteamDetective.wtf - My Stats',
-      `📅 ${stats.daysFullyCompleted} ${stats.daysFullyCompleted === 1 ? 'Day' : 'Days'} Completed`,
+      'https://SteamDetective.wtf\n🕵️ My stats',
+      `🗓️ ${stats.daysFullyCompleted} ${stats.daysFullyCompleted === 1 ? 'Day' : 'Days'} Completed`,
       `🎯 ${solveRatePct !== null ? `${solveRatePct}% Case Solve Rate` : 'No cases played'}`,
       avgStr,
-      streakStr,
+      /*streakStr, Not shown until I can figure out some kind of forgiveness system*/
     ]
       .filter(Boolean)
       .join('\n');
@@ -224,9 +310,11 @@ const StatsModal: React.FC<StatsModalProps> = ({ isOpen, onClose }) => {
       document.body.removeChild(el);
     });
     toast.success('Stats copied to clipboard!');
+    sendFeedback('custom', '`[Stats]` Copied Stats to Share');
   };
 
   const handleExport = async () => {
+    sendFeedback('custom', '`[Stats]` Exported Data');
     const data = getAllSteamDetectiveStorage();
     const json = JSON.stringify(data);
     try {
@@ -312,18 +400,26 @@ const StatsModal: React.FC<StatsModalProps> = ({ isOpen, onClose }) => {
       }
       setIsImporting(true);
       sessionStorage.setItem('steam-detective-import-success', '1');
+      sendFeedback('custom', '`[Stats]` Imported Data');
       setTimeout(() => window.location.reload(), 500);
     } catch {
       setImportError('Could not parse data. Please paste a valid export.');
     }
   };
 
-  if (!isOpen) return null;
-
   const solveRate =
     stats && stats.totalGamesPlayed > 0
       ? Math.round((stats.totalGamesSolved / stats.totalGamesPlayed) * 100)
       : null;
+
+  const animDaysAttempted = useCountUp(stats?.daysAttempted ?? 0);
+  const animDaysFullyCompleted = useCountUp(stats?.daysFullyCompleted ?? 0);
+  const animTotalGamesPlayed = useCountUp(stats?.totalGamesPlayed ?? 0);
+  const animTotalGamesSolved = useCountUp(stats?.totalGamesSolved ?? 0);
+  const animSolveRate = useCountUp(solveRate ?? 0);
+  const animAverageScore = useCountUp(stats?.averageScore ?? 0, 800, 1);
+
+  if (!isOpen) return null;
 
   return (
     <>
@@ -335,7 +431,7 @@ const StatsModal: React.FC<StatsModalProps> = ({ isOpen, onClose }) => {
         transition={{ duration: 0.2 }}
       >
         <motion.div
-          className='bg-zinc-900 rounded-lg pl-2 pr-3 py-6 sm:px-8 sm:py-8 max-w-md min-h-[495px] w-full ml-1 mr-2 sm:ml-4 sm:mr-4 relative'
+          className='bg-zinc-900 rounded-lg pl-1 pr-1 py-6 sm:px-8 sm:py-8 max-w-md min-h-[495px] w-full ml-1 mr-2 sm:ml-4 sm:mr-4 relative'
           onClick={(e) => e.stopPropagation()}
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -366,103 +462,130 @@ const StatsModal: React.FC<StatsModalProps> = ({ isOpen, onClose }) => {
               ) : (
                 <>
                   {/* Stat grid */}
-                  <div className='grid grid-cols-2 gap-2 mb-4'>
+                  <div className='grid grid-cols-2 gap-2 mb-2'>
                     <StatTile
-                      label='Days Played'
-                      value={`${stats.daysAttempted}/${stats.totalPossibleDays}`}
-                    />
-                    <StatTile
-                      label='Days Fully Completed'
-                      value={stats.daysFullyCompleted}
-                    />
-                  </div>
-                  <div className='grid grid-cols-3 gap-2 mb-4'>
-                    <StatTile
-                      label='Cases Correctly Solved'
-                      value={stats.totalGamesSolved}
-                    />
-                    <StatTile
-                      label='Cases Attempted'
-                      value={stats.totalGamesPlayed}
-                    />
-                    <StatTile
-                      label='Case Solve Rate'
-                      value={solveRate !== null ? `${solveRate}%` : '-'}
-                    />
-                  </div>
-                  <div className='grid grid-cols-3 gap-2 mb-6'>
-                    <StatTile
-                      label='Avg Score / Game'
+                      label='🗓️ Days Played'
                       value={
-                        stats.averageScore !== null ? stats.averageScore : '-'
+                        <>
+                          {animDaysAttempted}
+                          <span className='pl-1 text-zinc-400 font-semibold'>
+                            of {stats.totalPossibleDays}
+                          </span>
+                        </>
                       }
                     />
+                    <StatTile
+                      label='🗓️ Days Fully Completed'
+                      value={animDaysFullyCompleted}
+                    />
+                  </div>
+                  <div className='grid grid-cols-3 gap-2 mb-2'>
+                    <StatTile
+                      label='Cases Attempted'
+                      value={animTotalGamesPlayed}
+                    />
+                    <StatTile
+                      label='Cases Solved'
+                      value={animTotalGamesSolved}
+                    />
+                    <StatTile
+                      overrideValueStyle='text-md sm:text-xl font-black text-white'
+                      label='Case Solve Rate'
+                      value={solveRate !== null ? `🎯${animSolveRate}%` : '-'}
+                    />
+                  </div>
+                  <div className='grid grid-cols-1 gap-2 mb-4'>
+                    <StatTile
+                      label='Avg Score / Game'
+                      overrideValueStyle='text-xl sm:text-2xl font-black text-white'
+                      value={
+                        stats.averageScore !== null ? (
+                          <>
+                            🏆{animAverageScore}
+                            <span className='pl-1 text-zinc-400 font-semibold'>
+                              pts
+                            </span>
+                          </>
+                        ) : (
+                          '-'
+                        )
+                      }
+                      sublabel={
+                        stats.averageScore !== null &&
+                        scoreToPercentile(stats.averageScore) >= 50
+                          ? `✨ That's better than ${scoreToPercentile(stats.averageScore)}% of players! ✨`
+                          : undefined
+                      }
+                    />
+                    {/* Not shown until I can figure out some kind of forgiveness system
                     <StatTile
                       label='Current Streak'
                       value={
                         stats.currentStreak > 0
-                          ? `${stats.currentStreak} 🔥`
+                          ? `🔥${stats.currentStreak}`
                           : stats.currentStreak
                       }
                     />
                     <StatTile label='Best Streak' value={stats.bestStreak} />
+                    */}
                   </div>
-
-                  {/* Import area */}
-                  <AnimatePresence>
-                    {showImportArea && (
-                      <motion.div
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: 'auto' }}
-                        exit={{ opacity: 0, height: 0 }}
-                        transition={{ duration: 0.2 }}
-                        className='overflow-hidden mb-4'
-                      >
-                        <p className='text-xs text-zinc-400 mb-2'>
-                          Paste your exported save data below, then click{' '}
-                          <strong>Import</strong> to confirm.
-                        </p>
-                        <textarea
-                          className='w-full bg-zinc-800 text-white text-xs rounded p-2 resize-none border border-zinc-700 focus:outline-none focus:border-zinc-500'
-                          rows={3}
-                          placeholder='Paste save data here…'
-                          value={importText}
-                          onChange={(e) => {
-                            setImportText(e.target.value);
-                            setImportError('');
-                          }}
-                        />
-                        {importError && (
-                          <p className='text-red-400 text-xs mt-1'>
-                            {importError}
+                  <div className='px-4'>
+                    {/* Import area */}
+                    <AnimatePresence>
+                      {showImportArea && (
+                        <motion.div
+                          initial={{ opacity: 0, height: 0 }}
+                          animate={{ opacity: 1, height: 'auto' }}
+                          exit={{ opacity: 0, height: 0 }}
+                          transition={{ duration: 0.2 }}
+                          className='overflow-hidden mb-4'
+                        >
+                          <p className='text-xs text-zinc-400 mb-2'>
+                            Paste your exported save data below, then click{' '}
+                            <strong>Import</strong> to confirm.
                           </p>
-                        )}
-                        <div className='flex gap-2 mt-2'>
-                          <button
-                            className='flex-1 px-3 py-2 rounded bg-blue-700 hover:bg-blue-600 text-white text-sm font-semibold transition-colors cursor-pointer disabled:cursor-not-allowed disabled:opacity-50'
-                            onClick={handleImportConfirm}
-                            disabled={!importText.trim()}
-                          >
-                            Import
-                          </button>
-                          <button
-                            className='flex-1 px-3 py-2 rounded bg-zinc-700 hover:bg-zinc-600 text-white text-sm font-semibold transition-colors'
-                            onClick={() => {
-                              setShowImportArea(false);
-                              setImportText('');
+                          <textarea
+                            className='w-full bg-zinc-800 text-white text-xs rounded p-2 resize-none border border-zinc-700 focus:outline-none focus:border-zinc-500'
+                            rows={3}
+                            placeholder='Paste save data here…'
+                            value={importText}
+                            onChange={(e) => {
+                              setImportText(e.target.value);
                               setImportError('');
                             }}
-                          >
-                            Cancel
-                          </button>
-                        </div>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
+                          />
+                          {importError && (
+                            <p className='text-red-400 text-xs mt-1'>
+                              {importError}
+                            </p>
+                          )}
+                          <div className='flex gap-2 mt-2'>
+                            <button
+                              className='flex-1 px-3 py-2 rounded bg-blue-700 hover:bg-blue-600 text-white text-sm font-semibold transition-colors cursor-pointer disabled:cursor-not-allowed disabled:opacity-50'
+                              onClick={handleImportConfirm}
+                              disabled={!importText.trim()}
+                            >
+                              Import
+                            </button>
+                            <button
+                              className='flex-1 px-3 py-2 rounded bg-zinc-700 hover:bg-zinc-600 text-white text-sm font-semibold transition-colors'
+                              onClick={() => {
+                                setShowImportArea(false);
+                                setImportText('');
+                                setImportError('');
+                              }}
+                            >
+                              Cancel
+                            </button>
+                          </div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
 
                   {/* Export / Import buttons */}
                   {!showImportArea && (
-                    <>
+                    <div className='px-4'>
                       <button
                         className='w-full px-4 py-2 rounded bg-green-700 hover:bg-green-600 text-white text-sm font-semibold flex items-center justify-center gap-2 mb-2 transition-colors'
                         onClick={handleCopyStats}
@@ -486,19 +609,16 @@ const StatsModal: React.FC<StatsModalProps> = ({ isOpen, onClose }) => {
                           Import Save Data
                         </button>
                       </div>
-                    </>
+                    </div>
                   )}
                   <p className='text-center text-xs text-zinc-500 mt-3'>
-                    Problem?{' '}
+                    Problem? I'll fix it.{' '}
                     <a
-                      href='https://github.com/matthew-b-dev/steam-detective/issues'
-                      target='_blank'
-                      rel='noopener noreferrer'
+                      href='mailto:hello@steamdetective.wtf'
                       className='text-zinc-500 underline hover:text-zinc-300'
                     >
-                      Create an issue ticket on GitHub
+                      hello@steamdetective.wtf
                     </a>
-                    .
                   </p>
                 </>
               )}
