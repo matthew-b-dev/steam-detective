@@ -208,7 +208,7 @@ const StatsModal: React.FC<StatsModalProps> = ({ isOpen, onClose }) => {
         : null;
     const shareText = [
       '🕵️ https://SteamDetective.wtf - My Stats',
-      `📅 ${stats.daysFullyCompleted} Days Completed  •  ${streakStr}`,
+      `📅 ${stats.daysFullyCompleted} ${stats.daysFullyCompleted === 1 ? 'Day' : 'Days'} Completed  •  ${streakStr}`,
       [
         `🎯 ${solveRatePct !== null ? `${solveRatePct}% Case Solve Rate` : 'No cases played'}`,
         avgStr,
