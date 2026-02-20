@@ -208,14 +208,13 @@ const StatsModal: React.FC<StatsModalProps> = ({ isOpen, onClose }) => {
         : null;
     const shareText = [
       '🕵️ https://SteamDetective.wtf - My Stats',
-      `📅 ${stats.daysFullyCompleted} ${stats.daysFullyCompleted === 1 ? 'Day' : 'Days'} Completed  •  ${streakStr}`,
-      [
-        `🎯 ${solveRatePct !== null ? `${solveRatePct}% Case Solve Rate` : 'No cases played'}`,
-        avgStr,
-      ]
-        .filter(Boolean)
-        .join('  •  '),
-    ].join('\n');
+      `📅 ${stats.daysFullyCompleted} ${stats.daysFullyCompleted === 1 ? 'Day' : 'Days'} Completed`,
+      `🎯 ${solveRatePct !== null ? `${solveRatePct}% Case Solve Rate` : 'No cases played'}`,
+      avgStr,
+      streakStr,
+    ]
+      .filter(Boolean)
+      .join('\n');
     navigator.clipboard.writeText(shareText).catch(() => {
       const el = document.createElement('textarea');
       el.value = shareText;
