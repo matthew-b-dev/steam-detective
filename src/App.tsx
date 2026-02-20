@@ -1,8 +1,14 @@
 import { useEffect, useState } from 'react';
-import { QuestionMarkCircleIcon } from '@heroicons/react/16/solid';
+import toast from 'react-hot-toast';
+import useBodyScrollLock from './hooks/useBodyScrollLock';
+import {
+  QuestionMarkCircleIcon,
+  ChartBarIcon,
+} from '@heroicons/react/16/solid';
 import './App.css';
 import SteamDetective from './SteamDetective';
 import HelpModal from './components/HelpModal';
+import StatsModal from './components/StatsModal';
 import PuzzleDatePicker from './components/PuzzleDatePicker';
 import { config } from './config';
 import {
@@ -40,11 +46,21 @@ const usePreloadAllAssets = () => {
 function App() {
   const [showResetConfirm, setShowResetConfirm] = useState(false);
   const [showHelp, setShowHelp] = useState(false);
+  const [showStats, setShowStats] = useState(false);
   const [showDatePicker, setShowDatePicker] = useState(false);
+  useBodyScrollLock(showResetConfirm);
   const currentPuzzleDateStr = getUtcDateString();
 
   // Preload all assets when app mounts
   usePreloadAllAssets();
+
+  // Show import success toast if we just reloaded after an import
+  useEffect(() => {
+    if (sessionStorage.getItem('steam-detective-import-success')) {
+      sessionStorage.removeItem('steam-detective-import-success');
+      toast.success('Save Data successfully imported!');
+    }
+  }, []);
 
   // Check if URL has /d/{date} matching today, and if so, redirect to /
   // Also redirect if the date is not within the selectable range
@@ -132,15 +148,29 @@ function App() {
                 </p>
               </div>
               <div className='flex items-center gap-2 sm:absolute sm:right-0 sm:top-1/2 sm:-translate-y-1/2'>
-                <button
-                  className='text-gray-400 hover:text-gray-300 transition-colors flex items-center gap-1 px-2 bg-transparent sm:border-1 sm:border-zinc-700 sm:px-3 sm:py-1'
-                  onClick={() => setShowHelp(true)}
-                >
-                  <QuestionMarkCircleIcon className='h-6 w-6 sm:h-4 sm:w-4' />
-                  <span className='text-sm font-semibold hidden sm:inline relative top-[-1px]'>
-                    How to play
-                  </span>
-                </button>
+                <div className='flex sm:block'>
+                  <button
+                    className='text-gray-400 w-full justify-center hover:text-gray-300 transition-colors flex items-center gap-1 px-2 bg-transparent sm:border-1 sm:border-zinc-700 sm:px-3 sm:py-1'
+                    onClick={() => setShowHelp(true)}
+                  >
+                    <QuestionMarkCircleIcon className='h-6 w-6 sm:h-4 sm:w-4' />
+                    <span className='text-sm font-semibold hidden sm:inline relative top-[-1px]'>
+                      How to play
+                    </span>
+                  </button>
+                  <button
+                    className='relative text-gray-400 w-full justify-center sm:mt-2 hover:text-gray-300 transition-colors flex items-center gap-1 px-2 bg-transparent sm:border-1 sm:border-zinc-700 sm:px-3 sm:py-1'
+                    onClick={() => setShowStats(true)}
+                  >
+                    <span className='absolute top-[-2px] sm:-top-1 -right-1 sm:-right-4 bg-yellow-400 text-black text-[9px] sm:text-[10px] font-black leading-none px-1 py-0.5 sm:px-[5px] sm:py-[3px] rounded-full pointer-events-none'>
+                      NEW
+                    </span>
+                    <ChartBarIcon className='h-6 w-6 sm:h-4 sm:w-4' />
+                    <span className='text-sm font-semibold hidden sm:inline relative top-[-1px]'>
+                      Statistics
+                    </span>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -184,6 +214,7 @@ function App() {
         </div>
       )}
 
+      <StatsModal isOpen={showStats} onClose={() => setShowStats(false)} />
       <HelpModal isOpen={showHelp} onClose={() => setShowHelp(false)} />
       <PuzzleDatePicker
         isOpen={showDatePicker}

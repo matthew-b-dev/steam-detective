@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { CalendarDate } from '@internationalized/date';
 import { motion } from 'framer-motion';
 import { isLocalhost } from '../utils';
+import useBodyScrollLock from '../hooks/useBodyScrollLock';
 
 interface PuzzleDatePickerProps {
   isOpen: boolean;
@@ -35,6 +36,8 @@ const PuzzleDatePicker: React.FC<PuzzleDatePickerProps> = ({
   const [currentMonth, setCurrentMonth] = useState(realUtcDate.month);
   const [currentYear, setCurrentYear] = useState(realUtcDate.year);
   const [isLoading, setIsLoading] = useState(false);
+
+  useBodyScrollLock(isOpen);
 
   // Scan localStorage for completed puzzle dates whenever the modal opens
   const completedDates = React.useMemo(() => {

@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import useBodyScrollLock from '../hooks/useBodyScrollLock';
 
 interface HelpModalProps {
   isOpen: boolean;
@@ -7,6 +8,8 @@ interface HelpModalProps {
 }
 
 const HelpModal: React.FC<HelpModalProps> = ({ isOpen, onClose }) => {
+  useBodyScrollLock(isOpen);
+
   if (!isOpen) return null;
 
   return (

@@ -48,6 +48,7 @@ export interface UnifiedGameState {
   allCasesComplete?: boolean; // Track if all 4 cases are complete
   totalScoreSent?: boolean; // Track if the total score has been sent to the database
   caseFileAnimationsPlayed?: boolean[]; // Track which case files have played their score animation [cf1, cf2, cf3, cf4]
+  playedOnReleaseDate?: boolean; // true = first interaction was on the puzzle's release day; false = played later; undefined = legacy (treated as true)
 }
 
 /**
@@ -92,6 +93,28 @@ export const loadSteamDetectiveState = (
       }
     }
 
+    // Validate required fields — a corrupt entry (e.g. missing guesses array)
+    // would crash downstream code. Remove only the corrupt case file entry,
+    // save the cleaned state back, then reload so a fresh state is created.
+    if (stateToLoad) {
+      const isCorrupt =
+        !Array.isArray(stateToLoad.guesses) ||
+        typeof stateToLoad.isComplete !== 'boolean' ||
+        typeof stateToLoad.isCorrect !== 'boolean' ||
+        typeof stateToLoad.currentClue !== 'number';
+
+      if (isCorrupt) {
+        console.warn(
+          `[SteamDetective] Corrupt state detected for ${currentPuzzleDate} caseFile${caseFile} — removing and reloading.`,
+          stateToLoad,
+        );
+        delete unifiedState[caseFileKey];
+        localStorage.setItem(storageKey, JSON.stringify(unifiedState));
+        window?.location?.reload?.();
+        return null;
+      }
+    }
+
     return stateToLoad || null;
   } catch (error) {
     console.error('Failed to load Steam Detective state:', error);
@@ -125,6 +148,11 @@ export const saveSteamDetectiveState = (
       | 'caseFile3'
       | 'caseFile4';
     unifiedState[caseFileKey] = state;
+
+    // Set playedOnReleaseDate once on first save — never overwrite after that
+    if (unifiedState.playedOnReleaseDate === undefined) {
+      unifiedState.playedOnReleaseDate = puzzleDate === getRealUtcDateString();
+    }
 
     localStorage.setItem(storageKey, JSON.stringify(unifiedState));
   } catch (error) {
