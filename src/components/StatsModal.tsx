@@ -485,6 +485,18 @@ const StatsModal: React.FC<StatsModalProps> = ({ isOpen, onClose }) => {
                           Import Save Data
                         </button>
                       </div>
+                      <p className='text-center text-xs text-zinc-500 mt-3'>
+                        Problem?{' '}
+                        <a
+                          href='https://github.com/matthew-b-dev/steam-detective/issues'
+                          target='_blank'
+                          rel='noopener noreferrer'
+                          className='text-zinc-500 underline hover:text-zinc-300'
+                        >
+                          Create an issue ticket on GitHub
+                        </a>
+                        .
+                      </p>
                     </>
                   )}
                 </>
