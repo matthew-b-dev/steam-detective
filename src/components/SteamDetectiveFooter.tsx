@@ -16,7 +16,7 @@ const SteamDetectiveFooter: React.FC = () => {
         </a>
       </div>
       <div>
-        Created by GitHub/
+        Created by{' '}
         <a
           href='https://github.com/matthew-b-dev'
           target='_blank'
