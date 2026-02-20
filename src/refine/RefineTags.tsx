@@ -68,7 +68,7 @@ export const RefineTags: React.FC<RefineTagsProps> = ({
               onClick={() => toggleBlur(tag)}
               title={
                 isInBlurList
-                  ? 'Will be blurred — click to unblur'
+                  ? 'Will be blurred - click to unblur'
                   : 'Click to blur this tag'
               }
             >

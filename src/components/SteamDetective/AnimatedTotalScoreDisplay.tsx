@@ -90,7 +90,7 @@ const AnimatedTotalScoreDisplay: React.FC<AnimatedTotalScoreDisplayProps> = ({
     }
 
     // Track stacking per cluster of nearby scores
-    // Each entry: { anchor: number, count: number } — anchor is the first score in the cluster
+    // Each entry: { anchor: number, count: number } - anchor is the first score in the cluster
     const clusters: { anchor: number; count: number }[] = [];
 
     const getCluster = (score: number) => {

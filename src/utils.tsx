@@ -93,7 +93,7 @@ export const loadSteamDetectiveState = (
       }
     }
 
-    // Validate required fields — a corrupt entry (e.g. missing guesses array)
+    // Validate required fields - a corrupt entry (e.g. missing guesses array)
     // would crash downstream code. Remove only the corrupt case file entry,
     // save the cleaned state back, then reload so a fresh state is created.
     if (stateToLoad) {
@@ -105,7 +105,7 @@ export const loadSteamDetectiveState = (
 
       if (isCorrupt) {
         console.warn(
-          `[SteamDetective] Corrupt state detected for ${currentPuzzleDate} caseFile${caseFile} — removing and reloading.`,
+          `[SteamDetective] Corrupt state detected for ${currentPuzzleDate} caseFile${caseFile} - removing and reloading.`,
           stateToLoad,
         );
         delete unifiedState[caseFileKey];
@@ -149,7 +149,7 @@ export const saveSteamDetectiveState = (
       | 'caseFile4';
     unifiedState[caseFileKey] = state;
 
-    // Set playedOnReleaseDate once on first save — never overwrite after that
+    // Set playedOnReleaseDate once on first save - never overwrite after that
     if (unifiedState.playedOnReleaseDate === undefined) {
       unifiedState.playedOnReleaseDate = puzzleDate === getRealUtcDateString();
     }

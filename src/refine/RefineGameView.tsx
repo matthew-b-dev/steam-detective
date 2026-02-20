@@ -164,7 +164,7 @@ export const RefineGameView: React.FC<RefineGameViewProps> = ({
           {/* Difficulty Stats */}
           <div className='bg-[#171a21] rounded-lg px-4 py-2'>
             <span className='text-xs text-gray-400'>
-              Difficulty Stats — Easy: {difficultyStats.Easy} | Medium:{' '}
+              Difficulty Stats - Easy: {difficultyStats.Easy} | Medium:{' '}
               {difficultyStats.Medium} | Hard: {difficultyStats.Hard} | Not Set:{' '}
               {difficultyStats.NotSet}
             </span>
@@ -222,7 +222,7 @@ export const RefineGameView: React.FC<RefineGameViewProps> = ({
                 }
                 className='bg-zinc-800 border border-zinc-600 rounded px-2 py-1 text-sm'
               >
-                <option value=''>—</option>
+                <option value=''>-</option>
                 <option value='Easy'>Easy</option>
                 <option value='Medium'>Medium</option>
                 <option value='Hard'>Hard</option>

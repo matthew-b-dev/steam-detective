@@ -386,7 +386,7 @@ const StatsModal: React.FC<StatsModalProps> = ({ isOpen, onClose }) => {
                     />
                     <StatTile
                       label='Case Solve Rate'
-                      value={solveRate !== null ? `${solveRate}%` : '—'}
+                      value={solveRate !== null ? `${solveRate}%` : '-'}
                     />
                   </div>
                   <div className='grid grid-cols-3 gap-2 mb-6'>
