@@ -100,9 +100,11 @@ function computeStats(): ComputedStats {
 
     if (state.allCasesComplete && state.caseFileScores) {
       daysFullyCompleted++;
-      for (const score of state.caseFileScores) {
-        if (typeof score === 'number') allScores.push(score);
-      }
+      const dayTotal = state.caseFileScores.reduce(
+        (a, b) => (typeof b === 'number' ? a + b : a),
+        0,
+      );
+      allScores.push(dayTotal);
     }
 
     // Streak eligibility: fully complete + played on release day
