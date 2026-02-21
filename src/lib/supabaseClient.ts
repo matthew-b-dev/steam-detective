@@ -64,6 +64,36 @@ export const fetchNewSteamScores = async (): Promise<number[]> => {
   return data?.map((row) => row.score) ?? [];
 };
 
+// Admin dashboard queries
+export interface AdminScoreRow {
+  score: number;
+  created_at_ts: string;
+  case1_guesses: number | null;
+  case2_guesses: number | null;
+  case3_guesses: number | null;
+  case4_guesses: number | null;
+}
+
+export const fetchAdminScoreData = async (
+  date: string,
+): Promise<AdminScoreRow[]> => {
+  const { data, error } = await supabase
+    .from('scores')
+    .select(
+      'score, created_at_ts, case1_guesses, case2_guesses, case3_guesses, case4_guesses',
+    )
+    .eq('created_at', date)
+    .eq('gametype', 'steam')
+    .order('created_at_ts', { ascending: true });
+
+  if (error) {
+    console.error('Error fetching admin score data:', error);
+    throw error;
+  }
+
+  return data ?? [];
+};
+
 // Legacy functions - kept for backwards compatibility but no longer used
 export const sendSteamDetectiveScore = async (
   guesses: number,

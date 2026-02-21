@@ -25,12 +25,20 @@ const isLocalhost =
 
 // Render the refine tool on localhost at /refine, otherwise render the main app
 const isRefinePage = isLocalhost && window.location.pathname === '/refine';
+const isAdminDashPage = window.location.pathname === '/admindash';
 
 if (isRefinePage) {
   import('./refine/RefinePage').then(({ RefinePage }) => {
     document.title = 'Refine SteamDetective';
     ReactDOM.createRoot(document.getElementById('root')!).render(
       <RefinePage />,
+    );
+  });
+} else if (isAdminDashPage) {
+  import('./admin/AdminDashboard').then(({ AdminDashboard }) => {
+    document.title = 'Admin Dashboard · SteamDetective';
+    ReactDOM.createRoot(document.getElementById('root')!).render(
+      <AdminDashboard />,
     );
   });
 } else {
