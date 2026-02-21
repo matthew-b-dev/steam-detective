@@ -176,6 +176,11 @@ export const RefinePage: React.FC = () => {
       }
       lines.push(`    shortDescription:`);
       lines.push(`      ${JSON.stringify(game.shortDescription)},`);
+      if (game.earlyAccessDate) {
+        lines.push(
+          `    earlyAccessDate: ${JSON.stringify(game.earlyAccessDate)},`,
+        );
+      }
       lines.push(`    releaseDate: ${JSON.stringify(game.releaseDate)},`);
       lines.push(`    developer: ${JSON.stringify(game.developer)},`);
       lines.push(`    publisher: ${JSON.stringify(game.publisher)},`);

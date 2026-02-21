@@ -242,8 +242,16 @@ const StatTile: React.FC<{
   overrideLabelStyle?: string;
   value: React.ReactNode;
   overrideValueStyle?: string;
+  overrideSublabelStyle?: string;
   sublabel?: React.ReactNode;
-}> = ({ label, value, overrideValueStyle, overrideLabelStyle, sublabel }) => (
+}> = ({
+  label,
+  value,
+  overrideValueStyle,
+  overrideLabelStyle,
+  overrideSublabelStyle,
+  sublabel,
+}) => (
   <div className='flex flex-col items-center bg-zinc-800 rounded-lg px-3 py-3 min-w-0'>
     <span
       className={
@@ -261,7 +269,12 @@ const StatTile: React.FC<{
       {label}
     </span>
     {sublabel && (
-      <span className='text-[11px] text-zinc-400 text-center leading-tight mt-1'>
+      <span
+        className={
+          overrideSublabelStyle ??
+          'text-[11px] text-zinc-400 text-center leading-tight mt-1'
+        }
+      >
         {sublabel}
       </span>
     )}
@@ -519,6 +532,7 @@ const StatsModal: React.FC<StatsModalProps> = ({ isOpen, onClose }) => {
                           '-'
                         )
                       }
+                      overrideSublabelStyle='text-[13px] text-zinc-400 text-center leading-tight mt-1'
                       sublabel={
                         stats.averageScore !== null &&
                         scoreToPercentile(stats.averageScore) >= 50

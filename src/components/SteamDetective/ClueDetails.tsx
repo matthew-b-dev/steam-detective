@@ -6,6 +6,7 @@ import type { ReactElement } from 'react';
 interface ClueDetailsProps {
   allReviewSummary: ReviewSummary;
   releaseDate: string;
+  earlyAccessDate?: string;
   developer: string;
   publisher: string;
   show: boolean;
@@ -15,6 +16,7 @@ interface ClueDetailsProps {
 export const ClueDetails: React.FC<ClueDetailsProps> = ({
   allReviewSummary,
   releaseDate,
+  earlyAccessDate,
   developer,
   publisher,
   show,
@@ -110,8 +112,20 @@ export const ClueDetails: React.FC<ClueDetailsProps> = ({
           </div>
         </div>
 
+        {/* Early Access Date */}
+        {earlyAccessDate && (
+          <div className='flex items-start gap-2 mt-4'>
+            <div className='text-gray-400 text-xs uppercase min-w-[120px] pt-[3px]'>
+              Early Access Date:
+            </div>
+            <div className='text-[#c7d5e0] text-sm'>{earlyAccessDate}</div>
+          </div>
+        )}
+
         {/* Release Date */}
-        <div className='flex items-start gap-2 mt-4'>
+        <div
+          className={`flex items-start gap-2 ${earlyAccessDate ? 'mt-2' : 'mt-4'}`}
+        >
           <div className='text-gray-400 text-xs uppercase min-w-[120px] pt-[3px]'>
             Release Date:
           </div>

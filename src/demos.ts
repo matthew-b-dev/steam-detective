@@ -170,9 +170,15 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile3: 'RimWorld',
     caseFile4: 'PAYDAY 2',
   },
+  '2026-02-22': {
+    caseFile1: 'Raft',
+    caseFile2: 'Half-Life: Alyx',
+    caseFile3: 'Disco Elysium',
+    caseFile4: 'Among Us',
+  },
 };
 // MEd:  Totally Accurate Battle Simulator
 // Easy : Kerbal Space Program
 // HARD: Don't Starve
 // caseFile3: Oxygen Not Included
-// 'Just Cause 3',
+// Outer Wilds

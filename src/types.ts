@@ -19,6 +19,7 @@ export interface SteamGame {
   secondaryScreenshot?: string;
   shortDescription: string;
   releaseDate: string;
+  earlyAccessDate?: string;
   developer: string;
   publisher: string;
   tags: string[];

@@ -111,6 +111,28 @@ export const sendSteamDetectiveScore = async (
   }
 };
 
+export const fetchPageViewCount = async (date: string): Promise<number> => {
+  const start = `${date}T00:00:00Z`;
+  // Exclusive upper bound: start of next day
+  const nextDay = new Date(`${date}T00:00:00Z`);
+  nextDay.setUTCDate(nextDay.getUTCDate() + 1);
+  const end = nextDay.toISOString();
+
+  const { count, error } = await supabase
+    .from('page_views')
+    .select('*', { count: 'exact', head: true })
+    .eq('app_name', 'steam')
+    .gte('created_at', start)
+    .lt('created_at', end);
+
+  if (error) {
+    console.error('Error fetching page view count:', error);
+    throw error;
+  }
+
+  return count ?? 0;
+};
+
 export const fetchPerfectFeedbackCount = async (
   date: string,
 ): Promise<number> => {

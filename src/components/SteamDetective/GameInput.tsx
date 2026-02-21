@@ -56,12 +56,32 @@ export const GameInput: React.FC<GameInputProps> = ({
     if (!inputValue || effectiveLength < 3) return [];
 
     const searchLower = inputValue.toLowerCase();
-    return gameOptions.filter((option) => {
+    const filtered = gameOptions.filter((option) => {
       const matchesLabel = option.label.toLowerCase().includes(searchLower);
       const matchesSearchTerms = option.searchTerms?.some((term) =>
         term.toLowerCase().includes(searchLower),
       );
       return matchesLabel || matchesSearchTerms;
+    });
+
+    // Sort: exact match first, then prefix match, then substring match
+    // Each check considers both the label and any searchTerms entries
+    const isExact = (opt: GameOption) =>
+      opt.label.toLowerCase() === searchLower ||
+      (opt.searchTerms?.some((t) => t.toLowerCase() === searchLower) ?? false);
+    const isPrefix = (opt: GameOption) =>
+      opt.label.toLowerCase().startsWith(searchLower) ||
+      (opt.searchTerms?.some((t) => t.toLowerCase().startsWith(searchLower)) ??
+        false);
+
+    return filtered.sort((a, b) => {
+      const aExact = isExact(a);
+      const bExact = isExact(b);
+      if (aExact !== bExact) return aExact ? -1 : 1;
+      const aPrefix = isPrefix(a);
+      const bPrefix = isPrefix(b);
+      if (aPrefix !== bPrefix) return aPrefix ? -1 : 1;
+      return a.label.localeCompare(b.label);
     });
   }, [inputValue, effectiveLength, gameOptions]);
 

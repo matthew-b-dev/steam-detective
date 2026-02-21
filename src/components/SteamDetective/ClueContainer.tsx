@@ -71,6 +71,7 @@ export const ClueContainer: React.FC<ClueContainerProps> = ({ caseFile }) => {
         <ClueDetails
           allReviewSummary={dailyGame.allReviewSummary}
           releaseDate={dailyGame.releaseDate}
+          earlyAccessDate={dailyGame.earlyAccessDate}
           developer={dailyGame.developer}
           publisher={dailyGame.publisher}
           show={showClue2}

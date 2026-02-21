@@ -61,15 +61,22 @@ export const RefineDetails: React.FC<RefineDetailsProps> = ({
   onUpdate,
 }) => {
   const [editingField, setEditingField] = useState<
-    'developer' | 'publisher' | 'reviewRating' | 'reviewCount' | null
+    | 'developer'
+    | 'publisher'
+    | 'earlyAccessDate'
+    | 'reviewRating'
+    | 'reviewCount'
+    | null
   >(null);
   const [editValue, setEditValue] = useState('');
   const [editReviewRating, setEditReviewRating] = useState('');
   const [editReviewCount, setEditReviewCount] = useState('');
 
-  const startEditing = (field: 'developer' | 'publisher') => {
+  const startEditing = (
+    field: 'developer' | 'publisher' | 'earlyAccessDate',
+  ) => {
     setEditingField(field);
-    setEditValue(game[field]);
+    setEditValue(game[field] ?? '');
   };
 
   const startEditingReviews = () => {
@@ -80,7 +87,8 @@ export const RefineDetails: React.FC<RefineDetailsProps> = ({
 
   const finishEditing = () => {
     if (editingField) {
-      onUpdate({ [editingField]: editValue });
+      const val = editValue.trim();
+      onUpdate({ [editingField]: val || undefined });
       setEditingField(null);
       setEditValue('');
     }
@@ -200,8 +208,65 @@ export const RefineDetails: React.FC<RefineDetailsProps> = ({
         </div>
       </div>
 
+      {/* Early Access Date */}
+      {(game.earlyAccessDate || mode === 'refine') && (
+        <div className='flex items-start gap-2 mt-4'>
+          <div className='text-gray-400 text-xs uppercase min-w-[120px] pt-[3px]'>
+            Early Access Date:
+          </div>
+          <div className='text-[#c7d5e0] text-sm flex-1'>
+            {editingField === 'earlyAccessDate' && mode === 'refine' ? (
+              <div className='flex items-center gap-2'>
+                <input
+                  type='text'
+                  value={editValue}
+                  onChange={(e) => setEditValue(e.target.value)}
+                  placeholder='e.g. Mar 23, 2020'
+                  className='bg-zinc-800 border border-zinc-600 rounded px-2 py-1 text-sm flex-1 font-mono focus:outline-none focus:border-zinc-400'
+                  autoFocus
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter') finishEditing();
+                    if (e.key === 'Escape') {
+                      setEditingField(null);
+                      setEditValue('');
+                    }
+                  }}
+                />
+                <button
+                  onClick={finishEditing}
+                  className='px-2 py-1 bg-green-700 hover:bg-green-600 rounded text-xs font-semibold'
+                >
+                  Done
+                </button>
+              </div>
+            ) : game.earlyAccessDate ? (
+              <span
+                className={
+                  mode === 'refine' ? 'cursor-pointer hover:underline' : ''
+                }
+                onClick={() =>
+                  mode === 'refine' && startEditing('earlyAccessDate')
+                }
+                title={mode === 'refine' ? 'Click to edit' : undefined}
+              >
+                {game.earlyAccessDate}
+              </span>
+            ) : (
+              <button
+                onClick={() => startEditing('earlyAccessDate')}
+                className='text-xs text-blue-400 hover:text-blue-300 border border-blue-700 hover:border-blue-500 rounded px-2 py-0.5'
+              >
+                + Add Early Access Date
+              </button>
+            )}
+          </div>
+        </div>
+      )}
+
       {/* Release Date */}
-      <div className='flex items-start gap-2 mt-4'>
+      <div
+        className={`flex items-start gap-2 ${game.earlyAccessDate ? 'mt-2' : 'mt-4'}`}
+      >
         <div className='text-gray-400 text-xs uppercase min-w-[120px] pt-[3px]'>
           Release Date:
         </div>

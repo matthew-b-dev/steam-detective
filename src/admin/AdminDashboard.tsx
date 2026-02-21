@@ -1,65 +1,64 @@
 import { useState, useEffect, useMemo } from 'react';
+import React from 'react';
 import {
   fetchAdminScoreData,
   fetchPerfectFeedbackCount,
+  fetchPageViewCount,
 } from '../lib/supabaseClient';
 import type { AdminScoreRow } from '../lib/supabaseClient';
 import { getRealUtcDateString } from '../utils';
 import { STEAM_DETECTIVE_DEMO_DAYS } from '../demos';
+import {
+  ArrowPathIcon,
+  UsersIcon,
+  EyeIcon,
+  CheckBadgeIcon,
+} from '@heroicons/react/16/solid';
 
 // ─── Stats helpers ─────────────────────────────────────────────────────────────
 
-function mean(values: number[]): number {
+const mean = (values: number[]): number => {
   if (values.length === 0) return 0;
   return values.reduce((a, b) => a + b, 0) / values.length;
-}
+};
 
-function stddev(values: number[]): number {
+const stddev = (values: number[]): number => {
   if (values.length < 2) return 0;
   const m = mean(values);
   const variance =
     values.reduce((sum, v) => sum + Math.pow(v - m, 2), 0) / values.length;
   return Math.sqrt(variance);
-}
+};
 
-function median(values: number[]): number {
-  if (values.length === 0) return 0;
-  const sorted = [...values].sort((a, b) => a - b);
-  const mid = Math.floor(sorted.length / 2);
-  return sorted.length % 2 === 0
-    ? (sorted[mid - 1] + sorted[mid]) / 2
-    : sorted[mid];
-}
-
-function avgNonNull(values: (number | null)[]): number | null {
+const avgNonNull = (values: (number | null)[]): number | null => {
   const filtered = values.filter((v): v is number => v !== null);
   if (filtered.length === 0) return null;
   return mean(filtered);
-}
+};
 
 // ─── Sub-components ─────────────────────────────────────────────────────────────
 
 interface StatCardProps {
   label: string;
-  value: string | number;
+  value: React.ReactNode;
   sub?: string;
 }
-function StatCard({ label, value, sub }: StatCardProps) {
+const StatCard = ({ label, value, sub }: StatCardProps) => {
   return (
     <div className='bg-zinc-800 border border-zinc-700 rounded-lg p-4 flex flex-col gap-1'>
       <span className='text-xs text-zinc-400 uppercase tracking-wider'>
         {label}
       </span>
       <span className='text-2xl font-bold text-white'>{value}</span>
-      {sub && <span className='text-xs text-zinc-500'>{sub}</span>}
+      {sub && <span className='text-xs text-zinc-400'>{sub}</span>}
     </div>
   );
-}
+};
 
 interface ScoreHistogramProps {
   scores: number[];
 }
-function ScoreHistogram({ scores }: ScoreHistogramProps) {
+const ScoreHistogram = ({ scores }: ScoreHistogramProps) => {
   if (scores.length === 0) return null;
 
   // 8 fixed buckets: 0–49, 50–99, …, 350–400 (400 is the known max possible score).
@@ -97,13 +96,13 @@ function ScoreHistogram({ scores }: ScoreHistogramProps) {
       </div>
     </div>
   );
-}
+};
 
 interface CaseFileRankingProps {
   rows: AdminScoreRow[];
   selectedDate: string;
 }
-function CaseFileRanking({ rows, selectedDate }: CaseFileRankingProps) {
+const CaseFileRanking = ({ rows, selectedDate }: CaseFileRankingProps) => {
   const demoDay = STEAM_DETECTIVE_DEMO_DAYS[selectedDate];
   const cases = [
     {
@@ -144,7 +143,7 @@ function CaseFileRanking({ rows, selectedDate }: CaseFileRankingProps) {
       </div>
     );
 
-  const maxAvg = Math.max(...ranked.map((c) => c.avg ?? 0), 1);
+  const MAX_GUESSES = 7;
 
   return (
     <div className='bg-zinc-800 border border-zinc-700 rounded-lg p-4'>
@@ -168,23 +167,32 @@ function CaseFileRanking({ rows, selectedDate }: CaseFileRankingProps) {
                 avg {(c.avg ?? 0).toFixed(2)} guesses
               </span>
             </div>
-            <div className='bg-zinc-700 rounded-sm overflow-hidden h-4'>
+            <div className='relative bg-zinc-700 rounded-sm overflow-hidden h-4'>
               <div
-                className='bg-orange-500 h-4 rounded-sm transition-all duration-500'
-                style={{ width: `${((c.avg ?? 0) / maxAvg) * 100}%` }}
+                className='bg-green-500 h-4 rounded-sm transition-all duration-500'
+                style={{ width: `${((c.avg ?? 0) / MAX_GUESSES) * 100}%` }}
               />
+              {Array.from({ length: MAX_GUESSES - 1 }, (_, i) => i + 1).map(
+                (tick) => (
+                  <div
+                    key={tick}
+                    className='absolute top-0 h-full w-0.5 bg-zinc-800'
+                    style={{ left: `${(tick / MAX_GUESSES) * 100}%` }}
+                  />
+                ),
+              )}
             </div>
           </div>
         ))}
       </div>
     </div>
   );
-}
+};
 
 interface PlayerTimelineProps {
   rows: AdminScoreRow[];
 }
-function PlayerTimeline({ rows }: PlayerTimelineProps) {
+const PlayerTimeline = ({ rows }: PlayerTimelineProps) => {
   if (rows.length === 0) return null;
 
   // Group by hour (UTC)
@@ -237,12 +245,12 @@ function PlayerTimeline({ rows }: PlayerTimelineProps) {
       </div>
     </div>
   );
-}
+};
 
 interface ScorePercentileTableProps {
   scores: number[];
 }
-function ScorePercentileTable({ scores }: ScorePercentileTableProps) {
+const ScorePercentileTable = ({ scores }: ScorePercentileTableProps) => {
   if (scores.length === 0) return null;
   const sorted = [...scores].sort((a, b) => a - b);
 
@@ -278,7 +286,7 @@ function ScorePercentileTable({ scores }: ScorePercentileTableProps) {
       </table>
     </div>
   );
-}
+};
 
 // ─── Main AdminDashboard ────────────────────────────────────────────────────────
 
@@ -290,17 +298,20 @@ export const AdminDashboard: React.FC = () => {
   const [error, setError] = useState<string | null>(null);
   const [lastFetched, setLastFetched] = useState<string | null>(null);
   const [perfectCount, setPerfectCount] = useState<number | null>(null);
+  const [pageViewCount, setPageViewCount] = useState<number | null>(null);
 
   const loadData = async (date: string) => {
     setLoading(true);
     setError(null);
     try {
-      const [data, perfect] = await Promise.all([
+      const [data, perfect, pageViews] = await Promise.all([
         fetchAdminScoreData(date),
         fetchPerfectFeedbackCount(date),
+        fetchPageViewCount(date),
       ]);
       setRows(data);
       setPerfectCount(perfect);
+      setPageViewCount(pageViews);
       setLastFetched(new Date().toLocaleTimeString());
     } catch (e) {
       setError(String(e));
@@ -328,7 +339,6 @@ export const AdminDashboard: React.FC = () => {
 
   const scoreMean = mean(scores);
   const scoreStddev = stddev(scores);
-  const scoreMedian = median(scores);
   const allCasesRate =
     rows.length > 0
       ? ((completeRows.length / rows.length) * 100).toFixed(1)
@@ -361,14 +371,14 @@ export const AdminDashboard: React.FC = () => {
           </span>
         </div>
         <span className='ml-auto text-xs text-zinc-500'>
-          {lastFetched ? `Last fetched: ${lastFetched}` : ''}
+          {lastFetched ? `As of ${lastFetched}` : ''}
         </span>
       </div>
 
       <div className='px-6 py-6 max-w-5xl mx-auto flex flex-col gap-6'>
         {/* Date picker + refresh */}
-        <div className='flex justify-between'>
-          <div className='flex items-center gap-3 flex-wrap'>
+        <div className='flex justify-between items-start'>
+          <div className='flex items-stretch gap-3 flex-wrap'>
             <input
               type='date'
               value={selectedDate}
@@ -378,9 +388,9 @@ export const AdminDashboard: React.FC = () => {
             <button
               onClick={() => loadData(selectedDate)}
               disabled={loading}
-              className='px-3 py-1.5 bg-zinc-700 hover:bg-zinc-600 disabled:opacity-50 rounded text-sm transition-colors'
+              className='py-1.5 px-2.5 flex items-center justify-center bg-zinc-700 hover:bg-zinc-600 disabled:opacity-50 rounded text-sm transition-colors'
             >
-              {loading ? 'Loading…' : 'Refresh'}
+              {loading ? '…' : <ArrowPathIcon className='h-4 w-4' />}
             </button>
           </div>
           <span className='px-3 py-1.5 bg-zinc-800 rounded text-sm text-zinc-200'>
@@ -410,16 +420,44 @@ export const AdminDashboard: React.FC = () => {
           <>
             {/* Top-line stats */}
             <div className='grid grid-cols-2 sm:grid-cols-4 gap-3'>
-              <StatCard label='Players' value={rows.length} />
+              <StatCard
+                label='# of Scores'
+                value={
+                  <span className='flex items-center gap-1.5'>
+                    {rows.length}
+                    <UsersIcon className='h-5 w-5 text-zinc-500' />
+                  </span>
+                }
+              />
+              <StatCard
+                label='Page Views'
+                value={
+                  <span className='flex items-center gap-1.5'>
+                    {pageViewCount ?? '—'}
+                    <EyeIcon className='h-5 w-5 text-zinc-500' />
+                  </span>
+                }
+              />
               <StatCard
                 label='Mean Score'
-                value={scoreMean.toFixed(2)}
+                value={
+                  <>
+                    <span>{scoreMean.toFixed(2)}</span>
+                    <span className='font-normal text-zinc-400 text-sm pl-[1px]'>
+                      pts
+                    </span>
+                  </>
+                }
                 sub={`σ = ${scoreStddev.toFixed(2)}`}
               />
-              <StatCard label='Median Score' value={scoreMedian} />
               <StatCard
-                label='All 4 Cases Finished'
-                value={`${completeRows.length}`}
+                label='Finished Games'
+                value={
+                  <span className='flex items-center gap-1.5'>
+                    {completeRows.length}
+                    <CheckBadgeIcon className='h-5 w-5 text-zinc-500' />
+                  </span>
+                }
                 sub={`${allCasesRate}% of players`}
               />
             </div>

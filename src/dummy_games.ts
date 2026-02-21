@@ -550,6 +550,8 @@ export const dummyGames: string[] = [
   'Ys: Memories of Celceta',
   'NBA 2K Playgrounds 2',
   'The Station',
+  'Half-Life 2',
+  'Half-Life',
   'Sushi Striker: The Way of Sushido',
   'Fist of the North Star: Lost Paradise',
   'Street Fighter V: Arcade Edition',
