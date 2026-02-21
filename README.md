@@ -70,7 +70,7 @@ A modal statistics panel tracks cumulative performance across all dates since la
 - Case solve rate (individual case files correctly solved vs. attempted)
 - Average total score per completed day
 
-The panel also provides a "Copy Stats to Share" button that formats these into a plaintext summary for social sharing:
+The panel also provides a "Copy Stats to Share" button that formats these into a plaintext summary for sharing:
 
 ```
 https://SteamDetective.wtf
