@@ -4,6 +4,7 @@ const SteamDetectiveFooter: React.FC = () => {
   return (
     <footer className='mt-8 text-xs text-gray-400 text-right space-y-1 pb-52'>
       <div>Not affiliated with Valve Corporation or Steam</div>
+      <div>This is a hobby project without ads or monetization</div>
       <div>
         Icon by{' '}
         <a
