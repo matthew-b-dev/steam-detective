@@ -167,7 +167,7 @@ function App() {
                     </span>
                     <ChartBarIcon className='h-6 w-6 sm:h-4 sm:w-4' />
                     <span className='text-sm font-semibold hidden sm:inline relative top-[-1px]'>
-                      Statistics
+                      My Stats
                     </span>
                   </button>
                 </div>

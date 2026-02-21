@@ -474,9 +474,7 @@ const StatsModal: React.FC<StatsModalProps> = ({ isOpen, onClose }) => {
                 <XMarkIcon className='h-5 w-5' />
               </button>
 
-              <h2 className='text-2xl font-bold text-center mb-6'>
-                Statistics
-              </h2>
+              <h2 className='text-2xl font-bold text-center mb-6'>My Stats</h2>
 
               {stats === null ? (
                 <p className='text-center text-zinc-400 py-4'>Loading…</p>
