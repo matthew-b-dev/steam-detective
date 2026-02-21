@@ -2,6 +2,7 @@ import { useState, useEffect, useMemo } from 'react';
 import { fetchAdminScoreData } from '../lib/supabaseClient';
 import type { AdminScoreRow } from '../lib/supabaseClient';
 import { getRealUtcDateString } from '../utils';
+import { STEAM_DETECTIVE_DEMO_DAYS } from '../demos';
 
 // ─── Stats helpers ─────────────────────────────────────────────────────────────
 
@@ -97,20 +98,38 @@ function ScoreHistogram({ scores }: ScoreHistogramProps) {
 
 interface CaseFileRankingProps {
   rows: AdminScoreRow[];
+  selectedDate: string;
 }
-function CaseFileRanking({ rows }: CaseFileRankingProps) {
+function CaseFileRanking({ rows, selectedDate }: CaseFileRankingProps) {
+  const demoDay = STEAM_DETECTIVE_DEMO_DAYS[selectedDate];
   const cases = [
-    { label: 'Case File 1', key: 'case1_guesses' as const },
-    { label: 'Case File 2', key: 'case2_guesses' as const },
-    { label: 'Case File 3', key: 'case3_guesses' as const },
-    { label: 'Case File 4', key: 'case4_guesses' as const },
+    {
+      label: 'Case File 1',
+      key: 'case1_guesses' as const,
+      game: demoDay?.caseFile1,
+    },
+    {
+      label: 'Case File 2',
+      key: 'case2_guesses' as const,
+      game: demoDay?.caseFile2,
+    },
+    {
+      label: 'Case File 3',
+      key: 'case3_guesses' as const,
+      game: demoDay?.caseFile3,
+    },
+    {
+      label: 'Case File 4',
+      key: 'case4_guesses' as const,
+      game: demoDay?.caseFile4,
+    },
   ];
 
   const ranked = cases
-    .map(({ label, key }) => {
+    .map(({ label, key, game }) => {
       const values = rows.map((r) => r[key]);
       const avg = avgNonNull(values);
-      return { label, avg };
+      return { label, avg, game };
     })
     .filter((c) => c.avg !== null)
     .sort((a, b) => (b.avg ?? 0) - (a.avg ?? 0)); // highest avg = hardest
@@ -134,7 +153,14 @@ function CaseFileRanking({ rows }: CaseFileRankingProps) {
         {ranked.map((c) => (
           <div key={c.label} className='flex flex-col gap-1'>
             <div className='flex justify-between text-xs'>
-              <span className='text-zinc-300 font-medium'>{c.label}</span>
+              <span className='text-zinc-300 font-medium'>
+                {c.label}
+                {c.game && (
+                  <span className='text-zinc-400 font-normal ml-1'>
+                    ({c.game})
+                  </span>
+                )}
+              </span>
               <span className='text-zinc-400'>
                 avg {(c.avg ?? 0).toFixed(2)} guesses
               </span>
@@ -334,7 +360,6 @@ export const AdminDashboard: React.FC = () => {
       <div className='px-6 py-6 max-w-5xl mx-auto flex flex-col gap-6'>
         {/* Date picker + refresh */}
         <div className='flex items-center gap-3 flex-wrap'>
-          <label className='text-sm text-zinc-400 font-medium'>Date:</label>
           <input
             type='date'
             value={selectedDate}
@@ -395,7 +420,7 @@ export const AdminDashboard: React.FC = () => {
             </div>
 
             {/* Difficulty ranking */}
-            <CaseFileRanking rows={rows} />
+            <CaseFileRanking rows={rows} selectedDate={selectedDate} />
 
             {/* Histogram + percentiles */}
             <div className='grid grid-cols-1 sm:grid-cols-2 gap-4'>
