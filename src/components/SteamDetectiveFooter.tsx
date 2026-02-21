@@ -1,12 +1,12 @@
-import React from 'react';
-import toast from 'react-hot-toast';
+import React, { useState } from 'react';
 
 const SteamDetectiveFooter: React.FC = () => {
+  const [emailCopied, setEmailCopied] = useState(false);
+
   const copyEmail = () => {
     navigator.clipboard.writeText('hello@steamdetective.wtf');
-    toast.success('Contact Email copied to clipboard!', {
-      position: 'bottom-center',
-    });
+    setEmailCopied(true);
+    setTimeout(() => setEmailCopied(false), 1500);
   };
 
   return (
@@ -14,7 +14,7 @@ const SteamDetectiveFooter: React.FC = () => {
       <div>Not affiliated with Valve Corporation or Steam</div>
       <div>This is a hobby project without ads or monetization</div>
       <div>
-        Icon by{' '}
+        Icons by{' '}
         <a
           className='text-yellow-500 hover:text-yellow-400 underline'
           href='https://icons8.com/icons'
@@ -39,9 +39,9 @@ const SteamDetectiveFooter: React.FC = () => {
         Contact{' '}
         <button
           onClick={copyEmail}
-          className='text-yellow-500 hover:text-yellow-400 underline bg-transparent border-0 p-0 cursor-pointer outline-none'
+          className={`min-w-[137px] ${emailCopied ? 'text-gray-400' : 'text-yellow-500 hover:text-yellow-400 underline'}  bg-transparent border-0 p-0 cursor-pointer outline-none select-text`}
         >
-          hello@steamdetective.wtf
+          {emailCopied ? 'Copied!' : 'hello@steamdetective.wtf'}
         </button>
       </div>
     </footer>

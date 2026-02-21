@@ -290,6 +290,13 @@ const StatsModal: React.FC<StatsModalProps> = ({ isOpen, onClose }) => {
   const [importError, setImportError] = useState('');
   const [isImporting, setIsImporting] = useState(false);
   const [exportCopied, setExportCopied] = useState(false);
+  const [emailCopied, setEmailCopied] = useState(false);
+
+  const copyEmail = () => {
+    navigator.clipboard.writeText('hello@steamdetective.wtf');
+    setEmailCopied(true);
+    setTimeout(() => setEmailCopied(false), 1500);
+  };
 
   const handleClose = () => {
     setShowImportArea(false);
@@ -634,12 +641,12 @@ const StatsModal: React.FC<StatsModalProps> = ({ isOpen, onClose }) => {
                   )}
                   <p className='text-center text-xs text-zinc-400 mt-3'>
                     Problem? I'll fix it.{' '}
-                    <a
-                      href='mailto:hello@steamdetective.wtf'
-                      className='text-zinc-300 underline'
+                    <button
+                      onClick={copyEmail}
+                      className={`${emailCopied ? 'text-zinc-400' : 'text-zinc-300 underline'} bg-transparent border-0 p-0 cursor-pointer outline-none min-w-[137px] select-text`}
                     >
-                      hello@steamdetective.wtf
-                    </a>
+                      {emailCopied ? 'Copied!' : 'hello@steamdetective.wtf'}
+                    </button>
                   </p>
                 </>
               )}
