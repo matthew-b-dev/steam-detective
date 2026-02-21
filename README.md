@@ -64,7 +64,7 @@ Navigating to a past date loads that day's puzzle state from localStorage if it 
 
 ## Statistics Panel
 
-A persistent statistics panel tracks cumulative performance across all dates since launch. Metrics include:
+A modal statistics panel tracks cumulative performance across all dates since launch. Metrics include:
 
 - Days fully completed
 - Case solve rate (individual case files correctly solved vs. attempted)
