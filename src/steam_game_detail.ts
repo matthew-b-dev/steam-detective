@@ -2152,7 +2152,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/218620/ss_7d9a83bb672cca995477f4faffef2d0b2783e4ab.600x338.jpg',
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/218620/ss_2448af11f781d2db211140f076c36d536bef818c.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/218620/ss_2799a1fde932e739138de91f0910ada013ddfca3.600x338.jpg',
     shortDescription:
       '||PAYDAY 2|| is an action-packed, four-player co-op ||shooter|| that once again lets gamers ||don|| the ||masks|| of the original ||PAYDAY crew|| - ||Dallas||, Hoxton, ||Wolf|| and ||Chains|| - as they descend on ||Washington DC|| for ||an epic crime spree||.',
     releaseDate: 'Aug 13, 2013',
@@ -4920,6 +4920,7 @@ export const steamGameDetails: SteamGameMap = {
     debugProcessed: true,
     debugRefined: true,
     difficulty: 'Medium',
+    searchTerms: ['rim world'],
   },
   '298110': {
     name: 'Far Cry 4',
