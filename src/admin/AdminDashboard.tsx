@@ -129,9 +129,7 @@ function CaseFileRanking({ rows }: CaseFileRankingProps) {
       <h3 className='text-sm font-semibold text-zinc-300 mb-1 uppercase tracking-wider'>
         Case File Difficulty Ranking
       </h3>
-      <p className='text-xs text-zinc-500 mb-3'>
-        Ranked by average guesses - more guesses = harder
-      </p>
+      <p className='text-xs text-zinc-500 mb-3'>Ranked by average guesses</p>
       <div className='flex flex-col gap-3'>
         {ranked.map((c) => (
           <div key={c.label} className='flex flex-col gap-1'>
