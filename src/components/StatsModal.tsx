@@ -620,11 +620,11 @@ const StatsModal: React.FC<StatsModalProps> = ({ isOpen, onClose }) => {
                       </div>
                     </div>
                   )}
-                  <p className='text-center text-xs text-zinc-500 mt-3'>
+                  <p className='text-center text-xs text-zinc-400 mt-3'>
                     Problem? I'll fix it.{' '}
                     <a
                       href='mailto:hello@steamdetective.wtf'
-                      className='text-zinc-500 underline hover:text-zinc-300'
+                      className='text-zinc-300 underline'
                     >
                       hello@steamdetective.wtf
                     </a>

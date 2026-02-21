@@ -7725,7 +7725,7 @@ export const steamGameDetails: SteamGameMap = {
       'Soundtrack',
       'Bullet Hell',
     ],
-    overrideCensoredTitle: 'R||isk|| ||of|| R||ain|| ||2||',
+    overrideCensoredTitle: 'R||isk|| o||f|| R||ain|| ||2||',
     clueOrder: ['desc', 'details', 'tags'],
     debugProcessed: true,
     debugRefined: true,
