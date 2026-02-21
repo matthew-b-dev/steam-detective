@@ -41,29 +41,36 @@ https://SteamDetective.wtf/ 🕵️
 🏆 295 points  🥈 Rank #4 of 61
 ```
 
-> _[ screenshots ]_
+| Clue #2 (for this game, the "user tags") | Clue #5 (for a different game) |
+|-----|---------|
+| <img width="395" height="725" alt="firefox_YpAZnmuBym" src="https://github.com/user-attachments/assets/2945ad64-074f-4bf6-a867-7cdabd1dcef1" /> | <img width="395" height="725" alt="1msa8YqiJm" src="https://github.com/user-attachments/assets/5809a32d-6237-4b22-a926-6695fbfa8257" /> |
+
+
+| Game Complete Screen |
+|-----|
+| <img width="395" height="725" alt="qgMzmriuhU" src="https://github.com/user-attachments/assets/925b57d8-b5a0-480f-8c5a-3fdca62966a5" /> |
 
 ---
 
 ## Puzzle Date Picker
 
-Players can navigate to any past puzzle using a date picker near the header. Each date cell in the picker displays one of two states: Complete and Incomplete. This is derived entirely from localStorage with no account or login required. Read more about how Exporting/Importing that state works in the Statistics Modal section.
+Players can navigate to any past puzzle using a date picker near the header. Each date cell in the picker displays one of two states: Complete and Incomplete. This is derived entirely from localStorage with no account or login required. Read more about how Exporting/Importing that state works in the Statistics Panel section.
 
 Navigating to a past date loads that day's puzzle state from localStorage if it exists, or starts fresh. Past-date scores are submitted to the same global leaderboard for that date, allowing late players to still compare results. If playing a past date, the "Share results" button will append that puzzle's date to the URL. So if a player shares a past date, others will land on the same puzzle that they played.
 
-> _[ screenshots ]_
+<img width="395" height="725" alt="Q2yEZJCr70" src="https://github.com/user-attachments/assets/aed6853d-1e30-4849-8585-86b288996fad" />
 
 ---
 
-## Statistics Modal
+## Statistics Panel
 
-A persistent statistics panel tracks cumulative performance across all dates since launch. Metrics include:
+A modal statistics panel tracks cumulative performance across all dates since launch. Metrics include:
 
 - Days fully completed
 - Case solve rate (individual case files correctly solved vs. attempted)
 - Average total score per completed day
 
-The modal also provides a "Copy Stats to Share" button that formats these into a plaintext summary for social sharing:
+The panel also provides a "Copy Stats to Share" button that formats these into a plaintext summary for sharing:
 
 ```
 https://SteamDetective.wtf
@@ -75,7 +82,8 @@ https://SteamDetective.wtf
 
 **Export / Import** - all game state is stored in localStorage under per-date keys. The export function serializes the relevant keys to a JSON string that can be copied and pasted to transfer progress between browsers or devices. Import validates and restores the data on the receiving end.
 
-> _[ screenshots ]_
+<img width="395" height="725" alt="SkG86cN9KH" src="https://github.com/user-attachments/assets/a2a92b92-1627-45e1-a636-1a7280593e58" />
+
 
 ---
 
@@ -99,7 +107,8 @@ Metrics shown for the selected date:
 
 I will confess that I have a borderline unhealthy obsession with this screen.
 
-> _[ screenshots ]_
+<img width="826" height="864" alt="image" src="https://github.com/user-attachments/assets/319deb45-de1b-4d4f-be98-8cebfc867d8e" />
+
 
 ---
 
@@ -111,13 +120,17 @@ The tool supports a separate "choose" mode that shows only refined games for fin
 
 Honestly, this thing looks ... rough. But it behaves well! And it does exactly what I need it to every day.
 
-> _[ screenshots ]_
+<img width="831" height="865" alt="image" src="https://github.com/user-attachments/assets/7943fbdf-6801-4ddd-9d23-3036947e0cc3" />
+
 
 ---
 
 ### Discord bot (privately sent notifications)
 
 Any time a score is posted (a row is inserted into the `scores` table) or feedback is given (`feedback` table), an Edge function defined in Supabase triggers a discord bot to post in a private Discord channel. This made A LOT more sense when only 10-15 people were playing the game every day. Only the feedback notifications are valuable now for the most part.
+
+<img width="476" height="155" alt="image" src="https://github.com/user-attachments/assets/b8320022-35a6-4073-8267-8326e694023c" />
+
 
 ## Developer notes
 
