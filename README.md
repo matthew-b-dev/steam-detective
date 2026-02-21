@@ -54,7 +54,7 @@ https://SteamDetective.wtf/ 🕵️
 
 ## Puzzle Date Picker
 
-Players can navigate to any past puzzle using a date picker near the header. Each date cell in the picker displays one of two states: Complete and Incomplete. This is derived entirely from localStorage with no account or login required. Read more about how Exporting/Importing that state works in the Statistics Modal section.
+Players can navigate to any past puzzle using a date picker near the header. Each date cell in the picker displays one of two states: Complete and Incomplete. This is derived entirely from localStorage with no account or login required. Read more about how Exporting/Importing that state works in the Statistics Panel section.
 
 Navigating to a past date loads that day's puzzle state from localStorage if it exists, or starts fresh. Past-date scores are submitted to the same global leaderboard for that date, allowing late players to still compare results. If playing a past date, the "Share results" button will append that puzzle's date to the URL. So if a player shares a past date, others will land on the same puzzle that they played.
 
@@ -62,7 +62,7 @@ Navigating to a past date loads that day's puzzle state from localStorage if it 
 
 ---
 
-## Statistics Modal
+## Statistics Panel
 
 A persistent statistics panel tracks cumulative performance across all dates since launch. Metrics include:
 
@@ -70,7 +70,7 @@ A persistent statistics panel tracks cumulative performance across all dates sin
 - Case solve rate (individual case files correctly solved vs. attempted)
 - Average total score per completed day
 
-The modal also provides a "Copy Stats to Share" button that formats these into a plaintext summary for social sharing:
+The panel also provides a "Copy Stats to Share" button that formats these into a plaintext summary for social sharing:
 
 ```
 https://SteamDetective.wtf
