@@ -1,5 +1,8 @@
 import { useState, useEffect, useMemo } from 'react';
-import { fetchAdminScoreData } from '../lib/supabaseClient';
+import {
+  fetchAdminScoreData,
+  fetchPerfectFeedbackCount,
+} from '../lib/supabaseClient';
 import type { AdminScoreRow } from '../lib/supabaseClient';
 import { getRealUtcDateString } from '../utils';
 import { STEAM_DETECTIVE_DEMO_DAYS } from '../demos';
@@ -286,13 +289,18 @@ export const AdminDashboard: React.FC = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [lastFetched, setLastFetched] = useState<string | null>(null);
+  const [perfectCount, setPerfectCount] = useState<number | null>(null);
 
   const loadData = async (date: string) => {
     setLoading(true);
     setError(null);
     try {
-      const data = await fetchAdminScoreData(date);
+      const [data, perfect] = await Promise.all([
+        fetchAdminScoreData(date),
+        fetchPerfectFeedbackCount(date),
+      ]);
       setRows(data);
+      setPerfectCount(perfect);
       setLastFetched(new Date().toLocaleTimeString());
     } catch (e) {
       setError(String(e));
@@ -359,28 +367,25 @@ export const AdminDashboard: React.FC = () => {
 
       <div className='px-6 py-6 max-w-5xl mx-auto flex flex-col gap-6'>
         {/* Date picker + refresh */}
-        <div className='flex items-center gap-3 flex-wrap'>
-          <input
-            type='date'
-            value={selectedDate}
-            onChange={(e) => setSelectedDate(e.target.value)}
-            className='bg-zinc-800 border border-zinc-600 rounded px-3 py-1.5 text-white text-sm focus:outline-none focus:border-yellow-500'
-          />
-          <button
-            onClick={() => loadData(selectedDate)}
-            disabled={loading}
-            className='px-3 py-1.5 bg-zinc-700 hover:bg-zinc-600 disabled:opacity-50 rounded text-sm transition-colors'
-          >
-            {loading ? 'Loading…' : 'Refresh'}
-          </button>
-          {selectedDate !== today && (
+        <div className='flex justify-between'>
+          <div className='flex items-center gap-3 flex-wrap'>
+            <input
+              type='date'
+              value={selectedDate}
+              onChange={(e) => setSelectedDate(e.target.value)}
+              className='bg-zinc-800 border border-zinc-600 rounded px-3 py-1.5 text-white text-sm focus:outline-none focus:border-yellow-500'
+            />
             <button
-              onClick={() => setSelectedDate(today)}
-              className='px-3 py-1.5 border-yellow-500 text-yellow-500 hover:text-yellow-400 hover:bg-yellow-400/10 text-sm transition-colors'
+              onClick={() => loadData(selectedDate)}
+              disabled={loading}
+              className='px-3 py-1.5 bg-zinc-700 hover:bg-zinc-600 disabled:opacity-50 rounded text-sm transition-colors'
             >
-              Today <span className='hidden sm:inline'>({today})</span>
+              {loading ? 'Loading…' : 'Refresh'}
             </button>
-          )}
+          </div>
+          <span className='px-3 py-1.5 bg-zinc-800 rounded text-sm text-zinc-200'>
+            {perfectCount !== null ? perfectCount : '—'} 👍
+          </span>
         </div>
 
         {error && (

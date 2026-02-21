@@ -111,6 +111,23 @@ export const sendSteamDetectiveScore = async (
   }
 };
 
+export const fetchPerfectFeedbackCount = async (
+  date: string,
+): Promise<number> => {
+  const { count, error } = await supabase
+    .from('feedback')
+    .select('*', { count: 'exact', head: true })
+    .eq('created_at', date)
+    .eq('feedback_type', 'perfect');
+
+  if (error) {
+    console.error('Error fetching perfect feedback count:', error);
+    throw error;
+  }
+
+  return count ?? 0;
+};
+
 export const fetchSteamDetectiveScores = async (
   caseFile: 'easy' | 'expert' = 'easy',
 ): Promise<number[]> => {

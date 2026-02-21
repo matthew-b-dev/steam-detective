@@ -36,7 +36,7 @@ if (isRefinePage) {
   });
 } else if (isAdminDashPage) {
   import('./admin/AdminDashboard').then(({ AdminDashboard }) => {
-    document.title = 'Admin Dashboard · SteamDetective';
+    document.title = 'Admin Dashboard';
     ReactDOM.createRoot(document.getElementById('root')!).render(
       <AdminDashboard />,
     );
