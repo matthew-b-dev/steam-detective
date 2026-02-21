@@ -107,7 +107,7 @@ Metrics shown for the selected date:
 
 I will confess that I have a borderline unhealthy obsession with this screen.
 
-<img width="824" height="861" alt="image" src="https://github.com/user-attachments/assets/903027ab-5d28-4b67-b572-13f7a14c437f" />
+<img width="826" height="864" alt="image" src="https://github.com/user-attachments/assets/319deb45-de1b-4d4f-be98-8cebfc867d8e" />
 
 
 ---
