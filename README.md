@@ -2,6 +2,8 @@
 
 **Live site:** https://steamdetective.wtf
 
+**Contact:** `hello@steamdetective.wtf`
+
 ## What is this thing?
 
 SteamDetective.wtf is a daily web-based trivia game challenging players' knowledge of PC (Steam) games. Each day, players work through four mystery games, themed as "Case Files". Clues for each "Case File" are revealed one at a time, and the fewer guesses it takes to identify the game, the higher the score.
