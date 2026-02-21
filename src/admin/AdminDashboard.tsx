@@ -378,7 +378,7 @@ export const AdminDashboard: React.FC = () => {
               onClick={() => setSelectedDate(today)}
               className='px-3 py-1.5 border-yellow-500 text-yellow-500 hover:text-yellow-400 hover:bg-yellow-400/10 text-sm transition-colors'
             >
-              Jump to today <span className='hidden sm:inline'>({today})</span>
+              Today <span className='hidden sm:inline'>({today})</span>
             </button>
           )}
         </div>
