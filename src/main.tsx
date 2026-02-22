@@ -25,7 +25,7 @@ const isLocalhost =
 
 // Render the refine tool on localhost at /refine, otherwise render the main app
 const isRefinePage = isLocalhost && window.location.pathname === '/refine';
-const isAdminDashPage = window.location.pathname === '/admindash';
+const isDailyDashPage = window.location.pathname === '/dailydash';
 
 if (isRefinePage) {
   import('./refine/RefinePage').then(({ RefinePage }) => {
@@ -34,11 +34,11 @@ if (isRefinePage) {
       <RefinePage />,
     );
   });
-} else if (isAdminDashPage) {
-  import('./admin/AdminDashboard').then(({ AdminDashboard }) => {
-    document.title = 'Admin Dashboard';
+} else if (isDailyDashPage) {
+  import('./daily/DailyDashboard').then(({ DailyDashboard }) => {
+    document.title = 'Daily Dashboard';
     ReactDOM.createRoot(document.getElementById('root')!).render(
-      <AdminDashboard />,
+      <DailyDashboard />,
     );
   });
 } else {

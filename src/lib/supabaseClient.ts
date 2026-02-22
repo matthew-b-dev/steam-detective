@@ -64,8 +64,8 @@ export const fetchNewSteamScores = async (): Promise<number[]> => {
   return data?.map((row) => row.score) ?? [];
 };
 
-// Admin dashboard queries
-export interface AdminScoreRow {
+// Daily dashboard queries
+export interface DailyScoreRow {
   score: number;
   created_at_ts: string;
   case1_guesses: number | null;
@@ -74,9 +74,9 @@ export interface AdminScoreRow {
   case4_guesses: number | null;
 }
 
-export const fetchAdminScoreData = async (
+export const fetchDailyScoreData = async (
   date: string,
-): Promise<AdminScoreRow[]> => {
+): Promise<DailyScoreRow[]> => {
   const { data, error } = await supabase
     .from('scores')
     .select(
@@ -87,7 +87,7 @@ export const fetchAdminScoreData = async (
     .order('created_at_ts', { ascending: true });
 
   if (error) {
-    console.error('Error fetching admin score data:', error);
+    console.error('Error fetching daily score data:', error);
     throw error;
   }
 

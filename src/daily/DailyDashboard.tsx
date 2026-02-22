@@ -1,11 +1,11 @@
 import { useState, useEffect, useMemo } from 'react';
 import React from 'react';
 import {
-  fetchAdminScoreData,
+  fetchDailyScoreData,
   fetchPerfectFeedbackCount,
   fetchPageViewCount,
 } from '../lib/supabaseClient';
-import type { AdminScoreRow } from '../lib/supabaseClient';
+import type { DailyScoreRow } from '../lib/supabaseClient';
 import { getRealUtcDateString } from '../utils';
 import { STEAM_DETECTIVE_DEMO_DAYS } from '../demos';
 import {
@@ -99,7 +99,7 @@ const ScoreHistogram = ({ scores }: ScoreHistogramProps) => {
 };
 
 interface CaseFileRankingProps {
-  rows: AdminScoreRow[];
+  rows: DailyScoreRow[];
   selectedDate: string;
 }
 const CaseFileRanking = ({ rows, selectedDate }: CaseFileRankingProps) => {
@@ -190,7 +190,7 @@ const CaseFileRanking = ({ rows, selectedDate }: CaseFileRankingProps) => {
 };
 
 interface PlayerTimelineProps {
-  rows: AdminScoreRow[];
+  rows: DailyScoreRow[];
 }
 const PlayerTimeline = ({ rows }: PlayerTimelineProps) => {
   if (rows.length === 0) return null;
@@ -288,15 +288,14 @@ const ScorePercentileTable = ({ scores }: ScorePercentileTableProps) => {
   );
 };
 
-// ─── Main AdminDashboard ────────────────────────────────────────────────────────
+// ─── Main DailyDashboard ────────────────────────────────────────────────────────
 
-export const AdminDashboard: React.FC = () => {
+export const DailyDashboard: React.FC = () => {
   const today = getRealUtcDateString();
   const [selectedDate, setSelectedDate] = useState(today);
-  const [rows, setRows] = useState<AdminScoreRow[]>([]);
+  const [rows, setRows] = useState<DailyScoreRow[]>([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [lastFetched, setLastFetched] = useState<string | null>(null);
   const [perfectCount, setPerfectCount] = useState<number | null>(null);
   const [pageViewCount, setPageViewCount] = useState<number | null>(null);
 
@@ -305,14 +304,13 @@ export const AdminDashboard: React.FC = () => {
     setError(null);
     try {
       const [data, perfect, pageViews] = await Promise.all([
-        fetchAdminScoreData(date),
+        fetchDailyScoreData(date),
         fetchPerfectFeedbackCount(date),
         fetchPageViewCount(date),
       ]);
       setRows(data);
       setPerfectCount(perfect);
       setPageViewCount(pageViews);
-      setLastFetched(new Date().toLocaleTimeString());
     } catch (e) {
       setError(String(e));
     } finally {
@@ -367,12 +365,9 @@ export const AdminDashboard: React.FC = () => {
             </span>
           </h1>
           <span className='text-xs text-zinc-500 tracking-wide mt-0.5'>
-            Admin Dashboard
+            Daily Dashboard
           </span>
         </div>
-        <span className='ml-auto text-xs text-zinc-500'>
-          {lastFetched ? `As of ${lastFetched}` : ''}
-        </span>
       </div>
 
       <div className='px-6 py-6 max-w-5xl mx-auto flex flex-col gap-6'>
@@ -421,7 +416,7 @@ export const AdminDashboard: React.FC = () => {
             {/* Top-line stats */}
             <div className='grid grid-cols-2 sm:grid-cols-4 gap-3'>
               <StatCard
-                label='# of Scores'
+                label='# of Players'
                 value={
                   <span className='flex items-center gap-1.5'>
                     {rows.length}

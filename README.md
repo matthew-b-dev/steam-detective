@@ -86,12 +86,11 @@ https://SteamDetective.wtf
 
 <img width="395" height="725" alt="SkG86cN9KH" src="https://github.com/user-attachments/assets/a2a92b92-1627-45e1-a636-1a7280593e58" />
 
-
 ---
 
-## Admin Tools - a look under the hood
+## Tooling - a look under the hood
 
-### Admin Dashboard
+### Daily Dashboard
 
 A lightweight analytics page for reviewing how a given day's puzzle performed / is performing. Defaults to the current UTC puzzle date with a date picker to view any historical date.
 
@@ -111,7 +110,6 @@ I will confess that I have a borderline unhealthy obsession with this screen.
 
 <img width="702" height="745" alt="image" src="https://github.com/user-attachments/assets/a9b222c2-e92a-4e3a-b9b5-9a24b5996365" />
 
-
 ---
 
 ### Game Refinement Tool (`localhost` only)
@@ -124,7 +122,6 @@ Honestly, this thing looks ... rough. But it behaves well! And it does exactly w
 
 <img width="831" height="865" alt="image" src="https://github.com/user-attachments/assets/7943fbdf-6801-4ddd-9d23-3036947e0cc3" />
 
-
 ---
 
 ### Discord bot (privately sent notifications)
@@ -132,7 +129,6 @@ Honestly, this thing looks ... rough. But it behaves well! And it does exactly w
 Any time a score is posted (a row is inserted into the `scores` table) or feedback is given (`feedback` table), an Edge function defined in Supabase triggers a discord bot to post in a private Discord channel. This made A LOT more sense when only 10-15 people were playing the game every day. Only the feedback notifications are valuable now for the most part.
 
 <img width="476" height="155" alt="image" src="https://github.com/user-attachments/assets/b8320022-35a6-4073-8267-8326e694023c" />
-
 
 ## Developer notes
 

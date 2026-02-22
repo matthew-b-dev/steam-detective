@@ -10182,7 +10182,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/648800/ss_ce675c9e2bee34a08c6e2f0c8357354bcd4e5f1d.600x338.jpg',
     shortDescription:
-      '||Raft throws you and your friends into an epic oceanic adventure||! Alone or together,|| players battle to|| survive a perilous voyage across ||a vast sea||! Gather debris, scavenge ||reefs|| and build your own ||floating|| home, but be wary of the ||man-eating sharks||!',
+      '||Raft throws you and your friends into an epic oceanic adventure||! Alone or together,|| players battle to|| survive a perilous voyage across ||a vast sea||! Gather ||debris||, scavenge ||reefs|| and build your own ||floating|| home, but be wary of the ||man-eating sharks||!',
     earlyAccessDate: 'May 23, 2018',
     releaseDate: 'Jun 20, 2022',
     developer: 'Redbeet Interactive',
