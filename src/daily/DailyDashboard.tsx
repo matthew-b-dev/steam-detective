@@ -345,25 +345,27 @@ export const DailyDashboard: React.FC = () => {
   return (
     <div className='min-h-screen bg-zinc-900 text-white'>
       {/* Header */}
-      <div className='border-b border-zinc-700 px-6 py-4 flex items-center gap-4'>
-        <div className='flex flex-col leading-none'>
-          <h1
-            className='text-xl font-black'
-            style={{
-              fontFamily: 'Playfair Display, serif',
-              letterSpacing: '-0.04em',
-            }}
-          >
-            <span className='text-gray-300'>Steam</span>
-            Detective
-            <span
-              style={{ fontFamily: 'serif', letterSpacing: '-0.03em' }}
-              className='text-gray-400'
+      <div className='border-b border-zinc-700 px-6 py-4 flex items-center gap-4 max-w-5xl mx-auto'>
+        <div className='flex flex-col leading-none w-full'>
+          <a href='/'>
+            <h1
+              className='text-xl font-black'
+              style={{
+                fontFamily: 'Playfair Display, serif',
+                letterSpacing: '-0.04em',
+              }}
             >
-              <span>.</span>
-              <span className='italic text-yellow-500'>wtf</span>
-            </span>
-          </h1>
+              <span className='text-gray-300'>Steam</span>
+              Detective
+              <span
+                style={{ fontFamily: 'serif', letterSpacing: '-0.03em' }}
+                className='text-gray-400'
+              >
+                <span>.</span>
+                <span className='italic text-yellow-500'>wtf</span>
+              </span>
+            </h1>
+          </a>
           <span className='text-xs text-zinc-500 tracking-wide mt-0.5'>
             Daily Dashboard
           </span>

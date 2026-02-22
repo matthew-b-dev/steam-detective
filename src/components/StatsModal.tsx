@@ -155,13 +155,12 @@ function computeStats(): ComputedStats {
 }
 
 // Control points: [score, percentile of players beaten]
-// 185 → 50%, 250 → 80%, 300 → 90%, 330 → 99%
 const PERCENTILE_POINTS: [number, number][] = [
   [0, 0],
-  [185, 50],
-  [250, 80],
-  [300, 90],
-  [330, 99],
+  [250, 50],
+  [320, 80],
+  [360, 90],
+  [370, 99],
 ];
 
 function scoreToPercentile(score: number): number {

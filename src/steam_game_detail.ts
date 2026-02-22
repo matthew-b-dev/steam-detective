@@ -6654,7 +6654,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/632470/ss_b3694e99ffdb686d1bbbbe16a540d3d2ccd509c4.600x338.jpg',
     shortDescription:
-      "||Disco Elysium|| is a groundbreaking ||role playing|| game. You're a ||detective|| with a ||unique skill system|| at your disposal and a whole city to carve your path across. ||Interrogate|| unforgettable characters, crack murders or take bribes. Become a hero or ||an absolute disaster of a human being||.",
+      "||Disco Elysium|| is a groundbreaking ||role playing|| game. You're a ||detective|| with a ||unique skill system|| at your disposal and a whole city to carve your path across. ||Interrogate|| unforgettable characters, crack murders or ||take bribes||. Become a hero or ||an absolute disaster of a human being||.",
     releaseDate: 'Oct 15, 2019',
     developer: 'ZA/UM',
     publisher: 'ZA/UM',
