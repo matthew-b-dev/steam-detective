@@ -6206,8 +6206,10 @@ export const steamGameDetails: SteamGameMap = {
       'RPG',
       'Multiplayer',
     ],
-    clueOrder: ['tags', 'desc', 'details'],
+    screenshotFocusPoint: [28, 78, 300],
+    clueOrder: ['ss', 'tags', 'desc', 'details'],
     debugProcessed: true,
+    debugRefined: true,
     difficulty: 'Hard',
   },
   '2215430': {
