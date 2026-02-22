@@ -14,6 +14,7 @@ import {
 import ShareButton from '../ShareButton';
 import SteamDetectiveFeedbackButtons from './SteamDetectiveFeedbackButtons';
 import AnimatedTotalScoreDisplay from './AnimatedTotalScoreDisplay';
+import { useDailyGame } from '../../hooks/useDailyGame';
 import toast from 'react-hot-toast';
 
 interface CaseFileState {
@@ -38,6 +39,14 @@ const FinalGameComplete: React.FC<FinalGameCompleteProps> = ({
   const [userPercentile, setUserPercentile] = useState<number | null>(null);
   const [userRank, setUserRank] = useState<number>(0);
   const hasSentScoreThisSession = useRef(false);
+
+  const game1 = useDailyGame(1);
+  const game2 = useDailyGame(2);
+  const game3 = useDailyGame(3);
+  const game4 = useDailyGame(4);
+  const hasZoomedClue = [game1, game2, game3, game4].some(
+    (game) => game?.screenshotFocusPoint != null,
+  );
 
   // Send score first, then fetch all scores
   useEffect(() => {
@@ -206,7 +215,10 @@ const FinalGameComplete: React.FC<FinalGameCompleteProps> = ({
           </div>
 
           {/* Feedback Buttons */}
-          <SteamDetectiveFeedbackButtons isOpen={show} />
+          <SteamDetectiveFeedbackButtons
+            isOpen={show}
+            hasZoomedClue={hasZoomedClue}
+          />
         </div>
       </div>
     </motion.div>

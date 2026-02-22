@@ -5,6 +5,7 @@ import { sendFeedback } from '../../lib/supabaseClient';
 
 interface SteamDetectiveFeedbackButtonsProps {
   isOpen: boolean;
+  hasZoomedClue?: boolean;
 }
 
 // Sanitize user input to prevent malicious content
@@ -21,7 +22,7 @@ const sanitizeInput = (input: string): string => {
 
 const SteamDetectiveFeedbackButtons: React.FC<
   SteamDetectiveFeedbackButtonsProps
-> = ({ isOpen }) => {
+> = ({ isOpen, hasZoomedClue }) => {
   const [feedback, setFeedback] = useState<
     'steam_more' | 'steam_less' | 'perfect' | 'too_easy' | 'too_hard' | null
   >(null);
@@ -45,6 +46,13 @@ const SteamDetectiveFeedbackButtons: React.FC<
   ) => {
     setFeedback(type);
     await sendFeedback(type);
+    toast.success('Feedback sent.', { duration: 2000 });
+  };
+
+  const handleZoomedFeedback = async (good: boolean) => {
+    const label = good ? 'Zoomed Clue Good' : 'Zoomed Clue Bad';
+    await sendFeedback('custom', `\`[Feature]\` ${label}`);
+    setFeedback('perfect'); // reuse existing state to show success message
     toast.success('Feedback sent.', { duration: 2000 });
   };
 
@@ -85,32 +93,50 @@ const SteamDetectiveFeedbackButtons: React.FC<
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.1 }}
-            className='flex flex-wrap gap-1 sm:gap-2 justify-center mt-2 pt-[4px]'
+            className='flex flex-col gap-1 sm:gap-2 mt-2 pt-[4px]'
           >
-            <button
-              className='px-1 sm:px-3 py-1.5 rounded text-xs font-semibold transition-colors bg-gray-700 hover:bg-gray-600 text-white'
-              onClick={handleCustomFeedback}
-            >
-              💬 Other
-            </button>
-            <button
-              className='px-1 sm:px-3 py-1.5 rounded text-xs font-semibold transition-colors bg-gray-700 hover:bg-gray-600 text-white'
-              onClick={() => handleFeedback('perfect')}
-            >
-              ⭐️ Great
-            </button>
-            <button
-              className='px-1 sm:px-3 py-1.5 rounded text-xs font-semibold transition-colors bg-gray-700 hover:bg-gray-600 text-white'
-              onClick={() => handleFeedback('too_easy')}
-            >
-              😴 Too easy
-            </button>
-            <button
-              className='px-1 sm:px-3 py-1.5 rounded text-xs font-semibold transition-colors bg-gray-700 hover:bg-gray-600 text-white'
-              onClick={() => handleFeedback('too_hard')}
-            >
-              😵‍💫 Too hard
-            </button>
+            {hasZoomedClue && (
+              <div className='flex flex-wrap gap-1 sm:gap-2 justify-center'>
+                <button
+                  className='px-1 sm:px-3 py-1.5 rounded text-xs font-semibold transition-colors bg-gray-700 hover:bg-gray-600 text-white'
+                  onClick={() => handleZoomedFeedback(true)}
+                >
+                  "Zoomed" Clue (New) 👍
+                </button>
+                <button
+                  className='px-1 sm:px-3 py-1.5 rounded text-xs font-semibold transition-colors bg-gray-700 hover:bg-gray-600 text-white'
+                  onClick={() => handleZoomedFeedback(false)}
+                >
+                  "Zoomed" Clue (New) 👎
+                </button>
+              </div>
+            )}
+            <div className='flex flex-wrap gap-1 sm:gap-2 justify-center'>
+              <button
+                className='px-1 sm:px-3 py-1.5 rounded text-xs font-semibold transition-colors bg-gray-700 hover:bg-gray-600 text-white'
+                onClick={handleCustomFeedback}
+              >
+                💬 Other
+              </button>
+              <button
+                className='px-1 sm:px-3 py-1.5 rounded text-xs font-semibold transition-colors bg-gray-700 hover:bg-gray-600 text-white'
+                onClick={() => handleFeedback('perfect')}
+              >
+                ⭐️ Great
+              </button>
+              <button
+                className='px-1 sm:px-3 py-1.5 rounded text-xs font-semibold transition-colors bg-gray-700 hover:bg-gray-600 text-white'
+                onClick={() => handleFeedback('too_easy')}
+              >
+                😴 Too easy
+              </button>
+              <button
+                className='px-1 sm:px-3 py-1.5 rounded text-xs font-semibold transition-colors bg-gray-700 hover:bg-gray-600 text-white'
+                onClick={() => handleFeedback('too_hard')}
+              >
+                😵‍💫 Too hard
+              </button>
+            </div>
           </motion.div>
         ) : showCustomInput && feedback === null ? (
           <motion.div
