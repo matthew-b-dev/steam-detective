@@ -38,7 +38,8 @@ export const RefinePage: React.FC = () => {
     ...CLOSE_GUESS_SERIES,
   ]);
   // Initialize customOrder from localStorage or fallback to Object.keys
-  const [customOrder, setCustomOrder] = useState<string[]>(() => {
+  // eslint-disable-next-line no-unused-vars, @typescript-eslint/no-unused-vars
+  const [customOrder, _setCustomOrder] = useState<string[]>(() => {
     const stored = localStorage.getItem(GAME_ORDER_KEY);
     if (stored) {
       try {
@@ -117,28 +118,15 @@ export const RefinePage: React.FC = () => {
     [games, appIds],
   );
 
-  // Randomize game order (keeping refined games at the front)
-  const handleRandomize = useCallback(() => {
-    const confirmed = window.confirm(
-      'Are you sure you want to randomize the order of non-refined games? Refined games will remain at the front.',
-    );
-    if (!confirmed) return;
-
-    const allIds = Object.keys(games);
-    const refined = allIds.filter((id) => games[id].debugRefined === true);
-    const notRefined = allIds.filter((id) => !games[id].debugRefined);
-
-    // Fisher-Yates shuffle only the non-refined games
-    const shuffled = [...notRefined];
-    for (let i = shuffled.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
-    }
-
-    // Combine refined (in their current order) + shuffled non-refined
-    setCustomOrder([...refined, ...shuffled]);
-    setCurrentIndex(0);
-  }, [games]);
+  // Navigate to a random game in the current list
+  const handleRandom = useCallback(() => {
+    if (appIds.length <= 1) return;
+    let randomIndex: number;
+    do {
+      randomIndex = Math.floor(Math.random() * appIds.length);
+    } while (randomIndex === currentIndex);
+    setCurrentIndex(randomIndex);
+  }, [appIds.length, currentIndex]);
 
   // Update a single game property
   const updateGame = useCallback((appId: string, patch: Partial<SteamGame>) => {
@@ -176,6 +164,11 @@ export const RefinePage: React.FC = () => {
       }
       lines.push(`    shortDescription:`);
       lines.push(`      ${JSON.stringify(game.shortDescription)},`);
+      if (game.originalReleaseDate) {
+        lines.push(
+          `    originalReleaseDate: ${JSON.stringify(game.originalReleaseDate)},`,
+        );
+      }
       if (game.earlyAccessDate) {
         lines.push(
           `    earlyAccessDate: ${JSON.stringify(game.earlyAccessDate)},`,
@@ -214,6 +207,11 @@ export const RefinePage: React.FC = () => {
       if (game.transformScreenshotScale) {
         lines.push(
           `    transformScreenshotScale: ${game.transformScreenshotScale},`,
+        );
+      }
+      if (game.screenshotFocusPoint) {
+        lines.push(
+          `    screenshotFocusPoint: ${JSON.stringify(game.screenshotFocusPoint)},`,
         );
       }
       if (game.blurTitleAndAsAmpersand) {
@@ -283,7 +281,7 @@ export const RefinePage: React.FC = () => {
         onPrev={goPrev}
         onSearch={goToGameByName}
         onExport={handleExport}
-        onRandomize={handleRandomize}
+        onRandom={handleRandom}
       />
       <div className='max-w-[800px] mx-auto px-4 pt-4 pb-16'>
         {currentGame && (

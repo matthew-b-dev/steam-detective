@@ -176,6 +176,12 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile3: 'Disco Elysium',
     caseFile4: 'Among Us',
   },
+  '2026-02-23': {
+    caseFile1: 'Factorio',
+    caseFile2: 'The Sims 4',
+    caseFile3: 'Lies of P',
+    caseFile4: 'Undertale',
+  },
 };
 // MEd:  Totally Accurate Battle Simulator
 // Easy : Kerbal Space Program

@@ -7,6 +7,7 @@ interface RefineDetailsProps {
   game: SteamGame;
   isComplete: boolean;
   mode: 'refine' | 'choose';
+  // eslint-disable-next-line no-unused-vars
   onUpdate: (patch: Partial<SteamGame>) => void;
 }
 
@@ -63,7 +64,9 @@ export const RefineDetails: React.FC<RefineDetailsProps> = ({
   const [editingField, setEditingField] = useState<
     | 'developer'
     | 'publisher'
+    | 'releaseDate'
     | 'earlyAccessDate'
+    | 'originalReleaseDate'
     | 'reviewRating'
     | 'reviewCount'
     | null
@@ -73,7 +76,12 @@ export const RefineDetails: React.FC<RefineDetailsProps> = ({
   const [editReviewCount, setEditReviewCount] = useState('');
 
   const startEditing = (
-    field: 'developer' | 'publisher' | 'earlyAccessDate',
+    field:
+      | 'developer'
+      | 'publisher'
+      | 'releaseDate'
+      | 'earlyAccessDate'
+      | 'originalReleaseDate',
   ) => {
     setEditingField(field);
     setEditValue(game[field] ?? '');
@@ -88,7 +96,11 @@ export const RefineDetails: React.FC<RefineDetailsProps> = ({
   const finishEditing = () => {
     if (editingField) {
       const val = editValue.trim();
-      onUpdate({ [editingField]: val || undefined });
+      if (editingField === 'releaseDate') {
+        if (val) onUpdate({ releaseDate: val });
+      } else {
+        onUpdate({ [editingField]: val || undefined });
+      }
       setEditingField(null);
       setEditValue('');
     }
@@ -208,9 +220,66 @@ export const RefineDetails: React.FC<RefineDetailsProps> = ({
         </div>
       </div>
 
+      {/* Original Release Date */}
+      {(game.originalReleaseDate || mode === 'refine') && (
+        <div className='flex items-start gap-2 mt-4'>
+          <div className='text-gray-400 text-xs uppercase min-w-[120px] pt-[3px]'>
+            Original Release:
+          </div>
+          <div className='text-[#c7d5e0] text-sm flex-1'>
+            {editingField === 'originalReleaseDate' && mode === 'refine' ? (
+              <div className='flex items-center gap-2'>
+                <input
+                  type='text'
+                  value={editValue}
+                  onChange={(e) => setEditValue(e.target.value)}
+                  placeholder='e.g. Nov 15, 2010'
+                  className='bg-zinc-800 border border-zinc-600 rounded px-2 py-1 text-sm flex-1 font-mono focus:outline-none focus:border-zinc-400'
+                  autoFocus
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter') finishEditing();
+                    if (e.key === 'Escape') {
+                      setEditingField(null);
+                      setEditValue('');
+                    }
+                  }}
+                />
+                <button
+                  onClick={finishEditing}
+                  className='px-2 py-1 bg-green-700 hover:bg-green-600 rounded text-xs font-semibold'
+                >
+                  Done
+                </button>
+              </div>
+            ) : game.originalReleaseDate ? (
+              <span
+                className={
+                  mode === 'refine' ? 'cursor-pointer hover:underline' : ''
+                }
+                onClick={() =>
+                  mode === 'refine' && startEditing('originalReleaseDate')
+                }
+                title={mode === 'refine' ? 'Click to edit' : undefined}
+              >
+                {game.originalReleaseDate}
+              </span>
+            ) : (
+              <button
+                onClick={() => startEditing('originalReleaseDate')}
+                className='text-xs text-blue-400 hover:text-blue-300 border border-blue-700 hover:border-blue-500 rounded px-2 py-0.5'
+              >
+                + Add Original Release
+              </button>
+            )}
+          </div>
+        </div>
+      )}
+
       {/* Early Access Date */}
       {(game.earlyAccessDate || mode === 'refine') && (
-        <div className='flex items-start gap-2 mt-4'>
+        <div
+          className={`flex items-start gap-2 ${game.originalReleaseDate || mode === 'refine' ? 'mt-2' : 'mt-4'}`}
+        >
           <div className='text-gray-400 text-xs uppercase min-w-[120px] pt-[3px]'>
             Early Access Date:
           </div>
@@ -265,12 +334,48 @@ export const RefineDetails: React.FC<RefineDetailsProps> = ({
 
       {/* Release Date */}
       <div
-        className={`flex items-start gap-2 ${game.earlyAccessDate ? 'mt-2' : 'mt-4'}`}
+        className={`flex items-start gap-2 ${game.earlyAccessDate || game.originalReleaseDate || mode === 'refine' ? 'mt-2' : 'mt-4'}`}
       >
         <div className='text-gray-400 text-xs uppercase min-w-[120px] pt-[3px]'>
           Release Date:
         </div>
-        <div className='text-[#c7d5e0] text-sm'>{game.releaseDate}</div>
+        <div className='text-[#c7d5e0] text-sm flex-1'>
+          {editingField === 'releaseDate' && mode === 'refine' ? (
+            <div className='flex items-center gap-2'>
+              <input
+                type='text'
+                value={editValue}
+                onChange={(e) => setEditValue(e.target.value)}
+                placeholder='e.g. Apr 18, 2011'
+                className='bg-zinc-800 border border-zinc-600 rounded px-2 py-1 text-sm flex-1 font-mono focus:outline-none focus:border-zinc-400'
+                autoFocus
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter') finishEditing();
+                  if (e.key === 'Escape') {
+                    setEditingField(null);
+                    setEditValue('');
+                  }
+                }}
+              />
+              <button
+                onClick={finishEditing}
+                className='px-2 py-1 bg-green-700 hover:bg-green-600 rounded text-xs font-semibold'
+              >
+                Done
+              </button>
+            </div>
+          ) : (
+            <span
+              className={
+                mode === 'refine' ? 'cursor-pointer hover:underline' : ''
+              }
+              onClick={() => mode === 'refine' && startEditing('releaseDate')}
+              title={mode === 'refine' ? 'Click to edit' : undefined}
+            >
+              {game.releaseDate}
+            </span>
+          )}
+        </div>
       </div>
 
       {/* Developer */}

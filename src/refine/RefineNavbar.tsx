@@ -1,4 +1,13 @@
 import { useState } from 'react';
+import { ExclamationTriangleIcon } from '@heroicons/react/24/solid';
+import { STEAM_DETECTIVE_DEMO_DAYS } from '../demos';
+
+// Build a set of all game names that have been used in any demo day
+const DEMO_DAY_GAME_NAMES: Set<string> = new Set(
+  Object.values(STEAM_DETECTIVE_DEMO_DAYS).flatMap((day) =>
+    Object.values(day).filter((name): name is string => Boolean(name)),
+  ),
+);
 
 interface RefineNavbarProps {
   gameName: string;
@@ -8,9 +17,10 @@ interface RefineNavbarProps {
   onModeToggle: () => void;
   onNext: () => void;
   onPrev: () => void;
+  // eslint-disable-next-line no-unused-vars
   onSearch: (name: string) => void;
   onExport: () => void;
-  onRandomize: () => void;
+  onRandom: () => void;
 }
 
 export const RefineNavbar: React.FC<RefineNavbarProps> = ({
@@ -23,7 +33,7 @@ export const RefineNavbar: React.FC<RefineNavbarProps> = ({
   onPrev,
   onSearch,
   onExport,
-  onRandomize,
+  onRandom,
 }) => {
   const [searchText, setSearchText] = useState('');
 
@@ -66,11 +76,17 @@ export const RefineNavbar: React.FC<RefineNavbarProps> = ({
       </button>
 
       {/* Current game name & index */}
-      <div className='flex-1 text-center text-xs text-gray-400 truncate min-w-0'>
-        <span className='text-gray-500'>
+      <div className='flex-1 text-center text-xs text-gray-400 min-w-0 flex items-center justify-center gap-1.5'>
+        <span className='text-gray-500 shrink-0'>
           [{currentIndex + 1}/{totalGames}]
         </span>{' '}
-        <span className='text-gray-300'>{gameName}</span>
+        <span className='text-gray-300 truncate'>{gameName}</span>
+        {DEMO_DAY_GAME_NAMES.has(gameName) && (
+          <ExclamationTriangleIcon
+            className='w-3.5 h-3.5 text-yellow-400 shrink-0'
+            title='Used in a demo day'
+          />
+        )}
       </div>
 
       {/* Search */}
@@ -90,12 +106,12 @@ export const RefineNavbar: React.FC<RefineNavbarProps> = ({
         </button>
       </form>
 
-      {/* Randomize */}
+      {/* Random */}
       <button
-        onClick={onRandomize}
+        onClick={onRandom}
         className='px-3 py-1 bg-orange-700 hover:bg-orange-600 rounded text-sm font-semibold'
       >
-        Randomize
+        Random
       </button>
 
       {/* Export */}

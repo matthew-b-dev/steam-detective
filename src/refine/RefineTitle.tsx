@@ -7,6 +7,7 @@ import type { ReactElement } from 'react';
 interface RefineTitleProps {
   game: SteamGame;
   isComplete: boolean;
+  // eslint-disable-next-line no-unused-vars
   onUpdate: (patch: Partial<SteamGame>) => void;
 }
 

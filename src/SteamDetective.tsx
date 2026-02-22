@@ -145,11 +145,14 @@ const SteamDetectiveGame: React.FC<SteamDetectiveGameProps> = ({
 
   // Determine which clues to show based on custom clue order
   const clueOrder = dailyGame?.clueOrder || ['tags', 'details', 'desc'];
+  const hasSsInOrder = clueOrder.includes('ss');
+  const configuredCount = hasSsInOrder ? 4 : 3;
 
   const clueMapping: Record<string, number> = {
     tags: 1,
     details: 2,
     desc: 3,
+    ss: 4,
   };
 
   const getShowClues = (): boolean[] => {
@@ -160,11 +163,11 @@ const SteamDetectiveGame: React.FC<SteamDetectiveGameProps> = ({
     }
 
     for (let i = 0; i < state.currentClue && i < 6; i++) {
-      if (i < 3) {
+      if (i < configuredCount && i < clueOrder.length) {
         const clueType = clueOrder[i];
         const clueIndex = clueMapping[clueType] - 1;
         result[clueIndex] = true;
-      } else if (i === 3) {
+      } else if (!hasSsInOrder && i === 3) {
         result[3] = true;
       } else if (i === 4) {
         result[4] = true;
@@ -221,6 +224,34 @@ const SteamDetectiveGame: React.FC<SteamDetectiveGameProps> = ({
 
     const isFirstClue = prevShowCluesRef.current.every((clue) => !clue);
 
+    // Extra scroll trigger: when 'ss' is in clueOrder, the primary screenshot
+    // (showClues[3]) has a low canonical position so it can never become the
+    // new canonical-lowest once any higher-positioned clue is already shown.
+    // We need to scroll in two additional cases:
+    //   A) ss was JUST revealed as a non-first clue
+    //   B) ss is already visible and a new clue is being revealed before clue 5
+    const screenshotNowVisible = showClues[3];
+    const screenshotWasVisible = prevShowCluesRef.current[3];
+    const aNewClueRevealed =
+      showClues.filter(Boolean).length >
+      prevShowCluesRef.current.filter(Boolean).length;
+    const beforeSecondaryScreenshot = state.currentClue < 5;
+
+    const ssJustRevealedNonFirst =
+      !isFirstClue &&
+      hasSsInOrder &&
+      screenshotNowVisible &&
+      !screenshotWasVisible &&
+      beforeSecondaryScreenshot;
+
+    const ssVisibleAndNewClueRevealed =
+      !isFirstClue &&
+      hasSsInOrder &&
+      screenshotNowVisible &&
+      screenshotWasVisible &&
+      aNewClueRevealed &&
+      beforeSecondaryScreenshot;
+
     const getClueContainerElement = () => {
       return document.querySelector(
         `[data-clue-container="casefile-${caseFileNumber}"]`,
@@ -242,10 +273,11 @@ const SteamDetectiveGame: React.FC<SteamDetectiveGameProps> = ({
     };
 
     if (
+      clueContainerBottomNearViewportBottom() &&
       !isFirstClue &&
-      currentLowestPosition > prevLowestPosition &&
-      currentLowestPosition >= 0 &&
-      clueContainerBottomNearViewportBottom()
+      (currentLowestPosition > prevLowestPosition ||
+        ssJustRevealedNonFirst ||
+        ssVisibleAndNewClueRevealed)
     ) {
       const scrollAmount = 220;
 

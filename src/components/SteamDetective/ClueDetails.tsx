@@ -7,6 +7,7 @@ interface ClueDetailsProps {
   allReviewSummary: ReviewSummary;
   releaseDate: string;
   earlyAccessDate?: string;
+  originalReleaseDate?: string;
   developer: string;
   publisher: string;
   show: boolean;
@@ -17,6 +18,7 @@ export const ClueDetails: React.FC<ClueDetailsProps> = ({
   allReviewSummary,
   releaseDate,
   earlyAccessDate,
+  originalReleaseDate,
   developer,
   publisher,
   show,
@@ -112,9 +114,21 @@ export const ClueDetails: React.FC<ClueDetailsProps> = ({
           </div>
         </div>
 
+        {/* Original Release Date */}
+        {originalReleaseDate && (
+          <div className='flex items-start gap-2 mt-4'>
+            <div className='text-gray-400 text-xs uppercase min-w-[120px] pt-[3px]'>
+              Original Release:
+            </div>
+            <div className='text-[#c7d5e0] text-sm'>{originalReleaseDate}</div>
+          </div>
+        )}
+
         {/* Early Access Date */}
         {earlyAccessDate && (
-          <div className='flex items-start gap-2 mt-4'>
+          <div
+            className={`flex items-start gap-2 ${originalReleaseDate ? 'mt-2' : 'mt-4'}`}
+          >
             <div className='text-gray-400 text-xs uppercase min-w-[120px] pt-[3px]'>
               Early Access Date:
             </div>
@@ -124,10 +138,10 @@ export const ClueDetails: React.FC<ClueDetailsProps> = ({
 
         {/* Release Date */}
         <div
-          className={`flex items-start gap-2 ${earlyAccessDate ? 'mt-2' : 'mt-4'}`}
+          className={`flex items-start gap-2 ${earlyAccessDate || originalReleaseDate ? 'mt-2' : 'mt-4'}`}
         >
           <div className='text-gray-400 text-xs uppercase min-w-[120px] pt-[3px]'>
-            Release Date:
+            {originalReleaseDate ? 'Steam Release:' : 'Release Date:'}
           </div>
           <div className='text-[#c7d5e0] text-sm'>{releaseDate}</div>
         </div>

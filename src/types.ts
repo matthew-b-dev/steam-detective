@@ -20,6 +20,7 @@ export interface SteamGame {
   shortDescription: string;
   releaseDate: string;
   earlyAccessDate?: string;
+  originalReleaseDate?: string;
   developer: string;
   publisher: string;
   tags: string[];
@@ -27,9 +28,10 @@ export interface SteamGame {
   blurredUserTags?: string[]; // User tags that should be blurred/redacted
   blurScreenshotQuarter?: 'top' | 'bottom'; // If specified, blurs the top or bottom quarter of screenshots (applies to both)
   transformScreenshotScale?: number; // If specified, applies transform: scale(#) to the big screenshot
+  screenshotFocusPoint?: [number, number, number?]; // [widthPercent, heightPercent, zoom%] — zooms the primary screenshot. heightPercent: 100=top, 0=bottom. zoom: 1–175, default 75. e.g. [50,50,75]=center at 75%
   blurTitleAndAsAmpersand?: boolean; // If true, replace 'and' with '&' in the title
   overrideCensoredTitle?: string; // Manually define censored title with || markers for custom censoring
-  clueOrder?: ('desc' | 'details' | 'tags')[]; // Custom order for first 3 clues. Last 3 are always: screenshot1, screenshot2, title. Default: ['tags', 'details', 'desc']
+  clueOrder?: ('desc' | 'details' | 'tags' | 'ss')[]; // Custom order for first 3-4 clues. 'ss' inserts the primary screenshot into the order. Last fixed clues are always: (ss if not in order), secondary screenshot, title. Default: ['tags', 'details', 'desc']
   searchTerms?: string[]; // Additional search terms/aliases for the dropdown
   features: string[];
   allReviewSummary: ReviewSummary;

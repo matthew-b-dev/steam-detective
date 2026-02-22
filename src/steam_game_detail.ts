@@ -57,7 +57,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/620/ss_6a4f5afdaa98402de9cf0b59fed27bab3256a6f4.600x338.jpg',
     shortDescription:
-      'The "||Perpetual Testing|| Initiative" has been expanded to allow you to design co-op puzzles for you and your friends!',
+      'The "||Perpetual Testing Initiative||" has been expanded to allow you to design ||co-op|| puzzles for you and your friends!',
     releaseDate: 'Apr 18, 2011',
     developer: '||Valve||',
     publisher: '||Valve||',
@@ -4665,11 +4665,11 @@ export const steamGameDetails: SteamGameMap = {
     name: 'Lies of P',
     appId: 1627720,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1627720/ss_cef0c2964b82e2b80ab0756da08f61c27d9fa33c.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1627720/ss_6da0465ea662d368ad4b2cf1c0812faa1d0ca317.600x338.jpg',
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1627720/ss_b510d9d65802c3cc776d1296c3daa1e9a79e3615.600x338.jpg',
     shortDescription:
-      '||Lies of P|| is a thrilling soulslike that takes the story of ||Pinocchio||, turns it on its head, and sets it against the darkly elegant backdrop of the ||Belle Epoque|| era.',
+      '||Lies of P is a thrilling soulslike that takes|| the story of ||Pinocchio||, turns it on its head, and sets it against the ||darkly|| ||elegant|| backdrop of the ||Belle Epoque|| era.',
     releaseDate: 'Sep 18, 2023',
     developer: 'NEOWIZ',
     publisher: 'NEOWIZ',
@@ -4701,10 +4701,12 @@ export const steamGameDetails: SteamGameMap = {
       'Violent',
       'Replay Value',
     ],
-    clueOrder: ['desc', 'details', 'tags'],
+    blurredUserTags: ['Souls-like', 'Action RPG', 'Steampunk', 'Action'],
+    overrideCensoredTitle: 'Li||es|| ||of|| ||P||',
+    clueOrder: ['desc', 'tags', 'details'],
     debugProcessed: true,
     debugRefined: true,
-    difficulty: 'Easy',
+    difficulty: 'Medium',
   },
   '1693980': {
     name: 'Dead Space',
@@ -5502,47 +5504,6 @@ export const steamGameDetails: SteamGameMap = {
       'Female Protagonist',
     ],
     blurredUserTags: ['Life Sim', 'Farming Sim'],
-  },
-  '611790': {
-    name: 'House Party',
-    appId: 611790,
-    primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/611790/ss_6b6723e77311843c7de356538f41a7c03079fa41.600x338.jpg',
-    secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/611790/ss_73c9a4db9d1b4c219700442f3d083c27e33f1b3f.600x338.jpg',
-    shortDescription:
-      "||House Party|| is an edgy comedy adventure game inspired by classic comedies of the '90s. Every decision changes your story and every character has something to reveal. There's also a button to take your pants off.",
-    releaseDate: 'Jul 15, 2022',
-    developer: 'Eek! Games, LLC',
-    publisher: 'Eek! Games, LLC',
-    tags: ['Adventure', 'Casual', 'Indie', 'RPG', 'Simulation'],
-    features: [],
-    allReviewSummary: {
-      count: 6216,
-      rating: 'Very Positive',
-    },
-    userTags: [
-      'Nudity',
-      'Mature',
-      'NSFW',
-      'Simulation',
-      'Sandbox',
-      'Choices Matter',
-      'Story Rich',
-      'Adventure',
-      'Comedy',
-      'Sexual Content',
-      'Multiple Endings',
-      '3D',
-      'Puzzle',
-      'Cinematic',
-      'Drama',
-      'Choose Your Own Adventure',
-      'Life Sim',
-      'LGBTQ+',
-      'Female Protagonist',
-      'Singleplayer',
-    ],
   },
   '1943950': {
     name: 'Escape the Backrooms',
@@ -9189,7 +9150,8 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/427520/ss_171f398a8e347fad650a9c1b6c3b77c612781510.600x338.jpg',
     shortDescription:
-      "||Factorio|| is a game about building and creating automated factories to produce items of increasing complexity, within an infinite 2D world. Use your imagination to design your factory, combine simple elements into ingenious structures, and finally protect it from the creatures who don't really like you.",
+      "||Factorio|| is a game about building and ||creating automated factories to produce items of increasing complexity||, within an infinite 2D world. Use your imagination ||to design your factory, combine simple elements into ingenious structures, and finally protect it from the creatures who don't really like you.||",
+    earlyAccessDate: 'Feb 25, 2016',
     releaseDate: 'Aug 14, 2020',
     developer: 'Wube Software LTD.',
     publisher: 'Wube Software LTD.',
@@ -9221,6 +9183,11 @@ export const steamGameDetails: SteamGameMap = {
       'City Builder',
       'Indie',
     ],
+    blurredUserTags: ['Automation'],
+    clueOrder: ['desc', 'details', 'tags'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
   },
   '594570': {
     name: 'Total War: WARHAMMER II',
@@ -11290,7 +11257,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/524220/ss_8b29f7e1ce9a8b9313dc3eb50dbe76a4cf94eef9.600x338.jpg',
     shortDescription:
-      '||NieR||: Automata tells the story of androids 2B, 9S and A2 and their battle to reclaim the machine-driven dystopia overrun by powerful machines.',
+      '||NieR: Automata|| tells the story of ||androids 2B,|| ||9S|| and ||A2|| and their battle to reclaim the ||machine||-driven dystopia overrun by ||powerful machines||.',
     releaseDate: 'Mar 17, 2017',
     developer: 'Square Enix, PlatinumGames Inc.',
     publisher: 'Square Enix',
@@ -11322,6 +11289,11 @@ export const steamGameDetails: SteamGameMap = {
       'Character Action Game',
       'Violent',
     ],
+    blurredUserTags: ['Post-apocalyptic', 'Anime', 'Female Protagonist'],
+    clueOrder: ['desc', 'tags', 'details'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Hard',
   },
   '391540': {
     name: 'Undertale',
@@ -11331,10 +11303,10 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/391540/ss_b9018c41cea2bdfb150609bedfca99b16a5af02a.600x338.jpg',
     shortDescription:
-      "||UNDERTALE||! The RPG game where you don't have to destroy anyone.",
+      "||UNDERTALE! The RPG game|| where you don't have to ||destroy anyone||.",
     releaseDate: 'Sep 15, 2015',
-    developer: 'tobyfox',
-    publisher: 'tobyfox',
+    developer: '||toby fox||',
+    publisher: '||toby fox||',
     tags: ['Indie', 'RPG'],
     features: [],
     allReviewSummary: {
@@ -11363,6 +11335,18 @@ export const steamGameDetails: SteamGameMap = {
       'Dating Sim',
       'Horror',
     ],
+    blurredUserTags: [
+      'Great Soundtrack',
+      'Pixel Graphics',
+      '2D',
+      'Funny',
+      'Multiple Endings',
+      'Indie',
+    ],
+    clueOrder: ['desc', 'tags', 'details'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Hard',
   },
   '1304930': {
     name: 'The Outlast Trials',
@@ -11989,9 +11973,9 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/281990/ss_f844372cc220e3858aa17205e9fec0ae79a4e665.600x338.jpg',
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/281990/ss_692532123e560e6b866baee59b1e310a291a110d.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/281990/ss_7f4d7cc160c43e77aa523e910b365e0ca436e6bb.600x338.jpg',
     shortDescription:
-      'Explore a galaxy full of wonders in this sci-fi grand strategy game from Paradox Development Studios. Interact with diverse alien races, discover strange new worlds with unexpected events and expand the reach of your empire. Each new adventure holds almost limitless possibilities.',
+      'Explore a ||galaxy|| full of wonders in this ||sci-fi grand strategy|| game from ||Paradox Development Studios||. Interact with diverse ||alien races||, discover strange new ||worlds with|| unexpected ||events|| and expand the ||reach of your empire||. Each new adventure holds almost ||limitless possibilities||.',
     releaseDate: 'May 9, 2016',
     developer: 'Paradox Development Studio',
     publisher: 'Paradox Interactive',
@@ -12023,6 +12007,11 @@ export const steamGameDetails: SteamGameMap = {
       'Procedural Generation',
       'Atmospheric',
     ],
+    blurredUserTags: ['4X', 'Space', 'Sci-fi'],
+    clueOrder: ['desc', 'tags', 'details'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Hard',
   },
   '230410': {
     name: 'Warframe',
@@ -12560,6 +12549,7 @@ export const steamGameDetails: SteamGameMap = {
       'Third Person',
       'America',
     ],
+    blurScreenshotQuarter: 'top',
   },
   '414700': {
     name: 'Outlast 2',
@@ -13922,11 +13912,12 @@ export const steamGameDetails: SteamGameMap = {
     name: 'The Sims 4',
     appId: 1222670,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1222670/ss_537683e5e29c2d6d02c64aa7321dcb26166f7d82.600x338.jpg',
-    secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1222670/ss_2fc938d99a1e87893852cb2d2113478190607941.600x338.jpg',
+    secondaryScreenshot:
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1222670/ss_537683e5e29c2d6d02c64aa7321dcb26166f7d82.600x338.jpg',
     shortDescription:
-      "Play with life and discover the possibilities. Unleash your imagination and create a world of Sims that's wholly unique. Explore and customize every detail from Sims to homes–and much more.",
+      "||Play with life and|| discover the possibilities. Unleash your imagination and create a ||world|| of ||Sims|| that's wholly unique. Explore and customize every detail from ||Sims|| to ||homes||–and much more.",
+    originalReleaseDate: 'Sep 2, 2014',
     releaseDate: 'Jun 18, 2020',
     developer: 'Maxis',
     publisher: 'Electronic Arts',
@@ -13958,6 +13949,22 @@ export const steamGameDetails: SteamGameMap = {
       'Cartoony',
       'Nudity',
     ],
+    blurredUserTags: [
+      'Relaxing',
+      'Simulation',
+      'Romance',
+      'Building',
+      'Character Customization',
+      'Life Sim',
+      'Dating Sim',
+      'Singleplayer',
+      'Free to Play',
+    ],
+    screenshotFocusPoint: [74, 4, 300],
+    clueOrder: ['ss', 'tags', 'details', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Medium',
   },
 };
 
@@ -13998,5 +14005,6 @@ export const CLOSE_GUESS_SERIES: string[] = [
   'witcher',
   'need for speed',
   'truck simulator',
+  'the sims',
   'ori and',
 ];

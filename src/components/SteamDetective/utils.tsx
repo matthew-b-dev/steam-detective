@@ -99,6 +99,30 @@ export const renderCensoredDescription = (
 
 export const MAX_CLUES = 6;
 
+/**
+ * Returns CSS style for a zoom focused on the given point.
+ * focusPoint: [widthPercent, heightPercent, zoom?]
+ *   widthPercent:  0 = left,   100 = right
+ *   heightPercent: 0 = bottom, 100 = top  (inverted vs CSS)
+ *   zoom:          1–100, default 75  (scale = 1 + zoom/100, so 75 → scale 1.75)
+ * e.g. [50, 50, 75] = center at 75% zoom
+ */
+export const DEFAULT_SCREENSHOT_ZOOM = 75;
+export function getFocusScale(zoom?: number): number {
+  return 1 + (zoom ?? DEFAULT_SCREENSHOT_ZOOM) / 100;
+}
+export function getScreenshotFocusStyle(
+  focusPoint: [number, number, number?],
+): React.CSSProperties {
+  const [widthPercent, heightPercent, zoom] = focusPoint;
+  const cssX = widthPercent;
+  const cssY = 100 - heightPercent; // CSS: 0%=top, 100%=bottom
+  return {
+    transform: `scale(${getFocusScale(zoom)})`,
+    transformOrigin: `${cssX}% ${cssY}%`,
+  };
+}
+
 // Animation variants
 export const clueVariants = {
   hidden: {

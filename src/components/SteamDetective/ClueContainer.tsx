@@ -53,12 +53,14 @@ export const ClueContainer: React.FC<ClueContainerProps> = ({ caseFile }) => {
         <ClueScreenshot
           screenshot={mainScreenshot}
           secondaryScreenshot={thumbnailScreenshot}
+          primaryScreenshotUrl={dailyGame.primaryScreenshot}
           show={showClue4}
           showSecondary={
             showClue5 && dailyGame.secondaryScreenshot !== undefined
           }
           blurScreenshotQuarter={dailyGame.blurScreenshotQuarter}
           transformScreenshotScale={dailyGame.transformScreenshotScale}
+          screenshotFocusPoint={dailyGame.screenshotFocusPoint}
           onSwapScreenshots={handleSwapScreenshots}
           isComplete={isComplete}
         />
@@ -72,6 +74,7 @@ export const ClueContainer: React.FC<ClueContainerProps> = ({ caseFile }) => {
           allReviewSummary={dailyGame.allReviewSummary}
           releaseDate={dailyGame.releaseDate}
           earlyAccessDate={dailyGame.earlyAccessDate}
+          originalReleaseDate={dailyGame.originalReleaseDate}
           developer={dailyGame.developer}
           publisher={dailyGame.publisher}
           show={showClue2}

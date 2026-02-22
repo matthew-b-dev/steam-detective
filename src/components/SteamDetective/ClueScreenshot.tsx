@@ -4,32 +4,62 @@ import {
   ArrowsPointingOutIcon,
   LightBulbIcon as LightBulbOutline,
 } from '@heroicons/react/24/outline';
-import { LightBulbIcon as LightBulbSolid } from '@heroicons/react/24/solid';
+import {
+  LightBulbIcon as LightBulbSolid,
+  LockClosedIcon,
+} from '@heroicons/react/24/solid';
 import FsLightbox from 'fslightbox-react';
-import { screenshotVariants } from './utils';
+import {
+  screenshotVariants,
+  getScreenshotFocusStyle,
+  DEFAULT_SCREENSHOT_ZOOM,
+} from './utils';
 
 interface ClueScreenshotProps {
   screenshot: string;
   secondaryScreenshot?: string;
+  primaryScreenshotUrl: string;
   show: boolean;
   showSecondary?: boolean;
   onSwapScreenshots?: () => void;
   blurScreenshotQuarter?: 'top' | 'bottom';
   transformScreenshotScale?: number;
+  screenshotFocusPoint?: [number, number, number?];
   isComplete?: boolean;
 }
 
 export const ClueScreenshot: React.FC<ClueScreenshotProps> = ({
   screenshot,
   secondaryScreenshot,
+  primaryScreenshotUrl,
   show,
   showSecondary = false,
   onSwapScreenshots,
   blurScreenshotQuarter,
   transformScreenshotScale,
+  screenshotFocusPoint,
   isComplete = false,
 }) => {
   const bothShown = showSecondary && secondaryScreenshot;
+
+  // The large slot shows: secondaryScreenshot when bothShown, otherwise screenshot
+  const largeSrc = bothShown ? secondaryScreenshot : screenshot;
+  // The thumbnail slot (only visible when bothShown) always shows: screenshot
+  const thumbSrc = screenshot;
+
+  // Zoom follows the PRIMARY screenshot image regardless of which slot it occupies.
+  // Un-apply zoom once the game is complete so the full unzoomed image is shown.
+  const primaryZoomStyle =
+    !isComplete && screenshotFocusPoint
+      ? getScreenshotFocusStyle(screenshotFocusPoint)
+      : !isComplete && transformScreenshotScale
+        ? { transform: `scale(${transformScreenshotScale})` }
+        : undefined;
+
+  const largeZoomStyle =
+    largeSrc === primaryScreenshotUrl ? primaryZoomStyle : undefined;
+  const thumbZoomStyle =
+    thumbSrc === primaryScreenshotUrl ? primaryZoomStyle : undefined;
   const [lightboxToggler, setLightboxToggler] = useState(false);
   const [isBrightened, setIsBrightened] = useState(false);
 
@@ -41,8 +71,8 @@ export const ClueScreenshot: React.FC<ClueScreenshotProps> = ({
   // Handle click on large screenshot - only on mobile
   const handleLargeScreenshotClick = () => {
     // Check if viewport is mobile (width < 642)
-    // Don't open lightbox if screenshot is redacted
-    if (isMobileViewport && !blurScreenshotQuarter) {
+    // Don't open lightbox if screenshot is redacted or zoomed
+    if (isMobileViewport && !blurScreenshotQuarter && !primaryZoomStyle) {
       setLightboxToggler(!lightboxToggler);
     }
   };
@@ -60,8 +90,10 @@ export const ClueScreenshot: React.FC<ClueScreenshotProps> = ({
         <div className='flex flex-col gap-3'>
           {/* Main Screenshot - shows primary initially, then secondary when clue 5 appears */}
           <div
-            className={`overflow-hidden rounded-lg relative select-none ${isMobileViewport && !blurScreenshotQuarter ? 'cursor-pointer' : 'cursor-default'}`}
-            style={{ aspectRatio: '16/9' }}
+            className={`overflow-hidden rounded-lg relative select-none ${isMobileViewport && !blurScreenshotQuarter && !primaryZoomStyle ? 'cursor-pointer' : 'cursor-default'}`}
+            style={{
+              aspectRatio: '16/9',
+            }}
             onClick={handleLargeScreenshotClick}
             onContextMenu={(e) => e.preventDefault()}
           >
@@ -80,11 +112,7 @@ export const ClueScreenshot: React.FC<ClueScreenshotProps> = ({
                   className='w-full h-full object-cover block'
                   draggable={false}
                   onContextMenu={(e) => e.preventDefault()}
-                  style={
-                    transformScreenshotScale
-                      ? { transform: `scale(${transformScreenshotScale})` }
-                      : undefined
-                  }
+                  style={largeZoomStyle}
                   initial={{ filter: 'blur(10px)' }}
                   animate={{
                     filter: isMobileViewport
@@ -121,11 +149,41 @@ export const ClueScreenshot: React.FC<ClueScreenshotProps> = ({
                 )}
               </motion.div>
             </AnimatePresence>
-            {isMobileViewport && !blurScreenshotQuarter && (
-              <div className='absolute top-2 right-2 bg-black/50 rounded-md p-2 pointer-events-none'>
-                <ArrowsPointingOutIcon className='w-8 h-8 text-white drop-shadow-lg' />
-              </div>
-            )}
+            {isMobileViewport &&
+              !blurScreenshotQuarter &&
+              !primaryZoomStyle && (
+                <div className='absolute top-2 right-2 bg-black/50 rounded-md p-2 pointer-events-none'>
+                  <ArrowsPointingOutIcon className='w-8 h-8 text-white drop-shadow-lg' />
+                </div>
+              )}
+            {/* Dashed border overlay when zoomed primary is showing large */}
+            {largeSrc === primaryScreenshotUrl &&
+              screenshotFocusPoint &&
+              !isComplete && (
+                <div
+                  className='absolute inset-0 pointer-events-none rounded-lg'
+                  style={{ border: '3px dashed rgba(255,255,255,0.50)' }}
+                />
+              )}
+            {/* Zoom indicator — only on large slot when primary is showing with a focus point, hidden once complete */}
+            {largeSrc === primaryScreenshotUrl &&
+              screenshotFocusPoint &&
+              !isComplete && (
+                <div className='absolute bottom-2 left-2 pointer-events-auto group'>
+                  <div
+                    className='px-1 sm:px-4 py-0.5 sm:py-1.5 rounded text-sm sm:text-2xl font-semibold text-white tracking-wide transition-opacity duration-150 group-hover:opacity-0'
+                    style={{
+                      background: 'rgba(0,0,0,0.55)',
+                      backdropFilter: 'blur(6px)',
+                      WebkitBackdropFilter: 'blur(6px)',
+                      textShadow: '0 1px 3px rgba(0,0,0,0.8)',
+                    }}
+                  >
+                    {screenshotFocusPoint[2] ?? DEFAULT_SCREENSHOT_ZOOM}% Zoom{' '}
+                    <LockClosedIcon className='h-5 sm:h-6 w-5 sm:w-6 inline relative -top-[2px] sm:-top-1' />
+                  </div>
+                </div>
+              )}
           </div>
 
           {/* Row for thumbnail and brightness toggle */}
@@ -152,6 +210,7 @@ export const ClueScreenshot: React.FC<ClueScreenshotProps> = ({
                     className='w-full h-full object-cover block brightness-75 group-hover:brightness-90'
                     draggable={false}
                     onContextMenu={(e) => e.preventDefault()}
+                    style={thumbZoomStyle}
                     initial={{ filter: 'blur(10px)', opacity: 0 }}
                     animate={{ filter: 'blur(0px)', opacity: 1 }}
                     exit={{ filter: 'blur(10px)', opacity: 0 }}

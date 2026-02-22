@@ -14,16 +14,19 @@ interface RefineGameViewProps {
   allGames: SteamGameMap;
   mode: 'refine' | 'choose';
   closeGuessSeries: string[];
+  // eslint-disable-next-line no-unused-vars
   onCloseGuessSeriesChange: (series: string[]) => void;
+  // eslint-disable-next-line no-unused-vars
   onUpdate: (patch: Partial<SteamGame>) => void;
 }
 
-type ClueType = 'desc' | 'details' | 'tags';
+type ClueType = 'desc' | 'details' | 'tags' | 'ss';
 
 const CLUE_LABELS: Record<ClueType, string> = {
   desc: 'Description',
   details: 'Details',
   tags: 'Tags',
+  ss: 'Screenshot',
 };
 
 const DEFAULT_CLUE_ORDER: ClueType[] = ['desc', 'tags', 'details'];
@@ -47,7 +50,9 @@ export const RefineGameView: React.FC<RefineGameViewProps> = ({
       : '',
   );
 
-  const clueOrder: ClueType[] = game.clueOrder ?? DEFAULT_CLUE_ORDER;
+  const clueOrder: ClueType[] = (game.clueOrder ??
+    DEFAULT_CLUE_ORDER) as ClueType[];
+  const hasSsInOrder = clueOrder.includes('ss');
 
   // Build game options for react-select (same logic as GameInput)
   const gameOptions = useMemo(() => {
@@ -232,21 +237,24 @@ export const RefineGameView: React.FC<RefineGameViewProps> = ({
 
           {/* Clue order dropdowns */}
           <div
-            className={`flex items-center gap-4 rounded-lg px-4 py-3 ${
+            className={`flex flex-wrap items-center gap-4 rounded-lg px-4 py-3 ${
               hasDuplicateClues ? 'bg-red-900/40' : 'bg-[#171a21]'
             }`}
           >
-            {[0, 1, 2].map((idx) => (
+            {Array.from({ length: hasSsInOrder ? 4 : 3 }, (_, idx) => (
               <div key={idx} className='flex items-center gap-2'>
                 <span className='text-xs text-gray-400'>Clue #{idx + 1}</span>
                 <select
-                  value={clueOrder[idx]}
+                  value={clueOrder[idx] ?? ''}
                   onChange={(e) =>
                     handleClueOrderChange(idx, e.target.value as ClueType)
                   }
                   className='bg-zinc-800 border border-zinc-600 rounded px-2 py-1 text-sm'
                 >
-                  {(['desc', 'details', 'tags'] as ClueType[]).map((opt) => (
+                  {(hasSsInOrder
+                    ? (['desc', 'details', 'tags', 'ss'] as ClueType[])
+                    : (['desc', 'details', 'tags'] as ClueType[])
+                  ).map((opt) => (
                     <option key={opt} value={opt}>
                       {CLUE_LABELS[opt]}
                     </option>
@@ -254,6 +262,34 @@ export const RefineGameView: React.FC<RefineGameViewProps> = ({
                 </select>
               </div>
             ))}
+            <label className='flex items-center gap-2 cursor-pointer ml-2'>
+              <input
+                type='checkbox'
+                checked={hasSsInOrder}
+                onChange={(e) => {
+                  if (e.target.checked) {
+                    onUpdate({
+                      clueOrder: [
+                        ...(clueOrder
+                          .filter((c) => c !== 'ss')
+                          .slice(0, 3) as ClueType[]),
+                        'ss',
+                      ],
+                    });
+                  } else {
+                    const without = clueOrder
+                      .filter((c) => c !== 'ss')
+                      .slice(0, 3) as ClueType[];
+                    onUpdate({
+                      clueOrder:
+                        without.length === 3 ? without : DEFAULT_CLUE_ORDER,
+                    });
+                  }
+                }}
+                className='w-4 h-4 accent-blue-500'
+              />
+              <span className='text-xs text-gray-400'>Include screenshot</span>
+            </label>
           </div>
 
           {/* Close Guess Series */}
