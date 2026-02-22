@@ -3048,7 +3048,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/546560/ss_fe7066404a704aa20f7c6f251facb7aef2606bda.600x338.jpg',
     shortDescription:
-      "||Half-Life: Alyx|| is ||Valve||'s ||VR|| return to the ||Half-Life|| series. It's the story of an impossible fight against a vicious alien race known as the ||Combine||, set between the events of ||Half-Life|| and ||Half-Life|| 2. Playing as ||Alyx Vance||, you are humanity's only chance for survival.",
+      "||Half-Life: Alyx|| is ||Valve's VR|| return to the ||Half-Life|| series. It's the story of an impossible fight against a vicious alien race known as the ||Combine||, set between the events of ||Half-Life|| and ||Half-Life 2||. Playing as ||Alyx Vance||, you are humanity's only chance for survival.",
     releaseDate: 'Mar 23, 2020',
     developer: '||Valve||',
     publisher: '||Valve||',
@@ -3080,7 +3080,7 @@ export const steamGameDetails: SteamGameMap = {
       'Great Soundtrack',
       'Gore',
     ],
-    blurredUserTags: ['Horror'],
+    blurredUserTags: ['Horror', 'VR'],
     overrideCensoredTitle: 'H||alf-||L||ife||: ||Aly||x',
     clueOrder: ['desc', 'details', 'tags'],
     searchTerms: [
@@ -10182,7 +10182,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/648800/ss_ce675c9e2bee34a08c6e2f0c8357354bcd4e5f1d.600x338.jpg',
     shortDescription:
-      '||Raft throws you and your friends into an epic oceanic adventure||! Alone or together,|| players battle to|| survive a perilous voyage across ||a vast sea||! Gather ||debris||, scavenge ||reefs|| and build your own ||floating|| home, but be wary of the ||man-eating sharks||!',
+      '||Raft throws you and your friends into an epic oceanic adventure||! Alone or together,|| players battle to|| survive a perilous voyage ||across a vast sea||! Gather ||debris||, scavenge ||reefs|| and build your own ||floating|| home, but be wary of the ||man-eating sharks||!',
     earlyAccessDate: 'May 23, 2018',
     releaseDate: 'Jun 20, 2022',
     developer: 'Redbeet Interactive',
