@@ -112,7 +112,7 @@ export const ClueScreenshot: React.FC<ClueScreenshotProps> = ({
                   className='w-full h-full object-cover block'
                   draggable={false}
                   onContextMenu={(e) => e.preventDefault()}
-                  style={largeZoomStyle}
+                  style={{ WebkitTouchCallout: 'none', ...largeZoomStyle }}
                   initial={{ filter: 'blur(10px)' }}
                   animate={{
                     filter: isMobileViewport
@@ -149,6 +149,10 @@ export const ClueScreenshot: React.FC<ClueScreenshotProps> = ({
                 )}
               </motion.div>
             </AnimatePresence>
+            {/* Transparent overlay to block mobile long-press image-save when screenshot is protected */}
+            {(blurScreenshotQuarter || primaryZoomStyle) && !isComplete && (
+              <div className='absolute inset-0' />
+            )}
             {isMobileViewport &&
               !blurScreenshotQuarter &&
               !primaryZoomStyle && (
@@ -210,7 +214,7 @@ export const ClueScreenshot: React.FC<ClueScreenshotProps> = ({
                     className='w-full h-full object-cover block brightness-75 group-hover:brightness-90'
                     draggable={false}
                     onContextMenu={(e) => e.preventDefault()}
-                    style={thumbZoomStyle}
+                    style={{ WebkitTouchCallout: 'none', ...thumbZoomStyle }}
                     initial={{ filter: 'blur(10px)', opacity: 0 }}
                     animate={{ filter: 'blur(0px)', opacity: 1 }}
                     exit={{ filter: 'blur(10px)', opacity: 0 }}
