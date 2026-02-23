@@ -130,7 +130,7 @@ export const ClueDetails: React.FC<ClueDetailsProps> = ({
             className={`flex items-start gap-2 ${originalReleaseDate ? 'mt-2' : 'mt-4'}`}
           >
             <div className='text-gray-400 text-xs uppercase min-w-[120px] pt-[3px]'>
-              Early Access Date:
+              Early Access:
             </div>
             <div className='text-[#c7d5e0] text-sm'>{earlyAccessDate}</div>
           </div>
