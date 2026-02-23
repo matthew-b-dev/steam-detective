@@ -9152,7 +9152,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/427520/ss_171f398a8e347fad650a9c1b6c3b77c612781510.600x338.jpg',
     shortDescription:
-      "||Factorio|| is a game about building and ||creating automated factories to produce items of increasing complexity||, within an infinite 2D world. Use your imagination ||to design your factory, combine simple elements into ingenious structures, and finally protect it from the creatures who don't really like you.||",
+      "||Factorio|| is a game about building and creating ||automated factories to produce items of increasing complexity||, within an infinite 2D world. Use your imagination to design ||your factory, combine simple elements into ingenious structures, and finally protect it from the creatures who don't really like you.||",
     earlyAccessDate: 'Feb 25, 2016',
     releaseDate: 'Aug 14, 2020',
     developer: 'Wube Software LTD.',
@@ -9185,7 +9185,6 @@ export const steamGameDetails: SteamGameMap = {
       'City Builder',
       'Indie',
     ],
-    blurredUserTags: ['Automation'],
     clueOrder: ['desc', 'details', 'tags'],
     debugProcessed: true,
     debugRefined: true,
@@ -11305,7 +11304,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/391540/ss_b9018c41cea2bdfb150609bedfca99b16a5af02a.600x338.jpg',
     shortDescription:
-      "||UNDERTALE! The RPG game|| where you don't have to ||destroy anyone||.",
+      "||UNDERTALE! The RPG|| game where you don't have to ||destroy anyone||.",
     releaseDate: 'Sep 15, 2015',
     developer: '||toby fox||',
     publisher: '||toby fox||',
@@ -11337,14 +11336,7 @@ export const steamGameDetails: SteamGameMap = {
       'Dating Sim',
       'Horror',
     ],
-    blurredUserTags: [
-      'Great Soundtrack',
-      'Pixel Graphics',
-      '2D',
-      'Funny',
-      'Multiple Endings',
-      'Indie',
-    ],
+    blurredUserTags: ['2D', 'Funny', 'Multiple Endings', 'Indie'],
     clueOrder: ['desc', 'tags', 'details'],
     debugProcessed: true,
     debugRefined: true,
