@@ -13959,7 +13959,7 @@ export const steamGameDetails: SteamGameMap = {
       'Dating Sim',
       'Singleplayer',
     ],
-    screenshotFocusPoint: [74, 4, 300],
+    screenshotFocusPoint: [75, 35, 300],
     clueOrder: ['ss', 'tags', 'details', 'desc'],
     debugProcessed: true,
     debugRefined: true,
