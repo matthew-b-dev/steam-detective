@@ -29,7 +29,7 @@ const CLUE_LABELS: Record<ClueType, string> = {
   ss: 'Screenshot',
 };
 
-const DEFAULT_CLUE_ORDER: ClueType[] = ['desc', 'tags', 'details'];
+const DEFAULT_CLUE_ORDER: ClueType[] = ['tags', 'details', 'desc'];
 
 export const RefineGameView: React.FC<RefineGameViewProps> = ({
   game,

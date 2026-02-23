@@ -349,7 +349,7 @@ export const DailyDashboard: React.FC = () => {
         <div className='flex flex-col leading-none w-full'>
           <a
             href='/'
-            className='text-xl font-black'
+            className='text-xl font-black w-fit pr-2'
             style={{
               fontFamily: 'Playfair Display, serif',
               letterSpacing: '-0.04em',

@@ -222,9 +222,8 @@ export const RefinePage: React.FC = () => {
           `    overrideCensoredTitle: ${JSON.stringify(game.overrideCensoredTitle)},`,
         );
       }
-      if (game.clueOrder) {
-        lines.push(`    clueOrder: ${JSON.stringify(game.clueOrder)},`);
-      }
+      const effectiveClueOrder = game.clueOrder ?? ['tags', 'details', 'desc'];
+      lines.push(`    clueOrder: ${JSON.stringify(effectiveClueOrder)},`);
       if (game.searchTerms && game.searchTerms.length > 0) {
         lines.push(`    searchTerms: ${JSON.stringify(game.searchTerms)},`);
       }

@@ -45,6 +45,7 @@ export const steamGameDetails: SteamGameMap = {
       'Action RPG',
       'Simulation',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
     debugProcessed: true,
     debugRefined: true,
     difficulty: 'Easy',
@@ -364,6 +365,7 @@ export const steamGameDetails: SteamGameMap = {
     blurredUserTags: ['Nudity'],
     overrideCensoredTitle:
       '||The|| W||itcher 2||: A||ssassins|| o||f|| K||ings||',
+    clueOrder: ['tags', 'details', 'desc'],
     debugProcessed: true,
     debugRefined: true,
     difficulty: 'Easy',
@@ -709,9 +711,9 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/49520/ss_2f27a18562fbf4a91943c3968b35db5ac1caf5ad.600x338.jpg',
     shortDescription:
-      'A new era of shoot and ||loot|| is about to begin. Play as one of four ||new vault hunter||s facing off against a massive new world of ||creatures||, ||psychos|| and the evil mastermind, ||Handsome Jack||.',
+      'A new era of ||shoot|| and ||loot|| is about to begin. Play as one of four ||new vault hunters|| facing off against a massive new world of ||creatures||, ||psychos|| and ||the evil|| mastermind, ||Handsome Jack||.',
     releaseDate: 'Sep 17, 2012',
-    developer: '||Gearbox|| Software',
+    developer: '||Gearbox Software||',
     publisher: '2K',
     tags: ['Action', 'RPG'],
     features: [],
@@ -741,10 +743,17 @@ export const steamGameDetails: SteamGameMap = {
       'Memes',
       'Sci-fi',
     ],
-    clueOrder: ['details', 'desc', 'tags'],
+    blurredUserTags: [
+      'Looter Shooter',
+      'Funny',
+      'Loot',
+      'Action',
+      'Multiplayer',
+    ],
+    clueOrder: ['desc', 'tags', 'details'],
     debugProcessed: true,
     debugRefined: true,
-    difficulty: 'Easy',
+    difficulty: 'Medium',
     debugNotes: 'delete',
   },
   '50130': {
@@ -1111,6 +1120,7 @@ export const steamGameDetails: SteamGameMap = {
       '2D',
       'Adventure',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
     debugProcessed: true,
     debugRefined: true,
     difficulty: 'Easy',
@@ -1156,6 +1166,7 @@ export const steamGameDetails: SteamGameMap = {
       'Hacking',
       'Anime',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
     debugProcessed: true,
     debugRefined: true,
     difficulty: 'Hard',
@@ -2258,6 +2269,7 @@ export const steamGameDetails: SteamGameMap = {
       'Post-apocalyptic',
       'Simulation',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
     debugProcessed: true,
     debugRefined: true,
     difficulty: 'Medium',
@@ -2304,6 +2316,7 @@ export const steamGameDetails: SteamGameMap = {
     ],
     blurredUserTags: ['Underwater'],
     blurScreenshotQuarter: 'top',
+    clueOrder: ['tags', 'details', 'desc'],
     debugProcessed: true,
     debugRefined: true,
     difficulty: 'Easy',
@@ -2529,6 +2542,7 @@ export const steamGameDetails: SteamGameMap = {
       'Action RPG',
       'Atmospheric',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
     debugProcessed: true,
     debugRefined: true,
     difficulty: 'Hard',
@@ -2663,6 +2677,7 @@ export const steamGameDetails: SteamGameMap = {
       'Character Customization',
       'Replay Value',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
     debugProcessed: true,
     debugRefined: true,
     difficulty: 'Easy',
@@ -2707,6 +2722,7 @@ export const steamGameDetails: SteamGameMap = {
       'Third-Person Shooter',
       'Character Customization',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
     debugProcessed: true,
     debugRefined: true,
     difficulty: 'Easy',
@@ -2752,6 +2768,7 @@ export const steamGameDetails: SteamGameMap = {
       'Crowdfunded',
     ],
     blurScreenshotQuarter: 'bottom',
+    clueOrder: ['tags', 'details', 'desc'],
     debugProcessed: true,
     debugRefined: true,
     difficulty: 'Easy',
@@ -2807,6 +2824,7 @@ export const steamGameDetails: SteamGameMap = {
       'Strategy RPG',
     ],
     blurredUserTags: ['Mythology', 'Third Person'],
+    clueOrder: ['tags', 'details', 'desc'],
     debugProcessed: true,
     debugRefined: true,
     difficulty: 'Easy',
@@ -2948,6 +2966,7 @@ export const steamGameDetails: SteamGameMap = {
       'Adventure',
       'Funny',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
     debugProcessed: true,
     debugRefined: true,
     difficulty: 'Hard',
@@ -3036,6 +3055,7 @@ export const steamGameDetails: SteamGameMap = {
       'Singleplayer',
       'Simulation',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
     debugProcessed: true,
     debugRefined: true,
     difficulty: 'Medium',
@@ -3223,6 +3243,7 @@ export const steamGameDetails: SteamGameMap = {
       'Singleplayer',
       'Naval',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
     debugProcessed: true,
     debugRefined: true,
     difficulty: 'Hard',
@@ -3313,6 +3334,7 @@ export const steamGameDetails: SteamGameMap = {
       'Adventure',
     ],
     blurredUserTags: ['Dinosaurs'],
+    clueOrder: ['tags', 'details', 'desc'],
     debugProcessed: true,
     debugRefined: true,
     difficulty: 'Hard',
@@ -3447,6 +3469,7 @@ export const steamGameDetails: SteamGameMap = {
       'Walking Simulator',
     ],
     blurScreenshotQuarter: 'top',
+    clueOrder: ['tags', 'details', 'desc'],
     debugProcessed: true,
     debugRefined: true,
     difficulty: 'Hard',
@@ -3537,6 +3560,7 @@ export const steamGameDetails: SteamGameMap = {
       'Action',
       'Simulation',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
     debugProcessed: true,
     debugRefined: true,
     difficulty: 'Hard',
@@ -3626,6 +3650,7 @@ export const steamGameDetails: SteamGameMap = {
       'Co-op',
       'Violent',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
     debugProcessed: true,
     debugRefined: true,
     difficulty: 'Hard',
@@ -3802,6 +3827,7 @@ export const steamGameDetails: SteamGameMap = {
       'Farming Sim',
       'Fishing',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
     debugProcessed: true,
     debugRefined: true,
     difficulty: 'Medium',
@@ -3890,6 +3916,7 @@ export const steamGameDetails: SteamGameMap = {
       'Indie',
       'Building',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
     debugProcessed: true,
     debugRefined: true,
     difficulty: 'Hard',
@@ -3934,6 +3961,7 @@ export const steamGameDetails: SteamGameMap = {
       'Great Soundtrack',
       'Racing',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
     debugProcessed: true,
     debugRefined: true,
     difficulty: 'Easy',
@@ -4067,6 +4095,7 @@ export const steamGameDetails: SteamGameMap = {
       'Fishing',
       'Hunting',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
     debugProcessed: true,
     debugRefined: true,
     difficulty: 'Hard',
@@ -4433,6 +4462,7 @@ export const steamGameDetails: SteamGameMap = {
       'Simulation',
       'Immersive Sim',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
     debugProcessed: true,
     debugRefined: true,
     difficulty: 'Medium',
@@ -4748,6 +4778,7 @@ export const steamGameDetails: SteamGameMap = {
       'Combat',
       'Blood',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
     debugProcessed: true,
     debugRefined: true,
     difficulty: 'Easy',
@@ -4929,6 +4960,7 @@ export const steamGameDetails: SteamGameMap = {
       'Online Co-Op',
     ],
     overrideCensoredTitle: 'W||arhammer|| 40||,000: Rogue Trader||',
+    clueOrder: ['tags', 'details', 'desc'],
     debugProcessed: true,
     debugRefined: true,
     difficulty: 'Medium',
@@ -5109,6 +5141,7 @@ export const steamGameDetails: SteamGameMap = {
       'Violent',
       'Indie',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '211420': {
     name: 'DARK SOULS',
@@ -5151,6 +5184,7 @@ export const steamGameDetails: SteamGameMap = {
       'Great Soundtrack',
     ],
     blurredUserTags: ['Souls-like', 'Unforgiving', 'Difficult'],
+    clueOrder: ['tags', 'details', 'desc'],
     debugProcessed: true,
     debugNotes: 'delete',
   },
@@ -5194,6 +5228,7 @@ export const steamGameDetails: SteamGameMap = {
       'Adventure',
       'Difficult',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '1604030': {
     name: 'V Rising',
@@ -5235,6 +5270,7 @@ export const steamGameDetails: SteamGameMap = {
       'Adventure',
       'Co-op',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '292030': {
     name: 'The Witcher 3: Wild Hunt',
@@ -5320,6 +5356,7 @@ export const steamGameDetails: SteamGameMap = {
       'Hack and Slash',
       'Multiplayer',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '261640': {
     name: 'Borderlands: The Pre-Sequel',
@@ -5361,6 +5398,7 @@ export const steamGameDetails: SteamGameMap = {
       'Memes',
       'Atmospheric',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '3489700': {
     name: 'Stellar Blade',
@@ -5381,6 +5419,7 @@ export const steamGameDetails: SteamGameMap = {
       rating: 'Overwhelmingly Positive',
     },
     userTags: [],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '3156770': {
     name: 'Witchfire',
@@ -5421,6 +5460,7 @@ export const steamGameDetails: SteamGameMap = {
       'Singleplayer',
       'Rogue-like',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '518790': {
     name: 'theHunter: Call of the Wild',
@@ -5462,6 +5502,7 @@ export const steamGameDetails: SteamGameMap = {
       'Sports',
       'Controller',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '666140': {
     name: 'My Time at Portia',
@@ -5504,6 +5545,7 @@ export const steamGameDetails: SteamGameMap = {
       'Female Protagonist',
     ],
     blurredUserTags: ['Life Sim', 'Farming Sim'],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '1943950': {
     name: 'Escape the Backrooms',
@@ -5544,6 +5586,7 @@ export const steamGameDetails: SteamGameMap = {
       'Stealth',
       'Dungeon Crawler',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '246620': {
     name: 'Plague Inc: Evolved',
@@ -5627,6 +5670,7 @@ export const steamGameDetails: SteamGameMap = {
       'Family Friendly',
       'Level Editor',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '813780': {
     name: 'Age of Empires II',
@@ -5669,6 +5713,7 @@ export const steamGameDetails: SteamGameMap = {
       'Adventure',
       'Great Soundtrack',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '3949040': {
     name: 'RV There Yet?',
@@ -5689,6 +5734,7 @@ export const steamGameDetails: SteamGameMap = {
       rating: 'Very Positive',
     },
     userTags: [],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '1426210': {
     name: 'It Takes Two',
@@ -5730,6 +5776,7 @@ export const steamGameDetails: SteamGameMap = {
       'Minigames',
       'Female Protagonist',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '3017860': {
     name: 'DOOM: The Dark Ages',
@@ -5814,6 +5861,7 @@ export const steamGameDetails: SteamGameMap = {
       'Online Co-Op',
       'Tutorial',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '255710': {
     name: 'Cities: Skylines',
@@ -5855,6 +5903,7 @@ export const steamGameDetails: SteamGameMap = {
       'Funny',
       'Action',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '284160': {
     name: 'BeamNG.drive',
@@ -5895,6 +5944,7 @@ export const steamGameDetails: SteamGameMap = {
       'Action',
       'Flight',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '703080': {
     name: 'Planet Zoo',
@@ -5936,6 +5986,7 @@ export const steamGameDetails: SteamGameMap = {
       'Funny',
       'Horses',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '1336490': {
     name: 'Against the Storm',
@@ -5977,6 +6028,7 @@ export const steamGameDetails: SteamGameMap = {
       'Replay Value',
       'Automation',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '403640': {
     name: 'Dishonored 2',
@@ -6018,6 +6070,7 @@ export const steamGameDetails: SteamGameMap = {
       'Heist',
       'Dystopian ',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '2670630': {
     name: 'Supermarket Simulator',
@@ -6058,6 +6111,7 @@ export const steamGameDetails: SteamGameMap = {
       'Indie',
       'Driving',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '1139900': {
     name: 'Ghostrunner',
@@ -6099,6 +6153,7 @@ export const steamGameDetails: SteamGameMap = {
       'Strategy',
       'Shooter',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '244450': {
     name: 'Men of War: Assault Squad 2',
@@ -6140,6 +6195,7 @@ export const steamGameDetails: SteamGameMap = {
       'Classic',
       'Adventure',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '212500': {
     name: 'The Lord of the Rings Online',
@@ -6252,6 +6308,7 @@ export const steamGameDetails: SteamGameMap = {
       'Online Co-Op',
       'Co-op',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '1084600': {
     name: 'My Time at Sandrock',
@@ -6293,6 +6350,7 @@ export const steamGameDetails: SteamGameMap = {
       'Indie',
       'LGBTQ+',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '235540': {
     name: 'Warhammer: End Times - Vermintide',
@@ -6334,6 +6392,7 @@ export const steamGameDetails: SteamGameMap = {
       'Indie',
       'Horror',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '1293830': {
     name: 'Forza Horizon 4',
@@ -6375,6 +6434,7 @@ export const steamGameDetails: SteamGameMap = {
       'First-Person',
       'Funny',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '257510': {
     name: 'The Talos Principle',
@@ -6416,6 +6476,7 @@ export const steamGameDetails: SteamGameMap = {
       'Science',
       'Artificial Intelligence',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '1030300': {
     name: 'Hollow Knight: Silksong',
@@ -6567,6 +6628,7 @@ export const steamGameDetails: SteamGameMap = {
       'Action',
       'Horror',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '698780': {
     name: 'Doki Doki Literature Club!',
@@ -6608,6 +6670,7 @@ export const steamGameDetails: SteamGameMap = {
       'Casual',
       'Adventure',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '632470': {
     name: 'Disco Elysium',
@@ -6693,6 +6756,7 @@ export const steamGameDetails: SteamGameMap = {
       'Indie',
       'Zombies',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '466560': {
     name: 'Northgard',
@@ -6734,6 +6798,7 @@ export const steamGameDetails: SteamGameMap = {
       'PvE',
       'Resource Management',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '881100': {
     name: 'Noita',
@@ -6817,6 +6882,7 @@ export const steamGameDetails: SteamGameMap = {
       'Simulation',
       'Beautiful',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '1284210': {
     name: 'Guild Wars 2',
@@ -6858,6 +6924,7 @@ export const steamGameDetails: SteamGameMap = {
       'Story Rich',
       'Singleplayer',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '235600': {
     name: "Tom Clancy's Splinter Cell Blacklist",
@@ -6984,6 +7051,7 @@ export const steamGameDetails: SteamGameMap = {
       'Survival',
     ],
     blurredUserTags: ['Remake'],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '224260': {
     name: 'No More Room in Hell',
@@ -7025,6 +7093,7 @@ export const steamGameDetails: SteamGameMap = {
       'Adventure',
       'Massively Multiplayer',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '214490': {
     name: 'Alien: Isolation',
@@ -7110,6 +7179,7 @@ export const steamGameDetails: SteamGameMap = {
       'Historical',
       'RTS',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '389730': {
     name: 'TEKKEN 7',
@@ -7119,7 +7189,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/389730/ss_40faa5ba39563cb899f1ab2ddd2afbf8b451d52f.600x338.jpg',
     shortDescription:
-      'Discover the epic conclusion of the long-time clan warfare between members of the Mishima family. Powered by Unreal Engine 4, the legendary fighting game franchise fights back with stunning story-driven cinematic battles and intense duels that can be enjoyed with friends and rivals.',
+      'Discover the epic conclusion of the long-time ||clan|| warfare between members of the ||Mishima|| family. Powered by Unreal Engine 4, the ||legendary fighting|| game franchise fights back with stunning story-driven cinematic battles and intense ||duels|| that can be enjoyed with friends and rivals.',
     releaseDate: 'Jun 1, 2017',
     developer: 'BANDAI NAMCO Studios Inc.',
     publisher: 'BANDAI NAMCO Entertainment',
@@ -7151,6 +7221,7 @@ export const steamGameDetails: SteamGameMap = {
       'Atmospheric',
       '2D Fighter',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '218230': {
     name: 'PlanetSide 2',
@@ -7192,6 +7263,7 @@ export const steamGameDetails: SteamGameMap = {
       'Adventure',
       'RPG',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '1451940': {
     name: 'NEEDY STREAMER OVERLOAD',
@@ -7233,6 +7305,7 @@ export const steamGameDetails: SteamGameMap = {
       'Text-Based',
       'Conversation',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '1092790': {
     name: 'Inscryption',
@@ -7274,6 +7347,7 @@ export const steamGameDetails: SteamGameMap = {
       'FMV',
       'Adventure',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '387990': {
     name: 'Scrap Mechanic',
@@ -7314,6 +7388,7 @@ export const steamGameDetails: SteamGameMap = {
       'Moddable',
       'Online Co-Op',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '213670': {
     name: 'South Park: The Stick of Truth',
@@ -7398,6 +7473,7 @@ export const steamGameDetails: SteamGameMap = {
       'Cooking',
       'Mining',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '244210': {
     name: 'Assetto Corsa',
@@ -7439,6 +7515,7 @@ export const steamGameDetails: SteamGameMap = {
       'TrackIR',
       'Artificial Intelligence',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '1942280': {
     name: 'Brotato',
@@ -7522,6 +7599,7 @@ export const steamGameDetails: SteamGameMap = {
       'Stealth',
       'Dinosaurs',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '2161700': {
     name: 'Persona 3 Reload',
@@ -7564,6 +7642,7 @@ export const steamGameDetails: SteamGameMap = {
       'Multiple Endings',
     ],
     blurredUserTags: ['Anime'],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '504370': {
     name: 'Battlerite',
@@ -7604,6 +7683,7 @@ export const steamGameDetails: SteamGameMap = {
       'Hack and Slash',
       'Atmospheric',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '233860': {
     name: 'Kenshi',
@@ -7645,6 +7725,7 @@ export const steamGameDetails: SteamGameMap = {
       'Alternate History',
       'Steampunk',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '493340': {
     name: 'Planet Coaster',
@@ -7686,6 +7767,7 @@ export const steamGameDetails: SteamGameMap = {
       'God Game',
       'Multiplayer',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '349040': {
     name: 'NARUTO SHIPPUDEN: Ultimate Ninja STORM 4',
@@ -7727,6 +7809,7 @@ export const steamGameDetails: SteamGameMap = {
       'Memes',
       'Heist',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '435150': {
     name: 'Divinity: Original Sin 2',
@@ -7768,6 +7851,7 @@ export const steamGameDetails: SteamGameMap = {
       'Moddable',
       'Funny',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '728880': {
     name: 'Overcooked! 2',
@@ -7809,6 +7893,7 @@ export const steamGameDetails: SteamGameMap = {
       'Strategy',
       'Colorful',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '2322560': {
     name: 'Love Is All Around',
@@ -7850,6 +7935,7 @@ export const steamGameDetails: SteamGameMap = {
       'Simulation',
       'Multiplayer',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '756800': {
     name: 'Contraband Police',
@@ -7891,6 +7977,7 @@ export const steamGameDetails: SteamGameMap = {
       'Atmospheric',
       'Indie',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '1465360': {
     name: 'SnowRunner',
@@ -7932,6 +8019,7 @@ export const steamGameDetails: SteamGameMap = {
       'Team-Based',
       'PvE',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '261570': {
     name: 'Ori and the Blind Forest',
@@ -7973,6 +8061,7 @@ export const steamGameDetails: SteamGameMap = {
       'Family Friendly',
       'RPG',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '1721470': {
     name: 'Poppy Playtime',
@@ -8014,6 +8103,7 @@ export const steamGameDetails: SteamGameMap = {
       'Action-Adventure',
       'Physics',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '535930': {
     name: 'Two Point Hospital',
@@ -8097,6 +8187,7 @@ export const steamGameDetails: SteamGameMap = {
       '3D',
       'PvE',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '238320': {
     name: 'Outlast',
@@ -8138,6 +8229,7 @@ export const steamGameDetails: SteamGameMap = {
       '3D Vision',
       'Sci-fi',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '1121640': {
     name: 'The Wandering Village',
@@ -8178,6 +8270,7 @@ export const steamGameDetails: SteamGameMap = {
       'Relaxing',
       'Base-Building',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '220240': {
     name: 'Far Cry 3',
@@ -8309,6 +8402,7 @@ export const steamGameDetails: SteamGameMap = {
       'Multiplayer',
       'Psychological Horror',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '1129580': {
     name: 'Medieval Dynasty',
@@ -8350,6 +8444,7 @@ export const steamGameDetails: SteamGameMap = {
       'Management',
       'Agriculture',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '379720': {
     name: 'DOOM',
@@ -8391,6 +8486,7 @@ export const steamGameDetails: SteamGameMap = {
       'Violent',
       'Co-op',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '1284190': {
     name: 'The Planet Crafter',
@@ -8432,6 +8528,7 @@ export const steamGameDetails: SteamGameMap = {
       'Immersive Sim',
       'Aliens',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '1657630': {
     name: 'Slime Rancher 2',
@@ -8472,6 +8569,7 @@ export const steamGameDetails: SteamGameMap = {
       'Action',
       'Atmospheric',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '1190460': {
     name: 'DEATH STRANDING',
@@ -8513,6 +8611,7 @@ export const steamGameDetails: SteamGameMap = {
       'Dark',
       'Survival',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '1671210': {
     name: 'DELTARUNE',
@@ -8603,6 +8702,7 @@ export const steamGameDetails: SteamGameMap = {
       'Science',
       'Aliens',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
     debugProcessed: true,
     debugNotes: 'delete',
   },
@@ -8646,6 +8746,7 @@ export const steamGameDetails: SteamGameMap = {
       'Hack and Slash',
       'Family Friendly',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '3097560': {
     name: "Liar's Bar",
@@ -8686,6 +8787,7 @@ export const steamGameDetails: SteamGameMap = {
       'VR',
       'Gore',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '346110': {
     name: 'ARK: Survival Evolved',
@@ -8727,6 +8829,7 @@ export const steamGameDetails: SteamGameMap = {
       'Sci-fi',
       'Indie',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '275850': {
     name: "No Man's Sky",
@@ -8810,6 +8913,7 @@ export const steamGameDetails: SteamGameMap = {
       'RPG',
       '2D',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '236850': {
     name: 'Europa Universalis IV',
@@ -8851,6 +8955,7 @@ export const steamGameDetails: SteamGameMap = {
       'Management',
       'Multiplayer',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '356190': {
     name: 'Middle-earth: Shadow of War',
@@ -8892,6 +8997,8 @@ export const steamGameDetails: SteamGameMap = {
       'Strategy',
       'Multiplayer',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
+    searchTerms: ['middle earth: shadow of war'],
   },
   '1817070': {
     name: "Marvel's Spider-Man Remastered",
@@ -8933,6 +9040,7 @@ export const steamGameDetails: SteamGameMap = {
       'Multiplayer',
       'Controller',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '424840': {
     name: 'Little Nightmares',
@@ -8974,6 +9082,7 @@ export const steamGameDetails: SteamGameMap = {
       'Action',
       'Strategy',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '812140': {
     name: "Assassin's Creed Odyssey",
@@ -9016,6 +9125,7 @@ export const steamGameDetails: SteamGameMap = {
       'Action-Adventure',
       'Choose Your Own Adventure',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '239140': {
     name: 'Dying Light',
@@ -9057,6 +9167,7 @@ export const steamGameDetails: SteamGameMap = {
       'Action RPG',
       'Hack and Slash',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '753640': {
     name: 'Outer Wilds',
@@ -9143,6 +9254,7 @@ export const steamGameDetails: SteamGameMap = {
       'Strategy',
       'Third Person',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '427520': {
     name: 'Factorio',
@@ -9230,6 +9342,7 @@ export const steamGameDetails: SteamGameMap = {
       'Dinosaurs',
       'Great Soundtrack',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '1222140': {
     name: 'Detroit: Become Human',
@@ -9271,6 +9384,7 @@ export const steamGameDetails: SteamGameMap = {
       'Violent',
       'Female Protagonist',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '312660': {
     name: 'Sniper Elite 4',
@@ -9312,6 +9426,7 @@ export const steamGameDetails: SteamGameMap = {
       'Strategy',
       'First-Person',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '1286830': {
     name: 'STAR WARS: The Old Republic',
@@ -9353,6 +9468,7 @@ export const steamGameDetails: SteamGameMap = {
       'Great Soundtrack',
       'Controller',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '637650': {
     name: 'FINAL FANTASY XV',
@@ -9394,6 +9510,7 @@ export const steamGameDetails: SteamGameMap = {
       'First-Person',
       'Nudity',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '1850570': {
     name: "DEATH STRANDING DIRECTOR'S CUT",
@@ -9435,6 +9552,7 @@ export const steamGameDetails: SteamGameMap = {
       'Multiplayer',
       'Combat',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '644930': {
     name: 'They Are Billions',
@@ -9476,6 +9594,7 @@ export const steamGameDetails: SteamGameMap = {
       'Isometric',
       'Multiplayer',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '1196590': {
     name: 'Resident Evil Village',
@@ -9517,6 +9636,7 @@ export const steamGameDetails: SteamGameMap = {
       'Multiplayer',
       'Nudity',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '252950': {
     name: 'Rocket League',
@@ -9611,11 +9731,11 @@ export const steamGameDetails: SteamGameMap = {
     name: 'Darkest Dungeon',
     appId: 262060,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/262060/ss_04572edc979601b038756f87861c6f8c6c337806.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/262060/ss_617a6f43c4c673af497bc76de61dbb00e9d4079c.600x338.jpg',
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/262060/ss_799c78932c87f2be0cbd45dd1b80ebd0a355e575.600x338.jpg',
     shortDescription:
-      '||Darkest Dungeon|| is a challenging gothic roguelike turn-based RPG about the psychological stresses of adventuring. Recruit, train, and lead a team of flawed heroes against unimaginable horrors, stress, disease, and the ever-encroaching dark. Can you keep your heroes together when all hope is lost?',
+      '||Darkest Dungeon is a challenging gothic roguelike turn-based RPG about the psychological stresses of adventuring. Recruit, train, and|| lead a team of ||flawed|| heroes against ||unimaginable horrors||, ||stress||, ||disease||, and the ever-encroaching ||dark||. Can you keep your ||heroes together when all hope is lost||?',
     releaseDate: 'Jan 19, 2016',
     developer: 'Red Hook Studios',
     publisher: 'Red Hook Studios',
@@ -9647,6 +9767,18 @@ export const steamGameDetails: SteamGameMap = {
       'Fantasy',
       'Kickstarter',
     ],
+    blurredUserTags: [
+      'Turn-Based Combat',
+      'Dungeon Crawler',
+      'Difficult',
+      'Singleplayer',
+      'RPG',
+      'Turn-Based',
+    ],
+    clueOrder: ['desc', 'details', 'tags'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Medium',
   },
   '620980': {
     name: 'Beat Saber',
@@ -9687,6 +9819,7 @@ export const steamGameDetails: SteamGameMap = {
       'PvP',
       'Games Workshop',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '1466860': {
     name: 'Age of Empires IV: Anniversary Edition',
@@ -9729,6 +9862,7 @@ export const steamGameDetails: SteamGameMap = {
       'Online Co-Op',
       'Mature',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '1659420': {
     name: 'UNCHARTED: Legacy of Thieves Collection',
@@ -9770,6 +9904,7 @@ export const steamGameDetails: SteamGameMap = {
       'Platformer',
       'Funny',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '1966720': {
     name: 'Lethal Company',
@@ -9810,6 +9945,7 @@ export const steamGameDetails: SteamGameMap = {
       'Action-Adventure',
       'Perma Death',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '282070': {
     name: 'This War of Mine',
@@ -9851,6 +9987,7 @@ export const steamGameDetails: SteamGameMap = {
       'Drama',
       'Stealth',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '480490': {
     name: 'Prey',
@@ -9894,6 +10031,7 @@ export const steamGameDetails: SteamGameMap = {
     ],
     blurredUserTags: ['Immersive Sim'],
     blurScreenshotQuarter: 'bottom',
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '219990': {
     name: 'Grim Dawn',
@@ -9935,6 +10073,7 @@ export const steamGameDetails: SteamGameMap = {
       'Moddable',
       'Choices Matter',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '2050650': {
     name: 'Resident Evil 4',
@@ -9976,6 +10115,7 @@ export const steamGameDetails: SteamGameMap = {
       'Action-Adventure',
       'Psychological Horror',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '646570': {
     name: 'Slay the Spire',
@@ -10017,6 +10157,7 @@ export const steamGameDetails: SteamGameMap = {
       'Fantasy',
       'Casual',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '2198150': {
     name: 'Tiny Glade',
@@ -10058,6 +10199,7 @@ export const steamGameDetails: SteamGameMap = {
       'Stylized',
       'Atmospheric',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '621060': {
     name: 'PC Building Simulator',
@@ -10099,6 +10241,7 @@ export const steamGameDetails: SteamGameMap = {
       'Atmospheric',
       'Indie',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '976730': {
     name: 'Halo: The Master Chief Collection',
@@ -10141,6 +10284,7 @@ export const steamGameDetails: SteamGameMap = {
       'Horror',
       'Online Co-Op',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '648800': {
     name: 'Raft',
@@ -10227,6 +10371,7 @@ export const steamGameDetails: SteamGameMap = {
       'Cute',
       'Memes',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '367520': {
     name: 'Hollow Knight',
@@ -10268,6 +10413,7 @@ export const steamGameDetails: SteamGameMap = {
       'Controller',
       'Side Scroller',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '1621690': {
     name: 'Core Keeper',
@@ -10309,6 +10455,7 @@ export const steamGameDetails: SteamGameMap = {
       'Mystery',
       'Casual',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '244850': {
     name: 'Space Engineers',
@@ -10349,6 +10496,7 @@ export const steamGameDetails: SteamGameMap = {
       'Strategy',
       'Adventure',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '613100': {
     name: 'House Flipper',
@@ -10390,6 +10538,7 @@ export const steamGameDetails: SteamGameMap = {
       'Indie',
       'Moddable',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '394360': {
     name: 'Hearts of Iron IV',
@@ -10431,6 +10580,7 @@ export const steamGameDetails: SteamGameMap = {
       'Competitive',
       'Action',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '582160': {
     name: "Assassin's Creed Origins",
@@ -10472,6 +10622,7 @@ export const steamGameDetails: SteamGameMap = {
       'Sexual Content',
       'Co-op',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '678960': {
     name: 'CODE VEIN',
@@ -10513,6 +10664,7 @@ export const steamGameDetails: SteamGameMap = {
       'Adventure',
       'Gore',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '207610': {
     name: 'The Walking Dead',
@@ -10599,6 +10751,7 @@ export const steamGameDetails: SteamGameMap = {
       'Co-op',
       'Gore',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '1158160': {
     name: 'Coral Island',
@@ -10640,6 +10793,7 @@ export const steamGameDetails: SteamGameMap = {
       'LGBTQ+',
       'Cartoony',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '232090': {
     name: 'Killing Floor 2',
@@ -10681,6 +10835,7 @@ export const steamGameDetails: SteamGameMap = {
       'Character Customization',
       'Dark',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '582010': {
     name: 'Monster Hunter: World',
@@ -10722,6 +10877,7 @@ export const steamGameDetails: SteamGameMap = {
       'MMORPG',
       'Souls-like',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '714010': {
     name: 'Aimlabs',
@@ -10769,6 +10925,7 @@ export const steamGameDetails: SteamGameMap = {
       'Score Attack',
       'Third-Person Shooter',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '945360': {
     name: 'Among Us',
@@ -10835,6 +10992,7 @@ export const steamGameDetails: SteamGameMap = {
       rating: 'Very Positive',
     },
     userTags: [],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '251570': {
     name: '7 Days to Die',
@@ -10876,6 +11034,7 @@ export const steamGameDetails: SteamGameMap = {
       'Strategy',
       'Procedural Generation',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '298110': {
     name: 'Far Cry 4',
@@ -10959,6 +11118,7 @@ export const steamGameDetails: SteamGameMap = {
       'Open World',
       'Sandbox',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '617290': {
     name: 'Remnant: From the Ashes',
@@ -11042,6 +11202,7 @@ export const steamGameDetails: SteamGameMap = {
       'Funny',
       'FPS',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
     searchTerms: ['watch dogs 2'],
   },
   '1551360': {
@@ -11084,6 +11245,7 @@ export const steamGameDetails: SteamGameMap = {
       'VR',
       'Action',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '814380': {
     name: 'Sekiro: Shadows Die Twice',
@@ -11126,6 +11288,7 @@ export const steamGameDetails: SteamGameMap = {
       'Rhythm',
       'Dark',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '359550': {
     name: "Tom Clancy's Rainbow Six Siege X",
@@ -11167,6 +11330,7 @@ export const steamGameDetails: SteamGameMap = {
       'Difficult',
       '3D',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '920210': {
     name: 'LEGO Star Wars: The Skywalker Saga',
@@ -11208,6 +11372,7 @@ export const steamGameDetails: SteamGameMap = {
       'Puzzle',
       'NSFW',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '287700': {
     name: 'METAL GEAR SOLID V: THE PHANTOM PAIN',
@@ -11249,6 +11414,7 @@ export const steamGameDetails: SteamGameMap = {
       'Sci-fi',
       'Heist',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '524220': {
     name: 'NieR:Automata',
@@ -11382,6 +11548,7 @@ export const steamGameDetails: SteamGameMap = {
       'Adventure',
       'Management',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '3164500': {
     name: 'Schedule I',
@@ -11422,16 +11589,17 @@ export const steamGameDetails: SteamGameMap = {
       'Shooter',
       'Action-Adventure',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '220200': {
     name: 'Kerbal Space Program',
     appId: 220200,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/220200/ss_44f586b0c58ed455c309efd87ce15f46e072242b.600x338.jpg',
-    secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/220200/ss_d393792997ca01960a6843a5f6eb381895866662.600x338.jpg',
+    secondaryScreenshot:
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/220200/ss_f258c8ebef5e2bf47a2feca529a2cd3f864cfbb0.600x338.jpg',
     shortDescription:
-      "In ||Kerbal Space Program||, take charge of the space program for the alien race known as the Kerbals. You have access to an array of parts to assemble fully-functional spacecraft that flies (or doesn't) based on realistic aerodynamic and orbital physics.",
+      "||In Kerbal Space Program, take charge of the space program for the alien race known as the Kerbals. You have access to an array of parts to|| assemble fully-functional ||spacecraft|| that ||flies|| (or doesn't) ||based on realistic aerodynamic and orbital physics.||",
     releaseDate: 'Apr 27, 2015',
     developer: 'Squad',
     publisher: 'Private Division',
@@ -11463,6 +11631,8 @@ export const steamGameDetails: SteamGameMap = {
       'Strategy',
       'Comedy',
     ],
+    screenshotFocusPoint: [49, 4, 900],
+    clueOrder: ['desc', 'ss', 'tags', 'details'],
   },
   '552500': {
     name: 'Warhammer: Vermintide 2',
@@ -11472,7 +11642,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/552500/ss_39dc495d3db6f8734550447ab3f22a1ef032aba1.600x338.jpg',
     shortDescription:
-      'The critically acclaimed Vermintide 2 is a visually stunning and groundbreaking melee action game pushing the boundaries of the first person co-op genre. Join the fight now!',
+      'The critically acclaimed ||Vermintide 2|| is a visually stunning and groundbreaking melee action game pushing the boundaries of the first person co-op genre. Join the fight now!',
     releaseDate: 'Mar 8, 2018',
     developer: 'Fatshark',
     publisher: 'Fatshark',
@@ -11504,6 +11674,7 @@ export const steamGameDetails: SteamGameMap = {
       'FPS',
       'Singleplayer',
     ],
+    blurredUserTags: ['Games Workshop', 'Dwarf', 'Dark Fantasy'],
     clueOrder: ['desc', 'details', 'tags'],
   },
   '1172620': {
@@ -11546,6 +11717,7 @@ export const steamGameDetails: SteamGameMap = {
       'Great Soundtrack',
       'Singleplayer',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '2420110': {
     name: 'Horizon Forbidden West',
@@ -11587,6 +11759,7 @@ export const steamGameDetails: SteamGameMap = {
       'Stealth',
       'Politics',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '750920': {
     name: 'Shadow of the Tomb Raider',
@@ -11628,6 +11801,7 @@ export const steamGameDetails: SteamGameMap = {
       'Dark',
       'Heist',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '376210': {
     name: 'The Isle',
@@ -11674,6 +11848,7 @@ export const steamGameDetails: SteamGameMap = {
       'Strategy',
       'Indie',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '219150': {
     name: 'Hotline Miami',
@@ -11715,6 +11890,7 @@ export const steamGameDetails: SteamGameMap = {
       'Addictive',
       'Music',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '526870': {
     name: 'Satisfactory',
@@ -11755,6 +11931,7 @@ export const steamGameDetails: SteamGameMap = {
       'Singleplayer',
       'Indie',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '1888160': {
     name: 'ARMORED CORE VI FIRES OF RUBICON',
@@ -11796,6 +11973,7 @@ export const steamGameDetails: SteamGameMap = {
       'Action-Adventure',
       'Atmospheric',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '1593030': {
     name: 'Terra Nil',
@@ -11837,6 +12015,7 @@ export const steamGameDetails: SteamGameMap = {
       'Instrumental Music',
       'Post-apocalyptic',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '1145350': {
     name: 'Hades II',
@@ -11877,6 +12056,7 @@ export const steamGameDetails: SteamGameMap = {
       'LGBTQ+',
       'Perma Death',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '955050': {
     name: 'Bright Memory',
@@ -11917,6 +12097,7 @@ export const steamGameDetails: SteamGameMap = {
       'Nudity',
       'Short',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '206420': {
     name: 'Saints Row IV: Re-Elected',
@@ -11958,6 +12139,7 @@ export const steamGameDetails: SteamGameMap = {
       'Dark Humor',
       'Female Protagonist',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
     debugProcessed: true,
     debugNotes: 'delete',
   },
@@ -12090,6 +12272,7 @@ export const steamGameDetails: SteamGameMap = {
       'Replay Value',
       'Real-Time with Pause',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '1245620': {
     name: 'ELDEN RING',
@@ -12131,6 +12314,7 @@ export const steamGameDetails: SteamGameMap = {
       'Character Customization',
       'Family Friendly',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '413150': {
     name: 'Stardew Valley',
@@ -12172,6 +12356,7 @@ export const steamGameDetails: SteamGameMap = {
       'Great Soundtrack',
       'Fishing',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '1583230': {
     name: 'High On Life',
@@ -12213,6 +12398,7 @@ export const steamGameDetails: SteamGameMap = {
       'Funny',
       'NSFW',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '286160': {
     name: 'Tabletop Simulator',
@@ -12254,6 +12440,7 @@ export const steamGameDetails: SteamGameMap = {
       'First-Person',
       'Indie',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '319630': {
     name: 'Life is Strange - Episode 1',
@@ -12338,6 +12525,7 @@ export const steamGameDetails: SteamGameMap = {
       'Immersive',
       'Multiple Endings',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '1790600': {
     name: 'DRAGON BALL: Sparking! ZERO',
@@ -12379,6 +12567,7 @@ export const steamGameDetails: SteamGameMap = {
       'Open World',
       'Spectacle fighter',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '392110': {
     name: 'ENDLESS Space 2',
@@ -12420,6 +12609,7 @@ export const steamGameDetails: SteamGameMap = {
       'Indie',
       'RTS',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '286690': {
     name: 'Metro 2033 Redux',
@@ -12461,6 +12651,7 @@ export const steamGameDetails: SteamGameMap = {
       'Classic',
       'Open World',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '222880': {
     name: 'Insurgency',
@@ -12502,6 +12693,7 @@ export const steamGameDetails: SteamGameMap = {
       'Atmospheric',
       'Adventure',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '1248130': {
     name: 'Farming Simulator 22',
@@ -12544,6 +12736,7 @@ export const steamGameDetails: SteamGameMap = {
       'America',
     ],
     blurScreenshotQuarter: 'top',
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '414700': {
     name: 'Outlast 2',
@@ -12585,6 +12778,7 @@ export const steamGameDetails: SteamGameMap = {
       'Indie',
       'FPS',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '291550': {
     name: 'Brawlhalla',
@@ -12627,6 +12821,7 @@ export const steamGameDetails: SteamGameMap = {
       'Indie',
     ],
     blurredUserTags: ['2D Platformer', 'Platformer'],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '361420': {
     name: 'ASTRONEER',
@@ -12710,6 +12905,7 @@ export const steamGameDetails: SteamGameMap = {
       'Realistic',
       'Action',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '1091500': {
     name: 'Cyberpunk 2077',
@@ -12751,6 +12947,7 @@ export const steamGameDetails: SteamGameMap = {
       'Character Customization',
       'Immersive Sim',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '815370': {
     name: 'Green Hell',
@@ -12792,6 +12989,7 @@ export const steamGameDetails: SteamGameMap = {
       'Realistic',
       'Action-Adventure',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '2358720': {
     name: 'Black Myth: Wukong',
@@ -12833,6 +13031,7 @@ export const steamGameDetails: SteamGameMap = {
       'Music',
       'Violent',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '976310': {
     name: 'Mortal Kombat 11',
@@ -12874,6 +13073,7 @@ export const steamGameDetails: SteamGameMap = {
       '2.5D',
       'Horror',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '1687950': {
     name: 'Persona 5 Royal',
@@ -12915,6 +13115,7 @@ export const steamGameDetails: SteamGameMap = {
       'Detective',
       'Violent',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '1128920': {
     name: 'EVERSPACE 2',
@@ -12956,6 +13157,7 @@ export const steamGameDetails: SteamGameMap = {
       'Third Person',
       'Sci-fi',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '2881650': {
     name: 'Content Warning',
@@ -12997,6 +13199,7 @@ export const steamGameDetails: SteamGameMap = {
       'Sci-fi',
       'Procedural Generation',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '1210320': {
     name: 'Potion Craft: Alchemist Simulator',
@@ -13038,6 +13241,7 @@ export const steamGameDetails: SteamGameMap = {
       'Historical',
       'Capitalism',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '1794680': {
     name: 'Vampire Survivors',
@@ -13079,6 +13283,7 @@ export const steamGameDetails: SteamGameMap = {
       'Action RPG',
       '1980s',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '1190970': {
     name: 'House Flipper 2',
@@ -13120,6 +13325,7 @@ export const steamGameDetails: SteamGameMap = {
       'Indie',
       'Realistic',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '881020': {
     name: 'Granblue Fantasy: Relink',
@@ -13161,6 +13367,7 @@ export const steamGameDetails: SteamGameMap = {
       'Dragons',
       'Tutorial',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '1971650': {
     name: 'OCTOPATH TRAVELER II',
@@ -13203,6 +13410,7 @@ export const steamGameDetails: SteamGameMap = {
       'Emotional',
     ],
     blurredUserTags: ['2.5D'],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '601150': {
     name: 'Devil May Cry 5',
@@ -13244,6 +13452,7 @@ export const steamGameDetails: SteamGameMap = {
       'Adventure',
       'Anime',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '1229490': {
     name: 'ULTRAKILL',
@@ -13284,6 +13493,7 @@ export const steamGameDetails: SteamGameMap = {
       'Old School',
       'Cyberpunk',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '516750': {
     name: 'My Summer Car',
@@ -13324,6 +13534,7 @@ export const steamGameDetails: SteamGameMap = {
       'Adventure',
       'Psychological Horror',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '359320': {
     name: 'Elite Dangerous',
@@ -13415,6 +13626,7 @@ export const steamGameDetails: SteamGameMap = {
       'Narration',
     ],
     blurScreenshotQuarter: 'bottom',
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '1771300': {
     name: 'Kingdom Come: Deliverance II',
@@ -13456,16 +13668,17 @@ export const steamGameDetails: SteamGameMap = {
       'Action-Adventure',
       '3D',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '241930': {
     name: 'Middle-earth: Shadow of Mordor',
     appId: 241930,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/241930/ss_a7a02628b413b410a91402cc24fe54a54b50a9d3.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/241930/ss_68697a274ce491c11d94c0cc94a213177945919c.600x338.jpg',
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/241930/ss_601701af77a18ef504c38f0a920053f3f62ff059.600x338.jpg',
     shortDescription:
-      'Fight through ||Mordor|| and uncover the truth of the spirit that compels you, discover the origins of the Rings of Power, build your legend and ultimately confront the evil of Sauron in this new chronicle of ||Middle-earth||.',
+      '||Fight through Mordor|| and uncover the truth of the spirit that compels you, discover the origins of the ||Ring||s of ||Power||, build your legend and ultimately confront ||the evil of Sauron in this|| new chronicle of ||Middle-earth||.',
     releaseDate: 'Sep 30, 2014',
     developer: 'Monolith Productions',
     publisher: 'Warner Bros. Interactive Entertainment, Warner Bros. Games',
@@ -13497,6 +13710,11 @@ export const steamGameDetails: SteamGameMap = {
       'Based On A Novel',
       'Sandbox',
     ],
+    clueOrder: ['desc', 'tags', 'details'],
+    searchTerms: ['middle earth: shadow of mordor'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
   },
   '305620': {
     name: 'The Long Dark',
@@ -13579,6 +13797,7 @@ export const steamGameDetails: SteamGameMap = {
       'Realistic',
       'Blood',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '3527290': {
     name: 'PEAK',
@@ -13599,6 +13818,7 @@ export const steamGameDetails: SteamGameMap = {
       rating: 'Overwhelmingly Positive',
     },
     userTags: [],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '346010': {
     name: 'Besiege',
@@ -13640,6 +13860,7 @@ export const steamGameDetails: SteamGameMap = {
       'Naval Combat',
       'Dark Humor',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '238960': {
     name: 'Path of Exile',
@@ -13688,6 +13909,7 @@ export const steamGameDetails: SteamGameMap = {
       'Fantasy',
       'Adventure',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '2124490': {
     name: 'SILENT HILL 2',
@@ -13771,6 +13993,7 @@ export const steamGameDetails: SteamGameMap = {
       'Military',
       'Classic',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '262410': {
     name: 'World of Guns: Gun Disassembly',
@@ -13819,6 +14042,7 @@ export const steamGameDetails: SteamGameMap = {
       'Old School',
       'Relaxing',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '1145360': {
     name: 'Hades',
@@ -13860,6 +14084,7 @@ export const steamGameDetails: SteamGameMap = {
       'Perma Death',
       'LGBTQ+',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '274940': {
     name: 'Depth',
@@ -13901,6 +14126,7 @@ export const steamGameDetails: SteamGameMap = {
       'Third Person',
       'Online Co-Op',
     ],
+    clueOrder: ['tags', 'details', 'desc'],
   },
   '1222670': {
     name: 'The Sims 4',
@@ -13999,4 +14225,5 @@ export const CLOSE_GUESS_SERIES: string[] = [
   'truck simulator',
   'the sims',
   'ori and',
+  'middle-earth',
 ];

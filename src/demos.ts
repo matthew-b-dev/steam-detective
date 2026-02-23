@@ -182,6 +182,12 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile3: 'Lies of P',
     caseFile4: 'Undertale',
   },
+  '2026-02-24': {
+    caseFile1: 'Borderlands 2',
+    caseFile2: 'Darkest Dungeon',
+    caseFile3: 'Kerbal Space Program',
+    caseFile4: 'Middle-earth: Shadow of Mordor',
+  },
 };
 // MEd:  Totally Accurate Battle Simulator
 // Easy : Kerbal Space Program
