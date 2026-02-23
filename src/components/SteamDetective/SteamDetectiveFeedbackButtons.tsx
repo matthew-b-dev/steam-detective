@@ -95,7 +95,7 @@ const SteamDetectiveFeedbackButtons: React.FC<
             transition={{ duration: 0.1 }}
             className='flex flex-col gap-1 sm:gap-2 mt-2 pt-[4px]'
           >
-            {hasZoomedClue && (
+            {/* temporarily disabling this hasZoomedClue && (
               <div className='flex flex-wrap gap-1 sm:gap-2 justify-center'>
                 <button
                   className='px-1 sm:px-3 py-1.5 rounded text-xs font-semibold transition-colors bg-gray-700 hover:bg-gray-600 text-white'
@@ -110,7 +110,7 @@ const SteamDetectiveFeedbackButtons: React.FC<
                   "Zoomed" Clue (New) 👎
                 </button>
               </div>
-            )}
+            )*/}
             <div className='flex flex-wrap gap-1 sm:gap-2 justify-center'>
               <button
                 className='px-1 sm:px-3 py-1.5 rounded text-xs font-semibold transition-colors bg-gray-700 hover:bg-gray-600 text-white'
