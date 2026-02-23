@@ -711,7 +711,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/49520/ss_2f27a18562fbf4a91943c3968b35db5ac1caf5ad.600x338.jpg',
     shortDescription:
-      'A new era of ||shoot|| and ||loot|| is about to begin. Play as one of four ||new vault hunters|| facing off against a massive new world of ||creatures||, ||psychos|| and ||the evil|| mastermind, ||Handsome Jack||.',
+      'A new era of ||shoot|| and ||loot|| is about to begin. Play as one of four new ||vault hunters|| facing off against a massive new world of ||creatures||, ||psychos|| and ||the evil|| mastermind, ||Handsome Jack||.',
     releaseDate: 'Sep 17, 2012',
     developer: '||Gearbox Software||',
     publisher: '2K',
@@ -13695,7 +13695,7 @@ export const steamGameDetails: SteamGameMap = {
       'Adventure',
       'Third Person',
       'Stealth',
-      'Singleplayer',
+      'Based On A Novel',
       'RPG',
       'Action RPG',
       'Assassin',
