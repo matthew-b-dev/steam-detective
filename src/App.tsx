@@ -162,9 +162,6 @@ function App() {
                     className='relative text-gray-400 w-full justify-center sm:mt-2 hover:text-gray-300 transition-colors flex items-center gap-1 px-2 bg-transparent sm:border-1 sm:border-zinc-700 sm:px-3 sm:py-1'
                     onClick={() => setShowStats(true)}
                   >
-                    <span className='absolute top-[-2px] sm:-top-1 -right-1 sm:-right-4 bg-yellow-400 text-black text-[9px] sm:text-[10px] font-black leading-none px-1 py-0.5 sm:px-[5px] sm:py-[3px] rounded-full pointer-events-none'>
-                      NEW
-                    </span>
                     <ChartBarIcon className='h-6 w-6 sm:h-4 sm:w-4' />
                     <span className='text-sm font-semibold hidden sm:inline relative top-[-1px]'>
                       My Stats
