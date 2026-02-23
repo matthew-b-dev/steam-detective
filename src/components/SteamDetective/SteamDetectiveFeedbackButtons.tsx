@@ -22,7 +22,7 @@ const sanitizeInput = (input: string): string => {
 
 const SteamDetectiveFeedbackButtons: React.FC<
   SteamDetectiveFeedbackButtonsProps
-> = ({ isOpen, hasZoomedClue }) => {
+> = ({ isOpen /* temp disabled hasZoomedClue */ }) => {
   const [feedback, setFeedback] = useState<
     'steam_more' | 'steam_less' | 'perfect' | 'too_easy' | 'too_hard' | null
   >(null);
@@ -49,13 +49,14 @@ const SteamDetectiveFeedbackButtons: React.FC<
     toast.success('Feedback sent.', { duration: 2000 });
   };
 
+  /* temp disabled
   const handleZoomedFeedback = async (good: boolean) => {
     const label = good ? 'Zoomed Clue Good' : 'Zoomed Clue Bad';
     await sendFeedback('custom', `\`[Feature]\` ${label}`);
     setFeedback('perfect'); // reuse existing state to show success message
     toast.success('Feedback sent.', { duration: 2000 });
   };
-
+*/
   const handleCustomFeedback = () => {
     setShowCustomInput(true);
   };
