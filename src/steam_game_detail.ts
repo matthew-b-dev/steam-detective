@@ -13954,6 +13954,7 @@ export const steamGameDetails: SteamGameMap = {
     blurredUserTags: [
       'Romance',
       'Building',
+      'Simulation',
       'Character Customization',
       'Life Sim',
       'Dating Sim',
