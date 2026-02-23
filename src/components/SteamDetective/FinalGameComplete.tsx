@@ -10,11 +10,13 @@ import {
   getRealUtcDateString,
   getRankEmoji,
   saveTotalScoreSent,
+  getTimeUntilNextGame,
 } from '../../utils';
 import ShareButton from '../ShareButton';
 import SteamDetectiveFeedbackButtons from './SteamDetectiveFeedbackButtons';
 import AnimatedTotalScoreDisplay from './AnimatedTotalScoreDisplay';
 import { useDailyGame } from '../../hooks/useDailyGame';
+import { ArrowPathIcon } from '@heroicons/react/20/solid';
 import toast from 'react-hot-toast';
 
 interface CaseFileState {
@@ -39,6 +41,14 @@ const FinalGameComplete: React.FC<FinalGameCompleteProps> = ({
   const [userPercentile, setUserPercentile] = useState<number | null>(null);
   const [userRank, setUserRank] = useState<number>(0);
   const hasSentScoreThisSession = useRef(false);
+  const [timeLeft] = useState<{ h: number; m: number }>(() =>
+    getTimeUntilNextGame(),
+  );
+  const localMidnightStr = (() => {
+    const d = new Date();
+    d.setUTCHours(0, 0, 0, 0);
+    return d.toLocaleTimeString([], { hour: 'numeric', minute: '2-digit' });
+  })();
 
   const game1 = useDailyGame(1);
   const game2 = useDailyGame(2);
@@ -212,6 +222,23 @@ const FinalGameComplete: React.FC<FinalGameCompleteProps> = ({
               onCopyToShare={handleCopyToShare}
               isLoading={scoresLoading}
             />
+          </div>
+
+          <div className='flex items-center justify-center gap-1.5 text-gray-400 text-sm'>
+            <ArrowPathIcon className='w-4 h-4 shrink-0' />
+            New case files in{' '}
+            <span className='relative group inline-block'>
+              <span
+                className='text-white border-b border-dashed border-white cursor-help'
+                tabIndex={0}
+              >
+                {timeLeft.h}h, {timeLeft.m}m.
+              </span>
+              <span className='pointer-events-none absolute bottom-full left-1/2 mb-1.5 -translate-x-1/2 rounded border border-white bg-zinc-900 px-2 py-1 text-center text-xs text-gray-200 opacity-0 transition-opacity group-hover:opacity-100 group-focus-within:opacity-100 w-max max-w-[230px] shadow-[0_0_12px_rgba(255,255,255,0.25)]'>
+                Every day at 00:00 UTC <br /> ({localMidnightStr} your time)
+              </span>
+            </span>{' '}
+            See you then!
           </div>
 
           {/* Feedback Buttons */}

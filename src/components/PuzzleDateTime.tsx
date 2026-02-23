@@ -17,7 +17,7 @@ const PuzzleDateTime: React.FC<PuzzleDateTimeProps> = ({
         {puzzleDate}
       </div>
       <div className='text-gray-400 text-sm'>
-        Next game in {timeLeft.h}h, {timeLeft.m}m
+        New case files in {timeLeft.h}h, {timeLeft.m}m
       </div>
     </div>
   );
