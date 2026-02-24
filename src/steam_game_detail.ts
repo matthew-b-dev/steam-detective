@@ -711,7 +711,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/49520/ss_2f27a18562fbf4a91943c3968b35db5ac1caf5ad.600x338.jpg',
     shortDescription:
-      'A new era of ||shoot|| and ||loot|| is about to begin. Play as one of four new ||vault hunters|| facing off against a massive new world of ||creatures||, ||psychos|| and ||the evil|| mastermind, ||Handsome Jack||.',
+      'A new era of ||shoot|| and ||loot|| is about to begin. Play as one of four new ||vault hunters|| facing off against a massive new world of ||creatures||, ||psychos|| and the evil mastermind, ||Handsome Jack||.',
     releaseDate: 'Sep 17, 2012',
     developer: '||Gearbox Software||',
     publisher: '2K',
@@ -13678,7 +13678,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/241930/ss_601701af77a18ef504c38f0a920053f3f62ff059.600x338.jpg',
     shortDescription:
-      '||Fight through Mordor|| and uncover the truth of the spirit that compels you, discover the origins of the ||Ring||s of ||Power||, build your legend and ultimately confront ||the evil of Sauron in this|| new chronicle of ||Middle-earth||.',
+      '||Fight through Mordor|| and uncover the truth of the spirit that compels you, discover the origins of the ||Ring||s of Power, build your legend and ultimately confront ||the evil of Sauron in this|| new chronicle of ||Middle-earth||.',
     releaseDate: 'Sep 30, 2014',
     developer: 'Monolith Productions',
     publisher: 'Warner Bros. Interactive Entertainment, Warner Bros. Games',
