@@ -9735,7 +9735,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/262060/ss_799c78932c87f2be0cbd45dd1b80ebd0a355e575.600x338.jpg',
     shortDescription:
-      '||Darkest Dungeon is a challenging gothic roguelike turn-based RPG about the psychological stresses of adventuring. Recruit, train, and|| lead a team of ||flawed|| heroes against ||unimaginable horrors||, ||stress||, ||disease||, and the ever-encroaching ||dark||. Can you keep your ||heroes together when all hope is lost||?',
+      '||Darkest Dungeon is a challenging gothic roguelike turn-based RPG about the psychological stresses of adventuring. Recruit, train, and|| lead a team of flawed heroes against ||unimaginable horrors||, ||stress||, ||disease||, and the ever-encroaching ||dark||. Can you keep your ||heroes together when all hope is lost||?',
     releaseDate: 'Jan 19, 2016',
     developer: 'Red Hook Studios',
     publisher: 'Red Hook Studios',
