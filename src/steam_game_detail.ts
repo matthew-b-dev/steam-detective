@@ -807,7 +807,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/55150/ss_9d33a17ab1d49067fceee6ee9bdee75744e0b702.600x338.jpg',
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/55150/ss_202b5dc08cb1df78b019faa2ee714907013e9b92.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/55150/ss_8d41a53e89e3a62beb5a0bd3d2319a57eaef1ce9.600x338.jpg',
     shortDescription:
       'In ||Warhammer 40,000 Space Marine|| you are Captain Titus, a ||Space Marine|| of the ||Ultramarines|| chapter and a seasoned veteran of countless battles.',
     releaseDate: 'Sep 5, 2011',
@@ -821,17 +821,16 @@ export const steamGameDetails: SteamGameMap = {
     },
     userTags: [
       'Warhammer 40K',
+      'Games Workshop',
       'Action',
       'Third-Person Shooter',
       'Sci-fi',
       'Third Person',
       'Multiplayer',
-      'Gore',
       'Singleplayer',
       'Shooter',
       'Hack and Slash',
       'Co-op',
-      'Games Workshop',
       'Dystopian ',
       'Atmospheric',
       'Adventure',
@@ -844,10 +843,10 @@ export const steamGameDetails: SteamGameMap = {
     blurredUserTags: ['Warhammer 40K'],
     blurScreenshotQuarter: 'bottom',
     overrideCensoredTitle: 'W||arhammer|| 40,||000||: ||Space Marine||',
-    clueOrder: ['details', 'desc', 'tags'],
+    clueOrder: ['desc', 'details', 'tags'],
     debugProcessed: true,
     debugRefined: true,
-    difficulty: 'Hard',
+    difficulty: 'Medium',
   },
   '55230': {
     name: 'Saints Row: The Third',
@@ -5871,7 +5870,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/255710/ss_e0f842c9327df9defabf120b6c59e1ba42f54a75.600x338.jpg',
     shortDescription:
-      '||Cities: Skylines|| is a modern take on the classic city simulation. The game introduces new game play elements to realize the thrill and hardships of creating and maintaining a real city whilst expanding on some well-established tropes of the city building experience.',
+      '||Cities: Skylines|| is a modern take on the ||classic city|| simulation. The game introduces new game play elements to realize the thrill and hardships of creating and maintaining a ||real city|| whilst expanding on some well-established tropes of the ||city building|| experience.',
     releaseDate: 'Mar 10, 2015',
     developer: 'Colossal Order',
     publisher: 'Paradox Interactive',
@@ -5903,7 +5902,10 @@ export const steamGameDetails: SteamGameMap = {
       'Funny',
       'Action',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    clueOrder: ['details', 'desc', 'tags'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Medium',
   },
   '284160': {
     name: 'BeamNG.drive',
@@ -7767,6 +7769,7 @@ export const steamGameDetails: SteamGameMap = {
       'God Game',
       'Multiplayer',
     ],
+    blurScreenshotQuarter: 'top',
     clueOrder: ['tags', 'details', 'desc'],
   },
   '349040': {
@@ -9173,12 +9176,13 @@ export const steamGameDetails: SteamGameMap = {
     name: 'Outer Wilds',
     appId: 753640,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/753640/ss_ec95a283483f0438be40d033f08b9d956e748d54.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/753640/ss_c624a6b8edca0d451605592edd927dbcc14917a8.600x338.jpg',
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/753640/ss_09f0fa8d9b8d7da1408cf4e03303d896cbd9be18.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/753640/ss_fe4a6504c49efa6e7cb9ecda7aeddb6f7451a2cc.600x338.jpg',
     shortDescription:
-      '||Named Game of the Year 2019 by Giant Bomb, Polygon, Eurogamer, and The Guardian, Outer Wilds is a critically-acclaimed and award-winning|| open world ||mystery about a|| solar system trapped in ||an endless time loop.||',
-    releaseDate: 'Jun 18, 2020',
+      'Named Game of the Year 2019 by Giant Bomb, Polygon, Eurogamer, and The Guardian, ||Outer Wilds is a|| critically-acclaimed and award-winning open world ||mystery about a solar system trapped in an endless time loop.||',
+    originalReleaseDate: 'May 28, 2019',
+    releaseDate: 'Jun 18, 2020 (Steam)',
     developer: 'Mobius Digital',
     publisher: 'Annapurna Interactive',
     tags: ['Action', 'Adventure'],
@@ -9208,6 +9212,13 @@ export const steamGameDetails: SteamGameMap = {
       '3D',
       'Simulation',
       'Action',
+    ],
+    blurredUserTags: [
+      'Story Rich',
+      'Adventure',
+      'Great Soundtrack',
+      'Atmospheric',
+      'Singleplayer',
     ],
     clueOrder: ['desc', 'details', 'tags'],
     debugProcessed: true,
@@ -12151,7 +12162,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/281990/ss_7f4d7cc160c43e77aa523e910b365e0ca436e6bb.600x338.jpg',
     shortDescription:
-      'Explore a ||galaxy|| full of wonders in this ||sci-fi grand strategy|| game from ||Paradox Development Studios||. Interact with diverse ||alien races||, discover strange new ||worlds with|| unexpected ||events|| and expand the ||reach of your empire||. Each new adventure holds almost ||limitless possibilities||.',
+      'Explore a ||galaxy|| full of wonders in this ||sci-fi grand strategy|| game from ||Paradox Development Studios||. Interact with diverse alien races, discover strange new ||worlds with|| unexpected ||events|| and expand the ||reach of your empire||. Each new adventure holds almost ||limitless possibilities||.',
     releaseDate: 'May 9, 2016',
     developer: 'Paradox Development Studio',
     publisher: 'Paradox Interactive',
@@ -12450,7 +12461,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/319630/ss_f071f2da3d45953de69f00e05c6e333954ecdf26.600x338.jpg',
     shortDescription:
-      '||Episode 1|| now FREE! ||Life is Strange|| is an award-winning and critically acclaimed episodic adventure game that allows the player to rewind time and affect the past, present and future.',
+      '||Episode 1|| now FREE! ||Life is Strange is an award-winning and critically acclaimed episodic adventure|| game that allows the player to rewind time and affect the past, present and future.',
     releaseDate: 'Jan 29, 2015',
     developer: 'DONTNOD Entertainment',
     publisher: 'Square Enix',
@@ -12482,8 +12493,16 @@ export const steamGameDetails: SteamGameMap = {
       'LGBTQ+',
       'Memes',
     ],
-    blurredUserTags: ['Female Protagonist'],
+    blurredUserTags: [
+      'Singleplayer',
+      'Female Protagonist',
+      'Great Soundtrack',
+      'Choices Matter',
+    ],
     clueOrder: ['desc', 'tags', 'details'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Medium',
   },
   '1466060': {
     name: 'Tainted Grail: The Fall of Avalon',
@@ -14048,11 +14067,11 @@ export const steamGameDetails: SteamGameMap = {
     name: 'Hades',
     appId: 1145360,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1145360/ss_c0fed447426b69981cf1721756acf75369801b31.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1145360/ss_abb2427810a4e91cc600f37c3630b912d4e0191b.600x338.jpg',
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1145360/ss_8a9f0953e8a014bd3df2789c2835cb787cd3764d.600x338.jpg',
     shortDescription:
-      'Defy the god of the dead as you hack and slash out of the Underworld in this rogue-like dungeon crawler from the creators of Bastion, Transistor, and Pyre.',
+      'Defy ||the god of the dead|| as you hack and slash out of the ||Underworld in this rogue-like dungeon crawler|| from the creators of ||Bastion||, ||Transistor||, and ||Pyre||.',
     releaseDate: 'Sep 17, 2020',
     developer: 'Supergiant Games',
     publisher: 'Supergiant Games',
@@ -14084,7 +14103,11 @@ export const steamGameDetails: SteamGameMap = {
       'Perma Death',
       'LGBTQ+',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    screenshotFocusPoint: [55, 0, 400],
+    clueOrder: ['ss', 'desc', 'details', 'tags'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
   },
   '274940': {
     name: 'Depth',
@@ -14222,8 +14245,10 @@ export const CLOSE_GUESS_SERIES: string[] = [
   'bioshock',
   'witcher',
   'need for speed',
+  'life is strange',
   'truck simulator',
   'the sims',
   'ori and',
   'middle-earth',
+  'cities:',
 ];

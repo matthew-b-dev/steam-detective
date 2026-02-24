@@ -188,9 +188,14 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile3: 'Kerbal Space Program',
     caseFile4: 'Middle-earth: Shadow of Mordor',
   },
+  '2026-02-25': {
+    caseFile1: 'Outer Wilds',
+    caseFile2: 'Cities: Skylines',
+    caseFile3: 'Warhammer 40,000: Space Marine',
+    caseFile4: 'Hades',
+  },
 };
 // MEd:  Totally Accurate Battle Simulator
-// Easy : Kerbal Space Program
 // HARD: Don't Starve
 // caseFile3: Oxygen Not Included
 // Outer Wilds
