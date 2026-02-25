@@ -613,7 +613,6 @@ export const dummyGames: string[] = [
   'Sniper Ghost Warrior Contracts',
   'WRC 8',
   'Super Meat Boy Forever',
-  'Sniper Elite V2 Remastered',
   'Ghostbusters: The Video Game Remastered',
   'Metal Wolf Chaos XD',
   'River City Girls',

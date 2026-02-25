@@ -194,7 +194,14 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile3: 'Warhammer 40,000: Space Marine',
     caseFile4: 'Hades',
   },
+  '2026-02-26': {
+    caseFile1: 'Elite Dangerous',
+    caseFile2: 'Kingdom Come: Deliverance',
+    caseFile3: 'Sniper Elite 4',
+    caseFile4: 'Saints Row: The Third',
+  },
 };
+// Easy: Beat Saber
 // MEd:  Totally Accurate Battle Simulator
 // HARD: Don't Starve
 // caseFile3: Oxygen Not Included
