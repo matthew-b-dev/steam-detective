@@ -9146,7 +9146,7 @@ export const steamGameDetails: SteamGameMap = {
     shortDescription:
       'Named Game of the Year 2019 by Giant Bomb, Polygon, Eurogamer, and The Guardian, ||Outer Wilds is a|| critically-acclaimed and award-winning open world ||mystery about a solar system trapped in an endless time loop.||',
     originalReleaseDate: 'May 28, 2019',
-    releaseDate: 'Jun 18, 2020 (Steam)',
+    releaseDate: 'Jun 18, 2020',
     developer: 'Mobius Digital',
     publisher: 'Annapurna Interactive',
     tags: ['Action', 'Adventure'],
