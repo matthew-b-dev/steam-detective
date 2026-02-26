@@ -2974,7 +2974,7 @@ export const steamGameDetails: SteamGameMap = {
       'Adventure',
       'Space Sim',
     ],
-    clueOrder: ['tags', 'desc', 'details'],
+    clueOrder: ['tags', 'desc', 'ss', 'details'],
     debugProcessed: true,
     debugRefined: true,
     difficulty: 'Hard',
@@ -3306,9 +3306,9 @@ export const steamGameDetails: SteamGameMap = {
     name: 'DRAGON BALL FighterZ',
     appId: 678950,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/678950/ss_3d48baf2e7aaf087afbab1c4268637df528eb2c8.600x338.jpg',
-    secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/678950/ss_1702e9bc7ba4ce2dce2555c8d63612aafb5c757a.600x338.jpg',
+    secondaryScreenshot:
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/678950/ss_3d48baf2e7aaf087afbab1c4268637df528eb2c8.600x338.jpg',
     shortDescription:
       '||DRAGON BALL FighterZ|| is born from what makes the ||DRAGON BALL|| series so loved and famous: endless spectacular fights with its all-powerful fighters.',
     releaseDate: 'Jan 26, 2018',
@@ -3342,6 +3342,7 @@ export const steamGameDetails: SteamGameMap = {
       'Adventure',
       "Beat 'em up",
     ],
+    screenshotFocusPoint: [39, 100, 186],
     clueOrder: ['desc', 'details', 'tags'],
     debugProcessed: true,
     debugRefined: true,
@@ -4349,7 +4350,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1262560/ss_4292ba4d468883bb13c619330229047f9ab197f7.600x338.jpg',
     shortDescription:
-      "The open-world action in ||Need for Speed Most Wanted|| gives you the freedom to drive your way. Hit jumps and shortcuts, switch cars, ||lie low|| or head for terrain that plays to your vehicle's unique strengths. ||Fight your way past cops|| and rivals using skill, high-end car tech and tons of nitrous.",
+      "The open-world action in ||Need for Speed Most Wanted|| gives you the freedom to drive your way. ||Hit jumps and shortcuts||, switch cars, ||lie low|| or head for terrain that plays to your vehicle's unique strengths. ||Fight|| your way past ||cops and rivals|| using skill, high-end car tech and tons of ||nitrous||.",
     releaseDate: 'Jun 18, 2020',
     developer: 'Criterion Games',
     publisher: 'Electronic Arts',
@@ -9767,7 +9768,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/620980/ss_7df971fd7781d69dc455b15a400a6973ed7d3f36.600x338.jpg',
     shortDescription:
-      '||Beat Saber is a VR|| rhythm game where you slash the ||beats|| of adrenaline-pumping music as they fly towards you, surrounded by a futuristic world.',
+      '||Beat Saber is a VR|| rhythm game where you ||slash|| the beats of adrenaline-pumping music as they fly ||towards you||, surrounded by a futuristic world.',
     releaseDate: 'May 21, 2019',
     developer: 'Beat Games',
     publisher: 'Beat Games',
@@ -9798,16 +9799,8 @@ export const steamGameDetails: SteamGameMap = {
       'PvP',
       'Games Workshop',
     ],
-    blurredUserTags: [
-      'Indie',
-      'Singleplayer',
-      'VR',
-      'Difficult',
-      'Multiplayer',
-      'Moddable',
-      'Fast-Paced',
-    ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: ['Music', 'Difficult', 'Multiplayer', 'Singleplayer'],
+    clueOrder: ['details', 'desc', 'tags'],
     debugProcessed: true,
     debugRefined: true,
     difficulty: 'Easy',
@@ -10112,9 +10105,9 @@ export const steamGameDetails: SteamGameMap = {
     name: 'Slay the Spire',
     appId: 646570,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/646570/ss_c171816f7ecd35b5b46d2fa27532f4c5b8ca3cc5.600x338.jpg',
-    secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/646570/ss_01aa3e7759e457bfbf2422f31c325d7b3ba8a6eb.600x338.jpg',
+    secondaryScreenshot:
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/646570/ss_c171816f7ecd35b5b46d2fa27532f4c5b8ca3cc5.600x338.jpg',
     shortDescription:
       'We fused card games and roguelikes together to make the best single player deckbuilder we could. Craft a unique deck, encounter bizarre creatures, discover relics of immense power, and ||Slay the Spire||!',
     releaseDate: 'Jan 23, 2019',
@@ -10148,7 +10141,11 @@ export const steamGameDetails: SteamGameMap = {
       'Fantasy',
       'Casual',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    screenshotFocusPoint: [96, 12, 400],
+    clueOrder: ['ss', 'details', 'tags', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
   },
   '2198150': {
     name: 'Tiny Glade',
@@ -11282,17 +11279,17 @@ export const steamGameDetails: SteamGameMap = {
     clueOrder: ['tags', 'details', 'desc'],
   },
   '359550': {
-    name: "Tom Clancy's Rainbow Six Siege X",
+    name: "Tom Clancy's Rainbow Six Siege",
     appId: 359550,
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/359550/8363519296edec1c056176f25e20767da3e6e853/ss_8363519296edec1c056176f25e20767da3e6e853.600x338.jpg',
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/359550/5467c59d8651c801aab376432cb96f7a49803d7a/ss_5467c59d8651c801aab376432cb96f7a49803d7a.600x338.jpg',
     shortDescription:
-      'Rainbow Six Siege X is the reference in tactical team shooters, where elite strategy and execution triumph. Enjoy free access to Quick Match, Unranked and Dual Front game modes with a selection of operators.',
+      '||Rainbow Six Siege|| is the reference in ||tactical team|| shooters, ||where elite strategy and execution triumph||. Enjoy free access to Quick Match, Unranked and Dual Front game modes with a selection of ||operators||.',
     releaseDate: 'Dec 1, 2015',
-    developer: 'Ubisoft Montreal',
-    publisher: 'Ubisoft',
+    developer: '||Ubisoft|| Montreal',
+    publisher: '||Ubisoft||',
     tags: ['Action', 'Free To Play'],
     features: [],
     allReviewSummary: {
@@ -11321,7 +11318,7 @@ export const steamGameDetails: SteamGameMap = {
       'Difficult',
       '3D',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    clueOrder: ['details', 'desc', 'tags'],
   },
   '920210': {
     name: 'LEGO Star Wars: The Skywalker Saga',
@@ -13921,11 +13918,11 @@ export const steamGameDetails: SteamGameMap = {
     name: 'SILENT HILL 2',
     appId: 2124490,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2124490/ss_1fdda21610fa23d0ce20b5c44fab8aebd509c5cb.600x338.jpg',
-    secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2124490/ss_b20363454a190d737e5ff8e6410d66f0034bd807.600x338.jpg',
+    secondaryScreenshot:
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2124490/ss_1fdda21610fa23d0ce20b5c44fab8aebd509c5cb.600x338.jpg',
     shortDescription:
-      'Investigating a letter from his late wife, James returns to where they made so many memories - ||Silent Hill||. What he finds is a ghost town, prowled by disturbing monsters and cloaked in deep fog. Confront the monsters, solve puzzles, and search for traces of your wife in this remake of ||SILENT HILL 2||.',
+      '||Investigating a letter from his late wife, James|| returns to where they made so many memories ||- Silent Hill.|| What he finds is a ghost town, prowled by ||disturbing monsters and cloaked in deep fog. Confront the monsters, solve puzzles, and|| search for traces of your ||wife in this remake of SILENT HILL 2.||',
     releaseDate: 'Oct 7, 2024',
     developer: 'Bloober Team SA',
     publisher: 'KONAMI',
@@ -13957,7 +13954,11 @@ export const steamGameDetails: SteamGameMap = {
       'Classic',
       'Action-Adventure',
     ],
-    clueOrder: ['details', 'desc', 'tags'],
+    screenshotFocusPoint: [10, 32, 90],
+    clueOrder: ['desc', 'ss', 'details', 'tags'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Medium',
   },
   '1328670': {
     name: 'Mass Effect Legendary Edition',
@@ -14199,6 +14200,7 @@ export const steamGameDetails: SteamGameMap = {
 // Special series/franchises where guesses containing the series name are considered "close"
 export const CLOSE_GUESS_SERIES: string[] = [
   'super mario',
+  'silent hill',
   'arma',
   'xcom',
   'saints row',

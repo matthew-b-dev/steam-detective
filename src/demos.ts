@@ -200,9 +200,15 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile3: 'Sniper Elite 4',
     caseFile4: 'Saints Row: The Third',
   },
+  '2026-02-27': {
+    caseFile1: 'Beat Saber',
+    caseFile2: 'SILENT HILL 2',
+    caseFile3: "Tom Clancy's Rainbow Six Siege",
+    caseFile4: 'Slay the Spire',
+  },
 };
-// Easy: Beat Saber
+// TEKKEN 7 ?
+// Need for Speed Most Wanted
 // MEd:  Totally Accurate Battle Simulator
 // HARD: Don't Starve
 // caseFile3: Oxygen Not Included
-// Outer Wilds
