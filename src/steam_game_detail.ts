@@ -9,18 +9,18 @@ export const steamGameDetails: SteamGameMap = {
     name: 'Dota 2',
     appId: 570,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/570/ss_ad8eee787704745ccdecdfde3a5cd2733704898d.600x338.jpg',
-    secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/570/ss_7ab506679d42bfc0c0e40639887176494e0466d9.600x338.jpg',
+    secondaryScreenshot:
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/570/ss_ad8eee787704745ccdecdfde3a5cd2733704898d.600x338.jpg',
     shortDescription:
       "Every day, millions of players worldwide enter battle as one of over a hundred ||Dota heroes||. And no matter if it's their 10th hour of play ||or 1,000th||, there's always something new to discover. With regular updates that ensure a constant evolution of gameplay, features, and ||heroes||, ||Dota 2|| has taken on a life of its own.",
-    releaseDate: 'Jul 9, 2013',
+    releaseDate: '||Jul 9, 2013||',
     developer: '||Valve||',
     publisher: '||Valve||',
     tags: ['Action', 'Strategy', 'Free To Play'],
     features: [],
     allReviewSummary: {
-      count: 6101,
+      count: 2670945,
       rating: 'Very Positive',
     },
     userTags: [
@@ -45,7 +45,8 @@ export const steamGameDetails: SteamGameMap = {
       'Action RPG',
       'Simulation',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    screenshotFocusPoint: [47, 50, 250],
+    clueOrder: ['details', 'ss', 'desc', 'tags'],
     debugProcessed: true,
     debugRefined: true,
     difficulty: 'Easy',
@@ -5644,7 +5645,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/813780/ss_1033024a26f0a7ed277865201aed9bb471b54320.600x338.jpg',
     shortDescription:
-      '42 Civilizations, 229 Campaign Missions, Singleplayer, Co-Op, Multiplayer, In-Game Editor, Mods, Cross-play...It is good to be the king.',
+      '42 ||Civilizations||, 229 Campaign Missions, Singleplayer, Co-Op, Multiplayer, In-Game Editor, Mods, Cross-play...It is good to be ||the king||.',
     releaseDate: 'Nov 14, 2019',
     developer:
       "World's Edge, Forgotten Empires, CaptureAge, Tantalus Media, Wicked Witch",
@@ -5662,9 +5663,9 @@ export const steamGameDetails: SteamGameMap = {
       'Multiplayer',
       'Base-Building',
       'Historical',
-      'Singleplayer',
+      'Remaster',
+      'Remake',
       'Medieval',
-      'Resource Management',
       'Classic',
       'Tactical',
       'Real-Time',
@@ -5677,7 +5678,10 @@ export const steamGameDetails: SteamGameMap = {
       'Adventure',
       'Great Soundtrack',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    clueOrder: ['desc', 'details', 'tags'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Medium',
   },
   '3949040': {
     name: 'RV There Yet?',
@@ -7017,8 +7021,11 @@ export const steamGameDetails: SteamGameMap = {
       'Kickstarter',
       'Survival',
     ],
-    blurredUserTags: ['Remake'],
+    blurredUserTags: ['Horror'],
     clueOrder: ['tags', 'details', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Hard',
   },
   '224260': {
     name: 'No More Room in Hell',
@@ -8547,9 +8554,10 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1190460/ss_4370916476e44c78b50bfee175f1d82285f6bfd7.600x338.jpg',
     shortDescription:
-      'From legendary game creator Hideo Kojima comes an all-new, genre-defying experience. Sam Bridges must brave a world utterly transformed by the ||Death Stranding||. Carrying the disconnected remnants of our future in his hands, he embarks on a journey to reconnect the shattered world one step at a time.',
+      'From ||legendary game creator Hideo Kojima|| comes an all-new, genre-defying experience. ||Sam Bridges|| must brave a world utterly transformed by the ||Death Stranding||. ||Carrying|| the disconnected remnants of our future ||in his hands||, ||he|| embarks on a journey to reconnect the shattered world one step at a time.',
+    originalReleaseDate: 'Nov 8, 2019',
     releaseDate: 'Jul 14, 2020',
-    developer: 'KOJIMA PRODUCTIONS',
+    developer: '||KOJIMA PRODUCTIONS||',
     publisher: '505 Games',
     tags: ['Action', 'Adventure'],
     features: [],
@@ -8579,7 +8587,11 @@ export const steamGameDetails: SteamGameMap = {
       'Dark',
       'Survival',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurScreenshotQuarter: 'bottom',
+    clueOrder: ['desc', 'details', 'tags'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Medium',
   },
   '1671210': {
     name: 'DELTARUNE',
@@ -9492,48 +9504,6 @@ export const steamGameDetails: SteamGameMap = {
     ],
     clueOrder: ['tags', 'details', 'desc'],
   },
-  '1850570': {
-    name: "DEATH STRANDING DIRECTOR'S CUT",
-    appId: 1850570,
-    primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1850570/ss_f64a1140651ff5af30eb63bb6e5b41753d00a98e.600x338.jpg',
-    secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1850570/ss_4b6d7d010d1701b2b57bf8ef1b4975a04b3d632f.600x338.jpg',
-    shortDescription:
-      "From legendary game creator Hideo Kojima comes a genre-defying experience, now expanded in this definitive DIRECTOR'S CUT. As Sam Bridges, your mission is to deliver hope to humanity by connecting the last survivors of a decimated America. Can you reunite the shattered world, one step at a time?",
-    releaseDate: 'Mar 30, 2022',
-    developer: 'KOJIMA PRODUCTIONS',
-    publisher: ' 505 Games',
-    tags: ['Action', 'Adventure'],
-    features: [],
-    allReviewSummary: {
-      count: 17312,
-      rating: 'Very Positive',
-    },
-    userTags: [
-      'Story Rich',
-      'Open World',
-      'Walking Simulator',
-      'Atmospheric',
-      'Adventure',
-      'Great Soundtrack',
-      'Exploration',
-      'Post-apocalyptic',
-      'Cinematic',
-      'Singleplayer',
-      'Third Person',
-      'Action',
-      'Sci-fi',
-      'Horror',
-      'Relaxing',
-      'Action-Adventure',
-      'Stealth',
-      'Third-Person Shooter',
-      'Multiplayer',
-      'Combat',
-    ],
-    clueOrder: ['tags', 'details', 'desc'],
-  },
   '644930': {
     name: 'They Are Billions',
     appId: 644930,
@@ -9806,7 +9776,7 @@ export const steamGameDetails: SteamGameMap = {
     difficulty: 'Easy',
   },
   '1466860': {
-    name: 'Age of Empires IV: Anniversary Edition',
+    name: 'Age of Empires IV',
     appId: 1466860,
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1466860/ss_2ae5b5a2a779c31e3acae486ec359b0d9087bc8c.600x338.jpg',
@@ -11757,7 +11727,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/750920/ss_3f370f69eef0caeceb533d06925cc48f0f26c83c.600x338.jpg',
     shortDescription:
-      'As ||Lara Croft|| races to save the world from a Maya apocalypse, ||she|| must become the ||Tomb Raider she|| is destined to be.',
+      '||As Lara Croft races to|| save the world from a Maya apocalypse, ||she|| must become the ||Tomb Raider she|| is destined to be.',
     releaseDate: 'Sep 14, 2018',
     developer: 'Eidos-Montréal, Crystal Dynamics, Nixxes',
     publisher: 'Crystal Dynamics',

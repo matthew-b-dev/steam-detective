@@ -372,7 +372,9 @@ export const RefineDetails: React.FC<RefineDetailsProps> = ({
               onClick={() => mode === 'refine' && startEditing('releaseDate')}
               title={mode === 'refine' ? 'Click to edit' : undefined}
             >
-              {game.releaseDate}
+              {isComplete
+                ? getUncensoredText(game.releaseDate)
+                : renderCensoredDetailText(game.releaseDate)}
             </span>
           )}
         </div>

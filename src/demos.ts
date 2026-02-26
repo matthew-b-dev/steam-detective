@@ -206,7 +206,14 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile3: "Tom Clancy's Rainbow Six Siege",
     caseFile4: 'Slay the Spire',
   },
+  '2026-02-28': {
+    caseFile1: 'Dota 2',
+    caseFile2: 'Age of Empires II',
+    caseFile3: 'Shadow of the Tomb Raider',
+    caseFile4: 'DEATH STRANDING',
+  },
 };
+//
 // TEKKEN 7 ?
 // Need for Speed Most Wanted
 // MEd:  Totally Accurate Battle Simulator

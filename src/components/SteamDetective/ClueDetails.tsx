@@ -79,7 +79,10 @@ export const ClueDetails: React.FC<ClueDetailsProps> = ({
     return text.replace(/\|\|(.+?)\|\|/g, '$1');
   };
 
-  // Determine what to display for developer and publisher
+  // Determine what to display for release date, developer and publisher
+  const displayReleaseDate = isComplete
+    ? getUncensoredText(releaseDate)
+    : renderCensoredText(releaseDate);
   const displayDeveloper = isComplete
     ? getUncensoredText(developer)
     : renderCensoredText(developer);
@@ -143,7 +146,7 @@ export const ClueDetails: React.FC<ClueDetailsProps> = ({
           <div className='text-gray-400 text-xs uppercase min-w-[120px] pt-[3px]'>
             {originalReleaseDate ? 'Steam Release:' : 'Release Date:'}
           </div>
-          <div className='text-[#c7d5e0] text-sm'>{releaseDate}</div>
+          <div className='text-[#c7d5e0] text-sm'>{displayReleaseDate}</div>
         </div>
 
         {/* Developer */}
