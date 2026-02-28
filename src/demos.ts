@@ -9,7 +9,6 @@ Rust
 The Forest
 Space Engineers
 XCOM 2
-Mount and Blade II: Bannerlord
 The Witcher 3: Wild Hunt
 Elite Dangerous
 DARK SOULS II
@@ -212,8 +211,14 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile3: 'Shadow of the Tomb Raider',
     caseFile4: 'DEATH STRANDING',
   },
+  '2026-03-01': {
+    caseFile1: 'Forza Horizon 5',
+    caseFile2: 'Resident Evil 2',
+    caseFile3: 'Overcooked! 2',
+    caseFile4: 'Mount & Blade II: Bannerlord',
+  },
 };
-//
+// Prison Architect
 // TEKKEN 7 ?
 // Need for Speed Most Wanted
 // MEd:  Totally Accurate Battle Simulator

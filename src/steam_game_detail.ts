@@ -1922,7 +1922,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/233450/ss_8fd05248e9f657baea9f26d2dbd154573c29b33e.600x338.jpg',
     shortDescription:
-      "Only the world's most ||ruthless Warden|| can ||contain|| the world's most ||ruthless inmates||. Design and develop your personalized ||penitentiary|| in ||Prison Architect||.",
+      "Only the world's most ||ruthless Warden|| can contain the world's most ||ruthless inmates||. Design and develop your personalized ||penitentiary|| in ||Prison Architect||.",
     releaseDate: 'Oct 6, 2015',
     developer: 'Introversion Software, Double Eleven',
     publisher: 'Paradox Interactive',
@@ -5161,7 +5161,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/883710/ss_153bd5afa0b45e74b0242a3805dc29aab9f1685e.600x338.jpg',
     shortDescription:
-      'A deadly virus engulfs the residents of Raccoon City in September of 1998, plunging the city into chaos as flesh eating zombies roam the streets for survivors. An unparalleled adrenaline rush, gripping storyline, and unimaginable horrors await you. Witness the return of ||Resident Evil 2||.',
+      'A ||deadly virus|| engulfs the residents of ||Raccoon City|| in September of ||1998||, plunging the city into chaos as ||flesh eating zombies roam|| the streets for survivors. An unparalleled adrenaline rush, gripping storyline, and unimaginable ||horrors|| await you. Witness the return of ||Resident Evil 2||.',
     releaseDate: 'Jan 24, 2019',
     developer: 'CAPCOM Co., Ltd.',
     publisher: 'CAPCOM Co., Ltd.',
@@ -5193,7 +5193,11 @@ export const steamGameDetails: SteamGameMap = {
       'Adventure',
       'Difficult',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: ['Zombies', 'Survival Horror', 'Gore', 'Action', 'Horror'],
+    clueOrder: ['desc', 'tags', 'details'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
   },
   '1604030': {
     name: 'V Rising',
@@ -5603,7 +5607,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/270880/ss_ba330377eb0a5bffcdbe10f89d3670b83ad55b3f.600x338.jpg',
     shortDescription:
-      'Experience legendary ||American trucks|| and deliver various cargoes across sunny ||California||, sandy ||Nevada||, and the ||Grand Canyon State of Arizona||. ||American Truck Simulator|| takes you on a journey through the breathtaking landscapes and widely recognized landmarks around the ||States||.',
+      'Experience legendary ||American trucks|| and deliver various ||cargoes|| across sunny ||California||, sandy ||Nevada||, and the ||Grand Canyon State of Arizona||. ||American Truck Simulator|| takes you on a journey through the breathtaking landscapes and widely recognized landmarks around the ||States||.',
     releaseDate: 'Feb 2, 2016',
     developer: 'SCS Software',
     publisher: 'SCS Software',
@@ -6124,6 +6128,7 @@ export const steamGameDetails: SteamGameMap = {
       'Strategy',
       'Shooter',
     ],
+    blurScreenshotQuarter: 'bottom',
     clueOrder: ['tags', 'details', 'desc'],
   },
   '244450': {
@@ -7541,9 +7546,9 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1151640/ss_271f850eec3f96b22aa17be35b948268e0771c7f.600x338.jpg',
     shortDescription:
-      "Experience Aloy's legendary quest to unravel the mysteries of a future Earth ruled by Machines. Use devastating tactical attacks against your prey and explore a majestic open world in this award-winning action RPG!",
+      "||Experience Aloy's|| legendary quest to unravel the mysteries of ||a future|| Earth ruled by ||Machines||. Use devastating tactical attacks against your ||prey|| and explore a majestic open world in this award-winning action RPG!",
     releaseDate: 'Aug 7, 2020',
-    developer: 'Guerrilla',
+    developer: '||Guerrilla||',
     publisher: 'PlayStation Publishing LLC',
     tags: ['Action', 'Adventure', 'RPG'],
     features: [],
@@ -7573,7 +7578,11 @@ export const steamGameDetails: SteamGameMap = {
       'Stealth',
       'Dinosaurs',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: ['Female Protagonist'],
+    clueOrder: ['desc', 'tags', 'details'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
   },
   '2161700': {
     name: 'Persona 3 Reload',
@@ -7832,11 +7841,11 @@ export const steamGameDetails: SteamGameMap = {
     name: 'Overcooked! 2',
     appId: 728880,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/728880/ss_2f84a12e1fe82cca37848bf29d4b8b16e83db03b.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/728880/ss_34974a4c2047b287a1f55802fde061fd7ee1a026.600x338.jpg',
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/728880/ss_7f290dccbdc3c0eb9ded951717bceba5d7455764.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/728880/ss_2f84a12e1fe82cca37848bf29d4b8b16e83db03b.600x338.jpg',
     shortDescription:
-      "Overcooked returns with a brand-new helping of chaotic cooking action! Journey back to the Onion Kingdom and assemble your team of chefs in classic couch co-op or online play for up to four players. Hold onto your aprons… it's time to save the world again!",
+      "||Overcooked|| returns with a brand-new helping of ||chaotic cooking|| action! Journey back to the ||Onion|| Kingdom and assemble your team of ||chefs|| in classic couch co-op or online play for up to four players. Hold onto your ||aprons||… it's time to save the world again!",
     releaseDate: 'Aug 7, 2018',
     developer: 'Ghost Town Games Ltd., Team17',
     publisher: 'Team17',
@@ -7868,7 +7877,10 @@ export const steamGameDetails: SteamGameMap = {
       'Strategy',
       'Colorful',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    clueOrder: ['ss', 'desc', 'details', 'tags'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Hard',
   },
   '2322560': {
     name: 'Love Is All Around',
@@ -8290,17 +8302,17 @@ export const steamGameDetails: SteamGameMap = {
     clueOrder: ['details', 'desc', 'tags'],
   },
   '261550': {
-    name: 'Mount and Blade II: Bannerlord',
+    name: 'Mount & Blade II: Bannerlord',
     appId: 261550,
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/261550/ss_569257e92fd31d58a6fe08053de637071b4518d3.600x338.jpg',
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/261550/ss_9682cf43bf605e9c655c1dbb4b23d1aac73165dc.600x338.jpg',
     shortDescription:
-      'A strategy/action RPG. Create a character, engage in diplomacy, craft, trade and conquer new lands in a vast medieval sandbox. Raise armies to lead into battle and command and fight alongside your troops in massive real-time battles using a deep but intuitive skill-based combat system.',
+      'A strategy/action RPG. Create a character, engage in ||diplomacy||, craft, trade and ||conquer|| new lands in a vast ||medieval|| sandbox. Raise ||armies to lead into battle|| and command and fight alongside ||your troops in massive|| real-time ||battles|| using a deep but intuitive skill-based ||combat system||.',
     releaseDate: 'Oct 25, 2022',
-    developer: 'TaleWorlds Entertainment',
-    publisher: 'TaleWorlds Entertainment',
+    developer: 'Ta||le||Worlds Entertainment',
+    publisher: 'Ta||le||Worlds Entertainment',
     tags: ['Action', 'Indie', 'RPG', 'Simulation', 'Strategy'],
     features: [],
     allReviewSummary: {
@@ -8330,12 +8342,14 @@ export const steamGameDetails: SteamGameMap = {
     ],
     blurScreenshotQuarter: 'bottom',
     blurTitleAndAsAmpersand: true,
-    clueOrder: ['tags', 'desc', 'details'],
+    clueOrder: ['details', 'desc', 'tags'],
     searchTerms: [
       'Mount and Blade 2: Bannerlord',
       'Mount & Blade 2: Bannerlord',
-      'Mount & Blade II: Bannerlord',
     ],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Medium',
   },
   '412020': {
     name: 'Metro Exodus',
@@ -11171,7 +11185,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1551360/ss_00f0090174380eeaf8753bd3d1028b6772c3aebf.600x338.jpg',
     shortDescription:
-      "Explore the vibrant open world landscapes of Mexico with limitless, fun driving action in the world's greatest cars.",
+      "Explore ||the vibrant open world|| landscapes of Mexico ||with limitless, fun driving action in the world's greatest cars.||",
     releaseDate: 'Nov 8, 2021',
     developer: 'Playground Games',
     publisher: 'Xbox Game Studios',
@@ -11203,7 +11217,10 @@ export const steamGameDetails: SteamGameMap = {
       'VR',
       'Action',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    clueOrder: ['details', 'desc', 'tags'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
   },
   '814380': {
     name: 'Sekiro: Shadows Die Twice',
@@ -14177,6 +14194,7 @@ export const CLOSE_GUESS_SERIES: string[] = [
   'elder scrolls',
   'civilization',
   'resident evil',
+  'forza',
   'serious sam',
   'creed',
   'mafia',
@@ -14212,4 +14230,5 @@ export const CLOSE_GUESS_SERIES: string[] = [
   'ori and',
   'middle-earth',
   'cities:',
+  'mount and blade',
 ];
