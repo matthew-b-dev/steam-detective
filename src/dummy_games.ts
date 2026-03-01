@@ -574,7 +574,6 @@ export const dummyGames: string[] = [
   'Lumines Remastered',
   'Warhammer 40,000: Mechanicus',
   'Life Is Strange 2 - Episode 3: Wastelands',
-  "Marvel's Spider-Man: The Heist",
   'Tesla vs Lovecraft',
   'The Fall Part 2: Unbound',
   'Warhammer 40,000: Inquisitor - Martyr',

@@ -1085,18 +1085,19 @@ export const steamGameDetails: SteamGameMap = {
     name: 'Project Zomboid',
     appId: 108600,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/108600/ss_d4a0f78dc94273c7f0eedc186569efc091387066.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/108600/ss_eb1862af5109e4658e2538d897cbd16b87ad1818.600x338.jpg',
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/108600/ss_eca8be032b3f5508bf5bea74cfbc823a4df047ce.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/108600/ss_3eee93607a530e8a5b857bae596f4109539dfd35.600x338.jpg',
     shortDescription:
-      '||Project Zomboid|| is the ultimate in zombie survival. Alone or in MP: you loot, build, craft, fight, farm and fish in a struggle to survive. A hardcore RPG skillset, a vast map, massively customisable sandbox and a cute tutorial raccoon await the unwary. So how will you die? All it takes is a bite..',
-    releaseDate: 'Nov 8, 2013',
+      '||Project Zomboid is the ultimate in zombie survival. Alone or in MP: you|| loot, build, craft, fight, farm and fish ||in a struggle to survive. A hardcore RPG skillset, a vast map, massively customisable sandbox|| and a cute tutorial raccoon await the unwary||. So how will you die? All it takes is a bite..||',
+    earlyAccessDate: 'Nov 8, 2013',
+    releaseDate: '(Not yet released)',
     developer: 'The Indie Stone',
     publisher: 'The Indie Stone',
     tags: ['Indie', 'RPG', 'Simulation'],
     features: [],
     allReviewSummary: {
-      count: 142429,
+      count: 434676,
       rating: 'Very Positive',
     },
     userTags: [
@@ -1120,10 +1121,10 @@ export const steamGameDetails: SteamGameMap = {
       '2D',
       'Adventure',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    clueOrder: ['desc', 'details', 'tags'],
     debugProcessed: true,
     debugRefined: true,
-    difficulty: 'Easy',
+    difficulty: 'Hard',
     debugNotes: 'delete',
   },
   '113400': {
@@ -3579,11 +3580,11 @@ export const steamGameDetails: SteamGameMap = {
     name: 'Little Nightmares II',
     appId: 860510,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/860510/ss_b7bdc32338c0261ee0773ad0b13024c853a2141c.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/860510/ss_6da5e5f073542d9e47d0d0bd0fe813010f8fb9a7.600x338.jpg',
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/860510/ss_a17e682e91c93695f2855be46428c4fc04c997f3.600x338.jpg',
     shortDescription:
-      "||Little Nightmares II|| is the second game in a series that has thrilled and captivated millions of players worldwide since 2017. Now it's your turn to try to survive this critically acclaimed entry in the most charming horror series ever made.",
+      "||Little Nightmares II|| is the second game in a series that has thrilled and captivated millions of players worldwide since 2017. ||Now it's your turn to try to survive this critically acclaimed|| entry in the ||most charming|| horror series ||ever made||.",
     releaseDate: 'Feb 10, 2021',
     developer: 'Tarsier Studios',
     publisher: 'BANDAI NAMCO Entertainment',
@@ -3615,7 +3616,7 @@ export const steamGameDetails: SteamGameMap = {
       'Co-op',
       'Violent',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    clueOrder: ['details', 'desc', 'tags'],
     debugProcessed: true,
     debugRefined: true,
     difficulty: 'Hard',
@@ -4748,18 +4749,16 @@ export const steamGameDetails: SteamGameMap = {
     debugRefined: true,
     difficulty: 'Easy',
   },
-  '1817190': {
-    name: "Marvel's Spider-Man: Miles Morales",
-    appId: 1817190,
-    primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1817190/ss_a240e0c6f37569493ed749d9317718d8ce9f5d18.600x338.jpg',
-    secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1817190/ss_02bb2ac97c3ce854344a537d9ed89c70ba45c3d3.600x338.jpg',
-    shortDescription:
-      "After the events of ||Marvel||'s ||Spider-Man|| Remastered, teenage ||Miles Morales|| is adjusting to his new home while following in the footsteps of his mentor, ||Peter|| ||Parker||, as a new ||Spider-Man||. When a fierce power struggle threatens to destroy his home, ||Miles|| must take up the ||mantle of Spider-Man|| and own it",
-    releaseDate: 'Nov 18, 2022',
-    developer: 'Insomniac Games, Nixxes Software',
-    publisher: 'PlayStation Publishing LLC',
+  '2651280': {
+    name: "Marvel's Spider-Man 2",
+    searchTerms: ["marvel's spider man 2"],
+    appId: 2651280,
+    primaryScreenshot: 'debug',
+    secondaryScreenshot: 'debug',
+    shortDescription: 'debug',
+    releaseDate: 'debug',
+    developer: 'debug',
+    publisher: 'debug',
     tags: ['Action', 'Adventure'],
     features: [],
     allReviewSummary: {
@@ -4789,6 +4788,54 @@ export const steamGameDetails: SteamGameMap = {
       'Mature',
     ],
     clueOrder: ['desc', 'details', 'tags'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
+  },
+  '1817190': {
+    name: "Marvel's Spider-Man: Miles Morales",
+    appId: 1817190,
+    primaryScreenshot:
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1817190/ss_a240e0c6f37569493ed749d9317718d8ce9f5d18.600x338.jpg',
+    secondaryScreenshot:
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1817190/ss_02bb2ac97c3ce854344a537d9ed89c70ba45c3d3.600x338.jpg',
+    shortDescription:
+      "||After the events of Marvel's Spider-Man Remastered, teenage Miles Morales|| is adjusting to his new home while following in the footsteps of his|| mentor, Peter Parker, as a new Spider-Man||. When a fierce power struggle threatens to destroy his home, ||Miles must take up the mantle of Spider-Man and own it||",
+    releaseDate: 'Nov 18, 2022',
+    developer: '||Insomniac Games||, ||Nixxes Software||',
+    publisher: 'PlayStation Publishing LLC',
+    tags: ['Action', 'Adventure'],
+    features: [],
+    allReviewSummary: {
+      count: 19186,
+      rating: 'Very Positive',
+    },
+    userTags: [
+      'Open World',
+      'Action',
+      'Singleplayer',
+      'Superhero',
+      'Adventure',
+      'Third Person',
+      'Combat',
+      'Parkour',
+      'Story Rich',
+      'Exploration',
+      'Action-Adventure',
+      'Stealth',
+      'Comic Book',
+      "Beat 'em up",
+      'Great Soundtrack',
+      'Multiplayer',
+      'Beautiful',
+      'Sci-fi',
+      'RPG',
+      'Mature',
+    ],
+    blurredUserTags: ['Superhero', 'Parkour'],
+    screenshotFocusPoint: [100, 81, 75],
+    clueOrder: ['desc', 'tags', 'details'],
+    searchTerms: ["marvel's spider man: miles morales"],
     debugProcessed: true,
     debugRefined: true,
     difficulty: 'Easy',
@@ -6568,18 +6615,18 @@ export const steamGameDetails: SteamGameMap = {
     name: 'The Binding of Isaac: Rebirth',
     appId: 250900,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/250900/ss_25a4a446a433218d41a7e87e35b60c297e68e7a4.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/250900/ss_008a76bd0ab314c8140dd1a7ec61090c122d1779.600x338.jpg',
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/250900/ss_19ef624e8d97136ba6f928d389b85f7b8130c37a.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/250900/ss_18388222cc55311d39fa5221effd6ea620845010.600x338.jpg',
     shortDescription:
-      "||The Binding of Isaac: Rebirth|| is a randomly generated action RPG shooter with heavy Rogue-like elements. Following Isaac on his journey players will find bizarre treasures that change Isaac's form giving him super human abilities and enabling him to fight off droves of mysterious creatures, discover secrets and fight his way to safety.",
+      "||The Binding of Isaac: Rebirth|| is a randomly generated action RPG shooter with heavy Rogue-like elements. Following ||Isaac|| on his journey players will find bizarre treasures that change ||Isaac's form giving him super human abilities|| and enabling him to fight off droves of mysterious creatures, discover secrets and fight his way to safety.",
     releaseDate: 'Nov 4, 2014',
     developer: 'Nicalis, Inc., Edmund McMillen',
     publisher: 'Nicalis, Inc.',
     tags: ['Action'],
     features: [],
     allReviewSummary: {
-      count: 138397,
+      count: 382511,
       rating: 'Overwhelmingly Positive',
     },
     userTags: [
@@ -6604,7 +6651,12 @@ export const steamGameDetails: SteamGameMap = {
       'Action',
       'Horror',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: ['Rogue-like', 'Action Roguelike'],
+    screenshotFocusPoint: [46, 8, 230],
+    clueOrder: ['ss', 'tags', 'desc', 'details'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
   },
   '698780': {
     name: 'Doki Doki Literature Club!',
@@ -9035,6 +9087,7 @@ export const steamGameDetails: SteamGameMap = {
       'Controller',
     ],
     clueOrder: ['tags', 'details', 'desc'],
+    searchTerms: ["marvel's spider man remastered"],
   },
   '424840': {
     name: 'Little Nightmares',
@@ -9442,14 +9495,14 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1286830/ss_23613f91ee765a1e4e647a183261aeb2ecbc2c86.600x338.jpg',
     shortDescription:
-      '||STAR WARS: The Old Republic|| is a free-to-play MMORPG that puts you at the center of your own story-driven saga. Play as a Jedi, Sith, Bounty Hunter, or one of many other iconic ||STAR WARS|| roles in the galaxy far, far away over three thousand years before the classic films.',
-    releaseDate: 'Jul 21, 2020',
-    developer: 'Broadsword',
-    publisher: 'Electronic Arts',
+      '||STAR WARS: The Old Republic|| is a free-to-play MMORPG that puts you at the center of your own story-driven saga. Play as a ||Jedi||, ||Sith||, ||Bounty Hunter||, or one of many other iconic ||STAR WARS|| roles ||in the galaxy far, far away over three thousand years before the classic films.||',
+    releaseDate: 'Dec 20, 2011',
+    developer: 'Broadsword, ||Bio||ware',
+    publisher: '||Electronic Arts||',
     tags: ['Massively Multiplayer', 'RPG', 'Free To Play'],
     features: [],
     allReviewSummary: {
-      count: 364,
+      count: 72142,
       rating: 'Very Positive',
     },
     userTags: [
@@ -9474,7 +9527,11 @@ export const steamGameDetails: SteamGameMap = {
       'Great Soundtrack',
       'Controller',
     ],
+    blurredUserTags: ['Sci-fi'],
     clueOrder: ['tags', 'details', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Hard',
   },
   '637650': {
     name: 'FINAL FANTASY XV',
@@ -14231,4 +14288,5 @@ export const CLOSE_GUESS_SERIES: string[] = [
   'middle-earth',
   'cities:',
   'mount and blade',
+  'spider-man',
 ];

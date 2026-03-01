@@ -46,9 +46,15 @@ export const RefinePage: React.FC = () => {
         const parsed = JSON.parse(stored);
         // Filter out any appIds that no longer exist in steamGameDetails
         const validIds = parsed.filter((id: string) => id in steamGameDetails);
+        // Append any new games not yet in the stored order
+        const validIdSet = new Set(validIds);
+        const newIds = Object.keys(steamGameDetails).filter(
+          (id) => !validIdSet.has(id),
+        );
+        const merged = [...validIds, ...newIds];
         // If we have valid IDs, use them; otherwise fall back to default
-        if (validIds.length > 0) {
-          return validIds;
+        if (merged.length > 0) {
+          return merged;
         }
       } catch {
         // Fall through to default
@@ -110,9 +116,15 @@ export const RefinePage: React.FC = () => {
 
   const goToGameByName = useCallback(
     (name: string) => {
-      const idx = appIds.findIndex(
-        (id) => games[id].name.toLowerCase() === name.toLowerCase(),
-      );
+      const normalize = (s: string) =>
+        s.toLowerCase().replace(/[\u2018\u2019\u201A\u201B\u2032]/g, "'");
+      const needle = normalize(name);
+      const idx = appIds.findIndex((id) => {
+        const game = games[id];
+        if (normalize(game.name) === needle) return true;
+        if (game.searchTerms?.some((t) => normalize(t) === needle)) return true;
+        return false;
+      });
       if (idx >= 0) setCurrentIndex(idx);
     },
     [games, appIds],

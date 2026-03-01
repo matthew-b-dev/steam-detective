@@ -217,6 +217,12 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile3: 'Overcooked! 2',
     caseFile4: 'Mount & Blade II: Bannerlord',
   },
+  '2026-03-02': {
+    caseFile1: "Marvel's Spider-Man: Miles Morales",
+    caseFile2: 'Project Zomboid',
+    caseFile3: 'Little Nightmares II',
+    caseFile4: 'The Binding of Isaac: Rebirth',
+  },
 };
 // Prison Architect
 // TEKKEN 7 ?
