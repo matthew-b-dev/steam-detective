@@ -83,6 +83,16 @@ export const ClueDetails: React.FC<ClueDetailsProps> = ({
   const displayReleaseDate = isComplete
     ? getUncensoredText(releaseDate)
     : renderCensoredText(releaseDate);
+  const displayEarlyAccessDate = earlyAccessDate
+    ? isComplete
+      ? getUncensoredText(earlyAccessDate)
+      : renderCensoredText(earlyAccessDate)
+    : null;
+  const displayOriginalReleaseDate = originalReleaseDate
+    ? isComplete
+      ? getUncensoredText(originalReleaseDate)
+      : renderCensoredText(originalReleaseDate)
+    : null;
   const displayDeveloper = isComplete
     ? getUncensoredText(developer)
     : renderCensoredText(developer);
@@ -118,24 +128,28 @@ export const ClueDetails: React.FC<ClueDetailsProps> = ({
         </div>
 
         {/* Original Release Date */}
-        {originalReleaseDate && (
+        {displayOriginalReleaseDate && (
           <div className='flex items-start gap-2 mt-4'>
             <div className='text-gray-400 text-xs uppercase min-w-[120px] pt-[3px]'>
               Original Release:
             </div>
-            <div className='text-[#c7d5e0] text-sm'>{originalReleaseDate}</div>
+            <div className='text-[#c7d5e0] text-sm'>
+              {displayOriginalReleaseDate}
+            </div>
           </div>
         )}
 
         {/* Early Access Date */}
-        {earlyAccessDate && (
+        {displayEarlyAccessDate && (
           <div
             className={`flex items-start gap-2 ${originalReleaseDate ? 'mt-2' : 'mt-4'}`}
           >
             <div className='text-gray-400 text-xs uppercase min-w-[120px] pt-[3px]'>
               Early Access:
             </div>
-            <div className='text-[#c7d5e0] text-sm'>{earlyAccessDate}</div>
+            <div className='text-[#c7d5e0] text-sm'>
+              {displayEarlyAccessDate}
+            </div>
           </div>
         )}
 
@@ -146,7 +160,15 @@ export const ClueDetails: React.FC<ClueDetailsProps> = ({
           <div className='text-gray-400 text-xs uppercase min-w-[120px] pt-[3px]'>
             {originalReleaseDate ? 'Steam Release:' : 'Release Date:'}
           </div>
-          <div className='text-[#c7d5e0] text-sm'>{displayReleaseDate}</div>
+          <div
+            className={`text-sm ${
+              getUncensoredText(releaseDate) === '(Not yet released)'
+                ? 'text-[#a4adb3] italic'
+                : 'text-[#c7d5e0]'
+            }`}
+          >
+            {displayReleaseDate}
+          </div>
         </div>
 
         {/* Developer */}

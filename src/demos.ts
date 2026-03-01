@@ -223,6 +223,12 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile3: 'Little Nightmares II',
     caseFile4: 'The Binding of Isaac: Rebirth',
   },
+  '2026-03-03': {
+    caseFile1: 'Vampire Survivors',
+    caseFile2: 'Dead Space',
+    caseFile3: 'Wartales',
+    caseFile4: 'Schedule I',
+  },
 };
 // Prison Architect
 // TEKKEN 7 ?

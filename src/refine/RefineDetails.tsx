@@ -261,7 +261,9 @@ export const RefineDetails: React.FC<RefineDetailsProps> = ({
                 }
                 title={mode === 'refine' ? 'Click to edit' : undefined}
               >
-                {game.originalReleaseDate}
+                {isComplete
+                  ? getUncensoredText(game.originalReleaseDate)
+                  : renderCensoredDetailText(game.originalReleaseDate)}
               </span>
             ) : (
               <button
@@ -318,7 +320,9 @@ export const RefineDetails: React.FC<RefineDetailsProps> = ({
                 }
                 title={mode === 'refine' ? 'Click to edit' : undefined}
               >
-                {game.earlyAccessDate}
+                {isComplete
+                  ? getUncensoredText(game.earlyAccessDate)
+                  : renderCensoredDetailText(game.earlyAccessDate)}
               </span>
             ) : (
               <button
@@ -366,9 +370,13 @@ export const RefineDetails: React.FC<RefineDetailsProps> = ({
             </div>
           ) : (
             <span
-              className={
+              className={`${
                 mode === 'refine' ? 'cursor-pointer hover:underline' : ''
-              }
+              } ${
+                getUncensoredText(game.releaseDate) === '(Not yet released)'
+                  ? 'text-[#a4adb3] italic'
+                  : ''
+              }`}
               onClick={() => mode === 'refine' && startEditing('releaseDate')}
               title={mode === 'refine' ? 'Click to edit' : undefined}
             >
