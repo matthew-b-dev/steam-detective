@@ -33,11 +33,21 @@ const PuzzleDatePicker: React.FC<PuzzleDatePickerProps> = ({
     .split('-')
     .map(Number);
 
-  const [currentMonth, setCurrentMonth] = useState(realUtcDate.month);
-  const [currentYear, setCurrentYear] = useState(realUtcDate.year);
+  const [currentMonth, setCurrentMonth] = useState(puzzleMonth);
+  const [currentYear, setCurrentYear] = useState(puzzleYear);
   const [isLoading, setIsLoading] = useState(false);
 
   useBodyScrollLock(isOpen);
+
+  // When the modal opens (or the puzzle date changes), reset the calendar view
+  // to the month of the currently selected puzzle date.
+  useEffect(() => {
+    if (isOpen) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
+      setCurrentMonth(puzzleMonth);
+      setCurrentYear(puzzleYear);
+    }
+  }, [isOpen, puzzleMonth, puzzleYear]);
 
   // Scan localStorage for completed puzzle dates whenever the modal opens
   const completedDates = React.useMemo(() => {
