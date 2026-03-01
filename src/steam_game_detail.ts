@@ -4744,7 +4744,7 @@ export const steamGameDetails: SteamGameMap = {
       'Combat',
       'Blood',
     ],
-    blurredUserTags: ['Psychological Horror', 'Horror'],
+    blurredUserTags: ['Psychological Horror', 'Horror', 'Survival Horror'],
     clueOrder: ['desc', 'details', 'tags'],
     debugProcessed: true,
     debugRefined: true,
@@ -4793,7 +4793,11 @@ export const steamGameDetails: SteamGameMap = {
     blurredUserTags: ['Superhero', 'Parkour'],
     screenshotFocusPoint: [100, 81, 75],
     clueOrder: ['desc', 'tags', 'details'],
-    searchTerms: ["marvel's spider man: miles morales"],
+    searchTerms: [
+      "marvel's spider man: miles morales",
+      "marvel's spiderman miles morales",
+      "marvel's spiderman: miles morales",
+    ],
     debugProcessed: true,
     debugRefined: true,
     difficulty: 'Easy',
@@ -5075,7 +5079,7 @@ export const steamGameDetails: SteamGameMap = {
     name: 'Wartales',
     appId: 1527950,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1527950/ss_09714a62ca142a8a1eb27fa5a408cfc168d9e786.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1527950/ss_1bfaa045d41a258ee7072078a55738f78a42cbf9.600x338.jpg',
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1527950/ss_184553d9a5ca514c9fcb11cd8931d5e2f6635223.600x338.jpg',
     shortDescription:
@@ -9049,7 +9053,10 @@ export const steamGameDetails: SteamGameMap = {
       'Controller',
     ],
     clueOrder: ['tags', 'details', 'desc'],
-    searchTerms: ["marvel's spider man remastered"],
+    searchTerms: [
+      "marvel's spider man remastered",
+      "marvel's spiderman remastered",
+    ],
   },
   '424840': {
     name: 'Little Nightmares',
@@ -14255,7 +14262,7 @@ export const steamGameDetails: SteamGameMap = {
       'Mature',
     ],
     clueOrder: ['desc', 'details', 'tags'],
-    searchTerms: ["marvel's spider man 2"],
+    searchTerms: ["marvel's spider man 2", "marvel's spiderman 2"],
     debugProcessed: true,
     debugRefined: true,
     difficulty: 'Easy',
