@@ -230,9 +230,9 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile4: 'Stellaris',
   },
   '2026-03-04': {
-    caseFile1: 'DARK SOULS',
+    caseFile1: 'Clair Obscur: Expedition 33',
     caseFile2: 'Oxygen Not Included',
-    caseFile3: 'Wartales',
+    caseFile3: 'V Rising',
     caseFile4: 'Schedule I',
   },
 };

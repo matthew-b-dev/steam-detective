@@ -2982,7 +2982,7 @@ export const steamGameDetails: SteamGameMap = {
     difficulty: 'Hard',
     reviewClue: {
       review:
-        'I bought ||Oxygen Not Included|| thinking it was a cute space colony sim. What I got instead was a highly accurate anxiety generator where I personally invent new and creative ways to ||suffocate cartoon|| people.\n\nEvery run starts the same: "This time I know what I’m doing." Two hours later my base is full of ||carbon dioxide||, the toilets are backed up, everyone is stressed, and a dupe named Meep is vomiting in the drinking water while I desperately Google “why is my colony dying ||ONI.||” The game explains nothing, punishes everything, and somehow makes thermodynamics feel like a personal attack.\n\n10/10.',
+        'I bought ||Oxygen Not Included|| thinking it was a cute ||space|| colony sim. What I got instead was a highly accurate anxiety generator where I personally invent new and creative ways to ||suffocate cartoon|| people.\n\nEvery run starts the same: "This time I know what I’m doing." Two hours later my base is full of ||carbon dioxide||, the toilets are backed up, everyone is stressed, and a dupe named Meep is vomiting in the drinking water while I desperately Google “why is my colony dying ||ONI.||” The game explains nothing, punishes everything, and somehow makes thermodynamics feel like a personal attack.\n\n10/10.',
       votedUp: true,
       votesUp: 10,
       weightedScore: '0.652082264423370361',
@@ -5235,11 +5235,11 @@ export const steamGameDetails: SteamGameMap = {
     name: 'V Rising',
     appId: 1604030,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1604030/ss_19d6b903fd65c410af902a8c5f62c820cfe09292.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1604030/ss_54a8e3fa7e50f4be15b87b9c0647d0916c437c24.600x338.jpg',
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1604030/ss_4a88ba3b0353f3d43f045e5230c9d600e19daae8.600x338.jpg',
     shortDescription:
-      'Awaken as a Vampire. Hunt for blood in nearby settlements to regain your strength and evade the scorching sun to survive. Raise your castle and thrive in an ever-changing, open world full of mystery. Gain allies online and conquer the land of the living.',
+      'Awaken as a ||Vampire||. Hunt for ||blood|| in nearby settlements to regain your strength and evade the scorching sun to survive. Raise your castle and thrive in an ever-changing, open world full of mystery. Gain allies online and conquer the land of the living.',
     releaseDate: 'May 8, 2024',
     developer: 'Stunlock Studios',
     publisher: 'Stunlock Studios',
@@ -5271,7 +5271,12 @@ export const steamGameDetails: SteamGameMap = {
       'Adventure',
       'Co-op',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: ['Vampire'],
+    overrideCensoredTitle: '||V|| R||isin||g',
+    clueOrder: ['details', 'tags', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Hard',
   },
   '292030': {
     name: 'The Witcher 3: Wild Hunt',
@@ -12921,14 +12926,14 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1903340/ss_e49800e906e8a0f00707458c836567c933603bac.600x338.jpg',
     shortDescription:
-      'Lead the members of ||Expedition 33|| on their quest to destroy the Paintress so that she can never paint death again. Explore a world of wonders inspired by Belle Époque France and battle unique enemies in this turn-based RPG with real-time mechanics.',
-    releaseDate: 'Apr 24, 2025',
-    developer: 'Sandfall Interactive',
-    publisher: 'Kepler Interactive',
+      '||Lead the members of Expedition 33 on their quest to destroy the Paintress so that she can never paint death again.|| Explore a world ||of wonders|| inspired by Belle Époque ||France and battle unique enemies in this turn-based RPG with real-time mechanics.||',
+    releaseDate: '||Apr|| ||24||, 2025',
+    developer: '||Sandfall|| ||Interactive||',
+    publisher: '||Kepler|| ||Interactive||',
     tags: ['Action', 'RPG'],
     features: [],
     allReviewSummary: {
-      count: 92954,
+      count: 255581,
       rating: 'Overwhelmingly Positive',
     },
     userTags: [
@@ -12953,7 +12958,19 @@ export const steamGameDetails: SteamGameMap = {
       'Realistic',
       'Action',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: [
+      'Story Rich',
+      'Fantasy',
+      'Exploration',
+      'Action RPG',
+      'Lore-Rich',
+      'JRPG',
+      'Adventure',
+    ],
+    clueOrder: ['desc', 'tags', 'details'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
   },
   '1091500': {
     name: 'Cyberpunk 2077',
