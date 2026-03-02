@@ -2944,7 +2944,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/457140/ss_78d1c92edeecc7b17cafa9248867fe7d4390a0a0.600x338.jpg',
     shortDescription:
-      '||Oxygen Not Included|| is a space-colony simulation game. Deep inside an alien space rock your industrious crew will need to master science, overcome strange new lifeforms, and harness incredible space tech to survive, and possibly, thrive.',
+      '||Oxygen Not Included is a space-colony simulation game.|| Deep inside an alien space rock your industrious crew will need to master science, overcome strange new lifeforms, and harness incredible space tech to survive, and possibly, thrive.',
     releaseDate: 'Jul 30, 2019',
     developer: 'Klei Entertainment',
     publisher: 'Klei Entertainment',
@@ -2976,10 +2976,19 @@ export const steamGameDetails: SteamGameMap = {
       'Adventure',
       'Space Sim',
     ],
-    clueOrder: ['tags', 'desc', 'ss', 'details'],
+    clueOrder: ['desc', 'review', 'details', 'tags'],
     debugProcessed: true,
     debugRefined: true,
     difficulty: 'Hard',
+    reviewClue: {
+      review:
+        'I bought ||Oxygen Not Included|| thinking it was a cute space colony sim. What I got instead was a highly accurate anxiety generator where I personally invent new and creative ways to ||suffocate cartoon|| people.\n\nEvery run starts the same: "This time I know what I’m doing." Two hours later my base is full of ||carbon dioxide||, the toilets are backed up, everyone is stressed, and a dupe named Meep is vomiting in the drinking water while I desperately Google “why is my colony dying ||ONI.||” The game explains nothing, punishes everything, and somehow makes thermodynamics feel like a personal attack.\n\n10/10.',
+      votedUp: true,
+      votesUp: 10,
+      weightedScore: '0.652082264423370361',
+      authorPlaytimeHours: 126,
+      timestamp: 1769280115,
+    },
   },
   '477160': {
     name: 'Human Fall Flat',
@@ -5128,7 +5137,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/211420/ss_c34cdf130b9ac71c99196007d1e78c05305652b9.600x338.jpg',
     shortDescription:
-      '||Dark Souls|| will be the most ||deeply challenging|| game you play this year. Can you ||live|| through a ||million deaths|| and earn your ||legacy||?',
+      '||Dark Souls|| will be the most deeply challenging game you play this year. Can you ||live|| through a ||million deaths|| and earn your ||legacy||?',
     releaseDate: 'Aug 24, 2012',
     developer: 'FromSoftware, Inc.',
     publisher: 'Bandai Namco Entertainment',
@@ -5161,9 +5170,20 @@ export const steamGameDetails: SteamGameMap = {
       'Great Soundtrack',
     ],
     blurredUserTags: ['Souls-like', 'Unforgiving', 'Difficult'],
-    clueOrder: ['tags', 'details', 'desc'],
+    clueOrder: ['review', 'tags', 'details', 'desc'],
     debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
     debugNotes: 'delete',
+    reviewClue: {
+      review:
+        "This is a truly great game, one of my favorites of all time. The world is perfectly put together, and although it takes a long time to learn it flows well. The ||combat|| is challenging and well designed, the game has lots of replay value. It isn't too hard to see why this and a couple other games launched an entire genre.",
+      votedUp: true,
+      votesUp: 2,
+      weightedScore: '0.50462639331817627',
+      authorPlaytimeHours: 344,
+      timestamp: 1767991007,
+    },
   },
   '883710': {
     name: 'Resident Evil 2',
@@ -12162,7 +12182,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/281990/ss_7f4d7cc160c43e77aa523e910b365e0ca436e6bb.600x338.jpg',
     shortDescription:
-      'Explore a ||galaxy|| full of wonders in this ||sci-fi grand strategy|| game from ||Paradox Development Studios||. Interact with diverse alien races, discover strange new ||worlds with|| unexpected ||events|| and expand the ||reach of your empire||. Each new adventure holds almost ||limitless possibilities||.',
+      'Explore a ||galaxy|| full of wonders in this ||sci-fi grand strategy|| game from ||Paradox Development Studios||. Interact with diverse ||alien|| races, discover strange new worlds with unexpected ||events|| and expand the reach ||of your empire||. Each new adventure holds almost limitless possibilities.',
     releaseDate: 'May 9, 2016',
     developer: 'Paradox Development Studio',
     publisher: 'Paradox Interactive',
@@ -12194,11 +12214,20 @@ export const steamGameDetails: SteamGameMap = {
       'Procedural Generation',
       'Atmospheric',
     ],
-    blurredUserTags: ['4X', 'Space', 'Sci-fi'],
-    clueOrder: ['desc', 'tags', 'details'],
+    overrideCensoredTitle: 'S||tellari||s',
+    clueOrder: ['review', 'desc', 'details', 'tags'],
     debugProcessed: true,
     debugRefined: true,
     difficulty: 'Hard',
+    reviewClue: {
+      review:
+        'This game is perfect for exterminating the disgusting bugs that have gained sentience and believe their ||place in the galaxy|| is wanted. Every time another species is purged I feel clean and calm inside.',
+      votedUp: true,
+      votesUp: 15,
+      weightedScore: '0.677238821983337402',
+      authorPlaytimeHours: 51,
+      timestamp: 1768639489,
+    },
   },
   '230410': {
     name: 'Warframe',

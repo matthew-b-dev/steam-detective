@@ -8,6 +8,9 @@ import { RefineScreenshots } from './RefineScreenshots.tsx';
 import { RefineDescription } from './RefineDescription.tsx';
 import { RefineDetails } from './RefineDetails.tsx';
 import { RefineTags } from './RefineTags.tsx';
+import { RefineReviews } from './RefineReviews.tsx';
+import thumbsUp from '../assets/thumbsup.png';
+import thumbsDown from '../assets/thumbsdown.png';
 
 interface RefineGameViewProps {
   game: SteamGame;
@@ -20,13 +23,14 @@ interface RefineGameViewProps {
   onUpdate: (patch: Partial<SteamGame>) => void;
 }
 
-type ClueType = 'desc' | 'details' | 'tags' | 'ss';
+type ClueType = 'desc' | 'details' | 'tags' | 'ss' | 'review';
 
 const CLUE_LABELS: Record<ClueType, string> = {
   desc: 'Description',
   details: 'Details',
   tags: 'Tags',
   ss: 'Screenshot',
+  review: 'Review',
 };
 
 const DEFAULT_CLUE_ORDER: ClueType[] = ['tags', 'details', 'desc'];
@@ -53,6 +57,25 @@ export const RefineGameView: React.FC<RefineGameViewProps> = ({
   const clueOrder: ClueType[] = (game.clueOrder ??
     DEFAULT_CLUE_ORDER) as ClueType[];
   const hasSsInOrder = clueOrder.includes('ss');
+  const hasReviewInOrder = clueOrder.includes('review');
+
+  // Base order excludes 'review' (review position is controlled separately)
+  const baseClueOrder = clueOrder.filter((c) => c !== 'review') as ClueType[];
+  // 1-indexed position of 'review' within the full clueOrder, or null
+  const reviewOrderPosition: number | null = hasReviewInOrder
+    ? clueOrder.indexOf('review') + 1
+    : null;
+
+  /** Rebuild clueOrder by inserting 'review' at the given 1-indexed position into baseOrder. */
+  const rebuildClueOrder = (
+    newBase: ClueType[],
+    newReviewPos: number | null,
+  ): ClueType[] => {
+    if (newReviewPos === null) return newBase;
+    const result = [...newBase] as ClueType[];
+    result.splice(newReviewPos - 1, 0, 'review');
+    return result;
+  };
 
   // Build game options for react-select (same logic as GameInput)
   const gameOptions = useMemo(() => {
@@ -139,9 +162,29 @@ export const RefineGameView: React.FC<RefineGameViewProps> = ({
   };
 
   const handleClueOrderChange = (index: number, value: ClueType) => {
-    const newOrder = [...clueOrder];
-    newOrder[index] = value;
-    onUpdate({ clueOrder: newOrder });
+    const newBase = [...baseClueOrder] as ClueType[];
+    newBase[index] = value;
+    onUpdate({ clueOrder: rebuildClueOrder(newBase, reviewOrderPosition) });
+  };
+
+  const handleReviewPositionChange = (newPos: number) => {
+    onUpdate({ clueOrder: rebuildClueOrder(baseClueOrder, newPos) });
+  };
+
+  const handleReviewClueToggle = (checked: boolean) => {
+    if (checked) {
+      // Enable: insert review at position 4 (or end of baseClueOrder if shorter)
+      const defaultPos = Math.min(4, baseClueOrder.length + 1);
+      onUpdate({
+        clueOrder: rebuildClueOrder(baseClueOrder, defaultPos),
+      });
+    } else {
+      // Disable: remove 'review' from clueOrder and clear reviewClue
+      onUpdate({
+        clueOrder: baseClueOrder,
+        reviewClue: undefined,
+      });
+    }
   };
 
   // Check if refined is checked but difficulty is not set
@@ -241,11 +284,11 @@ export const RefineGameView: React.FC<RefineGameViewProps> = ({
               hasDuplicateClues ? 'bg-red-900/40' : 'bg-[#171a21]'
             }`}
           >
-            {Array.from({ length: hasSsInOrder ? 4 : 3 }, (_, idx) => (
+            {Array.from({ length: baseClueOrder.length }, (_, idx) => (
               <div key={idx} className='flex items-center gap-2'>
                 <span className='text-xs text-gray-400'>Clue #{idx + 1}</span>
                 <select
-                  value={clueOrder[idx] ?? ''}
+                  value={baseClueOrder[idx] ?? ''}
                   onChange={(e) =>
                     handleClueOrderChange(idx, e.target.value as ClueType)
                   }
@@ -262,27 +305,31 @@ export const RefineGameView: React.FC<RefineGameViewProps> = ({
                 </select>
               </div>
             ))}
+            {/* Include screenshot checkbox */}
             <label className='flex items-center gap-2 cursor-pointer ml-2'>
               <input
                 type='checkbox'
                 checked={hasSsInOrder}
                 onChange={(e) => {
                   if (e.target.checked) {
+                    const newBase = [
+                      ...(baseClueOrder
+                        .filter((c) => c !== 'ss')
+                        .slice(0, 3) as ClueType[]),
+                      'ss' as ClueType,
+                    ];
                     onUpdate({
-                      clueOrder: [
-                        ...(clueOrder
-                          .filter((c) => c !== 'ss')
-                          .slice(0, 3) as ClueType[]),
-                        'ss',
-                      ],
+                      clueOrder: rebuildClueOrder(newBase, reviewOrderPosition),
                     });
                   } else {
-                    const without = clueOrder
+                    const newBase = baseClueOrder
                       .filter((c) => c !== 'ss')
                       .slice(0, 3) as ClueType[];
                     onUpdate({
-                      clueOrder:
-                        without.length === 3 ? without : DEFAULT_CLUE_ORDER,
+                      clueOrder: rebuildClueOrder(
+                        newBase.length === 3 ? newBase : DEFAULT_CLUE_ORDER,
+                        reviewOrderPosition,
+                      ),
                     });
                   }
                 }}
@@ -290,6 +337,34 @@ export const RefineGameView: React.FC<RefineGameViewProps> = ({
               />
               <span className='text-xs text-gray-400'>Include screenshot</span>
             </label>
+            {/* Use Review clue checkbox */}
+            <label className='flex items-center gap-2 cursor-pointer'>
+              <input
+                type='checkbox'
+                checked={hasReviewInOrder}
+                onChange={(e) => handleReviewClueToggle(e.target.checked)}
+                className='w-4 h-4 accent-purple-500'
+              />
+              <span className='text-xs text-purple-300'>Use Review clue</span>
+            </label>
+            {/* Review position dropdown */}
+            {hasReviewInOrder && (
+              <div className='flex items-center gap-2'>
+                <span className='text-xs text-gray-400'>Review @ Clue #</span>
+                <select
+                  value={reviewOrderPosition ?? 4}
+                  onChange={(e) =>
+                    handleReviewPositionChange(Number(e.target.value))
+                  }
+                  className='bg-zinc-800 border border-zinc-600 rounded px-2 py-1 text-sm'
+                >
+                  <option value={1}>1</option>
+                  <option value={2}>2</option>
+                  <option value={3}>3</option>
+                  <option value={4}>4</option>
+                </select>
+              </div>
+            )}
           </div>
 
           {/* Close Guess Series */}
@@ -462,6 +537,63 @@ export const RefineGameView: React.FC<RefineGameViewProps> = ({
 
         {/* User Tags */}
         <RefineTags game={game} isComplete={revealAll} onUpdate={onUpdate} />
+        {/* Reviews section — always shown so you can browse & select */}
+        <div className='bg-[#171a21] rounded-lg px-4 py-4'>
+          <RefineReviews game={game} onUpdate={onUpdate} />
+        </div>
+        {/* Review clue preview — canonical last, below all other clues */}
+        {game.reviewClue && (
+          <div className='px-4 py-3 border-t border-[rgba(255,255,255,0.06)]'>
+            <div className='text-gray-400 text-xs uppercase mb-2'>
+              Review Clue (position {reviewOrderPosition ?? '?'} in reveal
+              order):
+            </div>
+            <div className='rounded-md border border-purple-700/50 bg-purple-900/10 overflow-hidden'>
+              {/* Header */}
+              <div className='flex items-start gap-3 px-3 pt-3 pb-2 border-b border-[rgba(255,255,255,0.08)]'>
+                <div
+                  className='flex-shrink-0'
+                  style={{ width: 40, height: 40 }}
+                >
+                  <img
+                    src={game.reviewClue.votedUp ? thumbsUp : thumbsDown}
+                    alt={
+                      game.reviewClue.votedUp
+                        ? 'Recommended'
+                        : 'Not Recommended'
+                    }
+                    width={40}
+                    height={40}
+                    style={{ width: 40, height: 40 }}
+                  />
+                </div>
+                <div className='flex flex-col'>
+                  <span
+                    className={`text-sm font-bold ${
+                      game.reviewClue.votedUp
+                        ? 'text-[#66c0f4]'
+                        : 'text-[#c94f4f]'
+                    }`}
+                  >
+                    {game.reviewClue.votedUp
+                      ? 'Recommended'
+                      : 'Not Recommended'}
+                  </span>
+                  <span className='text-[11px] text-gray-400'>
+                    {game.reviewClue.authorPlaytimeHours.toLocaleString()} hrs
+                    on record
+                  </span>
+                </div>
+              </div>
+              <div className='px-3 py-2 text-sm text-gray-300 leading-relaxed whitespace-pre-wrap'>
+                {game.reviewClue.review.replace(
+                  /\|\|(.+?)\|\|/g,
+                  '[$1 — CENSORED]',
+                )}
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );

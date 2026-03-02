@@ -146,13 +146,15 @@ const SteamDetectiveGame: React.FC<SteamDetectiveGameProps> = ({
   // Determine which clues to show based on custom clue order
   const clueOrder = dailyGame?.clueOrder || ['tags', 'details', 'desc'];
   const hasSsInOrder = clueOrder.includes('ss');
-  const configuredCount = hasSsInOrder ? 4 : 3;
+  const hasReviewInOrder = clueOrder.includes('review');
+  const configuredCount = clueOrder.length; // 3, 4, or (rarely) 5 if both ss+review
 
   const clueMapping: Record<string, number> = {
     tags: 1,
     details: 2,
     desc: 3,
     ss: 4,
+    review: 5,
   };
 
   const getShowClues = (): boolean[] => {
@@ -167,9 +169,16 @@ const SteamDetectiveGame: React.FC<SteamDetectiveGameProps> = ({
         const clueType = clueOrder[i];
         const clueIndex = clueMapping[clueType] - 1;
         result[clueIndex] = true;
-      } else if (!hasSsInOrder && i === 3) {
+      } else if (!hasSsInOrder && i === configuredCount) {
+        // Primary screenshot auto-reveal: fires after all configured clues
+        // (only when primary screenshot wasn't placed in the configured order via 'ss')
         result[3] = true;
-      } else if (i === 4) {
+      } else if (
+        !hasReviewInOrder &&
+        i === configuredCount + (!hasSsInOrder ? 1 : 0)
+      ) {
+        // Secondary screenshot auto-reveal: fires after primary screenshot
+        // (only when review clue isn't replacing secondary screenshot)
         result[4] = true;
       } else if (i === 5) {
         result[5] = true;
@@ -194,14 +203,18 @@ const SteamDetectiveGame: React.FC<SteamDetectiveGameProps> = ({
       desc: 3,
       details: 4,
       tags: 5,
+      review: 6, // review is canonical-last, below tags
     };
 
-    const clueNames = [
+    // clueNames maps result array index (0-5) to canonical position key.
+    // result[4] is showClue5 — it's used for the review clue when hasReviewInOrder,
+    // or for the secondary screenshot otherwise.
+    const clueNames: (keyof typeof canonicalPositions)[] = [
       'tags',
       'details',
       'desc',
       'screenshot1',
-      'screenshot2',
+      hasReviewInOrder ? 'review' : 'screenshot2',
       'title',
     ];
 

@@ -24,6 +24,7 @@ const cloneGameMap = (map: SteamGameMap): SteamGameMap => {
         : undefined,
       clueOrder: game.clueOrder ? [...game.clueOrder] : undefined,
       searchTerms: game.searchTerms ? [...game.searchTerms] : undefined,
+      reviewClue: game.reviewClue ? { ...game.reviewClue } : undefined,
     };
   }
   return clone;
@@ -250,6 +251,22 @@ export const RefinePage: React.FC = () => {
       }
       if (game.debugNotes) {
         lines.push(`    debugNotes: ${JSON.stringify(game.debugNotes)},`);
+      }
+      if (game.reviewClue) {
+        lines.push(`    reviewClue: {`);
+        lines.push(`      review: ${JSON.stringify(game.reviewClue.review)},`);
+        lines.push(
+          `      votedUp: ${JSON.stringify(game.reviewClue.votedUp)},`,
+        );
+        lines.push(`      votesUp: ${game.reviewClue.votesUp},`);
+        lines.push(
+          `      weightedScore: ${JSON.stringify(game.reviewClue.weightedScore)},`,
+        );
+        lines.push(
+          `      authorPlaytimeHours: ${game.reviewClue.authorPlaytimeHours},`,
+        );
+        lines.push(`      timestamp: ${game.reviewClue.timestamp},`);
+        lines.push(`    },`);
       }
 
       lines.push(`  },`);

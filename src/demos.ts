@@ -225,7 +225,13 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
   },
   '2026-03-03': {
     caseFile1: 'Vampire Survivors',
-    caseFile2: 'Dead Space',
+    caseFile2: 'Wartales',
+    caseFile3: 'Dead Space',
+    caseFile4: 'Stellaris',
+  },
+  '2026-03-04': {
+    caseFile1: 'DARK SOULS',
+    caseFile2: 'Oxygen Not Included',
     caseFile3: 'Wartales',
     caseFile4: 'Schedule I',
   },

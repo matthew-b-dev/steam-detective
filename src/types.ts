@@ -31,7 +31,8 @@ export interface SteamGame {
   screenshotFocusPoint?: [number, number, number?]; // [widthPercent, heightPercent, zoom%] — zooms the primary screenshot. heightPercent: 100=top, 0=bottom. zoom: 1–175, default 75. e.g. [50,50,75]=center at 75%
   blurTitleAndAsAmpersand?: boolean; // If true, replace 'and' with '&' in the title
   overrideCensoredTitle?: string; // Manually define censored title with || markers for custom censoring
-  clueOrder?: ('desc' | 'details' | 'tags' | 'ss')[]; // Custom order for first 3-4 clues. 'ss' inserts the primary screenshot into the order. Last fixed clues are always: (ss if not in order), secondary screenshot, title. Default: ['tags', 'details', 'desc']
+  clueOrder?: ('desc' | 'details' | 'tags' | 'ss' | 'review')[]; // Custom order for first 3-4 clues. 'ss' inserts the primary screenshot into the order. 'review' inserts the review clue (replaces secondary screenshot). Last fixed clues are always: (ss if not in order), (secondary screenshot or review), title. Default: ['tags', 'details', 'desc']
+  reviewClue?: Review; // A specific review chosen as a clue (replaces secondary screenshot). The review text may contain ||censored|| markers.
   searchTerms?: string[]; // Additional search terms/aliases for the dropdown
   features: string[];
   allReviewSummary: ReviewSummary;

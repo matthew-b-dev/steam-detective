@@ -6,6 +6,7 @@ import { ClueScreenshot } from './ClueScreenshot';
 import { ClueDescription } from './ClueDescription';
 import { ClueDetails } from './ClueDetails';
 import { ClueTags } from './ClueTags';
+import { ClueReview } from './ClueReview';
 
 interface ClueContainerProps {
   caseFile: 'easy' | 'expert' | `casefile-${number}`;
@@ -19,15 +20,18 @@ export const ClueContainer: React.FC<ClueContainerProps> = ({ caseFile }) => {
     showClues;
   const [primaryIsMain, setPrimaryIsMain] = useState(true);
 
+  // When a reviewClue is configured, it takes the secondary screenshot slot.
+  const hasReviewClue = !!dailyGame.reviewClue;
+
   const mainScreenshot = primaryIsMain
     ? dailyGame.primaryScreenshot
-    : dailyGame.secondaryScreenshot || dailyGame.primaryScreenshot;
-  const thumbnailScreenshot = primaryIsMain
-    ? dailyGame.secondaryScreenshot
-    : dailyGame.primaryScreenshot;
+    : (!hasReviewClue && dailyGame.secondaryScreenshot) ||
+      dailyGame.primaryScreenshot;
+  const thumbnailScreenshot =
+    !hasReviewClue && primaryIsMain ? dailyGame.secondaryScreenshot : undefined;
 
   const handleSwapScreenshots = () => {
-    if (showClue5 && dailyGame.secondaryScreenshot) {
+    if (showClue5 && !hasReviewClue && dailyGame.secondaryScreenshot) {
       setPrimaryIsMain(!primaryIsMain);
     }
   };
@@ -56,7 +60,9 @@ export const ClueContainer: React.FC<ClueContainerProps> = ({ caseFile }) => {
           primaryScreenshotUrl={dailyGame.primaryScreenshot}
           show={showClue4}
           showSecondary={
-            showClue5 && dailyGame.secondaryScreenshot !== undefined
+            showClue5 &&
+            !hasReviewClue &&
+            dailyGame.secondaryScreenshot !== undefined
           }
           blurScreenshotQuarter={dailyGame.blurScreenshotQuarter}
           transformScreenshotScale={dailyGame.transformScreenshotScale}
@@ -86,6 +92,14 @@ export const ClueContainer: React.FC<ClueContainerProps> = ({ caseFile }) => {
           show={showClue1}
           isComplete={isComplete}
         />
+        {/* Review clue — canonical last position, replaces secondary screenshot */}
+        {hasReviewClue && (
+          <ClueReview
+            review={dailyGame.reviewClue!}
+            isComplete={isComplete}
+            show={showClue5}
+          />
+        )}
       </motion.div>
     </div>
   );

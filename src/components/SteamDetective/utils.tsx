@@ -97,6 +97,18 @@ export const renderCensoredDescription = (
   return parts;
 };
 
+// Helper to render review text with censored parts and newline support
+export const renderCensoredReview = (reviewText: string): ReactElement[] => {
+  const lines = reviewText.split('\n');
+  return lines.flatMap((line, lineIdx) => {
+    const censoredLine = renderCensoredDescription(line);
+    if (lineIdx < lines.length - 1) {
+      return [...censoredLine, <br key={`br-${lineIdx}`} />];
+    }
+    return censoredLine;
+  });
+};
+
 export const MAX_CLUES = 6;
 
 /**
