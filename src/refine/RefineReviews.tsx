@@ -141,7 +141,7 @@ export const RefineReviews: React.FC<RefineReviewsProps> = ({
       try {
         // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         // @ts-ignore — reviews.json is gitignored and may not exist
-        const mod = (await import('../reviews.json')) as {
+        const mod = (await import(/* @vite-ignore */ '../reviews.json')) as {
           default: ReviewsJson;
         };
         if (cancelled) return;
