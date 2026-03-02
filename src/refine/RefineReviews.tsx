@@ -134,14 +134,12 @@ export const RefineReviews: React.FC<RefineReviewsProps> = ({
   );
   const [loadError, setLoadError] = useState(false);
 
-  // Dynamically import reviews.json (gitignored, may not exist)
+  // Dynamically import reviews.json via a virtual Vite module.
   useEffect(() => {
     let cancelled = false;
     const load = async () => {
       try {
-        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-        // @ts-ignore — reviews.json is gitignored and may not exist
-        const mod = (await import(/* @vite-ignore */ '../reviews.json')) as {
+        const mod = (await import('../reviews.json')) as {
           default: ReviewsJson;
         };
         if (cancelled) return;
