@@ -139,6 +139,8 @@ export const RefineReviews: React.FC<RefineReviewsProps> = ({
     let cancelled = false;
     const load = async () => {
       try {
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-ignore — resolved by the Vite virtual module plugin; tsc never sees this file
         const mod = (await import('../reviews.json')) as {
           default: ReviewsJson;
         };
