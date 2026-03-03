@@ -1,4 +1,11 @@
-import { useState, useEffect, useCallback, useRef, useMemo } from 'react';
+import {
+  useState,
+  useEffect,
+  useLayoutEffect,
+  useCallback,
+  useRef,
+  useMemo,
+} from 'react';
 import { Toaster } from 'react-hot-toast';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
@@ -477,6 +484,15 @@ const SteamDetective: React.FC<SteamDetectiveProps> = ({
       setCurrentCaseFile(nextCaseFile);
       const currentPuzzleDate = getUtcDateString();
       saveCurrentCaseFile(currentPuzzleDate, nextCaseFile);
+    }
+  }, [currentCaseFile]);
+
+  // Scroll to true top AFTER the new case file has been inserted into the DOM
+  const prevCaseFileRef = useRef(currentCaseFile);
+  useLayoutEffect(() => {
+    if (currentCaseFile !== prevCaseFileRef.current) {
+      window.scrollTo({ top: 0, behavior: 'instant' });
+      prevCaseFileRef.current = currentCaseFile;
     }
   }, [currentCaseFile]);
 
