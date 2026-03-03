@@ -25,6 +25,11 @@ export interface MissedGuess {
   isClose: boolean;
 }
 
+// A single turn in the game — either a skip or a guess
+export type Turn =
+  | { type: 'skip' }
+  | { type: 'guess'; isClose: boolean; isCorrect: boolean };
+
 // Steam Detective state interface (without puzzleDate - stored at root level)
 export interface SteamDetectiveState {
   currentClue: number;
@@ -35,6 +40,7 @@ export interface SteamDetectiveState {
   totalGuesses: number; // Total number of guesses made (including skips)
   scoreSent: boolean; // Track if the score has been sent to the database
   revealedTitle?: string; // The game title for this puzzle
+  turns?: Turn[]; // Ordered history of every turn (skip or guess) for share emoji
 }
 
 // Unified storage structure (per date)

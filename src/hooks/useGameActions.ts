@@ -2,7 +2,7 @@ import { useCallback } from 'react';
 import toast from 'react-hot-toast';
 import type { SteamDetectiveState } from './useSteamDetectiveState';
 import { MAX_CLUES } from '../components/SteamDetective/utils';
-import { isCloseGuess } from '../utils';
+import { isCloseGuess, type Turn } from '../utils';
 
 export interface GameOption {
   value: string;
@@ -27,10 +27,13 @@ export const useGameActions = ({
       const newClue = prev.currentClue + 1;
       const newGuessesRemaining = prev.guessesRemaining - 1;
       const newTotalGuesses = prev.totalGuesses + 1;
+      const skipTurn: Turn = { type: 'skip' };
+      const newTurns = [...(prev.turns || []), skipTurn];
 
       if (newClue > MAX_CLUES) {
         return {
           ...prev,
+          turns: newTurns,
           isComplete: true,
           isCorrect: false,
           totalGuesses: 7, // DNF counts as 7
@@ -40,6 +43,7 @@ export const useGameActions = ({
 
       return {
         ...prev,
+        turns: newTurns,
         currentClue: newClue,
         guessesRemaining: newGuessesRemaining,
         totalGuesses: newTotalGuesses,
@@ -73,11 +77,18 @@ export const useGameActions = ({
         const newGuesses = [...prev.guesses, { name: selected.value, isClose }];
         const newGuessesRemaining = prev.guessesRemaining - 1;
         const newTotalGuesses = prev.totalGuesses + 1;
+        const guessTurn: Turn = {
+          type: 'guess',
+          isClose: isCorrect ? false : isClose,
+          isCorrect,
+        };
+        const newTurns = [...(prev.turns || []), guessTurn];
 
         if (isCorrect) {
           // When correct, show all clues by setting currentClue to MAX_CLUES
           return {
             ...prev,
+            turns: newTurns,
             currentClue: MAX_CLUES,
             guesses: newGuesses,
             guessesRemaining: newGuessesRemaining,
@@ -92,6 +103,7 @@ export const useGameActions = ({
           if (newClue > MAX_CLUES) {
             return {
               ...prev,
+              turns: newTurns,
               guesses: newGuesses,
               isComplete: true,
               isCorrect: false,
@@ -102,6 +114,7 @@ export const useGameActions = ({
 
           return {
             ...prev,
+            turns: newTurns,
             currentClue: newClue,
             guesses: newGuesses,
             guessesRemaining: newGuessesRemaining,

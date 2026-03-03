@@ -11,6 +11,7 @@ import {
   getRankEmoji,
   saveTotalScoreSent,
   getTimeUntilNextGame,
+  type Turn,
 } from '../../utils';
 import ShareButton from '../ShareButton';
 import SteamDetectiveFeedbackButtons from './SteamDetectiveFeedbackButtons';
@@ -23,6 +24,7 @@ interface CaseFileState {
   totalGuesses: number;
   isComplete: boolean;
   revealedTitle?: string;
+  turns?: Turn[];
 }
 
 interface FinalGameCompleteProps {
@@ -124,7 +126,19 @@ const FinalGameComplete: React.FC<FinalGameCompleteProps> = ({
 
   // Generate share text
   const handleCopyToShare = useCallback(() => {
-    const generateEmojiText = (totalGuesses: number) => {
+    const generateEmojiText = (totalGuesses: number, turns?: Turn[]) => {
+      // Use turn history when available for precise close-guess coloring (🟨)
+      if (turns && turns.length > 0) {
+        const emojis: string[] = turns.map((turn) => {
+          if (turn.type === 'skip') return '🟥';
+          if (turn.isCorrect) return '✅';
+          return turn.isClose ? '🟨' : '🟥';
+        });
+        // Pad remaining slots with ⬜ up to 6
+        while (emojis.length < 6) emojis.push('⬜');
+        return emojis.join('');
+      }
+      // Legacy fallback: no turn history, treat all misses as 🟥
       if (totalGuesses === 7) {
         return '🟥🟥🟥🟥🟥🟥';
       }
@@ -155,7 +169,10 @@ const FinalGameComplete: React.FC<FinalGameCompleteProps> = ({
         | 'caseFile4';
       const caseFileState = state[caseFileKey] as CaseFileState | undefined;
       if (caseFileState) {
-        const emoji = generateEmojiText(caseFileState.totalGuesses || 7);
+        const emoji = generateEmojiText(
+          caseFileState.totalGuesses || 7,
+          caseFileState.turns,
+        );
         const caseEmoji = ['1️⃣', '2️⃣', '3️⃣', '4️⃣'][i - 1];
         caseFileEmojis.push(`${caseEmoji}  ${emoji}`);
       }
