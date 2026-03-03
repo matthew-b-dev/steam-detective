@@ -11,6 +11,7 @@ import { RefineTags } from './RefineTags.tsx';
 import { RefineReviews } from './RefineReviews.tsx';
 import thumbsUp from '../assets/thumbsup.png';
 import thumbsDown from '../assets/thumbsdown.png';
+import { renderCensoredReview } from '../components/SteamDetective/utils';
 
 interface RefineGameViewProps {
   game: SteamGame;
@@ -585,11 +586,18 @@ export const RefineGameView: React.FC<RefineGameViewProps> = ({
                   </span>
                 </div>
               </div>
-              <div className='px-3 py-2 text-sm text-gray-300 leading-relaxed whitespace-pre-wrap'>
-                {game.reviewClue.review.replace(
-                  /\|\|(.+?)\|\|/g,
-                  '[$1 — CENSORED]',
-                )}
+              <div className='px-3 py-2 text-sm text-gray-300 leading-relaxed'>
+                {revealAll
+                  ? game.reviewClue.review
+                      .replace(/\|\|(.+?)\|\|/g, '$1')
+                      .split('\n')
+                      .map((line, i, arr) => (
+                        <span key={i}>
+                          {line}
+                          {i < arr.length - 1 && <br />}
+                        </span>
+                      ))
+                  : renderCensoredReview(game.reviewClue.review)}
               </div>
             </div>
           </div>

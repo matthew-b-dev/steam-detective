@@ -235,7 +235,14 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile3: 'V Rising',
     caseFile4: 'Schedule I',
   },
+  '2026-03-05': {
+    caseFile1: 'The Witcher 3: Wild Hunt',
+    caseFile2: 'NieR:Automata',
+    caseFile3: 'Totally Accurate Battle Simulator',
+    caseFile4: 'Sea of Thieves',
+  },
 };
+// April 1st: Skyrim: thumbs down review "the game doesnt work the horse flies"
 // Prison Architect
 // TEKKEN 7 ?
 // Need for Speed Most Wanted

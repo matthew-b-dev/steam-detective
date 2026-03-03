@@ -49,7 +49,6 @@ export const ClueReview: React.FC<ClueReviewProps> = ({
 
   return (
     <motion.div
-      layout
       initial={false}
       animate={show ? 'visible' : 'hidden'}
       variants={clueVariants}
@@ -88,12 +87,15 @@ export const ClueReview: React.FC<ClueReviewProps> = ({
           </div>
 
           {/* Posted date */}
-          <div className='pt-2 text-[11px] text-gray-400 uppercase'>
+          <div className='pt-2 px-2 text-[11px] text-gray-400 uppercase bg-[#101923]'>
             Posted: {formatTimestamp(review.timestamp)}
           </div>
 
           {/* Review text */}
-          <div className='py-2 text-sm text-gray-200 leading-relaxed'>
+          <div
+            key={isComplete ? 'uncensored' : 'censored'}
+            className='py-2 px-2 text-sm text-gray-200 leading-relaxed bg-[#101923]'
+          >
             {renderedText}
           </div>
 

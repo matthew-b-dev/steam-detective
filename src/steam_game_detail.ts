@@ -5282,14 +5282,14 @@ export const steamGameDetails: SteamGameMap = {
     name: 'The Witcher 3: Wild Hunt',
     appId: 292030,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/292030/ss_5710298af2318afd9aa72449ef29ac4a2ef64d8e.600x338.jpg',
-    secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/292030/ss_0901e64e9d4b8ebaea8348c194e7a3644d2d832d.600x338.jpg',
+    secondaryScreenshot:
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/292030/ss_5710298af2318afd9aa72449ef29ac4a2ef64d8e.600x338.jpg',
     shortDescription:
       'You are ||Geralt of Rivia||, mercenary ||monster|| slayer. Before you stands a war-torn, ||monster||-infested continent you can explore at will. Your current contract? Tracking down ||Ciri|| — the ||Child|| of ||Prophecy||, a living weapon that can alter the shape of the world.',
     releaseDate: 'May 18, 2015',
-    developer: '||CD PROJEKT RED||',
-    publisher: '||CD PROJEKT RED||',
+    developer: '||CD|| ||PROJEKT|| ||RED||',
+    publisher: '||CD|| ||PROJEKT|| ||RED||',
     tags: ['RPG'],
     features: [],
     allReviewSummary: {
@@ -5318,9 +5318,30 @@ export const steamGameDetails: SteamGameMap = {
       'Dark',
       'Sandbox',
     ],
-    blurredUserTags: ['Nudity', 'Mature'],
+    blurredUserTags: [
+      'Nudity',
+      'Mature',
+      'Fantasy',
+      'RPG',
+      'Story Rich',
+      'Choices Matter',
+      'Atmospheric',
+    ],
     blurScreenshotQuarter: 'bottom',
-    clueOrder: ['desc', 'tags', 'details'],
+    overrideCensoredTitle: 'T||he|| W||itcher|| ||3|| : W||ild|| H||unt||',
+    clueOrder: ['review', 'tags', 'details', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Medium',
+    reviewClue: {
+      review:
+        '||"I don\'t believe in Melitele, don\'t believe in the existence of other gods either... . You ask me what I believe in, in that case. I believe in the sword."||\n\n||This game deserves every bit of admiration that it gets.|| Don\'t let the "the ||combat|| sucks" prevent you from playing it. Besides the base game, those ||2|| expansions are ||two of the best expansions ever made||. And oh, NEVER, never skip or ignore ||GWENT games||. Just give it a shot, you\'ll love it.',
+      votedUp: true,
+      votesUp: 7,
+      weightedScore: '0.60000002384185791',
+      authorPlaytimeHours: 74,
+      timestamp: 1767393977,
+    },
   },
   '740130': {
     name: 'Tales of Arise',
@@ -10362,7 +10383,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/508440/ss_585351cc5907cb0549a86b47edde9b7925d3e89f.600x338.jpg',
     shortDescription:
-      'Be the leader of wobblers from ancient lands, spooky places, and fantasy worlds. Watch them fight in simulations made with the wobbliest physics system ever created, make your own wobblers in the unit creator and send your army off to fight your friends in multiplayer.',
+      'Be the leader of ||wobblers|| from ||ancient lands||, ||spooky places||, and fantasy worlds. ||Watch them fight in simulations|| made with the ||wobbliest|| physics system ever created, make your own ||wobblers|| in the ||unit|| creator and ||send your army|| off to fight ||your friends in multiplayer||.',
     releaseDate: 'Apr 1, 2021',
     developer: 'Landfall',
     publisher: 'Landfall',
@@ -10394,7 +10415,19 @@ export const steamGameDetails: SteamGameMap = {
       'Cute',
       'Memes',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    clueOrder: ['desc', 'details', 'review', 'tags'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Hard',
+    reviewClue: {
+      review:
+        'Placed units carefully.\nPressed start.\nEverything went wrong instantly.\nBattle lasted 4 seconds.\n\nThis game taught me:\n• Numbers mean nothing\n• Balance is fictional\n• One dragon can end civilizations\n\nWar has changed.\n\n10/10 military strategist simulator.',
+      votedUp: true,
+      votesUp: 39,
+      weightedScore: '0.781391263008117676',
+      authorPlaytimeHours: 3,
+      timestamp: 1768786414,
+    },
   },
   '367520': {
     name: 'Hollow Knight',
@@ -11450,7 +11483,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/524220/ss_8b29f7e1ce9a8b9313dc3eb50dbe76a4cf94eef9.600x338.jpg',
     shortDescription:
-      '||NieR: Automata|| tells the story of ||androids 2B,|| ||9S|| and ||A2|| and their battle to reclaim the ||machine||-driven dystopia overrun by ||powerful machines||.',
+      '||NieR: Automata|| tells the story of ||androids 2B||, ||"9S"||, and ||"A2"|| and their battle to reclaim the ||machine||-driven dystopia overrun by powerful ||machines||.',
     releaseDate: 'Mar 17, 2017',
     developer: 'Square Enix, PlatinumGames Inc.',
     publisher: 'Square Enix',
@@ -11482,11 +11515,27 @@ export const steamGameDetails: SteamGameMap = {
       'Character Action Game',
       'Violent',
     ],
-    blurredUserTags: ['Post-apocalyptic', 'Anime', 'Female Protagonist'],
-    clueOrder: ['desc', 'tags', 'details'],
+    blurredUserTags: [
+      'Female Protagonist',
+      'JRPG',
+      'Post-apocalyptic',
+      'Anime',
+    ],
+    overrideCensoredTitle: 'N||ieR||:A||utomata||',
+    clueOrder: ['desc', 'tags', 'review', 'details'],
+    searchTerms: ['nier: automata', 'nier automata'],
     debugProcessed: true,
     debugRefined: true,
     difficulty: 'Hard',
+    reviewClue: {
+      review:
+        'It´s a cool game, but sometimes you end up fighting the camera instead fighting the Bosses. Come on, let me be in charge of my own game. It does not matter because I end up shooting everything anyway because fighting close can get you killed.\n\nThe game is not bad, and it´s kind of frightening how without humanity, there´s lush green and grass everywhere. The graphics and soundtracks are also astonishing.\n\n',
+      votedUp: true,
+      votesUp: 11,
+      weightedScore: '0.587729573249816895',
+      authorPlaytimeHours: 5,
+      timestamp: 1768756073,
+    },
   },
   '391540': {
     name: 'Undertale',
@@ -11713,18 +11762,18 @@ export const steamGameDetails: SteamGameMap = {
     name: 'Sea of Thieves',
     appId: 1172620,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1172620/ss_ec623c77d75dfa098c622b547b1ab21ad4cae0a8.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1172620/ss_1dda43bcfed46dadb71198bea7ac2959db328634.600x338.jpg',
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1172620/ss_6ea04bdc415c336a195555aec4b97a73a9910fc1.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1172620/ss_ec623c77d75dfa098c622b547b1ab21ad4cae0a8.600x338.jpg',
     shortDescription:
-      '||Sea of Thieves|| is a smash-hit pirate adventure game, offering the quintessential pirate experience of plundering lost treasures, intense battles, vanquishing sea monsters and more.',
+      '||Sea of Thieves|| is a smash-hit ||pirate|| adventure game, offering the quintessential ||pirate|| experience of ||plundering|| lost treasures, intense battles, vanquishing ||sea monsters|| and more.',
     releaseDate: 'Jun 3, 2020',
     developer: 'Rare Ltd',
-    publisher: 'Xbox Game Studios',
+    publisher: '||Xbox|| ||Game|| ||Studios||',
     tags: ['Action', 'Adventure'],
     features: [],
     allReviewSummary: {
-      count: 143612,
+      count: 164709,
       rating: 'Very Positive',
     },
     userTags: [
@@ -11749,7 +11798,11 @@ export const steamGameDetails: SteamGameMap = {
       'Great Soundtrack',
       'Singleplayer',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: ['Pirates'],
+    clueOrder: ['details', 'desc', 'tags'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
   },
   '2420110': {
     name: 'Horizon Forbidden West',
