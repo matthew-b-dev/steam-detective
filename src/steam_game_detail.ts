@@ -7357,7 +7357,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1092790/ss_3b714682e9e0a214df1630a234e9f6764528eece.600x338.jpg',
     shortDescription:
-      '||Inscryption|| is an inky black card-based odyssey that blends the deckbuilding roguelike, escape-room style puzzles, and psychological horror into a blood-laced smoothie. Darker still are the secrets inscrybed upon the cards...',
+      '||Inscryption|| is an inky black card-based odyssey that blends the deckbuilding roguelike, escape-room style puzzles, and psychological horror into a blood-laced smoothie. Darker still are the secrets ||inscrybed|| upon the cards...',
     releaseDate: 'Oct 19, 2021',
     developer: 'Daniel Mullins Games',
     publisher: 'Devolver Digital',
@@ -7389,7 +7389,26 @@ export const steamGameDetails: SteamGameMap = {
       'FMV',
       'Adventure',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: [
+      'Card Battler',
+      'Card Game',
+      'Deckbuilding',
+      'Story Rich',
+    ],
+    overrideCensoredTitle: 'I||nscryptio||n',
+    clueOrder: ['details', 'review', 'tags', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Hard',
+    reviewClue: {
+      review:
+        "Peaked in the first act.\nNot Recommended\n\n||Inscryption|| is a brilliant 3-hour demo for a game that doesn't actually exist. The first act is a masterclass in atmosphere and ||deck-building||, set in a creepy, high-stakes ||cabin|| that feels like a classic in the making. Then, the game ... (edited for length)",
+      votedUp: false,
+      votesUp: 9,
+      weightedScore: '0.534515857696533203',
+      authorPlaytimeHours: 5,
+      timestamp: 1767602555,
+    },
   },
   '387990': {
     name: 'Scrap Mechanic',
@@ -10558,9 +10577,9 @@ export const steamGameDetails: SteamGameMap = {
     name: 'House Flipper',
     appId: 613100,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/613100/ss_66b4628cedb499f8c72661125cc9c800eef17ae1.600x338.jpg',
-    secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/613100/ss_3f556347267bfb571fbdba2eca76a83888570682.600x338.jpg',
+    secondaryScreenshot:
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/613100/ss_66b4628cedb499f8c72661125cc9c800eef17ae1.600x338.jpg',
     shortDescription:
       '||House Flipper|| is a unique chance to become a one-man renovation crew. Buy, repair and remodel devastated houses. Give them a second life and sell them at a profit!',
     releaseDate: 'May 17, 2018',
@@ -10594,7 +10613,21 @@ export const steamGameDetails: SteamGameMap = {
       'Indie',
       'Moddable',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: [
+      'Singleplayer',
+      'Building',
+      'Design & Illustration',
+      'Sandbox',
+      'Education',
+      'Immersive Sim',
+      'Multiplayer',
+      'Casual',
+    ],
+    screenshotFocusPoint: [53, 16, 250],
+    clueOrder: ['ss', 'tags', 'details', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
   },
   '394360': {
     name: 'Hearts of Iron IV',
@@ -13029,14 +13062,14 @@ export const steamGameDetails: SteamGameMap = {
     name: 'Cyberpunk 2077',
     appId: 1091500,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1091500/ss_2f649b68d579bf87011487d29bc4ccbfdd97d34f.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1091500/ss_e5a94665dbfa5a30931cff2f45cdc0ebea9fcebb.600x338.jpg',
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1091500/ss_0e64170751e1ae20ff8fdb7001a8892fd48260e7.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1091500/ss_2f649b68d579bf87011487d29bc4ccbfdd97d34f.600x338.jpg',
     shortDescription:
-      '||Cyberpunk 2077|| is an open-world, action-adventure RPG set in the dark future of Night City — a dangerous megalopolis obsessed with power, glamor, and ceaseless body modification.',
+      '||Cyberpunk 2077 is an open-world, action-adventure RPG|| set in the ||dark future of Night|| City ||— a dangerous megalopolis|| obsessed with power, glamor, and ||ceaseless body modification.||',
     releaseDate: 'Dec 9, 2020',
-    developer: 'CD PROJEKT RED',
-    publisher: 'CD PROJEKT RED',
+    developer: '||CD|| ||PROJEKT|| ||RED||',
+    publisher: '||CD|| ||PROJEKT|| ||RED||',
     tags: ['RPG'],
     features: [],
     allReviewSummary: {
@@ -13046,13 +13079,11 @@ export const steamGameDetails: SteamGameMap = {
     userTags: [
       'Cyberpunk',
       'Open World',
-      'Nudity',
       'RPG',
       'Singleplayer',
       'Sci-fi',
       'FPS',
       'Story Rich',
-      'Mature',
       'Futuristic',
       'First-Person',
       'Atmospheric',
@@ -13065,7 +13096,19 @@ export const steamGameDetails: SteamGameMap = {
       'Character Customization',
       'Immersive Sim',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: [
+      'Cyberpunk',
+      'Futuristic',
+      'Sci-fi',
+      'RPG',
+      'First-Person',
+      'Atmospheric',
+      'Open World',
+    ],
+    clueOrder: ['details', 'tags', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
   },
   '815370': {
     name: 'Green Hell',
@@ -13548,7 +13591,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/601150/ss_4ce180ed8979a51c72de51f985e9e9ba13500508.600x338.jpg',
     shortDescription:
-      'The ultimate Devil Hunter is back in style, in the game action fans have been waiting for.',
+      '||The ultimate Devil Hunter is back in style, in the game action fans have been waiting for. Director|| Hideaki Itsuno and the core team have returned to create the most insane, technically advanced and utterly unmissable action experience of this generation!',
     releaseDate: 'Mar 7, 2019',
     developer: 'CAPCOM Co., Ltd.',
     publisher: 'CAPCOM Co., Ltd.',
@@ -13567,10 +13610,7 @@ export const steamGameDetails: SteamGameMap = {
       'Spectacle fighter',
       'Third Person',
       'Singleplayer',
-      'Sexual Content',
       'Violent',
-      'Nudity',
-      'Story Rich',
       'Stylized',
       'Difficult',
       'Gore',
@@ -13580,7 +13620,24 @@ export const steamGameDetails: SteamGameMap = {
       'Adventure',
       'Anime',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: [
+      'Character Action Game',
+      'Great Soundtrack',
+      'Demons',
+      'Violent',
+      'Action',
+      'Hack and Slash',
+    ],
+    clueOrder: ['review', 'desc', 'tags', 'details'],
+    reviewClue: {
+      review:
+        '||Devil May Cry 5 is great because its combat is still some of the best ever made: fast, deep, and endlessly stylish.|| Seven years later, it still stands up thanks to its tight gameplay design, smooth controls, strong performance, and visuals that aged well. ||DMC5 focuses on|| pure action mastery, which keeps it fun and replayable.',
+      votedUp: true,
+      votesUp: 6,
+      weightedScore: '0.537572264671325684',
+      authorPlaytimeHours: 89,
+      timestamp: 1767513431,
+    },
   },
   '1229490': {
     name: 'ULTRAKILL',

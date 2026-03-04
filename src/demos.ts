@@ -241,11 +241,15 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile3: 'Totally Accurate Battle Simulator',
     caseFile4: 'Sea of Thieves',
   },
+  '2026-03-06': {
+    caseFile1: 'Cyberpunk 2077',
+    caseFile2: 'House Flipper',
+    caseFile3: 'Devil May Cry 5',
+    caseFile4: 'Inscryption',
+  },
 };
 // April 1st: Skyrim: thumbs down review "the game doesnt work the horse flies"
 // Prison Architect
 // TEKKEN 7 ?
 // Need for Speed Most Wanted
-// MEd:  Totally Accurate Battle Simulator
 // HARD: Don't Starve
-// caseFile3: Oxygen Not Included

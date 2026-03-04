@@ -98,10 +98,43 @@ export const renderCensoredDescription = (
 };
 
 // Helper to render review text with censored parts and newline support
+const EDITED_FOR_LENGTH_RE = /((?:\.\.\. )?\(edited for length\))/;
+const editedForLengthStyle: React.CSSProperties = {
+  fontStyle: 'italic',
+  color: '#8a909a',
+};
+
+/**
+ * Splits a line on EDITED_FOR_LENGTH, censors each surrounding segment,
+ * and renders the marker itself with italic/dimmed styling.
+ */
+const renderCensoredLineWithEditedMarker = (
+  line: string,
+  lineIdx: number,
+): ReactElement[] => {
+  const parts = line.split(EDITED_FOR_LENGTH_RE);
+  if (parts.length === 1) return renderCensoredDescription(line);
+  const result: ReactElement[] = [];
+  // split with a capturing group alternates: plain, match, plain, match, ...
+  parts.forEach((part, idx) => {
+    if (idx % 2 === 1) {
+      // captured match — the marker itself (with optional leading '...')
+      result.push(
+        <span key={`${lineIdx}-efl${idx}`} style={editedForLengthStyle}>
+          {part}
+        </span>,
+      );
+    } else if (part) {
+      result.push(...renderCensoredDescription(part));
+    }
+  });
+  return result;
+};
+
 export const renderCensoredReview = (reviewText: string): ReactElement[] => {
   const lines = reviewText.split('\n');
   return lines.flatMap((line, lineIdx) => {
-    const censoredLine = renderCensoredDescription(line);
+    const censoredLine = renderCensoredLineWithEditedMarker(line, lineIdx);
     if (lineIdx < lines.length - 1) {
       return [...censoredLine, <br key={`br-${lineIdx}`} />];
     }

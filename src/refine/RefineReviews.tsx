@@ -98,7 +98,7 @@ const SteamReviewCard: React.FC<{
             <div className='text-[10px] text-gray-500 mb-1'>
               Edit review text — use{' '}
               <code className='text-blue-400'>||text||</code> to censor/blur
-              portions:
+              portions. use "... (edited for length)" to cut off:
             </div>
             <textarea
               value={editableText ?? review.review}

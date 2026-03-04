@@ -21,14 +21,44 @@ const formatTimestamp = (timestamp: number): string => {
   });
 };
 
+const EDITED_FOR_LENGTH_RE = /((?:\.\.\. )?\(edited for length\))/;
+const editedForLengthStyle: React.CSSProperties = {
+  fontStyle: 'italic',
+  color: '#8a909a',
+};
+
+/** Splits a plain string on EDITED_FOR_LENGTH and renders the marker with special styling. */
+const renderLineWithEditedMarker = (
+  line: string,
+  lineKey: string | number,
+): ReactElement[] => {
+  const parts = line.split(EDITED_FOR_LENGTH_RE);
+  if (parts.length === 1) return [<span key={lineKey}>{line}</span>];
+  const result: ReactElement[] = [];
+  // split with a capturing group alternates: plain, match, plain, match, ...
+  parts.forEach((part, idx) => {
+    if (idx % 2 === 1) {
+      // captured match — the marker itself (with optional leading '...')
+      result.push(
+        <span key={`${lineKey}-efl${idx}`} style={editedForLengthStyle}>
+          {part}
+        </span>,
+      );
+    } else if (part) {
+      result.push(<span key={`${lineKey}-p${idx}`}>{part}</span>);
+    }
+  });
+  return result;
+};
+
 const getUncensoredReview = (text: string): ReactElement[] => {
   const uncensored = text.replace(/\|\|(.+?)\|\|/g, '$1');
   return uncensored
     .split('\n')
     .flatMap((line, idx, arr) =>
       idx < arr.length - 1
-        ? [<span key={idx}>{line}</span>, <br key={`br-${idx}`} />]
-        : [<span key={idx}>{line}</span>],
+        ? [...renderLineWithEditedMarker(line, idx), <br key={`br-${idx}`} />]
+        : renderLineWithEditedMarker(line, idx),
     );
 };
 
