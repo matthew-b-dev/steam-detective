@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
+import svgr from 'vite-plugin-svgr';
 import { existsSync, readFileSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
@@ -11,6 +12,7 @@ const VIRTUAL_ID = '\0virtual:reviews-json';
 export default defineConfig({
   plugins: [
     react(),
+    svgr(),
     {
       // When it doesn't exist (CI / production build) an empty object is returned.
       name: 'optional-reviews-json',

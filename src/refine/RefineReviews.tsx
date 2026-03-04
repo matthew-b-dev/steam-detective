@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import type { Review, SteamGame } from '../types';
-import thumbsUp from '../assets/thumbsup.png';
-import thumbsDown from '../assets/thumbsdown.png';
+import ThumbsUpIcon from '../assets/thumbsup.svg?react';
+import ThumbsDownIcon from '../assets/thumbsdown.svg?react';
 
 interface ReviewsJson {
   [appId: string]: {
@@ -52,14 +52,21 @@ const SteamReviewCard: React.FC<{
     >
       {/* Header */}
       <div className='flex items-start gap-3 px-3 pt-3 pb-2 border-b border-[rgba(255,255,255,0.08)]'>
-        <div className='flex-shrink-0' style={{ width: 40, height: 40 }}>
-          <img
-            src={isRecommended ? thumbsUp : thumbsDown}
-            alt={isRecommended ? 'Recommended' : 'Not Recommended'}
-            width={40}
-            height={40}
-            style={{ width: 40, height: 40 }}
-          />
+        <div
+          className='flex-shrink-0 flex items-center justify-center'
+          style={{
+            width: 40,
+            height: 40,
+            backgroundColor: isRecommended ? '#174766' : '#602f35',
+            textShadow: '1px 1px 2px #000000aa',
+            color: '#fff',
+          }}
+        >
+          {isRecommended ? (
+            <ThumbsUpIcon width={40} height={40} />
+          ) : (
+            <ThumbsDownIcon width={40} height={40} />
+          )}
         </div>
         <div className='flex flex-col min-w-0 flex-1'>
           <span

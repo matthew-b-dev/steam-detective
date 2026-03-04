@@ -3,8 +3,8 @@ import { useMemo } from 'react';
 import { motion } from 'framer-motion';
 import type { Review } from '../../types';
 import { clueVariants, renderCensoredReview } from './utils';
-import thumbsUp from '../../assets/thumbsup.png';
-import thumbsDown from '../../assets/thumbsdown.png';
+import ThumbsUpIcon from '../../assets/thumbsup.svg?react';
+import ThumbsDownIcon from '../../assets/thumbsdown.svg?react';
 
 interface ClueReviewProps {
   review: Review;
@@ -97,14 +97,21 @@ export const ClueReview: React.FC<ClueReviewProps> = ({
             style={{ borderColor: 'rgba(255,255,255,0.1)' }}
           >
             {/* Thumb icon */}
-            <div className='flex-shrink-0' style={{ width: 40, height: 40 }}>
-              <img
-                src={isRecommended ? thumbsUp : thumbsDown}
-                alt={isRecommended ? 'Recommended' : 'Not Recommended'}
-                width={40}
-                height={40}
-                style={{ width: 40, height: 40 }}
-              />
+            <div
+              className='flex-shrink-0 flex items-center justify-center'
+              style={{
+                width: 40,
+                height: 40,
+                backgroundColor: isRecommended ? '#174766' : '#602f35',
+                textShadow: '1px 1px 2px #000000aa',
+                color: '#fff',
+              }}
+            >
+              {isRecommended ? (
+                <ThumbsUpIcon width={40} height={40} />
+              ) : (
+                <ThumbsDownIcon width={40} height={40} />
+              )}
             </div>
             <div className='flex flex-col min-w-0'>
               <span className={`text-sm leading-tight text-white mt-0.5`}>
