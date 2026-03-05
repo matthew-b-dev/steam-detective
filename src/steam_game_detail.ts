@@ -9191,7 +9191,7 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 5, 2018',
     developer:
       'Ubisoft Quebec, Ubisoft Montreal, Ubisoft Bucharest, Ubisoft Singapore, Ubisoft Montpellier, Ubisoft Kiev, Ubisoft Shanghai',
-    publisher: 'Ubi||soft||',
+    publisher: '||Ubisoft||',
     tags: ['Action', 'Adventure', 'RPG'],
     features: [],
     allReviewSummary: {
