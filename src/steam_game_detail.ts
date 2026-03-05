@@ -13089,7 +13089,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1091500/ss_2f649b68d579bf87011487d29bc4ccbfdd97d34f.600x338.jpg',
     shortDescription:
-      '||Cyberpunk 2077 is an open-world, action-adventure RPG|| set in the ||dark future of Night|| City ||— a dangerous megalopolis|| obsessed with power, glamor, and ||ceaseless body modification.||',
+      '||Cyberpunk 2077 is an open-world, action-adventure|| RPG set in the dark future of ||Night|| City ||— a dangerous|| megalopolis obsessed with power, glamor, and ||ceaseless body modification.||',
     releaseDate: 'Dec 9, 2020',
     developer: '||CD|| ||PROJEKT|| ||RED||',
     publisher: '||CD|| ||PROJEKT|| ||RED||',

@@ -19,11 +19,14 @@ import {
   isLocalhost,
 } from './utils';
 import { getDateFromRoute } from './demos';
+import { sendFeedback } from './lib/supabaseClient';
 import analyzeIcon from './assets/analyze-48.png';
 import blueGamesFolderIcon from './assets/games-folder-48.png';
 import greenGamesFolderIcon from './assets/green-games-folder-48.png';
 import redGamesFolderIcon from './assets/red-games-folder-48.png';
 import purpleGamesFolderIcon from './assets/purple-games-folder-48.png';
+
+const IS_PROD = !isLocalhost();
 
 // Preload all asset images when app mounts
 const usePreloadAllAssets = () => {
@@ -151,7 +154,11 @@ function App() {
                 <div className='flex sm:block'>
                   <button
                     className='text-gray-400 w-full justify-center hover:text-gray-300 transition-colors flex items-center gap-1 px-2 bg-transparent sm:border-1 sm:border-zinc-700 sm:px-3 sm:py-1'
-                    onClick={() => setShowHelp(true)}
+                    onClick={() => {
+                      setShowHelp(true);
+                      if (IS_PROD)
+                        sendFeedback('custom', '`[Help]` Opened How To Play');
+                    }}
                   >
                     <QuestionMarkCircleIcon className='h-6 w-6 sm:h-4 sm:w-4' />
                     <span className='text-sm font-semibold hidden sm:inline relative top-[-1px]'>

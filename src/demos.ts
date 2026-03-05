@@ -242,9 +242,9 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile4: 'Sea of Thieves',
   },
   '2026-03-06': {
-    caseFile1: 'Devil May Cry 5',
-    caseFile2: 'Inscryption',
-    caseFile3: 'Cyberpunk 2077',
+    caseFile1: 'Inscryption',
+    caseFile2: 'Cyberpunk 2077',
+    caseFile3: 'Devil May Cry 5',
     caseFile4: "Assassin's Creed Odyssey",
   },
   '2026-03-07': {

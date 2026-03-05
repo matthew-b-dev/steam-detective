@@ -36,6 +36,22 @@ const HelpModal: React.FC<HelpModalProps> = ({ isOpen, onClose }) => {
             revealed one at a time.
           </li>
           <li>
+            This site is an{' '}
+            <u>
+              <b>AD-FREE and Open Source</b>
+            </u>{' '}
+            hobby project. You can read more about it on the{' '}
+            <a
+              href='https://github.com/matthew-b-dev/steam-detective?tab=readme-ov-file#steam-detective'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='text-yellow-500 underline hover:text-yellow-400'
+            >
+              GitHub page
+            </a>
+            .
+          </li>
+          <li>
             You'll receive <b>up to 6 clues</b> about the game, the order of
             which will depend on the game. Each wrong guess or skip reveals the
             next clue.
@@ -50,17 +66,6 @@ const HelpModal: React.FC<HelpModalProps> = ({ isOpen, onClose }) => {
             Every day there are four "<b>Case Files</b>" (games) to solve. Try
             to guess the game with <b>as few clues as possible</b> for the best
             score!
-          </li>
-          <li>
-            Read more about SteamDetective on the{' '}
-            <a
-              href='https://github.com/matthew-b-dev/steam-detective?tab=readme-ov-file#steam-detective'
-              target='_blank'
-              rel='noopener noreferrer'
-              className='text-yellow-500 underline hover:text-yellow-400'
-            >
-              GitHub page
-            </a>
           </li>
         </ul>
         <button
