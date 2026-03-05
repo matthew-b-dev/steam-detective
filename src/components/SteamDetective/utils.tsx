@@ -53,6 +53,62 @@ const censorText = (text: string): string => {
     .join('');
 };
 
+// Uppercase letters available for random substitution (excludes I and L)
+const UPPER_POOL = 'ABCDEFGHJKMNOPQRSTUVWXYZ';
+// Lowercase letters available for random substitution (excludes i and l)
+const LOWER_POOL = 'abcdefghjkmnopqrstuvwxyz';
+
+// djb2-style hash of a string, returns a 32-bit signed integer
+const hashString = (str: string): number => {
+  let h = 5381;
+  for (let i = 0; i < str.length; i++) {
+    h = (Math.imul(31, h) + str.charCodeAt(i)) | 0;
+  }
+  return h;
+};
+
+// Simple LCG seeded PRNG, returns values in [0, 1)
+const makeSeededRng = (seed: number): (() => number) => {
+  let s = seed ^ 0x12345678;
+  return () => {
+    s = (Math.imul(1664525, s) + 1013904223) | 0;
+    return (s >>> 0) / 0x100000000;
+  };
+};
+
+/**
+ * Censors text with deterministic random characters seeded on the text itself,
+ * so the same input always renders identically.
+ *
+ * Rules:
+ * - Uppercase letters → random uppercase from UPPER_POOL (I and L are preserved as-is)
+ * - Lowercase letters → random lowercase from LOWER_POOL (i and l are preserved as-is)
+ * - Digits → random digit
+ * - Everything else (spaces, dashes, apostrophes, symbols…) → unchanged
+ */
+export const hashSeededCensorText = (text: string): string => {
+  const rng = makeSeededRng(hashString(text));
+  return text
+    .split('')
+    .map((char) => {
+      if (/[A-Z]/.test(char)) {
+        const idx = Math.floor(rng() * UPPER_POOL.length);
+        // I and L are preserved to avoid thin-character ambiguity
+        if (char === 'I' || char === 'L') return char;
+        return UPPER_POOL[idx];
+      } else if (/[a-z]/.test(char)) {
+        const idx = Math.floor(rng() * LOWER_POOL.length);
+        if (char === 'i' || char === 'l') return char;
+        return LOWER_POOL[idx];
+      } else if (/[0-9]/.test(char)) {
+        return Math.floor(rng() * 10).toString();
+      }
+      // Spaces, dashes, apostrophes, ™, © etc. are left as-is
+      return char;
+    })
+    .join('');
+};
+
 // Helper to render description with censored parts
 export const renderCensoredDescription = (
   description: string,

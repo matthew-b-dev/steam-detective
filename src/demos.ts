@@ -242,10 +242,16 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile4: 'Sea of Thieves',
   },
   '2026-03-06': {
-    caseFile1: 'Cyberpunk 2077',
-    caseFile2: 'House Flipper',
-    caseFile3: 'Devil May Cry 5',
-    caseFile4: 'Inscryption',
+    caseFile1: 'Devil May Cry 5',
+    caseFile2: 'Inscryption',
+    caseFile3: 'Cyberpunk 2077',
+    caseFile4: "Assassin's Creed Odyssey",
+  },
+  '2026-03-07': {
+    caseFile1: 'Dishonored',
+    caseFile2: 'Grim Dawn',
+    caseFile3: 'House Flipper',
+    caseFile4: 'It Takes Two',
   },
 };
 // April 1st: Skyrim: thumbs down review "the game doesnt work the horse flies"

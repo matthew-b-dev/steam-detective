@@ -1,6 +1,9 @@
 import { useState } from 'react';
 import type { SteamGame } from '../types';
-import { getReviewColorClass } from '../components/SteamDetective/utils';
+import {
+  getReviewColorClass,
+  hashSeededCensorText,
+} from '../components/SteamDetective/utils';
 import type { ReactElement } from 'react';
 
 interface RefineDetailsProps {
@@ -10,13 +13,6 @@ interface RefineDetailsProps {
   // eslint-disable-next-line no-unused-vars
   onUpdate: (patch: Partial<SteamGame>) => void;
 }
-
-// Duplicated censoring helpers to avoid modifying existing components
-const censorText = (text: string): string =>
-  text
-    .split('')
-    .map(() => 'B')
-    .join('');
 
 const renderCensoredDetailText = (text: string): ReactElement[] => {
   const parts: ReactElement[] = [];
@@ -32,11 +28,11 @@ const renderCensoredDetailText = (text: string): ReactElement[] => {
         </span>,
       );
     }
-    const censored = censorText(match[1]);
+    const censored = hashSeededCensorText(match[1]);
     parts.push(
       <span
         key={`censored-${match.index}`}
-        style={{ filter: 'blur(4px)' }}
+        style={{ filter: 'blur(6px)' }}
         className='select-none'
       >
         {censored}

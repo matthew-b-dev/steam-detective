@@ -1602,11 +1602,11 @@ export const steamGameDetails: SteamGameMap = {
     name: 'Dishonored',
     appId: 205100,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/205100/ss_409bb8591d4c8278815510d9be737b57dfc57e06.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/205100/ss_fd7613fa1b8f19674cc0b4cd53db39c9618641fd.600x338.jpg',
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/205100/ss_32d76a6ff4b216410b90ff2cdb7107a28a1baed2.600x338.jpg',
     shortDescription:
-      "||Dishonored|| is an ||immersive|| first-person ||action|| game that casts you as a ||supernatural assassin|| driven by revenge. With ||Dishonored||'s ||flexible combat|| system, ||creatively|| eliminate your ||targets|| as you combine the ||supernatural abilities||, weapons and ||unusual gadgets|| at your disposal.",
+      "||Dishonored|| is an immersive first-person action game that casts you as a ||supernatural assassin|| driven by revenge. With ||Dishonored||'s flexible combat system, ||creatively|| eliminate your ||targets|| as you combine the ||supernatural abilities||, weapons and ||unusual gadgets|| at your disposal.",
     releaseDate: 'Oct 8, 2012',
     developer: '||Arkane|| Studios',
     publisher: '||Bethesda|| Softworks',
@@ -1638,11 +1638,20 @@ export const steamGameDetails: SteamGameMap = {
       'Open World',
       'Shooter',
     ],
-    blurredUserTags: ['Stealth'],
-    clueOrder: ['desc', 'details', 'tags'],
+    overrideCensoredTitle: 'D||ishonore||d',
+    clueOrder: ['details', 'review', 'desc', 'tags'],
     debugProcessed: true,
     debugRefined: true,
     difficulty: 'Medium',
+    reviewClue: {
+      review:
+        'Fun game, like a ||steampunk||, zombie, Victorian England version of Hitman.',
+      votedUp: true,
+      votesUp: 5,
+      weightedScore: '0.581749081611633301',
+      authorPlaytimeHours: 73,
+      timestamp: 1768831191,
+    },
   },
   '218620': {
     name: 'PAYDAY 2',
@@ -5774,7 +5783,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1426210/ss_6e987a0678b013bfd0073a9ac4703e1f04ca4dea.600x338.jpg',
     shortDescription:
-      "Embark on the craziest journey of your life in ||It Takes Two||. Invite a friend to join for free with Friend's Pass and work together across a huge variety of gleefully disruptive gameplay challenges. Winner of GAME OF THE YEAR at the Game Awards 2021.",
+      "Embark on the craziest journey of your life in ||It Takes Two||. Invite a friend to join for free with Friend's Pass and work together across a huge variety of gleefully disruptive gameplay challenges. ||Winner of GAME OF THE YEAR at the Game Awards 2021.||",
     releaseDate: 'Mar 25, 2021',
     developer: 'Hazelight Studios',
     publisher: 'Electronic Arts',
@@ -5806,7 +5815,12 @@ export const steamGameDetails: SteamGameMap = {
       'Minigames',
       'Female Protagonist',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: ['Split Screen'],
+    screenshotFocusPoint: [48, 65, 200],
+    clueOrder: ['ss', 'tags', 'desc', 'details'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
   },
   '3017860': {
     name: 'DOOM: The Dark Ages',
@@ -9169,15 +9183,15 @@ export const steamGameDetails: SteamGameMap = {
     name: "Assassin's Creed Odyssey",
     appId: 812140,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/812140/ss_0ef33c0f230da6ebac94f5959f0e0a8bbc48cf8a.600x338.jpg',
+      'https://images.steamusercontent.com/ugc/961973937747672117/5784CE61922EE3F434325163C17B8C915AEFE3D5/?imw=600&imh=338&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false',
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/812140/ss_3f8f4a09fb1d69648a8c20aae19ca2924ba275bd.600x338.jpg',
     shortDescription:
-      'In this action-adventure game, set sail for Ancient Greece to alter its fate. Fight in visceral battles on land and sea, shape your destiny from outcast to legend, and uncover secrets of your past.',
+      'In this action-adventure game, set sail for Ancient Greece ||to alter its fate. Fight in visceral battles on land and sea, shape your destiny from outcast to legend, and uncover secrets of your past.||',
     releaseDate: 'Oct 5, 2018',
     developer:
       'Ubisoft Quebec, Ubisoft Montreal, Ubisoft Bucharest, Ubisoft Singapore, Ubisoft Montpellier, Ubisoft Kiev, Ubisoft Shanghai',
-    publisher: 'Ubisoft',
+    publisher: 'Ubi||soft||',
     tags: ['Action', 'Adventure', 'RPG'],
     features: [],
     allReviewSummary: {
@@ -9206,7 +9220,16 @@ export const steamGameDetails: SteamGameMap = {
       'Action-Adventure',
       'Choose Your Own Adventure',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    clueOrder: ['review', 'desc', 'details', 'tags'],
+    reviewClue: {
+      review:
+        'Was gonna refund the game untill, I saw Zeus with his whole bare hog, within my 1 hour of playtime. ... (edited for length)',
+      votedUp: true,
+      votesUp: 8,
+      weightedScore: '0.61949688196182251',
+      authorPlaytimeHours: 26,
+      timestamp: 1769364439,
+    },
   },
   '239140': {
     name: 'Dying Light',
@@ -10132,7 +10155,7 @@ export const steamGameDetails: SteamGameMap = {
       'Moddable',
       'Choices Matter',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    clueOrder: ['desc', 'tags', 'details'],
   },
   '2050650': {
     name: 'Resident Evil 4',
@@ -13631,7 +13654,7 @@ export const steamGameDetails: SteamGameMap = {
     clueOrder: ['review', 'desc', 'tags', 'details'],
     reviewClue: {
       review:
-        '||Devil May Cry 5 is great because its combat is still some of the best ever made: fast, deep, and endlessly stylish.|| Seven years later, it still stands up thanks to its tight gameplay design, smooth controls, strong performance, and visuals that aged well. ||DMC5 focuses on|| pure action mastery, which keeps it fun and replayable.',
+        '||Devil May Cry 5 is great because its combat is still some of the best ever made:|| fast, deep, and endlessly stylish. Seven years later, it still stands up thanks to its tight gameplay design, smooth controls, strong performance, and visuals that aged well. ||DMC5 focuses on|| pure action mastery, which keeps it fun and replayable.',
       votedUp: true,
       votesUp: 6,
       weightedScore: '0.537572264671325684',

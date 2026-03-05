@@ -1,5 +1,9 @@
 import { motion } from 'framer-motion';
-import { getReviewColorClass, clueVariants } from './utils';
+import {
+  getReviewColorClass,
+  clueVariants,
+  hashSeededCensorText,
+} from './utils';
 import type { ReviewSummary } from '../../types';
 import type { ReactElement } from 'react';
 
@@ -24,14 +28,6 @@ export const ClueDetails: React.FC<ClueDetailsProps> = ({
   show,
   isComplete = false,
 }) => {
-  // Helper to censor text by displaying 'B' characters that will be blurred
-  const censorText = (text: string): string => {
-    return text
-      .split('')
-      .map(() => 'B')
-      .join('');
-  };
-
   // Helper to render text with censored parts (||text||)
   const renderCensoredText = (text: string): ReactElement[] => {
     const parts: ReactElement[] = [];
@@ -50,11 +46,11 @@ export const ClueDetails: React.FC<ClueDetailsProps> = ({
       }
 
       // Add censored text with blur
-      const censoredText = censorText(match[1]);
+      const censoredText = hashSeededCensorText(match[1]);
       parts.push(
         <span
           key={`censored-${match.index}`}
-          style={{ filter: 'blur(4px)' }}
+          style={{ filter: 'blur(6px)' }}
           className='select-none'
         >
           {censoredText}

@@ -1,30 +1,11 @@
 import type { SteamGame } from '../types';
+import { hashSeededCensorText } from '../components/SteamDetective/utils';
 
 interface RefineTagsProps {
   game: SteamGame;
   isComplete: boolean;
   onUpdate: (patch: Partial<SteamGame>) => void;
 }
-
-// Helper to randomize a character while preserving type
-const randomizeChar = (char: string): string => {
-  if (/[A-Z]/.test(char)) {
-    return String.fromCharCode(65 + Math.floor(Math.random() * 26));
-  } else if (/[a-z]/.test(char)) {
-    return String.fromCharCode(97 + Math.floor(Math.random() * 26));
-  } else if (/[0-9]/.test(char)) {
-    return Math.floor(Math.random() * 10).toString();
-  }
-  return char;
-};
-
-// Helper to censor text by randomizing alphanumeric characters
-const censorText = (text: string): string => {
-  return text
-    .split('')
-    .map((char) => randomizeChar(char))
-    .join('');
-};
 
 export const RefineTags: React.FC<RefineTagsProps> = ({
   game,
@@ -56,7 +37,7 @@ export const RefineTags: React.FC<RefineTagsProps> = ({
         {game.userTags.slice(0, 10).map((tag, index) => {
           const isBlurred = !isComplete && blurredTags.includes(tag);
           const isInBlurList = blurredTags.includes(tag);
-          const displayText = isBlurred ? censorText(tag) : tag;
+          const displayText = isBlurred ? hashSeededCensorText(tag) : tag;
           return (
             <span
               key={index}
@@ -73,7 +54,7 @@ export const RefineTags: React.FC<RefineTagsProps> = ({
               }
             >
               <span
-                style={isBlurred ? { filter: 'blur(4px)' } : undefined}
+                style={isBlurred ? { filter: 'blur(5px)' } : undefined}
                 className={isBlurred ? 'select-none' : undefined}
               >
                 {displayText}
