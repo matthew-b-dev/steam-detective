@@ -5781,7 +5781,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1426210/ss_3e59753eefaba9a7704a18e902b48e8d38e95e0b.600x338.jpg',
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1426210/ss_6e987a0678b013bfd0073a9ac4703e1f04ca4dea.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1426210/ss_fdac523e3ea4d2f32a44449bb8c224857563bd7d.600x338.jpg',
     shortDescription:
       "Embark on the craziest journey of your life in ||It Takes Two||. Invite a friend to join for free with Friend's Pass and work together across a huge variety of gleefully disruptive gameplay challenges. ||Winner of GAME OF THE YEAR at the Game Awards 2021.||",
     releaseDate: 'Mar 25, 2021',
@@ -5816,7 +5816,7 @@ export const steamGameDetails: SteamGameMap = {
       'Female Protagonist',
     ],
     blurredUserTags: ['Split Screen'],
-    screenshotFocusPoint: [48, 65, 200],
+    screenshotFocusPoint: [46, 92, 150],
     clueOrder: ['ss', 'tags', 'desc', 'details'],
     debugProcessed: true,
     debugRefined: true,

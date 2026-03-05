@@ -42,7 +42,7 @@ const HelpModal: React.FC<HelpModalProps> = ({ isOpen, onClose }) => {
             </u>{' '}
             hobby project. You can read more about it on the{' '}
             <a
-              href='https://github.com/matthew-b-dev/steam-detective?tab=readme-ov-file#steam-detective'
+              href='https://github.com/matthew-b-dev/steam-detective?tab=readme-ov-file#steamdetectivewtf'
               target='_blank'
               rel='noopener noreferrer'
               className='text-yellow-500 underline hover:text-yellow-400'
