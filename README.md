@@ -8,7 +8,7 @@
 
 SteamDetective.wtf is a daily web-based trivia game challenging players' knowledge of PC (Steam) games. Each day, players work through four mystery games, themed as "Case Files". Clues for each "Case File" are revealed one at a time, and the fewer guesses it takes to identify the game, the higher the score.
 
-At least for the moment, plenty of people are playing this game! As of 2026-02-20, about 1000 people visit the site every day, and about 200 of them post a score (complete the 4 case files).
+At least for the moment, some number of people are actually playing this game every day!
 
 ---
 
