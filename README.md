@@ -40,7 +40,7 @@ https://SteamDetective.wtf/ 🕵️
 2️⃣  ✅⬜⬜⬜⬜⬜
 3️⃣  🟥🟥🟥✅⬜⬜
 4️⃣  🟥🟥🟥🟥🟥✅
-🏆 295 points  🥈 Rank #4 of 61
+🏆 295 points  🎖️ Rank #4 of 61
 ```
 
 | Clue #2 (for this game, the "user tags") | Clue #5 (for a different game) |
