@@ -9,8 +9,8 @@ import { RefineDescription } from './RefineDescription.tsx';
 import { RefineDetails } from './RefineDetails.tsx';
 import { RefineTags } from './RefineTags.tsx';
 import { RefineReviews } from './RefineReviews.tsx';
-import thumbsUp from '../assets/thumbsup.png';
-import thumbsDown from '../assets/thumbsdown.png';
+import ThumbsUpIcon from '../assets/thumbsup.svg?react';
+import ThumbsDownIcon from '../assets/thumbsdown.svg?react';
 import { renderCensoredReview } from '../components/SteamDetective/utils';
 
 interface RefineGameViewProps {
@@ -553,20 +553,20 @@ export const RefineGameView: React.FC<RefineGameViewProps> = ({
               {/* Header */}
               <div className='flex items-start gap-3 px-3 pt-3 pb-2 border-b border-[rgba(255,255,255,0.08)]'>
                 <div
-                  className='flex-shrink-0'
-                  style={{ width: 40, height: 40 }}
+                  className='flex-shrink-0 flex items-center justify-center'
+                  style={{
+                    width: 40,
+                    height: 40,
+                    backgroundColor: game.reviewClue.votedUp
+                      ? '#174766'
+                      : '#602f35',
+                  }}
                 >
-                  <img
-                    src={game.reviewClue.votedUp ? thumbsUp : thumbsDown}
-                    alt={
-                      game.reviewClue.votedUp
-                        ? 'Recommended'
-                        : 'Not Recommended'
-                    }
-                    width={40}
-                    height={40}
-                    style={{ width: 40, height: 40 }}
-                  />
+                  {game.reviewClue.votedUp ? (
+                    <ThumbsUpIcon width={40} height={40} />
+                  ) : (
+                    <ThumbsDownIcon width={40} height={40} />
+                  )}
                 </div>
                 <div className='flex flex-col'>
                   <span
