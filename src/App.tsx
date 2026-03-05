@@ -21,6 +21,7 @@ import {
 import { getDateFromRoute } from './demos';
 import { sendFeedback } from './lib/supabaseClient';
 import analyzeIcon from './assets/analyze-48.png';
+import calendarIcon from './assets/calendar-48.png';
 import blueGamesFolderIcon from './assets/games-folder-48.png';
 import greenGamesFolderIcon from './assets/green-games-folder-48.png';
 import redGamesFolderIcon from './assets/red-games-folder-48.png';
@@ -33,6 +34,7 @@ const usePreloadAllAssets = () => {
   useEffect(() => {
     const imagesToPreload = [
       analyzeIcon,
+      calendarIcon,
       blueGamesFolderIcon,
       greenGamesFolderIcon,
       redGamesFolderIcon,
