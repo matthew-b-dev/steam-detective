@@ -253,9 +253,14 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile3: 'House Flipper',
     caseFile4: 'It Takes Two',
   },
+  '2026-03-08': {
+    caseFile1: 'Satisfactory',
+    caseFile2: 'Fields of Mistria',
+    caseFile3: "Don't Starve",
+    caseFile4: 'Prison Architect',
+  },
 };
 // April 1st: Skyrim: thumbs down review "the game doesnt work the horse flies"
 // Prison Architect
 // TEKKEN 7 ?
 // Need for Speed Most Wanted
-// HARD: Don't Starve

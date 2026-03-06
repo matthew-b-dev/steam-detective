@@ -1928,11 +1928,11 @@ export const steamGameDetails: SteamGameMap = {
     name: 'Prison Architect',
     appId: 233450,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/233450/ss_0c13ec061d922fbe8ad518eb58487cff09d3fd40.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/233450/ss_2e0bad57b5c02840950837f034d2280e2e24b65a.600x338.jpg',
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/233450/ss_8fd05248e9f657baea9f26d2dbd154573c29b33e.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/233450/ss_0c13ec061d922fbe8ad518eb58487cff09d3fd40.600x338.jpg',
     shortDescription:
-      "Only the world's most ||ruthless Warden|| can contain the world's most ||ruthless inmates||. Design and develop your personalized ||penitentiary|| in ||Prison Architect||.",
+      "Only the world's most ruthless ||Warden|| can contain the world's ||most ruthless inmates||. Design and develop your personalized ||penitentiary|| in ||Prison Architect||.",
     releaseDate: 'Oct 6, 2015',
     developer: 'Introversion Software, Double Eleven',
     publisher: 'Paradox Interactive',
@@ -7548,7 +7548,16 @@ export const steamGameDetails: SteamGameMap = {
       'Cooking',
       'Mining',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    clueOrder: ['details', 'tags', 'review', 'desc'],
+    reviewClue: {
+      review:
+        'Stardew Valley but anime. Truth be told, a lot of the features in this game are somewhat better than Stardew, especially the affinity with townsfolk.',
+      votedUp: true,
+      votesUp: 64,
+      weightedScore: '0.840762555599212646',
+      authorPlaytimeHours: 25,
+      timestamp: 1770739361,
+    },
   },
   '244210': {
     name: 'Assetto Corsa',
@@ -12043,9 +12052,9 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/526870/ss_9083ccf8fbb22c4068a6e233e3de343f815f9dc1.600x338.jpg',
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/526870/ss_6f456011887f970dc230af5e1720065ca3430aae.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/526870/ss_077e7ea98621faeb5b4a73ea0aaa91f41c6f66c9.600x338.jpg',
     shortDescription:
-      '||Satisfactory|| is a first-person open-world factory building game with a dash of exploration and combat. Play alone or with friends, explore an alien planet, create multi-story factories, and enter conveyor belt heaven!',
+      '||Satisfactory|| is a first-person open-world ||factory|| building game with a dash of exploration and combat. Play alone or with friends, explore an alien planet, create multi-story ||factories||, and enter ||conveyor belt heaven||!',
     releaseDate: 'Sep 10, 2024',
     developer: 'Coffee Stain Studios',
     publisher: 'Coffee Stain Publishing',
@@ -12076,7 +12085,10 @@ export const steamGameDetails: SteamGameMap = {
       'Singleplayer',
       'Indie',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    clueOrder: ['desc', 'details', 'tags'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
   },
   '1888160': {
     name: 'ARMORED CORE VI FIRES OF RUBICON',
