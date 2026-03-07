@@ -254,6 +254,12 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile4: 'It Takes Two',
   },
   '2026-03-08': {
+    caseFile1: 'SpongeBob SquarePants: Battle for Bikini Bottom - Rehydrated',
+    caseFile2: 'The Stanley Parable',
+    caseFile3: 'Alien Swarm',
+    caseFile4: 'Pillars of Eternity II: Deadfire',
+  },
+  '2026-03-09': {
     caseFile1: 'Satisfactory',
     caseFile2: 'Fields of Mistria',
     caseFile3: "Don't Starve",

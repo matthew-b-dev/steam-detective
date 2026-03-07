@@ -14470,6 +14470,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 10, 2007',
     developer: 'Valve',
     publisher: 'Valve',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 191318,
       rating: 'Overwhelmingly Positive',
@@ -14491,8 +14493,6 @@ export const steamGameDetails: SteamGameMap = {
       'Platformer',
       'Science',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '420': {
@@ -14507,6 +14507,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 10, 2007',
     developer: 'Valve',
     publisher: 'Valve',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 41465,
       rating: 'Overwhelmingly Positive',
@@ -14528,8 +14530,6 @@ export const steamGameDetails: SteamGameMap = {
       'Great Soundtrack',
       'Dystopian',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '440': {
@@ -14544,6 +14544,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '10 Oct, 2007',
     developer: 'Valve',
     publisher: 'Valve',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 1218649,
       rating: 'Very Positive',
@@ -14565,8 +14567,6 @@ export const steamGameDetails: SteamGameMap = {
       'Trading',
       'Co-op',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '500': {
@@ -14581,6 +14581,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Nov 17, 2008',
     developer: 'Valve',
     publisher: 'Valve',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 65781,
       rating: 'Overwhelmingly Positive',
@@ -14602,8 +14604,6 @@ export const steamGameDetails: SteamGameMap = {
       'Atmospheric',
       'Moddable',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '550': {
@@ -14618,6 +14618,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Nov 16, 2009',
     developer: 'Valve',
     publisher: 'Valve',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 1019870,
       rating: 'Overwhelmingly Positive',
@@ -14639,8 +14641,6 @@ export const steamGameDetails: SteamGameMap = {
       'Survival Horror',
       'Post-apocalyptic',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '630': {
@@ -14651,10 +14651,12 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/630/ss_3ff2a00e1a49ada20e867b9338e6e47572b046af.600x338.jpg',
     shortDescription:
-      'Co-operative multiplayer game and complete code base available for free.',
+      'Available free of charge, the game thrusts players into an epic bug hunt featuring a unique blend of co-op play and squad-level tactics. With your friends, form a squad of four distinct IAF Marine classes. Plan your attack using an unlockable arsenal of weapons with countless loadout configurations against a wide variety of aliens.',
     releaseDate: 'Jul 19, 2010',
     developer: 'Valve',
     publisher: 'Valve',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 10234,
       rating: 'Very Positive',
@@ -14673,9 +14675,16 @@ export const steamGameDetails: SteamGameMap = {
       'Survival',
       'PvE',
     ],
-    tags: [],
-    features: [],
-    clueOrder: ['tags', 'details', 'desc'],
+    clueOrder: ['review', 'details', 'tags', 'desc'],
+    reviewClue: {
+      review:
+        'I thought its some kind of a free indie mobile game but then I just realized its made by ♥♥♥♥♥♥♥ Valve😭 ||after finishing this peak and looking at the credits. No wonder that the game has actual good mechanics and it actually feels like it have a soul.||\n\nNot sure how good it is by playing solo but its definitely a good experience when playing with friends.\n||We actually expect it to be some wacky arcady shooter but it turns out that this game is very highly tactical.||',
+      votedUp: true,
+      votesUp: 5,
+      weightedScore: undefined,
+      authorPlaytimeHours: 2.5,
+      timestamp: 1771534523,
+    },
   },
   '1250': {
     name: 'Killing Floor',
@@ -14689,6 +14698,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'May 14, 2009',
     developer: 'Tripwire Interactive',
     publisher: 'Tripwire Interactive',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 68713,
       rating: 'Overwhelmingly Positive',
@@ -14710,8 +14721,6 @@ export const steamGameDetails: SteamGameMap = {
       'Survival Horror',
       'Moddable',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '3590': {
@@ -14726,6 +14735,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'May 5, 2009',
     developer: 'PopCap Games, Inc.',
     publisher: 'PopCap Games, Inc.',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 149902,
       rating: 'Overwhelmingly Positive',
@@ -14747,8 +14758,6 @@ export const steamGameDetails: SteamGameMap = {
       'Cute',
       'Survival',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '7670': {
@@ -14763,6 +14772,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Aug 21, 2007',
     developer: '2K Boston',
     publisher: '2K',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 31671,
       rating: 'Very Positive',
@@ -14784,8 +14795,6 @@ export const steamGameDetails: SteamGameMap = {
       'Adventure',
       'Underwater',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '7940': {
@@ -14800,6 +14809,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Nov 12, 2007',
     developer: 'Infinity Ward',
     publisher: 'Activision',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 26298,
       rating: 'Very Positive',
@@ -14821,8 +14832,6 @@ export const steamGameDetails: SteamGameMap = {
       'Linear',
       'Modern',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '8190': {
@@ -14837,6 +14846,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Mar 23, 2010',
     developer: 'Avalanche Studios',
     publisher: 'Square Enix',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 24380,
       rating: 'Very Positive',
@@ -14855,8 +14866,6 @@ export const steamGameDetails: SteamGameMap = {
       'Exploration',
       'Funny',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '8930': {
@@ -14871,6 +14880,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Sep 21, 2010',
     developer: 'Firaxis Games',
     publisher: '2K',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 128735,
       rating: 'Overwhelmingly Positive',
@@ -14889,8 +14900,6 @@ export const steamGameDetails: SteamGameMap = {
       'Replay Value',
       'Co-op',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '8980': {
@@ -14905,6 +14914,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Aug 31, 2023',
     developer: 'Gearbox Software',
     publisher: '2K',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 33347,
       rating: 'Very Positive',
@@ -14926,8 +14937,6 @@ export const steamGameDetails: SteamGameMap = {
       'Post-apocalyptic',
       'Singleplayer',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '9480': {
@@ -14942,6 +14951,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jan 7, 2009',
     developer: 'Volition',
     publisher: 'Deep Silver',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 21219,
       rating: 'Mostly Positive',
@@ -14963,8 +14974,6 @@ export const steamGameDetails: SteamGameMap = {
       'Shooter',
       'Co-op Campaign',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '10090': {
@@ -14979,6 +14988,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Nov 18, 2008',
     developer: 'Treyarch',
     publisher: 'Activision',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 52295,
       rating: 'Very Positive',
@@ -15000,8 +15011,6 @@ export const steamGameDetails: SteamGameMap = {
       'Historical',
       'Classic',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '10150': {
@@ -15016,6 +15025,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jun 10, 2009',
     developer: 'Radical Entertainment',
     publisher: 'Activision',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 13567,
       rating: 'Mostly Positive',
@@ -15037,8 +15048,6 @@ export const steamGameDetails: SteamGameMap = {
       'Story Rich',
       'Sandbox',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '10180': {
@@ -15053,6 +15062,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Nov 11, 2009',
     developer: 'Infinity Ward',
     publisher: 'Activision',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 59786,
       rating: 'Very Positive',
@@ -15074,8 +15085,6 @@ export const steamGameDetails: SteamGameMap = {
       'Controller',
       'Atmospheric',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '10500': {
@@ -15090,6 +15099,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Mar 4, 2009',
     developer: 'CREATIVE ASSEMBLY',
     publisher: 'SEGA',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 37164,
       rating: 'Very Positive',
@@ -15111,8 +15122,6 @@ export const steamGameDetails: SteamGameMap = {
       'Real Time Tactics',
       'Great Soundtrack',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '10680': {
@@ -15127,6 +15136,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Feb 16, 2010',
     developer: 'Rebellion',
     publisher: 'SEGA',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 10467,
       rating: 'Very Positive',
@@ -15145,8 +15156,6 @@ export const steamGameDetails: SteamGameMap = {
       'Stealth',
       'Atmospheric',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '11020': {
@@ -15161,6 +15170,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Apr 16, 2008',
     developer: 'Nadeo',
     publisher: 'Ubisoft',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 24077,
       rating: 'Very Positive',
@@ -15182,8 +15193,6 @@ export const steamGameDetails: SteamGameMap = {
       'Difficult',
       'Sandbox',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '12200': {
@@ -15198,6 +15207,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 21, 2008',
     developer: 'Rockstar New England',
     publisher: 'Rockstar Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 39948,
       rating: 'Very Positive',
@@ -15219,8 +15230,6 @@ export const steamGameDetails: SteamGameMap = {
       'Exploration',
       'Atmospheric',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '12210': {
@@ -15235,6 +15244,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Mar 24, 2020',
     developer: 'Rockstar North',
     publisher: 'Rockstar Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 191343,
       rating: 'Very Positive',
@@ -15256,8 +15267,6 @@ export const steamGameDetails: SteamGameMap = {
       'Atmospheric',
       'Classic',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '12900': {
@@ -15272,6 +15281,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Feb 15, 2008',
     developer: 'Dylan Fitterer',
     publisher: '',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 11056,
       rating: 'Overwhelmingly Positive',
@@ -15293,8 +15304,6 @@ export const steamGameDetails: SteamGameMap = {
       'Replay Value',
       'Puzzle',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '15100': {
@@ -15309,6 +15318,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Apr 9, 2008',
     developer: 'Ubisoft Montreal',
     publisher: 'Ubisoft',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 23963,
       rating: 'Mostly Positive',
@@ -15330,8 +15341,6 @@ export const steamGameDetails: SteamGameMap = {
       'Atmospheric',
       'Realistic',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '15620': {
@@ -15346,6 +15355,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Feb 18, 2009',
     developer: 'Relic Entertainment',
     publisher: 'Relic Entertainment',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 13532,
       rating: 'Very Positive',
@@ -15367,8 +15378,6 @@ export const steamGameDetails: SteamGameMap = {
       'Co-op Campaign',
       'Real-Time',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '16900': {
@@ -15383,6 +15392,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Aug 14, 2018',
     developer: 'BlackFoot Studios',
     publisher: 'MicroProse Software',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 23054,
       rating: 'Very Positive',
@@ -15404,8 +15415,6 @@ export const steamGameDetails: SteamGameMap = {
       'Online Co-Op',
       'Early Access',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '17300': {
@@ -15420,6 +15429,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Sep 17, 2008',
     developer: 'Crytek',
     publisher: 'Electronic Arts',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 13345,
       rating: 'Mostly Positive',
@@ -15441,8 +15452,6 @@ export const steamGameDetails: SteamGameMap = {
       'Adventure',
       'Story Rich',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '17390': {
@@ -15457,6 +15466,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Dec 19, 2008',
     developer: 'Maxis™',
     publisher: 'Electronic Arts',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 70183,
       rating: 'Very Positive',
@@ -15478,8 +15489,6 @@ export const steamGameDetails: SteamGameMap = {
       'Adventure',
       'Cartoony',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '17410': {
@@ -15494,6 +15503,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jan 14, 2009',
     developer: 'DICE',
     publisher: 'Electronic Arts',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 38571,
       rating: 'Very Positive',
@@ -15515,8 +15526,6 @@ export const steamGameDetails: SteamGameMap = {
       'Stylized',
       'Atmospheric',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '17460': {
@@ -15531,6 +15540,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Dec 19, 2008',
     developer: 'BioWare',
     publisher: 'Electronic Arts',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 16536,
       rating: 'Very Positive',
@@ -15552,8 +15563,6 @@ export const steamGameDetails: SteamGameMap = {
       'Female Protagonist',
       'Romance',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '17470': {
@@ -15568,6 +15577,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jan 9, 2009',
     developer: 'EA Redwood Shores',
     publisher: 'Electronic Arts',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 28493,
       rating: 'Very Positive',
@@ -15589,8 +15600,6 @@ export const steamGameDetails: SteamGameMap = {
       'Futuristic',
       'Story Rich',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '17480': {
@@ -15605,6 +15614,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jan 8, 2009',
     developer: 'EA Los Angeles',
     publisher: 'Electronic Arts',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 15608,
       rating: 'Very Positive',
@@ -15626,8 +15637,6 @@ export const steamGameDetails: SteamGameMap = {
       'Sci-fi',
       'Co-op Campaign',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '19900': {
@@ -15642,6 +15651,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 22, 2008',
     developer: 'Ubisoft Montreal',
     publisher: 'Ubisoft',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 17945,
       rating: 'Mostly Positive',
@@ -15663,8 +15674,6 @@ export const steamGameDetails: SteamGameMap = {
       'Exploration',
       'Story Rich',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '20900': {
@@ -15679,6 +15688,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Sep 19, 2008',
     developer: 'CD PROJEKT RED',
     publisher: 'CD PROJEKT RED',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 86318,
       rating: 'Very Positive',
@@ -15700,8 +15711,6 @@ export const steamGameDetails: SteamGameMap = {
       'Open World',
       'Great Soundtrack',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '21000': {
@@ -15716,6 +15725,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '29 Sep, 2008',
     developer: "Traveller's Tales",
     publisher: 'Warner Bros. Interactive Entertainment',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 15032,
       rating: 'Very Positive',
@@ -15737,8 +15748,6 @@ export const steamGameDetails: SteamGameMap = {
       'Third Person',
       'Controller',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '21690': {
@@ -15753,6 +15762,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Sep 15, 2009',
     developer: 'Capcom',
     publisher: 'Capcom',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 56747,
       rating: 'Very Positive',
@@ -15774,8 +15785,6 @@ export const steamGameDetails: SteamGameMap = {
       'Singleplayer',
       'Female Protagonist',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '22300': {
@@ -15790,6 +15799,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 28, 2008',
     developer: 'Bethesda Game Studios',
     publisher: 'Bethesda Softworks',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 21877,
       rating: 'Very Positive',
@@ -15811,8 +15822,6 @@ export const steamGameDetails: SteamGameMap = {
       'Character Customization',
       'Third Person',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '22330': {
@@ -15827,6 +15836,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jun 16, 2009',
     developer: 'Bethesda Game Studios',
     publisher: 'Bethesda Softworks',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 52120,
       rating: 'Overwhelmingly Positive',
@@ -15848,8 +15859,6 @@ export const steamGameDetails: SteamGameMap = {
       'Atmospheric',
       'Medieval',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '22370': {
@@ -15864,6 +15873,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Dec 17, 2009',
     developer: 'Bethesda Game Studios',
     publisher: 'Bethesda Softworks',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 55017,
       rating: 'Very Positive',
@@ -15885,8 +15896,6 @@ export const steamGameDetails: SteamGameMap = {
       'Sandbox',
       'Third Person',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '22380': {
@@ -15901,6 +15910,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 19, 2010',
     developer: 'Obsidian Entertainment',
     publisher: 'Bethesda Softworks',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 202242,
       rating: 'Overwhelmingly Positive',
@@ -15919,8 +15930,6 @@ export const steamGameDetails: SteamGameMap = {
       'FPS',
       'Sci-fi',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '24010': {
@@ -15935,6 +15944,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Sep 17, 2015',
     developer: 'Dovetail Games',
     publisher: 'Dovetail Games - Trains',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 28969,
       rating: 'Mostly Positive',
@@ -15956,8 +15967,6 @@ export const steamGameDetails: SteamGameMap = {
       'Atmospheric',
       'Transportation',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '32430': {
@@ -15972,6 +15981,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Dec 15, 2009',
     developer: 'LucasArts',
     publisher: 'LucasArts',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 11711,
       rating: 'Mostly Positive',
@@ -15993,8 +16004,6 @@ export const steamGameDetails: SteamGameMap = {
       'Multiple Endings',
       'Classic',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '32440': {
@@ -16009,6 +16018,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Nov 12, 2009',
     developer: "Traveller's Tales",
     publisher: 'LucasArts',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 24854,
       rating: 'Overwhelmingly Positive',
@@ -16030,8 +16041,6 @@ export const steamGameDetails: SteamGameMap = {
       'Space',
       'Great Soundtrack',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '33230': {
@@ -16046,6 +16055,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Mar 9, 2010',
     developer: 'Ubisoft Montreal',
     publisher: 'Ubisoft',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 18408,
       rating: 'Very Positive',
@@ -16064,8 +16075,6 @@ export const steamGameDetails: SteamGameMap = {
       'Great Soundtrack',
       'Atmospheric',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '33930': {
@@ -16080,6 +16089,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jun 29, 2010',
     developer: 'Bohemia Interactive',
     publisher: 'Bohemia Interactive',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 11405,
       rating: 'Very Positive',
@@ -16098,8 +16109,6 @@ export const steamGameDetails: SteamGameMap = {
       'War',
       'Moddable',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '34030': {
@@ -16114,6 +16123,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Feb 25, 2010',
     developer: 'CREATIVE ASSEMBLY',
     publisher: 'SEGA',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 14500,
       rating: 'Very Positive',
@@ -16132,8 +16143,6 @@ export const steamGameDetails: SteamGameMap = {
       'Real Time Tactics',
       'Turn-Based',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '34870': {
@@ -16148,6 +16157,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Mar 11, 2013',
     developer: 'City Interactive',
     publisher: 'CI Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 18401,
       rating: 'Mostly Positive',
@@ -16169,8 +16180,6 @@ export const steamGameDetails: SteamGameMap = {
       'Strategy',
       'Online Co-Op',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '34900': {
@@ -16185,6 +16194,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jul 20, 2009',
     developer: 'Invent4 Entertainment',
     publisher: 'Strategy First',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 14829,
       rating: 'Very Positive',
@@ -16206,8 +16217,6 @@ export const steamGameDetails: SteamGameMap = {
       'Violent',
       'Replay Value',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '35140': {
@@ -16222,6 +16231,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Mar 26, 2010',
     developer: 'Rocksteady Studios',
     publisher: 'WB Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 39770,
       rating: 'Overwhelmingly Positive',
@@ -16240,8 +16251,6 @@ export const steamGameDetails: SteamGameMap = {
       'Atmospheric',
       'Story Rich',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '35720': {
@@ -16256,6 +16265,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jun 6, 2013',
     developer: 'Frozenbyte',
     publisher: 'Frozenbyte',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 21920,
       rating: 'Very Positive',
@@ -16277,8 +16288,6 @@ export const steamGameDetails: SteamGameMap = {
       'Physics',
       'Great Soundtrack',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '39000': {
@@ -16293,6 +16302,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jul 6, 2010',
     developer: 'Virtual Heroes',
     publisher: 'NASA',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 10465,
       rating: 'Very Positive',
@@ -16311,8 +16322,6 @@ export const steamGameDetails: SteamGameMap = {
       'Walking Simulator',
       'Co-op',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '39120': {
@@ -16327,6 +16336,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Mar 1, 2011',
     developer: 'gamigo US Inc.',
     publisher: 'gamigo US Inc.',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 11524,
       rating: 'Mostly Positive',
@@ -16348,8 +16359,6 @@ export const steamGameDetails: SteamGameMap = {
       'PvP',
       'Online Co-Op',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '40100': {
@@ -16364,6 +16373,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Mar 1, 2010',
     developer: 'Gas Powered Games',
     publisher: 'Square Enix',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 7730,
       rating: 'Very Positive',
@@ -16382,8 +16393,6 @@ export const steamGameDetails: SteamGameMap = {
       'Action',
       'Military',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '40700': {
@@ -16398,6 +16407,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 16, 2009',
     developer: 'Amanita Design',
     publisher: 'Amanita Design',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 19248,
       rating: 'Very Positive',
@@ -16419,8 +16430,6 @@ export const steamGameDetails: SteamGameMap = {
       'Stylized',
       'Sci-fi',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '40800': {
@@ -16435,6 +16444,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Nov 30, 2010',
     developer: 'Team Meat',
     publisher: '',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 18394,
       rating: 'Very Positive',
@@ -16453,8 +16464,6 @@ export const steamGameDetails: SteamGameMap = {
       'Retro',
       'Controller',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '41700': {
@@ -16465,10 +16474,12 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/41700/ss_e6ceac2a4b603559f6613e1d37971caff65d25ce.600x338.jpg',
     shortDescription:
-      '||S.T.A.L.K.E.R.: Call of Pripyat|| is the direct sequel of the S.T.A.L.K.E.R.: Shadow of Chernobyl. As a Major Alexander Degtyarev you should investigate the crash of the governmental helicopters around the Zone and find out, what happened there.',
+      '||S.T.A.L.K.E.R.: Call of Pripyat|| is the direct sequel of the ||S.T.A.L.K.E.R.: Shadow of Chernobyl||. As a Major Alexander Degtyarev you should investigate the crash of the governmental helicopters around the Zone and find out, what happened there.',
     releaseDate: 'Feb 11, 2010',
     developer: 'GSC Game World',
     publisher: 'GSC Game World',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 11571,
       rating: 'Overwhelmingly Positive',
@@ -16487,8 +16498,6 @@ export const steamGameDetails: SteamGameMap = {
       'First-Person',
       'Moddable',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '42700': {
@@ -16503,6 +16512,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Nov 9, 2010',
     developer: 'Treyarch',
     publisher: 'Activision',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 24691,
       rating: 'Very Positive',
@@ -16521,8 +16532,6 @@ export const steamGameDetails: SteamGameMap = {
       'Online Co-Op',
       'Co-op',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '42960': {
@@ -16537,6 +16546,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Aug 30, 2010',
     developer: 'Paradox Development Studio',
     publisher: 'Paradox Interactive',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 11072,
       rating: 'Very Positive',
@@ -16555,8 +16566,6 @@ export const steamGameDetails: SteamGameMap = {
       'War',
       'Sandbox',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '45760': {
@@ -16571,6 +16580,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Aug 7, 2014',
     developer: 'Capcom',
     publisher: 'Capcom',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 16564,
       rating: 'Very Positive',
@@ -16592,8 +16603,6 @@ export const steamGameDetails: SteamGameMap = {
       '2.5D',
       'Singleplayer',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '47780': {
@@ -16608,6 +16617,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jan 25, 2011',
     developer: 'Visceral Games',
     publisher: 'Electronic Arts',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 27982,
       rating: 'Very Positive',
@@ -16629,8 +16640,6 @@ export const steamGameDetails: SteamGameMap = {
       'Aliens',
       'Gore',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '47790': {
@@ -16645,6 +16654,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 12, 2010',
     developer: 'Electronic Arts',
     publisher: 'Electronic Arts',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 4359,
       rating: 'Mostly Positive',
@@ -16663,8 +16674,6 @@ export const steamGameDetails: SteamGameMap = {
       'Co-op',
       'Controller',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '47810': {
@@ -16679,6 +16688,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 26, 2010',
     developer: 'BioWare',
     publisher: 'Electronic Arts',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 21985,
       rating: 'Very Positive',
@@ -16697,8 +16708,6 @@ export const steamGameDetails: SteamGameMap = {
       'Dark Fantasy',
       'Multiple Endings',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '47890': {
@@ -16713,6 +16722,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jan 27, 2011',
     developer: 'The Sims Studio',
     publisher: 'Electronic Arts',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 33876,
       rating: 'Very Positive',
@@ -16734,8 +16745,6 @@ export const steamGameDetails: SteamGameMap = {
       'Adventure',
       'Replay Value',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '48190': {
@@ -16749,6 +16758,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Mar 22, 2011',
     developer: 'Ubisoft Montreal',
     publisher: 'Ubisoft',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 25341,
       rating: 'Very Positive',
@@ -16770,8 +16781,6 @@ export const steamGameDetails: SteamGameMap = {
       'Action-Adventure',
       'Atmospheric',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '48240': {
@@ -16786,6 +16795,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Nov 17, 2011',
     developer: 'Blue Byte',
     publisher: 'Ubisoft',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 12613,
       rating: 'Mixed',
@@ -16807,8 +16818,6 @@ export const steamGameDetails: SteamGameMap = {
       'Sandbox',
       'Trading',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '48700': {
@@ -16823,6 +16832,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Mar 31, 2010',
     developer: 'TaleWorlds Entertainment',
     publisher: 'TaleWorlds Entertainment',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 68163,
       rating: 'Overwhelmingly Positive',
@@ -16841,8 +16852,6 @@ export const steamGameDetails: SteamGameMap = {
       'Horses',
       'Singleplayer',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '49540': {
@@ -16857,6 +16866,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'May 1, 2012',
     developer: 'Gearbox Software',
     publisher: 'SEGA',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 11932,
       rating: 'Mixed',
@@ -16878,8 +16889,6 @@ export const steamGameDetails: SteamGameMap = {
       'Atmospheric',
       'Gore',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '55100': {
@@ -16894,6 +16903,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Mar 14, 2011',
     developer: 'Kaos Studios',
     publisher: 'Deep Silver',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 13105,
       rating: 'Mixed',
@@ -16915,8 +16926,6 @@ export const steamGameDetails: SteamGameMap = {
       'Violent',
       'Co-op',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '57300': {
@@ -16931,6 +16940,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Sep 8, 2010',
     developer: 'Frictional Games',
     publisher: 'Frictional Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 20707,
       rating: 'Overwhelmingly Positive',
@@ -16949,8 +16960,6 @@ export const steamGameDetails: SteamGameMap = {
       'Adventure',
       'Indie',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '57690': {
@@ -16965,6 +16974,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Sep 1, 2011',
     developer: 'Haemimont Games',
     publisher: 'Kalypso Media Digital',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 12616,
       rating: 'Very Positive',
@@ -16986,8 +16997,6 @@ export const steamGameDetails: SteamGameMap = {
       'Political',
       'Funny',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '65800': {
@@ -17002,6 +17011,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 18, 2011',
     developer: 'Chromatic Games',
     publisher: 'Chromatic Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 18665,
       rating: 'Very Positive',
@@ -17023,8 +17034,6 @@ export const steamGameDetails: SteamGameMap = {
       'PvE',
       'Strategy RPG',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '65930': {
@@ -17039,6 +17048,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Aug 19, 2013',
     developer: '2K Marin',
     publisher: '2K',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 11986,
       rating: 'Mixed',
@@ -17060,8 +17071,6 @@ export const steamGameDetails: SteamGameMap = {
       'Story Rich',
       'Multiplayer',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '65980': {
@@ -17076,6 +17085,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 23, 2014',
     developer: 'Firaxis Games',
     publisher: '2K',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 22956,
       rating: 'Mixed',
@@ -17097,8 +17108,6 @@ export const steamGameDetails: SteamGameMap = {
       'Replay Value',
       'Exploration',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '67370': {
@@ -17113,6 +17122,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '9 Feb, 2012',
     developer: 'Digital Extremes',
     publisher: '2K',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 20586,
       rating: 'Very Positive',
@@ -17134,8 +17145,6 @@ export const steamGameDetails: SteamGameMap = {
       'Supernatural',
       'Comic Book',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '70000': {
@@ -17150,6 +17159,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Apr 8, 2011',
     developer: '800 North and Digital Ranch',
     publisher: '800 North and Digital Ranch',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 15101,
       rating: 'Very Positive',
@@ -17171,8 +17182,6 @@ export const steamGameDetails: SteamGameMap = {
       'Co-op',
       'Survival',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '70300': {
@@ -17187,6 +17196,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Sep 7, 2010',
     developer: 'Terry Cavanagh',
     publisher: 'Terry Cavanagh',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 7229,
       rating: 'Overwhelmingly Positive',
@@ -17205,8 +17216,6 @@ export const steamGameDetails: SteamGameMap = {
       'Exploration',
       'Action',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '71250': {
@@ -17221,6 +17230,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Mar 4, 2011',
     developer: 'SEGA',
     publisher: 'SEGA',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 17977,
       rating: 'Very Positive',
@@ -17242,8 +17253,6 @@ export const steamGameDetails: SteamGameMap = {
       "1990's",
       'Replay Value',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '71340': {
@@ -17258,6 +17267,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Nov 3, 2011',
     developer: "Devil's Details",
     publisher: 'SEGA',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 25441,
       rating: 'Very Positive',
@@ -17279,8 +17290,6 @@ export const steamGameDetails: SteamGameMap = {
       'Time Travel',
       '3D',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '99900': {
@@ -17295,6 +17304,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jun 14, 2011',
     developer: 'Grey Havens',
     publisher: 'Grey Havens',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 23921,
       rating: 'Very Positive',
@@ -17316,8 +17327,6 @@ export const steamGameDetails: SteamGameMap = {
       'Action RPG',
       'Sci-fi',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '104900': {
@@ -17332,6 +17341,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Apr 16, 2013',
     developer: 'DANKIE',
     publisher: 'DANKIE',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 28369,
       rating: 'Mostly Positive',
@@ -17353,8 +17364,6 @@ export const steamGameDetails: SteamGameMap = {
       'Third-Person Shooter',
       'Singleplayer',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '108710': {
@@ -17369,6 +17378,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Feb 16, 2012',
     developer: 'Remedy Entertainment',
     publisher: 'Remedy Entertainment',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 56000,
       rating: 'Very Positive',
@@ -17390,8 +17401,6 @@ export const steamGameDetails: SteamGameMap = {
       'Supernatural',
       'Dark',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '109600': {
@@ -17406,6 +17415,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Dec 5, 2013',
     developer: 'Cryptic Studios',
     publisher: 'Arc Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 39282,
       rating: 'Mostly Positive',
@@ -17427,8 +17438,6 @@ export const steamGameDetails: SteamGameMap = {
       'PvP',
       'Action RPG',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '110800': {
@@ -17443,6 +17452,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Nov 8, 2011',
     developer: 'Team Bondi',
     publisher: 'Rockstar Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 35776,
       rating: 'Very Positive',
@@ -17464,8 +17475,6 @@ export const steamGameDetails: SteamGameMap = {
       'Mature',
       'Nudity',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '113200': {
@@ -17479,6 +17488,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Sep 28, 2011',
     developer: 'Edmund McMillen',
     publisher: 'Edmund McMillen',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 61894,
       rating: 'Very Positive',
@@ -17500,8 +17511,6 @@ export const steamGameDetails: SteamGameMap = {
       'Roguelite',
       '2D',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '115300': {
@@ -17516,6 +17525,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Nov 8, 2011',
     developer: 'Infinity Ward',
     publisher: 'Activision',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 39051,
       rating: 'Very Positive',
@@ -17537,8 +17548,6 @@ export const steamGameDetails: SteamGameMap = {
       'Survival',
       'Linear',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '200210': {
@@ -17553,6 +17562,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Feb 20, 2012',
     developer: 'Wild Shadow Studios',
     publisher: 'Deca Live Operations GmbH',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 47335,
       rating: 'Very Positive',
@@ -17574,8 +17585,6 @@ export const steamGameDetails: SteamGameMap = {
       'RPG',
       'Action',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '200260': {
@@ -17590,6 +17599,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Sep 7, 2012',
     developer: 'Rocksteady Studios',
     publisher: 'WB Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 74358,
       rating: 'Overwhelmingly Positive',
@@ -17611,8 +17622,6 @@ export const steamGameDetails: SteamGameMap = {
       'Action-Adventure',
       'Cinematic',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '200510': {
@@ -17627,6 +17636,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 8, 2012',
     developer: 'Firaxis Games',
     publisher: '2K',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 57871,
       rating: 'Very Positive',
@@ -17648,8 +17659,6 @@ export const steamGameDetails: SteamGameMap = {
       'Perma Death',
       'Multiplayer',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '201270': {
@@ -17664,6 +17673,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Mar 15, 2011',
     developer: 'CREATIVE ASSEMBLY',
     publisher: 'SEGA',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 66842,
       rating: 'Very Positive',
@@ -17685,8 +17696,6 @@ export const steamGameDetails: SteamGameMap = {
       'Turn-Based',
       'Medieval',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '201790': {
@@ -17701,6 +17710,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jul 30, 2012',
     developer: 'Robot Entertainment',
     publisher: 'Robot Entertainment',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 19479,
       rating: 'Very Positive',
@@ -17722,8 +17733,6 @@ export const steamGameDetails: SteamGameMap = {
       'Cartoony',
       'Shooter',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '203160': {
@@ -17738,6 +17747,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Mar 4, 2013',
     developer: 'Crystal Dynamics',
     publisher: 'Crystal Dynamics',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 262102,
       rating: 'Very Positive',
@@ -17759,8 +17770,6 @@ export const steamGameDetails: SteamGameMap = {
       'Shooter',
       'Stealth',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '203290': {
@@ -17775,6 +17784,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Aug 29, 2013',
     developer: 'U.S. Army',
     publisher: 'U.S. Army',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 11001,
       rating: 'Mostly Positive',
@@ -17796,8 +17807,6 @@ export const steamGameDetails: SteamGameMap = {
       'Co-op',
       'Simulation',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '204450': {
@@ -17812,6 +17821,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'May 22, 2013',
     developer: 'Techland',
     publisher: 'Techland Publishing',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 42674,
       rating: 'Very Positive',
@@ -17833,8 +17844,6 @@ export const steamGameDetails: SteamGameMap = {
       'Violent',
       'Atmospheric',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '206190': {
@@ -17849,6 +17858,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jun 3, 2013',
     developer: 'Suspicious Developments',
     publisher: 'Suspicious Developments',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 13241,
       rating: 'Overwhelmingly Positive',
@@ -17870,8 +17881,6 @@ export const steamGameDetails: SteamGameMap = {
       'Short',
       'Hacking',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '206440': {
@@ -17886,6 +17895,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Sep 7, 2012',
     developer: 'Freebird Games',
     publisher: 'Freebird Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 84547,
       rating: 'Overwhelmingly Positive',
@@ -17907,8 +17918,6 @@ export const steamGameDetails: SteamGameMap = {
       'Funny',
       'Psychological',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '206500': {
@@ -17923,6 +17932,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Mar 30, 2018',
     developer: 'Carbon Games',
     publisher: 'Carbon Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 10807,
       rating: 'Very Positive',
@@ -17944,8 +17955,6 @@ export const steamGameDetails: SteamGameMap = {
       'Shooter',
       'Massively Multiplayer',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '207140': {
@@ -17960,6 +17969,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Apr 19, 2016',
     developer: 'DoubleDutch Games',
     publisher: 'tinyBuild',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 37036,
       rating: 'Very Positive',
@@ -17981,8 +17992,6 @@ export const steamGameDetails: SteamGameMap = {
       'Controller',
       'Local Co-Op',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '208200': {
@@ -17997,6 +18006,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 15, 2012',
     developer: 'id Software',
     publisher: 'Bethesda Softworks',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 12042,
       rating: 'Very Positive',
@@ -18018,8 +18029,6 @@ export const steamGameDetails: SteamGameMap = {
       'Mars',
       'Atmospheric',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '208650': {
@@ -18034,6 +18043,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '23 Jun, 2015',
     developer: 'Rocksteady Studios',
     publisher: 'WB Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 152462,
       rating: 'Very Positive',
@@ -18055,8 +18066,6 @@ export const steamGameDetails: SteamGameMap = {
       "Beat 'em up",
       'Mature',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '209000': {
@@ -18071,6 +18080,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '24 Oct, 2013',
     developer: 'WB Games Montreal',
     publisher: 'Warner Bros. Interactive Entertainment',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 62521,
       rating: 'Very Positive',
@@ -18092,8 +18103,6 @@ export const steamGameDetails: SteamGameMap = {
       'Atmospheric',
       'Action-Adventure',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '209080': {
@@ -18108,6 +18117,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 29, 2012',
     developer: 'Muse Games',
     publisher: 'Muse Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 14668,
       rating: 'Very Positive',
@@ -18129,8 +18140,6 @@ export const steamGameDetails: SteamGameMap = {
       'PvP',
       'Strategy',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '209160': {
@@ -18145,6 +18154,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Mar 25, 2014',
     developer: 'Infinity Ward',
     publisher: 'Activision',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 31634,
       rating: 'Mixed',
@@ -18166,8 +18177,6 @@ export const steamGameDetails: SteamGameMap = {
       'Fast-Paced',
       'Hacking',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '209650': {
@@ -18182,6 +18191,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Nov 3, 2014',
     developer: 'Sledgehammer Games',
     publisher: 'Activision',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 25336,
       rating: 'Mixed',
@@ -18203,8 +18214,6 @@ export const steamGameDetails: SteamGameMap = {
       'Military',
       'Illuminati',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '210770': {
@@ -18219,6 +18228,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'May 15, 2013',
     developer: 'Coffee Stain Studios',
     publisher: 'Coffee Stain Publishing',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 14338,
       rating: 'Very Positive',
@@ -18240,8 +18251,6 @@ export const steamGameDetails: SteamGameMap = {
       'Aliens',
       'Futuristic',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '210970': {
@@ -18256,6 +18265,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jan 26, 2016',
     developer: 'Thekla, Inc.',
     publisher: 'Thekla, Inc.',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 20268,
       rating: 'Very Positive',
@@ -18277,8 +18288,6 @@ export const steamGameDetails: SteamGameMap = {
       'Philosophical',
       'Relaxing',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '211400': {
@@ -18293,6 +18302,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 25, 2012',
     developer: 'Tequila Works, S.L.',
     publisher: 'Xbox Game Studios',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 12726,
       rating: 'Mixed',
@@ -18314,8 +18325,6 @@ export const steamGameDetails: SteamGameMap = {
       '2.5D',
       'Puzzle',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '211500': {
@@ -18330,6 +18339,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Feb 12, 2013',
     developer: 'KW Studios',
     publisher: 'KW Studios',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 26634,
       rating: 'Mostly Positive',
@@ -18351,8 +18362,6 @@ export const steamGameDetails: SteamGameMap = {
       'VR',
       'Singleplayer',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '212480': {
@@ -18367,6 +18376,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jan 31, 2013',
     developer: 'Sumo Digital',
     publisher: 'SEGA',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 17538,
       rating: 'Very Positive',
@@ -18388,8 +18399,6 @@ export const steamGameDetails: SteamGameMap = {
       'Singleplayer',
       'Fast-Paced',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '214510': {
@@ -18404,6 +18413,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Nov 27, 2012',
     developer: "Traveller's Tales",
     publisher: 'Warner Bros. Interactive Entertainment',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 15329,
       rating: 'Very Positive',
@@ -18425,8 +18436,6 @@ export const steamGameDetails: SteamGameMap = {
       'Local Multiplayer',
       'Split Screen',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '214950': {
@@ -18441,6 +18450,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Sep 2, 2013',
     developer: 'CREATIVE ASSEMBLY',
     publisher: 'SEGA',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 91934,
       rating: 'Very Positive',
@@ -18462,8 +18473,6 @@ export const steamGameDetails: SteamGameMap = {
       'Simulation',
       'Co-op',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '218680': {
@@ -18478,6 +18487,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Nov 19, 2012',
     developer: '5th Cell Media',
     publisher: 'Warner Bros. Interactive Entertainment',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 12180,
       rating: 'Very Positive',
@@ -18499,8 +18510,6 @@ export const steamGameDetails: SteamGameMap = {
       'Fantasy',
       'Moddable',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '219640': {
@@ -18515,6 +18524,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 16, 2012',
     developer: 'Torn Banner Studios',
     publisher: 'Torn Banner Studios',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 65201,
       rating: 'Very Positive',
@@ -18536,8 +18547,6 @@ export const steamGameDetails: SteamGameMap = {
       'Co-op',
       'Historical',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '219890': {
@@ -18552,6 +18561,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jan 31, 2013',
     developer: 'Alexander Bruce',
     publisher: 'Demruth',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 17546,
       rating: 'Overwhelmingly Positive',
@@ -18573,8 +18584,6 @@ export const steamGameDetails: SteamGameMap = {
       'Psychological',
       'Colorful',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '220440': {
@@ -18589,6 +18598,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '24 Jan, 2013',
     developer: 'Ninja Theory',
     publisher: 'Capcom',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 31332,
       rating: 'Very Positive',
@@ -18610,8 +18621,6 @@ export const steamGameDetails: SteamGameMap = {
       "Beat 'em up",
       'Atmospheric',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '221100': {
@@ -18626,6 +18635,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Dec 13, 2018',
     developer: 'Bohemia Interactive',
     publisher: 'Bohemia Interactive',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 454789,
       rating: 'Mostly Positive',
@@ -18647,8 +18658,6 @@ export const steamGameDetails: SteamGameMap = {
       'Survival Horror',
       'Co-op',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '221260': {
@@ -18663,6 +18672,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Nov 19, 2012',
     developer: 'Tomorrow Corporation',
     publisher: 'Tomorrow Corporation',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 13524,
       rating: 'Very Positive',
@@ -18684,8 +18695,6 @@ export const steamGameDetails: SteamGameMap = {
       'Story Rich',
       'Dark',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '221380': {
@@ -18700,6 +18709,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Apr 9, 2013',
     developer: 'Skybox Labs',
     publisher: 'Xbox Game Studios',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 102354,
       rating: 'Overwhelmingly Positive',
@@ -18721,8 +18732,6 @@ export const steamGameDetails: SteamGameMap = {
       'Competitive',
       'Replay Value',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '221640': {
@@ -18737,6 +18746,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Nov 27, 2012',
     developer: 'Terry Cavanagh',
     publisher: 'Terry Cavanagh',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 24941,
       rating: 'Overwhelmingly Positive',
@@ -18758,22 +18769,22 @@ export const steamGameDetails: SteamGameMap = {
       'Psychedelic',
       'Colorful',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '221910': {
     name: 'The Stanley Parable',
     appId: 221910,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/221910/ss_49e682563292992309e3047f30128f3dba4c39ce.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/221910/ss_18d2adf006de1720ac744348f4fb3b7e392b4968.600x338.jpg',
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/221910/ss_7b119bfff7ebfbcd86c1af1210bdac8666ab4ae8.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/221910/ss_523aa042385c6b1c8f6c9870ecffef18627d9064.600x338.jpg',
     shortDescription:
-      '||The Stanley Parable|| is a first person exploration game. You will play as ||Stanley||, and you will not play as ||Stanley||. You will follow a story, you will not follow a story. You will have a choice, you will have no choice. The game will end, the game will never end.',
+      '||The Stanley Parable|| is a first person exploration game. You will play as ||Stanley||, and you will not play as ||Stanley||. You will follow a story, you will not follow a story. ||You will have a choice, you will have no choice. The game will end, the game will never end.||',
     releaseDate: 'Oct 17, 2013',
     developer: 'Galactic Cafe',
     publisher: 'Galactic Cafe',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 45398,
       rating: 'Very Positive',
@@ -18795,9 +18806,7 @@ export const steamGameDetails: SteamGameMap = {
       'Choices Matter',
       'Story Rich',
     ],
-    tags: [],
-    features: [],
-    clueOrder: ['tags', 'details', 'desc'],
+    clueOrder: ['desc', 'details', 'tags'],
   },
   '222480': {
     name: 'Resident Evil Revelations',
@@ -18811,6 +18820,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'May 20, 2013',
     developer: 'Capcom',
     publisher: 'Capcom',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 16784,
       rating: 'Mostly Positive',
@@ -18832,8 +18843,6 @@ export const steamGameDetails: SteamGameMap = {
       'Atmospheric',
       'Shooter',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '223100': {
@@ -18848,6 +18857,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'May 17, 2016',
     developer: 'Dambuster Studios',
     publisher: 'Deep Silver',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 16809,
       rating: 'Mixed',
@@ -18869,8 +18880,6 @@ export const steamGameDetails: SteamGameMap = {
       'Survival',
       'Atmospheric',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '223710': {
@@ -18885,6 +18894,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Apr 25, 2013',
     developer: 'Team Psykskallar',
     publisher: 'Team Psykskallar',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 81917,
       rating: 'Very Positive',
@@ -18906,8 +18917,6 @@ export const steamGameDetails: SteamGameMap = {
       'FPS',
       'Adventure',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '223750': {
@@ -18922,6 +18931,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Aug 2, 2013',
     developer: 'Eagle Dynamics SA',
     publisher: 'Eagle Dynamics SA',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 39611,
       rating: 'Very Positive',
@@ -18943,8 +18954,6 @@ export const steamGameDetails: SteamGameMap = {
       'Sandbox',
       'TrackIR',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '224480': {
@@ -18959,6 +18968,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jan 30, 2014',
     developer: 'Young Horses',
     publisher: 'Young Horses',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 10501,
       rating: 'Very Positive',
@@ -18980,8 +18991,6 @@ export const steamGameDetails: SteamGameMap = {
       'Difficult',
       'Third Person',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '224760': {
@@ -18996,6 +19005,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'May 1, 2013',
     developer: 'Polytron Corporation',
     publisher: 'Trapdoor',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 16009,
       rating: 'Very Positive',
@@ -19017,8 +19028,6 @@ export const steamGameDetails: SteamGameMap = {
       'Relaxing',
       'Atmospheric',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '225080': {
@@ -19033,6 +19042,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Sep 3, 2013',
     developer: 'Starbreeze Studios AB',
     publisher: '505 Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 41192,
       rating: 'Very Positive',
@@ -19054,8 +19065,6 @@ export const steamGameDetails: SteamGameMap = {
       'Multiplayer',
       'Action',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '225260': {
@@ -19070,6 +19079,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Feb 26, 2013',
     developer: 'Double Fine Productions',
     publisher: 'Double Fine Productions',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 19963,
       rating: 'Very Positive',
@@ -19091,8 +19102,6 @@ export const steamGameDetails: SteamGameMap = {
       'Gothic',
       'Action-Adventure',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '226840': {
@@ -19107,6 +19116,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Mar 31, 2014',
     developer: 'Triumph Studios',
     publisher: 'Paradox Interactive',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 12742,
       rating: 'Mostly Positive',
@@ -19128,8 +19139,6 @@ export const steamGameDetails: SteamGameMap = {
       'Grand Strategy',
       'Great Soundtrack',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '226860': {
@@ -19144,6 +19153,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'May 14, 2015',
     developer: 'Stardock Entertainment',
     publisher: 'Stardock Entertainment',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 10369,
       rating: 'Mostly Positive',
@@ -19165,8 +19176,6 @@ export const steamGameDetails: SteamGameMap = {
       'Turn-Based',
       'Space',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '227860': {
@@ -19181,6 +19190,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Aug 17, 2017',
     developer: 'Sauropod Studio',
     publisher: 'Sauropod Studio',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 10457,
       rating: 'Mixed',
@@ -19202,8 +19213,6 @@ export const steamGameDetails: SteamGameMap = {
       'RTS',
       'Simulation',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '228280': {
@@ -19218,6 +19227,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jan 16, 2013',
     developer: 'Beamdog',
     publisher: 'Beamdog',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 17354,
       rating: 'Very Positive',
@@ -19239,8 +19250,6 @@ export const steamGameDetails: SteamGameMap = {
       'Multiplayer',
       'Magic',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '228300': {
@@ -19255,6 +19264,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jun 3, 2013',
     developer: 'DONTNOD Entertainment',
     publisher: 'Capcom',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 16598,
       rating: 'Very Positive',
@@ -19276,8 +19287,6 @@ export const steamGameDetails: SteamGameMap = {
       'Parkour',
       'Beautiful',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '228380': {
@@ -19292,6 +19301,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jun 14, 2018',
     developer: 'Bugbear',
     publisher: 'THQ Nordic',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 39714,
       rating: 'Very Positive',
@@ -19313,8 +19324,6 @@ export const steamGameDetails: SteamGameMap = {
       'Arcade',
       'Early Access',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '230230': {
@@ -19329,6 +19338,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jun 30, 2014',
     developer: 'Larian Studios',
     publisher: 'Larian Studios',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 11856,
       rating: 'Very Positive',
@@ -19350,8 +19361,6 @@ export const steamGameDetails: SteamGameMap = {
       'Multiplayer',
       'Turn-Based Strategy',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '230290': {
@@ -19366,6 +19375,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '24 Aug, 2015',
     developer: 'Giant Army',
     publisher: 'Giant Army',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 30323,
       rating: 'Overwhelmingly Positive',
@@ -19387,8 +19398,6 @@ export const steamGameDetails: SteamGameMap = {
       'Space Sim',
       'Open World',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '232430': {
@@ -19403,6 +19412,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Aug 15, 2013',
     developer: 'Fullbright',
     publisher: 'Fullbright',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 18221,
       rating: 'Mostly Positive',
@@ -19424,8 +19435,6 @@ export const steamGameDetails: SteamGameMap = {
       'Mystery',
       'Interactive Fiction',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '232890': {
@@ -19440,6 +19449,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Sep 22, 2014',
     developer: 'Firefly Studios',
     publisher: 'Firefly Studios',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 17757,
       rating: 'Mixed',
@@ -19461,8 +19472,6 @@ export const steamGameDetails: SteamGameMap = {
       'Sandbox',
       'Tactical',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '233130': {
@@ -19477,6 +19486,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Sep 26, 2013',
     developer: 'Flying Wild Hog',
     publisher: 'Devolver Digital',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 26523,
       rating: 'Very Positive',
@@ -19498,8 +19509,6 @@ export const steamGameDetails: SteamGameMap = {
       'Great Soundtrack',
       'Demons',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '233270': {
@@ -19514,6 +19523,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'May 1, 2013',
     developer: 'Ubisoft Montreal',
     publisher: 'Ubisoft',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 18960,
       rating: 'Very Positive',
@@ -19535,8 +19546,6 @@ export const steamGameDetails: SteamGameMap = {
       'Funny',
       'First-Person',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '233290': {
@@ -19551,6 +19560,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jun 3, 2014',
     developer: 'Airtight Games',
     publisher: 'Square Enix',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 17077,
       rating: 'Very Positive',
@@ -19572,8 +19583,6 @@ export const steamGameDetails: SteamGameMap = {
       'Open World',
       'Stealth',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '233720': {
@@ -19588,6 +19597,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Apr 19, 2013',
     developer: 'Bossa Studios',
     publisher: 'Infogrames',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 16687,
       rating: 'Very Positive',
@@ -19609,8 +19620,6 @@ export const steamGameDetails: SteamGameMap = {
       'Aliens',
       'Singleplayer',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '234650': {
@@ -19625,6 +19634,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jul 25, 2013',
     developer: 'Harebrained Schemes',
     publisher: 'Paradox Interactive',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 13558,
       rating: 'Very Positive',
@@ -19646,8 +19657,6 @@ export const steamGameDetails: SteamGameMap = {
       'Story Rich',
       'Fantasy',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '235460': {
@@ -19662,6 +19671,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jan 9, 2014',
     developer: 'PlatinumGames',
     publisher: 'KONAMI',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 87269,
       rating: 'Overwhelmingly Positive',
@@ -19683,8 +19694,6 @@ export const steamGameDetails: SteamGameMap = {
       'Difficult',
       'Sci-fi',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '236090': {
@@ -19699,6 +19708,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'May 24, 2013',
     developer: 'Humble Hearts LLC',
     publisher: 'Xbox Game Studios',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 18907,
       rating: 'Very Positive',
@@ -19720,8 +19731,6 @@ export const steamGameDetails: SteamGameMap = {
       'Story Rich',
       'Controller',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '236110': {
@@ -19736,6 +19745,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jun 20, 2017',
     developer: 'Chromatic Games',
     publisher: 'Chromatic Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 22023,
       rating: 'Mostly Positive',
@@ -19757,8 +19768,6 @@ export const steamGameDetails: SteamGameMap = {
       'Family Friendly',
       'Cartoony',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '237930': {
@@ -19773,6 +19782,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'May 20, 2014',
     developer: 'Supergiant Games',
     publisher: 'Supergiant Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 30997,
       rating: 'Very Positive',
@@ -19794,8 +19805,6 @@ export const steamGameDetails: SteamGameMap = {
       'Narration',
       'Strategy',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '237990': {
@@ -19810,6 +19819,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jan 14, 2014',
     developer: 'Stoic',
     publisher: 'Stoic Studio',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 15830,
       rating: 'Very Positive',
@@ -19831,8 +19842,6 @@ export const steamGameDetails: SteamGameMap = {
       'Atmospheric',
       'Singleplayer',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '238010': {
@@ -19847,6 +19856,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 25, 2013',
     developer: 'Eidos Montreal',
     publisher: 'Eidos Interactive Corp.',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 29112,
       rating: 'Very Positive',
@@ -19868,8 +19879,6 @@ export const steamGameDetails: SteamGameMap = {
       'Immersive Sim',
       'Adventure',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '238090': {
@@ -19884,6 +19893,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jun 27, 2014',
     developer: 'Rebellion',
     publisher: 'Rebellion',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 28018,
       rating: 'Mostly Positive',
@@ -19905,8 +19916,6 @@ export const steamGameDetails: SteamGameMap = {
       'Online Co-Op',
       'Gore',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '238430': {
@@ -19921,6 +19930,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 25, 2013',
     developer: 'Monochrome, Inc',
     publisher: 'Monochrome, Inc',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 15665,
       rating: 'Mostly Positive',
@@ -19942,8 +19953,6 @@ export const steamGameDetails: SteamGameMap = {
       'Survival',
       '3D',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '239160': {
@@ -19958,6 +19967,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Feb 27, 2014',
     developer: 'Eidos-Montréal',
     publisher: 'Eidos Interactive Corp.',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 23722,
       rating: 'Mixed',
@@ -19979,8 +19990,6 @@ export const steamGameDetails: SteamGameMap = {
       'Heist',
       'Medieval',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '239350': {
@@ -19995,6 +20004,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Aug 8, 2013',
     developer: 'Mossmouth',
     publisher: 'Mossmouth',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 16528,
       rating: 'Very Positive',
@@ -20016,8 +20027,6 @@ export const steamGameDetails: SteamGameMap = {
       'Singleplayer',
       'Adventure',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '239820': {
@@ -20032,6 +20041,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Aug 29, 2013',
     developer: 'Greenheart Games 💚',
     publisher: 'Greenheart Games 💚',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 44608,
       rating: 'Very Positive',
@@ -20053,8 +20064,6 @@ export const steamGameDetails: SteamGameMap = {
       'Funny',
       'Difficult',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '241600': {
@@ -20069,6 +20078,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jun 27, 2013',
     developer: 'Cellar Door Games',
     publisher: 'Cellar Door Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 18664,
       rating: 'Very Positive',
@@ -20090,8 +20101,6 @@ export const steamGameDetails: SteamGameMap = {
       'Fantasy',
       'Controller',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '242640': {
@@ -20106,6 +20115,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 7, 2014',
     developer: 'Cyanide Studio',
     publisher: 'Cyanide Studio',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 11368,
       rating: 'Very Positive',
@@ -20127,8 +20138,6 @@ export const steamGameDetails: SteamGameMap = {
       'Steampunk',
       'Magic',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '242680': {
@@ -20143,6 +20152,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Dec 5, 2015',
     developer: 'Vlambeer',
     publisher: 'Vlambeer',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 19359,
       rating: 'Overwhelmingly Positive',
@@ -20164,8 +20175,6 @@ export const steamGameDetails: SteamGameMap = {
       'Top-Down',
       '2D',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '242700': {
@@ -20180,6 +20189,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Nov 12, 2013',
     developer: 'NetherRealm Studios',
     publisher: 'Warner Bros. Interactive Entertainment',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 19821,
       rating: 'Very Positive',
@@ -20201,8 +20212,6 @@ export const steamGameDetails: SteamGameMap = {
       'Story Rich',
       'Atmospheric',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '242720': {
@@ -20217,6 +20226,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'May 1, 2014',
     developer: 'Masangsoft',
     publisher: 'Masangsoft',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 10644,
       rating: 'Mixed',
@@ -20238,8 +20249,6 @@ export const steamGameDetails: SteamGameMap = {
       'Massively Multiplayer',
       'Indie',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '242860': {
@@ -20254,6 +20263,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Apr 28, 2015',
     developer: 'BlackMill Games',
     publisher: 'BlackMill Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 37578,
       rating: 'Very Positive',
@@ -20275,8 +20286,6 @@ export const steamGameDetails: SteamGameMap = {
       'Military',
       'Realistic',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '243470': {
@@ -20291,6 +20300,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'May 26, 2014',
     developer: 'Ubisoft',
     publisher: 'Ubisoft',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 48958,
       rating: 'Mostly Positive',
@@ -20312,8 +20323,6 @@ export const steamGameDetails: SteamGameMap = {
       'Driving',
       'Co-op',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '244160': {
@@ -20328,6 +20337,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Feb 25, 2015',
     developer: 'Gearbox Software',
     publisher: 'Gearbox Publishing',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 13957,
       rating: 'Very Positive',
@@ -20349,8 +20360,6 @@ export const steamGameDetails: SteamGameMap = {
       'Moddable',
       'Epic',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '245170': {
@@ -20365,6 +20374,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Aug 22, 2013',
     developer: 'Hidden Variable Studios',
     publisher: 'Autumn Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 41361,
       rating: 'Very Positive',
@@ -20386,8 +20397,6 @@ export const steamGameDetails: SteamGameMap = {
       'Lore-Rich',
       '2D',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '245620': {
@@ -20402,6 +20411,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'May 23, 2014',
     developer: 'Haemimont Games',
     publisher: 'Kalypso Media Digital',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 14314,
       rating: 'Mostly Positive',
@@ -20423,8 +20434,6 @@ export const steamGameDetails: SteamGameMap = {
       'Historical',
       'Great Soundtrack',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '246420': {
@@ -20439,6 +20448,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jan 6, 2014',
     developer: 'Ironhide Game Studio',
     publisher: 'Ironhide Game Studio',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 16008,
       rating: 'Overwhelmingly Positive',
@@ -20460,8 +20471,6 @@ export const steamGameDetails: SteamGameMap = {
       'Action-Adventure',
       'Indie',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '246900': {
@@ -20476,6 +20485,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 23, 2015',
     developer: 'RuneStorm',
     publisher: 'RuneStorm',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 23341,
       rating: 'Very Positive',
@@ -20497,8 +20508,6 @@ export const steamGameDetails: SteamGameMap = {
       'Space',
       'Casual',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '247080': {
@@ -20513,6 +20522,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Apr 23, 2015',
     developer: 'Brace Yourself Games',
     publisher: 'Brace Yourself Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 26217,
       rating: 'Overwhelmingly Positive',
@@ -20534,8 +20545,6 @@ export const steamGameDetails: SteamGameMap = {
       'Roguelite',
       'Procedural Generation',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '248390': {
@@ -20550,6 +20559,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Nov 24, 2014',
     developer: 'Dekovir Entertainment',
     publisher: 'Dekovir Ltd',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 16775,
       rating: 'Very Positive',
@@ -20571,8 +20582,6 @@ export const steamGameDetails: SteamGameMap = {
       'Multiplayer',
       'Singleplayer',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '248820': {
@@ -20587,6 +20596,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Nov 8, 2013',
     developer: 'Hopoo Games',
     publisher: 'Gearbox Publishing',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 29775,
       rating: 'Very Positive',
@@ -20608,8 +20619,6 @@ export const steamGameDetails: SteamGameMap = {
       'Roguelite',
       'Multiplayer',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '249050': {
@@ -20624,6 +20633,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 27, 2014',
     developer: 'AMPLITUDE Studios',
     publisher: 'AMPLITUDE Studios',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 13946,
       rating: 'Very Positive',
@@ -20645,8 +20656,6 @@ export const steamGameDetails: SteamGameMap = {
       'Resource Management',
       'Survival',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '249130': {
@@ -20661,6 +20670,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 22, 2013',
     developer: "Traveller's Tales",
     publisher: 'Warner Bros. Interactive Entertainment',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 29039,
       rating: 'Very Positive',
@@ -20682,8 +20693,6 @@ export const steamGameDetails: SteamGameMap = {
       'Third Person',
       'Split Screen',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '250400': {
@@ -20698,6 +20707,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Aug 29, 2014',
     developer: 'Eko Software',
     publisher: '505 Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 17095,
       rating: 'Mostly Positive',
@@ -20719,8 +20730,6 @@ export const steamGameDetails: SteamGameMap = {
       'Hack and Slash',
       'Post-apocalyptic',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '250600': {
@@ -20735,6 +20744,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Feb 14, 2014',
     developer: 'Krillbite Studio',
     publisher: 'Krillbite Studio',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 23418,
       rating: 'Very Positive',
@@ -20756,8 +20767,6 @@ export const steamGameDetails: SteamGameMap = {
       'Emotional',
       'Flight',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '250760': {
@@ -20772,6 +20781,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jun 26, 2014',
     developer: 'Yacht Club Games',
     publisher: 'Yacht Club Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 16562,
       rating: 'Overwhelmingly Positive',
@@ -20793,8 +20804,6 @@ export const steamGameDetails: SteamGameMap = {
       'Old School',
       'Medieval',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '251150': {
@@ -20809,6 +20818,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '29 Jul, 2014',
     developer: 'Nihon Falcom',
     publisher: 'XSEED Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 10200,
       rating: 'Very Positive',
@@ -20830,8 +20841,6 @@ export const steamGameDetails: SteamGameMap = {
       'Turn-Based Combat',
       'Strategy',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '252410': {
@@ -20846,6 +20855,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Dec 5, 2013',
     developer: 'Image & Form Games',
     publisher: 'Image & Form Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 10564,
       rating: 'Very Positive',
@@ -20867,8 +20878,6 @@ export const steamGameDetails: SteamGameMap = {
       'Casual',
       'Sci-fi',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '252610': {
@@ -20883,6 +20892,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jul 21, 2016',
     developer: 'Rocketcat Games',
     publisher: 'Rocketcat Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 10093,
       rating: 'Very Positive',
@@ -20904,8 +20915,6 @@ export const steamGameDetails: SteamGameMap = {
       'Replay Value',
       'Co-op',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '253230': {
@@ -20920,6 +20929,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 5, 2017',
     developer: 'Gears for Breakfast',
     publisher: 'Gears for Breakfast',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 52848,
       rating: 'Overwhelmingly Positive',
@@ -20941,8 +20952,6 @@ export const steamGameDetails: SteamGameMap = {
       'Co-op',
       'Moddable',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '253250': {
@@ -20957,6 +20966,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jul 25, 2018',
     developer: 'Radiant Entertainment',
     publisher: '(none)',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 12958,
       rating: 'Mostly Positive',
@@ -20978,8 +20989,6 @@ export const steamGameDetails: SteamGameMap = {
       'RPG',
       'Multiplayer',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '253430': {
@@ -20994,6 +21003,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Feb 3, 2014',
     developer: 'DigitalDNA Games',
     publisher: 'DigitalDNA Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 11082,
       rating: 'Very Positive',
@@ -21015,8 +21026,6 @@ export const steamGameDetails: SteamGameMap = {
       'Dragons',
       'First-Person',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '253710': {
@@ -21031,6 +21040,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jun 3, 2014',
     developer: 'Expansive Worlds',
     publisher: 'Expansive Worlds',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 44044,
       rating: 'Mixed',
@@ -21052,8 +21063,6 @@ export const steamGameDetails: SteamGameMap = {
       'FPS',
       'Sports',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '254700': {
@@ -21068,6 +21077,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '27 Feb, 2014',
     developer: 'Capcom',
     publisher: 'Capcom',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 90547,
       rating: 'Very Positive',
@@ -21089,8 +21100,6 @@ export const steamGameDetails: SteamGameMap = {
       'Shooter',
       'Gore',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '256290': {
@@ -21105,6 +21114,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Apr 29, 2014',
     developer: 'Ubisoft Montréal',
     publisher: 'Ubisoft',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 13400,
       rating: 'Very Positive',
@@ -21126,8 +21137,6 @@ export const steamGameDetails: SteamGameMap = {
       'Cute',
       'Side Scroller',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '257350': {
@@ -21142,6 +21151,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Nov 15, 2013',
     developer: 'Beamdog',
     publisher: 'Beamdog',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 10543,
       rating: 'Very Positive',
@@ -21163,8 +21174,6 @@ export const steamGameDetails: SteamGameMap = {
       'Magic',
       'Online Co-Op',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '257420': {
@@ -21179,6 +21188,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Sep 24, 2020',
     developer: 'Croteam',
     publisher: 'Devolver Digital',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 17134,
       rating: 'Very Positive',
@@ -21200,8 +21211,6 @@ export const steamGameDetails: SteamGameMap = {
       'Blood',
       'Classic',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '257850': {
@@ -21216,6 +21225,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '31 Mar, 2016',
     developer: 'Heart Machine',
     publisher: 'Heart Machine',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 18429,
       rating: 'Very Positive',
@@ -21237,8 +21248,6 @@ export const steamGameDetails: SteamGameMap = {
       'Top-Down',
       'Post-apocalyptic',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '260230': {
@@ -21253,6 +21262,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jun 25, 2014',
     developer: 'Ubisoft Montpellier',
     publisher: 'Ubisoft',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 26994,
       rating: 'Very Positive',
@@ -21274,8 +21285,6 @@ export const steamGameDetails: SteamGameMap = {
       'Side Scroller',
       'Platformer',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '261030': {
@@ -21290,6 +21299,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '17 Dec, 2013',
     developer: 'Telltale Games',
     publisher: 'Skybound Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 33320,
       rating: 'Overwhelmingly Positive',
@@ -21311,8 +21322,6 @@ export const steamGameDetails: SteamGameMap = {
       'Emotional',
       'Mature',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '264200': {
@@ -21327,6 +21336,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Mar 3, 2014',
     developer: 'Silver Dollar Games',
     publisher: 'Silver Dollar Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 16328,
       rating: 'Overwhelmingly Positive',
@@ -21348,8 +21359,6 @@ export const steamGameDetails: SteamGameMap = {
       'Rhythm',
       'Great Soundtrack',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '265300': {
@@ -21364,6 +21373,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 28, 2014',
     developer: 'CI Games',
     publisher: 'CI Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 20495,
       rating: 'Mixed',
@@ -21385,8 +21396,6 @@ export const steamGameDetails: SteamGameMap = {
       'Dark',
       'Story Rich',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '265550': {
@@ -21401,6 +21410,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '5 Sep, 2014',
     developer: 'Capcom Game Studio Vancouver',
     publisher: 'Capcom',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 19988,
       rating: 'Mostly Positive',
@@ -21422,8 +21433,6 @@ export const steamGameDetails: SteamGameMap = {
       'Online Co-Op',
       'Sandbox',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '265630': {
@@ -21438,6 +21447,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'May 9, 2014',
     developer: 'Fistful of Frags Team',
     publisher: 'Fistful of Frags Team',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 36705,
       rating: 'Very Positive',
@@ -21459,8 +21470,6 @@ export const steamGameDetails: SteamGameMap = {
       'Adventure',
       'Massively Multiplayer',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '265930': {
@@ -21475,6 +21484,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Apr 1, 2014',
     developer: 'Coffee Stain Studios',
     publisher: 'Coffee Stain Publishing',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 69533,
       rating: 'Very Positive',
@@ -21496,8 +21507,6 @@ export const steamGameDetails: SteamGameMap = {
       'Co-op',
       'Local Multiplayer',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '266840': {
@@ -21512,6 +21521,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'May 8, 2014',
     developer: 'SkyBox Labs',
     publisher: 'Xbox Game Studios',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 35955,
       rating: 'Very Positive',
@@ -21533,8 +21544,6 @@ export const steamGameDetails: SteamGameMap = {
       'Atmospheric',
       'Tactical',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '268050': {
@@ -21549,6 +21558,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '13 Oct, 2014',
     developer: 'Tango Gameworks',
     publisher: 'Bethesda Softworks',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 32202,
       rating: 'Mostly Positive',
@@ -21570,8 +21581,6 @@ export const steamGameDetails: SteamGameMap = {
       'Difficult',
       'Adventure',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '268650': {
@@ -21586,6 +21595,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Nov 6, 2020',
     developer: 'Brilliant Skies Ltd.',
     publisher: 'Brilliant Skies Ltd.',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 12478,
       rating: 'Very Positive',
@@ -21607,8 +21618,6 @@ export const steamGameDetails: SteamGameMap = {
       'Co-op Campaign',
       'Military',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '269210': {
@@ -21623,6 +21632,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jan 29, 2014',
     developer: 'Panic Art Studios Ltd',
     publisher: 'Panic Art Studios Ltd',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 45104,
       rating: 'Mixed',
@@ -21644,8 +21655,6 @@ export const steamGameDetails: SteamGameMap = {
       'Local Co-Op',
       'Roguelite',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '269950': {
@@ -21660,6 +21669,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '30 Mar, 2017',
     developer: 'Laminar Research',
     publisher: 'Laminar Research',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 19760,
       rating: 'Very Positive',
@@ -21681,8 +21692,6 @@ export const steamGameDetails: SteamGameMap = {
       'Third Person',
       'Family Friendly',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '270150': {
@@ -21697,6 +21706,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Apr 2, 2015',
     developer: 'Osumia Games',
     publisher: 'Osumia Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 16448,
       rating: 'Very Positive',
@@ -21718,8 +21729,6 @@ export const steamGameDetails: SteamGameMap = {
       'PvE',
       'Co-op',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '270550': {
@@ -21734,6 +21743,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Mar 28, 2014',
     developer: 'Awesome Games Studio',
     publisher: 'Awesome Games Studio',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 12353,
       rating: 'Very Positive',
@@ -21755,45 +21766,6 @@ export const steamGameDetails: SteamGameMap = {
       'Free to Play',
       'Singleplayer',
     ],
-    tags: [],
-    features: [],
-    clueOrder: ['tags', 'details', 'desc'],
-  },
-  '273110': {
-    name: 'Counter-Strike Nexon',
-    appId: 273110,
-    primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/273110/ss_282303a571b3e5c6197882701bb34655e49c1395.600x338.jpg',
-    secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/273110/ss_04fb683337cd4981cf567b0f1bdfb1268c04fc46.600x338.jpg',
-    shortDescription:
-      '||Counter-Strike Nexon|| is a Free to Play MMOFPS offering competitive PvP and PvE action including content from the original Counter-Strike and all new game modes, map creation function, weapons, and hordes of Zombies!',
-    releaseDate: 'Oct 7, 2014',
-    developer: 'Valve',
-    publisher: 'NEXON',
-    allReviewSummary: {
-      count: 43161,
-      rating: 'Mixed',
-    },
-    userTags: [
-      'Free to Play',
-      'FPS',
-      'Zombies',
-      'Sandbox',
-      'Multiplayer',
-      'PvE',
-      'PvP',
-      'Shooter',
-      'Horror',
-      'Action',
-      'Co-op',
-      'First-Person',
-      'Survival Horror',
-      'Online Co-Op',
-      'Gore',
-    ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '274170': {
@@ -21808,6 +21780,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Mar 10, 2015',
     developer: 'Dennaton Games',
     publisher: 'Devolver Digital',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 76356,
       rating: 'Very Positive',
@@ -21829,8 +21803,6 @@ export const steamGameDetails: SteamGameMap = {
       'Atmospheric',
       'Blood',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '274190': {
@@ -21845,6 +21817,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 15, 2015',
     developer: 'Free Lives',
     publisher: 'Devolver Digital',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 60269,
       rating: 'Overwhelmingly Positive',
@@ -21866,8 +21840,6 @@ export const steamGameDetails: SteamGameMap = {
       'Gore',
       'Retro',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '274520': {
@@ -21882,6 +21854,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Aug 17, 2017',
     developer: 'Acid Wizard Studio',
     publisher: 'Hooded Horse',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 23621,
       rating: 'Very Positive',
@@ -21903,8 +21877,6 @@ export const steamGameDetails: SteamGameMap = {
       'Dark Fantasy',
       'Singleplayer',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '278360': {
@@ -21919,6 +21891,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'May 28, 2014',
     developer: 'Gone North Games',
     publisher: 'Coffee Stain Publishing',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 29111,
       rating: 'Very Positive',
@@ -21940,8 +21914,6 @@ export const steamGameDetails: SteamGameMap = {
       'Sci-fi',
       'Relaxing',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '280160': {
@@ -21956,6 +21928,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 4, 2016',
     developer: 'Lince Works',
     publisher: 'Lince Works',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 12928,
       rating: 'Very Positive',
@@ -21977,8 +21951,6 @@ export const steamGameDetails: SteamGameMap = {
       'Online Co-Op',
       'Magic',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '280790': {
@@ -21992,6 +21964,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'May 8, 2017',
     developer: 'Playful Corp.',
     publisher: 'Playful Corp.',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 30831,
       rating: 'Mostly Positive',
@@ -22013,8 +21987,6 @@ export const steamGameDetails: SteamGameMap = {
       'Singleplayer',
       'Online Co-Op',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '282140': {
@@ -22029,6 +22001,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Sep 21, 2015',
     developer: 'Frictional Games',
     publisher: 'Frictional Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 50098,
       rating: 'Overwhelmingly Positive',
@@ -22050,8 +22024,6 @@ export const steamGameDetails: SteamGameMap = {
       'Adventure',
       'Walking Simulator',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '282440': {
@@ -22066,6 +22038,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Sep 17, 2014',
     developer: 'id Software',
     publisher: 'Bethesda Softworks',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 8946,
       rating: 'Very Positive',
@@ -22084,8 +22058,6 @@ export const steamGameDetails: SteamGameMap = {
       'Difficult',
       'Cult Classic',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '282800': {
@@ -22100,6 +22072,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'May 16, 2014',
     developer: 'Orange_Juice',
     publisher: 'Fruitbat Factory',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 29619,
       rating: 'Very Positive',
@@ -22121,8 +22095,6 @@ export const steamGameDetails: SteamGameMap = {
       'Singleplayer',
       'Difficult',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '283640': {
@@ -22137,6 +22109,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'May 17, 2016',
     developer: 'Ska Studios',
     publisher: 'Ska Studios',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 21441,
       rating: 'Very Positive',
@@ -22158,8 +22132,6 @@ export const steamGameDetails: SteamGameMap = {
       'Co-op',
       'Side Scroller',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '285190': {
@@ -22174,6 +22146,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Apr 27, 2017',
     developer: 'Relic Entertainment',
     publisher: 'Relic Entertainment',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 23343,
       rating: 'Mixed',
@@ -22195,8 +22169,6 @@ export const steamGameDetails: SteamGameMap = {
       'Tactical',
       'Co-op',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '285900': {
@@ -22211,6 +22183,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Dec 12, 2017',
     developer: 'Boneloaf',
     publisher: 'Boneloaf',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 63228,
       rating: 'Very Positive',
@@ -22232,8 +22206,6 @@ export const steamGameDetails: SteamGameMap = {
       'Co-op',
       'Family Friendly',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '285920': {
@@ -22248,6 +22220,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Aug 10, 2018',
     developer: 'Payload Studios',
     publisher: 'Mythwright',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 24399,
       rating: 'Very Positive',
@@ -22269,8 +22243,6 @@ export const steamGameDetails: SteamGameMap = {
       'Early Access',
       'Indie',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '287290': {
@@ -22285,6 +22257,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Feb 24, 2015',
     developer: 'CAPCOM Co., Ltd.',
     publisher: 'CAPCOM Co., Ltd.',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 30393,
       rating: 'Mostly Positive',
@@ -22306,8 +22280,6 @@ export const steamGameDetails: SteamGameMap = {
       'Gore',
       'Episodic',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '287390': {
@@ -22322,6 +22294,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Aug 25, 2014',
     developer: '4A Games',
     publisher: 'Deep Silver',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 74730,
       rating: 'Very Positive',
@@ -22343,8 +22317,6 @@ export const steamGameDetails: SteamGameMap = {
       'Survival Horror',
       'Nudity',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '287450': {
@@ -22359,6 +22331,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jun 12, 2014',
     developer: 'SkyBox Labs',
     publisher: 'Xbox Game Studios',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 15445,
       rating: 'Very Positive',
@@ -22380,8 +22354,6 @@ export const steamGameDetails: SteamGameMap = {
       'Real-Time',
       'Co-op',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '287980': {
@@ -22396,6 +22368,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Nov 6, 2015',
     developer: 'Dinosaur Polo Club',
     publisher: 'Dinosaur Polo Club',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 16352,
       rating: 'Overwhelmingly Positive',
@@ -22417,8 +22391,6 @@ export const steamGameDetails: SteamGameMap = {
       'Mouse only',
       'Touch-Friendly',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '288160': {
@@ -22433,6 +22405,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jul 28, 2014',
     developer: 'Fireproof Games',
     publisher: 'Fireproof Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 30854,
       rating: 'Overwhelmingly Positive',
@@ -22454,8 +22428,6 @@ export const steamGameDetails: SteamGameMap = {
       'Escape Room',
       'Dark',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '288470': {
@@ -22470,6 +22442,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Sep 12, 2014',
     developer: 'Lionhead Studios',
     publisher: 'Xbox Game Studios',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 15773,
       rating: 'Very Positive',
@@ -22491,8 +22465,6 @@ export const steamGameDetails: SteamGameMap = {
       'Action',
       'Comedy',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '290080': {
@@ -22507,6 +22479,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Nov 17, 2015',
     developer: 'Bitbox Ltd.',
     publisher: 'Bitbox Ltd.',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 12033,
       rating: 'Mixed',
@@ -22528,8 +22502,6 @@ export const steamGameDetails: SteamGameMap = {
       'Adventure',
       'Massively Multiplayer',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '290340': {
@@ -22544,6 +22516,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Sep 1, 2015',
     developer: 'League of Geeks',
     publisher: 'League of Geeks',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 15963,
       rating: 'Very Positive',
@@ -22565,8 +22539,6 @@ export const steamGameDetails: SteamGameMap = {
       'Multiple Endings',
       'Fantasy',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '291650': {
@@ -22581,6 +22553,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Mar 26, 2015',
     developer: 'Obsidian Entertainment',
     publisher: 'Xbox Game Studios',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 25446,
       rating: 'Very Positive',
@@ -22602,8 +22576,6 @@ export const steamGameDetails: SteamGameMap = {
       'Open World',
       'Exploration',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '292120': {
@@ -22618,6 +22590,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 9, 2014',
     developer: 'Square Enix',
     publisher: 'Square Enix',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 19084,
       rating: 'Mostly Positive',
@@ -22639,8 +22613,6 @@ export const steamGameDetails: SteamGameMap = {
       'Atmospheric',
       'Turn-Based Combat',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '292730': {
@@ -22655,6 +22627,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Nov 3, 2016',
     developer: 'Infinity Ward',
     publisher: 'Activision',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 29343,
       rating: 'Mixed',
@@ -22676,8 +22650,6 @@ export const steamGameDetails: SteamGameMap = {
       'Story Rich',
       'Quick-Time Events',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '293760': {
@@ -22692,6 +22664,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Mar 12, 2015',
     developer: 'Camshaft Software Ltd',
     publisher: 'Camshaft Software Ltd',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 16798,
       rating: 'Very Positive',
@@ -22713,8 +22687,6 @@ export const steamGameDetails: SteamGameMap = {
       'Automation',
       'Economy',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '294860': {
@@ -22729,6 +22701,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Nov 11, 2014',
     developer: 'SEGA',
     publisher: 'SEGA',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 13119,
       rating: 'Very Positive',
@@ -22750,8 +22724,6 @@ export const steamGameDetails: SteamGameMap = {
       'Third Person',
       'Turn-Based Strategy',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '297000': {
@@ -22766,6 +22738,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jan 28, 2015',
     developer: 'Dotemu',
     publisher: 'Ubisoft Entertainment',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 24244,
       rating: 'Mostly Positive',
@@ -22787,8 +22761,6 @@ export const steamGameDetails: SteamGameMap = {
       'Replay Value',
       'Local Multiplayer',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '298630': {
@@ -22803,6 +22775,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Feb 13, 2015',
     developer: 'Mouldy Toof Studios',
     publisher: 'Team17',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 16160,
       rating: 'Very Positive',
@@ -22824,8 +22798,6 @@ export const steamGameDetails: SteamGameMap = {
       'Top-Down',
       'Multiplayer',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '299740': {
@@ -22840,6 +22812,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Dec 18, 2018',
     developer: 'Entrada Interactive LLC',
     publisher: 'Entrada Interactive LLC',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 31561,
       rating: 'Mixed',
@@ -22861,8 +22835,6 @@ export const steamGameDetails: SteamGameMap = {
       'Simulation',
       'FPS',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '300380': {
@@ -22877,6 +22849,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 4, 2017',
     developer: 'Redemption Road',
     publisher: 'Tripwire Presents',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 13295,
       rating: 'Very Positive',
@@ -22898,8 +22872,6 @@ export const steamGameDetails: SteamGameMap = {
       '4 Player Local',
       'Co-op',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '301640': {
@@ -22914,6 +22886,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Mar 6, 2015',
     developer: 'Rebellion',
     publisher: 'Rebellion',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 18261,
       rating: 'Very Positive',
@@ -22935,8 +22909,6 @@ export const steamGameDetails: SteamGameMap = {
       'Survival Horror',
       'Third Person',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '302510': {
@@ -22951,6 +22923,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 10, 2014',
     developer: 'Crytek',
     publisher: 'Crytek ',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 43555,
       rating: 'Very Positive',
@@ -22972,8 +22946,6 @@ export const steamGameDetails: SteamGameMap = {
       'Open World',
       'RPG',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '302670': {
@@ -22988,6 +22960,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Apr 27, 2018',
     developer: 'Digitalmindsoft',
     publisher: 'Digitalmindsoft',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 23815,
       rating: 'Mostly Positive',
@@ -23009,8 +22983,6 @@ export const steamGameDetails: SteamGameMap = {
       'Modern',
       'Realistic',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '302830': {
@@ -23025,6 +22997,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Dec 19, 2014',
     developer: 'Novalink',
     publisher: 'Novalink',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 25279,
       rating: 'Mixed',
@@ -23046,8 +23020,6 @@ export const steamGameDetails: SteamGameMap = {
       '3D Vision',
       'Massively Multiplayer',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '303210': {
@@ -23062,6 +23034,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 1, 2015',
     developer: 'Everything Unlimited Ltd.',
     publisher: 'Everything Unlimited Ltd.',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 22824,
       rating: 'Very Positive',
@@ -23083,8 +23057,6 @@ export const steamGameDetails: SteamGameMap = {
       'Emotional',
       'Great Soundtrack',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '304050': {
@@ -23099,6 +23071,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jul 9, 2015',
     developer: 'gamigo US Inc.',
     publisher: 'gamigo US Inc.',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 92655,
       rating: 'Mostly Positive',
@@ -23120,8 +23094,6 @@ export const steamGameDetails: SteamGameMap = {
       'Procedural Generation',
       'Adventure',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '304240': {
@@ -23136,6 +23108,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jan 19, 2015',
     developer: 'CAPCOM Co., Ltd.',
     publisher: 'CAPCOM Co., Ltd.',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 31257,
       rating: 'Very Positive',
@@ -23157,8 +23131,6 @@ export const steamGameDetails: SteamGameMap = {
       'Cult Classic',
       'Story Rich',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '304390': {
@@ -23173,6 +23145,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Feb 13, 2017',
     developer: 'Ubisoft Montreal',
     publisher: 'Ubisoft',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 159008,
       rating: 'Mixed',
@@ -23194,8 +23168,6 @@ export const steamGameDetails: SteamGameMap = {
       'Realistic',
       'Strategy',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '304430': {
@@ -23210,6 +23182,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '7 Jul, 2016',
     developer: 'Playdead',
     publisher: 'Playdead',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 73035,
       rating: 'Overwhelmingly Positive',
@@ -23231,8 +23205,6 @@ export const steamGameDetails: SteamGameMap = {
       'Ambient',
       'Minimalist',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '304930': {
@@ -23247,6 +23219,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jul 7, 2017',
     developer: 'Smartly Dressed Games',
     publisher: 'Smartly Dressed Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 561015,
       rating: 'Very Positive',
@@ -23268,8 +23242,6 @@ export const steamGameDetails: SteamGameMap = {
       'Looter Shooter',
       'FPS',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '306020': {
@@ -23284,6 +23256,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Nov 19, 2014',
     developer: 'Ninja Kiwi',
     publisher: 'Ninja Kiwi',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 11782,
       rating: 'Very Positive',
@@ -23305,8 +23279,6 @@ export const steamGameDetails: SteamGameMap = {
       'Replay Value',
       'Difficult',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '307690': {
@@ -23321,6 +23293,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 8, 2014',
     developer: 'United Front Games',
     publisher: 'Square Enix',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 75104,
       rating: 'Overwhelmingly Positive',
@@ -23342,8 +23316,6 @@ export const steamGameDetails: SteamGameMap = {
       'Atmospheric',
       'Shooter',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '307780': {
@@ -23358,6 +23330,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Apr 13, 2015',
     developer: 'NetherRealm Studios',
     publisher: 'Warner Bros. Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 58784,
       rating: 'Mostly Positive',
@@ -23379,8 +23353,6 @@ export const steamGameDetails: SteamGameMap = {
       'Great Soundtrack',
       'Online Co-Op',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '307950': {
@@ -23395,6 +23367,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Apr 12, 2023',
     developer: '1C Game Studios',
     publisher: 'FOR-GAMES CR LTD',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 21977,
       rating: 'Mostly Positive',
@@ -23416,8 +23390,6 @@ export const steamGameDetails: SteamGameMap = {
       'PvE',
       'Realistic',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '311210': {
@@ -23432,6 +23404,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Nov 5, 2015',
     developer: 'Treyarch',
     publisher: 'Activision',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 225840,
       rating: 'Very Positive',
@@ -23453,8 +23427,6 @@ export const steamGameDetails: SteamGameMap = {
       'Gore',
       'Great Soundtrack',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '311310': {
@@ -23469,6 +23441,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jun 13, 2019',
     developer: 'Bermuda Computer Club',
     publisher: 'Bermuda Computer Club',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 14416,
       rating: 'Mixed',
@@ -23490,8 +23464,6 @@ export const steamGameDetails: SteamGameMap = {
       'Massively Multiplayer',
       'Multiplayer',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '311340': {
@@ -23506,6 +23478,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Dec 18, 2014',
     developer: 'KONAMI',
     publisher: 'KONAMI',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 17775,
       rating: 'Very Positive',
@@ -23527,8 +23501,6 @@ export const steamGameDetails: SteamGameMap = {
       'Third-Person Shooter',
       'Shooter',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '311560': {
@@ -23543,6 +23515,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Mar 9, 2015',
     developer: 'Ubisoft Sofia',
     publisher: 'Ubisoft',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 20848,
       rating: 'Very Positive',
@@ -23564,8 +23538,6 @@ export const steamGameDetails: SteamGameMap = {
       'Action-Adventure',
       'Quick-Time Events',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '311690': {
@@ -23580,6 +23552,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '5 Apr, 2016',
     developer: 'Dodge Roll',
     publisher: 'Devolver Digital',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 88102,
       rating: 'Overwhelmingly Positive',
@@ -23601,8 +23575,6 @@ export const steamGameDetails: SteamGameMap = {
       'Top-Down',
       'Shooter',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '312520': {
@@ -23617,6 +23589,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Mar 28, 2017',
     developer: 'Videocult',
     publisher: 'Akupara Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 49616,
       rating: 'Very Positive',
@@ -23638,8 +23612,6 @@ export const steamGameDetails: SteamGameMap = {
       'Metroidvania',
       'Survival Horror',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '312530': {
@@ -23654,6 +23626,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jun 4, 2015',
     developer: 'Landon Podbielski',
     publisher: 'CORPTRON GAMES CORP.',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 38899,
       rating: 'Overwhelmingly Positive',
@@ -23675,8 +23649,6 @@ export const steamGameDetails: SteamGameMap = {
       'Retro',
       'Local Co-Op',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '312670': {
@@ -23691,6 +23663,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Aug 27, 2018',
     developer: 'Rebellion',
     publisher: 'Rebellion',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 11109,
       rating: 'Very Positive',
@@ -23712,8 +23686,6 @@ export const steamGameDetails: SteamGameMap = {
       'Horror',
       'Funny',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '312990': {
@@ -23728,6 +23700,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Aug 5, 2014',
     developer: 'Free Lives',
     publisher: 'Devolver Digital',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 18226,
       rating: 'Overwhelmingly Positive',
@@ -23749,8 +23723,6 @@ export const steamGameDetails: SteamGameMap = {
       'Funny',
       'America',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '313120': {
@@ -23765,6 +23737,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Aug 10, 2022',
     developer: 'Beam Team Games',
     publisher: 'Beam Team Publishing',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 46934,
       rating: 'Mostly Positive',
@@ -23786,8 +23760,6 @@ export const steamGameDetails: SteamGameMap = {
       'Simulation',
       'Underwater',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '313340': {
@@ -23801,6 +23773,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Aug 18, 2014',
     developer: 'David OReilly',
     publisher: 'David OReilly',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 16291,
       rating: 'Very Positive',
@@ -23822,8 +23796,6 @@ export const steamGameDetails: SteamGameMap = {
       'Ambient',
       'Idler',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '314650': {
@@ -23838,6 +23810,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jun 11, 2019',
     developer: 'Cosmographic Software',
     publisher: 'Cosmographic Software',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 14683,
       rating: 'Overwhelmingly Positive',
@@ -23859,8 +23833,6 @@ export const steamGameDetails: SteamGameMap = {
       'Simulation',
       'Relaxing',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '315210': {
@@ -23875,6 +23847,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Feb 2, 2024',
     developer: 'Rocksteady Studios',
     publisher: 'Warner Bros. Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 17222,
       rating: 'Mixed',
@@ -23896,8 +23870,6 @@ export const steamGameDetails: SteamGameMap = {
       'Psychological Horror',
       'Political',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '317360': {
@@ -23912,6 +23884,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 23, 2014',
     developer: 'Double Action Factory',
     publisher: 'Double Action Factory',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 11390,
       rating: 'Very Positive',
@@ -23933,8 +23907,6 @@ export const steamGameDetails: SteamGameMap = {
       'Comedy',
       'Singleplayer',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '319510': {
@@ -23949,6 +23921,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Aug 19, 2014',
     developer: 'Scott Cawthon',
     publisher: 'Scott Cawthon',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 57582,
       rating: 'Very Positive',
@@ -23970,8 +23944,6 @@ export const steamGameDetails: SteamGameMap = {
       'Jump Scare',
       'Supernatural',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '320240': {
@@ -23986,6 +23958,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '10 Aug, 2018',
     developer: 'Compulsion Games',
     publisher: 'Gearbox Publishing',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 13631,
       rating: 'Mostly Positive',
@@ -24007,8 +23981,6 @@ export const steamGameDetails: SteamGameMap = {
       'Dark',
       'Crafting',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '322500': {
@@ -24023,6 +23995,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Feb 25, 2016',
     developer: 'SUPERHOT Team',
     publisher: 'SUPERHOT Team',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 39871,
       rating: 'Very Positive',
@@ -24044,8 +24018,6 @@ export const steamGameDetails: SteamGameMap = {
       'Kickstarter',
       'Fast-Paced',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '323470': {
@@ -24060,6 +24032,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Feb 26, 2015',
     developer: 'DIMPS',
     publisher: 'BANDAI NAMCO Entertainment',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 21575,
       rating: 'Very Positive',
@@ -24081,8 +24055,6 @@ export const steamGameDetails: SteamGameMap = {
       "Beat 'em up",
       'Controller',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '324800': {
@@ -24097,6 +24069,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 13, 2016',
     developer: 'Flying Wild Hog',
     publisher: 'Devolver Digital',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 27866,
       rating: 'Very Positive',
@@ -24118,8 +24092,6 @@ export const steamGameDetails: SteamGameMap = {
       'Demons',
       'Singleplayer',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '325610': {
@@ -24134,6 +24106,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Feb 17, 2015',
     developer: 'CREATIVE ASSEMBLY',
     publisher: 'SEGA',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 36873,
       rating: 'Mostly Positive',
@@ -24155,8 +24129,6 @@ export const steamGameDetails: SteamGameMap = {
       'Atmospheric',
       'Action',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '326460': {
@@ -24171,6 +24143,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'May 22, 2020',
     developer: 'kChamp Games',
     publisher: 'kChamp Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 35324,
       rating: 'Very Positive',
@@ -24192,8 +24166,6 @@ export const steamGameDetails: SteamGameMap = {
       'Turn-Based Strategy',
       'Co-op',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '327030': {
@@ -24208,6 +24180,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Aug 23, 2016',
     developer: 'Team17',
     publisher: 'Team17',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 13547,
       rating: 'Very Positive',
@@ -24229,8 +24203,6 @@ export const steamGameDetails: SteamGameMap = {
       'Classic',
       'Memes',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '329050': {
@@ -24245,6 +24217,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jun 23, 2015',
     developer: 'CAPCOM Co., Ltd.',
     publisher: 'CAPCOM Co., Ltd. ',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 20376,
       rating: 'Very Positive',
@@ -24266,8 +24240,6 @@ export const steamGameDetails: SteamGameMap = {
       'Atmospheric',
       "Beat 'em up",
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '329430': {
@@ -24282,6 +24254,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Apr 27, 2015',
     developer: 'Undead Labs',
     publisher: 'Xbox Game Studios',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 12773,
       rating: 'Mostly Positive',
@@ -24303,8 +24277,6 @@ export const steamGameDetails: SteamGameMap = {
       'Atmospheric',
       'Crafting',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '330020': {
@@ -24319,6 +24291,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Sep 3, 2019',
     developer: 'Dead Mage',
     publisher: '11 bit studios',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 22441,
       rating: 'Very Positive',
@@ -24340,8 +24314,6 @@ export const steamGameDetails: SteamGameMap = {
       'Singleplayer',
       'Action RPG',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '330830': {
@@ -24356,6 +24328,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Feb 16, 2021',
     developer: 'Telltale Games',
     publisher: '2K',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 19314,
       rating: 'Very Positive',
@@ -24377,8 +24351,6 @@ export const steamGameDetails: SteamGameMap = {
       'Dark Humor',
       'Sci-fi',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '332310': {
@@ -24393,6 +24365,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Mar 7, 2017',
     developer: 'TT Games',
     publisher: 'Warner Bros. Interactive Entertainment',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 15568,
       rating: 'Mostly Positive',
@@ -24414,8 +24388,6 @@ export const steamGameDetails: SteamGameMap = {
       'Co-op',
       'Action',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '332570': {
@@ -24430,6 +24402,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Nov 21, 2014',
     developer: 'Fayju',
     publisher: 'Fayju',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 11355,
       rating: 'Very Positive',
@@ -24451,8 +24425,6 @@ export const steamGameDetails: SteamGameMap = {
       'Comedy',
       'Controller',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '332800': {
@@ -24467,6 +24439,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '10 Nov, 2014',
     developer: 'Scott Cawthon',
     publisher: 'Scott Cawthon',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 25339,
       rating: 'Very Positive',
@@ -24488,8 +24462,6 @@ export const steamGameDetails: SteamGameMap = {
       'Story Rich',
       'Mystery',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '332950': {
@@ -24504,6 +24476,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '26 Sep, 2018',
     developer: 'Glowstick Entertainment',
     publisher: 'Glowstick Entertainment',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 23077,
       rating: 'Very Positive',
@@ -24525,8 +24499,6 @@ export const steamGameDetails: SteamGameMap = {
       'Story Rich',
       'Arcade',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '333640': {
@@ -24541,6 +24513,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Dec 5, 2024',
     developer: 'Freehold Games',
     publisher: 'Kitfox Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 12017,
       rating: 'Overwhelmingly Positive',
@@ -24562,8 +24536,6 @@ export const steamGameDetails: SteamGameMap = {
       'Survival',
       'Atmospheric',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '333930': {
@@ -24578,6 +24550,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jun 2, 2015',
     developer: 'Splash Damage',
     publisher: 'Warchest Ltd.',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 56919,
       rating: 'Very Positive',
@@ -24599,8 +24573,6 @@ export const steamGameDetails: SteamGameMap = {
       'Parkour',
       'Massively Multiplayer',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '334230': {
@@ -24615,6 +24587,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Dec 15, 2014',
     developer: 'BlankMediaGames',
     publisher: 'Digital Bandidos',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 36334,
       rating: 'Very Positive',
@@ -24636,8 +24610,6 @@ export const steamGameDetails: SteamGameMap = {
       'Memes',
       'Comedy',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '335240': {
@@ -24652,6 +24624,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jan 30, 2015',
     developer: 'Atelier 801',
     publisher: 'Atelier 801',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 28452,
       rating: 'Very Positive',
@@ -24673,8 +24647,6 @@ export const steamGameDetails: SteamGameMap = {
       'Strategy',
       'Mouse only',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '335300': {
@@ -24689,6 +24661,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Apr 1, 2015',
     developer: 'FromSoftware, Inc.',
     publisher: 'Bandai Namco Entertainment',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 125903,
       rating: 'Very Positive',
@@ -24710,8 +24684,6 @@ export const steamGameDetails: SteamGameMap = {
       'Medieval',
       'Dark',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '335670': {
@@ -24725,6 +24697,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Dec 15, 2014',
     developer: 'Dingaling Productions',
     publisher: 'Serenity Forge',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 14929,
       rating: 'Overwhelmingly Positive',
@@ -24746,8 +24720,6 @@ export const steamGameDetails: SteamGameMap = {
       'Singleplayer',
       '2D',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '337000': {
@@ -24762,6 +24734,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Aug 23, 2016',
     developer: 'Eidos Montreal',
     publisher: 'Eidos Interactive Corp.',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 41650,
       rating: 'Mostly Positive',
@@ -24783,8 +24757,6 @@ export const steamGameDetails: SteamGameMap = {
       'Great Soundtrack',
       'Open World',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '337320': {
@@ -24799,6 +24771,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jul 29, 2021',
     developer: 'South East Games',
     publisher: 'South East Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 31544,
       rating: 'Overwhelmingly Positive',
@@ -24820,8 +24794,6 @@ export const steamGameDetails: SteamGameMap = {
       'Singleplayer',
       'Indie',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '337340': {
@@ -24836,6 +24808,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Dec 14, 2017',
     developer: 'Freebird Games',
     publisher: 'Freebird Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 19829,
       rating: 'Overwhelmingly Positive',
@@ -24857,8 +24831,6 @@ export const steamGameDetails: SteamGameMap = {
       'Comedy',
       'Cute',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '339340': {
@@ -24873,6 +24845,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '19 Jan, 2016',
     developer: 'CAPCOM Co., Ltd.',
     publisher: 'CAPCOM Co., Ltd.',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 16457,
       rating: 'Mostly Positive',
@@ -24894,8 +24868,6 @@ export const steamGameDetails: SteamGameMap = {
       'Difficult',
       'Story Rich',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '339610': {
@@ -24910,6 +24882,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Apr 1, 2015',
     developer: 'JOYCITY',
     publisher: 'JOYCITY',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 12723,
       rating: 'Mostly Positive',
@@ -24931,8 +24905,6 @@ export const steamGameDetails: SteamGameMap = {
       'Casual',
       'Simulation',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '341800': {
@@ -24947,6 +24919,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 8, 2015',
     developer: 'Steel Crate Games',
     publisher: 'Steel Crate Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 16602,
       rating: 'Overwhelmingly Positive',
@@ -24968,8 +24942,6 @@ export const steamGameDetails: SteamGameMap = {
       'Family Friendly',
       'Funny',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '341940': {
@@ -24984,6 +24956,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '1 Jun, 2015',
     developer: 'Destructive Creations',
     publisher: 'Destructive Creations',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 27155,
       rating: 'Very Positive',
@@ -25005,8 +24979,6 @@ export const steamGameDetails: SteamGameMap = {
       'Horror',
       'Top-Down Shooter',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '342200': {
@@ -25021,6 +24993,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Dec 10, 2015',
     developer: 'Piranha Games Inc.',
     publisher: 'Piranha Games Inc.',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 12625,
       rating: 'Very Positive',
@@ -25042,8 +25016,6 @@ export const steamGameDetails: SteamGameMap = {
       'Tactical',
       'Team-Based',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '343780': {
@@ -25058,6 +25030,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jan 19, 2015',
     developer: 'Cat5Games',
     publisher: '',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 15483,
       rating: 'Very Positive',
@@ -25079,8 +25053,6 @@ export const steamGameDetails: SteamGameMap = {
       'Nature',
       'Arcade',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '344760': {
@@ -25095,6 +25067,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Dec 15, 2015',
     developer: 'Code}{atch',
     publisher: 'Code}{atch',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 14879,
       rating: 'Mixed',
@@ -25116,8 +25090,6 @@ export const steamGameDetails: SteamGameMap = {
       'Gore',
       'Realistic',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '346900': {
@@ -25132,6 +25104,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Mar 30, 2015',
     developer: 'Hyper Hippo Games',
     publisher: 'Hyper Hippo Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 59906,
       rating: 'Very Positive',
@@ -25153,8 +25127,6 @@ export const steamGameDetails: SteamGameMap = {
       'Simulation',
       'Family Friendly',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '350080': {
@@ -25169,6 +25141,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'May 4, 2015',
     developer: 'MachineGames',
     publisher: 'Bethesda Softworks',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 22612,
       rating: 'Very Positive',
@@ -25190,8 +25164,6 @@ export const steamGameDetails: SteamGameMap = {
       'Adventure',
       'Horror',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '351640': {
@@ -25205,6 +25177,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jun 18, 2015',
     developer: 'Sanctum Games',
     publisher: 'Sanctum Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 12010,
       rating: 'Overwhelmingly Positive',
@@ -25226,8 +25200,6 @@ export const steamGameDetails: SteamGameMap = {
       'Pixel Graphics',
       'Fantasy',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '352720': {
@@ -25242,6 +25214,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jan 22, 2024',
     developer: 'Crytivo',
     publisher: 'Crytivo',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 10463,
       rating: 'Very Positive',
@@ -25263,8 +25237,6 @@ export const steamGameDetails: SteamGameMap = {
       'Sci-fi',
       'Resource Management',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '354140': {
@@ -25279,6 +25251,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Mar 2, 2015',
     developer: 'Scott Cawthon',
     publisher: 'Scott Cawthon',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 11004,
       rating: 'Very Positive',
@@ -25300,8 +25274,6 @@ export const steamGameDetails: SteamGameMap = {
       'Mystery',
       'Action',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '355180': {
@@ -25316,6 +25288,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 31, 2017',
     developer: 'Raptor Byte',
     publisher: 'Raptor Byte',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 16477,
       rating: 'Very Positive',
@@ -25337,8 +25311,6 @@ export const steamGameDetails: SteamGameMap = {
       'Singleplayer',
       'Moddable',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '356670': {
@@ -25353,6 +25325,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jul 28, 2015',
     developer: 'Lag Studios',
     publisher: 'Lag Studios',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 15316,
       rating: 'Very Positive',
@@ -25374,8 +25348,6 @@ export const steamGameDetails: SteamGameMap = {
       'Survival Horror',
       'Procedural Generation',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '359870': {
@@ -25390,6 +25362,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'May 12, 2016',
     developer: 'Square Enix',
     publisher: 'Square Enix',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 22125,
       rating: 'Very Positive',
@@ -25411,8 +25385,6 @@ export const steamGameDetails: SteamGameMap = {
       'Anime',
       'Linear',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '360430': {
@@ -25427,6 +25399,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'May 19, 2020',
     developer: 'Hangar 13',
     publisher: '2K',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 61809,
       rating: 'Mixed',
@@ -25448,8 +25422,6 @@ export const steamGameDetails: SteamGameMap = {
       'Stealth',
       'Multiplayer',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '361280': {
@@ -25464,6 +25436,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jun 2, 2016',
     developer: 'Gamious',
     publisher: 'Gamious',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 15651,
       rating: 'Very Positive',
@@ -25485,8 +25459,6 @@ export const steamGameDetails: SteamGameMap = {
       'Turn-Based Tactics',
       'Simulation',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '362490': {
@@ -25501,6 +25473,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Apr 29, 2015',
     developer: 'Bare Mettle Entertainment',
     publisher: 'Bare Mettle Entertainment',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 13184,
       rating: 'Mostly Positive',
@@ -25522,8 +25496,6 @@ export const steamGameDetails: SteamGameMap = {
       'Simulation',
       'Souls-like',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '362680': {
@@ -25538,6 +25510,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Aug 27, 2015',
     developer: 'Killmonday Games AB',
     publisher: 'Killmonday Games AB',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 21628,
       rating: 'Overwhelmingly Positive',
@@ -25559,8 +25533,6 @@ export const steamGameDetails: SteamGameMap = {
       'Surreal',
       'Dark Fantasy',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '362890': {
@@ -25574,6 +25546,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Mar 6, 2020',
     developer: 'Crowbar Collective',
     publisher: 'Crowbar Collective',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 140445,
       rating: 'Very Positive',
@@ -25595,8 +25569,6 @@ export const steamGameDetails: SteamGameMap = {
       'Adventure',
       'Horror',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '362930': {
@@ -25611,6 +25583,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '16 Oct, 2015',
     developer: 'Artefacts Studio',
     publisher: 'Microids',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 14106,
       rating: 'Very Positive',
@@ -25632,8 +25606,6 @@ export const steamGameDetails: SteamGameMap = {
       'Cute',
       'Cats',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '362960': {
@@ -25648,6 +25620,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Nov 10, 2016',
     developer: 'Obsidian Entertainment',
     publisher: 'Paradox Interactive',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 13083,
       rating: 'Very Positive',
@@ -25669,8 +25643,6 @@ export const steamGameDetails: SteamGameMap = {
       'Party-Based RPG',
       'Open World',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '363970': {
@@ -25685,6 +25657,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'May 13, 2015',
     developer: 'Playsaurus',
     publisher: 'Playsaurus',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 61882,
       rating: 'Very Positive',
@@ -25706,8 +25680,6 @@ export const steamGameDetails: SteamGameMap = {
       'Adventure',
       'Simulation',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '364360': {
@@ -25722,6 +25694,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'May 24, 2016',
     developer: 'CREATIVE ASSEMBLY',
     publisher: 'SEGA',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 52889,
       rating: 'Very Positive',
@@ -25743,8 +25717,6 @@ export const steamGameDetails: SteamGameMap = {
       'Dwarf',
       'Atmospheric',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '365360': {
@@ -25759,6 +25731,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Mar 24, 2017',
     developer: 'Overhype Studios',
     publisher: 'Hooded Horse',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 26908,
       rating: 'Very Positive',
@@ -25780,8 +25754,6 @@ export const steamGameDetails: SteamGameMap = {
       'Singleplayer',
       'Horses',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '365450': {
@@ -25796,6 +25768,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Aug 12, 2015',
     developer: 'Team Fractal Alligator',
     publisher: 'Fellow Traveller',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 25782,
       rating: 'Very Positive',
@@ -25817,8 +25791,6 @@ export const steamGameDetails: SteamGameMap = {
       'Education',
       '2D',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '365590': {
@@ -25833,6 +25805,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Mar 7, 2016',
     developer: 'Massive Entertainment',
     publisher: 'Ubisoft',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 95200,
       rating: 'Mostly Positive',
@@ -25854,8 +25828,6 @@ export const steamGameDetails: SteamGameMap = {
       'Third Person',
       'Singleplayer',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '367450': {
@@ -25870,6 +25842,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jul 12, 2016',
     developer: 'Dry Cactus',
     publisher: 'Dry Cactus',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 18426,
       rating: 'Very Positive',
@@ -25891,8 +25865,6 @@ export const steamGameDetails: SteamGameMap = {
       'Crafting',
       'Cartoon',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '367500': {
@@ -25907,6 +25879,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jan 15, 2016',
     developer: 'Capcom',
     publisher: 'Capcom',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 48101,
       rating: 'Very Positive',
@@ -25928,8 +25902,6 @@ export const steamGameDetails: SteamGameMap = {
       'Atmospheric',
       'Great Soundtrack',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '368070': {
@@ -25944,6 +25916,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Apr 24, 2017',
     developer: 'CI Games',
     publisher: 'CI Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 19225,
       rating: 'Mixed',
@@ -25965,8 +25939,6 @@ export const steamGameDetails: SteamGameMap = {
       'Adventure',
       'Tactical',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '368230': {
@@ -25981,6 +25953,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 21, 2015',
     developer: 'Noio',
     publisher: 'Raw Fury',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 22491,
       rating: 'Very Positive',
@@ -26002,8 +25976,6 @@ export const steamGameDetails: SteamGameMap = {
       'Casual',
       'Adventure',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '368260': {
@@ -26018,6 +25990,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Dec 1, 2022',
     developer: 'Firaxis Games',
     publisher: '2K',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 23420,
       rating: 'Very Positive',
@@ -26039,8 +26013,6 @@ export const steamGameDetails: SteamGameMap = {
       'Adventure',
       'Singleplayer',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '368340': {
@@ -26055,6 +26027,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '20 Sep, 2018',
     developer: 'Radical Fish Games',
     publisher: 'Deck13',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 17612,
       rating: 'Very Positive',
@@ -26076,8 +26050,6 @@ export const steamGameDetails: SteamGameMap = {
       'Retro',
       'Anime',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '368500': {
@@ -26093,6 +26065,8 @@ export const steamGameDetails: SteamGameMap = {
     developer:
       'Ubisoft Quebec, in collaboration with Ubisoft Annecy, Bucharest, Kiev, Montreal, Montpellier, Shanghai, Singapore, Sofia, Toronto studios',
     publisher: 'Ubisoft',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 31937,
       rating: 'Mostly Positive',
@@ -26114,8 +26088,6 @@ export const steamGameDetails: SteamGameMap = {
       'Steampunk',
       'Great Soundtrack',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '371660': {
@@ -26130,6 +26102,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Feb 29, 2016',
     developer: 'Ubisoft',
     publisher: 'Ubisoft',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 38061,
       rating: 'Very Positive',
@@ -26151,8 +26125,6 @@ export const steamGameDetails: SteamGameMap = {
       'Mature',
       'Shooter',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '371970': {
@@ -26167,6 +26139,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jun 23, 2015',
     developer: 'Turning Wheel LLC',
     publisher: 'Turning Wheel LLC',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 14203,
       rating: 'Very Positive',
@@ -26188,8 +26162,6 @@ export const steamGameDetails: SteamGameMap = {
       'RPG',
       'Co-op Campaign',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '372000': {
@@ -26204,6 +26176,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Mar 28, 2016',
     developer: 'IMCGAMES Co.,Ltd.',
     publisher: 'IMCGAMES Co.,Ltd.',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 20418,
       rating: 'Mixed',
@@ -26225,8 +26199,6 @@ export const steamGameDetails: SteamGameMap = {
       'Co-op',
       'Hack and Slash',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '373420': {
@@ -26241,6 +26213,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 27, 2015',
     developer: 'Larian Studios',
     publisher: 'Larian Studios',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 31445,
       rating: 'Very Positive',
@@ -26262,8 +26236,6 @@ export const steamGameDetails: SteamGameMap = {
       'Singleplayer',
       'Isometric',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '374040': {
@@ -26278,6 +26250,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'May 18, 2017',
     developer: 'Keen Games GmbH',
     publisher: '505 Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 22111,
       rating: 'Very Positive',
@@ -26299,8 +26273,6 @@ export const steamGameDetails: SteamGameMap = {
       'Casual',
       'Dungeon Crawler',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '377840': {
@@ -26315,6 +26287,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Apr 14, 2016',
     developer: 'Square Enix',
     publisher: 'Square Enix',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 13447,
       rating: 'Very Positive',
@@ -26336,8 +26310,6 @@ export const steamGameDetails: SteamGameMap = {
       'Funny',
       'Cult Classic',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '378540': {
@@ -26352,6 +26324,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'May 15, 2017',
     developer: 'Deck13',
     publisher: 'Focus Entertainment',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 11635,
       rating: 'Mostly Positive',
@@ -26373,8 +26347,6 @@ export const steamGameDetails: SteamGameMap = {
       'Cyberpunk',
       'Action RPG',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '380600': {
@@ -26389,6 +26361,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Aug 28, 2017',
     developer: 'Fishing Planet LLC',
     publisher: 'Fishing Planet LLC',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 72967,
       rating: 'Very Positive',
@@ -26410,8 +26384,6 @@ export const steamGameDetails: SteamGameMap = {
       'VR',
       'Adventure',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '381210': {
@@ -26426,6 +26398,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jun 14, 2016',
     developer: 'Behaviour Interactive Inc.',
     publisher: 'Behaviour Interactive Inc.',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 882932,
       rating: 'Mostly Positive',
@@ -26447,8 +26421,6 @@ export const steamGameDetails: SteamGameMap = {
       'Psychological Horror',
       'Action',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '382310': {
@@ -26463,6 +26435,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Feb 6, 2018',
     developer: 'Strange Loop Games',
     publisher: 'Strange Loop Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 13745,
       rating: 'Mostly Positive',
@@ -26484,8 +26458,6 @@ export const steamGameDetails: SteamGameMap = {
       'Transportation',
       'Resource Management',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '383120': {
@@ -26500,6 +26472,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Aug 5, 2020',
     developer: 'Eleon Game Studios',
     publisher: 'Eleon Game Studios',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 34038,
       rating: 'Mostly Positive',
@@ -26521,8 +26495,6 @@ export const steamGameDetails: SteamGameMap = {
       'Multiplayer',
       'Sci-fi',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '383150': {
@@ -26537,6 +26509,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'May 31, 2016',
     developer: 'Techland',
     publisher: 'Deep Silver',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 27042,
       rating: 'Very Positive',
@@ -26558,8 +26532,6 @@ export const steamGameDetails: SteamGameMap = {
       'RPG',
       'Survival Horror',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '383870': {
@@ -26574,6 +26546,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '9 Feb, 2016',
     developer: 'Campo Santo',
     publisher: 'Panic',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 96629,
       rating: 'Very Positive',
@@ -26595,8 +26569,6 @@ export const steamGameDetails: SteamGameMap = {
       'Comedy',
       'Drama',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '383980': {
@@ -26611,6 +26583,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Mar 28, 2017',
     developer: 'Aether Studios',
     publisher: 'Aether Studios',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 37343,
       rating: 'Overwhelmingly Positive',
@@ -26632,8 +26606,6 @@ export const steamGameDetails: SteamGameMap = {
       'Action',
       'Controller',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '384190': {
@@ -26648,6 +26620,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Aug 2, 2016',
     developer: 'Giant Squid',
     publisher: '505 Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 27062,
       rating: 'Very Positive',
@@ -26669,8 +26643,6 @@ export const steamGameDetails: SteamGameMap = {
       'Short',
       'Open World',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '386070': {
@@ -26685,6 +26657,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Aug 18, 2015',
     developer: 'Planetary Annihilation Inc',
     publisher: 'Planetary Annihilation Inc',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 14410,
       rating: 'Very Positive',
@@ -26706,8 +26680,6 @@ export const steamGameDetails: SteamGameMap = {
       'Space',
       'Grand Strategy',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '386180': {
@@ -26722,6 +26694,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jul 26, 2017',
     developer: 'Targem Games',
     publisher: 'Gaijin Network Ltd',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 67921,
       rating: 'Mixed',
@@ -26743,8 +26717,6 @@ export const steamGameDetails: SteamGameMap = {
       'Online Co-Op',
       'Co-op',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '386940': {
@@ -26759,6 +26731,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '4 Mar, 2016',
     developer: 'Clever Endeavour Games',
     publisher: 'Clever Endeavour Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 51757,
       rating: 'Overwhelmingly Positive',
@@ -26780,8 +26754,6 @@ export const steamGameDetails: SteamGameMap = {
       'Competitive',
       'Family Friendly',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '388090': {
@@ -26796,6 +26768,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jul 23, 2015',
     developer: 'Scott Cawthon',
     publisher: 'Scott Cawthon',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 16392,
       rating: 'Very Positive',
@@ -26817,8 +26791,6 @@ export const steamGameDetails: SteamGameMap = {
       'Atmospheric',
       'Action',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '388410': {
@@ -26833,6 +26805,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Nov 5, 2015',
     developer: 'Gunfire Games',
     publisher: 'THQ Nordic',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 19721,
       rating: 'Mostly Positive',
@@ -26854,8 +26828,6 @@ export const steamGameDetails: SteamGameMap = {
       'Loot',
       'Parkour',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '388880': {
@@ -26870,6 +26842,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jan 14, 2016',
     developer: 'Night School Studio',
     publisher: 'Night School Studio',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 12019,
       rating: 'Very Positive',
@@ -26891,8 +26865,6 @@ export const steamGameDetails: SteamGameMap = {
       'Thriller',
       'Walking Simulator',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '389570': {
@@ -26907,6 +26879,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jul 29, 2015',
     developer: 'Freakinware Studios',
     publisher: 'Freakinware Studios',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 11996,
       rating: 'Mostly Positive',
@@ -26928,8 +26902,6 @@ export const steamGameDetails: SteamGameMap = {
       'Difficult',
       'Arcade',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '391220': {
@@ -26944,6 +26916,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '9 Feb, 2016',
     developer: 'Crystal Dynamics',
     publisher: 'Crystal Dynamics',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 149192,
       rating: 'Very Positive',
@@ -26965,8 +26939,6 @@ export const steamGameDetails: SteamGameMap = {
       'Third-Person Shooter',
       'Parkour',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '391460': {
@@ -26981,6 +26953,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Sep 13, 2019',
     developer: 'Novalink',
     publisher: 'Novalink',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 16406,
       rating: 'Mixed',
@@ -27002,8 +26976,6 @@ export const steamGameDetails: SteamGameMap = {
       'Survival',
       'Controller',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '391720': {
@@ -27018,6 +26990,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Feb 15, 2016',
     developer: 'Bloober Team SA',
     publisher: 'Bloober Team SA',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 27142,
       rating: 'Very Positive',
@@ -27039,8 +27013,6 @@ export const steamGameDetails: SteamGameMap = {
       'Exploration',
       'Great Soundtrack',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '392160': {
@@ -27055,6 +27027,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Nov 30, 2018',
     developer: 'Egosoft',
     publisher: 'Egosoft',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 27702,
       rating: 'Mostly Positive',
@@ -27076,8 +27050,6 @@ export const steamGameDetails: SteamGameMap = {
       '3D',
       'First-Person',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '393080': {
@@ -27092,6 +27064,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '27 Jul, 2017',
     developer: 'Raven Software',
     publisher: 'Activision',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 15228,
       rating: 'Mixed',
@@ -27113,8 +27087,6 @@ export const steamGameDetails: SteamGameMap = {
       'Classic',
       'Stealth',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '393380': {
@@ -27129,6 +27101,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Sep 23, 2020',
     developer: 'Offworld',
     publisher: 'Offworld',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 232522,
       rating: 'Very Positive',
@@ -27150,8 +27124,6 @@ export const steamGameDetails: SteamGameMap = {
       'War',
       'Massively Multiplayer',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '393420': {
@@ -27166,6 +27138,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Dec 10, 2019',
     developer: 'Bankroll Studios',
     publisher: 'Bankroll Studios',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 31059,
       rating: 'Mixed',
@@ -27187,8 +27161,6 @@ export const steamGameDetails: SteamGameMap = {
       'First-Person',
       'Shooter',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '394310': {
@@ -27203,6 +27175,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jan 8, 2016',
     developer: 'Lazy Bear Games',
     publisher: 'tinyBuild',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 15422,
       rating: 'Mostly Positive',
@@ -27224,8 +27198,6 @@ export const steamGameDetails: SteamGameMap = {
       'Choices Matter',
       'Funny',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '394510': {
@@ -27240,6 +27212,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Dec 7, 2015',
     developer: 'Arrowhead Game Studios',
     publisher: 'PlayStation Publishing LLC',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 32847,
       rating: 'Very Positive',
@@ -27261,8 +27235,6 @@ export const steamGameDetails: SteamGameMap = {
       'Space',
       'Difficult',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '396750': {
@@ -27277,6 +27249,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '25 May, 2017',
     developer: 'ROCKFISH Games',
     publisher: 'ROCKFISH Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 11354,
       rating: 'Mostly Positive',
@@ -27298,8 +27272,6 @@ export const steamGameDetails: SteamGameMap = {
       'Exploration',
       'Survival',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '397340': {
@@ -27314,6 +27286,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Dec 17, 2015',
     developer: 'Jundroo, LLC',
     publisher: 'Jundroo, LLC',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 10767,
       rating: 'Very Positive',
@@ -27335,8 +27309,6 @@ export const steamGameDetails: SteamGameMap = {
       'Strategy',
       'Funny',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '397540': {
@@ -27351,6 +27323,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Mar 13, 2020',
     developer: 'Gearbox Software',
     publisher: '2K',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 161765,
       rating: 'Very Positive',
@@ -27372,8 +27346,6 @@ export const steamGameDetails: SteamGameMap = {
       'First-Person',
       'Violent',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '397900': {
@@ -27388,6 +27360,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jul 27, 2017',
     developer: '8Floor',
     publisher: '8Floor',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 79033,
       rating: 'Mixed',
@@ -27409,8 +27383,6 @@ export const steamGameDetails: SteamGameMap = {
       'Adventure',
       'Singleplayer',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '397950': {
@@ -27425,6 +27397,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Sep 27, 2016',
     developer: 'Landfall',
     publisher: 'tinyBuild',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 17990,
       rating: 'Very Positive',
@@ -27446,8 +27420,6 @@ export const steamGameDetails: SteamGameMap = {
       'Platformer',
       'Casual',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '399810': {
@@ -27462,6 +27434,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 29, 2018',
     developer: 'Cyanide Studio',
     publisher: 'Focus Entertainment',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 13241,
       rating: 'Mostly Positive',
@@ -27483,8 +27457,6 @@ export const steamGameDetails: SteamGameMap = {
       'Dark',
       'Choices Matter',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '400750': {
@@ -27499,6 +27471,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jun 11, 2021',
     developer: 'Barbedwire Studios',
     publisher: 'Digitalmindsoft',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 30352,
       rating: 'Very Positive',
@@ -27520,8 +27494,6 @@ export const steamGameDetails: SteamGameMap = {
       'Inventory Management',
       'Top-Down Shooter',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '403190': {
@@ -27536,6 +27508,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 15, 2015',
     developer: 'Madruga Works',
     publisher: 'Madruga Works',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 10235,
       rating: 'Mostly Positive',
@@ -27557,8 +27531,6 @@ export const steamGameDetails: SteamGameMap = {
       'Sandbox',
       'Open World',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '405640': {
@@ -27573,6 +27545,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jan 4, 2016',
     developer: 'Daniel Mullins Games',
     publisher: 'Daniel Mullins Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 17881,
       rating: 'Very Positive',
@@ -27594,8 +27568,6 @@ export const steamGameDetails: SteamGameMap = {
       '2D',
       'Funny',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '406150': {
@@ -27610,6 +27582,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 16, 2015',
     developer: 'Dominique Grieshofer',
     publisher: 'Dominique Grieshofer',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 17392,
       rating: 'Overwhelmingly Positive',
@@ -27631,8 +27605,6 @@ export const steamGameDetails: SteamGameMap = {
       'Singleplayer',
       'Colorful',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '407530': {
@@ -27647,6 +27619,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Aug 29, 2017',
     developer: 'Studio Wildcard',
     publisher: 'Studio Wildcard',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 11796,
       rating: 'Mixed',
@@ -27668,8 +27642,6 @@ export const steamGameDetails: SteamGameMap = {
       'First-Person',
       'Singleplayer',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '409160': {
@@ -27684,6 +27656,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Dec 4, 2015',
     developer: 'Crows Crows Crows',
     publisher: 'Crows Crows Crows',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 10043,
       rating: 'Very Positive',
@@ -27705,8 +27679,6 @@ export const steamGameDetails: SteamGameMap = {
       'Adventure',
       'Casual',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '410320': {
@@ -27721,6 +27693,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jul 18, 2016',
     developer: 'SANDLOT',
     publisher: 'D3PUBLISHER',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 10330,
       rating: 'Overwhelmingly Positive',
@@ -27742,8 +27716,6 @@ export const steamGameDetails: SteamGameMap = {
       'Robots',
       'Destruction',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '410340': {
@@ -27758,6 +27730,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '13 Sep, 2018',
     developer: 'LuGus Studios',
     publisher: 'LuGus Studios',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 12771,
       rating: 'Overwhelmingly Positive',
@@ -27779,8 +27753,6 @@ export const steamGameDetails: SteamGameMap = {
       'Atmospheric',
       'Exploration',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '410900': {
@@ -27795,6 +27767,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Apr 19, 2017',
     developer: 'EarthWork Games',
     publisher: 'EarthWork Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 24222,
       rating: 'Very Positive',
@@ -27816,8 +27790,6 @@ export const steamGameDetails: SteamGameMap = {
       'Singleplayer',
       'Funny',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '411300': {
@@ -27832,6 +27804,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 17, 2017',
     developer: 'Piranha Bytes',
     publisher: 'THQ Nordic',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 19389,
       rating: 'Mixed',
@@ -27853,8 +27827,6 @@ export const steamGameDetails: SteamGameMap = {
       'Difficult',
       'War',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '415200': {
@@ -27869,6 +27841,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Nov 9, 2016',
     developer: 'Playsport Games',
     publisher: 'Miniclip',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 13969,
       rating: 'Very Positive',
@@ -27888,8 +27862,6 @@ export const steamGameDetails: SteamGameMap = {
       'Economy',
       'Moddable',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '418030': {
@@ -27904,6 +27876,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 25, 2016',
     developer: 'ColdGames',
     publisher: 'ColdGames',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 13554,
       rating: 'Mostly Positive',
@@ -27925,8 +27899,6 @@ export const steamGameDetails: SteamGameMap = {
       'Online Co-Op',
       'Adventure',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '418240': {
@@ -27941,6 +27913,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Dec 6, 2016',
     developer: 'Mimimi Games',
     publisher: 'Daedalic Entertainment',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 38057,
       rating: 'Very Positive',
@@ -27962,8 +27936,6 @@ export const steamGameDetails: SteamGameMap = {
       'Violent',
       'Atmospheric',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '418340': {
@@ -27978,6 +27950,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jul 5, 2016',
     developer: 'Rooster Teeth Games',
     publisher: 'FarBridge',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 11579,
       rating: 'Mostly Positive',
@@ -27999,8 +27973,6 @@ export const steamGameDetails: SteamGameMap = {
       'Stylized',
       'Adventure',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '418460': {
@@ -28015,6 +27987,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'May 30, 2017',
     developer: 'Antimatter Games',
     publisher: 'Tripwire Interactive',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 58853,
       rating: 'Very Positive',
@@ -28036,8 +28010,6 @@ export const steamGameDetails: SteamGameMap = {
       'Team-Based',
       'Action',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '418530': {
@@ -28052,6 +28024,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Sep 29, 2020',
     developer: 'Mossmouth',
     publisher: 'Mossmouth',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 21462,
       rating: 'Very Positive',
@@ -28073,8 +28047,6 @@ export const steamGameDetails: SteamGameMap = {
       '2D',
       'Side Scroller',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '420290': {
@@ -28089,6 +28061,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '19 Feb, 2020',
     developer: 'Mastfire Studios Pty Ltd',
     publisher: 'Mastfire Studios Pty Ltd',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 26046,
       rating: 'Very Positive',
@@ -28110,8 +28084,6 @@ export const steamGameDetails: SteamGameMap = {
       'Indie',
       'Swordplay',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '420530': {
@@ -28126,6 +28098,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '8 Dec, 2016',
     developer: 'Future Cat LLC',
     publisher: 'KOMODO',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 60962,
       rating: 'Overwhelmingly Positive',
@@ -28147,8 +28121,6 @@ export const steamGameDetails: SteamGameMap = {
       'Exploration',
       'Surreal',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '423230': {
@@ -28163,6 +28135,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jul 5, 2016',
     developer: 'The Game Bakers',
     publisher: 'The Game Bakers',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 13692,
       rating: 'Very Positive',
@@ -28184,8 +28158,6 @@ export const steamGameDetails: SteamGameMap = {
       'Cyberpunk',
       'Story Rich',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '424030': {
@@ -28200,6 +28172,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Dec 3, 2018',
     developer: 'Campfire Games',
     publisher: 'Campfire Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 14443,
       rating: 'Very Positive',
@@ -28221,8 +28195,6 @@ export const steamGameDetails: SteamGameMap = {
       'Indie',
       'Violent',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '424280': {
@@ -28237,6 +28209,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jan 27, 2016',
     developer: 'SnoutUp',
     publisher: 'SnoutUp',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 17416,
       rating: 'Overwhelmingly Positive',
@@ -28258,8 +28232,6 @@ export const steamGameDetails: SteamGameMap = {
       "Beat 'em up",
       'Fast-Paced',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '424370': {
@@ -28274,6 +28246,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Feb 13, 2020',
     developer: 'WOLCEN Studio',
     publisher: 'WOLCEN Studio',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 67874,
       rating: 'Mixed',
@@ -28295,8 +28269,6 @@ export const steamGameDetails: SteamGameMap = {
       'Top-Down',
       'Controller',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '425580': {
@@ -28311,6 +28283,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jul 5, 2016',
     developer: 'Fireproof Games',
     publisher: 'Fireproof Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 21104,
       rating: 'Overwhelmingly Positive',
@@ -28332,8 +28306,6 @@ export const steamGameDetails: SteamGameMap = {
       'First-Person',
       'Steampunk',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '427290': {
@@ -28348,6 +28320,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jun 4, 2018',
     developer: 'DONTNOD Entertainment',
     publisher: 'Focus Entertainment',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 23365,
       rating: 'Mostly Positive',
@@ -28369,8 +28343,6 @@ export const steamGameDetails: SteamGameMap = {
       'Souls-like',
       'Gore',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '427730': {
@@ -28385,6 +28357,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '13 May, 2016',
     developer: 'Evil Tortilla Games',
     publisher: 'Evil Tortilla Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 31441,
       rating: 'Very Positive',
@@ -28406,8 +28380,6 @@ export const steamGameDetails: SteamGameMap = {
       'Early Access',
       'Difficult',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '428690': {
@@ -28422,6 +28394,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Feb 2, 2017',
     developer: 'UPLAY Online',
     publisher: 'UPLAY Online',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 15440,
       rating: 'Mostly Positive',
@@ -28443,8 +28417,6 @@ export const steamGameDetails: SteamGameMap = {
       'Cartoon',
       'Female Protagonist',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '429050': {
@@ -28459,6 +28431,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '8 Jan, 2016',
     developer: 'Old B1ood',
     publisher: 'Greens s.r.o.',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 20652,
       rating: 'Very Positive',
@@ -28480,8 +28454,6 @@ export const steamGameDetails: SteamGameMap = {
       'Fishing',
       'Co-op',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '429660': {
@@ -28496,6 +28468,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jan 26, 2017',
     developer: 'BANDAI NAMCO Studios Inc.',
     publisher: 'BANDAI NAMCO Entertainment',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 18791,
       rating: 'Very Positive',
@@ -28517,8 +28491,6 @@ export const steamGameDetails: SteamGameMap = {
       'Cute',
       'Local Co-Op',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '431240': {
@@ -28533,6 +28505,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'May 19, 2020',
     developer: 'Blacklight Interactive',
     publisher: 'Team17',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 72205,
       rating: 'Very Positive',
@@ -28554,8 +28528,6 @@ export const steamGameDetails: SteamGameMap = {
       'Strategy',
       'PvP',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '434570': {
@@ -28570,6 +28542,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Feb 1, 2016',
     developer: 'Big Corporation',
     publisher: 'Grunge Games LTD',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 35616,
       rating: 'Overwhelmingly Positive',
@@ -28591,8 +28565,6 @@ export const steamGameDetails: SteamGameMap = {
       'Singleplayer',
       'Adventure',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '438040': {
@@ -28607,6 +28579,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Feb 24, 2016',
     developer: 'Playa Games GmbH',
     publisher: 'Playa Games GmbH',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 36822,
       rating: 'Very Positive',
@@ -28628,8 +28602,6 @@ export const steamGameDetails: SteamGameMap = {
       'Medieval',
       'Singleplayer',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '438100': {
@@ -28644,6 +28616,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Feb 1, 2017',
     developer: 'VRChat Inc.',
     publisher: 'VRChat Inc.',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 257926,
       rating: 'Mostly Positive',
@@ -28665,8 +28639,6 @@ export const steamGameDetails: SteamGameMap = {
       'MMORPG',
       'Comedy',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '440900': {
@@ -28681,6 +28653,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'May 8, 2018',
     developer: 'Funcom',
     publisher: 'Funcom',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 111253,
       rating: 'Mostly Positive',
@@ -28702,8 +28676,6 @@ export const steamGameDetails: SteamGameMap = {
       'Exploration',
       'Singleplayer',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '444200': {
@@ -28718,6 +28690,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Nov 9, 2016',
     developer: 'Wargaming Group Limited',
     publisher: 'Wargaming Group Limited',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 151883,
       rating: 'Mostly Positive',
@@ -28739,8 +28713,6 @@ export const steamGameDetails: SteamGameMap = {
       'Military',
       'War',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '444640': {
@@ -28755,6 +28727,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Apr 20, 2016',
     developer: 'Ninja Kiwi',
     publisher: 'Ninja Kiwi',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 29234,
       rating: 'Very Positive',
@@ -28776,8 +28750,6 @@ export const steamGameDetails: SteamGameMap = {
       'Mod',
       'Singleplayer',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '445220': {
@@ -28792,6 +28764,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Mar 9, 2020',
     developer: 'Boxelware',
     publisher: 'Boxelware',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 14241,
       rating: 'Very Positive',
@@ -28813,8 +28787,6 @@ export const steamGameDetails: SteamGameMap = {
       'Economy',
       'Spaceships',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '445980': {
@@ -28829,6 +28801,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'May 15, 2018',
     developer: 'Contingent99',
     publisher: 'Contingent99',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 20868,
       rating: 'Very Positive',
@@ -28850,8 +28824,6 @@ export const steamGameDetails: SteamGameMap = {
       'Difficult',
       'Hack and Slash',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '446020': {
@@ -28866,6 +28838,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Mar 28, 2018',
     developer: 'Minskworks',
     publisher: 'Excalibur Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 10999,
       rating: 'Mostly Positive',
@@ -28887,8 +28861,6 @@ export const steamGameDetails: SteamGameMap = {
       'Sandbox',
       'Roguelite',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '447020': {
@@ -28903,6 +28875,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 24, 2016',
     developer: 'GIANTS Software',
     publisher: 'GIANTS Software',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 25576,
       rating: 'Very Positive',
@@ -28924,8 +28898,6 @@ export const steamGameDetails: SteamGameMap = {
       'Co-op',
       'Online Co-Op',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '447820': {
@@ -28940,6 +28912,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Mar 23, 2017',
     developer: 'New World Interactive',
     publisher: 'New World Interactive',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 22111,
       rating: 'Very Positive',
@@ -28961,8 +28935,6 @@ export const steamGameDetails: SteamGameMap = {
       'Historical',
       'Gore',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '448510': {
@@ -28977,6 +28949,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Aug 3, 2016',
     developer: 'Ghost Town Games Ltd.',
     publisher: 'Team17 Digital Ltd',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 16104,
       rating: 'Very Positive',
@@ -28998,8 +28972,6 @@ export const steamGameDetails: SteamGameMap = {
       'Action',
       'Cute',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '450540': {
@@ -29014,6 +28986,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Apr 5, 2016',
     developer: 'RUST LTD.',
     publisher: 'RUST LTD.',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 23061,
       rating: 'Overwhelmingly Positive',
@@ -29035,8 +29009,6 @@ export const steamGameDetails: SteamGameMap = {
       'Comedy',
       'Destruction',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '451340': {
@@ -29051,6 +29023,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 13, 2017',
     developer: 'Code Horizon',
     publisher: 'Code Horizon',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 15984,
       rating: 'Mixed',
@@ -29072,8 +29046,6 @@ export const steamGameDetails: SteamGameMap = {
       'Strategy',
       'Automobile Sim',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '453480': {
@@ -29088,6 +29060,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 27, 2016',
     developer: 'Cygames, Inc.',
     publisher: 'Cygames, Inc.',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 14883,
       rating: 'Mostly Positive',
@@ -29109,8 +29083,6 @@ export const steamGameDetails: SteamGameMap = {
       'Singleplayer',
       'Competitive',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '454650': {
@@ -29125,6 +29097,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 27, 2016',
     developer: 'QLOC',
     publisher: 'Bandai Namco Entertainment',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 55581,
       rating: 'Very Positive',
@@ -29146,8 +29120,6 @@ export const steamGameDetails: SteamGameMap = {
       'Story Rich',
       'Moddable',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '456750': {
@@ -29162,6 +29134,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '13 Nov, 2018',
     developer: 'Fireproof Games',
     publisher: 'Fireproof Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 12951,
       rating: 'Overwhelmingly Positive',
@@ -29183,8 +29157,6 @@ export const steamGameDetails: SteamGameMap = {
       'Psychological Horror',
       'Multiple Endings',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '460790': {
@@ -29199,6 +29171,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '11 Apr, 2017',
     developer: 'PlatinumGames',
     publisher: 'SEGA',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 30963,
       rating: 'Very Positive',
@@ -29220,8 +29194,6 @@ export const steamGameDetails: SteamGameMap = {
       'Fantasy',
       "Beat 'em up",
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '460930': {
@@ -29236,6 +29208,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Mar 6, 2017',
     developer: 'Ubisoft Paris',
     publisher: 'Ubisoft',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 102635,
       rating: 'Mostly Positive',
@@ -29257,8 +29231,6 @@ export const steamGameDetails: SteamGameMap = {
       'Adventure',
       'Survival',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '460950': {
@@ -29273,6 +29245,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '18 Apr, 2019',
     developer: 'Askiisoft',
     publisher: 'Devolver Digital',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 74230,
       rating: 'Overwhelmingly Positive',
@@ -29294,8 +29268,6 @@ export const steamGameDetails: SteamGameMap = {
       'Singleplayer',
       'Time Manipulation',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '462780': {
@@ -29310,6 +29282,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Nov 29, 2016',
     developer: 'KAIKO',
     publisher: 'THQ Nordic',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 17767,
       rating: 'Very Positive',
@@ -29331,8 +29305,6 @@ export const steamGameDetails: SteamGameMap = {
       'Open World',
       'Story Rich',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '463530': {
@@ -29347,6 +29319,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jun 7, 2024',
     developer: 'Slug Disco',
     publisher: 'Hooded Horse',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 17084,
       rating: 'Overwhelmingly Positive',
@@ -29368,8 +29342,6 @@ export const steamGameDetails: SteamGameMap = {
       'Survival',
       'Singleplayer',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '464060': {
@@ -29384,6 +29356,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '26 Sep, 2017',
     developer: 'Reikon Games',
     publisher: 'Devolver Digital',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 11863,
       rating: 'Very Positive',
@@ -29405,8 +29379,6 @@ export const steamGameDetails: SteamGameMap = {
       'Shooter',
       'Top-Down',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '469600': {
@@ -29421,6 +29393,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 1, 2021',
     developer: 'AutoAttack Games',
     publisher: 'AutoAttack Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 14687,
       rating: 'Very Positive',
@@ -29442,8 +29416,6 @@ export const steamGameDetails: SteamGameMap = {
       'Sci-fi',
       'Magic',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '470220': {
@@ -29458,6 +29430,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '3 Jan, 2017',
     developer: 'Ubisoft Entertainment',
     publisher: 'Ubisoft Entertainment',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 53695,
       rating: 'Mostly Positive',
@@ -29479,8 +29453,6 @@ export const steamGameDetails: SteamGameMap = {
       'Local Multiplayer',
       'Replay Value',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '471710': {
@@ -29495,6 +29467,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Sep 2, 2021',
     developer: 'Rec Room',
     publisher: 'Rec Room',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 74667,
       rating: 'Very Positive',
@@ -29516,8 +29490,6 @@ export const steamGameDetails: SteamGameMap = {
       'Family Friendly',
       'Character Customization',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '473690': {
@@ -29532,6 +29504,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Aug 29, 2017',
     developer: 'Sloclap',
     publisher: 'Devolver Digital',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 14738,
       rating: 'Mostly Positive',
@@ -29553,8 +29527,6 @@ export const steamGameDetails: SteamGameMap = {
       'Co-op',
       'Singleplayer',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '474960': {
@@ -29569,6 +29541,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Sep 29, 2016',
     developer: 'Remedy Entertainment',
     publisher: 'Xbox Game Studios',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 29784,
       rating: 'Very Positive',
@@ -29590,8 +29564,6 @@ export const steamGameDetails: SteamGameMap = {
       'Shooter',
       'Bullet Time',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '475150': {
@@ -29606,6 +29578,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Aug 31, 2016',
     developer: 'Iron Lore Entertainment',
     publisher: 'THQ Nordic',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 37199,
       rating: 'Very Positive',
@@ -29627,8 +29601,6 @@ export const steamGameDetails: SteamGameMap = {
       'Fantasy',
       'Open World',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '476600': {
@@ -29643,6 +29615,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Nov 2, 2017',
     developer: 'Sledgehammer Games',
     publisher: 'Activision',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 45482,
       rating: 'Mixed',
@@ -29664,8 +29638,6 @@ export const steamGameDetails: SteamGameMap = {
       'Story Rich',
       'Horror',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '481510': {
@@ -29680,6 +29652,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Feb 21, 2017',
     developer: 'Infinite Fall',
     publisher: 'Finji',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 19927,
       rating: 'Very Positive',
@@ -29701,8 +29675,6 @@ export const steamGameDetails: SteamGameMap = {
       'Mystery',
       'Platformer',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '485510': {
@@ -29717,6 +29689,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Nov 7, 2017',
     developer: 'KOEI TECMO GAMES CO., LTD.',
     publisher: 'KOEI TECMO GAMES CO., LTD.',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 37637,
       rating: 'Very Positive',
@@ -29738,8 +29712,6 @@ export const steamGameDetails: SteamGameMap = {
       'Historical',
       'Loot',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '488790': {
@@ -29754,6 +29726,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '16 Oct, 2017',
     developer: 'Ubisoft San Francisco',
     publisher: 'Ubisoft',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 32318,
       rating: 'Very Positive',
@@ -29775,8 +29749,6 @@ export const steamGameDetails: SteamGameMap = {
       'Open World',
       'Satire',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '488860': {
@@ -29791,6 +29763,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Sep 29, 2021',
     developer: 'GIBBING TREE, LLC',
     publisher: 'GIBBING TREE, LLC',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 16843,
       rating: 'Overwhelmingly Positive',
@@ -29812,8 +29786,6 @@ export const steamGameDetails: SteamGameMap = {
       'Violent',
       'Third-Person Shooter',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '489520': {
@@ -29828,6 +29800,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'May 24, 2019',
     developer: 'BetaDwarf',
     publisher: 'BetaDwarf',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 65152,
       rating: 'Very Positive',
@@ -29849,8 +29823,6 @@ export const steamGameDetails: SteamGameMap = {
       'Online Co-Op',
       'Colorful',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '489630': {
@@ -29865,6 +29837,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jul 12, 2018',
     developer: 'Proxy Studios',
     publisher: 'Slitherine Ltd.',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 16745,
       rating: 'Very Positive',
@@ -29886,8 +29860,6 @@ export const steamGameDetails: SteamGameMap = {
       'Grand Strategy',
       'Turn-Based Combat',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '489940': {
@@ -29902,6 +29874,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'May 23, 2019',
     developer: 'BULKHEAD',
     publisher: 'BULKHEAD',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 16359,
       rating: 'Mixed',
@@ -29923,8 +29897,6 @@ export const steamGameDetails: SteamGameMap = {
       'Multiplayer',
       'Co-op',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '491950': {
@@ -29939,6 +29911,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 27, 2016',
     developer: 'Osmotic Studios',
     publisher: 'Daedalic Entertainment',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 15273,
       rating: 'Very Positive',
@@ -29960,8 +29934,6 @@ export const steamGameDetails: SteamGameMap = {
       'Mouse only',
       'Atmospheric',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '492720': {
@@ -29976,6 +29948,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Mar 29, 2019',
     developer: 'Limbic Entertainment',
     publisher: 'Kalypso Media',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 28659,
       rating: 'Very Positive',
@@ -29997,8 +29971,6 @@ export const steamGameDetails: SteamGameMap = {
       'Funny',
       'Choices Matter',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '493490': {
@@ -30013,6 +29985,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Nov 3, 2016',
     developer: 'Forward Development, Ltd.',
     publisher: 'Forward Global Group, Ltd.',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 33814,
       rating: 'Mostly Positive',
@@ -30034,8 +30008,6 @@ export const steamGameDetails: SteamGameMap = {
       'Indie',
       'Family Friendly',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '493520': {
@@ -30050,6 +30022,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '9 Dec, 2021',
     developer: '10 Chambers',
     publisher: '10 Chambers',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 64999,
       rating: 'Very Positive',
@@ -30071,8 +30045,6 @@ export const steamGameDetails: SteamGameMap = {
       'First-Person',
       'Zombies',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '493900': {
@@ -30087,6 +30059,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 13, 2017',
     developer: 'Realmforge Studios',
     publisher: 'Kalypso Media',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 18605,
       rating: 'Very Positive',
@@ -30108,8 +30082,6 @@ export const steamGameDetails: SteamGameMap = {
       'Dark Fantasy',
       'Dark Humor',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '494840': {
@@ -30124,6 +30096,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Aug 2, 2024',
     developer: 'Deep Water Studio',
     publisher: 'PlayWay S.A.',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 25512,
       rating: 'Very Positive',
@@ -30145,8 +30119,6 @@ export const steamGameDetails: SteamGameMap = {
       'Moddable',
       'Physics',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '495420': {
@@ -30161,6 +30133,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Mar 13, 2020',
     developer: 'Undead Labs',
     publisher: 'Xbox Game Studios',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 66777,
       rating: 'Very Positive',
@@ -30182,8 +30156,6 @@ export const steamGameDetails: SteamGameMap = {
       'Singleplayer',
       'Gore',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '496300': {
@@ -30198,6 +30170,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Aug 9, 2016',
     developer: 'Noio',
     publisher: 'Raw Fury',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 12141,
       rating: 'Very Positive',
@@ -30219,8 +30193,6 @@ export const steamGameDetails: SteamGameMap = {
       'Soundtrack',
       'Pixel Graphics',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '498240': {
@@ -30235,6 +30207,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Aug 2, 2016',
     developer: 'Telltale',
     publisher: 'Telltale',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 17396,
       rating: 'Very Positive',
@@ -30256,8 +30230,6 @@ export const steamGameDetails: SteamGameMap = {
       'Detective',
       'Noir',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '501300': {
@@ -30272,6 +30244,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Apr 24, 2017',
     developer: 'Giant Sparrow',
     publisher: 'Annapurna Interactive',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 49461,
       rating: 'Very Positive',
@@ -30293,8 +30267,6 @@ export const steamGameDetails: SteamGameMap = {
       'Short',
       'Drama',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '502500': {
@@ -30309,6 +30281,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jan 31, 2019',
     developer: 'Bandai Namco Studios Inc.',
     publisher: 'Bandai Namco Entertainment',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 53898,
       rating: 'Very Positive',
@@ -30330,8 +30304,6 @@ export const steamGameDetails: SteamGameMap = {
       'Story Rich',
       'Third Person',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '503560': {
@@ -30346,6 +30318,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '24 Feb, 2017',
     developer: 'Jutsu Games',
     publisher: 'Games Operators',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 19186,
       rating: 'Very Positive',
@@ -30367,8 +30341,6 @@ export const steamGameDetails: SteamGameMap = {
       'Addictive',
       'Atmospheric',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '504230': {
@@ -30383,6 +30355,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '25 Jan, 2018',
     developer: 'Maddy Makes Games Inc.',
     publisher: 'Maddy Makes Games Inc.',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 136973,
       rating: 'Overwhelmingly Positive',
@@ -30404,8 +30378,6 @@ export const steamGameDetails: SteamGameMap = {
       'Puzzle Platformer',
       'Atmospheric',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '505230': {
@@ -30420,6 +30392,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '23 May, 2019',
     developer: 'Ice-Pick Lodge',
     publisher: 'tinyBuild',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 11818,
       rating: 'Very Positive',
@@ -30441,8 +30415,6 @@ export const steamGameDetails: SteamGameMap = {
       'Dystopian',
       'Dark',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '505460': {
@@ -30457,6 +30429,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Sep 28, 2022',
     developer: 'Siege Camp',
     publisher: 'Siege Camp',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 49166,
       rating: 'Very Positive',
@@ -30478,8 +30452,6 @@ export const steamGameDetails: SteamGameMap = {
       'Top-Down Shooter',
       'Team-Based',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '506610': {
@@ -30494,6 +30466,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '7 Oct, 2016',
     developer: 'Scott Cawthon',
     publisher: 'Scott Cawthon',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 12380,
       rating: 'Very Positive',
@@ -30515,8 +30489,6 @@ export const steamGameDetails: SteamGameMap = {
       'Atmospheric',
       'Simulation',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '509980': {
@@ -30531,6 +30503,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jan 31, 2017',
     developer: 'CyberLight Game Studio',
     publisher: 'CyberLight Game Studio',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 21877,
       rating: 'Very Positive',
@@ -30552,8 +30526,6 @@ export const steamGameDetails: SteamGameMap = {
       'Adventure',
       'Funny',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '512900': {
@@ -30568,6 +30540,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jul 12, 2019',
     developer: 'Matt Dabrowski',
     publisher: 'tinyBuild',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 22641,
       rating: 'Overwhelmingly Positive',
@@ -30589,8 +30563,6 @@ export const steamGameDetails: SteamGameMap = {
       'Stealth',
       'Great Soundtrack',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '517630': {
@@ -30605,6 +30577,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '4 Dec, 2018',
     developer: 'Avalanche Studios',
     publisher: 'Square Enix',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 31511,
       rating: 'Mixed',
@@ -30626,8 +30600,6 @@ export const steamGameDetails: SteamGameMap = {
       'Atmospheric',
       'Co-op',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '519860': {
@@ -30642,6 +30614,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Dec 10, 2018',
     developer: 'David Szymanski',
     publisher: 'New Blood Interactive',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 24807,
       rating: 'Overwhelmingly Positive',
@@ -30663,8 +30637,6 @@ export const steamGameDetails: SteamGameMap = {
       'Dark Humor',
       'Classic',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '520440': {
@@ -30679,6 +30651,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Dec 14, 2016',
     developer: 'Arc System Works',
     publisher: 'Arc System Works',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 10885,
       rating: 'Overwhelmingly Positive',
@@ -30700,8 +30674,6 @@ export const steamGameDetails: SteamGameMap = {
       'eSports',
       'Singleplayer',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '521890': {
@@ -30716,6 +30688,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Dec 8, 2017',
     developer: 'Dynamic Pixels',
     publisher: 'tinyBuild',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 26251,
       rating: 'Mostly Positive',
@@ -30737,8 +30711,6 @@ export const steamGameDetails: SteamGameMap = {
       'FPS',
       'Psychological Horror',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '527230': {
@@ -30753,6 +30725,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Apr 19, 2018',
     developer: 'IronOak Games',
     publisher: 'Curve Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 42978,
       rating: 'Very Positive',
@@ -30774,8 +30748,6 @@ export const steamGameDetails: SteamGameMap = {
       'Party-Based RPG',
       'Local Co-Op',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '527430': {
@@ -30790,6 +30762,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jun 5, 2018',
     developer: 'NeocoreGames',
     publisher: 'NeocoreGames',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 21901,
       rating: 'Mostly Positive',
@@ -30811,8 +30785,6 @@ export const steamGameDetails: SteamGameMap = {
       'Online Co-Op',
       'Violent',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '528230': {
@@ -30827,6 +30799,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Mar 15, 2018',
     developer: 'Flow Fire Games',
     publisher: 'Flow Fire Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 12961,
       rating: 'Very Positive',
@@ -30848,8 +30822,6 @@ export const steamGameDetails: SteamGameMap = {
       'Top-Down',
       'Cyberpunk',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '529180': {
@@ -30864,6 +30836,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jul 20, 2017',
     developer: 'Snail Games USA',
     publisher: 'Snail Games USA',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 11798,
       rating: 'Mixed',
@@ -30885,8 +30859,6 @@ export const steamGameDetails: SteamGameMap = {
       'Dragons',
       'Simulation',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '529340': {
@@ -30901,6 +30873,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 25, 2022',
     developer: 'Paradox Development Studio',
     publisher: 'Paradox Interactive',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 59542,
       rating: 'Mixed',
@@ -30922,8 +30896,6 @@ export const steamGameDetails: SteamGameMap = {
       'Resource Management',
       'Real-Time with Pause',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '531510': {
@@ -30938,6 +30910,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'May 31, 2018',
     developer: 'Berzerk Studio',
     publisher: 'Berzerk Studio',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 24950,
       rating: 'Overwhelmingly Positive',
@@ -30959,8 +30933,6 @@ export const steamGameDetails: SteamGameMap = {
       'Local Co-Op',
       'Fast-Paced',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '532210': {
@@ -30975,6 +30947,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '26 Sep, 2018',
     developer: 'DONTNOD Entertainment',
     publisher: 'Square Enix',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 39392,
       rating: 'Very Positive',
@@ -30996,8 +30970,6 @@ export const steamGameDetails: SteamGameMap = {
       'Walking Simulator',
       'Mystery',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '534380': {
@@ -31012,6 +30984,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Feb 3, 2022',
     developer: 'Techland',
     publisher: 'Techland',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 210432,
       rating: 'Mostly Positive',
@@ -31033,8 +31007,6 @@ export const steamGameDetails: SteamGameMap = {
       'Action RPG',
       'Action',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '536220': {
@@ -31049,6 +31021,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Dec 20, 2016',
     developer: 'Telltale Games',
     publisher: 'Skybound Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 18060,
       rating: 'Mostly Positive',
@@ -31070,8 +31044,6 @@ export const steamGameDetails: SteamGameMap = {
       'Choose Your Own Adventure',
       'Horror',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '536270': {
@@ -31086,6 +31058,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '27 Aug, 2020',
     developer: 'Panache Digital Games',
     publisher: 'Private Division',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 11236,
       rating: 'Mostly Positive',
@@ -31107,8 +31081,6 @@ export const steamGameDetails: SteamGameMap = {
       'Immersive Sim',
       'Multiplayer',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '537800': {
@@ -31123,6 +31095,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 19, 2017',
     developer: 'Runner Duck',
     publisher: 'Curve Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 15223,
       rating: 'Very Positive',
@@ -31144,8 +31118,6 @@ export const steamGameDetails: SteamGameMap = {
       'Roguelike',
       'Cartoony',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '541570': {
@@ -31160,6 +31132,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Dec 14, 2016',
     developer: 'Portable Moose',
     publisher: 'Portable Moose',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 25890,
       rating: 'Overwhelmingly Positive',
@@ -31181,8 +31155,6 @@ export const steamGameDetails: SteamGameMap = {
       'Supernatural',
       'Narrative',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '544750': {
@@ -31197,6 +31169,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 18, 2018',
     developer: 'BANDAI NAMCO Studios Inc.',
     publisher: 'BANDAI NAMCO Entertainment',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 14044,
       rating: 'Very Positive',
@@ -31218,8 +31192,6 @@ export const steamGameDetails: SteamGameMap = {
       'Great Soundtrack',
       'Medieval',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '544810': {
@@ -31234,6 +31206,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Apr 15, 2020',
     developer: '1939 Games',
     publisher: '1939 Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 46687,
       rating: 'Very Positive',
@@ -31255,8 +31229,6 @@ export const steamGameDetails: SteamGameMap = {
       'Multiplayer',
       'Tanks',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '544920': {
@@ -31271,6 +31243,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jan 13, 2020',
     developer: 'Scavengers Studio',
     publisher: 'Scavengers Studio',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 18326,
       rating: 'Very Positive',
@@ -31292,8 +31266,6 @@ export const steamGameDetails: SteamGameMap = {
       'Strategy',
       'Third Person',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '548570': {
@@ -31308,6 +31280,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'May 13, 2019',
     developer: 'id Software',
     publisher: 'Bethesda Softworks',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 16820,
       rating: 'Mixed',
@@ -31329,8 +31303,6 @@ export const steamGameDetails: SteamGameMap = {
       'Exploration',
       'Funny',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '550650': {
@@ -31345,6 +31317,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jun 26, 2019',
     developer: 'VALOFE',
     publisher: 'VALOFE',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 81418,
       rating: 'Mostly Positive',
@@ -31366,8 +31340,6 @@ export const steamGameDetails: SteamGameMap = {
       'Massively Multiplayer',
       'Team-Based',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '552100': {
@@ -31382,6 +31354,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jul 14, 2023',
     developer: 'Fluppisoft GmbH',
     publisher: 'Fluppisoft GmbH',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 55593,
       rating: 'Very Positive',
@@ -31403,8 +31377,6 @@ export const steamGameDetails: SteamGameMap = {
       'Action',
       'First-Person',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '552520': {
@@ -31419,6 +31391,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Mar 26, 2018',
     developer: 'Ubisoft Montreal',
     publisher: 'Ubisoft',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 182963,
       rating: 'Very Positive',
@@ -31440,8 +31414,6 @@ export const steamGameDetails: SteamGameMap = {
       'Hunting',
       'Adventure',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '552990': {
@@ -31456,6 +31428,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Nov 15, 2017',
     developer: 'Wargaming Group Limited',
     publisher: 'Wargaming Group Limited',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 153127,
       rating: 'Very Positive',
@@ -31477,8 +31451,6 @@ export const steamGameDetails: SteamGameMap = {
       'Massively Multiplayer',
       'PvE',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '553420': {
@@ -31493,6 +31465,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Mar 16, 2022',
     developer: 'TUNIC Team',
     publisher: 'Finji',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 17075,
       rating: 'Very Positive',
@@ -31514,8 +31488,6 @@ export const steamGameDetails: SteamGameMap = {
       'Colorful',
       'Nonlinear',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '553850': {
@@ -31530,6 +31502,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Feb 8, 2024',
     developer: 'Arrowhead Game Studios',
     publisher: 'PlayStation Publishing LLC',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 789094,
       rating: 'Very Positive',
@@ -31548,8 +31522,6 @@ export const steamGameDetails: SteamGameMap = {
       'Space',
       'Third Person',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '554620': {
@@ -31564,6 +31536,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Aug 31, 2017',
     developer: 'Deck Nine',
     publisher: 'Square Enix',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 37647,
       rating: 'Very Positive',
@@ -31585,8 +31559,6 @@ export const steamGameDetails: SteamGameMap = {
       'Action',
       'Indie',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '555160': {
@@ -31601,6 +31573,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Dec 4, 2024',
     developer: 'Vankrupt Games',
     publisher: 'Vankrupt Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 33122,
       rating: 'Very Positive',
@@ -31619,8 +31593,6 @@ export const steamGameDetails: SteamGameMap = {
       'Funny',
       'Co-op',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '555570': {
@@ -31635,6 +31607,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Nov 22, 2016',
     developer: 'Fredaikis AB',
     publisher: 'OP Productions LLC',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 33887,
       rating: 'Mixed',
@@ -31656,8 +31630,6 @@ export const steamGameDetails: SteamGameMap = {
       'Adventure',
       'Violent',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '557340': {
@@ -31672,6 +31644,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jun 20, 2019',
     developer: 'DeadToast Entertainment',
     publisher: 'Devolver Digital',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 28101,
       rating: 'Very Positive',
@@ -31693,8 +31667,6 @@ export const steamGameDetails: SteamGameMap = {
       'Comedy',
       '2D',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '557600': {
@@ -31709,6 +31681,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Dec 14, 2017',
     developer: 'Buried Signal',
     publisher: 'Annapurna Interactive',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 19699,
       rating: 'Overwhelmingly Positive',
@@ -31730,8 +31704,6 @@ export const steamGameDetails: SteamGameMap = {
       'Mystery',
       'Great Soundtrack',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '560130': {
@@ -31742,10 +31714,12 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/560130/ss_4f8695a72b5e2855bef51ddcd3aa29b90d223226.600x338.jpg',
     shortDescription:
-      'Patch 5.0 - Turn-based mode and The Ultimate challenge out now! Pursue a rogue god over land and sea in the sequel to the multi-award-winning RPG ||Pillars|| of ||Eternity||. Captain your ship on a dangerous voyage of discovery across the vast unexplored archipelago region of the ||Deadfire||.',
+      '||Patch 5.0 - Turn-based mode and The Ultimate challenge out now!|| Pursue a rogue god over ||land and sea|| in the sequel to the multi-award-winning RPG ||Pillars of Eternity||. ||Captain your ship on a|| dangerous voyage of discovery across the vast unexplored archipelago ||region of the Deadfire.||',
     releaseDate: 'May 8, 2018',
     developer: 'Obsidian Entertainment',
     publisher: 'Versus Evil',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 19614,
       rating: 'Very Positive',
@@ -31767,46 +31741,7 @@ export const steamGameDetails: SteamGameMap = {
       'Adventure',
       'Nudity',
     ],
-    tags: [],
-    features: [],
-    clueOrder: ['tags', 'details', 'desc'],
-  },
-  '563560': {
-    name: 'Alien Swarm: Reactive Drop',
-    appId: 563560,
-    primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/563560/ss_c5fbb05e87ef3dab7e504bb96799a5e93a146651.600x338.jpg',
-    secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/563560/ss_375e11dfcf3399166ac877e98812ca9496f5fd3f.600x338.jpg',
-    shortDescription:
-      'Co-operative top-down shooter game available for free. An epic bug hunt featuring a unique blend of co-op play and squad-level tactics.',
-    releaseDate: 'Apr 20, 2017',
-    developer: 'Reactive Drop Team',
-    publisher: 'Reactive Drop Team',
-    allReviewSummary: {
-      count: 23420,
-      rating: 'Very Positive',
-    },
-    userTags: [
-      'Twin Stick Shooter',
-      'PvE',
-      'Co-op',
-      'Top-Down Shooter',
-      'Class-Based',
-      'Third-Person Shooter',
-      'Aliens',
-      'Level Editor',
-      'Hacking',
-      'PvP',
-      'Third Person',
-      'Shooter',
-      'Moddable',
-      'Top-Down',
-      'First-Person',
-    ],
-    tags: [],
-    features: [],
-    clueOrder: ['tags', 'details', 'desc'],
+    clueOrder: ['desc', 'tags', 'details'],
   },
   '568220': {
     name: 'Lobotomy Corporation | Monster Management Simulation',
@@ -31820,6 +31755,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '9 Apr, 2018',
     developer: 'ProjectMoon',
     publisher: 'ProjectMoon',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 51684,
       rating: 'Very Positive',
@@ -31841,8 +31778,6 @@ export const steamGameDetails: SteamGameMap = {
       'Lovecraftian',
       'Anime',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '569480': {
@@ -31857,6 +31792,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jul 20, 2017',
     developer: 'Lion Shield, LLC',
     publisher: 'Lion Shield, LLC',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 30771,
       rating: 'Very Positive',
@@ -31878,8 +31815,6 @@ export const steamGameDetails: SteamGameMap = {
       'Economy',
       'Action',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '570940': {
@@ -31894,6 +31829,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '23 May, 2018',
     developer: 'QLOC',
     publisher: 'FromSoftware, Inc.',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 145890,
       rating: 'Very Positive',
@@ -31915,8 +31852,6 @@ export const steamGameDetails: SteamGameMap = {
       'Exploration',
       'Third Person',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '571740': {
@@ -31931,6 +31866,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Aug 18, 2023',
     developer: 'Perfuse Entertainment',
     publisher: 'Perfuse Entertainment',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 30423,
       rating: 'Very Positive',
@@ -31952,8 +31889,6 @@ export const steamGameDetails: SteamGameMap = {
       'Sandbox',
       'Co-op',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '573090': {
@@ -31968,6 +31903,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Sep 17, 2020',
     developer: 'Geometa',
     publisher: 'Geometa',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 57226,
       rating: 'Very Positive',
@@ -31989,8 +31926,6 @@ export const steamGameDetails: SteamGameMap = {
       'Trains',
       'Survival',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '573100': {
@@ -32005,6 +31940,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jan 24, 2019',
     developer: 'Tindalos Interactive',
     publisher: 'Focus Entertainment',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 10681,
       rating: 'Mostly Positive',
@@ -32026,8 +31963,6 @@ export const steamGameDetails: SteamGameMap = {
       'War',
       'Atmospheric',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '578650': {
@@ -32042,6 +31977,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '23 Oct, 2020',
     developer: 'Obsidian Entertainment',
     publisher: 'Private Division',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 27967,
       rating: 'Very Positive',
@@ -32063,8 +32000,6 @@ export const steamGameDetails: SteamGameMap = {
       'Character Customization',
       'Action',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '581320': {
@@ -32079,6 +32014,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Dec 12, 2018',
     developer: 'New World Interactive',
     publisher: 'Focus Entertainment',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 131084,
       rating: 'Very Positive',
@@ -32100,8 +32037,6 @@ export const steamGameDetails: SteamGameMap = {
       'Difficult',
       'Atmospheric',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '582500': {
@@ -32116,6 +32051,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Feb 3, 2017',
     developer: 'Total Mayhem Games',
     publisher: 'Total Mayhem Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 31835,
       rating: 'Very Positive',
@@ -32137,8 +32074,6 @@ export const steamGameDetails: SteamGameMap = {
       'Investigation',
       'Atmospheric',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '582660': {
@@ -32153,6 +32088,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'May 24, 2017',
     developer: 'Pearl Abyss',
     publisher: 'Pearl Abyss',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 91575,
       rating: 'Mostly Positive',
@@ -32174,8 +32111,6 @@ export const steamGameDetails: SteamGameMap = {
       'Strategy',
       '3D',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '583950': {
@@ -32190,6 +32125,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Nov 28, 2018',
     developer: 'Valve',
     publisher: 'Valve',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 24733,
       rating: 'Mixed',
@@ -32211,8 +32148,6 @@ export const steamGameDetails: SteamGameMap = {
       'Casual',
       'Turn-Based',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '584400': {
@@ -32227,6 +32162,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '29 Aug, 2017',
     developer: 'Christian Whitehead',
     publisher: 'SEGA',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 27408,
       rating: 'Very Positive',
@@ -32248,8 +32185,6 @@ export const steamGameDetails: SteamGameMap = {
       'Local Co-Op',
       'Casual',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '585420': {
@@ -32264,6 +32199,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Sep 18, 2019',
     developer: 'Flashbulb',
     publisher: 'Flashbulb',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 32940,
       rating: 'Very Positive',
@@ -32285,8 +32222,6 @@ export const steamGameDetails: SteamGameMap = {
       'Vehicular Combat',
       'Multiplayer',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '587620': {
@@ -32301,6 +32236,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Dec 12, 2017',
     developer: 'CAPCOM Co., Ltd.',
     publisher: 'CAPCOM Co., Ltd.',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 10409,
       rating: 'Very Positive',
@@ -32322,8 +32259,6 @@ export const steamGameDetails: SteamGameMap = {
       'Fantasy',
       'Action RPG',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '588430': {
@@ -32338,6 +32273,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Mar 29, 2017',
     developer: 'Bethesda Game Studios',
     publisher: 'Bethesda Softworks',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 79942,
       rating: 'Very Positive',
@@ -32359,8 +32296,6 @@ export const steamGameDetails: SteamGameMap = {
       'Multiplayer',
       'Sandbox',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '589290': {
@@ -32375,6 +32310,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Mar 5, 2020',
     developer: 'Anvil Game Studios',
     publisher: 'Anvil Game Studios',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 27398,
       rating: 'Very Positive',
@@ -32396,8 +32333,6 @@ export const steamGameDetails: SteamGameMap = {
       'PvP',
       'Naval',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '589360': {
@@ -32412,6 +32347,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '23 Mar, 2018',
     developer: 'LEVEL5 Inc.',
     publisher: 'BANDAI NAMCO Entertainment',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 11019,
       rating: 'Very Positive',
@@ -32433,8 +32370,6 @@ export const steamGameDetails: SteamGameMap = {
       'City Builder',
       'Action',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '589590': {
@@ -32449,6 +32384,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jun 15, 2017',
     developer: 'Con Man Games',
     publisher: 'SmashGames',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 10070,
       rating: 'Overwhelmingly Positive',
@@ -32470,8 +32407,6 @@ export const steamGameDetails: SteamGameMap = {
       'Story Rich',
       'Mystery',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '589870': {
@@ -32486,6 +32421,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'May 12, 2017',
     developer: 'Light Bringer Games inc.',
     publisher: 'Light Bringer Games inc.',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 10949,
       rating: 'Very Positive',
@@ -32507,8 +32444,6 @@ export const steamGameDetails: SteamGameMap = {
       'Arcade',
       '2D',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '590380': {
@@ -32523,6 +32458,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Feb 27, 2018',
     developer: 'Subset Games',
     publisher: 'Subset Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 21652,
       rating: 'Very Positive',
@@ -32544,8 +32481,6 @@ export const steamGameDetails: SteamGameMap = {
       'Turn-Based Combat',
       'Isometric',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '594650': {
@@ -32560,6 +32495,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '27 Aug, 2019',
     developer: 'Crytek',
     publisher: 'Crytek',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 267476,
       rating: 'Mostly Positive',
@@ -32581,8 +32518,6 @@ export const steamGameDetails: SteamGameMap = {
       'Co-op',
       'Survival Horror',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '597170': {
@@ -32597,6 +32532,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jul 27, 2021',
     developer: 'Doborog Games',
     publisher: 'Doborog Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 37025,
       rating: 'Overwhelmingly Positive',
@@ -32618,8 +32555,6 @@ export const steamGameDetails: SteamGameMap = {
       'Third Person',
       'Pixel Graphics',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '597220': {
@@ -32634,6 +32569,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Aug 10, 2017',
     developer: 'Asymmetric',
     publisher: 'Asymmetric',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 10121,
       rating: 'Overwhelmingly Positive',
@@ -32655,8 +32592,6 @@ export const steamGameDetails: SteamGameMap = {
       'Turn-Based',
       'Puzzle',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '597820': {
@@ -32671,6 +32606,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'May 25, 2021',
     developer: 'Experiment 101',
     publisher: 'THQ Nordic',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 19918,
       rating: 'Mixed',
@@ -32692,8 +32629,6 @@ export const steamGameDetails: SteamGameMap = {
       'Martial Arts',
       'Multiplayer',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '599140': {
@@ -32708,6 +32643,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Aug 15, 2018',
     developer: 'Lazy Bear Games',
     publisher: 'tinyBuild',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 46589,
       rating: 'Very Positive',
@@ -32729,8 +32666,6 @@ export const steamGameDetails: SteamGameMap = {
       '2D',
       'Story Rich',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '601430': {
@@ -32745,6 +32680,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 12, 2017',
     developer: 'Tango Gameworks',
     publisher: 'Bethesda Softworks',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 30224,
       rating: 'Very Positive',
@@ -32766,8 +32703,6 @@ export const steamGameDetails: SteamGameMap = {
       'Zombies',
       'Stealth',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '601510': {
@@ -32782,6 +32717,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Nov 16, 2017',
     developer: 'KONAMI',
     publisher: 'KONAMI',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 44521,
       rating: 'Very Positive',
@@ -32803,8 +32740,6 @@ export const steamGameDetails: SteamGameMap = {
       'Online Co-Op',
       'Action',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '601840': {
@@ -32819,6 +32754,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '1 Jun, 2021',
     developer: 'Klei Entertainment',
     publisher: 'Klei Entertainment',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 14286,
       rating: 'Very Positive',
@@ -32840,8 +32777,6 @@ export const steamGameDetails: SteamGameMap = {
       'Comic Book',
       'Choose Your Own Adventure',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '603850': {
@@ -32856,6 +32791,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Nov 21, 2018',
     developer: 'Łukasz Jakowski',
     publisher: 'Łukasz Jakowski Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 49011,
       rating: 'Very Positive',
@@ -32877,8 +32814,6 @@ export const steamGameDetails: SteamGameMap = {
       'Diplomacy',
       'Politics',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '605740': {
@@ -32893,6 +32828,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'May 15, 2023',
     developer: 'Nils Jakrins',
     publisher: 'Excalibur Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 17982,
       rating: 'Very Positive',
@@ -32914,8 +32851,6 @@ export const steamGameDetails: SteamGameMap = {
       'Sandbox',
       'Third Person',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '606150': {
@@ -32930,6 +32865,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'May 29, 2018',
     developer: 'Digital Sun',
     publisher: '11 bit studios',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 21477,
       rating: 'Very Positive',
@@ -32951,8 +32888,6 @@ export const steamGameDetails: SteamGameMap = {
       'Exploration',
       'Singleplayer',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '606280': {
@@ -32967,6 +32902,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Nov 27, 2018',
     developer: 'Gunfire Games',
     publisher: 'THQ Nordic',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 16727,
       rating: 'Mostly Positive',
@@ -32988,8 +32925,6 @@ export const steamGameDetails: SteamGameMap = {
       'Atmospheric',
       'Post-apocalyptic',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '606880': {
@@ -33004,6 +32939,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Sep 9, 2019',
     developer: 'Spiders',
     publisher: 'Focus Entertainment',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 21390,
       rating: 'Mostly Positive',
@@ -33025,8 +32962,6 @@ export const steamGameDetails: SteamGameMap = {
       'Nudity',
       'Action-Adventure',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '607080': {
@@ -33041,6 +32976,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '24 Aug, 2021',
     developer: 'Double Fine Productions',
     publisher: 'Xbox Game Studios',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 13896,
       rating: 'Overwhelmingly Positive',
@@ -33062,8 +32999,6 @@ export const steamGameDetails: SteamGameMap = {
       'Sequel',
       'Third Person',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '609320': {
@@ -33078,6 +33013,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'May 17, 2018',
     developer: 'Okomotive',
     publisher: 'Okomotive',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 25281,
       rating: 'Very Positive',
@@ -33099,8 +33036,6 @@ export const steamGameDetails: SteamGameMap = {
       'Platformer',
       'Action',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '610370': {
@@ -33115,6 +33050,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '16 Jun, 2020',
     developer: 'Mimimi Games',
     publisher: 'THQ Nordic',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 16132,
       rating: 'Overwhelmingly Positive',
@@ -33136,8 +33073,6 @@ export const steamGameDetails: SteamGameMap = {
       'Top-Down',
       'Violent',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '611500': {
@@ -33152,6 +33087,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Aug 18, 2022',
     developer: 'id Software',
     publisher: 'Bethesda Softworks',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 38692,
       rating: 'Mostly Positive',
@@ -33173,8 +33110,6 @@ export const steamGameDetails: SteamGameMap = {
       'eSports',
       'Difficult',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '611670': {
@@ -33189,6 +33124,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Apr 2, 2018',
     developer: 'Bethesda Game Studios',
     publisher: 'Bethesda Softworks',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 12046,
       rating: 'Mostly Positive',
@@ -33210,8 +33147,6 @@ export const steamGameDetails: SteamGameMap = {
       'Exploration',
       'Great Soundtrack',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '612880': {
@@ -33226,6 +33161,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 26, 2017',
     developer: 'MachineGames',
     publisher: 'Bethesda Softworks',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 47833,
       rating: 'Mostly Positive',
@@ -33247,8 +33184,6 @@ export const steamGameDetails: SteamGameMap = {
       'Atmospheric',
       'Comedy',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '613830': {
@@ -33263,6 +33198,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Feb 27, 2018',
     developer: 'Square Enix',
     publisher: 'Square Enix',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 12637,
       rating: 'Very Positive',
@@ -33284,8 +33221,6 @@ export const steamGameDetails: SteamGameMap = {
       'Multiple Endings',
       'Anime',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '614570': {
@@ -33300,6 +33235,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Sep 14, 2017',
     developer: 'Arkane Studios',
     publisher: 'Bethesda Softworks',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 12889,
       rating: 'Very Positive',
@@ -33321,8 +33258,6 @@ export const steamGameDetails: SteamGameMap = {
       'Dark',
       'Choices Matter',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '616560': {
@@ -33337,6 +33272,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jun 1, 2017',
     developer: 'Brilliant Game Studios',
     publisher: 'Brilliant Game Studios',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 12200,
       rating: 'Mostly Positive',
@@ -33358,8 +33295,6 @@ export const steamGameDetails: SteamGameMap = {
       'Zombies',
       'Open World',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '617830': {
@@ -33374,6 +33309,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'May 25, 2017',
     developer: 'SUPERHOT Team',
     publisher: 'SUPERHOT Team',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 10609,
       rating: 'Mostly Positive',
@@ -33395,8 +33332,6 @@ export const steamGameDetails: SteamGameMap = {
       'Minimalist',
       'Adventure',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '622650': {
@@ -33411,6 +33346,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Apr 27, 2017',
     developer: 'Joey Drew Studios',
     publisher: 'Joey Drew Studios',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 33902,
       rating: 'Very Positive',
@@ -33432,8 +33369,6 @@ export const steamGameDetails: SteamGameMap = {
       'Atmospheric',
       'Adventure',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '625960': {
@@ -33448,6 +33383,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Feb 6, 2020',
     developer: 'Ink Stains Games',
     publisher: 'HypeTrain Digital',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 33125,
       rating: 'Mostly Positive',
@@ -33469,8 +33406,6 @@ export const steamGameDetails: SteamGameMap = {
       'Medieval',
       'Difficult',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '626690': {
@@ -33485,6 +33420,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Feb 23, 2018',
     developer: 'Dimps Corporation',
     publisher: 'BANDAI NAMCO Entertainment',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 19391,
       rating: 'Very Positive',
@@ -33506,8 +33443,6 @@ export const steamGameDetails: SteamGameMap = {
       'Online Co-Op',
       'Fantasy',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '627270': {
@@ -33522,6 +33457,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '30 Nov, 2017',
     developer: 'NetherRealm Studios',
     publisher: 'WB Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 23757,
       rating: 'Very Positive',
@@ -33543,8 +33480,6 @@ export const steamGameDetails: SteamGameMap = {
       'Competitive',
       'Online Co-Op',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '627690': {
@@ -33559,6 +33494,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Mar 25, 2020',
     developer: 'Codename Entertainment Inc.',
     publisher: 'Codename Entertainment Inc.',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 14895,
       rating: 'Mostly Positive',
@@ -33580,8 +33517,6 @@ export const steamGameDetails: SteamGameMap = {
       'Loot',
       '2D',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '629730': {
@@ -33596,6 +33531,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '17 Jun, 2024',
     developer: 'WarpFrog',
     publisher: 'WarpFrog',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 50662,
       rating: 'Overwhelmingly Positive',
@@ -33614,8 +33551,6 @@ export const steamGameDetails: SteamGameMap = {
       'Fighting',
       'Simulation',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '629760': {
@@ -33630,6 +33565,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Apr 29, 2019',
     developer: 'Triternion',
     publisher: 'Triternion',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 113010,
       rating: 'Very Positive',
@@ -33651,8 +33588,6 @@ export const steamGameDetails: SteamGameMap = {
       'Team-Based',
       'Realistic',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '629820': {
@@ -33667,6 +33602,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'May 25, 2021',
     developer: 'Tripwire Interactive',
     publisher: 'Tripwire Interactive',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 23619,
       rating: 'Very Positive',
@@ -33688,8 +33625,6 @@ export const steamGameDetails: SteamGameMap = {
       'Female Protagonist',
       'Action',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '631510': {
@@ -33704,6 +33639,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Mar 13, 2018',
     developer: 'CAPCOM Co., Ltd.',
     publisher: 'CAPCOM Co., Ltd.',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 20863,
       rating: 'Very Positive',
@@ -33725,8 +33662,6 @@ export const steamGameDetails: SteamGameMap = {
       'Gore',
       'Story Rich',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '633230': {
@@ -33741,6 +33676,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jun 29, 2023',
     developer: 'Soleil Ltd.',
     publisher: 'Bandai Namco Entertainment',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 56344,
       rating: 'Very Positive',
@@ -33762,8 +33699,6 @@ export const steamGameDetails: SteamGameMap = {
       'Adventure',
       'Team-Based',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '635260': {
@@ -33778,6 +33713,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Nov 17, 2017',
     developer: 'CarX Technologies, LLC',
     publisher: 'CarX Technologies, LLC',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 87562,
       rating: 'Overwhelmingly Positive',
@@ -33799,8 +33736,6 @@ export const steamGameDetails: SteamGameMap = {
       'Third Person',
       'PvP',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '636480': {
@@ -33815,6 +33750,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'May 18, 2017',
     developer: 'SteelRaven7',
     publisher: 'SteelRaven7',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 77496,
       rating: 'Overwhelmingly Positive',
@@ -33836,8 +33773,6 @@ export const steamGameDetails: SteamGameMap = {
       'Strategy',
       'Simulation',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '637090': {
@@ -33852,6 +33787,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Apr 24, 2018',
     developer: 'Harebrained Schemes',
     publisher: 'Paradox Interactive',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 32567,
       rating: 'Very Positive',
@@ -33873,8 +33810,6 @@ export const steamGameDetails: SteamGameMap = {
       'Management',
       'Adventure',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '638230': {
@@ -33889,6 +33824,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jun 11, 2020',
     developer: 'thatgamecompany',
     publisher: 'Annapurna Interactive',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 37000,
       rating: 'Very Positive',
@@ -33910,8 +33847,6 @@ export const steamGameDetails: SteamGameMap = {
       'Music',
       'Family Friendly',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '640820': {
@@ -33926,6 +33861,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Sep 25, 2018',
     developer: 'Owlcat Games',
     publisher: 'Knights Peak',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 34475,
       rating: 'Mostly Positive',
@@ -33947,8 +33884,6 @@ export const steamGameDetails: SteamGameMap = {
       'Strategy',
       'Turn-Based',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '641320': {
@@ -33963,6 +33898,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jun 6, 2019',
     developer: 'Big Cheese Studio',
     publisher: 'Big Cheese Studio',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 19311,
       rating: 'Very Positive',
@@ -33984,8 +33921,6 @@ export const steamGameDetails: SteamGameMap = {
       'Resource Management',
       'Comedy',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '641990': {
@@ -34000,6 +33935,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Aug 21, 2017',
     developer: 'Team17',
     publisher: 'Team17',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 33189,
       rating: 'Very Positive',
@@ -34021,8 +33958,6 @@ export const steamGameDetails: SteamGameMap = {
       'Split Screen',
       'Character Customization',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '645630': {
@@ -34037,6 +33972,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jul 28, 2017',
     developer: 'Red Dot Games',
     publisher: 'PlayWay S.A.',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 52694,
       rating: 'Very Positive',
@@ -34058,8 +33995,6 @@ export const steamGameDetails: SteamGameMap = {
       'Moddable',
       'Physics',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '646910': {
@@ -34074,6 +34009,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jun 28, 2018',
     developer: 'Ivory Tower',
     publisher: 'Ubisoft',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 98191,
       rating: 'Mostly Positive',
@@ -34095,8 +34032,6 @@ export const steamGameDetails: SteamGameMap = {
       'Third Person',
       'Simulation',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '653530': {
@@ -34110,6 +34045,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 18, 2018',
     developer: 'Lucas Pope',
     publisher: '3909',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 33192,
       rating: 'Overwhelmingly Positive',
@@ -34131,8 +34068,6 @@ export const steamGameDetails: SteamGameMap = {
       'Retro',
       'Multiple Endings',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '655500': {
@@ -34147,6 +34082,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 7, 2019',
     developer: 'PiBoSo',
     publisher: 'PiBoSo',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 33646,
       rating: 'Very Positive',
@@ -34168,8 +34105,6 @@ export const steamGameDetails: SteamGameMap = {
       'Early Access',
       'Physics',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '657200': {
@@ -34184,6 +34119,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jul 18, 2017',
     developer: 'HFM Games',
     publisher: 'HFM Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 36351,
       rating: 'Very Positive',
@@ -34205,8 +34142,6 @@ export const steamGameDetails: SteamGameMap = {
       'Action',
       'FPS',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '667530': {
@@ -34221,6 +34156,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Apr 1, 2019',
     developer: 'Oleg Skutte',
     publisher: 'WAYONE GAMES',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 18424,
       rating: 'Very Positive',
@@ -34242,8 +34179,6 @@ export const steamGameDetails: SteamGameMap = {
       'Blood',
       'Moddable',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '667970': {
@@ -34258,6 +34193,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Aug 3, 2017',
     developer: 'Boundless Dynamics, LLC',
     publisher: 'Boundless Dynamics, LLC',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 21028,
       rating: 'Overwhelmingly Positive',
@@ -34279,8 +34216,6 @@ export const steamGameDetails: SteamGameMap = {
       'Singleplayer',
       'Artificial Intelligence',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '668580': {
@@ -34295,6 +34230,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Feb 20, 2023',
     developer: 'Mundfish',
     publisher: 'Focus Entertainment',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 44692,
       rating: 'Mostly Positive',
@@ -34316,8 +34253,6 @@ export const steamGameDetails: SteamGameMap = {
       'Cyberpunk',
       'First-Person',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '669330': {
@@ -34332,6 +34267,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Sep 26, 2024',
     developer: 'Game River',
     publisher: 'Dreamhaven',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 18161,
       rating: 'Very Positive',
@@ -34353,8 +34290,7 @@ export const steamGameDetails: SteamGameMap = {
       'Simulation',
       'War',
     ],
-    tags: [],
-    features: [],
+    blurScreenshotQuarter: 'bottom',
     clueOrder: ['tags', 'details', 'desc'],
   },
   '671860': {
@@ -34369,6 +34305,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jun 15, 2023',
     developer: 'SgtOkiDoki',
     publisher: 'SgtOkiDoki',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 145949,
       rating: 'Very Positive',
@@ -34390,8 +34328,6 @@ export const steamGameDetails: SteamGameMap = {
       'Gun Customization',
       'Class-Based',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '673750': {
@@ -34406,6 +34342,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'May 16, 2023',
     developer: 'Catobyte',
     publisher: 'Catobyte Ltd',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 11390,
       rating: 'Very Positive',
@@ -34427,8 +34365,6 @@ export const steamGameDetails: SteamGameMap = {
       'Puzzle Platformer',
       'Memes',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '673880': {
@@ -34443,6 +34379,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Nov 15, 2018',
     developer: 'Bulwark Studios',
     publisher: 'Kasedo Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 14268,
       rating: 'Very Positive',
@@ -34464,8 +34402,6 @@ export const steamGameDetails: SteamGameMap = {
       'Indie',
       'RPG',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '673950': {
@@ -34480,6 +34416,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 11, 2018',
     developer: 'Milkstone Studios',
     publisher: 'Milkstone Studios',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 21996,
       rating: 'Very Positive',
@@ -34501,8 +34439,6 @@ export const steamGameDetails: SteamGameMap = {
       'Third Person',
       'Cartoony',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '674020': {
@@ -34517,6 +34453,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Dec 10, 2022',
     developer: 'New Generation Games',
     publisher: 'Wishlist Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 54575,
       rating: 'Mixed',
@@ -34538,8 +34476,6 @@ export const steamGameDetails: SteamGameMap = {
       'Modern',
       'Team-Based',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '674940': {
@@ -34554,6 +34490,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Sep 28, 2017',
     developer: 'Landfall West',
     publisher: 'Landfall',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 124432,
       rating: 'Very Positive',
@@ -34575,8 +34513,6 @@ export const steamGameDetails: SteamGameMap = {
       'Indie',
       'Shooter',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '675010': {
@@ -34591,6 +34527,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 30, 2017',
     developer: 'Saber Interactive',
     publisher: 'Focus Entertainment',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 41772,
       rating: 'Very Positive',
@@ -34612,8 +34550,6 @@ export const steamGameDetails: SteamGameMap = {
       'Sandbox',
       'Exploration',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '675260': {
@@ -34628,6 +34564,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '8 Aug, 2017',
     developer: 'Telltale',
     publisher: 'Telltale',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 10148,
       rating: 'Very Positive',
@@ -34649,8 +34587,6 @@ export const steamGameDetails: SteamGameMap = {
       'Dark',
       'Third Person',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '677620': {
@@ -34665,6 +34601,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'May 24, 2019',
     developer: '1047 Games',
     publisher: '1047 Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 111124,
       rating: 'Very Positive',
@@ -34686,8 +34624,6 @@ export const steamGameDetails: SteamGameMap = {
       'eSports',
       'Tactical',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '680420': {
@@ -34702,6 +34638,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Apr 1, 2021',
     developer: 'People Can Fly',
     publisher: 'Square Enix',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 60950,
       rating: 'Mixed',
@@ -34723,8 +34661,6 @@ export const steamGameDetails: SteamGameMap = {
       'Violent',
       'Open World',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '681280': {
@@ -34739,6 +34675,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'May 7, 2019',
     developer: 'RageSquid',
     publisher: 'No More Robots',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 22282,
       rating: 'Very Positive',
@@ -34760,8 +34698,6 @@ export const steamGameDetails: SteamGameMap = {
       'Simulation',
       'Moddable',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '682990': {
@@ -34776,6 +34712,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Apr 16, 2020',
     developer: 'Byterunners',
     publisher: 'Movie Games S.A.',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 24426,
       rating: 'Very Positive',
@@ -34797,8 +34735,6 @@ export const steamGameDetails: SteamGameMap = {
       'Sandbox',
       'Inventory Management',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '683320': {
@@ -34813,6 +34749,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Dec 13, 2018',
     developer: 'Nomada Studio',
     publisher: 'Devolver Digital',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 93199,
       rating: 'Very Positive',
@@ -34834,8 +34772,6 @@ export const steamGameDetails: SteamGameMap = {
       'Colorful',
       'Puzzle Platformer',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '686810': {
@@ -34850,6 +34786,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '27 Jul, 2021',
     developer: 'Expression Games',
     publisher: 'Team17',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 145288,
       rating: 'Very Positive',
@@ -34871,8 +34809,6 @@ export const steamGameDetails: SteamGameMap = {
       'Gore',
       'Historical',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '690040': {
@@ -34887,6 +34823,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jul 16, 2020',
     developer: 'SUPERHOT Team',
     publisher: 'SUPERHOT Team',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 12450,
       rating: 'Very Positive',
@@ -34908,8 +34846,6 @@ export const steamGameDetails: SteamGameMap = {
       'Atmospheric',
       'Cyberpunk',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '690790': {
@@ -34924,6 +34860,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Feb 25, 2019',
     developer: 'Codemasters',
     publisher: 'Codemasters',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 47137,
       rating: 'Very Positive',
@@ -34945,8 +34883,6 @@ export const steamGameDetails: SteamGameMap = {
       'Open World',
       'Co-op',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '692850': {
@@ -34961,6 +34897,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jun 18, 2019',
     developer: 'ArtPlay',
     publisher: '505 Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 40801,
       rating: 'Very Positive',
@@ -34982,8 +34920,6 @@ export const steamGameDetails: SteamGameMap = {
       'Singleplayer',
       'Crafting',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '692890': {
@@ -34998,6 +34934,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Nov 7, 2023',
     developer: 'RyseUp Studios',
     publisher: 'RyseUp Studios',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 23614,
       rating: 'Overwhelmingly Positive',
@@ -35019,8 +34957,6 @@ export const steamGameDetails: SteamGameMap = {
       'Sci-fi',
       'Multiplayer',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '698670': {
@@ -35035,6 +34971,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 14, 2022',
     developer: 'Ebb Software',
     publisher: 'Kepler Interactive',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 17052,
       rating: 'Mostly Positive',
@@ -35056,8 +34994,6 @@ export const steamGameDetails: SteamGameMap = {
       'Sci-fi',
       'Walking Simulator',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '699130': {
@@ -35072,6 +35008,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Sep 21, 2021',
     developer: 'Saber Interactive Inc',
     publisher: 'Saber Interactive Inc',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 29545,
       rating: 'Very Positive',
@@ -35093,8 +35031,6 @@ export const steamGameDetails: SteamGameMap = {
       'Gun Customization',
       'Character Customization',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '700330': {
@@ -35109,6 +35045,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Dec 29, 2017',
     developer: 'Northwood Studios',
     publisher: 'Northwood Studios',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 228000,
       rating: 'Very Positive',
@@ -35130,8 +35068,6 @@ export const steamGameDetails: SteamGameMap = {
       'Psychological Horror',
       'Atmospheric',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '700600': {
@@ -35146,6 +35082,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Mar 30, 2021',
     developer: 'Rebellion',
     publisher: 'Rebellion',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 13037,
       rating: 'Mixed',
@@ -35167,8 +35105,6 @@ export const steamGameDetails: SteamGameMap = {
       'Sequel',
       'Cartoony',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '701160': {
@@ -35183,6 +35119,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Dec 11, 2018',
     developer: 'Stumpy🐙Squid',
     publisher: 'Raw Fury',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 37407,
       rating: 'Very Positive',
@@ -35204,8 +35142,6 @@ export const steamGameDetails: SteamGameMap = {
       'Simulation',
       'Adventure',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '702670': {
@@ -35220,6 +35156,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Aug 28, 2018',
     developer: 'Ben Esposito',
     publisher: 'Annapurna Interactive',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 11470,
       rating: 'Very Positive',
@@ -35241,8 +35179,6 @@ export const steamGameDetails: SteamGameMap = {
       '3D',
       'Stylized',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '704270': {
@@ -35257,6 +35193,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Mar 26, 2019',
     developer: 'Systemic Reaction™',
     publisher: 'Avalanche Studios',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 41519,
       rating: 'Mostly Positive',
@@ -35278,8 +35216,6 @@ export const steamGameDetails: SteamGameMap = {
       'Sandbox',
       '1980s',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '704850': {
@@ -35294,6 +35230,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Nov 9, 2018',
     developer: 'Noble Muffins',
     publisher: 'PlayWay S.A.',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 38489,
       rating: 'Very Positive',
@@ -35315,8 +35253,6 @@ export const steamGameDetails: SteamGameMap = {
       'FPS',
       'Realistic',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '707030': {
@@ -35331,6 +35267,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '20 Apr, 2022',
     developer: 'Running With Scissors',
     publisher: 'Running With Scissors',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 12914,
       rating: 'Mixed',
@@ -35352,8 +35290,6 @@ export const steamGameDetails: SteamGameMap = {
       'Action-Adventure',
       'Hack and Slash',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '712100': {
@@ -35368,6 +35304,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'May 2, 2018',
     developer: 'CREATIVE ASSEMBLY',
     publisher: 'SEGA',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 14638,
       rating: 'Mixed',
@@ -35389,8 +35327,6 @@ export const steamGameDetails: SteamGameMap = {
       'Military',
       'Atmospheric',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '714120': {
@@ -35405,6 +35341,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Sep 18, 2019',
     developer: 'Killmonday Games AB',
     publisher: 'Killmonday Games AB',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 13418,
       rating: 'Very Positive',
@@ -35426,8 +35364,6 @@ export const steamGameDetails: SteamGameMap = {
       '2D',
       'Funny',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '718670': {
@@ -35442,6 +35378,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'May 31, 2018',
     developer: 'Weather Factory',
     publisher: 'Weather Factory',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 14056,
       rating: 'Mostly Positive',
@@ -35463,8 +35401,6 @@ export const steamGameDetails: SteamGameMap = {
       'Moddable',
       'Crafting',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '719040': {
@@ -35479,6 +35415,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Aug 27, 2020',
     developer: 'inXile Entertainment',
     publisher: 'inXile Entertainment',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 21854,
       rating: 'Very Positive',
@@ -35500,8 +35438,6 @@ export const steamGameDetails: SteamGameMap = {
       'Turn-Based Combat',
       'Strategy',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '729040': {
@@ -35516,6 +35452,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Aug 31, 2023',
     developer: 'Gearbox Software',
     publisher: '2K',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 27011,
       rating: 'Mostly Positive',
@@ -35537,8 +35475,6 @@ export const steamGameDetails: SteamGameMap = {
       'Gore',
       'Multiplayer',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '731490': {
@@ -35553,6 +35489,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jun 29, 2018',
     developer: 'Vicarious Visions',
     publisher: 'Activision',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 21335,
       rating: 'Very Positive',
@@ -35574,8 +35512,6 @@ export const steamGameDetails: SteamGameMap = {
       'Family Friendly',
       'Retro',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '732430': {
@@ -35590,6 +35526,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Nov 8, 2017',
     developer: 'GrizzlyGames',
     publisher: 'GrizzlyGames',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 11515,
       rating: 'Overwhelmingly Positive',
@@ -35611,8 +35549,6 @@ export const steamGameDetails: SteamGameMap = {
       'Racing',
       'Parkour',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '732690': {
@@ -35627,6 +35563,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'May 28, 2019',
     developer: 'Steel Wool Studios',
     publisher: 'ScottGames',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 12907,
       rating: 'Overwhelmingly Positive',
@@ -35648,8 +35586,6 @@ export const steamGameDetails: SteamGameMap = {
       'Puzzle',
       'Story Rich',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '736220': {
@@ -35664,6 +35600,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Aug 9, 2018',
     developer: 'Offworld',
     publisher: 'Offworld',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 25267,
       rating: 'Mostly Positive',
@@ -35685,8 +35623,6 @@ export const steamGameDetails: SteamGameMap = {
       'Indie',
       'Historical',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '736260': {
@@ -35701,6 +35637,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '13 Mar, 2019',
     developer: 'Hempuli Oy',
     publisher: 'Hempuli Oy',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 23611,
       rating: 'Overwhelmingly Positive',
@@ -35722,8 +35660,6 @@ export const steamGameDetails: SteamGameMap = {
       'Casual',
       'Top-Down',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '736590': {
@@ -35738,6 +35674,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Feb 15, 2023',
     developer: 'Drakeling Labs',
     publisher: '',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 19549,
       rating: 'Mostly Positive',
@@ -35759,8 +35697,6 @@ export const steamGameDetails: SteamGameMap = {
       'Wargame',
       'Casual',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '738060': {
@@ -35775,6 +35711,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '4 Dec, 2017',
     developer: 'Scott Cawthon',
     publisher: 'Scott Cawthon',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 32511,
       rating: 'Very Positive',
@@ -35796,8 +35734,6 @@ export const steamGameDetails: SteamGameMap = {
       'Funny',
       'Pixel Graphics',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '738520': {
@@ -35812,6 +35748,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '25 Feb, 2021',
     developer: 'RedRuins Softworks',
     publisher: 'HypeTrain Digital',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 15982,
       rating: 'Mostly Positive',
@@ -35833,8 +35771,6 @@ export const steamGameDetails: SteamGameMap = {
       'Exploration',
       'Action',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '744900': {
@@ -35849,6 +35785,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jul 15, 2019',
     developer: 'Creaky Corpse Ltd',
     publisher: 'Creaky Corpse Ltd',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 27901,
       rating: 'Mostly Positive',
@@ -35870,8 +35808,6 @@ export const steamGameDetails: SteamGameMap = {
       'Violent',
       'Inventory Management',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '745920': {
@@ -35886,6 +35822,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Sep 6, 2022',
     developer: 'Crema',
     publisher: 'Humble Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 39207,
       rating: 'Very Positive',
@@ -35907,8 +35845,6 @@ export const steamGameDetails: SteamGameMap = {
       'Collectathon',
       'Anime',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '746850': {
@@ -35923,6 +35859,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Apr 23, 2020',
     developer: 'ION LANDS',
     publisher: 'ION LANDS',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 15027,
       rating: 'Very Positive',
@@ -35944,8 +35882,6 @@ export const steamGameDetails: SteamGameMap = {
       'Third Person',
       'RPG',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '747660': {
@@ -35960,6 +35896,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Dec 16, 2021',
     developer: 'Steel Wool Studios',
     publisher: 'ScottGames',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 68129,
       rating: 'Very Positive',
@@ -35981,8 +35919,6 @@ export const steamGameDetails: SteamGameMap = {
       'Artificial Intelligence',
       'Thriller',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '751780': {
@@ -35997,6 +35933,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Apr 18, 2019',
     developer: 'HopFrog',
     publisher: 'Humble Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 42853,
       rating: 'Very Positive',
@@ -36018,8 +35956,6 @@ export const steamGameDetails: SteamGameMap = {
       'Building',
       'Exploration',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '760060': {
@@ -36034,6 +35970,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Dec 4, 2018',
     developer: 'The Bearded Ladies',
     publisher: 'Funcom',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 20349,
       rating: 'Very Positive',
@@ -36055,8 +35993,6 @@ export const steamGameDetails: SteamGameMap = {
       'Survival',
       'Dark Fantasy',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '760160': {
@@ -36071,6 +36007,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Apr 27, 2022',
     developer: 'Sharkmob AB',
     publisher: 'Sharkmob AB',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 58604,
       rating: 'Mostly Positive',
@@ -36092,8 +36030,6 @@ export const steamGameDetails: SteamGameMap = {
       'Third Person',
       'Dark',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '761890': {
@@ -36108,6 +36044,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'May 16, 2018',
     developer: 'Sandbox Interactive GmbH',
     publisher: 'Sandbox Interactive GmbH',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 89691,
       rating: 'Mostly Positive',
@@ -36129,8 +36067,6 @@ export const steamGameDetails: SteamGameMap = {
       'Medieval',
       'Co-op',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '763890': {
@@ -36145,6 +36081,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '15 Jun, 2021',
     developer: 'Worldwalker Games LLC',
     publisher: 'Worldwalker Games LLC',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 18029,
       rating: 'Very Positive',
@@ -36166,8 +36104,6 @@ export const steamGameDetails: SteamGameMap = {
       'Emotional',
       'Comic Book',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '764790': {
@@ -36182,6 +36118,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Aug 30, 2018',
     developer: 'Sabotage',
     publisher: 'Devolver Digital',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 12765,
       rating: 'Very Positive',
@@ -36203,8 +36141,6 @@ export const steamGameDetails: SteamGameMap = {
       'Difficult',
       'Time Travel',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '765410': {
@@ -36219,6 +36155,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Aug 22, 2018',
     developer: 'Gupa Games',
     publisher: 'Gupa Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 10002,
       rating: 'Very Positive',
@@ -36240,8 +36178,6 @@ export const steamGameDetails: SteamGameMap = {
       'Epic',
       'Funny',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '766570': {
@@ -36256,6 +36192,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Nov 10, 2021',
     developer: 'FishSoft LLC',
     publisher: 'FishSoft LLC',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 83332,
       rating: 'Mostly Positive',
@@ -36277,8 +36215,6 @@ export const steamGameDetails: SteamGameMap = {
       'Open World',
       'Survival',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '767560': {
@@ -36293,6 +36229,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Apr 4, 2018',
     developer: 'MY.GAMES',
     publisher: 'MY.GAMES',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 29257,
       rating: 'Mixed',
@@ -36314,8 +36252,6 @@ export const steamGameDetails: SteamGameMap = {
       'Sci-fi',
       'Realistic',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '773951': {
@@ -36330,6 +36266,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '4 Oct, 2019',
     developer: 'KK Game Studio',
     publisher: 'KK Game Studio',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 12378,
       rating: 'Mixed',
@@ -36351,8 +36289,6 @@ export const steamGameDetails: SteamGameMap = {
       'Realistic',
       'RTS',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '774171': {
@@ -36367,6 +36303,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jun 19, 2019',
     developer: 'peropero',
     publisher: 'hasuhasu',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 124406,
       rating: 'Very Positive',
@@ -36388,8 +36326,6 @@ export const steamGameDetails: SteamGameMap = {
       'Difficult',
       'Action',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '774361': {
@@ -36404,6 +36340,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Sep 10, 2019',
     developer: 'The Game Kitchen',
     publisher: 'Team17',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 61276,
       rating: 'Very Positive',
@@ -36425,8 +36363,6 @@ export const steamGameDetails: SteamGameMap = {
       'Blood',
       'Gothic',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '774801': {
@@ -36441,6 +36377,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Apr 1, 2023',
     developer: 'Noisestorm',
     publisher: 'Noisestorm',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 29799,
       rating: 'Overwhelmingly Positive',
@@ -36462,8 +36400,6 @@ export const steamGameDetails: SteamGameMap = {
       'Action',
       'PvE',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '774861': {
@@ -36478,6 +36414,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '23 May, 2019',
     developer: 'Other Ocean Interactive',
     publisher: 'Other Ocean Group',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 19074,
       rating: 'Very Positive',
@@ -36499,8 +36437,6 @@ export const steamGameDetails: SteamGameMap = {
       'Strategy',
       'Funny',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '775500': {
@@ -36515,6 +36451,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '24 Jun, 2021',
     developer: 'BANDAI NAMCO Studios Inc.',
     publisher: 'BANDAI NAMCO Entertainment',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 17811,
       rating: 'Very Positive',
@@ -36536,8 +36474,6 @@ export const steamGameDetails: SteamGameMap = {
       'Interactive Fiction',
       'Futuristic',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '779340': {
@@ -36552,6 +36488,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'May 23, 2019',
     developer: 'CREATIVE ASSEMBLY',
     publisher: 'SEGA',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 106884,
       rating: 'Very Positive',
@@ -36573,8 +36511,6 @@ export const steamGameDetails: SteamGameMap = {
       'Great Soundtrack',
       'Co-op',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '780290': {
@@ -36589,6 +36525,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '20 Oct, 2021',
     developer: 'Flaming Fowl Studios',
     publisher: 'Twin Sails Interactive',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 15741,
       rating: 'Very Positive',
@@ -36610,8 +36548,6 @@ export const steamGameDetails: SteamGameMap = {
       '3D',
       'Board Game',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '780310': {
@@ -36626,6 +36562,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 14, 2021',
     developer: 'EXOR Studios',
     publisher: 'EXOR Studios',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 21971,
       rating: 'Very Positive',
@@ -36647,8 +36585,6 @@ export const steamGameDetails: SteamGameMap = {
       'RTS',
       'Economy',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '784080': {
@@ -36663,6 +36599,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'May 26, 2021',
     developer: 'Piranha Games Inc.',
     publisher: 'Piranha Games Inc.',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 14555,
       rating: 'Very Positive',
@@ -36684,8 +36622,6 @@ export const steamGameDetails: SteamGameMap = {
       'Combat',
       'Futuristic',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '787860': {
@@ -36700,6 +36636,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '19 Nov, 2018',
     developer: 'Giants Software',
     publisher: 'Giants Software',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 75723,
       rating: 'Very Positive',
@@ -36721,8 +36659,6 @@ export const steamGameDetails: SteamGameMap = {
       'Relaxing',
       'First-Person',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '794260': {
@@ -36737,6 +36673,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'May 17, 2022',
     developer: 'Nine Dots Studio',
     publisher: 'Prime Matter',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 30075,
       rating: 'Mostly Positive',
@@ -36758,8 +36696,6 @@ export const steamGameDetails: SteamGameMap = {
       'Third Person',
       'Difficult',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '799600': {
@@ -36774,6 +36710,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 24, 2022',
     developer: 'Walternate Realities',
     publisher: 'Walternate Realities',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 12375,
       rating: 'Very Positive',
@@ -36795,8 +36733,6 @@ export const steamGameDetails: SteamGameMap = {
       'Simulation',
       'Atmospheric',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '803330': {
@@ -36811,6 +36747,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jul 28, 2020',
     developer: 'Black Forest Games',
     publisher: 'THQ Nordic',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 11264,
       rating: 'Very Positive',
@@ -36832,8 +36770,6 @@ export const steamGameDetails: SteamGameMap = {
       'Destruction',
       'Gore',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '805550': {
@@ -36848,6 +36784,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'May 29, 2019',
     developer: 'Kunos Simulazioni',
     publisher: '505 Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 44354,
       rating: 'Very Positive',
@@ -36869,8 +36807,6 @@ export const steamGameDetails: SteamGameMap = {
       'Competitive',
       'First-Person',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '813230': {
@@ -36885,6 +36821,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'May 9, 2024',
     developer: 'Billy Basso',
     publisher: 'Bigmode',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 23352,
       rating: 'Overwhelmingly Positive',
@@ -36906,8 +36844,6 @@ export const steamGameDetails: SteamGameMap = {
       'Action',
       'Nonlinear',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '813630': {
@@ -36922,6 +36858,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Apr 5, 2019',
     developer: 'Supra Games',
     publisher: 'Supra Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 14566,
       rating: 'Very Positive',
@@ -36943,8 +36881,6 @@ export const steamGameDetails: SteamGameMap = {
       'Funny',
       'Shooter',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '814370': {
@@ -36959,6 +36895,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Dec 8, 2020',
     developer: 'moi rai games',
     publisher: 'Team17',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 12268,
       rating: 'Very Positive',
@@ -36980,8 +36918,6 @@ export const steamGameDetails: SteamGameMap = {
       'PvP',
       'Difficult',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '816090': {
@@ -36996,6 +36932,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'May 22, 2018',
     developer: 'Streum On Studio',
     publisher: 'Focus Entertainment',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 10581,
       rating: 'Mostly Positive',
@@ -37017,8 +36955,6 @@ export const steamGameDetails: SteamGameMap = {
       'Horror',
       'Singleplayer',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '823130': {
@@ -37033,6 +36969,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jun 5, 2018',
     developer: 'Landfall',
     publisher: 'Landfall',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 87626,
       rating: 'Very Positive',
@@ -37054,8 +36992,6 @@ export const steamGameDetails: SteamGameMap = {
       'PvP',
       'Sandbox',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '823500': {
@@ -37070,6 +37006,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Dec 10, 2019',
     developer: 'Stress Level Zero',
     publisher: 'Stress Level Zero',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 36218,
       rating: 'Very Positive',
@@ -37091,8 +37029,6 @@ export const steamGameDetails: SteamGameMap = {
       'Violent',
       'Indie',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '824270': {
@@ -37107,6 +37043,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Apr 3, 2018',
     developer: 'KovaaK Games',
     publisher: 'KovaaK Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 39011,
       rating: 'Very Positive',
@@ -37127,8 +37065,6 @@ export const steamGameDetails: SteamGameMap = {
       'Hentai',
       'Sexual Content',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '826630': {
@@ -37143,6 +37079,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Aug 31, 2020',
     developer: 'KING Art',
     publisher: 'Prime Matter',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 15679,
       rating: 'Mostly Positive',
@@ -37164,8 +37102,6 @@ export const steamGameDetails: SteamGameMap = {
       'Real-Time',
       'PvP',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '834910': {
@@ -37180,6 +37116,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '22 Dec, 2018',
     developer: 'Grapeshot Games',
     publisher: 'Grapeshot Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 42833,
       rating: 'Mixed',
@@ -37201,8 +37139,6 @@ export const steamGameDetails: SteamGameMap = {
       'Exploration',
       'Sandbox',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '835570': {
@@ -37217,6 +37153,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Apr 5, 2020',
     developer: 'Booming Tech',
     publisher: 'Poros Interactive',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 37464,
       rating: 'Mostly Positive',
@@ -37238,8 +37176,6 @@ export const steamGameDetails: SteamGameMap = {
       'Alternate History',
       'Tactical',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '835960': {
@@ -37254,6 +37190,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '2 Nov, 2023',
     developer: 'Croteam',
     publisher: 'Devolver Digital',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 12848,
       rating: 'Very Positive',
@@ -37275,8 +37213,6 @@ export const steamGameDetails: SteamGameMap = {
       'Logic',
       'Action-Adventure',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '843380': {
@@ -37291,6 +37227,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Aug 26, 2021',
     developer: 'Pixile',
     publisher: 'Pixile',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 43836,
       rating: 'Very Positive',
@@ -37312,8 +37250,6 @@ export const steamGameDetails: SteamGameMap = {
       'Action',
       'Indie',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '844870': {
@@ -37328,6 +37264,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Apr 30, 2019',
     developer: 'KOG',
     publisher: 'KOG',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 34146,
       rating: 'Mixed',
@@ -37349,8 +37287,6 @@ export const steamGameDetails: SteamGameMap = {
       'Online Co-Op',
       'Early Access',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '845070': {
@@ -37365,6 +37301,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jun 25, 2018',
     developer: 'DONTNOD Entertainment',
     publisher: 'Square Enix',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 14741,
       rating: 'Very Positive',
@@ -37386,8 +37324,6 @@ export const steamGameDetails: SteamGameMap = {
       'Controller',
       'Emotional',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '846770': {
@@ -37402,6 +37338,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Nov 16, 2021',
     developer: '10tons Ltd',
     publisher: '10tons Ltd',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 11272,
       rating: 'Very Positive',
@@ -37423,8 +37361,6 @@ export const steamGameDetails: SteamGameMap = {
       'Hunting',
       'Fishing',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '847370': {
@@ -37439,6 +37375,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '16 Nov, 2018',
     developer: 'Insomniac Games',
     publisher: 'Xbox Game Studios',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 13944,
       rating: 'Very Positive',
@@ -37460,8 +37398,6 @@ export const steamGameDetails: SteamGameMap = {
       'Great Soundtrack',
       'Third Person',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '850190': {
@@ -37476,6 +37412,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Feb 15, 2024',
     developer: 'Coffee Stain North',
     publisher: 'Coffee Stain Publishing',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 14333,
       rating: 'Overwhelmingly Positive',
@@ -37497,8 +37435,6 @@ export const steamGameDetails: SteamGameMap = {
       'Adventure',
       'Colorful',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '851100': {
@@ -37513,6 +37449,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Feb 25, 2019',
     developer: 'Team Ladybug',
     publisher: 'WSS playground',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 14593,
       rating: 'Overwhelmingly Positive',
@@ -37534,8 +37472,6 @@ export const steamGameDetails: SteamGameMap = {
       'Anime',
       'Pixel Graphics',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '851850': {
@@ -37550,6 +37486,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jan 16, 2020',
     developer: 'CyberConnect2 Co. Ltd.',
     publisher: 'Bandai Namco Entertainment Inc.',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 57083,
       rating: 'Very Positive',
@@ -37571,8 +37509,6 @@ export const steamGameDetails: SteamGameMap = {
       "Beat 'em up",
       'Third Person',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '858210': {
@@ -37587,6 +37523,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Aug 12, 2024',
     developer: 'Chimeric',
     publisher: 'Pixeljam',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 14382,
       rating: 'Overwhelmingly Positive',
@@ -37608,8 +37546,6 @@ export const steamGameDetails: SteamGameMap = {
       'Colorful',
       'Singleplayer',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '858810': {
@@ -37624,6 +37560,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Mar 1, 2019',
     developer: 'Madruga Works',
     publisher: 'Madruga Works',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 17611,
       rating: 'Very Positive',
@@ -37645,8 +37583,6 @@ export const steamGameDetails: SteamGameMap = {
       'Resource Management',
       'Multiplayer',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '858820': {
@@ -37661,6 +37597,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jul 27, 2021',
     developer: 'Norsfell',
     publisher: 'Gearbox Publishing',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 23056,
       rating: 'Mostly Positive',
@@ -37682,8 +37620,6 @@ export const steamGameDetails: SteamGameMap = {
       'Colorful',
       'Boss Rush',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '859570': {
@@ -37698,6 +37634,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 24, 2019',
     developer: 'Hologryph',
     publisher: 'tinyBuild',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 19021,
       rating: 'Very Positive',
@@ -37719,8 +37657,6 @@ export const steamGameDetails: SteamGameMap = {
       'Funny',
       'Action',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '859580': {
@@ -37735,6 +37671,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Apr 25, 2019',
     developer: 'Paradox Development Studio',
     publisher: 'Paradox Interactive',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 26947,
       rating: 'Mixed',
@@ -37756,8 +37694,6 @@ export const steamGameDetails: SteamGameMap = {
       'Moddable',
       'Real-Time with Pause',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '861540': {
@@ -37772,6 +37708,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Aug 13, 2019',
     developer: 'Terry Cavanagh',
     publisher: 'Terry Cavanagh',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 11482,
       rating: 'Very Positive',
@@ -37793,8 +37731,6 @@ export const steamGameDetails: SteamGameMap = {
       'Colorful',
       'Great Soundtrack',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '861650': {
@@ -37809,6 +37745,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Sep 22, 2022',
     developer: 'crea-ture Studios Inc.',
     publisher: 'Nacon',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 15487,
       rating: 'Very Positive',
@@ -37830,8 +37768,6 @@ export const steamGameDetails: SteamGameMap = {
       'Early Access',
       'Character Customization',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '865360': {
@@ -37846,6 +37782,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 10, 2019',
     developer: 'Total Mayhem Games',
     publisher: 'Total Mayhem Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 17134,
       rating: 'Very Positive',
@@ -37867,8 +37805,6 @@ export const steamGameDetails: SteamGameMap = {
       'Mystery',
       'First-Person',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '866800': {
@@ -37883,6 +37819,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Aug 13, 2018',
     developer: 'Telltale Games',
     publisher: 'Skybound Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 20877,
       rating: 'Very Positive',
@@ -37904,8 +37842,6 @@ export const steamGameDetails: SteamGameMap = {
       'Action',
       'Gore',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '867210': {
@@ -37920,6 +37856,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'May 20, 2024',
     developer: 'Lavapotion',
     publisher: 'Coffee Stain Publishing',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 13009,
       rating: 'Very Positive',
@@ -37941,8 +37879,6 @@ export const steamGameDetails: SteamGameMap = {
       'Retro',
       'Story Rich',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '870780': {
@@ -37957,6 +37893,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '27 Aug, 2020',
     developer: 'Remedy Entertainment',
     publisher: 'Remedy Entertainment',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 58467,
       rating: 'Very Positive',
@@ -37978,8 +37916,6 @@ export const steamGameDetails: SteamGameMap = {
       'Shooter',
       'Metroidvania',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '871720': {
@@ -37994,6 +37930,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jun 27, 2018',
     developer: 'Scott Cawthon',
     publisher: 'Scott Cawthon',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 61832,
       rating: 'Overwhelmingly Positive',
@@ -38015,8 +37953,6 @@ export const steamGameDetails: SteamGameMap = {
       'Psychological Horror',
       'Atmospheric',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '872200': {
@@ -38031,6 +37967,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jul 20, 2021',
     developer: 'First Watch Games',
     publisher: 'Hi-Rez Studios',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 25803,
       rating: 'Mostly Positive',
@@ -38052,8 +37990,6 @@ export const steamGameDetails: SteamGameMap = {
       'Online Co-Op',
       'Co-op',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '872670': {
@@ -38068,6 +38004,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Feb 22, 2022',
     developer: 'Affray Interactive',
     publisher: 'Affray Interactive',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 14481,
       rating: 'Mostly Positive',
@@ -38089,8 +38027,6 @@ export const steamGameDetails: SteamGameMap = {
       'Military',
       'Combat',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '874260': {
@@ -38105,6 +38041,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jul 28, 2021',
     developer: 'Modern Storyteller',
     publisher: 'Dear Villagers',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 12928,
       rating: 'Overwhelmingly Positive',
@@ -38126,8 +38064,6 @@ export const steamGameDetails: SteamGameMap = {
       'Philosophical',
       'Great Soundtrack',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '880940': {
@@ -38142,6 +38078,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Sep 20, 2018',
     developer: 'Rebuilt Games',
     publisher: 'Rebuilt Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 56480,
       rating: 'Very Positive',
@@ -38163,8 +38101,6 @@ export const steamGameDetails: SteamGameMap = {
       'Indie',
       'Comedy',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '882100': {
@@ -38179,6 +38115,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '23 Apr, 2020',
     developer: 'Firaxis Games',
     publisher: '2K',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 23230,
       rating: 'Mostly Positive',
@@ -38200,8 +38138,6 @@ export const steamGameDetails: SteamGameMap = {
       'Action',
       'Female Protagonist',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '884660': {
@@ -38216,6 +38152,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jun 15, 2018',
     developer: 'Darkflow Software',
     publisher: 'Gaijin Network Ltd',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 38612,
       rating: 'Mostly Positive',
@@ -38237,8 +38175,6 @@ export const steamGameDetails: SteamGameMap = {
       'Zombies',
       'Third-Person Shooter',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '885970': {
@@ -38253,6 +38189,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Apr 29, 2021',
     developer: 'Creative Assembly',
     publisher: 'SEGA',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 13050,
       rating: 'Mostly Positive',
@@ -38274,8 +38212,6 @@ export const steamGameDetails: SteamGameMap = {
       'Multiplayer',
       'Singleplayer',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '894020': {
@@ -38290,6 +38226,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jul 20, 2021',
     developer: 'Acid Nerve',
     publisher: 'Devolver Digital',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 20882,
       rating: 'Very Positive',
@@ -38311,8 +38249,6 @@ export const steamGameDetails: SteamGameMap = {
       'Dungeon Crawler',
       'Metroidvania',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '895400': {
@@ -38327,6 +38263,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Dec 5, 2024',
     developer: 'Bad Pixel',
     publisher: 'Bad Pixel',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 18422,
       rating: 'Mostly Positive',
@@ -38348,8 +38286,6 @@ export const steamGameDetails: SteamGameMap = {
       'Action',
       'Crafting',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '895870': {
@@ -38364,6 +38300,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Dec 1, 2020',
     developer: 'Sector D2',
     publisher: 'Sector D2',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 21089,
       rating: 'Very Positive',
@@ -38385,8 +38323,6 @@ export const steamGameDetails: SteamGameMap = {
       'Shooter',
       'Sci-fi',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '899770': {
@@ -38401,6 +38337,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Feb 21, 2024',
     developer: 'Eleventh Hour Games',
     publisher: 'Eleventh Hour Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 65000,
       rating: 'Very Positive',
@@ -38419,8 +38357,6 @@ export const steamGameDetails: SteamGameMap = {
       'Dungeon Crawler',
       'Indie',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '903950': {
@@ -38435,6 +38371,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Mar 26, 2020',
     developer: 'Donkey Crew',
     publisher: 'Donkey Crew',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 24173,
       rating: 'Mixed',
@@ -38456,8 +38394,6 @@ export const steamGameDetails: SteamGameMap = {
       'Third Person',
       'Post-apocalyptic',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '914620': {
@@ -38472,6 +38408,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Aug 14, 2018',
     developer: 'Dimension 32 Entertainment',
     publisher: 'Dimension 32 Entertainment',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 14009,
       rating: 'Mostly Positive',
@@ -38493,8 +38431,6 @@ export const steamGameDetails: SteamGameMap = {
       'Simulation',
       'Violent',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '915320': {
@@ -38509,6 +38445,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'May 29, 2020',
     developer: 'Vulcron',
     publisher: 'Vulcron',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 12575,
       rating: 'Mostly Positive',
@@ -38530,8 +38468,6 @@ export const steamGameDetails: SteamGameMap = {
       'Team-Based',
       'Competitive',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '916440': {
@@ -38546,6 +38482,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Apr 16, 2019',
     developer: 'Ubisoft Mainz',
     publisher: 'Ubisoft',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 30560,
       rating: 'Mostly Positive',
@@ -38567,8 +38505,6 @@ export const steamGameDetails: SteamGameMap = {
       'Building',
       'Political',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '918570': {
@@ -38583,6 +38519,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Dec 2, 2021',
     developer: 'Playwing LTD',
     publisher: 'Playwing LTD',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 18098,
       rating: 'Mostly Positive',
@@ -38604,8 +38542,6 @@ export const steamGameDetails: SteamGameMap = {
       'Online Co-Op',
       'Dark Fantasy',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '921570': {
@@ -38620,6 +38556,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jun 7, 2019',
     developer: 'Square Enix',
     publisher: 'Square Enix',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 16290,
       rating: 'Very Positive',
@@ -38641,8 +38579,6 @@ export const steamGameDetails: SteamGameMap = {
       'Anime',
       'Multiple Endings',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '924970': {
@@ -38657,6 +38593,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 12, 2021',
     developer: 'Turtle Rock Studios',
     publisher: 'Warner Bros. Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 71818,
       rating: 'Mostly Positive',
@@ -38678,8 +38616,6 @@ export const steamGameDetails: SteamGameMap = {
       'Violent',
       'Adventure',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '933110': {
@@ -38694,6 +38630,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 15, 2020',
     developer: "World's Edge",
     publisher: 'Xbox Game Studios',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 52391,
       rating: 'Very Positive',
@@ -38715,8 +38653,6 @@ export const steamGameDetails: SteamGameMap = {
       '3D',
       'Online Co-Op',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '934700': {
@@ -38731,6 +38667,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '22 Apr, 2024',
     developer: 'Dambuster Studios',
     publisher: 'Deep Silver',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 22998,
       rating: 'Mostly Positive',
@@ -38752,8 +38690,6 @@ export const steamGameDetails: SteamGameMap = {
       'Dark Humor',
       'PvE',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '936790': {
@@ -38768,6 +38704,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Sep 9, 2021',
     developer: 'Deck Nine',
     publisher: 'Square Enix',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 16379,
       rating: 'Very Positive',
@@ -38789,8 +38727,6 @@ export const steamGameDetails: SteamGameMap = {
       'Action',
       'Mystery',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '939850': {
@@ -38805,6 +38741,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Aug 29, 2019',
     developer: 'Supermassive Games',
     publisher: 'BANDAI NAMCO Entertainment Europe',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 13065,
       rating: 'Mostly Positive',
@@ -38826,8 +38764,6 @@ export const steamGameDetails: SteamGameMap = {
       'Psychological Horror',
       'Third Person',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '939960': {
@@ -38842,6 +38778,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Feb 15, 2019',
     developer: 'Ubisoft Montreal',
     publisher: 'Ubisoft',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 34020,
       rating: 'Mostly Positive',
@@ -38863,8 +38801,6 @@ export const steamGameDetails: SteamGameMap = {
       'Survival',
       'RPG',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '949230': {
@@ -38879,6 +38815,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 24, 2023',
     developer: 'Iceflake Studios',
     publisher: 'Paradox Interactive',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 85422,
       rating: 'Mixed',
@@ -38900,8 +38838,6 @@ export const steamGameDetails: SteamGameMap = {
       'Casual',
       'Atmospheric',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '952060': {
@@ -38916,6 +38852,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Apr 2, 2020',
     developer: 'CAPCOM Co., Ltd.',
     publisher: 'CAPCOM Co., Ltd.',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 101597,
       rating: 'Very Positive',
@@ -38937,8 +38875,6 @@ export const steamGameDetails: SteamGameMap = {
       'Story Rich',
       'Atmospheric',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '953490': {
@@ -38953,6 +38889,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jul 23, 2020',
     developer: 'Phobia Game Studio',
     publisher: 'Devolver Digital',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 30173,
       rating: 'Very Positive',
@@ -38974,8 +38912,6 @@ export const steamGameDetails: SteamGameMap = {
       'Physics',
       'Lovecraftian',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '954740': {
@@ -38990,6 +38926,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Nov 14, 2019',
     developer: 'Teyon',
     publisher: 'Reef Entertainment',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 17958,
       rating: 'Very Positive',
@@ -39011,8 +38949,6 @@ export const steamGameDetails: SteamGameMap = {
       'Futuristic',
       'Crafting',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '954850': {
@@ -39027,6 +38963,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Feb 24, 2023',
     developer: 'Intercept Games',
     publisher: 'Private Division',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 31039,
       rating: 'Mostly Negative',
@@ -39048,8 +38986,6 @@ export const steamGameDetails: SteamGameMap = {
       'Singleplayer',
       'Early Access',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '960090': {
@@ -39064,6 +39000,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Dec 17, 2018',
     developer: 'Ninja Kiwi',
     publisher: 'Ninja Kiwi',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 380627,
       rating: 'Overwhelmingly Positive',
@@ -39085,8 +39023,6 @@ export const steamGameDetails: SteamGameMap = {
       'Difficult',
       'Touch-Friendly',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '960170': {
@@ -39101,6 +39037,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Mar 11, 2020',
     developer: 'NEOWIZ',
     publisher: 'NEOWIZ',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 33906,
       rating: 'Very Positive',
@@ -39122,8 +39060,6 @@ export const steamGameDetails: SteamGameMap = {
       'Pixel Graphics',
       'Fantasy',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '960910': {
@@ -39138,6 +39074,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jun 18, 2020',
     developer: 'Quantic Dream',
     publisher: 'Quantic Dream',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 26488,
       rating: 'Very Positive',
@@ -39159,8 +39097,6 @@ export const steamGameDetails: SteamGameMap = {
       'Mystery',
       'Singleplayer',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '960990': {
@@ -39175,6 +39111,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jun 18, 2020',
     developer: 'Quantic Dream',
     publisher: 'Quantic Dream',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 38452,
       rating: 'Very Positive',
@@ -39196,8 +39134,6 @@ export const steamGameDetails: SteamGameMap = {
       'Atmospheric',
       'Thriller',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '961200': {
@@ -39212,6 +39148,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Aug 20, 2024',
     developer: 'Omeda Studios',
     publisher: 'Omeda Studios',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 16296,
       rating: 'Mostly Positive',
@@ -39233,8 +39171,6 @@ export const steamGameDetails: SteamGameMap = {
       'Controller',
       'Realistic',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '962730': {
@@ -39249,6 +39185,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jul 28, 2020',
     developer: 'Easy Day Studios Pty Ltd',
     publisher: 'Easy Day Studios Pty Ltd',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 19587,
       rating: 'Very Positive',
@@ -39270,8 +39208,6 @@ export const steamGameDetails: SteamGameMap = {
       'Action',
       'Singleplayer',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '967050': {
@@ -39286,6 +39222,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Feb 22, 2019',
     developer: 'Shawn Hitchcock',
     publisher: 'Hitchcock Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 42329,
       rating: 'Very Positive',
@@ -39307,22 +39245,22 @@ export const steamGameDetails: SteamGameMap = {
       'Mystery',
       'Action-Adventure',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '969990': {
     name: 'SpongeBob SquarePants: Battle for Bikini Bottom - Rehydrated',
     appId: 969990,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/969990/ss_7c2e060df8300baacac0d0c1e8b530953e476b3d.600x338.jpg',
-    secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/969990/ss_ca18f3fd972845e5a2649392536b89ad18b9ff8f.600x338.jpg',
+    secondaryScreenshot:
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/969990/ss_7c2e060df8300baacac0d0c1e8b530953e476b3d.600x338.jpg',
     shortDescription:
-      'Are you ready, kids? The cult classic is back, faithfully remade in spongetastic splendor! Play as ||SpongeBob||, Patrick and Sandy and show the evil Plankton that crime pays even less than Mr. Krabs.',
+      'Are you ready, kids? The cult classic is back, faithfully remade in ||sponge||tastic splendor! Play as ||SpongeBob||, ||Patrick|| and Sandy and show the evil ||Plankton|| that crime pays even less than Mr. ||Krabs||.',
     releaseDate: 'Jun 23, 2020',
     developer: 'Purple Lamp',
     publisher: 'THQ Nordic',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 17619,
       rating: 'Overwhelmingly Positive',
@@ -39344,9 +39282,13 @@ export const steamGameDetails: SteamGameMap = {
       'Singleplayer',
       'Co-op',
     ],
-    tags: [],
-    features: [],
-    clueOrder: ['tags', 'details', 'desc'],
+    screenshotFocusPoint: [28, 100, 85],
+    overrideCensoredTitle:
+      'S||pongeBob|| S||quar||eP||ants||: ||Ba||tt||le for ||B||ikini|| B||ottom - Rehydrated||',
+    clueOrder: ['ss', 'tags', 'details', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
   },
   '977400': {
     name: 'Cell to Singularity - Evolution Never Ends',
@@ -39360,6 +39302,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Nov 3, 2021',
     developer: 'Computer Lunch',
     publisher: 'Computer Lunch',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 26074,
       rating: 'Very Positive',
@@ -39381,8 +39325,6 @@ export const steamGameDetails: SteamGameMap = {
       'Sci-fi',
       'Sandbox',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '977950': {
@@ -39397,6 +39339,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jan 24, 2019',
     developer: '7th Beat Games',
     publisher: '7th Beat Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 79330,
       rating: 'Overwhelmingly Positive',
@@ -39418,8 +39362,6 @@ export const steamGameDetails: SteamGameMap = {
       'Atmospheric',
       'Family Friendly',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '979690': {
@@ -39434,6 +39376,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jul 29, 2021',
     developer: 'Neon Giant',
     publisher: 'KRAFTON, Inc.',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 24113,
       rating: 'Mostly Positive',
@@ -39455,8 +39399,6 @@ export const steamGameDetails: SteamGameMap = {
       'Dystopian',
       'Gore',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '980610': {
@@ -39471,6 +39413,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Aug 19, 2022',
     developer: 'Swan',
     publisher: 'Swan',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 16366,
       rating: 'Very Positive',
@@ -39492,8 +39436,6 @@ export const steamGameDetails: SteamGameMap = {
       '2D',
       'Singleplayer',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '985810': {
@@ -39508,6 +39450,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jul 27, 2021',
     developer: 'KOG',
     publisher: 'KOG',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 25346,
       rating: 'Mixed',
@@ -39529,8 +39473,6 @@ export const steamGameDetails: SteamGameMap = {
       'Controller',
       "Beat 'em up",
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '985890': {
@@ -39545,6 +39487,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Apr 30, 2020',
     developer: 'Dotemu',
     publisher: 'Dotemu',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 18979,
       rating: 'Very Positive',
@@ -39566,8 +39510,6 @@ export const steamGameDetails: SteamGameMap = {
       'Co-op',
       'Co-op Campaign',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '986130': {
@@ -39582,6 +39524,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Sep 26, 2024',
     developer: 'ColePowered Games',
     publisher: 'Fireshine Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 17009,
       rating: 'Very Positive',
@@ -39603,8 +39547,6 @@ export const steamGameDetails: SteamGameMap = {
       'RPG',
       'Indie',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '990080': {
@@ -39619,6 +39561,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Feb 10, 2023',
     developer: 'Avalanche Software',
     publisher: 'Warner Bros. Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 361587,
       rating: 'Very Positive',
@@ -39640,8 +39584,6 @@ export const steamGameDetails: SteamGameMap = {
       'Action',
       'Combat',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '990630': {
@@ -39656,6 +39598,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 7, 2021',
     developer: 'Hello Games',
     publisher: 'Hello Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 18470,
       rating: 'Overwhelmingly Positive',
@@ -39677,8 +39621,6 @@ export const steamGameDetails: SteamGameMap = {
       'Puzzle Platformer',
       'Soundtrack',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '996580': {
@@ -39693,6 +39635,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Sep 3, 2019',
     developer: 'Toys for Bob',
     publisher: 'Activision',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 21550,
       rating: 'Very Positive',
@@ -39714,8 +39658,6 @@ export const steamGameDetails: SteamGameMap = {
       'Cult Classic',
       'Cartoony',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '997010': {
@@ -39730,6 +39672,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Nov 10, 2022',
     developer: 'Aesir Interactive',
     publisher: 'astragon Entertainment',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 21614,
       rating: 'Mostly Positive',
@@ -39751,8 +39695,6 @@ export const steamGameDetails: SteamGameMap = {
       'Exploration',
       'Automobile Sim',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1007040': {
@@ -39767,6 +39709,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jul 11, 2019',
     developer: 'SANDLOT',
     publisher: 'D3PUBLISHER',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 11258,
       rating: 'Overwhelmingly Positive',
@@ -39788,8 +39732,6 @@ export const steamGameDetails: SteamGameMap = {
       'Anime',
       'Singleplayer',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1012790': {
@@ -39804,6 +39746,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jul 20, 2020',
     developer: 'CM IMMERSIVE',
     publisher: 'CM IMMERSIVE',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 11131,
       rating: 'Very Positive',
@@ -39825,8 +39769,6 @@ export const steamGameDetails: SteamGameMap = {
       'Survival Horror',
       'Exploration',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1012880': {
@@ -39841,6 +39783,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jul 25, 2019',
     developer: 'Robot Gentleman',
     publisher: 'Robot Gentleman',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 18569,
       rating: 'Overwhelmingly Positive',
@@ -39862,8 +39806,6 @@ export const steamGameDetails: SteamGameMap = {
       'Survival',
       'Wrestling',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1016800': {
@@ -39878,6 +39820,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jul 28, 2021',
     developer: 'The Farm 51',
     publisher: 'The Farm 51',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 15264,
       rating: 'Very Positive',
@@ -39899,8 +39843,6 @@ export const steamGameDetails: SteamGameMap = {
       'Stealth',
       'Crafting',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1016920': {
@@ -39915,6 +39857,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Sep 23, 2020',
     developer: 'Indoor Astronaut',
     publisher: 'Daedalic Entertainment',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 19425,
       rating: 'Very Positive',
@@ -39936,8 +39880,6 @@ export const steamGameDetails: SteamGameMap = {
       'Funny',
       'Survival',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1017180': {
@@ -39952,6 +39894,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Sep 25, 2019',
     developer: 'Genesz',
     publisher: 'Genesz',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 53305,
       rating: 'Very Positive',
@@ -39973,8 +39917,6 @@ export const steamGameDetails: SteamGameMap = {
       'Horror',
       'Early Access',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1017900': {
@@ -39989,6 +39931,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Aug 19, 2019',
     developer: "World's Edge",
     publisher: 'Xbox Game Studios',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 15039,
       rating: 'Very Positive',
@@ -40010,8 +39954,6 @@ export const steamGameDetails: SteamGameMap = {
       'Great Soundtrack',
       'War',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1022450': {
@@ -40026,6 +39968,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 8, 2019',
     developer: 'Glyph Worlds',
     publisher: 'Glyph Worlds',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 22947,
       rating: 'Very Positive',
@@ -40047,8 +39991,6 @@ export const steamGameDetails: SteamGameMap = {
       'Co-op',
       'Management',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1029690': {
@@ -40063,6 +40005,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'May 25, 2022',
     developer: 'Rebellion',
     publisher: 'Rebellion',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 28232,
       rating: 'Very Positive',
@@ -40084,8 +40028,6 @@ export const steamGameDetails: SteamGameMap = {
       'Action-Adventure',
       'Open World',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1040200': {
@@ -40100,6 +40042,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Aug 14, 2024',
     developer: 'President Studio',
     publisher: 'President Studio',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 29168,
       rating: 'Overwhelmingly Positive',
@@ -40121,8 +40065,6 @@ export const steamGameDetails: SteamGameMap = {
       'Life Sim',
       'Indie',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1043810': {
@@ -40137,6 +40079,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Aug 22, 2024',
     developer: 'Suspicious Developments',
     publisher: 'Suspicious Developments',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 11383,
       rating: 'Overwhelmingly Positive',
@@ -40158,8 +40102,6 @@ export const steamGameDetails: SteamGameMap = {
       'Indie',
       'Isometric',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1046030': {
@@ -40174,6 +40116,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Apr 4, 2019',
     developer: 'Coatsink',
     publisher: 'Coatsink',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 16690,
       rating: 'Overwhelmingly Positive',
@@ -40195,8 +40139,6 @@ export const steamGameDetails: SteamGameMap = {
       'Addictive',
       'Replay Value',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1046930': {
@@ -40211,6 +40153,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jun 20, 2019',
     developer: 'Valve',
     publisher: 'Valve',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 90966,
       rating: 'Very Positive',
@@ -40232,8 +40176,6 @@ export const steamGameDetails: SteamGameMap = {
       'Card Game',
       'Deckbuilding',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1049410': {
@@ -40248,6 +40190,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Nov 5, 2020',
     developer: 'Pillow Castle',
     publisher: 'Pillow Castle',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 32483,
       rating: 'Very Positive',
@@ -40269,8 +40213,6 @@ export const steamGameDetails: SteamGameMap = {
       'Psychological Horror',
       '3D Vision',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1049590': {
@@ -40285,6 +40227,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jul 19, 2023',
     developer: 'Nimble Neuron',
     publisher: 'Nimble Neuron',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 71343,
       rating: 'Very Positive',
@@ -40306,8 +40250,6 @@ export const steamGameDetails: SteamGameMap = {
       'Strategy',
       'Tactical',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1054490': {
@@ -40322,6 +40264,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Sep 17, 2020',
     developer: 'Monster Couch',
     publisher: 'Monster Couch',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 11448,
       rating: 'Very Positive',
@@ -40343,8 +40287,6 @@ export const steamGameDetails: SteamGameMap = {
       'Resource Management',
       'Local Multiplayer',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1055540': {
@@ -40359,6 +40301,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jul 30, 2019',
     developer: 'adamgryu',
     publisher: 'adamgryu',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 21340,
       rating: 'Overwhelmingly Positive',
@@ -40380,8 +40324,6 @@ export const steamGameDetails: SteamGameMap = {
       'Beautiful',
       'Family Friendly',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1056640': {
@@ -40396,6 +40338,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Aug 5, 2020',
     developer: 'SEGA',
     publisher: 'SEGA',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 24416,
       rating: 'Mixed',
@@ -40417,8 +40361,6 @@ export const steamGameDetails: SteamGameMap = {
       'Open World',
       'Nudity',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1056960': {
@@ -40433,6 +40375,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jul 25, 2019',
     developer: 'MachineGames',
     publisher: 'Bethesda Softworks',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 15426,
       rating: 'Mixed',
@@ -40454,8 +40398,6 @@ export const steamGameDetails: SteamGameMap = {
       'Cyberpunk',
       'Story Rich',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1059990': {
@@ -40470,6 +40412,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '15 Sep, 2022',
     developer: 'Holy Wow Studios LLC',
     publisher: 'Holy Wow Studios LLC',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 10790,
       rating: 'Overwhelmingly Positive',
@@ -40491,8 +40435,6 @@ export const steamGameDetails: SteamGameMap = {
       'Memes',
       'Family Friendly',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1061090': {
@@ -40507,6 +40449,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'May 3, 2019',
     developer: 'Nexile',
     publisher: 'Nexile',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 13026,
       rating: 'Very Positive',
@@ -40528,8 +40472,6 @@ export const steamGameDetails: SteamGameMap = {
       'Atmospheric',
       'Funny',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1061910': {
@@ -40544,6 +40486,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Sep 15, 2022',
     developer: 'The Outsiders',
     publisher: 'Funcom',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 16601,
       rating: 'Overwhelmingly Positive',
@@ -40565,8 +40509,6 @@ export const steamGameDetails: SteamGameMap = {
       '3D',
       'Dark Fantasy',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1063660': {
@@ -40581,6 +40523,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Nov 15, 2022',
     developer: 'Joey Drew Studios',
     publisher: 'Joey Drew Studios',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 14412,
       rating: 'Very Positive',
@@ -40602,8 +40546,6 @@ export const steamGameDetails: SteamGameMap = {
       'Sequel',
       'Stealth',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1065310': {
@@ -40618,6 +40560,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '21 Nov, 2022',
     developer: 'Flying Wild Hog',
     publisher: 'Focus Entertainment',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 12494,
       rating: 'Mostly Positive',
@@ -40639,8 +40583,6 @@ export const steamGameDetails: SteamGameMap = {
       'Singleplayer',
       'Online Co-Op',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1066780': {
@@ -40655,6 +40597,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Dec 11, 2019',
     developer: 'Urban Games',
     publisher: 'Good Shepherd Entertainment',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 31032,
       rating: 'Very Positive',
@@ -40676,8 +40620,6 @@ export const steamGameDetails: SteamGameMap = {
       'Open World',
       'Flight',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1066890': {
@@ -40692,6 +40634,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jun 30, 2020',
     developer: 'Reiza Studios',
     publisher: 'Reiza Studios',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 14563,
       rating: 'Very Positive',
@@ -40713,8 +40657,6 @@ export const steamGameDetails: SteamGameMap = {
       'First-Person',
       'Mature',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1082430': {
@@ -40729,6 +40671,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Apr 8, 2021',
     developer: 'GoodbyeWorld Games',
     publisher: 'Skybound Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 21756,
       rating: 'Overwhelmingly Positive',
@@ -40750,8 +40694,6 @@ export const steamGameDetails: SteamGameMap = {
       'Hand-drawn',
       'Surreal',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1084160': {
@@ -40766,6 +40708,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jul 14, 2023',
     developer: 'Haemimont Games',
     publisher: 'THQ Nordic',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 14115,
       rating: 'Very Positive',
@@ -40787,8 +40731,6 @@ export const steamGameDetails: SteamGameMap = {
       'Turn-Based',
       'Military',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1085510': {
@@ -40803,6 +40745,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Nov 6, 2019',
     developer: 'Artefacts Studio',
     publisher: 'Microids',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 14911,
       rating: 'Very Positive',
@@ -40824,8 +40768,6 @@ export const steamGameDetails: SteamGameMap = {
       'Comedy',
       'Arcade',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1085660': {
@@ -40840,6 +40782,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 1, 2019',
     developer: 'Bungie',
     publisher: 'Bungie',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 644603,
       rating: 'Mostly Positive',
@@ -40861,8 +40805,6 @@ export const steamGameDetails: SteamGameMap = {
       'Sci-fi',
       'Action',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1088710': {
@@ -40877,6 +40819,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jan 28, 2021',
     developer: 'Ryu Ga Gotoku Studio',
     publisher: 'SEGA',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 10007,
       rating: 'Very Positive',
@@ -40898,8 +40842,6 @@ export const steamGameDetails: SteamGameMap = {
       'Singleplayer',
       'Funny',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1088850': {
@@ -40914,6 +40856,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 26, 2021',
     developer: 'Eidos-Montréal',
     publisher: 'Eidos Interactive Corp.',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 43474,
       rating: 'Very Positive',
@@ -40935,8 +40879,6 @@ export const steamGameDetails: SteamGameMap = {
       'Great Soundtrack',
       'Cinematic',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1089090': {
@@ -40951,6 +40893,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Sep 14, 2023',
     developer: 'Koei Tecmo',
     publisher: 'BANDAI NAMCO Entertainment',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 21165,
       rating: 'Very Positive',
@@ -40972,8 +40916,6 @@ export const steamGameDetails: SteamGameMap = {
       'RPG',
       'Local Co-Op',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1089980': {
@@ -40988,6 +40930,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '7 Aug, 2020',
     developer: 'PuffballsUnited',
     publisher: 'Innersloth',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 55934,
       rating: 'Overwhelmingly Positive',
@@ -41009,8 +40953,6 @@ export const steamGameDetails: SteamGameMap = {
       'Adventure',
       'Family Friendly',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1096530': {
@@ -41025,6 +40967,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'May 27, 2021',
     developer: 'Tactical Adventures',
     publisher: 'Tactical Adventures',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 21615,
       rating: 'Very Positive',
@@ -41046,8 +40990,6 @@ export const steamGameDetails: SteamGameMap = {
       'Combat',
       'Singleplayer',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1097840': {
@@ -41062,6 +41004,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '9 Sep, 2019',
     developer: 'The Coalition',
     publisher: 'Xbox Game Studios',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 23955,
       rating: 'Mostly Positive',
@@ -41083,8 +41027,6 @@ export const steamGameDetails: SteamGameMap = {
       'Open World',
       'Third Person',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1102190': {
@@ -41099,6 +41041,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '21 May, 2020',
     developer: 'Shiny Shoe',
     publisher: 'Good Shepherd Entertainment',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 22723,
       rating: 'Overwhelmingly Positive',
@@ -41120,8 +41064,6 @@ export const steamGameDetails: SteamGameMap = {
       'Choices Matter',
       'Procedural Generation',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1105670': {
@@ -41136,6 +41078,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Mar 9, 2023',
     developer: 'Ishtar Games',
     publisher: 'Nacon',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 12463,
       rating: 'Very Positive',
@@ -41157,8 +41101,6 @@ export const steamGameDetails: SteamGameMap = {
       'Perma Death',
       'Roguelite',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1106840': {
@@ -41173,6 +41115,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '8 May, 2020',
     developer: 'Foulball Hangover',
     publisher: 'Foulball Hangover',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 26933,
       rating: 'Very Positive',
@@ -41194,8 +41138,6 @@ export const steamGameDetails: SteamGameMap = {
       'Singleplayer',
       'Adventure',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1113000': {
@@ -41210,6 +41152,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '13 Jun, 2020',
     developer: 'ATLUS',
     publisher: 'SEGA',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 83620,
       rating: 'Overwhelmingly Positive',
@@ -41231,8 +41175,6 @@ export const steamGameDetails: SteamGameMap = {
       'Dating Sim',
       'Colorful',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1113120': {
@@ -41247,6 +41189,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '7 Dec, 2022',
     developer: 'Bulwark Studios',
     publisher: 'Kasedo Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 16877,
       rating: 'Very Positive',
@@ -41268,8 +41212,6 @@ export const steamGameDetails: SteamGameMap = {
       'Singleplayer',
       'Dark',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1113560': {
@@ -41284,6 +41226,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Apr 23, 2021',
     developer: 'Square Enix',
     publisher: 'Square Enix',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 27250,
       rating: 'Very Positive',
@@ -41305,8 +41249,6 @@ export const steamGameDetails: SteamGameMap = {
       'Bullet Hell',
       'Nudity',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1114150': {
@@ -41321,6 +41263,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Aug 29, 2024',
     developer: 'CarX Technologies, LLC',
     publisher: 'CarX Technologies, LLC',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 17913,
       rating: 'Mixed',
@@ -41342,8 +41286,6 @@ export const steamGameDetails: SteamGameMap = {
       'Atmospheric',
       'Action',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1115690': {
@@ -41358,6 +41300,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Mar 6, 2020',
     developer: 'Brave At Night',
     publisher: 'No More Robots',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 13518,
       rating: 'Very Positive',
@@ -41379,8 +41323,6 @@ export const steamGameDetails: SteamGameMap = {
       'Singleplayer',
       'Turn-Based',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1118200': {
@@ -41395,6 +41337,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jul 23, 2019',
     developer: 'mestiez',
     publisher: 'Studio Minus',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 306570,
       rating: 'Overwhelmingly Positive',
@@ -41416,8 +41360,6 @@ export const steamGameDetails: SteamGameMap = {
       'Psychological Horror',
       'Indie',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1119730': {
@@ -41432,6 +41374,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Nov 3, 2023',
     developer: 'Toxic Dog',
     publisher: 'Excalibur Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 44261,
       rating: 'Mostly Positive',
@@ -41453,8 +41397,6 @@ export const steamGameDetails: SteamGameMap = {
       'Economy',
       'Trading',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1124300': {
@@ -41469,6 +41411,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Aug 17, 2021',
     developer: 'AMPLITUDE Studios',
     publisher: 'AMPLITUDE Studios',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 28155,
       rating: 'Mixed',
@@ -41490,8 +41434,6 @@ export const steamGameDetails: SteamGameMap = {
       'Alternate History',
       'Open World',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1127400': {
@@ -41506,6 +41448,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '26 Sep, 2019',
     developer: 'AnukenDev',
     publisher: 'AnukenDev',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 24876,
       rating: 'Overwhelmingly Positive',
@@ -41527,8 +41471,6 @@ export const steamGameDetails: SteamGameMap = {
       'Singleplayer',
       'PvE',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1127500': {
@@ -41543,6 +41485,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jul 20, 2021',
     developer: 'Dinosaur Polo Club',
     publisher: 'Dinosaur Polo Club',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 23463,
       rating: 'Overwhelmingly Positive',
@@ -41564,8 +41508,6 @@ export const steamGameDetails: SteamGameMap = {
       'Top-Down',
       'Beautiful',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1128000': {
@@ -41580,6 +41522,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Sep 30, 2019',
     developer: 'Picroma',
     publisher: 'Picroma',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 18695,
       rating: 'Mostly Negative',
@@ -41601,8 +41545,6 @@ export const steamGameDetails: SteamGameMap = {
       'Procedural Generation',
       'Crafting',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1128810': {
@@ -41617,6 +41559,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Feb 19, 2020',
     developer: 'SMG Studio',
     publisher: 'SMG Studio',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 40709,
       rating: 'Mostly Positive',
@@ -41638,8 +41582,6 @@ export const steamGameDetails: SteamGameMap = {
       'Classic',
       'Online Co-Op',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1135690': {
@@ -41654,6 +41596,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Nov 1, 2021',
     developer: 'Witch Beam',
     publisher: 'Humble Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 38782,
       rating: 'Very Positive',
@@ -41675,8 +41619,6 @@ export const steamGameDetails: SteamGameMap = {
       'Female Protagonist',
       'Isometric',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1142710': {
@@ -41691,6 +41633,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Feb 16, 2022',
     developer: 'CREATIVE ASSEMBLY',
     publisher: 'SEGA',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 140405,
       rating: 'Mixed',
@@ -41712,8 +41656,6 @@ export const steamGameDetails: SteamGameMap = {
       'Multiplayer',
       'Co-op',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1144200': {
@@ -41728,6 +41670,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Dec 13, 2023',
     developer: 'VOID Interactive',
     publisher: 'VOID Interactive',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 315039,
       rating: 'Mostly Positive',
@@ -41749,8 +41693,6 @@ export const steamGameDetails: SteamGameMap = {
       'Combat',
       'Crime',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1147550': {
@@ -41765,6 +41707,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jan 25, 2022',
     developer: 'NotGames',
     publisher: 'tinyBuild',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 12258,
       rating: 'Very Positive',
@@ -41786,8 +41730,6 @@ export const steamGameDetails: SteamGameMap = {
       'Choose Your Own Adventure',
       'Atmospheric',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1147560': {
@@ -41802,6 +41744,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '20 Jan, 2021',
     developer: 'SOUTHPAW GAMES',
     publisher: 'NEOWIZ',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 56791,
       rating: 'Very Positive',
@@ -41823,8 +41767,6 @@ export const steamGameDetails: SteamGameMap = {
       'Adventure',
       'Villain Protagonist',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1147690': {
@@ -41839,6 +41781,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 1, 2019',
     developer: '4G',
     publisher: '4G',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 12613,
       rating: 'Overwhelmingly Positive',
@@ -41858,8 +41802,6 @@ export const steamGameDetails: SteamGameMap = {
       'Story Rich',
       'Sexual Content',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1149460': {
@@ -41874,6 +41816,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '3 Dec, 2021',
     developer: 'RocketWerkz',
     publisher: 'RocketWerkz',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 59891,
       rating: 'Mostly Positive',
@@ -41895,8 +41839,6 @@ export const steamGameDetails: SteamGameMap = {
       'Realistic',
       'Sandbox',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1149620': {
@@ -41911,6 +41853,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Sep 15, 2021',
     developer: 'DRAGO entertainment',
     publisher: 'DRAGO entertainment',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 26731,
       rating: 'Very Positive',
@@ -41932,8 +41876,6 @@ export const steamGameDetails: SteamGameMap = {
       'Driving',
       'Design & Illustration',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1150440': {
@@ -41948,6 +41890,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jun 19, 2023',
     developer: 'Tindalos Interactive',
     publisher: 'Focus Entertainment',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 17669,
       rating: 'Very Positive',
@@ -41969,8 +41913,6 @@ export const steamGameDetails: SteamGameMap = {
       'Space',
       '3D',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1150690': {
@@ -41985,6 +41927,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Dec 25, 2020',
     developer: 'OMOCAT, LLC',
     publisher: 'OMOCAT, LLC',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 85614,
       rating: 'Overwhelmingly Positive',
@@ -42006,8 +41950,6 @@ export const steamGameDetails: SteamGameMap = {
       'Atmospheric',
       'Party-Based RPG',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1158940': {
@@ -42022,6 +41964,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Nov 13, 2023',
     developer: 'Get Up Games',
     publisher: 'Iceberg Interactive',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 10443,
       rating: 'Very Positive',
@@ -42043,8 +41987,6 @@ export const steamGameDetails: SteamGameMap = {
       'Team-Based',
       'Competitive',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1161580': {
@@ -42059,6 +42001,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'May 24, 2022',
     developer: 'Blackbird Interactive',
     publisher: 'Blackbird Interactive',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 21641,
       rating: 'Very Positive',
@@ -42080,8 +42024,6 @@ export const steamGameDetails: SteamGameMap = {
       'Building',
       'Procedural Generation',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1164940': {
@@ -42096,6 +42038,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jun 21, 2023',
     developer: 'Trepang Studios',
     publisher: 'Team17',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 17175,
       rating: 'Very Positive',
@@ -42117,8 +42061,6 @@ export const steamGameDetails: SteamGameMap = {
       'Boomer Shooter',
       'Stealth',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1170880': {
@@ -42133,6 +42075,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 30, 2019',
     developer: 'ghosthunter',
     publisher: 'ghosthunter',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 14268,
       rating: 'Overwhelmingly Positive',
@@ -42154,8 +42098,6 @@ export const steamGameDetails: SteamGameMap = {
       'Female Protagonist',
       'Emotional',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1170950': {
@@ -42170,6 +42112,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jan 25, 2022',
     developer: 'Star Vault AB',
     publisher: 'Star Vault AB',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 13476,
       rating: 'Mixed',
@@ -42191,8 +42135,6 @@ export const steamGameDetails: SteamGameMap = {
       'Survival',
       'Adventure',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1171690': {
@@ -42207,6 +42149,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 21, 2024',
     developer: 'Airship Syndicate',
     publisher: 'Airship Syndicate',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 25870,
       rating: 'Mixed',
@@ -42228,8 +42172,6 @@ export const steamGameDetails: SteamGameMap = {
       'Co-op',
       'Singleplayer',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1172470': {
@@ -42244,6 +42186,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Nov 4, 2020',
     developer: 'Respawn',
     publisher: 'Electronic Arts',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 1034380,
       rating: 'Mostly Positive',
@@ -42265,8 +42209,6 @@ export const steamGameDetails: SteamGameMap = {
       'Loot',
       'Survival',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1173370': {
@@ -42281,6 +42223,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Apr 11, 2024',
     developer: 'Oddshot Games',
     publisher: 'Oddshot Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 13642,
       rating: 'Very Positive',
@@ -42302,8 +42246,6 @@ export const steamGameDetails: SteamGameMap = {
       'PvP',
       'Third Person',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1177980': {
@@ -42318,6 +42260,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'May 9, 2024',
     developer: 'Double Dagger Studio',
     publisher: 'Double Dagger Studio',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 13042,
       rating: 'Overwhelmingly Positive',
@@ -42339,8 +42283,6 @@ export const steamGameDetails: SteamGameMap = {
       'Singleplayer',
       'Open World',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1180380': {
@@ -42355,6 +42297,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Nov 27, 2019',
     developer: 'MOBITECH LLC',
     publisher: 'MOBITECH LLC',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 29442,
       rating: 'Mixed',
@@ -42376,8 +42320,6 @@ export const steamGameDetails: SteamGameMap = {
       'Multiplayer',
       'Online Co-Op',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1180660': {
@@ -42392,6 +42334,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Aug 27, 2020',
     developer: 'DONTNOD Entertainment',
     publisher: 'Xbox Game Studios',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 15282,
       rating: 'Very Positive',
@@ -42413,8 +42357,6 @@ export const steamGameDetails: SteamGameMap = {
       'Singleplayer',
       'Drama',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1182900': {
@@ -42429,6 +42371,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 17, 2022',
     developer: 'Asobo Studio',
     publisher: 'Focus Entertainment',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 24030,
       rating: 'Very Positive',
@@ -42450,8 +42394,6 @@ export const steamGameDetails: SteamGameMap = {
       'Emotional',
       'Medieval',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1184370': {
@@ -42466,6 +42408,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Sep 2, 2021',
     developer: 'Owlcat Games',
     publisher: 'META Publishing',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 41946,
       rating: 'Very Positive',
@@ -42487,8 +42431,6 @@ export const steamGameDetails: SteamGameMap = {
       'CRPG',
       'Atmospheric',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1188930': {
@@ -42503,6 +42445,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'May 2, 2024',
     developer: 'Al Fine',
     publisher: 'Al Fine',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 13265,
       rating: 'Very Positive',
@@ -42524,8 +42468,6 @@ export const steamGameDetails: SteamGameMap = {
       'Card Battler',
       'Story Rich',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1190000': {
@@ -42540,6 +42482,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '11 Aug, 2021',
     developer: 'Red Dot Games',
     publisher: 'PlayWay S.A.',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 35114,
       rating: 'Overwhelmingly Positive',
@@ -42561,8 +42505,6 @@ export const steamGameDetails: SteamGameMap = {
       'Open World',
       'Co-op',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1201240': {
@@ -42577,6 +42519,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Aug 17, 2020',
     developer: 'KLab Inc.',
     publisher: 'KLab Inc.',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 12456,
       rating: 'Very Positive',
@@ -42598,8 +42542,6 @@ export const steamGameDetails: SteamGameMap = {
       'Modern',
       'Sci-fi',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1202130': {
@@ -42614,6 +42556,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jun 16, 2022',
     developer: 'The Artistocrats',
     publisher: 'Slitherine Ltd.',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 11639,
       rating: 'Very Positive',
@@ -42635,8 +42579,6 @@ export const steamGameDetails: SteamGameMap = {
       'Artificial Intelligence',
       'Great Soundtrack',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1203620': {
@@ -42651,6 +42593,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jan 24, 2024',
     developer: 'Keen Games GmbH',
     publisher: 'Keen Games GmbH',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 50246,
       rating: 'Very Positive',
@@ -42669,8 +42613,6 @@ export const steamGameDetails: SteamGameMap = {
       'Action RPG',
       'Singleplayer',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1205450': {
@@ -42685,6 +42627,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Apr 22, 2021',
     developer: 'Snoozy Kazoo',
     publisher: 'Graffiti Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 13663,
       rating: 'Very Positive',
@@ -42706,8 +42650,6 @@ export const steamGameDetails: SteamGameMap = {
       'Cartoony',
       'Crime',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1206560': {
@@ -42722,6 +42664,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '2 Dec, 2021',
     developer: 'Maxim Karpenko',
     publisher: 'Maxim Karpenko',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 52239,
       rating: 'Overwhelmingly Positive',
@@ -42743,8 +42687,6 @@ export const steamGameDetails: SteamGameMap = {
       'Relaxing',
       'Management',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1213210': {
@@ -42759,6 +42701,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '5 Jun, 2020',
     developer: 'Petroglyph',
     publisher: 'Electronic Arts',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 34268,
       rating: 'Very Positive',
@@ -42780,8 +42724,6 @@ export const steamGameDetails: SteamGameMap = {
       'Replay Value',
       'Tanks',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1222680': {
@@ -42796,6 +42738,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jun 4, 2020',
     developer: 'Ghost Games',
     publisher: 'Electronic Arts',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 144549,
       rating: 'Very Positive',
@@ -42817,8 +42761,6 @@ export const steamGameDetails: SteamGameMap = {
       'Controller',
       'Sports',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1222690': {
@@ -42833,6 +42775,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jun 4, 2020',
     developer: 'BioWare',
     publisher: 'Electronic Arts',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 20705,
       rating: 'Mostly Positive',
@@ -42854,8 +42798,6 @@ export const steamGameDetails: SteamGameMap = {
       'Action RPG',
       'Strategy',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1222700': {
@@ -42870,6 +42812,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '18 Jun, 2020',
     developer: 'Hazelight Studios',
     publisher: 'Electronic Arts',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 95629,
       rating: 'Very Positive',
@@ -42891,8 +42835,6 @@ export const steamGameDetails: SteamGameMap = {
       'Atmospheric',
       'Nudity',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1222730': {
@@ -42907,6 +42849,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 1, 2020',
     developer: 'MOTIVE',
     publisher: 'Electronic Arts',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 27743,
       rating: 'Mixed',
@@ -42928,8 +42872,6 @@ export const steamGameDetails: SteamGameMap = {
       'Controller',
       'Shooter',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1229380': {
@@ -42944,6 +42886,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Mar 4, 2021',
     developer: 'Chris Nordgren',
     publisher: 'Foreign Gnomes',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 13813,
       rating: 'Overwhelmingly Positive',
@@ -42965,8 +42909,6 @@ export const steamGameDetails: SteamGameMap = {
       '2.5D',
       'Action-Adventure',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1233570': {
@@ -42981,6 +42923,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jun 4, 2020',
     developer: 'DICE',
     publisher: 'Electronic Arts',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 16030,
       rating: 'Mostly Positive',
@@ -43002,8 +42946,6 @@ export const steamGameDetails: SteamGameMap = {
       'Stylized',
       'Atmospheric',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1235140': {
@@ -43018,6 +42960,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Nov 10, 2020',
     developer: 'Ryu Ga Gotoku Studio',
     publisher: 'SEGA',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 36059,
       rating: 'Very Positive',
@@ -43039,8 +42983,6 @@ export const steamGameDetails: SteamGameMap = {
       'Violent',
       'Sexual Content',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1237320': {
@@ -43054,6 +42996,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Nov 7, 2022',
     developer: 'Sonic Team',
     publisher: 'SEGA',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 27114,
       rating: 'Very Positive',
@@ -43075,8 +43019,6 @@ export const steamGameDetails: SteamGameMap = {
       'Combat',
       'Lore-Rich',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1237950': {
@@ -43091,6 +43033,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '11 Jun, 2020',
     developer: 'DICE',
     publisher: 'Electronic Arts',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 93242,
       rating: 'Very Positive',
@@ -43112,8 +43056,6 @@ export const steamGameDetails: SteamGameMap = {
       'Third Person',
       'Controller',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1238000': {
@@ -43128,6 +43070,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jun 11, 2020',
     developer: 'BioWare',
     publisher: 'Electronic Arts',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 17906,
       rating: 'Mostly Positive',
@@ -43149,8 +43093,6 @@ export const steamGameDetails: SteamGameMap = {
       'Choices Matter',
       'Nudity',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1238060': {
@@ -43165,6 +43107,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jun 18, 2020',
     developer: 'Visceral Games',
     publisher: 'Electronic Arts',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 13916,
       rating: 'Mixed',
@@ -43186,8 +43130,6 @@ export const steamGameDetails: SteamGameMap = {
       'Futuristic',
       'Thriller',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1238810': {
@@ -43202,6 +43144,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 22, 2020',
     developer: 'DICE',
     publisher: 'Electronic Arts',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 261209,
       rating: 'Mostly Positive',
@@ -43223,8 +43167,6 @@ export const steamGameDetails: SteamGameMap = {
       'Historical',
       'Destruction',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1238820': {
@@ -43239,6 +43181,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jun 11, 2020',
     developer: 'DICE',
     publisher: 'Electronic Arts',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 17527,
       rating: 'Mixed',
@@ -43260,8 +43204,6 @@ export const steamGameDetails: SteamGameMap = {
       'Violent',
       'Co-op',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1238840': {
@@ -43276,6 +43218,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jun 11, 2020',
     developer: 'DICE',
     publisher: 'Electronic Arts',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 210297,
       rating: 'Very Positive',
@@ -43297,8 +43241,6 @@ export const steamGameDetails: SteamGameMap = {
       'Tanks',
       'Gore',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1238860': {
@@ -43313,6 +43255,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jun 11, 2020',
     developer: 'DICE',
     publisher: 'Electronic Arts',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 76655,
       rating: 'Very Positive',
@@ -43334,8 +43278,6 @@ export const steamGameDetails: SteamGameMap = {
       'Controller',
       'Tactical',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1239690': {
@@ -43350,6 +43292,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'May 6, 2022',
     developer: 'RewindApp',
     publisher: 'RewindApp',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 15332,
       rating: 'Very Positive',
@@ -43371,8 +43315,6 @@ export const steamGameDetails: SteamGameMap = {
       'Singleplayer',
       'Psychedelic',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1240210': {
@@ -43387,6 +43329,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '6 Aug, 2020',
     developer: 'Draw Me A Pixel',
     publisher: 'Draw Me A Pixel',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 24983,
       rating: 'Overwhelmingly Positive',
@@ -43408,8 +43352,6 @@ export const steamGameDetails: SteamGameMap = {
       'Interactive Fiction',
       'Romance',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1240440': {
@@ -43424,6 +43366,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '15 Nov, 2021',
     developer: '343 Industries',
     publisher: 'Xbox Game Studios',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 179938,
       rating: 'Mixed',
@@ -43445,8 +43389,6 @@ export const steamGameDetails: SteamGameMap = {
       'Space',
       'Adventure',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1241100': {
@@ -43461,6 +43403,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Mar 6, 2020',
     developer: 'Redaster Studio',
     publisher: 'Redaster Studio',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 36534,
       rating: 'Mostly Positive',
@@ -43482,8 +43426,6 @@ export const steamGameDetails: SteamGameMap = {
       'Wargame',
       'Team-Based',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1244460': {
@@ -43498,6 +43440,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '9 Nov, 2021',
     developer: 'Frontier Developments',
     publisher: 'Frontier Developments',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 45243,
       rating: 'Very Positive',
@@ -43519,8 +43463,6 @@ export const steamGameDetails: SteamGameMap = {
       'Violent',
       'Atmospheric',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1249970': {
@@ -43535,6 +43477,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Sep 12, 2024',
     developer: 'KT Racing',
     publisher: 'Nacon',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 11064,
       rating: 'Mostly Negative',
@@ -43556,8 +43500,6 @@ export const steamGameDetails: SteamGameMap = {
       'Massively Multiplayer',
       'Singleplayer',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1250410': {
@@ -43572,6 +43514,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Aug 17, 2020',
     developer: 'Asobo Studio',
     publisher: 'Xbox Game Studios',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 70494,
       rating: 'Mostly Positive',
@@ -43593,8 +43537,6 @@ export const steamGameDetails: SteamGameMap = {
       'Beautiful',
       'TrackIR',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1252330': {
@@ -43609,6 +43551,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '13 Sep, 2021',
     developer: 'Arkane Studios',
     publisher: 'Bethesda Softworks',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 30001,
       rating: 'Mostly Positive',
@@ -43630,8 +43574,6 @@ export const steamGameDetails: SteamGameMap = {
       'PvP',
       'Tactical',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1253920': {
@@ -43646,6 +43588,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Apr 28, 2022',
     developer: 'Cellar Door Games',
     publisher: 'Cellar Door Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 14846,
       rating: 'Very Positive',
@@ -43667,8 +43611,6 @@ export const steamGameDetails: SteamGameMap = {
       'Procedural Generation',
       'Cartoony',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1254120': {
@@ -43683,6 +43625,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Aug 6, 2021',
     developer: 'VALOFE',
     publisher: 'VALOFE',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 31020,
       rating: 'Mixed',
@@ -43704,8 +43648,6 @@ export const steamGameDetails: SteamGameMap = {
       'PvP',
       'Character Customization',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1258080': {
@@ -43720,6 +43662,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'May 5, 2020',
     developer: 'Kabam Games, Inc.',
     publisher: 'Kabam Games, Inc.',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 17675,
       rating: 'Mostly Positive',
@@ -43741,8 +43685,6 @@ export const steamGameDetails: SteamGameMap = {
       'Online Co-Op',
       'Fantasy',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1260320': {
@@ -43757,6 +43699,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Sep 20, 2023',
     developer: 'Recreate Games',
     publisher: 'Source Technology',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 75975,
       rating: 'Very Positive',
@@ -43778,8 +43722,6 @@ export const steamGameDetails: SteamGameMap = {
       '4 Player Local',
       'Physics',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1262350': {
@@ -43794,6 +43736,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 27, 2022',
     developer: 'rose-engine',
     publisher: 'Humble Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 31425,
       rating: 'Overwhelmingly Positive',
@@ -43815,8 +43759,6 @@ export const steamGameDetails: SteamGameMap = {
       'Violent',
       'Action',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1262540': {
@@ -43831,6 +43773,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jun 4, 2020',
     developer: 'Ghost Games',
     publisher: 'Electronic Arts',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 27035,
       rating: 'Mixed',
@@ -43852,8 +43796,6 @@ export const steamGameDetails: SteamGameMap = {
       'Combat Racing',
       'First-Person',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1262580': {
@@ -43868,6 +43810,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jun 18, 2020',
     developer: 'Ghost Games',
     publisher: 'Electronic Arts',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 30882,
       rating: 'Very Positive',
@@ -43889,8 +43833,6 @@ export const steamGameDetails: SteamGameMap = {
       'Simulation',
       'Vehicular Combat',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1267910': {
@@ -43905,6 +43847,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Nov 18, 2021',
     developer: 'Games by Malcs',
     publisher: 'Jagex Ltd',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 15568,
       rating: 'Very Positive',
@@ -43926,8 +43870,6 @@ export const steamGameDetails: SteamGameMap = {
       'Cartoon',
       'Point & Click',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1268750': {
@@ -43942,6 +43884,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 10, 2024',
     developer: 'Offworld',
     publisher: 'Offworld',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 22976,
       rating: 'Very Positive',
@@ -43963,8 +43907,6 @@ export const steamGameDetails: SteamGameMap = {
       'Space',
       'Base Building',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1272080': {
@@ -43979,6 +43921,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '21 Sep, 2023',
     developer: 'Starbreeze Studios',
     publisher: 'Starbreeze Entertainment',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 63072,
       rating: 'Mixed',
@@ -44000,8 +43944,6 @@ export const steamGameDetails: SteamGameMap = {
       'PvE',
       'Gun Customization',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1274570': {
@@ -44016,6 +43958,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jan 28, 2021',
     developer: 'Straight Back Games',
     publisher: 'Straight Back Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 86690,
       rating: 'Very Positive',
@@ -44037,8 +43981,6 @@ export const steamGameDetails: SteamGameMap = {
       'Gore',
       'Difficult',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1275670': {
@@ -44053,6 +43995,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Sep 26, 2022',
     developer: 'Doctor Shinobi',
     publisher: 'Doctor Shinobi',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 17098,
       rating: 'Overwhelmingly Positive',
@@ -44074,8 +44018,6 @@ export const steamGameDetails: SteamGameMap = {
       'Funny',
       'Indie',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1276390': {
@@ -44090,6 +44032,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Nov 30, 2021',
     developer: 'Ninja Kiwi',
     publisher: 'Ninja Kiwi',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 33416,
       rating: 'Very Positive',
@@ -44111,8 +44055,6 @@ export const steamGameDetails: SteamGameMap = {
       'Sandbox',
       '3D',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1277400': {
@@ -44127,6 +44069,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '8 Jul, 2021',
     developer: 'CAPCOM Co., Ltd.',
     publisher: 'CAPCOM Co., Ltd.',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 16777,
       rating: 'Very Positive',
@@ -44148,8 +44092,6 @@ export const steamGameDetails: SteamGameMap = {
       'PvE',
       'Emotional',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1280770': {
@@ -44164,6 +44106,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jun 24, 2021',
     developer: 'Rugbug Redfern',
     publisher: 'Rugbug Redfern',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 21204,
       rating: 'Very Positive',
@@ -44185,8 +44129,6 @@ export const steamGameDetails: SteamGameMap = {
       'Moddable',
       'Casual',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1282100': {
@@ -44201,6 +44143,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jul 25, 2023',
     developer: 'Gunfire Games',
     publisher: 'Arc Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 65459,
       rating: 'Very Positive',
@@ -44222,8 +44166,6 @@ export const steamGameDetails: SteamGameMap = {
       'Combat',
       'Horror',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1282730': {
@@ -44238,6 +44180,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Mar 4, 2021',
     developer: 'Four Quarters',
     publisher: 'Devolver Digital',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 35993,
       rating: 'Very Positive',
@@ -44259,8 +44203,6 @@ export const steamGameDetails: SteamGameMap = {
       'Story Rich',
       'Fantasy',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1284410': {
@@ -44275,6 +44217,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'May 19, 2020',
     developer: 'CD PROJEKT RED',
     publisher: 'CD PROJEKT RED',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 30026,
       rating: 'Very Positive',
@@ -44296,8 +44240,6 @@ export const steamGameDetails: SteamGameMap = {
       'Sexual Content',
       'Great Soundtrack',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1285670': {
@@ -44312,6 +44254,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Aug 6, 2020',
     developer: 'YCJY Games',
     publisher: 'YCJY Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 11967,
       rating: 'Overwhelmingly Positive',
@@ -44333,8 +44277,6 @@ export const steamGameDetails: SteamGameMap = {
       'Retro',
       'Colorful',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1286350': {
@@ -44349,6 +44291,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Sep 15, 2020',
     developer: 'Awe Interactive',
     publisher: 'Awe Interactive',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 11319,
       rating: 'Very Positive',
@@ -44370,8 +44314,6 @@ export const steamGameDetails: SteamGameMap = {
       'Singleplayer',
       'First-Person',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1286680': {
@@ -44386,6 +44328,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jun 23, 2022',
     developer: 'Gearbox Software',
     publisher: '2K',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 24062,
       rating: 'Mostly Positive',
@@ -44407,8 +44351,6 @@ export const steamGameDetails: SteamGameMap = {
       'Character Customization',
       'Narration',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1288320': {
@@ -44423,6 +44365,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Aug 16, 2022',
     developer: 'Nine Rocks Games',
     publisher: 'THQ Nordic',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 10736,
       rating: 'Very Positive',
@@ -44444,8 +44388,6 @@ export const steamGameDetails: SteamGameMap = {
       'America',
       'Multiplayer',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1289310': {
@@ -44460,6 +44402,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'May 11, 2020',
     developer: 'vanripper',
     publisher: 'vanripper',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 126842,
       rating: 'Overwhelmingly Positive',
@@ -44481,8 +44425,6 @@ export const steamGameDetails: SteamGameMap = {
       'Adventure',
       'Dating Sim',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1291340': {
@@ -44497,6 +44439,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Aug 26, 2021',
     developer: 'Oskar Stålberg',
     publisher: 'Raw Fury',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 21413,
       rating: 'Overwhelmingly Positive',
@@ -44518,8 +44462,6 @@ export const steamGameDetails: SteamGameMap = {
       'Cute',
       'Colorful',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1296610': {
@@ -44534,6 +44476,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Aug 27, 2024',
     developer: 'Red Nexus Games Inc.',
     publisher: 'Red Nexus Games Inc.',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 17024,
       rating: 'Very Positive',
@@ -44555,8 +44499,6 @@ export const steamGameDetails: SteamGameMap = {
       'Physics',
       'Singleplayer',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1302240': {
@@ -44571,6 +44513,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Aug 18, 2023',
     developer: 'Valko Game Studios',
     publisher: 'Valko Game Studios',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 17128,
       rating: 'Very Positive',
@@ -44592,8 +44536,6 @@ export const steamGameDetails: SteamGameMap = {
       'PvE',
       'Co-op Campaign',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1307550': {
@@ -44608,6 +44550,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Sep 4, 2020',
     developer: 'Pocketpair',
     publisher: 'Pocketpair',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 20737,
       rating: 'Mostly Positive',
@@ -44629,8 +44573,6 @@ export const steamGameDetails: SteamGameMap = {
       'Anime',
       'Character Customization',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1318690': {
@@ -44645,6 +44587,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jun 7, 2020',
     developer: 'Tobias Springer',
     publisher: 'tobspr Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 15111,
       rating: 'Overwhelmingly Positive',
@@ -44666,8 +44610,6 @@ export const steamGameDetails: SteamGameMap = {
       'Moddable',
       'Simulation',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1321440': {
@@ -44682,6 +44624,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Apr 26, 2023',
     developer: 'Bytten Studio',
     publisher: 'Raw Fury',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 10478,
       rating: 'Overwhelmingly Positive',
@@ -44703,8 +44647,6 @@ export const steamGameDetails: SteamGameMap = {
       'Anime',
       'Pixel Graphics',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1324130': {
@@ -44719,6 +44661,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Apr 25, 2023',
     developer: 'Haemimont Games',
     publisher: 'Paradox Interactive',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 10835,
       rating: 'Very Positive',
@@ -44740,8 +44684,6 @@ export const steamGameDetails: SteamGameMap = {
       'Inventory Management',
       'Choices Matter',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1324780': {
@@ -44756,6 +44698,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jan 6, 2022',
     developer: 'Marco Amadei',
     publisher: 'Corvostudio di Amadei Marco',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 12287,
       rating: 'Very Positive',
@@ -44777,8 +44721,6 @@ export const steamGameDetails: SteamGameMap = {
       'Wargame',
       'Violent',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1325200': {
@@ -44793,6 +44735,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Feb 5, 2021',
     developer: 'KOEI TECMO GAMES CO., LTD.',
     publisher: 'KOEI TECMO GAMES CO., LTD.',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 49311,
       rating: 'Very Positive',
@@ -44814,8 +44758,6 @@ export const steamGameDetails: SteamGameMap = {
       'Violent',
       'Singleplayer',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1328660': {
@@ -44830,6 +44772,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Nov 6, 2020',
     developer: 'Stellar Entertainment Limited',
     publisher: 'Electronic Arts',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 13264,
       rating: 'Mostly Positive',
@@ -44851,8 +44795,6 @@ export const steamGameDetails: SteamGameMap = {
       'Singleplayer',
       'Co-op',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1331550': {
@@ -44867,6 +44809,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Mar 10, 2023',
     developer: 'Hovgaard Games',
     publisher: 'Hovgaard Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 12173,
       rating: 'Very Positive',
@@ -44888,8 +44832,6 @@ export const steamGameDetails: SteamGameMap = {
       'Top-Down',
       'Third Person',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1337520': {
@@ -44904,6 +44846,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Nov 8, 2023',
     developer: 'Hopoo Games',
     publisher: 'Gearbox Publishing',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 28447,
       rating: 'Very Positive',
@@ -44925,8 +44869,6 @@ export const steamGameDetails: SteamGameMap = {
       'Loot',
       'Class-Based',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1341290': {
@@ -44941,6 +44883,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'May 10, 2022',
     developer: 'Total Mayhem Games',
     publisher: 'Total Mayhem Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 17735,
       rating: 'Very Positive',
@@ -44962,8 +44906,6 @@ export const steamGameDetails: SteamGameMap = {
       'Story Rich',
       'Atmospheric',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1343370': {
@@ -44978,6 +44920,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Feb 24, 2021',
     developer: 'Jagex Ltd',
     publisher: 'Jagex Ltd',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 19944,
       rating: 'Very Positive',
@@ -44999,8 +44943,6 @@ export const steamGameDetails: SteamGameMap = {
       'Old School',
       'PvP',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1343400': {
@@ -45015,6 +44957,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 14, 2020',
     developer: 'Jagex Ltd',
     publisher: 'Jagex Ltd',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 26531,
       rating: 'Very Positive',
@@ -45036,8 +44980,6 @@ export const steamGameDetails: SteamGameMap = {
       'Classic',
       'Point & Click',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1353230': {
@@ -45052,6 +44994,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Aug 18, 2023',
     developer: 'Team Reptile',
     publisher: 'Team Reptile',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 14873,
       rating: 'Overwhelmingly Positive',
@@ -45073,8 +45017,6 @@ export const steamGameDetails: SteamGameMap = {
       'Walking Simulator',
       'Relaxing',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1359090': {
@@ -45089,6 +45031,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Sep 9, 2024',
     developer: 'AttritoM7 Productions',
     publisher: 'AttritoM7 Productions',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 19201,
       rating: 'Mostly Positive',
@@ -45110,8 +45054,6 @@ export const steamGameDetails: SteamGameMap = {
       'Team-Based',
       'Strategy',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1359980': {
@@ -45126,6 +45068,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jun 9, 2022',
     developer: 'Hyperstrange',
     publisher: 'Running With Scissors',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 10458,
       rating: 'Very Positive',
@@ -45147,8 +45091,6 @@ export const steamGameDetails: SteamGameMap = {
       'FPS',
       'Gore',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1361000': {
@@ -45163,6 +45105,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 29, 2021',
     developer: 'Ravenhood Games',
     publisher: 'Ravenhood Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 11918,
       rating: 'Mostly Positive',
@@ -45184,8 +45128,6 @@ export const steamGameDetails: SteamGameMap = {
       'Atmospheric',
       'Dark',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1361320': {
@@ -45200,6 +45142,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '11 Feb, 2021',
     developer: 'Fireproof Games',
     publisher: 'Fireproof Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 17656,
       rating: 'Overwhelmingly Positive',
@@ -45221,8 +45165,6 @@ export const steamGameDetails: SteamGameMap = {
       'Atmospheric',
       'Indie',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1361510': {
@@ -45237,6 +45179,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jun 16, 2022',
     developer: 'Tribute Games Inc.',
     publisher: 'Dotemu',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 14324,
       rating: 'Overwhelmingly Positive',
@@ -45258,8 +45202,6 @@ export const steamGameDetails: SteamGameMap = {
       'Cartoon',
       'Family Friendly',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1363080': {
@@ -45274,6 +45216,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Apr 26, 2024',
     developer: 'Slavic Magic',
     publisher: 'Hooded Horse',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 41389,
       rating: 'Very Positive',
@@ -45292,8 +45236,6 @@ export const steamGameDetails: SteamGameMap = {
       'Resource Management',
       'Economy',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1367080': {
@@ -45308,6 +45250,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'May 30, 2023',
     developer: 'Bandai Namco Forge Digitals Inc.',
     publisher: 'Bandai Namco Entertainment Inc.',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 20935,
       rating: 'Mostly Negative',
@@ -45329,8 +45273,6 @@ export const steamGameDetails: SteamGameMap = {
       'PvE',
       'Singleplayer',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1369320': {
@@ -45345,6 +45287,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 7, 2020',
     developer: 'DU&I',
     publisher: 'DU&I',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 10927,
       rating: 'Overwhelmingly Positive',
@@ -45366,8 +45310,6 @@ export const steamGameDetails: SteamGameMap = {
       'Family Friendly',
       'Anime',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1369630': {
@@ -45382,6 +45324,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jun 21, 2021',
     developer: 'Live Wire',
     publisher: 'Binary Haze Interactive',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 43570,
       rating: 'Very Positive',
@@ -45403,8 +45347,6 @@ export const steamGameDetails: SteamGameMap = {
       'Medieval',
       'Action RPG',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1371580': {
@@ -45419,6 +45361,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Feb 21, 2024',
     developer: 'Angela Game',
     publisher: 'Imperium Interactive Entertainment',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 17228,
       rating: 'Mixed',
@@ -45440,8 +45384,6 @@ export const steamGameDetails: SteamGameMap = {
       'Online Co-Op',
       'Medieval',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1371980': {
@@ -45456,6 +45398,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '18 Apr, 2024',
     developer: 'Moon Studios GmbH',
     publisher: 'Moon Studios GmbH',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 29519,
       rating: 'Very Positive',
@@ -45474,8 +45418,6 @@ export const steamGameDetails: SteamGameMap = {
       'Isometric',
       'Character Customization',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1372110': {
@@ -45490,6 +45432,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Sep 1, 2022',
     developer: 'CyberConnect2 Co. Ltd.',
     publisher: 'Bandai Namco Entertainment',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 15221,
       rating: 'Very Positive',
@@ -45511,8 +45455,6 @@ export const steamGameDetails: SteamGameMap = {
       'Story Rich',
       'Local Co-Op',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1372280': {
@@ -45527,6 +45469,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '29 Sep, 2021',
     developer: 'FRENCH-BREAD',
     publisher: 'Lasengle Inc.',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 10197,
       rating: 'Very Positive',
@@ -45548,8 +45492,6 @@ export const steamGameDetails: SteamGameMap = {
       'Lore-Rich',
       'Controller',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1382070': {
@@ -45564,6 +45506,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jul 18, 2023',
     developer: 'Sad Owl Studios',
     publisher: 'Thunderful Publishing',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 11604,
       rating: 'Very Positive',
@@ -45585,8 +45529,6 @@ export const steamGameDetails: SteamGameMap = {
       'Exploration',
       '3D Platformer',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1382330': {
@@ -45601,6 +45543,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Feb 22, 2021',
     developer: 'ATLUS',
     publisher: 'SEGA',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 17495,
       rating: 'Very Positive',
@@ -45622,8 +45566,6 @@ export const steamGameDetails: SteamGameMap = {
       'Action RPG',
       'Colorful',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1385380': {
@@ -45638,6 +45580,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Aug 16, 2022',
     developer: 'Dreamsite Games',
     publisher: 'Paradox Interactive',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 12719,
       rating: 'Very Positive',
@@ -45659,8 +45603,6 @@ export const steamGameDetails: SteamGameMap = {
       'Tactical RPG',
       'Co-op',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1388770': {
@@ -45675,6 +45617,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jun 15, 2021',
     developer: 'Consumer Softproducts',
     publisher: 'Consumer Softproducts',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 22982,
       rating: 'Overwhelmingly Positive',
@@ -45696,8 +45640,6 @@ export const steamGameDetails: SteamGameMap = {
       'Stylized',
       'Action',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1390350': {
@@ -45712,6 +45654,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Sep 9, 2021',
     developer: 'Sbug Games',
     publisher: 'Sbug Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 14774,
       rating: 'Overwhelmingly Positive',
@@ -45733,8 +45677,6 @@ export const steamGameDetails: SteamGameMap = {
       'Colorful',
       'Cartoony',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1397920': {
@@ -45749,6 +45691,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Sep 30, 2020',
     developer: 'Playsaurus',
     publisher: 'Playsaurus',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 18163,
       rating: 'Very Positive',
@@ -45770,8 +45714,6 @@ export const steamGameDetails: SteamGameMap = {
       'Management',
       'Building',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1401590': {
@@ -45786,6 +45728,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Dec 5, 2023',
     developer: 'Gameloft',
     publisher: 'Gameloft',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 23602,
       rating: 'Very Positive',
@@ -45807,8 +45751,6 @@ export const steamGameDetails: SteamGameMap = {
       'Cooking',
       'Crafting',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1404210': {
@@ -45823,6 +45765,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Dec 1, 2020',
     developer: 'Rockstar Games',
     publisher: 'Rockstar Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 68534,
       rating: 'Very Positive',
@@ -45844,8 +45788,6 @@ export const steamGameDetails: SteamGameMap = {
       'Singleplayer',
       'Co-op',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1404850': {
@@ -45860,6 +45802,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jan 6, 2023',
     developer: 'TrampolineTales',
     publisher: 'TrampolineTales',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 11306,
       rating: 'Very Positive',
@@ -45881,8 +45825,6 @@ export const steamGameDetails: SteamGameMap = {
       'Singleplayer',
       'Indie',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1407200': {
@@ -45897,6 +45839,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Apr 28, 2021',
     developer: 'Wargaming Group Limited',
     publisher: 'Wargaming Group Limited',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 97095,
       rating: 'Mostly Positive',
@@ -45918,8 +45862,6 @@ export const steamGameDetails: SteamGameMap = {
       'Simulation',
       'Co-op',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1416920': {
@@ -45934,6 +45876,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jul 18, 2024',
     developer: '648工作室',
     publisher: 'Wise Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 10265,
       rating: 'Very Positive',
@@ -45955,8 +45899,6 @@ export const steamGameDetails: SteamGameMap = {
       '3D',
       'Dark Humor',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1419170': {
@@ -45971,6 +45913,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Mar 24, 2021',
     developer: 'Big Blue Bubble',
     publisher: 'Big Blue Bubble',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 46159,
       rating: 'Very Positive',
@@ -45992,8 +45936,6 @@ export const steamGameDetails: SteamGameMap = {
       'Relaxing',
       'Dragons',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1424330': {
@@ -46008,6 +45950,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Mar 15, 2022',
     developer: 'Animal Uprising',
     publisher: 'Secret Mode',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 14025,
       rating: 'Overwhelmingly Positive',
@@ -46029,8 +45973,6 @@ export const steamGameDetails: SteamGameMap = {
       'Experimental',
       'Artificial Intelligence',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1432860': {
@@ -46045,6 +45987,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Mar 10, 2023',
     developer: 'Pixel Sprout Studios',
     publisher: 'Pixel Sprout Studios',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 24499,
       rating: 'Very Positive',
@@ -46066,8 +46010,6 @@ export const steamGameDetails: SteamGameMap = {
       'Magic',
       'Singleplayer',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1433140': {
@@ -46082,6 +46024,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Aug 18, 2023',
     developer: 'Sumo Digital',
     publisher: 'Gun Interactive',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 22544,
       rating: 'Mixed',
@@ -46103,8 +46047,6 @@ export const steamGameDetails: SteamGameMap = {
       'Cinematic',
       '3D',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1435790': {
@@ -46119,6 +46061,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 19, 2021',
     developer: 'Pine Studio',
     publisher: 'Pine Studio',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 18814,
       rating: 'Overwhelmingly Positive',
@@ -46140,8 +46084,6 @@ export const steamGameDetails: SteamGameMap = {
       'Indie',
       'VR',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1446780': {
@@ -46156,6 +46098,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jan 12, 2022',
     developer: 'CAPCOM Co., Ltd.',
     publisher: 'CAPCOM Co., Ltd.',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 120287,
       rating: 'Very Positive',
@@ -46177,8 +46121,6 @@ export const steamGameDetails: SteamGameMap = {
       'Anime',
       'Dragons',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1448440': {
@@ -46193,6 +46135,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Mar 3, 2023',
     developer: 'KOEI TECMO GAMES CO., LTD.',
     publisher: 'KOEI TECMO GAMES CO., LTD.',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 28635,
       rating: 'Mostly Positive',
@@ -46214,8 +46158,6 @@ export const steamGameDetails: SteamGameMap = {
       'Martial Arts',
       'JRPG',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1449850': {
@@ -46230,6 +46172,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jan 18, 2022',
     developer: 'KONAMI',
     publisher: 'KONAMI',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 96658,
       rating: 'Mostly Positive',
@@ -46251,8 +46195,6 @@ export const steamGameDetails: SteamGameMap = {
       'Dragons',
       'Fantasy',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1451190': {
@@ -46267,6 +46209,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '8 Oct, 2024',
     developer: 'Steel City Interactive',
     publisher: 'Deep Silver',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 21672,
       rating: 'Mixed',
@@ -46288,8 +46232,6 @@ export const steamGameDetails: SteamGameMap = {
       'Simulation',
       'Action',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1454400': {
@@ -46304,6 +46246,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '1 Sep, 2021',
     developer: 'Orteil',
     publisher: 'Playsaurus',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 88497,
       rating: 'Overwhelmingly Positive',
@@ -46325,8 +46269,6 @@ export const steamGameDetails: SteamGameMap = {
       'Strategy',
       'Comedy',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1455840': {
@@ -46341,6 +46283,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Apr 28, 2022',
     developer: 'Toukana Interactive',
     publisher: 'Toukana Interactive',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 28948,
       rating: 'Overwhelmingly Positive',
@@ -46362,8 +46306,6 @@ export const steamGameDetails: SteamGameMap = {
       'Logic',
       'Indie',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1458140': {
@@ -46378,6 +46320,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Feb 21, 2024',
     developer: 'Ironwood Studios',
     publisher: 'Kepler Interactive',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 24635,
       rating: 'Very Positive',
@@ -46399,8 +46343,6 @@ export const steamGameDetails: SteamGameMap = {
       'Transportation',
       '3D',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1465460': {
@@ -46415,6 +46357,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Apr 11, 2024',
     developer: 'Jutsu Games',
     publisher: 'Games Operators',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 17018,
       rating: 'Very Positive',
@@ -46436,8 +46380,6 @@ export const steamGameDetails: SteamGameMap = {
       'Singleplayer',
       'Immersive Sim',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1466640': {
@@ -46452,6 +46394,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Aug 16, 2021',
     developer: 'Digixart',
     publisher: 'THQ Nordic',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 24185,
       rating: 'Very Positive',
@@ -46473,8 +46417,6 @@ export const steamGameDetails: SteamGameMap = {
       'Emotional',
       'Political',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1468260': {
@@ -46489,6 +46431,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Dec 4, 2020',
     developer: 'Humble North',
     publisher: 'Humble North',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 26199,
       rating: 'Very Positive',
@@ -46510,8 +46454,6 @@ export const steamGameDetails: SteamGameMap = {
       'Top-Down',
       'Colorful',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1468810': {
@@ -46526,6 +46468,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'May 26, 2023',
     developer: '鬼谷工作室',
     publisher: '鬼谷工作室',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 226393,
       rating: 'Mostly Positive',
@@ -46547,8 +46491,6 @@ export const steamGameDetails: SteamGameMap = {
       'Hack and Slash',
       'Story Rich',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1475810': {
@@ -46563,6 +46505,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Mar 24, 2022',
     developer: 'Tango Gameworks',
     publisher: 'Bethesda Softworks',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 19605,
       rating: 'Very Positive',
@@ -46584,8 +46528,6 @@ export const steamGameDetails: SteamGameMap = {
       'Exploration',
       'FPS',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1488200': {
@@ -46600,6 +46542,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jun 10, 2022',
     developer: 'Dancing Dragon Games',
     publisher: 'indie.io',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 14155,
       rating: 'Very Positive',
@@ -46621,8 +46565,6 @@ export const steamGameDetails: SteamGameMap = {
       '2D',
       'JRPG',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1490890': {
@@ -46636,6 +46578,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '15 Oct, 2021',
     developer: 'CyberConnect2',
     publisher: 'SEGA',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 19598,
       rating: 'Very Positive',
@@ -46657,8 +46601,6 @@ export const steamGameDetails: SteamGameMap = {
       'Comic Book',
       'Combat',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1496790': {
@@ -46673,6 +46615,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 21, 2022',
     developer: 'Warner Bros. Games Montréal',
     publisher: 'Warner Bros. Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 24490,
       rating: 'Mixed',
@@ -46694,8 +46638,6 @@ export const steamGameDetails: SteamGameMap = {
       'Action-Adventure',
       'Comic Book',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1501750': {
@@ -46710,6 +46652,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 13, 2023',
     developer: 'CI Games',
     publisher: 'CI Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 49358,
       rating: 'Mostly Positive',
@@ -46731,8 +46675,6 @@ export const steamGameDetails: SteamGameMap = {
       'Adventure',
       'Lore-Rich',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1504570': {
@@ -46747,6 +46689,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Apr 17, 2024',
     developer: 'Ac Games',
     publisher: 'Ac Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 13637,
       rating: 'Mixed',
@@ -46768,8 +46712,6 @@ export const steamGameDetails: SteamGameMap = {
       'RPG',
       'Tower Defense',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1507580': {
@@ -46784,6 +46726,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Nov 28, 2024',
     developer: 'Dumativa',
     publisher: 'Dumativa',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 10012,
       rating: 'Very Positive',
@@ -46805,8 +46749,6 @@ export const steamGameDetails: SteamGameMap = {
       'Multiple Endings',
       'Psychological Horror',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1509960': {
@@ -46821,6 +46763,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '7 May, 2021',
     developer: 'TECOPARK',
     publisher: 'TECOPARK',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 29549,
       rating: 'Very Positive',
@@ -46842,8 +46786,6 @@ export const steamGameDetails: SteamGameMap = {
       'Puzzle',
       'Party Game',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1517290': {
@@ -46858,6 +46800,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Nov 19, 2021',
     developer: 'DICE',
     publisher: 'Electronic Arts',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 322592,
       rating: 'Mixed',
@@ -46879,8 +46823,6 @@ export const steamGameDetails: SteamGameMap = {
       'Modern',
       'Destruction',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1522820': {
@@ -46895,6 +46837,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '23 Jul, 2021',
     developer: 'Robot Entertainment',
     publisher: 'Robot Entertainment',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 14578,
       rating: 'Very Positive',
@@ -46916,8 +46860,6 @@ export const steamGameDetails: SteamGameMap = {
       'Adventure',
       'Combat',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1525700': {
@@ -46932,6 +46874,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Nov 16, 2021',
     developer: 'Untitled Studio',
     publisher: 'Untitled Studio',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 12737,
       rating: 'Very Positive',
@@ -46953,8 +46897,6 @@ export const steamGameDetails: SteamGameMap = {
       'Atmospheric',
       'Stylized',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1533390': {
@@ -46969,6 +46911,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jan 1, 2023',
     developer: 'Another Axiom Inc.',
     publisher: 'Another Axiom Inc.',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 80619,
       rating: 'Very Positive',
@@ -46990,8 +46934,6 @@ export const steamGameDetails: SteamGameMap = {
       'Survival Horror',
       'Casual',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1533420': {
@@ -47006,6 +46948,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jun 16, 2022',
     developer: 'Angel Matrix',
     publisher: 'Annapurna Interactive',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 19559,
       rating: 'Overwhelmingly Positive',
@@ -47027,8 +46971,6 @@ export const steamGameDetails: SteamGameMap = {
       'Adventure',
       '3D',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1544020': {
@@ -47043,6 +46985,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Dec 1, 2022',
     developer: 'Striking Distance Studios',
     publisher: 'KRAFTON, Inc.',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 42710,
       rating: 'Mixed',
@@ -47064,8 +47008,6 @@ export const steamGameDetails: SteamGameMap = {
       'Realistic',
       'Adventure',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1548850': {
@@ -47080,6 +47022,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jun 22, 2023',
     developer: 'Highwire Games',
     publisher: 'Victura',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 15896,
       rating: 'Very Positive',
@@ -47101,8 +47045,6 @@ export const steamGameDetails: SteamGameMap = {
       'Stealth',
       'Online Co-Op',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1549970': {
@@ -47117,6 +47059,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '23 Aug, 2021',
     developer: 'Cold Iron Studios',
     publisher: 'Cold Iron Studios',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 26297,
       rating: 'Very Positive',
@@ -47138,8 +47082,6 @@ export const steamGameDetails: SteamGameMap = {
       'RPG',
       'Third Person',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1556790': {
@@ -47154,6 +47096,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Sep 13, 2022',
     developer: 'BlackMill Games',
     publisher: 'BlackMill Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 16452,
       rating: 'Very Positive',
@@ -47175,8 +47119,6 @@ export const steamGameDetails: SteamGameMap = {
       'First-Person',
       'Historical',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1557740': {
@@ -47191,6 +47133,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '1 Apr, 2021',
     developer: 'Landfall',
     publisher: 'Landfall',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 41587,
       rating: 'Overwhelmingly Positive',
@@ -47212,8 +47156,6 @@ export const steamGameDetails: SteamGameMap = {
       'Card Game',
       'Party Game',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1562700': {
@@ -47228,6 +47170,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '8 Nov, 2023',
     developer: 'WONDER POTION',
     publisher: 'NEOWIZ',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 42920,
       rating: 'Overwhelmingly Positive',
@@ -47249,8 +47193,6 @@ export const steamGameDetails: SteamGameMap = {
       'Side Scroller',
       'Atmospheric',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1566690': {
@@ -47265,6 +47207,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Mar 26, 2024',
     developer: 'Team Ranger',
     publisher: 'Lightning Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 13489,
       rating: 'Mostly Positive',
@@ -47286,8 +47230,6 @@ export const steamGameDetails: SteamGameMap = {
       'Military',
       'Shooter',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1568590': {
@@ -47302,6 +47244,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 3, 2021',
     developer: 'Gaggle Studios, Inc.',
     publisher: 'Gaggle Studios, Inc.',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 78974,
       rating: 'Very Positive',
@@ -47323,8 +47267,6 @@ export const steamGameDetails: SteamGameMap = {
       'Casual',
       'Strategy',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1571440': {
@@ -47339,6 +47281,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Apr 15, 2021',
     developer: 'Manic Mice',
     publisher: 'Manic Mice',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 12897,
       rating: 'Very Positive',
@@ -47360,8 +47304,6 @@ export const steamGameDetails: SteamGameMap = {
       'PvE',
       'Collectathon',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1574580': {
@@ -47376,6 +47318,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jan 21, 2022',
     developer: 'Bad Viking',
     publisher: 'Iceberg Interactive',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 14995,
       rating: 'Overwhelmingly Positive',
@@ -47397,8 +47341,6 @@ export const steamGameDetails: SteamGameMap = {
       'Choices Matter',
       'Multiple Endings',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1577120': {
@@ -47413,6 +47355,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jun 9, 2022',
     developer: 'Supermassive Games',
     publisher: '2K Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 22047,
       rating: 'Very Positive',
@@ -47434,8 +47378,6 @@ export const steamGameDetails: SteamGameMap = {
       'Realistic',
       'Survival Horror',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1590320': {
@@ -47450,6 +47392,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '30 Dec, 2021',
     developer: 'Boros Bros',
     publisher: 'Boros Bros',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 20508,
       rating: 'Mostly Positive',
@@ -47471,8 +47415,6 @@ export const steamGameDetails: SteamGameMap = {
       'Team-Based',
       'Controller',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1592190': {
@@ -47487,6 +47429,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Sep 29, 2022',
     developer: 'Stress Level Zero',
     publisher: 'Stress Level Zero',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 18521,
       rating: 'Mostly Positive',
@@ -47508,8 +47452,6 @@ export const steamGameDetails: SteamGameMap = {
       'Psychological',
       'Indie',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1599340': {
@@ -47524,6 +47466,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Feb 11, 2022',
     developer: 'Smilegate RPG',
     publisher: 'Amazon Game Studios',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 203197,
       rating: 'Mixed',
@@ -47545,8 +47489,6 @@ export const steamGameDetails: SteamGameMap = {
       'PvP',
       'Isometric',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1599600': {
@@ -47561,6 +47503,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Aug 4, 2022',
     developer: "It's happening",
     publisher: 'Yogscast Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 25732,
       rating: 'Overwhelmingly Positive',
@@ -47582,8 +47526,6 @@ export const steamGameDetails: SteamGameMap = {
       'Casual',
       'Controller',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1601580': {
@@ -47598,6 +47540,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Sep 20, 2024',
     developer: '11 bit studios',
     publisher: '11 bit studios',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 25043,
       rating: 'Mostly Positive',
@@ -47619,8 +47563,6 @@ export const steamGameDetails: SteamGameMap = {
       'Political Sim',
       'Politics',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1605220': {
@@ -47635,6 +47577,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Sep 14, 2023',
     developer: 'Shiro Games',
     publisher: 'Funcom',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 13181,
       rating: 'Mostly Positive',
@@ -47656,8 +47600,6 @@ export const steamGameDetails: SteamGameMap = {
       'Diplomacy',
       'Multiplayer',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1607250': {
@@ -47672,6 +47614,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Sep 28, 2023',
     developer: 'Byking Inc.',
     publisher: 'Bandai Namco Entertainment',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 24475,
       rating: 'Mixed',
@@ -47693,8 +47637,6 @@ export const steamGameDetails: SteamGameMap = {
       'Casual',
       'Shooter',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1611600': {
@@ -47709,6 +47651,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'May 23, 2024',
     developer: 'Eugen Systems',
     publisher: 'Eugen Systems',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 14724,
       rating: 'Very Positive',
@@ -47730,8 +47674,6 @@ export const steamGameDetails: SteamGameMap = {
       'Tactical',
       '1980s',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1611910': {
@@ -47746,6 +47688,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '5 May, 2022',
     developer: 'Complex Games',
     publisher: 'Frontier Foundry',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 14000,
       rating: 'Mostly Positive',
@@ -47767,8 +47711,6 @@ export const steamGameDetails: SteamGameMap = {
       'Dark Fantasy',
       'Stylized',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1622910': {
@@ -47783,6 +47725,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jun 18, 2024',
     developer: 'The Chinese Room',
     publisher: 'Secret Mode',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 10668,
       rating: 'Very Positive',
@@ -47804,8 +47748,6 @@ export const steamGameDetails: SteamGameMap = {
       'Sci-fi',
       'Underwater',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1625450': {
@@ -47820,6 +47762,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jun 5, 2021',
     developer: 'Dani',
     publisher: 'Dani',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 181522,
       rating: 'Very Positive',
@@ -47841,8 +47785,6 @@ export const steamGameDetails: SteamGameMap = {
       'Action-Adventure',
       'Combat',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1629520': {
@@ -47857,6 +47799,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Nov 8, 2022',
     developer: 'Max Inferno',
     publisher: 'Secret Mode',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 17185,
       rating: 'Very Positive',
@@ -47878,8 +47822,6 @@ export const steamGameDetails: SteamGameMap = {
       'Logic',
       'Hidden Object',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1637320': {
@@ -47894,6 +47836,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '27 Sep, 2022',
     developer: 'Bippinbits',
     publisher: 'Raw Fury',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 18796,
       rating: 'Very Positive',
@@ -47915,8 +47859,6 @@ export const steamGameDetails: SteamGameMap = {
       'Physics',
       'Exploration',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1643320': {
@@ -47931,6 +47873,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Nov 20, 2024',
     developer: 'GSC Game World',
     publisher: 'GSC Game World (worldwide)',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 53428,
       rating: 'Mostly Positive',
@@ -47949,8 +47893,6 @@ export const steamGameDetails: SteamGameMap = {
       'First-Person',
       'Action',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1645820': {
@@ -47965,6 +47907,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jun 24, 2022',
     developer: 'Zurvivor',
     publisher: 'PlaySurrounDead',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 22791,
       rating: 'Very Positive',
@@ -47986,8 +47930,6 @@ export const steamGameDetails: SteamGameMap = {
       'Co-op',
       'Early Access',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1647160': {
@@ -48002,6 +47944,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jun 9, 2021',
     developer: 'Cosmic Adventure Squad',
     publisher: 'Cosmic Adventure Squad',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 10717,
       rating: 'Very Positive',
@@ -48023,8 +47967,6 @@ export const steamGameDetails: SteamGameMap = {
       'Medieval',
       'Swordplay',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1659040': {
@@ -48039,6 +47981,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jan 20, 2022',
     developer: 'IO Interactive A/S',
     publisher: 'IO Interactive A/S',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 60030,
       rating: 'Very Positive',
@@ -48060,8 +48004,6 @@ export const steamGameDetails: SteamGameMap = {
       'Puzzle',
       'Adventure',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1669000': {
@@ -48076,6 +48018,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'May 2, 2023',
     developer: 'Triumph Studios',
     publisher: 'Paradox Interactive',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 21505,
       rating: 'Very Positive',
@@ -48097,8 +48041,6 @@ export const steamGameDetails: SteamGameMap = {
       'Strategy RPG',
       'Exploration',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1671340': {
@@ -48113,6 +48055,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jul 2, 2021',
     developer: 'Rayll',
     publisher: 'Rayll',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 10119,
       rating: 'Very Positive',
@@ -48134,8 +48078,6 @@ export const steamGameDetails: SteamGameMap = {
       'Episodic',
       'Conversation',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1672970': {
@@ -48150,6 +48092,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Sep 22, 2021',
     developer: 'Mojang Studios',
     publisher: 'Xbox Game Studios',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 15783,
       rating: 'Very Positive',
@@ -48171,8 +48115,6 @@ export const steamGameDetails: SteamGameMap = {
       'Voxel',
       'Fantasy',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1674170': {
@@ -48187,6 +48129,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Aug 26, 2021',
     developer: 'Hamish Dunn',
     publisher: 'Hamish Dunn',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 12039,
       rating: 'Very Positive',
@@ -48208,8 +48152,6 @@ export const steamGameDetails: SteamGameMap = {
       '3D',
       'Gun Customization',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1676840': {
@@ -48224,6 +48166,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '2 Nov, 2023',
     developer: 'IronOak Games',
     publisher: 'Curve Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 15021,
       rating: 'Mostly Positive',
@@ -48245,8 +48189,6 @@ export const steamGameDetails: SteamGameMap = {
       'Local Co-Op',
       'Fantasy',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1677280': {
@@ -48261,6 +48203,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Feb 23, 2023',
     developer: 'Relic Entertainment',
     publisher: 'Relic Entertainment',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 37382,
       rating: 'Mixed',
@@ -48282,8 +48226,6 @@ export const steamGameDetails: SteamGameMap = {
       'Military',
       'Top-Down',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1677740': {
@@ -48298,6 +48240,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '7 Oct, 2021',
     developer: 'Scopely',
     publisher: 'Scopely',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 134178,
       rating: 'Very Positive',
@@ -48319,8 +48263,6 @@ export const steamGameDetails: SteamGameMap = {
       'Massively Multiplayer',
       'Casual',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1681430': {
@@ -48335,6 +48277,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Nov 2, 2023',
     developer: 'Teyon',
     publisher: 'Nacon',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 33381,
       rating: 'Very Positive',
@@ -48356,8 +48300,6 @@ export const steamGameDetails: SteamGameMap = {
       'Soundtrack',
       'RPG',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1686940': {
@@ -48372,6 +48314,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Nov 16, 2023',
     developer: 'Johan Grönvall',
     publisher: 'Zapray Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 23512,
       rating: 'Overwhelmingly Positive',
@@ -48393,45 +48337,6 @@ export const steamGameDetails: SteamGameMap = {
       'Hand-drawn',
       'Cute',
     ],
-    tags: [],
-    features: [],
-    clueOrder: ['tags', 'details', 'desc'],
-  },
-  '1703340': {
-    name: 'The Stanley Parable: Ultra Deluxe',
-    appId: 1703340,
-    primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1703340/ss_b28f3003aac31f59d469468c8c74bbe410279a21.600x338.jpg',
-    secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1703340/ss_eec7001b1e0fde761c5425bef747d17d57fec235.600x338.jpg',
-    shortDescription:
-      "||The Stanley Parable: Ultra Deluxe|| is an expanded re-imagining of 2013's The ||Stanley|| ||Parable||. You will play as ||Stanley||, and you will not play as ||Stanley||. You will make a choice, and you will become powerless. You are not here to win. The ||Stanley|| ||Parable|| is a game that plays you.",
-    releaseDate: 'Apr 27, 2022',
-    developer: 'Crows Crows Crows',
-    publisher: 'Crows Crows Crows',
-    allReviewSummary: {
-      count: 33994,
-      rating: 'Very Positive',
-    },
-    userTags: [
-      'Multiple Endings',
-      'Choices Matter',
-      'Comedy',
-      'Walking Simulator',
-      'Narration',
-      'First-Person',
-      'Singleplayer',
-      'Funny',
-      'Psychological Horror',
-      'Exploration',
-      '3D',
-      'Story Rich',
-      'Adventure',
-      'Casual',
-      'Mystery',
-    ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1712830': {
@@ -48446,6 +48351,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 21, 2022',
     developer: 'Basically Games',
     publisher: 'Basically Games, LLC',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 14786,
       rating: 'Very Positive',
@@ -48467,8 +48374,6 @@ export const steamGameDetails: SteamGameMap = {
       'FPS',
       '3D',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1714040': {
@@ -48483,6 +48388,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Sep 24, 2021',
     developer: 'Team Wood Games',
     publisher: 'Team Wood Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 35559,
       rating: 'Very Positive',
@@ -48504,8 +48411,6 @@ export const steamGameDetails: SteamGameMap = {
       'Minimalist',
       'Combat',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1716740': {
@@ -48520,6 +48425,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '5 Sep, 2023',
     developer: 'Bethesda Game Studios',
     publisher: 'Bethesda Softworks',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 170253,
       rating: 'Mixed',
@@ -48541,8 +48448,6 @@ export const steamGameDetails: SteamGameMap = {
       'Space Sim',
       'Atmospheric',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1740720': {
@@ -48557,6 +48462,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '22 Mar, 2023',
     developer: 'Magic Design Studios',
     publisher: 'Arc Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 10471,
       rating: 'Very Positive',
@@ -48578,8 +48485,6 @@ export const steamGameDetails: SteamGameMap = {
       'Controller',
       'Comedy',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1745510': {
@@ -48594,6 +48499,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 30, 2023',
     developer: 'KIRA LLC',
     publisher: 'KIRA LLC',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 10497,
       rating: 'Very Positive',
@@ -48615,8 +48522,6 @@ export const steamGameDetails: SteamGameMap = {
       'Stylized',
       'Open World',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1761390': {
@@ -48631,6 +48536,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'May 26, 2022',
     developer: 'SEGA',
     publisher: 'SEGA',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 22044,
       rating: 'Overwhelmingly Positive',
@@ -48652,8 +48559,6 @@ export const steamGameDetails: SteamGameMap = {
       'Modern',
       'Great Soundtrack',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1766740': {
@@ -48668,6 +48573,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Dec 9, 2022',
     developer: 'Two Star Games',
     publisher: 'Two Star Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 16837,
       rating: 'Very Positive',
@@ -48689,8 +48596,6 @@ export const steamGameDetails: SteamGameMap = {
       'Indie',
       'Psychological Horror',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1774580': {
@@ -48705,6 +48610,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Apr 27, 2023',
     developer: 'Respawn',
     publisher: 'Electronic Arts',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 78392,
       rating: 'Mixed',
@@ -48726,8 +48633,6 @@ export const steamGameDetails: SteamGameMap = {
       'Combat',
       'Character Customization',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1778820': {
@@ -48742,6 +48647,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jan 25, 2024',
     developer: 'Bandai Namco Studios Inc.',
     publisher: 'Bandai Namco Entertainment',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 39874,
       rating: 'Mixed',
@@ -48760,8 +48667,6 @@ export const steamGameDetails: SteamGameMap = {
       'Character Customization',
       'Martial Arts',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1782120': {
@@ -48776,6 +48681,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 23, 2024',
     developer: 'CABO Studio',
     publisher: 'Modern Wolf',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 14648,
       rating: 'Very Positive',
@@ -48797,8 +48704,6 @@ export const steamGameDetails: SteamGameMap = {
       'Exploration',
       'Simulation',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1782210': {
@@ -48813,6 +48718,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 29, 2021',
     developer: 'Dani',
     publisher: 'Dani',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 151791,
       rating: 'Very Positive',
@@ -48834,8 +48741,6 @@ export const steamGameDetails: SteamGameMap = {
       'Arcade',
       'Casual',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1782380': {
@@ -48850,6 +48755,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 25, 2021',
     developer: 'Fusion Creators Studio',
     publisher: 'Fusion Creators Studio',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 27899,
       rating: 'Very Positive',
@@ -48871,8 +48778,6 @@ export const steamGameDetails: SteamGameMap = {
       'Atmospheric',
       'Massively Multiplayer',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1785150': {
@@ -48887,6 +48792,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'May 30, 2023',
     developer: 'Brainwash Gang',
     publisher: 'Raw Fury',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 14235,
       rating: 'Very Positive',
@@ -48908,8 +48815,6 @@ export const steamGameDetails: SteamGameMap = {
       'Combat',
       'Arena Shooter',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1789480': {
@@ -48924,6 +48829,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 3, 2022',
     developer: 'Small Impact Games',
     publisher: '',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 21253,
       rating: 'Mixed',
@@ -48945,8 +48852,6 @@ export const steamGameDetails: SteamGameMap = {
       'Realistic',
       'Action',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1797880': {
@@ -48961,6 +48866,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Sep 1, 2022',
     developer: 'NetEase Games',
     publisher: 'NetEase Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 27485,
       rating: 'Mixed',
@@ -48982,8 +48889,6 @@ export const steamGameDetails: SteamGameMap = {
       'Controller',
       'Third-Person Shooter',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1801110': {
@@ -48998,6 +48903,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Aug 9, 2023',
     developer: 'tokoronyori',
     publisher: 'Kodansha',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 11960,
       rating: 'Overwhelmingly Positive',
@@ -49019,8 +48926,6 @@ export const steamGameDetails: SteamGameMap = {
       'Emotional',
       'Indie',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1809540': {
@@ -49035,6 +48940,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'May 28, 2024',
     developer: 'RedCandleGames',
     publisher: 'RedCandleGames',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 19063,
       rating: 'Overwhelmingly Positive',
@@ -49056,8 +48963,6 @@ export const steamGameDetails: SteamGameMap = {
       'Dark Fantasy',
       'Sci-fi',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1812450': {
@@ -49072,6 +48977,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Apr 23, 2024',
     developer: 'Donkey Crew',
     publisher: 'Donkey Crew',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 18413,
       rating: 'Very Positive',
@@ -49093,8 +49000,6 @@ export const steamGameDetails: SteamGameMap = {
       'Exploration',
       'Singleplayer',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1815780': {
@@ -49109,6 +49014,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Aug 2, 2022',
     developer: 'Gameloft',
     publisher: 'Gameloft',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 16979,
       rating: 'Mostly Positive',
@@ -49130,8 +49037,6 @@ export const steamGameDetails: SteamGameMap = {
       'Physics',
       'Adventure',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1817230': {
@@ -49146,6 +49051,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jan 25, 2023',
     developer: 'Tango Gameworks',
     publisher: 'KRAFTON, Inc.',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 34929,
       rating: 'Overwhelmingly Positive',
@@ -49167,8 +49074,6 @@ export const steamGameDetails: SteamGameMap = {
       'Stylized',
       "Beat 'em up",
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1818450': {
@@ -49183,6 +49088,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Dec 9, 2022',
     developer: 'EXBO',
     publisher: 'EXBO',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 94971,
       rating: 'Mixed',
@@ -49204,8 +49111,6 @@ export const steamGameDetails: SteamGameMap = {
       'Combat',
       'RPG',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1824220': {
@@ -49220,6 +49125,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jun 12, 2022',
     developer: 'Torn Banner Studios',
     publisher: 'Tripwire Presents',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 53648,
       rating: 'Very Positive',
@@ -49241,8 +49148,6 @@ export const steamGameDetails: SteamGameMap = {
       '3D',
       'Third Person',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1845910': {
@@ -49257,6 +49162,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 31, 2024',
     developer: 'BioWare',
     publisher: 'Electronic Arts',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 30783,
       rating: 'Mixed',
@@ -49275,8 +49182,6 @@ export const steamGameDetails: SteamGameMap = {
       'Third Person',
       'Action',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1846170': {
@@ -49291,6 +49196,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Mar 9, 2022',
     developer: 'David Szymanski',
     publisher: 'David Szymanski',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 10175,
       rating: 'Very Positive',
@@ -49312,8 +49219,6 @@ export const steamGameDetails: SteamGameMap = {
       '3D',
       'Walking Simulator',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1846380': {
@@ -49328,6 +49233,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Dec 1, 2022',
     developer: 'Criterion Games',
     publisher: 'Electronic Arts',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 56213,
       rating: 'Mixed',
@@ -49349,8 +49256,6 @@ export const steamGameDetails: SteamGameMap = {
       'Sports',
       'Atmospheric',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1849250': {
@@ -49365,6 +49270,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Nov 2, 2023',
     developer: 'Codemasters',
     publisher: 'Electronic Arts',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 10959,
       rating: 'Mixed',
@@ -49383,8 +49290,6 @@ export const steamGameDetails: SteamGameMap = {
       'Driving',
       'Realistic',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1850570': {
@@ -49399,6 +49304,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Mar 30, 2022',
     developer: 'KOJIMA PRODUCTIONS',
     publisher: ' 505 Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 59033,
       rating: 'Very Positive',
@@ -49420,8 +49327,6 @@ export const steamGameDetails: SteamGameMap = {
       'Horror',
       'Action-Adventure',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1859910': {
@@ -49436,6 +49341,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jun 14, 2024',
     developer: 'Obb Studio Inc.',
     publisher: 'Paras Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 468,
       rating: 'Very Positive',
@@ -49457,8 +49364,6 @@ export const steamGameDetails: SteamGameMap = {
       'Adventure',
       '2D',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1869590': {
@@ -49473,6 +49378,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Apr 27, 2023',
     developer: 'Odyssey Interactive',
     publisher: 'Odyssey Interactive',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 23568,
       rating: 'Very Positive',
@@ -49494,8 +49401,6 @@ export const steamGameDetails: SteamGameMap = {
       'Character Customization',
       '3D Fighter',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1874880': {
@@ -49510,6 +49415,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Nov 16, 2023',
     developer: 'Bohemia Interactive',
     publisher: 'Bohemia Interactive',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 45814,
       rating: 'Mostly Positive',
@@ -49531,8 +49438,6 @@ export const steamGameDetails: SteamGameMap = {
       'Open World',
       'Third Person',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1875830': {
@@ -49547,6 +49452,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '13 Jun, 2024',
     developer: 'ATLUS',
     publisher: 'SEGA',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 11456,
       rating: 'Overwhelmingly Positive',
@@ -49568,8 +49475,6 @@ export const steamGameDetails: SteamGameMap = {
       'Multiple Endings',
       'Atmospheric',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1876890': {
@@ -49584,6 +49489,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Sep 14, 2023',
     developer: 'The Swordman Studio',
     publisher: 'Spiral Up Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 40089,
       rating: 'Overwhelmingly Positive',
@@ -49605,8 +49512,6 @@ export const steamGameDetails: SteamGameMap = {
       "1990's",
       'Turn-Based Strategy',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1887840': {
@@ -49621,6 +49526,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Apr 25, 2024',
     developer: 'Aggro Crab',
     publisher: 'Aggro Crab',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 20031,
       rating: 'Very Positive',
@@ -49642,8 +49549,6 @@ export const steamGameDetails: SteamGameMap = {
       '3D',
       'Dark Fantasy',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1888930': {
@@ -49658,6 +49563,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Mar 28, 2023',
     developer: 'Naughty Dog LLC',
     publisher: 'PlayStation Publishing LLC',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 98907,
       rating: 'Very Positive',
@@ -49679,8 +49586,6 @@ export const steamGameDetails: SteamGameMap = {
       'Action',
       'Adventure',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1895880': {
@@ -49695,6 +49600,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jul 26, 2023',
     developer: 'Insomniac Games',
     publisher: 'PlayStation Publishing LLC',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 16656,
       rating: 'Very Positive',
@@ -49716,8 +49623,6 @@ export const steamGameDetails: SteamGameMap = {
       'Story Rich',
       'Cute',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1898300': {
@@ -49732,6 +49637,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jun 20, 2024',
     developer: 'Sand Sailor Studio',
     publisher: 'Thunderful Publishing',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 11023,
       rating: 'Very Positive',
@@ -49753,8 +49660,6 @@ export const steamGameDetails: SteamGameMap = {
       'Simulation',
       'Automation',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1902490': {
@@ -49769,6 +49674,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Mar 1, 2022',
     developer: 'Valve',
     publisher: 'Valve',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 24638,
       rating: 'Very Positive',
@@ -49790,8 +49697,6 @@ export const steamGameDetails: SteamGameMap = {
       'Artificial Intelligence',
       'Family Friendly',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1920960': {
@@ -49806,6 +49711,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Aug 13, 2023',
     developer: 'LB Game',
     publisher: 'LB Game',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 50306,
       rating: 'Overwhelmingly Positive',
@@ -49827,8 +49734,6 @@ export const steamGameDetails: SteamGameMap = {
       'Life Sim',
       'Funny',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1922560': {
@@ -49843,6 +49748,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'May 16, 2022',
     developer: 'PopCap',
     publisher: 'Electronic Arts',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 45497,
       rating: 'Very Positive',
@@ -49864,8 +49771,6 @@ export const steamGameDetails: SteamGameMap = {
       'Cartoon',
       'Cute',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1928420': {
@@ -49880,6 +49785,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Sep 21, 2023',
     developer: 'Farlight Games',
     publisher: 'Farlight Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 54820,
       rating: 'Mostly Positive',
@@ -49901,8 +49808,6 @@ export const steamGameDetails: SteamGameMap = {
       '3D',
       'Action',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1928980': {
@@ -49917,6 +49822,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '20 Feb, 2024',
     developer: 'Inflexion Games',
     publisher: 'Inflexion Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 17746,
       rating: 'Mostly Positive',
@@ -49938,8 +49845,6 @@ export const steamGameDetails: SteamGameMap = {
       'First-Person',
       'Action',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1929610': {
@@ -49954,6 +49859,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Sep 25, 2023',
     developer: 'Clock Wizard Games',
     publisher: 'Clock Wizard Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 23410,
       rating: 'Very Positive',
@@ -49975,8 +49882,6 @@ export const steamGameDetails: SteamGameMap = {
       'Cinematic',
       'Indie',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1931770': {
@@ -49991,6 +49896,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Sep 5, 2023',
     developer: 'Rundisc',
     publisher: 'Focus Entertainment',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 28553,
       rating: 'Overwhelmingly Positive',
@@ -50012,8 +49919,6 @@ export const steamGameDetails: SteamGameMap = {
       'Stealth',
       'Story Rich',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1938010': {
@@ -50028,6 +49933,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Feb 16, 2023',
     developer: 'KOEI TECMO GAMES CO., LTD.',
     publisher: 'Electronic Arts',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 12816,
       rating: 'Mixed',
@@ -50049,8 +49956,6 @@ export const steamGameDetails: SteamGameMap = {
       '3D',
       'Souls-like',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1940340': {
@@ -50065,6 +49970,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'May 8, 2023',
     developer: 'Red Hook Studios',
     publisher: 'Red Hook Studios',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 24973,
       rating: 'Mostly Positive',
@@ -50086,8 +49993,6 @@ export const steamGameDetails: SteamGameMap = {
       'Gothic',
       '2D',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1944430': {
@@ -50102,6 +50007,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '6 Jun, 2023',
     developer: 'Frictional Games',
     publisher: 'Frictional Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 11324,
       rating: 'Very Positive',
@@ -50123,8 +50030,6 @@ export const steamGameDetails: SteamGameMap = {
       'Psychological Horror',
       'FPS',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1948280': {
@@ -50139,6 +50044,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Apr 8, 2022',
     developer: 'Sokpop Collective',
     publisher: 'Sokpop Collective',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 28925,
       rating: 'Overwhelmingly Positive',
@@ -50160,8 +50067,6 @@ export const steamGameDetails: SteamGameMap = {
       'Cute',
       'Simulation',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1948980': {
@@ -50176,6 +50081,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Nov 15, 2023',
     developer: '半瓶醋工作室（Half Amateur Studio）',
     publisher: 'XD',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 24006,
       rating: 'Very Positive',
@@ -50197,8 +50104,6 @@ export const steamGameDetails: SteamGameMap = {
       'Stealth',
       '2D',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1949740': {
@@ -50213,6 +50118,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '1 May, 2022',
     developer: 'CodingDaniel',
     publisher: 'CodingDaniel',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 17699,
       rating: 'Very Positive',
@@ -50234,8 +50141,6 @@ export const steamGameDetails: SteamGameMap = {
       'PvP',
       'Souls-like',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1954200': {
@@ -50250,6 +50155,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '26 Sep, 2022',
     developer: 'Ember Lab',
     publisher: 'Ember Lab',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 16736,
       rating: 'Very Positive',
@@ -50271,8 +50178,6 @@ export const steamGameDetails: SteamGameMap = {
       'Nature',
       'Story Rich',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1957780': {
@@ -50287,6 +50192,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Mar 20, 2023',
     developer: 'Combat Waffle Studios',
     publisher: 'Beyond Frames',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 10161,
       rating: 'Mostly Positive',
@@ -50308,8 +50215,6 @@ export const steamGameDetails: SteamGameMap = {
       'Crafting',
       'PvE',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1961460': {
@@ -50324,6 +50229,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Dec 12, 2022',
     developer: 'Mob Entertainment',
     publisher: 'Mob Entertainment',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 54040,
       rating: 'Mostly Positive',
@@ -50345,8 +50252,6 @@ export const steamGameDetails: SteamGameMap = {
       'Psychological Horror',
       'Action',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1962663': {
@@ -50361,6 +50266,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Nov 16, 2022',
     developer: 'Infinity Ward',
     publisher: 'Activision',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 49061,
       rating: 'Mostly Negative',
@@ -50382,8 +50289,6 @@ export const steamGameDetails: SteamGameMap = {
       'Survival',
       'Co-op',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1966900': {
@@ -50398,6 +50303,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '8 Jun, 2023',
     developer: 'flanne',
     publisher: 'Erabit',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 28585,
       rating: 'Very Positive',
@@ -50419,8 +50326,6 @@ export const steamGameDetails: SteamGameMap = {
       'Action',
       'RPG',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1971870': {
@@ -50435,6 +50340,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Sep 19, 2023',
     developer: 'NetherRealm Studios',
     publisher: 'Warner Bros. Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 44405,
       rating: 'Mixed',
@@ -50456,8 +50363,6 @@ export const steamGameDetails: SteamGameMap = {
       '2.5D',
       'Atmospheric',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1974050': {
@@ -50472,6 +50377,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'May 9, 2023',
     developer: 'XD',
     publisher: 'XD',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 19403,
       rating: 'Mixed',
@@ -50493,8 +50400,6 @@ export const steamGameDetails: SteamGameMap = {
       'Fantasy',
       'Drama',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1977530': {
@@ -50509,6 +50414,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Aug 30, 2022',
     developer: 'Duhndal',
     publisher: 'Duhndal',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 30511,
       rating: 'Very Positive',
@@ -50530,8 +50437,6 @@ export const steamGameDetails: SteamGameMap = {
       'Sandbox',
       'Indie',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1985690': {
@@ -50546,6 +50451,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jun 17, 2022',
     developer: 'Subcreation Studio',
     publisher: 'Subcreation Studio',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 15380,
       rating: 'Overwhelmingly Positive',
@@ -50567,8 +50474,6 @@ export const steamGameDetails: SteamGameMap = {
       'Dark Comedy',
       'Colorful',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1987080': {
@@ -50583,6 +50488,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jun 20, 2022',
     developer: 'MrFatcat',
     publisher: 'MrFatcat',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 45924,
       rating: 'Mostly Positive',
@@ -50604,8 +50511,6 @@ export const steamGameDetails: SteamGameMap = {
       'Dark',
       'Mystery',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1997040': {
@@ -50620,6 +50525,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '22 Aug, 2023',
     developer: 'Second Dinner Studios, Inc.',
     publisher: '',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 34379,
       rating: 'Mixed',
@@ -50641,8 +50548,6 @@ export const steamGameDetails: SteamGameMap = {
       'Controller',
       'Action',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1999360': {
@@ -50657,6 +50562,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jul 6, 2022',
     developer: 'turbolento games',
     publisher: 'turbolento publishing',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 19352,
       rating: 'Overwhelmingly Positive',
@@ -50678,8 +50585,6 @@ export const steamGameDetails: SteamGameMap = {
       'Family Friendly',
       'Atmospheric',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '2000950': {
@@ -50694,6 +50599,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '8 Mar, 2023',
     developer: 'Infinity Ward',
     publisher: 'Activision',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 24755,
       rating: 'Very Positive',
@@ -50715,8 +50622,6 @@ export const steamGameDetails: SteamGameMap = {
       'Violent',
       'Gore',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '2005010': {
@@ -50731,6 +50636,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'May 23, 2023',
     developer: 'Auroch Digital',
     publisher: 'Focus Entertainment',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 17097,
       rating: 'Very Positive',
@@ -50752,8 +50659,6 @@ export const steamGameDetails: SteamGameMap = {
       'Singleplayer',
       'Sci-fi',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '2012840': {
@@ -50768,6 +50673,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Dec 8, 2022',
     developer: 'Lightspeed Studios™',
     publisher: 'NVIDIA',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 18704,
       rating: 'Mixed',
@@ -50789,8 +50696,6 @@ export const steamGameDetails: SteamGameMap = {
       'Psychological Horror',
       'Cult Classic',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '2016590': {
@@ -50805,6 +50710,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jun 7, 2024',
     developer: 'IRONMACE',
     publisher: 'IRONMACE',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 45366,
       rating: 'Mixed',
@@ -50823,8 +50730,6 @@ export const steamGameDetails: SteamGameMap = {
       'PvE',
       'First-Person',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '2021910': {
@@ -50839,6 +50744,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jul 16, 2022',
     developer: 'Meta Fork',
     publisher: 'DigiPen Institute of Technology',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 41191,
       rating: 'Very Positive',
@@ -50860,8 +50767,6 @@ export const steamGameDetails: SteamGameMap = {
       'First-Person',
       'Chess',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '2027330': {
@@ -50876,6 +50781,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jul 21, 2023',
     developer: 'Felix Filip',
     publisher: 'F²Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 21073,
       rating: 'Very Positive',
@@ -50897,8 +50804,6 @@ export const steamGameDetails: SteamGameMap = {
       'Action',
       'Immersive Sim',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '2051620': {
@@ -50913,6 +50818,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jul 16, 2024',
     developer: 'Darkflow Software',
     publisher: 'Gaijin Network Ltd',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 17277,
       rating: 'Mostly Positive',
@@ -50934,8 +50841,6 @@ export const steamGameDetails: SteamGameMap = {
       'Co-op',
       'Massively Multiplayer',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '2054970': {
@@ -50950,6 +50855,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Mar 21, 2024',
     developer: 'CAPCOM Co., Ltd.',
     publisher: 'CAPCOM Co., Ltd.',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 58542,
       rating: 'Mixed',
@@ -50968,8 +50875,6 @@ export const steamGameDetails: SteamGameMap = {
       'Action-Adventure',
       'Medieval',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '2058180': {
@@ -50984,6 +50889,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Sep 14, 2022',
     developer: 'Ryu Ga Gotoku Studio',
     publisher: 'SEGA',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 11284,
       rating: 'Overwhelmingly Positive',
@@ -51005,45 +50912,6 @@ export const steamGameDetails: SteamGameMap = {
       'Dark',
       'Drama',
     ],
-    tags: [],
-    features: [],
-    clueOrder: ['tags', 'details', 'desc'],
-  },
-  '2064650': {
-    name: 'Tower of Fantasy',
-    appId: 2064650,
-    primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2064650/ss_c74cbb6196335ffa8fde8a8a605c8563ef96912a.600x338.jpg',
-    secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2064650/ss_d272b9f28410d51b441c01997a88d99f52b815b6.600x338.jpg',
-    shortDescription:
-      'Embark together on your fantasy adventure! Set hundreds of years in the future on the distant planet of Aida, the shared open-world RPG, anime-infused sci-fi adventure ||Tower of Fantasy|| now is officially available on Steam.',
-    releaseDate: 'Oct 19, 2022',
-    developer: 'Hotta Studio',
-    publisher: 'Perfect World Games',
-    allReviewSummary: {
-      count: 11911,
-      rating: 'Mixed',
-    },
-    userTags: [
-      'Anime',
-      'MMORPG',
-      'Open World',
-      'RPG',
-      'Action',
-      'Free to Play',
-      'Action-Adventure',
-      'Action RPG',
-      '3D Platformer',
-      'Cinematic',
-      'Cartoony',
-      'Drama',
-      'Sci-fi',
-      'Post-apocalyptic',
-      'Futuristic',
-    ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '2072450': {
@@ -51058,6 +50926,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jan 25, 2024',
     developer: 'Ryu Ga Gotoku Studio',
     publisher: 'SEGA',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 22656,
       rating: 'Very Positive',
@@ -51079,8 +50949,6 @@ export const steamGameDetails: SteamGameMap = {
       'RPG',
       'Action-Adventure',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '2073850': {
@@ -51095,6 +50963,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '7 Dec, 2023',
     developer: 'Embark Studios',
     publisher: 'Embark Studios',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 261751,
       rating: 'Very Positive',
@@ -51116,8 +50986,6 @@ export const steamGameDetails: SteamGameMap = {
       'Online Co-Op',
       'Combat',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '2074920': {
@@ -51132,6 +51000,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jun 30, 2024',
     developer: 'NEXON Games Co., Ltd.',
     publisher: 'NEXON',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 49961,
       rating: 'Mixed',
@@ -51150,8 +51020,6 @@ export const steamGameDetails: SteamGameMap = {
       'Action RPG',
       'Character Customization',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '2080690': {
@@ -51166,6 +51034,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Aug 25, 2023',
     developer: 'Vector3 Studio',
     publisher: 'Vector3 Studio',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 22926,
       rating: 'Very Positive',
@@ -51187,8 +51057,6 @@ export const steamGameDetails: SteamGameMap = {
       'Post-apocalyptic',
       'PvE',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '2088570': {
@@ -51203,6 +51071,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Sep 23, 2022',
     developer: 'RubyDev',
     publisher: 'RubyDev',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 10415,
       rating: 'Overwhelmingly Positive',
@@ -51224,8 +51094,6 @@ export const steamGameDetails: SteamGameMap = {
       'Pixel Graphics',
       'Singleplayer',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '2103140': {
@@ -51240,6 +51108,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Nov 1, 2024',
     developer: 'Wave Games',
     publisher: 'bilibili',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 15842,
       rating: 'Overwhelmingly Positive',
@@ -51261,8 +51131,6 @@ export const steamGameDetails: SteamGameMap = {
       'Crafting',
       'Singleplayer',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '2113850': {
@@ -51277,6 +51145,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Apr 8, 2024',
     developer: 'Mooncube Games',
     publisher: 'Mooncube Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 15556,
       rating: 'Overwhelmingly Positive',
@@ -51298,8 +51168,6 @@ export const steamGameDetails: SteamGameMap = {
       'Singleplayer',
       'Anime',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '2114740': {
@@ -51314,6 +51182,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Aug 24, 2023',
     developer: 'The Game Kitchen',
     publisher: 'Team17',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 17405,
       rating: 'Very Positive',
@@ -51335,8 +51205,6 @@ export const steamGameDetails: SteamGameMap = {
       'Action RPG',
       'Horror',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '2132850': {
@@ -51351,6 +51219,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'May 9, 2024',
     developer: 'mino_dev',
     publisher: 'mino_dev',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 10476,
       rating: 'Overwhelmingly Positive',
@@ -51372,8 +51242,6 @@ export const steamGameDetails: SteamGameMap = {
       'Adventure',
       'Magic',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '2138710': {
@@ -51388,6 +51256,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Mar 28, 2023',
     developer: 'Sloclap',
     publisher: 'Sloclap',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 25411,
       rating: 'Very Positive',
@@ -51409,8 +51279,6 @@ export const steamGameDetails: SteamGameMap = {
       'Dark',
       'Action Roguelike',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '2141730': {
@@ -51425,6 +51293,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '18 Oct, 2022',
     developer: 'Triiodide Studios',
     publisher: 'Triiodide Studios',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 33242,
       rating: 'Very Positive',
@@ -51446,8 +51316,6 @@ export const steamGameDetails: SteamGameMap = {
       'Casual',
       'Action',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '2141910': {
@@ -51462,6 +51330,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'May 23, 2023',
     developer: 'Wizards of the Coast LLC',
     publisher: 'Wizards of the Coast LLC',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 26794,
       rating: 'Mixed',
@@ -51483,8 +51353,6 @@ export const steamGameDetails: SteamGameMap = {
       'Card Battler',
       'Sexual Content',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '2144740': {
@@ -51499,6 +51367,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 26, 2023',
     developer: 'One More Level',
     publisher: '505 Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 10814,
       rating: 'Mostly Positive',
@@ -51520,8 +51390,6 @@ export const steamGameDetails: SteamGameMap = {
       'Post-apocalyptic',
       'Singleplayer',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '2162800': {
@@ -51536,6 +51404,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Aug 15, 2024',
     developer: 'tobspr Games',
     publisher: 'tobspr Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 13108,
       rating: 'Overwhelmingly Positive',
@@ -51557,8 +51427,6 @@ export const steamGameDetails: SteamGameMap = {
       'Transportation',
       '3D',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '2163330': {
@@ -51573,6 +51441,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jul 13, 2023',
     developer: 'Awesome Games Studio',
     publisher: 'Awesome Games Studio',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 12801,
       rating: 'Very Positive',
@@ -51594,8 +51464,6 @@ export const steamGameDetails: SteamGameMap = {
       'Top-Down',
       'Survival',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '2171440': {
@@ -51610,6 +51478,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Dec 9, 2022',
     developer: 'Miro Haverinen',
     publisher: 'Miro Haverinen',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 14004,
       rating: 'Overwhelmingly Positive',
@@ -51631,8 +51501,6 @@ export const steamGameDetails: SteamGameMap = {
       'Turn-Based Combat',
       'Souls-like',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '2181930': {
@@ -51647,6 +51515,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Feb 13, 2023',
     developer: 'Agafonoff',
     publisher: 'Agafonoff',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 13645,
       rating: 'Very Positive',
@@ -51668,8 +51538,6 @@ export const steamGameDetails: SteamGameMap = {
       'Combat',
       "Shoot 'Em Up",
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '2187290': {
@@ -51684,6 +51552,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Apr 5, 2023',
     developer: 'Alawar',
     publisher: 'Alawar',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 11669,
       rating: 'Very Positive',
@@ -51705,8 +51575,6 @@ export const steamGameDetails: SteamGameMap = {
       'Aliens',
       'Action',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '2208920': {
@@ -51721,6 +51589,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Dec 6, 2022',
     developer: 'Ubisoft Montreal',
     publisher: 'Ubisoft',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 40390,
       rating: 'Mixed',
@@ -51742,8 +51612,6 @@ export const steamGameDetails: SteamGameMap = {
       'Action RPG',
       'Historical',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '2212330': {
@@ -51758,6 +51626,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Feb 2, 2023',
     developer: 'Ivy Sly',
     publisher: 'Ivy Sly',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 39899,
       rating: 'Overwhelmingly Positive',
@@ -51779,8 +51649,6 @@ export const steamGameDetails: SteamGameMap = {
       'Cartoony',
       'Cartoon',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '2218750': {
@@ -51795,6 +51663,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '24 Sep, 2024',
     developer: 'Chasing Carrots',
     publisher: 'Chasing Carrots',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 31091,
       rating: 'Overwhelmingly Positive',
@@ -51816,8 +51686,6 @@ export const steamGameDetails: SteamGameMap = {
       'Singleplayer',
       'Demons',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '2221490': {
@@ -51832,6 +51700,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jan 12, 2023',
     developer: 'Ubisoft',
     publisher: 'Ubisoft',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 29276,
       rating: 'Mostly Positive',
@@ -51853,8 +51723,6 @@ export const steamGameDetails: SteamGameMap = {
       'Character Customization',
       'PvE',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '2225070': {
@@ -51869,6 +51737,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Feb 2, 2023',
     developer: 'Nadeo',
     publisher: 'Ubisoft',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 19492,
       rating: 'Mostly Positive',
@@ -51890,8 +51760,6 @@ export const steamGameDetails: SteamGameMap = {
       'Driving',
       'Time Attack',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '2231380': {
@@ -51906,6 +51774,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jan 23, 2023',
     developer: 'Ubisoft Paris',
     publisher: 'Ubisoft',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 40562,
       rating: 'Mostly Positive',
@@ -51927,8 +51797,6 @@ export const steamGameDetails: SteamGameMap = {
       'Third Person',
       'Character Customization',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '2231450': {
@@ -51943,6 +51811,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jan 26, 2023',
     developer: 'Tour De Pizza',
     publisher: 'Tour De Pizza',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 70375,
       rating: 'Overwhelmingly Positive',
@@ -51964,8 +51834,6 @@ export const steamGameDetails: SteamGameMap = {
       'Colorful',
       'Difficult',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '2232840': {
@@ -51980,6 +51848,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jan 6, 2023',
     developer: 'Euphoric Brothers',
     publisher: 'Euphoric Brothers',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 12430,
       rating: 'Mixed',
@@ -52001,8 +51871,6 @@ export const steamGameDetails: SteamGameMap = {
       'Lore-Rich',
       'Action',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '2239150': {
@@ -52017,6 +51885,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 11, 2024',
     developer: 'GrizzlyGames',
     publisher: 'Mythwright',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 22133,
       rating: 'Overwhelmingly Positive',
@@ -52038,8 +51908,6 @@ export const steamGameDetails: SteamGameMap = {
       'Fantasy',
       'Auto Battler',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '2239550': {
@@ -52054,6 +51922,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jan 26, 2023',
     developer: 'Ubisoft Toronto',
     publisher: 'Ubisoft',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 11738,
       rating: 'Mixed',
@@ -52075,8 +51945,6 @@ export const steamGameDetails: SteamGameMap = {
       'Action-Adventure',
       'Third-Person Shooter',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '2263010': {
@@ -52090,6 +51958,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Mar 28, 2023',
     developer: 'Majorariatto',
     publisher: 'Majorariatto',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 25459,
       rating: 'Overwhelmingly Positive',
@@ -52111,8 +51981,6 @@ export const steamGameDetails: SteamGameMap = {
       'Cute',
       'Emotional',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '2273430': {
@@ -52127,6 +51995,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Feb 14, 2024',
     developer: '91Act',
     publisher: '91Act',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 4832,
       rating: 'Very Positive',
@@ -52148,8 +52018,6 @@ export const steamGameDetails: SteamGameMap = {
       '2D Fighter',
       'Multiple Endings',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '2281730': {
@@ -52164,6 +52032,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Apr 21, 2023',
     developer: 'Alfa Bravo Inc',
     publisher: 'Alfa Bravo Inc',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 51641,
       rating: 'Very Positive',
@@ -52185,8 +52055,6 @@ export const steamGameDetails: SteamGameMap = {
       '3D',
       'Arena Shooter',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '2290180': {
@@ -52201,6 +52069,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jun 8, 2023',
     developer: 'Ubisoft Annecy',
     publisher: 'Ubisoft Entertainment',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 28750,
       rating: 'Very Positive',
@@ -52222,8 +52092,6 @@ export const steamGameDetails: SteamGameMap = {
       'Online Co-Op',
       'Singleplayer',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '2291760': {
@@ -52238,6 +52106,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Mar 31, 2023',
     developer: 'Flipline Studios',
     publisher: 'Flipline Studios',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 12552,
       rating: 'Overwhelmingly Positive',
@@ -52259,8 +52129,6 @@ export const steamGameDetails: SteamGameMap = {
       'Family Friendly',
       'Classic',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '2296990': {
@@ -52275,6 +52143,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Sep 14, 2023',
     developer: 'Total Mayhem Games',
     publisher: 'Total Mayhem Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 23542,
       rating: 'Very Positive',
@@ -52296,8 +52166,6 @@ export const steamGameDetails: SteamGameMap = {
       'Controller',
       'Story Rich',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '2300320': {
@@ -52312,6 +52180,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Nov 12, 2024',
     developer: 'GIANTS Software',
     publisher: 'GIANTS Software',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 17007,
       rating: 'Very Positive',
@@ -52330,8 +52200,6 @@ export const steamGameDetails: SteamGameMap = {
       'Third Person',
       'Management',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '2313250': {
@@ -52346,6 +52214,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jul 16, 2023',
     developer: 'Travellin Cats',
     publisher: 'Travellin Cats',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 17901,
       rating: 'Overwhelmingly Positive',
@@ -52367,8 +52237,6 @@ export const steamGameDetails: SteamGameMap = {
       'Point & Click',
       'Creature Collector',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '2325290': {
@@ -52383,6 +52251,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Apr 10, 2024',
     developer: 'thatgamecompany',
     publisher: 'thatgamecompany',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 22308,
       rating: 'Very Positive',
@@ -52404,8 +52274,6 @@ export const steamGameDetails: SteamGameMap = {
       'Casual',
       'Character Customization',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '2334730': {
@@ -52420,6 +52288,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Nov 14, 2023',
     developer: 'Realm Archive',
     publisher: 'Realm Archive',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 21337,
       rating: 'Very Positive',
@@ -52441,8 +52311,6 @@ export const steamGameDetails: SteamGameMap = {
       'Controller',
       'Procedural Generation',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '2336220': {
@@ -52457,6 +52325,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Feb 20, 2024',
     developer: 'Vambear Games',
     publisher: 'IndieArk',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 14221,
       rating: 'Very Positive',
@@ -52478,8 +52348,6 @@ export const steamGameDetails: SteamGameMap = {
       'Immersive Sim',
       'Local Multiplayer',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '2344520': {
@@ -52494,6 +52362,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '17 Oct, 2023',
     developer: 'Blizzard Entertainment, Inc.',
     publisher: 'Blizzard Entertainment, Inc.',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 65679,
       rating: 'Mixed',
@@ -52515,8 +52385,6 @@ export const steamGameDetails: SteamGameMap = {
       'Dark Fantasy',
       'Fantasy',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '2349820': {
@@ -52531,6 +52399,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'May 17, 2023',
     developer: '钢之直男工作室',
     publisher: 'Orienjoy',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 45262,
       rating: 'Mixed',
@@ -52552,8 +52422,6 @@ export const steamGameDetails: SteamGameMap = {
       'CRPG',
       'Fishing',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '2357570': {
@@ -52568,6 +52436,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Aug 10, 2023',
     developer: 'Blizzard Entertainment, Inc.',
     publisher: 'Blizzard Entertainment, Inc.',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 384495,
       rating: 'Mostly Negative',
@@ -52589,8 +52459,6 @@ export const steamGameDetails: SteamGameMap = {
       'Co-op',
       'Sci-fi',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '2365810': {
@@ -52605,6 +52473,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jul 28, 2023',
     developer: 'rittzler',
     publisher: 'rittzler',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 17489,
       rating: 'Overwhelmingly Positive',
@@ -52626,8 +52496,6 @@ export const steamGameDetails: SteamGameMap = {
       'Fantasy',
       'Abstract',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '2369390': {
@@ -52642,6 +52510,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '11 May, 2023',
     developer: 'Ubisoft Toronto',
     publisher: 'Ubisoft',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 32689,
       rating: 'Mixed',
@@ -52663,8 +52533,6 @@ export const steamGameDetails: SteamGameMap = {
       '3D',
       'First-Person',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '2375550': {
@@ -52679,6 +52547,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Nov 8, 2023',
     developer: 'Ryu Ga Gotoku Studio',
     publisher: 'SEGA',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 11867,
       rating: 'Overwhelmingly Positive',
@@ -52700,8 +52570,6 @@ export const steamGameDetails: SteamGameMap = {
       'Adventure',
       'Hack and Slash',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '2386720': {
@@ -52716,6 +52584,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 24, 2024',
     developer: 'Sirius Lemaitre',
     publisher: 'Lemaitre Bros',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 19092,
       rating: 'Overwhelmingly Positive',
@@ -52737,8 +52607,6 @@ export const steamGameDetails: SteamGameMap = {
       'Surreal',
       'Indie',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '2399830': {
@@ -52753,6 +52621,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 25, 2023',
     developer: 'Studio Wildcard',
     publisher: 'Studio Wildcard',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 97714,
       rating: 'Mixed',
@@ -52774,8 +52644,6 @@ export const steamGameDetails: SteamGameMap = {
       'PvE',
       'PvP',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '2406770': {
@@ -52790,6 +52658,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jun 7, 2024',
     developer: 'Reissad Studio',
     publisher: 'Reissad Studio',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 23539,
       rating: 'Mostly Positive',
@@ -52808,8 +52678,6 @@ export const steamGameDetails: SteamGameMap = {
       'Tactical',
       'First-Person',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '2408820': {
@@ -52824,6 +52692,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Nov 20, 2024',
     developer: 'Feel Free Games',
     publisher: 'Feel Free Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 12012,
       rating: 'Very Positive',
@@ -52845,8 +52715,6 @@ export const steamGameDetails: SteamGameMap = {
       'Mining',
       'Cute',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '2420510': {
@@ -52861,6 +52729,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Aug 16, 2023',
     developer: 'KayAnimate',
     publisher: 'KayAnimate',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 39648,
       rating: 'Overwhelmingly Positive',
@@ -52882,8 +52752,6 @@ export const steamGameDetails: SteamGameMap = {
       'Colorful',
       'Fishing',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '2437170': {
@@ -52898,6 +52766,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '27 Aug, 2024',
     developer: 'Titan Forge Games',
     publisher: 'Hi-Rez Studios',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 20127,
       rating: 'Mixed',
@@ -52919,8 +52789,6 @@ export const steamGameDetails: SteamGameMap = {
       'Team-Based',
       'Combat',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '2440510': {
@@ -52935,6 +52803,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 9, 2023',
     developer: 'Turn 10',
     publisher: 'Xbox Game Studios',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 12075,
       rating: 'Mixed',
@@ -52956,8 +52826,6 @@ export const steamGameDetails: SteamGameMap = {
       'VR',
       'Family Friendly',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '2445690': {
@@ -52972,6 +52840,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jul 24, 2024',
     developer: 'Hunter Studio',
     publisher: 'Hunter Studio',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 10664,
       rating: 'Very Positive',
@@ -52993,8 +52863,6 @@ export const steamGameDetails: SteamGameMap = {
       'RPG',
       'Funny',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '2475490': {
@@ -53009,6 +52877,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Sep 26, 2024',
     developer: 'Wrong Organ',
     publisher: 'CRITICAL REFLEX',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 25936,
       rating: 'Overwhelmingly Positive',
@@ -53030,8 +52900,6 @@ export const steamGameDetails: SteamGameMap = {
       'Singleplayer',
       'Space',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '2479810': {
@@ -53046,6 +52914,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Apr 30, 2024',
     developer: 'MADFINGER Games, a.s.',
     publisher: 'MADFINGER Games, a.s.',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 43810,
       rating: 'Mostly Positive',
@@ -53064,8 +52934,6 @@ export const steamGameDetails: SteamGameMap = {
       'PvE',
       'Gun Customization',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '2488620': {
@@ -53080,6 +52948,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '31 May, 2024',
     developer: 'Codemasters',
     publisher: 'Electronic Arts',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 18810,
       rating: 'Mostly Positive',
@@ -53101,8 +52971,6 @@ export const steamGameDetails: SteamGameMap = {
       'Online Co-Op',
       'PvP',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '2495980': {
@@ -53117,6 +52985,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Aug 20, 2023',
     developer: 'Lonerangerix',
     publisher: 'Lonerangerix',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 16883,
       rating: 'Very Positive',
@@ -53138,8 +53008,6 @@ export const steamGameDetails: SteamGameMap = {
       'Linear',
       'Relaxing',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '2504480': {
@@ -53154,6 +53022,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'May 18, 2024',
     developer: 'UniqueGeese',
     publisher: 'UniqueGeese',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 22616,
       rating: 'Overwhelmingly Positive',
@@ -53175,8 +53045,6 @@ export const steamGameDetails: SteamGameMap = {
       'Puzzle',
       'Great Soundtrack',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '2513280': {
@@ -53191,6 +53059,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 24, 2024',
     developer: 'Sonic Team',
     publisher: 'SEGA',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 14216,
       rating: 'Overwhelmingly Positive',
@@ -53212,8 +53082,6 @@ export const steamGameDetails: SteamGameMap = {
       'Cartoony',
       '2D',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '2515020': {
@@ -53228,6 +53096,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Sep 17, 2024',
     developer: 'Square Enix',
     publisher: 'Square Enix',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 29306,
       rating: 'Very Positive',
@@ -53249,8 +53119,6 @@ export const steamGameDetails: SteamGameMap = {
       'Magic',
       'Drama',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '2532550': {
@@ -53265,6 +53133,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Sep 27, 2023',
     developer: 'the Bratans',
     publisher: 'Smola Game Studio',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 26451,
       rating: 'Very Positive',
@@ -53286,8 +53156,6 @@ export const steamGameDetails: SteamGameMap = {
       'RPG',
       '3D',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '2537590': {
@@ -53302,6 +53170,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Nov 19, 2024',
     developer: 'Asobo Studio',
     publisher: 'Xbox Game Studios',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 18397,
       rating: 'Mixed',
@@ -53323,8 +53193,6 @@ export const steamGameDetails: SteamGameMap = {
       'Relaxing',
       'Nonlinear',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '2551020': {
@@ -53339,6 +53207,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Dec 15, 2023',
     developer: 'Duhndal',
     publisher: 'Duhndal',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 47236,
       rating: 'Very Positive',
@@ -53360,8 +53230,6 @@ export const steamGameDetails: SteamGameMap = {
       'Singleplayer',
       'VR',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '2567870': {
@@ -53376,6 +53244,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '19 Jun, 2024',
     developer: 'Anegar Games',
     publisher: 'Anegar Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 23060,
       rating: 'Very Positive',
@@ -53394,8 +53264,6 @@ export const steamGameDetails: SteamGameMap = {
       'Third Person',
       'Funny',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '2593370': {
@@ -53410,6 +53278,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Apr 22, 2024',
     developer: '零创游戏(ZerocreationGame)',
     publisher: '零创游戏(ZerocreationGame)',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 725,
       rating: 'Very Positive',
@@ -53428,8 +53298,6 @@ export const steamGameDetails: SteamGameMap = {
       'Cute',
       'Drama',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '2608050': {
@@ -53444,6 +53312,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Dec 1, 2023',
     developer: 'Travellin Cats',
     publisher: 'Travellin Cats',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 10407,
       rating: 'Overwhelmingly Positive',
@@ -53465,8 +53335,6 @@ export const steamGameDetails: SteamGameMap = {
       'Point & Click',
       'Creature Collector',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '2638370': {
@@ -53481,6 +53349,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Aug 7, 2024',
     developer: 'Mega Cat Studios',
     publisher: 'Mega Cat Studios',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 10673,
       rating: 'Overwhelmingly Positive',
@@ -53502,8 +53372,6 @@ export const steamGameDetails: SteamGameMap = {
       'Alternate History',
       'Atmospheric',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '2646460': {
@@ -53518,6 +53386,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'May 30, 2024',
     developer: 'CampFire Studio',
     publisher: 'Qooland Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 17359,
       rating: 'Very Positive',
@@ -53539,8 +53409,6 @@ export const steamGameDetails: SteamGameMap = {
       'RPG',
       'Crafting',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '2653790': {
@@ -53555,6 +53423,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Nov 29, 2023',
     developer: 'KOTAKE CREATE',
     publisher: 'PLAYISM',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 10148,
       rating: 'Very Positive',
@@ -53576,8 +53446,6 @@ export const steamGameDetails: SteamGameMap = {
       'Simulation',
       'Casual',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '2666510': {
@@ -53592,6 +53460,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Apr 26, 2024',
     developer: 'Mister Morris Games',
     publisher: 'Mister Morris Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 14323,
       rating: 'Overwhelmingly Positive',
@@ -53613,8 +53483,6 @@ export const steamGameDetails: SteamGameMap = {
       'Economy',
       'Resource Management',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '2668510': {
@@ -53629,6 +53497,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 29, 2024',
     developer: 'Rockstar Games',
     publisher: 'Rockstar Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 17365,
       rating: 'Very Positive',
@@ -53650,8 +53520,6 @@ export const steamGameDetails: SteamGameMap = {
       'Third Person',
       'Sexual Content',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '2669320': {
@@ -53666,6 +53534,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Sep 26, 2024',
     developer: 'EA Canada',
     publisher: 'Electronic Arts',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 31481,
       rating: 'Mixed',
@@ -53684,8 +53554,6 @@ export const steamGameDetails: SteamGameMap = {
       'Online Co-Op',
       'Singleplayer',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '2677660': {
@@ -53700,6 +53568,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Dec 8, 2024',
     developer: 'MachineGames',
     publisher: 'Bethesda Softworks',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 18783,
       rating: 'Very Positive',
@@ -53721,8 +53591,6 @@ export const steamGameDetails: SteamGameMap = {
       '3D Platformer',
       'Realistic',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '2679460': {
@@ -53737,6 +53605,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 10, 2024',
     developer: 'ATLUS',
     publisher: 'SEGA',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 18412,
       rating: 'Very Positive',
@@ -53758,8 +53628,6 @@ export const steamGameDetails: SteamGameMap = {
       'Third Person',
       'Colorful',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '2688950': {
@@ -53774,6 +53642,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Nov 6, 2024',
     developer: 'Frontier Developments',
     publisher: 'Frontier Developments',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 12594,
       rating: 'Mostly Positive',
@@ -53795,8 +53665,6 @@ export const steamGameDetails: SteamGameMap = {
       'Atmospheric',
       'Family Friendly',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '2694490': {
@@ -53811,6 +53679,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Dec 6, 2024',
     developer: 'Grinding Gear Games',
     publisher: 'Grinding Gear Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 122122,
       rating: 'Mostly Positive',
@@ -53829,8 +53699,6 @@ export const steamGameDetails: SteamGameMap = {
       'Adventure',
       'Multiplayer',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '2695940': {
@@ -53845,6 +53713,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'May 31, 2024',
     developer: 'ZTEK Studio',
     publisher: 'ZTEK Studio',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 12361,
       rating: 'Mostly Positive',
@@ -53866,8 +53736,6 @@ export const steamGameDetails: SteamGameMap = {
       'Roguelite',
       'Psychological',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '2698940': {
@@ -53882,6 +53750,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '18 Apr, 2024',
     developer: 'Ubisoft Ivory Tower',
     publisher: 'Ubisoft',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 17533,
       rating: 'Mostly Positive',
@@ -53903,8 +53773,6 @@ export const steamGameDetails: SteamGameMap = {
       'Motorbike',
       'Simulation',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '2707930': {
@@ -53919,6 +53787,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Mar 25, 2024',
     developer: 'Singularity 6 Corporation',
     publisher: 'Singularity 6 Corporation',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 23953,
       rating: 'Very Positive',
@@ -53940,8 +53810,6 @@ export const steamGameDetails: SteamGameMap = {
       'RPG',
       'Co-op',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '2707940': {
@@ -53956,6 +53824,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Dec 15, 2023',
     developer: 'HFM Games',
     publisher: 'HFM Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 11347,
       rating: 'Very Positive',
@@ -53976,8 +53846,6 @@ export const steamGameDetails: SteamGameMap = {
       'Psychological Horror',
       'VR',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '2709570': {
@@ -53992,6 +53860,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Aug 9, 2024',
     developer: 'DeadDevsTellNoLies',
     publisher: 'DeadDevsTellNoLies',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 31124,
       rating: 'Very Positive',
@@ -54010,8 +53880,6 @@ export const steamGameDetails: SteamGameMap = {
       'First-Person',
       'Building',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '2768430': {
@@ -54026,6 +53894,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Nov 22, 2024',
     developer: 'Kiseff',
     publisher: 'KisSoft',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 21820,
       rating: 'Overwhelmingly Positive',
@@ -54047,8 +53917,6 @@ export const steamGameDetails: SteamGameMap = {
       'PvE',
       'Atmospheric',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '2772750': {
@@ -54063,6 +53931,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 23, 2024',
     developer: 'Łukasz Jakowski',
     publisher: 'Łukasz Jakowski Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 16913,
       rating: 'Very Positive',
@@ -54084,8 +53954,6 @@ export const steamGameDetails: SteamGameMap = {
       'War',
       'Level Editor',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '2795000': {
@@ -54100,6 +53968,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'May 7, 2024',
     developer: "Howlin' Hugs",
     publisher: 'USC Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 12161,
       rating: 'Overwhelmingly Positive',
@@ -54121,8 +53991,6 @@ export const steamGameDetails: SteamGameMap = {
       'Werewolves',
       'Comedy',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '2835570': {
@@ -54137,6 +54005,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Apr 4, 2024',
     developer: 'Mike Klubnika',
     publisher: 'CRITICAL REFLEX',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 37159,
       rating: 'Overwhelmingly Positive',
@@ -54155,8 +54025,6 @@ export const steamGameDetails: SteamGameMap = {
       'Puzzle',
       'Psychological Horror',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '2840770': {
@@ -54171,6 +54039,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jun 17, 2024',
     developer: 'Massive Entertainment – A Ubisoft Studio',
     publisher: 'Ubisoft',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 12349,
       rating: 'Mostly Positive',
@@ -54192,8 +54062,6 @@ export const steamGameDetails: SteamGameMap = {
       '3D',
       'Co-op',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '2849080': {
@@ -54208,6 +54076,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Jul 25, 2024',
     developer: 'Ironhide Game Studio',
     publisher: 'Ironhide Game Studio',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 10508,
       rating: 'Very Positive',
@@ -54229,8 +54099,6 @@ export const steamGameDetails: SteamGameMap = {
       'Adventure',
       'Comedy',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '2878980': {
@@ -54245,6 +54113,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 28, 2024',
     developer: 'Visual Concepts',
     publisher: '2K',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 16496,
       rating: 'Mixed',
@@ -54263,8 +54133,6 @@ export const steamGameDetails: SteamGameMap = {
       'Immersive Sim',
       'Trading',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '2904000': {
@@ -54279,6 +54147,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Sep 16, 2024',
     developer: 'Bolt Blaster Games',
     publisher: 'Bolt Blaster Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 12902,
       rating: 'Very Positive',
@@ -54300,8 +54170,6 @@ export const steamGameDetails: SteamGameMap = {
       'Casual',
       'Top-Down',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '2909110': {
@@ -54316,6 +54184,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 20, 2024',
     developer: 'BG Productions',
     publisher: 'BG Productions',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 17292,
       rating: 'Very Positive',
@@ -54337,8 +54207,6 @@ export const steamGameDetails: SteamGameMap = {
       'Aliens',
       'Adventure',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '2923300': {
@@ -54353,6 +54221,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Apr 23, 2024',
     developer: 'Sky',
     publisher: 'Sky',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 20609,
       rating: 'Mostly Positive',
@@ -54371,8 +54241,6 @@ export const steamGameDetails: SteamGameMap = {
       'Arcade',
       'Hidden Object',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '2933130': {
@@ -54387,6 +54255,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Aug 27, 2024',
     developer: 'Free Range Games',
     publisher: 'North Beach Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 11190,
       rating: 'Very Positive',
@@ -54408,8 +54278,6 @@ export const steamGameDetails: SteamGameMap = {
       'Sandbox',
       'RPG',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '2933620': {
@@ -54424,6 +54292,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Nov 1, 2024',
     developer: 'Treyarch',
     publisher: 'Activision',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 15247,
       rating: 'Mixed',
@@ -54445,8 +54315,6 @@ export const steamGameDetails: SteamGameMap = {
       'Co-op',
       'Story Rich',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '3035570': {
@@ -54461,6 +54329,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 17, 2024',
     developer: 'Ubisoft Bordeaux',
     publisher: 'Ubisoft',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 10905,
       rating: 'Mostly Positive',
@@ -54482,8 +54352,6 @@ export const steamGameDetails: SteamGameMap = {
       'Story Rich',
       'Atmospheric',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '3070070': {
@@ -54498,6 +54366,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Sep 15, 2024',
     developer: 'OPNeon Games',
     publisher: 'OPNeon Games',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 32790,
       rating: 'Overwhelmingly Positive',
@@ -54516,8 +54386,6 @@ export const steamGameDetails: SteamGameMap = {
       'Life Sim',
       '3D',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '3107330': {
@@ -54532,6 +54400,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Aug 13, 2024',
     developer: 'Goblobin',
     publisher: 'Goblobin',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 13433,
       rating: 'Overwhelmingly Positive',
@@ -54553,8 +54423,6 @@ export const steamGameDetails: SteamGameMap = {
       'Retro',
       'Hacking',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '3121110': {
@@ -54569,6 +54437,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Dec 7, 2024',
     developer: 'Londer Software',
     publisher: 'Londer Software',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 12999,
       rating: 'Very Positive',
@@ -54590,8 +54460,6 @@ export const steamGameDetails: SteamGameMap = {
       'Cinematic',
       'FPS',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '3146520': {
@@ -54606,6 +54474,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Oct 11, 2024',
     developer: 'lamedeveloper',
     publisher: 'lamedeveloper',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 61029,
       rating: 'Overwhelmingly Positive',
@@ -54624,8 +54494,6 @@ export const steamGameDetails: SteamGameMap = {
       'Stylized',
       'Collectathon',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '3274300': {
@@ -54640,6 +54508,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Dec 16, 2024',
     developer: 'vanripper',
     publisher: 'vanripper',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 18378,
       rating: 'Overwhelmingly Positive',
@@ -54661,8 +54531,6 @@ export const steamGameDetails: SteamGameMap = {
       'Comedy',
       'Funny',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '3595230': {
@@ -54677,6 +54545,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: '22 Oct, 2022',
     developer: 'Infinity Ward',
     publisher: 'Activision',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 12476,
       rating: 'Mostly Negative',
@@ -54698,8 +54568,6 @@ export const steamGameDetails: SteamGameMap = {
       'Singleplayer',
       'Violent',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '3595270': {
@@ -54714,6 +54582,8 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'Nov 10, 2023',
     developer: 'Sledgehammer Games',
     publisher: 'Activision',
+    tags: [],
+    features: [],
     allReviewSummary: {
       count: 17116,
       rating: 'Mostly Negative',
@@ -54735,8 +54605,6 @@ export const steamGameDetails: SteamGameMap = {
       'PvE',
       'Co-op',
     ],
-    tags: [],
-    features: [],
     clueOrder: ['tags', 'details', 'desc'],
   },
 };
@@ -54789,4 +54657,5 @@ export const CLOSE_GUESS_SERIES: string[] = [
   'cities:',
   'mount and blade',
   'spider-man',
+  'pillars of eternity',
 ];

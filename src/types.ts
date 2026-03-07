@@ -2,7 +2,7 @@ export interface Review {
   review: string;
   votedUp: boolean;
   votesUp: number;
-  weightedScore: number | string;
+  weightedScore?: number | string;
   authorPlaytimeHours: number;
   timestamp: number;
   reviewUrl?: string;
