@@ -39549,43 +39549,6 @@ export const steamGameDetails: SteamGameMap = {
     ],
     clueOrder: ['tags', 'details', 'desc'],
   },
-  '990080': {
-    name: 'Hogwarts Legacy',
-    appId: 990080,
-    primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/990080/ss_725bf58485beb4aa37a3a69c1e2baa69bf3e4653.600x338.jpg',
-    secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/990080/ss_df93b5e8a183f7232d68be94ae78920a90de1443.600x338.jpg',
-    shortDescription:
-      '||Hogwarts Legacy|| is an immersive, open-world action RPG. Now you can take control of the action and be at the center of your own adventure in the wizarding world.',
-    releaseDate: 'Feb 10, 2023',
-    developer: 'Avalanche Software',
-    publisher: 'Warner Bros. Games',
-    tags: [],
-    features: [],
-    allReviewSummary: {
-      count: 361587,
-      rating: 'Very Positive',
-    },
-    userTags: [
-      'Magic',
-      'Open World',
-      'Fantasy',
-      'Singleplayer',
-      'Adventure',
-      'RPG',
-      'Character Customization',
-      'Exploration',
-      'Story Rich',
-      'Third Person',
-      'Action-Adventure',
-      'Atmospheric',
-      'Action RPG',
-      'Action',
-      'Combat',
-    ],
-    clueOrder: ['tags', 'details', 'desc'],
-  },
   '990630': {
     name: 'The Last Campfire',
     appId: 990630,
