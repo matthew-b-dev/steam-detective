@@ -5,6 +5,8 @@ export interface Review {
   weightedScore: number | string;
   authorPlaytimeHours: number;
   timestamp: number;
+  reviewUrl?: string;
+  authorPlaytimeAtReview?: number;
 }
 
 export interface ReviewSummary {

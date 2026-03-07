@@ -28,3 +28,13 @@ dist-ssr
 src/steam_game_detail.generated.ts
 src/all_game_names.generated.ts
 reviews.json
+
+# pipeline files (data collection utilities, not part of the app build)
+scripts/README.md
+scripts/extract-game-list.js
+scripts/filter-game-list.js
+scripts/game-list.json
+scripts/fetch-new-games.js
+scripts/fetch-progress.json
+scripts/fetched-games-redacted.json
+scripts/fetched-games.json

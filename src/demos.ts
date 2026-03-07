@@ -260,6 +260,8 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile4: 'Prison Architect',
   },
 };
+// Alien swarm:
+//   I thought its some kind of a free indie mobile game
 // April 1st: Skyrim: thumbs down review "the game doesnt work the horse flies"
 // Prison Architect
 // TEKKEN 7 ?

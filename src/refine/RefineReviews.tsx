@@ -121,13 +121,25 @@ const SteamReviewCard: React.FC<{
         )}
       </div>
 
-      {/* Helpful count */}
-      {review.votesUp > 0 && (
-        <div className='px-3 pb-2 text-[11px] text-gray-500'>
-          {review.votesUp} {review.votesUp === 1 ? 'person' : 'people'} found
-          this review helpful
-        </div>
-      )}
+      {/* Helpful count + link */}
+      <div className='px-3 pb-2 text-[11px] text-gray-500 flex flex-col gap-0.5'>
+        {review.votesUp > 0 && (
+          <span>
+            {review.votesUp} {review.votesUp === 1 ? 'person' : 'people'} found
+            this review helpful
+          </span>
+        )}
+        {review.reviewUrl && (
+          <a
+            href={review.reviewUrl}
+            target='_blank'
+            rel='noreferrer'
+            className='text-blue-400 hover:text-blue-300 underline self-start'
+          >
+            View on Steam
+          </a>
+        )}
+      </div>
     </div>
   );
 };
