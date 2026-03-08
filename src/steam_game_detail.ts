@@ -39255,7 +39255,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/969990/ss_7c2e060df8300baacac0d0c1e8b530953e476b3d.600x338.jpg',
     shortDescription:
-      'Are you ready, kids? The cult classic is back, faithfully remade in ||sponge||tastic splendor! Play as ||SpongeBob||, ||Patrick|| and Sandy and show the evil ||Plankton|| that crime pays even less than Mr. ||Krabs||.',
+      '||Are you ready, kids?|| The cult classic is back, faithfully remade in ||sponge||tastic splendor! Play as ||SpongeBob||, ||Patrick|| and Sandy and show the evil ||Plankton|| that crime pays even less than Mr. ||Krabs||.',
     releaseDate: 'Jun 23, 2020',
     developer: 'Purple Lamp',
     publisher: 'THQ Nordic',
@@ -39282,7 +39282,7 @@ export const steamGameDetails: SteamGameMap = {
       'Singleplayer',
       'Co-op',
     ],
-    screenshotFocusPoint: [28, 100, 85],
+    screenshotFocusPoint: [27, 93, 150],
     overrideCensoredTitle:
       'S||pongeBob|| S||quar||eP||ants||: ||Ba||tt||le for ||B||ikini|| B||ottom - Rehydrated||',
     clueOrder: ['ss', 'tags', 'details', 'desc'],
@@ -54621,4 +54621,5 @@ export const CLOSE_GUESS_SERIES: string[] = [
   'mount and blade',
   'spider-man',
   'pillars of eternity',
+  'spongebob',
 ];

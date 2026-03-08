@@ -1,4 +1,4 @@
-import { useState, useMemo, useCallback, useEffect } from 'react';
+import { useState, useMemo, useCallback, useEffect, useRef } from 'react';
 import type { SteamGame } from '../types';
 import type { SteamGameMap } from '../steam_game_detail';
 import { steamGameDetails, CLOSE_GUESS_SERIES } from '../steam_game_detail';
@@ -35,6 +35,10 @@ export const RefinePage: React.FC = () => {
   const [games, setGames] = useState<SteamGameMap>(() =>
     cloneGameMap(steamGameDetails),
   );
+  const gamesRef = useRef(games);
+  useEffect(() => {
+    gamesRef.current = games;
+  }, [games]);
   const [closeGuessSeries, setCloseGuessSeries] = useState<string[]>(() => [
     ...CLOSE_GUESS_SERIES,
   ]);
@@ -163,7 +167,7 @@ export const RefinePage: React.FC = () => {
 
     // Use customOrder which already has the correct order (file order or randomized)
     for (const appId of customOrder) {
-      const game = games[appId];
+      const game = gamesRef.current[appId];
       if (game.debugDelete) continue; // skip deleted games
 
       lines.push(`  '${appId}': {`);

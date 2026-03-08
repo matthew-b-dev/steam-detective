@@ -422,6 +422,7 @@ export const dummyGames: string[] = [
   'Wipeout: Omega Collection',
   "Everybody's Golf",
   'Matterfall',
+  'SpongeBob SquarePants: The Cosmic Shake',
   'Warriors All-Stars',
   "Poochy & Yoshi's Woolly World",
   'Batman: The Enemy Within - Episode 2',
