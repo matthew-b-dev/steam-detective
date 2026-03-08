@@ -260,10 +260,17 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile4: 'Pillars of Eternity II: Deadfire',
   },
   '2026-03-09': {
+    caseFile1: 'Avatar: Frontiers of Pandora',
+    caseFile2: 'Deus Ex: Mankind Divided',
+    caseFile3: 'Firewatch',
+    caseFile4: 'Watch_Dogs',
+  },
+  '2026-03-10': {
     caseFile1: 'Satisfactory',
     caseFile2: 'Fields of Mistria',
     caseFile3: "Don't Starve",
     caseFile4: 'Prison Architect',
   },
 };
+// Mirror's Edge Catalyst
 // April 1st: Skyrim: thumbs down review "the game doesnt work the horse flies"

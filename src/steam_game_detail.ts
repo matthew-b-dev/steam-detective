@@ -15563,6 +15563,7 @@ export const steamGameDetails: SteamGameMap = {
       'Female Protagonist',
       'Romance',
     ],
+    blurScreenshotQuarter: 'top',
     clueOrder: ['tags', 'details', 'desc'],
   },
   '17470': {
@@ -15906,7 +15907,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/22380/ss_ec8a28942fcb5cb15718f949ab81124932a5084d.600x338.jpg',
     shortDescription:
-      'Welcome to ||Vegas||. ||New|| ||Vegas||. Enjoy your stay!',
+      'Welcome to ||Vegas||. ||New|| ||Vegas||. Enjoy your stay! It’s the kind of town where you dig your own grave prior to being shot ||in the head|| and left for dead…and that’s before things really get ugly. It’s a town of dreamers and desperados being torn apart by warring factions vying for complete control of this ||desert oasis||.',
     releaseDate: 'Oct 19, 2010',
     developer: 'Obsidian Entertainment',
     publisher: 'Bethesda Softworks',
@@ -18473,6 +18474,7 @@ export const steamGameDetails: SteamGameMap = {
       'Simulation',
       'Co-op',
     ],
+    blurScreenshotQuarter: 'bottom',
     clueOrder: ['tags', 'details', 'desc'],
   },
   '218680': {
@@ -19075,7 +19077,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/225260/ss_18d2dd8379122ca826a4e02ba652e7f624d7a79b.600x338.jpg',
     shortDescription:
-      "Brütal ||Legend|| is an action-adventure that marries visceral action combat with open-world freedom. Set in a universe somewhere between Lord of the Rings and Spinal Tap, it's a fresh take on the action/driving genre, which in this case is full of imitation cover bands, demons intent on enslaving humanity and Heavy metal tunes.",
+      "||Brütal Legend|| is an action-adventure that marries visceral action combat with open-world freedom. Set in a universe somewhere between Lord of the Rings and Spinal Tap, it's a fresh take on the action/driving genre, which in this case is full of imitation cover bands, demons intent on enslaving humanity and Heavy metal tunes.",
     releaseDate: 'Feb 26, 2013',
     developer: 'Double Fine Productions',
     publisher: 'Double Fine Productions',
@@ -19845,7 +19847,7 @@ export const steamGameDetails: SteamGameMap = {
     clueOrder: ['tags', 'details', 'desc'],
   },
   '238010': {
-    name: "Deus Ex: Human Revolution - Director's Cut",
+    name: 'Deus Ex: Human Revolution',
     appId: 238010,
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/238010/ss_33f23de4cf18cbf6f676902096337716f9e19a52.600x338.jpg',
@@ -20290,13 +20292,14 @@ export const steamGameDetails: SteamGameMap = {
   },
   '243470': {
     name: 'Watch_Dogs',
+    searchTerms: ['watch dogs'],
     appId: 243470,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/243470/ss_752aefdfdf2c55dfc8a94d1e9b8d9f6dd42a359c.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/243470/ss_98649913909e245fb7c7f34fbcc8145ec662b1dc.600x338.jpg',
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/243470/ss_e898214ffaeef618f63e4171a4bd415e7a1f391b.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/243470/ss_fc07f88aabd355dde6decf3c8c61cfd0ef964d7f.600x338.jpg',
     shortDescription:
-      "In today's hyper-connected world, Chicago operates under ctOS, the most advanced computer network in America.",
+      "In today's hyper-connected world, Chicago operates under ||ctOS||, the most advanced computer network in America.",
     releaseDate: 'May 26, 2014',
     developer: 'Ubisoft',
     publisher: 'Ubisoft',
@@ -20323,7 +20326,12 @@ export const steamGameDetails: SteamGameMap = {
       'Driving',
       'Co-op',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: ['Hacking'],
+    overrideCensoredTitle: 'W||atch_||D||ogs||',
+    clueOrder: ['desc', 'tags', 'details'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
   },
   '244160': {
     name: 'Homeworld Remastered Collection',
@@ -24730,7 +24738,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/337000/ss_a1d8ac385b53fd01dbac136c0c41caca6a922622.600x338.jpg',
     shortDescription:
-      "You play as Adam Jensen, an experienced covert operative operating in a world that despises his kind: augmented humans. Choose from an arsenal of state-of-the-art weapons and augmentations to build your playstyle, and decide who you'll trust, to unravel a vast worldwide conspiracy.",
+      "You play as ||Adam Jensen||, an experienced covert operative operating in a world that despises his kind: ||augmented|| humans. Choose from an arsenal of state-of-the-art weapons and ||augmentations|| to build your playstyle, and decide who you'll trust, to unravel a vast worldwide conspiracy.",
     releaseDate: 'Aug 23, 2016',
     developer: 'Eidos Montreal',
     publisher: 'Eidos Interactive Corp.',
@@ -24757,7 +24765,17 @@ export const steamGameDetails: SteamGameMap = {
       'Great Soundtrack',
       'Open World',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    clueOrder: ['review', 'desc', 'details', 'tags'],
+    difficulty: 'Medium',
+    reviewClue: {
+      review:
+        "So sad that the story was cut off in mid-sentence... It should've become a finished trilogy. The game is one of the best ||cyberpunk-styled|| immersive ||sim|| ever made, and ||Jensen|| is my personal favourite protagonist: hella stylish and charismatic!",
+      votedUp: true,
+      votesUp: 4,
+      weightedScore: undefined,
+      authorPlaytimeHours: 95.7,
+      timestamp: 1771628742,
+    },
   },
   '337320': {
     name: 'Paint the Town Red',
@@ -26538,11 +26556,11 @@ export const steamGameDetails: SteamGameMap = {
     name: 'Firewatch',
     appId: 383870,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/383870/ss_80432f2d4f4192017115c23e7dff090df95b204a.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/383870/ss_570bc87288b5ab4e235ba270e1d2ae30312d5b82.600x338.jpg',
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/383870/ss_c7e16bc8d5a6d40ab1f7c339395d26d8f6eb57ff.600x338.jpg',
     shortDescription:
-      '||Firewatch|| is a single-player first-person mystery set in the Wyoming wilderness, where your only emotional lifeline is the person on the other end of a handheld radio.',
+      '||Firewatch|| is a single-player first-person mystery set in the Wyoming wilderness, where your only emotional lifeline is the person on the other end of a ||handheld|| radio.',
     releaseDate: '9 Feb, 2016',
     developer: 'Campo Santo',
     publisher: 'Panic',
@@ -26569,7 +26587,11 @@ export const steamGameDetails: SteamGameMap = {
       'Comedy',
       'Drama',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    overrideCensoredTitle: 'F||irewat||ch',
+    clueOrder: ['details', 'desc', 'tags'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Medium',
   },
   '383980': {
     name: 'Rivals of Aether',
@@ -29045,43 +29067,6 @@ export const steamGameDetails: SteamGameMap = {
       'Management',
       'Strategy',
       'Automobile Sim',
-    ],
-    clueOrder: ['tags', 'details', 'desc'],
-  },
-  '453480': {
-    name: 'Shadowverse CCG',
-    appId: 453480,
-    primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/453480/ss_4a3733b469b5822a324ab0545349ea4d45ddcc97.600x338.jpg',
-    secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/453480/ss_0ee5e5c2123d1c4f9fe7215ef1adfde43defc0ff.600x338.jpg',
-    shortDescription:
-      "Four million battles every day. One ||Shadowverse||. Japan's #1 strategic card game. Made by card gamers for card gamers.",
-    releaseDate: 'Oct 27, 2016',
-    developer: 'Cygames, Inc.',
-    publisher: 'Cygames, Inc.',
-    tags: [],
-    features: [],
-    allReviewSummary: {
-      count: 14883,
-      rating: 'Mostly Positive',
-    },
-    userTags: [
-      'Free to Play',
-      'Card Battler',
-      'Trading Card Game',
-      'Deckbuilding',
-      'Anime',
-      'Card Game',
-      'Strategy',
-      'Sexual Content',
-      'Multiplayer',
-      'Nudity',
-      'Fantasy',
-      'Turn-Based',
-      'PvP',
-      'Singleplayer',
-      'Competitive',
     ],
     clueOrder: ['tags', 'details', 'desc'],
   },
@@ -31630,6 +31615,7 @@ export const steamGameDetails: SteamGameMap = {
       'Adventure',
       'Violent',
     ],
+    blurScreenshotQuarter: 'top',
     clueOrder: ['tags', 'details', 'desc'],
   },
   '557340': {
@@ -39734,43 +39720,6 @@ export const steamGameDetails: SteamGameMap = {
     ],
     clueOrder: ['tags', 'details', 'desc'],
   },
-  '1012880': {
-    name: '60 Seconds! Reatomized',
-    appId: 1012880,
-    primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1012880/ss_f6b3ce6ea360ad8d4f31d792229e89ab27f1c240.600x338.jpg',
-    secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1012880/ss_53f3e540ac39f0381d9e515825b11568f0bc0f0a.600x338.jpg',
-    shortDescription:
-      'The post-apocalyptic dark comedy is back - remastered and even more radioactive than before! Scavenge supplies, rescue your family, and stay alive in your fallout shelter. Make difficult decisions, hunt mutant roaches... and maybe survive. Or not.',
-    releaseDate: 'Jul 25, 2019',
-    developer: 'Robot Gentleman',
-    publisher: 'Robot Gentleman',
-    tags: [],
-    features: [],
-    allReviewSummary: {
-      count: 18569,
-      rating: 'Overwhelmingly Positive',
-    },
-    userTags: [
-      '2D',
-      'Choose Your Own Adventure',
-      'Dark Humor',
-      'Turn-Based Tactics',
-      'Outbreak Sim',
-      'Strategy',
-      'Exploration',
-      'Immersive Sim',
-      'Point & Click',
-      'Difficult',
-      'Text-Based',
-      'Life Sim',
-      'Post-apocalyptic',
-      'Survival',
-      'Wrestling',
-    ],
-    clueOrder: ['tags', 'details', 'desc'],
-  },
   '1016800': {
     name: 'Chernobylite',
     appId: 1016800,
@@ -42878,12 +42827,12 @@ export const steamGameDetails: SteamGameMap = {
     name: "Mirror's Edge Catalyst",
     appId: 1233570,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1233570/ss_2dc81dfd38eac438c9ed16b3c716bdab1ac201d7.600x338.jpg',
-    secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1233570/ss_fedab7714998112ae55d01901850078ec3762ddd.600x338.jpg',
+    secondaryScreenshot:
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1233570/ss_3bf0cf71deea042d4915eed000f7a0d90cbc7c45.600x338.jpg',
     shortDescription:
-      "||Mirror's Edge Catalyst|| raises the action-adventure bar through fluid, first person action and immerses players in Faith's story as she fights for freedom.",
-    releaseDate: 'Jun 4, 2020',
+      "||Mirror's Edge Catalyst|| raises the action-adventure bar through fluid, first person action and immerses players in ||Faith||'s story as she fights for freedom. Follow ||Faith||, a daring free runner, as she fights for freedom in the city of Glass. What appears to be an elegant, high-tech city on the outside, has a terrible secret hidden within.",
+    releaseDate: 'Jun 7, 2016',
     developer: 'DICE',
     publisher: 'Electronic Arts',
     tags: [],
@@ -42909,7 +42858,9 @@ export const steamGameDetails: SteamGameMap = {
       'Stylized',
       'Atmospheric',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: ['Runner', 'Parkour', '3D Platformer'],
+    overrideCensoredTitle: "M||irror's|| E||dge|| C||atalyst||",
+    clueOrder: ['ss', 'tags', 'details', 'desc'],
   },
   '1235140': {
     name: 'Yakuza: Like a Dragon',
@@ -45824,43 +45775,6 @@ export const steamGameDetails: SteamGameMap = {
       'World War II',
       'Simulation',
       'Co-op',
-    ],
-    clueOrder: ['tags', 'details', 'desc'],
-  },
-  '1416920': {
-    name: 'Chinese Online Game',
-    appId: 1416920,
-    primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1416920/ss_65ad72f880bd3be79173730c30ace015ad592481.600x338.jpg',
-    secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1416920/ss_ee2522e657fe4a5b9c04b35f570b5a67eb0c0075.600x338.jpg',
-    shortDescription:
-      'The player will play the role of an older unmarried young man Lao Wang, because of the lack of money for marriage in thinking of ways to accidentally be attracted by the pop-up ads of an online game endorsed by a certain celebrity, and the gears of destiny began to turn at that moment.',
-    releaseDate: 'Jul 18, 2024',
-    developer: '648工作室',
-    publisher: 'Wise Games',
-    tags: [],
-    features: [],
-    allReviewSummary: {
-      count: 10265,
-      rating: 'Very Positive',
-    },
-    userTags: [
-      'CRPG',
-      'Action Roguelike',
-      '2D Platformer',
-      'Roguelite',
-      '3D Platformer',
-      'Life Sim',
-      'Party-Based RPG',
-      'Action RPG',
-      'Action-Adventure',
-      'Roguelike',
-      'RPG',
-      'Character Customization',
-      '2D',
-      '3D',
-      'Dark Humor',
     ],
     clueOrder: ['tags', 'details', 'desc'],
   },
@@ -53998,9 +53912,10 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2840770/75b20da8e11285fb3f33f550dafb7d842b70e31f/ss_75b20da8e11285fb3f33f550dafb7d842b70e31f.600x338.jpg',
     shortDescription:
-      "||Avatar: Frontiers of Pandora||™ is a third and first-person action-adventure game set in the Western Frontier. Reconnect with your lost heritage and discover what it means to be Na'vi.",
+      "||Avatar: Frontiers of Pandora|| is a third and first-person action-adventure game set in the Western Frontier. Abducted by the ||RDA||, you, a ||Na'vi||, were molded to serve their purpose. Fifteen years later, you are free, but find yourself a stranger in your birthplace. Reconnect with your lost heritage and discover what it means to be ||Na'vi||.",
+    originalReleaseDate: 'Dec 7, 2023',
     releaseDate: 'Jun 17, 2024',
-    developer: 'Massive Entertainment – A Ubisoft Studio',
+    developer: 'Massive Entertainment - A Ubisoft Studio',
     publisher: 'Ubisoft',
     tags: [],
     features: [],
@@ -54015,17 +53930,16 @@ export const steamGameDetails: SteamGameMap = {
       'Multiplayer',
       'Online Co-Op',
       'Exploration',
-      'First-Person',
+      'Sci-fi',
       'Singleplayer',
       'Shooter',
       'Character Customization',
-      'Sci-fi',
       'Story Rich',
       'Atmospheric',
       '3D',
       'Co-op',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    clueOrder: ['desc', 'tags', 'details'],
   },
   '2849080': {
     name: 'Kingdom Rush 5: Alliance TD',
@@ -54622,4 +54536,5 @@ export const CLOSE_GUESS_SERIES: string[] = [
   'spider-man',
   'pillars of eternity',
   'spongebob',
+  'deus ex',
 ];

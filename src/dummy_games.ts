@@ -98,7 +98,6 @@ export const dummyGames: string[] = [
   'FORCED: Slightly Better Edition',
   'Forced',
   'Shelter',
-  'Watch Dogs',
   'Teleglitch: Die More Edition',
   'Alien Breed',
   'The Denpa Men 2: Beyond the Waves',
