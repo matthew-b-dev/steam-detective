@@ -266,11 +266,21 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile4: 'Avatar: Frontiers of Pandora',
   },
   '2026-03-10': {
-    caseFile1: 'Satisfactory',
+    caseFile1: 'Dead by Daylight',
+    caseFile2: 'Prison Architect',
+    caseFile3: 'OneShot',
+    caseFile4: "Five Nights at Freddy's",
+  },
+  '2026-03-11': {
+    caseFile1: 'Suicide Squad: Kill the Justice League',
     caseFile2: 'Fields of Mistria',
     caseFile3: "Don't Starve",
-    caseFile4: 'Prison Architect',
+    caseFile4: 'Satisfactory',
   },
 };
+// Darwin Project
+// HELLDIVERS
+// Suicide Squad: Kill the Justice League
+//  Dead by Daylight
 // Mirror's Edge Catalyst
 // April 1st: Skyrim: thumbs down review "the game doesnt work the horse flies"
