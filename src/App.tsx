@@ -148,7 +148,7 @@ function App() {
                     <span className='hidden sm:inline'>
                       <i>Steam game</i>
                     </span>{' '}
-                    trivia puzzle
+                    trivia challenge
                   </span>
                 </p>
               </div>
