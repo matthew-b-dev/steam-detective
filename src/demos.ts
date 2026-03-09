@@ -260,10 +260,10 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile4: 'Pillars of Eternity II: Deadfire',
   },
   '2026-03-09': {
-    caseFile1: 'Avatar: Frontiers of Pandora',
+    caseFile1: 'Watch_Dogs',
     caseFile2: 'Deus Ex: Mankind Divided',
     caseFile3: 'Firewatch',
-    caseFile4: 'Watch_Dogs',
+    caseFile4: 'Avatar: Frontiers of Pandora',
   },
   '2026-03-10': {
     caseFile1: 'Satisfactory',
