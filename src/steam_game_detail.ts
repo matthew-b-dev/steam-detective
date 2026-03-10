@@ -15491,43 +15491,6 @@ export const steamGameDetails: SteamGameMap = {
     ],
     clueOrder: ['tags', 'details', 'desc'],
   },
-  '17410': {
-    name: "Mirror's Edge",
-    appId: 17410,
-    primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/17410/0000006705.600x338.jpg',
-    secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/17410/0000006706.600x338.jpg',
-    shortDescription:
-      'In a city where information is heavily monitored, couriers called Runners transport sensitive data. In this seemingly utopian paradise, a crime has been committed, &amp; you are being hunted. You are a Runner called Faith and this innovative first-person action-adventure is your story.',
-    releaseDate: 'Jan 14, 2009',
-    developer: 'DICE',
-    publisher: 'Electronic Arts',
-    tags: [],
-    features: [],
-    allReviewSummary: {
-      count: 38571,
-      rating: 'Very Positive',
-    },
-    userTags: [
-      'Action-Adventure',
-      'Parkour',
-      'First-Person',
-      'Exploration',
-      '3D Platformer',
-      'Female Protagonist',
-      'Singleplayer',
-      'Platformer',
-      'Puzzle',
-      'Cyberpunk',
-      'Action',
-      'Dystopian',
-      'Colorful',
-      'Stylized',
-      'Atmospheric',
-    ],
-    clueOrder: ['tags', 'details', 'desc'],
-  },
   '17460': {
     name: 'Mass Effect (2007)',
     appId: 17460,
@@ -15564,43 +15527,6 @@ export const steamGameDetails: SteamGameMap = {
       'Romance',
     ],
     blurScreenshotQuarter: 'top',
-    clueOrder: ['tags', 'details', 'desc'],
-  },
-  '17470': {
-    name: 'Dead Space (2008)',
-    appId: 17470,
-    primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/17470/0000006481.600x338.jpg',
-    secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/17470/0000006482.600x338.jpg',
-    shortDescription:
-      "You are Isaac Clarke, an engineer on the spacecraft USG Ishimura. You're not a warrior. You're not a soldier. You are, however, the last line of defense for the remaining living crew.",
-    releaseDate: 'Jan 9, 2009',
-    developer: 'EA Redwood Shores',
-    publisher: 'Electronic Arts',
-    tags: [],
-    features: [],
-    allReviewSummary: {
-      count: 28493,
-      rating: 'Very Positive',
-    },
-    userTags: [
-      'Horror',
-      'Sci-fi',
-      'Action',
-      'Space',
-      'Survival Horror',
-      'Third Person',
-      'Atmospheric',
-      'Singleplayer',
-      'Third-Person Shooter',
-      'Gore',
-      'Shooter',
-      'Aliens',
-      'Dark',
-      'Futuristic',
-      'Story Rich',
-    ],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '17480': {
@@ -16610,11 +16536,11 @@ export const steamGameDetails: SteamGameMap = {
     name: 'Dead Space 2',
     appId: 47780,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/47780/ss_6e1ba90fc5b7cc8ad7079dc979bd16ff359a32a0.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/47780/ss_f2e807c95fd902bcdda6b8a5285cd2371b47f788.600x338.jpg',
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/47780/ss_94e2474db485a8d94e5a8063160321b45b77f299.600x338.jpg',
     shortDescription:
-      'Three years after the Necromorph infestation aboard the USS Ishimura, Isaac Clarke awakens from a coma, confused, disoriented, and on a space station called The Sprawl. Explore this world and its zero-g environments to discover the truth about the Unitology and its role in the Necromorph epidemic.',
+      'Three years after the Necromorph infestation aboard the ||USS Ishimura||, ||Isaac Clarke|| awakens from a coma, confused, disoriented, and ||on|| a ||space station|| called The Sprawl. Explore this world and its ||zero-g|| environments to discover the truth about the Unitology and its role in the Necromorph epidemic.',
     releaseDate: 'Jan 25, 2011',
     developer: 'Visceral Games',
     publisher: 'Electronic Arts',
@@ -16641,7 +16567,7 @@ export const steamGameDetails: SteamGameMap = {
       'Aliens',
       'Gore',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    clueOrder: ['desc', 'details', 'tags'],
   },
   '47790': {
     name: 'Medal of Honor',
@@ -27142,17 +27068,21 @@ export const steamGameDetails: SteamGameMap = {
       'Twin Stick Shooter',
       'Local Co-Op',
       'Action',
-      'Multiplayer',
+      'Military',
       'Sci-fi',
       '4 Player Local',
-      'Top-Down',
+      'Aliens',
       'Shooter',
       'Comedy',
       'Funny',
       'Space',
       'Difficult',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    overrideCensoredTitle: 'H||ELL||D||IVERS||',
+    clueOrder: ['details', 'tags', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Hard',
   },
   '396750': {
     name: 'EVERSPACE',
@@ -27968,7 +27898,6 @@ export const steamGameDetails: SteamGameMap = {
   },
   '420530': {
     name: 'OneShot',
-    searchTerms: ['one shot'],
     appId: 420530,
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/420530/ss_5632681456db78d0e33c252c59d39c18ff35262e.600x338.jpg',
@@ -28004,6 +27933,7 @@ export const steamGameDetails: SteamGameMap = {
     ],
     overrideCensoredTitle: 'O||ne||S||hot||',
     clueOrder: ['desc', 'details', 'tags'],
+    searchTerms: ['one shot'],
     debugProcessed: true,
     debugRefined: true,
     difficulty: 'Hard',
@@ -40075,7 +40005,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1061090/ss_57eb51f796849ef3338d4d884d6f7ed4b2d0fbd8.600x338.jpg',
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1061090/ss_38f2d9bb39741bc5aecd5045ee5233fc8aa45d85.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1061090/ss_c2c31148aaec7b3a6912bf0afcda8ab28d5ad970.600x338.jpg',
     shortDescription:
       'Take up the challenge and face true high-stakes platforming in ||Jump King||! Struggle upwards in search of the Smoking Hot Babe of legend, but explore with care; a single missed jump could lead to a long fall back down...',
     releaseDate: 'May 3, 2019',
@@ -40093,7 +40023,7 @@ export const steamGameDetails: SteamGameMap = {
       'Precision Platformer',
       'Indie',
       'Pixel Graphics',
-      'Adventure',
+      'Rage Game',
       'Platformer',
       '2D',
       'Action',
@@ -40104,7 +40034,11 @@ export const steamGameDetails: SteamGameMap = {
       'Atmospheric',
       'Funny',
     ],
+    screenshotLetterbox: true,
     clueOrder: ['tags', 'details', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Hard',
   },
   '1061910': {
     name: 'Metal: Hellsinger',
@@ -42581,6 +42515,9 @@ export const steamGameDetails: SteamGameMap = {
     blurredUserTags: ['Runner', 'Parkour', '3D Platformer'],
     overrideCensoredTitle: "M||irror's|| E||dge|| C||atalyst||",
     clueOrder: ['ss', 'tags', 'details', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
   },
   '1235140': {
     name: 'Yakuza: Like a Dragon',
@@ -51401,11 +51338,11 @@ export const steamGameDetails: SteamGameMap = {
     name: 'Pizza Tower',
     appId: 2231450,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2231450/ss_3e70c43ffd6f492f6e4dce7965499d41fad47052.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2231450/ss_b1a38d0541d2428c9864e30071625cb5472c32da.600x338.jpg',
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2231450/ss_e165922b81019058ca5b3b61b9e1d7141731a59c.600x338.jpg',
     shortDescription:
-      "||Pizza Tower|| is a fast paced 2D platformer, with an emphasis on movement, exploration and score attack. Featuring highly stylized pixel art inspired by the cartoons from the '90s, and a highly energetic soundtrack.",
+      'Peppino Spaghetti, a surprisingly agile and powerful ||fat balding|| italian, is on a mission to destroy the titular ||Pizza Tower|| in order to save his restaurant from annihilation. ||Follow him through his rampage across the many wacky floors of the tower, collecting toppings and beating up monsters!||',
     releaseDate: 'Jan 26, 2023',
     developer: 'Tour De Pizza',
     publisher: 'Tour De Pizza',
@@ -51432,7 +51369,7 @@ export const steamGameDetails: SteamGameMap = {
       'Colorful',
       'Difficult',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    clueOrder: ['desc', 'tags', 'details'],
   },
   '2232840': {
     name: 'Garten of Banban',

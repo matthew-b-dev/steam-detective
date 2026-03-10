@@ -23,6 +23,7 @@ interface ClueScreenshotProps {
   showSecondary?: boolean;
   onSwapScreenshots?: () => void;
   blurScreenshotQuarter?: 'top' | 'bottom';
+  screenshotLetterbox?: boolean;
   transformScreenshotScale?: number;
   screenshotFocusPoint?: [number, number, number?];
   isComplete?: boolean;
@@ -36,6 +37,7 @@ export const ClueScreenshot: React.FC<ClueScreenshotProps> = ({
   showSecondary = false,
   onSwapScreenshots,
   blurScreenshotQuarter,
+  screenshotLetterbox,
   transformScreenshotScale,
   screenshotFocusPoint,
   isComplete = false,
@@ -93,6 +95,7 @@ export const ClueScreenshot: React.FC<ClueScreenshotProps> = ({
             className={`overflow-hidden rounded-lg relative select-none ${isMobileViewport && !blurScreenshotQuarter && !primaryZoomStyle ? 'cursor-pointer' : 'cursor-default'}`}
             style={{
               aspectRatio: '16/9',
+              backgroundColor: screenshotLetterbox ? 'black' : undefined,
             }}
             onClick={handleLargeScreenshotClick}
             onContextMenu={(e) => e.preventDefault()}
@@ -109,7 +112,7 @@ export const ClueScreenshot: React.FC<ClueScreenshotProps> = ({
                 <motion.img
                   src={bothShown ? secondaryScreenshot : screenshot}
                   alt='Game screenshot'
-                  className='w-full h-full object-cover block'
+                  className={`w-full h-full block ${screenshotLetterbox ? 'object-contain' : 'object-cover'}`}
                   draggable={false}
                   onContextMenu={(e) => e.preventDefault()}
                   style={{ WebkitTouchCallout: 'none', ...largeZoomStyle }}

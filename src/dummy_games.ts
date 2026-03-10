@@ -225,7 +225,6 @@ export const dummyGames: string[] = [
   'Mario Tennis: Ultra Smash',
   'The Deer God',
   'Call of Duty: Black Ops',
-  'Helldivers',
   'Torchlight',
   'TEMBO THE BADASS ELEPHANT',
   'Animal Crossing Happy Home Designer',

@@ -29,6 +29,7 @@ export interface SteamGame {
   userTags: string[];
   blurredUserTags?: string[]; // User tags that should be blurred/redacted
   blurScreenshotQuarter?: 'top' | 'bottom'; // If specified, blurs the top or bottom quarter of screenshots (applies to both)
+  screenshotLetterbox?: boolean; // If true, adds vertical black bars (contain) instead of cropping for non-16:9 screenshots
   transformScreenshotScale?: number; // If specified, applies transform: scale(#) to the big screenshot
   screenshotFocusPoint?: [number, number, number?]; // [widthPercent, heightPercent, zoom%] — zooms the primary screenshot. heightPercent: 100=top, 0=bottom. zoom: 1–175, default 75. e.g. [50,50,75]=center at 75%
   blurTitleAndAsAmpersand?: boolean; // If true, replace 'and' with '&' in the title

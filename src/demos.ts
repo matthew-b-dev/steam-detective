@@ -272,15 +272,18 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile4: "Five Nights at Freddy's",
   },
   '2026-03-11': {
+    caseFile1: "Mirror's Edge Catalyst",
+    caseFile2: 'Pizza Tower',
+    caseFile3: 'HELLDIVERS',
+    caseFile4: 'Dead Space 2',
+  },
+  '2026-03-12': {
     caseFile1: 'Suicide Squad: Kill the Justice League',
     caseFile2: 'Fields of Mistria',
     caseFile3: "Don't Starve",
     caseFile4: 'Satisfactory',
   },
 };
+// Hard: Jump King
 // Darwin Project
-// HELLDIVERS
-// Suicide Squad: Kill the Justice League
-//  Dead by Daylight
-// Mirror's Edge Catalyst
 // April 1st: Skyrim: thumbs down review "the game doesnt work the horse flies"

@@ -216,6 +216,9 @@ export const RefinePage: React.FC = () => {
         }
         lines.push(`    ],`);
       }
+      if (game.screenshotLetterbox) {
+        lines.push(`    screenshotLetterbox: true,`);
+      }
       if (game.blurScreenshotQuarter) {
         lines.push(
           `    blurScreenshotQuarter: ${JSON.stringify(game.blurScreenshotQuarter)},`,

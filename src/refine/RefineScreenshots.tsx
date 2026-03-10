@@ -78,12 +78,15 @@ export const RefineScreenshots: React.FC<RefineScreenshotsProps> = ({
     return (
       <div
         className='relative overflow-hidden rounded-lg select-none'
-        style={{ aspectRatio: '16/9' }}
+        style={{
+          aspectRatio: '16/9',
+          backgroundColor: game.screenshotLetterbox ? 'black' : undefined,
+        }}
       >
         <img
           src={url}
           alt={label}
-          className='w-full h-full object-cover block'
+          className={`w-full h-full block ${game.screenshotLetterbox ? 'object-contain' : 'object-cover'}`}
           draggable={false}
           onContextMenu={(e) => e.preventDefault()}
           style={zoomStyle}
@@ -166,6 +169,25 @@ export const RefineScreenshots: React.FC<RefineScreenshotsProps> = ({
         onChange={(e) => onUpdate({ primaryScreenshot: e.target.value })}
         className='w-full bg-zinc-800 border border-zinc-600 rounded px-2 py-1 text-xs font-mono focus:outline-none focus:border-zinc-400'
       />
+
+      {/* Letterbox checkbox */}
+      <div className='flex items-center gap-2 pt-1'>
+        <input
+          type='checkbox'
+          id='screenshotLetterbox'
+          checked={!!game.screenshotLetterbox}
+          onChange={(e) =>
+            onUpdate({ screenshotLetterbox: e.target.checked || undefined })
+          }
+          className='accent-blue-500'
+        />
+        <label
+          htmlFor='screenshotLetterbox'
+          className='text-xs text-gray-400 cursor-pointer'
+        >
+          Letterbox (vertical black bars for non-16:9 screenshots)
+        </label>
+      </div>
 
       {/* Blur screenshot quarter dropdown */}
       <div className='flex items-center gap-2 pt-1'>
