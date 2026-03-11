@@ -11464,7 +11464,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/920210/ss_11724e6828790b387c50faca84ac7b1117a7077c.600x338.jpg',
     shortDescription:
-      'Play through all nine Skywalker saga films in a game unlike any other. With over 300 playable characters, over 100 vehicles, and 23 planets to explore, a galaxy far, far away has never been more fun! *Includes classic Obi-Wan Kenobi playable character',
+      'Play through all nine ||Skywalker saga films|| in a game unlike any other. With over 300 playable characters, over 100 vehicles, and 23 ||planets|| to explore, a ||galaxy far, far away|| has never been more fun!',
     releaseDate: 'Apr 5, 2022',
     developer: 'TT Games',
     publisher: 'Warner Bros. Games, Warner Bros. Interactive Entertainment',
@@ -11482,7 +11482,7 @@ export const steamGameDetails: SteamGameMap = {
       'Open World',
       'Space',
       'Local Co-Op',
-      'Action',
+      'Fantasy',
       'Sci-fi',
       'Singleplayer',
       'Funny',
@@ -11496,7 +11496,11 @@ export const steamGameDetails: SteamGameMap = {
       'Puzzle',
       'NSFW',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: ['Fantasy', 'Sci-fi', 'Space'],
+    clueOrder: ['details', 'desc', 'tags'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Medium',
   },
   '287700': {
     name: 'METAL GEAR SOLID V: THE PHANTOM PAIN',
@@ -15930,43 +15934,6 @@ export const steamGameDetails: SteamGameMap = {
       'Platformer',
       'Multiple Endings',
       'Classic',
-    ],
-    clueOrder: ['tags', 'details', 'desc'],
-  },
-  '32440': {
-    name: 'LEGO Star Wars - The Complete Saga',
-    appId: 32440,
-    primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/32440/ss_1e91605a63b3d38ea9abe6a930be751420b91eb9.600x338.jpg',
-    secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/32440/ss_13732fbdccb28f1af1c3e6f4843fd88528594e2f.600x338.jpg',
-    shortDescription:
-      'Kick Some Brick in I through VI! Play through all six ||Star|| ||Wars|| movies in one videogame! Adding new characters, new levels, new features and for the first time ever, the chance to build and battle your way through a fun ||Star|| ||Wars|| galaxy on your PC!',
-    releaseDate: 'Nov 12, 2009',
-    developer: "Traveller's Tales",
-    publisher: 'LucasArts',
-    tags: [],
-    features: [],
-    allReviewSummary: {
-      count: 24854,
-      rating: 'Overwhelmingly Positive',
-    },
-    userTags: [
-      'LEGO',
-      'Local Co-Op',
-      'Adventure',
-      'Co-op',
-      'Family Friendly',
-      'Multiplayer',
-      'Comedy',
-      'Singleplayer',
-      'Classic',
-      'Funny',
-      'Action',
-      'Sci-fi',
-      'Local Multiplayer',
-      'Space',
-      'Great Soundtrack',
     ],
     clueOrder: ['tags', 'details', 'desc'],
   },
@@ -32678,11 +32645,11 @@ export const steamGameDetails: SteamGameMap = {
     name: 'GreedFall',
     appId: 606880,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/606880/ss_b60ef85892a1777fb119ea9dd4b407d89970b240.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/606880/ss_559dff7041b638b596c78fd26275320cd95efc71.600x338.jpg',
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/606880/ss_fc324dd18b9da108e70b40fe8dd65970e11e471f.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/606880/ss_39e20d1ec9fa5fd8bac78cd4adf3aaaeeacc7176.600x338.jpg',
     shortDescription:
-      'Engage in a core roleplaying experience, and forge the destiny of a new world seeping with magic, and filled with riches, lost secrets, and fantastic creatures. With diplomacy, deception and force, become part of a living, evolving world - influence its course and shape your story.',
+      'Explore uncharted new lands as you set foot on a remote island seeping with magic, and filled with riches, lost secrets, and fantastic creatures. With diplomacy, deception and force, become part of a living, evolving world - influence its course and shape your story.',
     releaseDate: 'Sep 9, 2019',
     developer: 'Spiders',
     publisher: 'Focus Entertainment',
@@ -32697,9 +32664,9 @@ export const steamGameDetails: SteamGameMap = {
       'Open World',
       'Character Customization',
       'Singleplayer',
-      'Choices Matter',
-      'Story Rich',
-      'Sexual Content',
+      'Swordplay',
+      'Magic',
+      '17th Century',
       'Fantasy',
       'Third Person',
       'Adventure',
@@ -32709,6 +32676,7 @@ export const steamGameDetails: SteamGameMap = {
       'Nudity',
       'Action-Adventure',
     ],
+    overrideCensoredTitle: 'G||reed||F||all||',
     clueOrder: ['tags', 'details', 'desc'],
   },
   '607080': {
@@ -36488,7 +36456,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/813230/ss_87a9f2941e114a2bb834db6350ccbedc1ade794d.600x338.jpg',
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/813230/ss_ca955f6bb4f0c164dcffa59082ae985fb530582a.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/813230/ss_8773f0939bfd96fe25fbb7395bbae3d725044b12.600x338.jpg',
     shortDescription:
       'Explore a dense, interconnected labyrinth, and unravel its many secrets. Collect items to manipulate your environment in surprising and meaningful ways. Encounter beautiful and unsettling creatures, as you attempt to survive what lurks in the dark. There is more than what you see.',
     releaseDate: 'May 9, 2024',
@@ -36506,7 +36474,7 @@ export const steamGameDetails: SteamGameMap = {
       'Puzzle',
       'Pixel Graphics',
       'Puzzle Platformer',
-      'Platformer',
+      'Surreal',
       'Horror',
       '2D',
       'Atmospheric',
@@ -36518,6 +36486,9 @@ export const steamGameDetails: SteamGameMap = {
       'Nonlinear',
     ],
     clueOrder: ['tags', 'details', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Hard',
   },
   '813630': {
     name: 'Supraland',
@@ -49205,7 +49176,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1902490/ss_4b8b8d6ab04d3c42584abb31b5b4d7d534478d1d.600x338.jpg',
     shortDescription:
-      'Introducing ||Aperture Desk Job|| — a free playable short made for the Steam Deck, set in the universe of the modestly popular Portal games.',
+      '||Aperture Desk Job|| reimagines the been-there-done-that genre of walking simulators and puts them in the lightning-spanked, endorphin-gorged world of sitting still behind things. You play as an entry-level nobody on their first day at work — your heart full of hope and your legs full of dreams, eager to climb that corporate ladder. But life’s got other plans, and they all involve chairs.\n',
     releaseDate: 'Mar 1, 2022',
     developer: 'Valve',
     publisher: 'Valve',
@@ -49232,7 +49203,10 @@ export const steamGameDetails: SteamGameMap = {
       'Artificial Intelligence',
       'Family Friendly',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    clueOrder: ['ss', 'desc', 'tags', 'details'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
   },
   '1920960': {
     name: 'VPet-Simulator',
@@ -50531,7 +50505,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2074920/ss_a502e524f9a0e9142ffb38638cb867a7cb448147.600x338.jpg',
     shortDescription:
-      '||The First Descendant|| is a third-person looter shooter powered by Unreal Engine 5. Become a ||Descendant||. Fight for the survival of humanity. Descendants have unique abilities to tackle both solo and co-op missions. Up to 4 players use varied mechanics to defeat giant bosses. BE ||THE FIRST DESCENDANT||!',
+      '||The First Descendant|| is a third-person looter shooter powered by Unreal Engine 5. Become a ||Descendant||. Fight for the survival of humanity. Descendants have unique abilities to tackle both solo and co-op missions. Up to 4 players use varied mechanics to defeat giant bosses. BE THE ||FIRST DESCENDANT||!',
     releaseDate: 'Jun 30, 2024',
     developer: 'NEXON Games Co., Ltd.',
     publisher: 'NEXON',
@@ -50543,7 +50517,7 @@ export const steamGameDetails: SteamGameMap = {
     },
     userTags: [
       'Free to Play',
-      'Sexual Content',
+      'Action RPG',
       'Looter Shooter',
       'Multiplayer',
       'Third-Person Shooter',
@@ -50555,7 +50529,10 @@ export const steamGameDetails: SteamGameMap = {
       'Action RPG',
       'Character Customization',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    clueOrder: ['details', 'tags', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Medium',
   },
   '2080690': {
     name: 'Sunkenland',
@@ -54110,6 +54087,7 @@ export const steamGameDetails: SteamGameMap = {
 // Special series/franchises where guesses containing the series name are considered "close"
 export const CLOSE_GUESS_SERIES: string[] = [
   'super mario',
+  'lego',
   'silent hill',
   'arma',
   'xcom',

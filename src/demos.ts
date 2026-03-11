@@ -278,12 +278,24 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile4: 'Dead Space 2',
   },
   '2026-03-12': {
+    caseFile1: 'Aperture Desk Job',
+    caseFile2: 'The First Descendant',
+    caseFile3: 'ANIMAL WELL',
+    caseFile4: 'LEGO Star Wars: The Skywalker Saga',
+  },
+  '2026-03-13': {
     caseFile1: 'Suicide Squad: Kill the Justice League',
     caseFile2: 'Fields of Mistria',
     caseFile3: "Don't Starve",
     caseFile4: 'Satisfactory',
   },
 };
+
+// Spelunky (change original release?)
+// Easy/Med Metaphor: ReFantazio
+// Hard: Crypt of the NecroDancer
+// Hard Super Auto Pets
+// Med/Hard: Celeste
 // Hard: Jump King
 // Darwin Project
 // April 1st: Skyrim: thumbs down review "the game doesnt work the horse flies"
