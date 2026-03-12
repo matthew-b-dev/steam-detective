@@ -284,6 +284,12 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile4: 'LEGO Star Wars: The Skywalker Saga',
   },
   '2026-03-13': {
+    caseFile1: 'Fallout: New Vegas',
+    caseFile2: "Marvel's Guardians of the Galaxy",
+    caseFile3: 'Celeste',
+    caseFile4: 'Ratchet & Clank: Rift Apart',
+  },
+  '2026-03-14': {
     caseFile1: 'Suicide Squad: Kill the Justice League',
     caseFile2: 'Fields of Mistria',
     caseFile3: "Don't Starve",
@@ -291,11 +297,13 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
   },
 };
 
-// Spelunky (change original release?)
 // Easy/Med Metaphor: ReFantazio
+
+// Spelunky (change original release?)
+// Fallout Shelter
+// Med/Hard: SteamWorld Dig
 // Hard: Crypt of the NecroDancer
-// Hard Super Auto Pets
-// Med/Hard: Celeste
+// Hard: Super Auto Pets
 // Hard: Jump King
 // Darwin Project
 // April 1st: Skyrim: thumbs down review "the game doesnt work the horse flies"

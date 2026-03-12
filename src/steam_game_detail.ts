@@ -15837,7 +15837,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/22380/ss_ec8a28942fcb5cb15718f949ab81124932a5084d.600x338.jpg',
     shortDescription:
-      'Welcome to ||Vegas||. ||New|| ||Vegas||. Enjoy your stay! It’s the kind of town where you dig your own grave prior to being shot ||in the head|| and left for dead…and that’s before things really get ugly. It’s a town of dreamers and desperados being torn apart by warring factions vying for complete control of this ||desert oasis||.',
+      'Welcome to ||Vegas. New Vegas||. Enjoy your stay! It’s the kind of town where you dig your own grave prior to being ||shot in the head|| and left for dead…and that’s before things really get ugly. It’s a town of dreamers and desperados being torn apart by warring ||factions|| vying for complete control of this ||desert oasis||.',
     releaseDate: 'Oct 19, 2010',
     developer: 'Obsidian Entertainment',
     publisher: 'Bethesda Softworks',
@@ -15861,7 +15861,10 @@ export const steamGameDetails: SteamGameMap = {
       'FPS',
       'Sci-fi',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    clueOrder: ['desc', 'tags', 'details'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
   },
   '24010': {
     name: 'Train Simulator Classic',
@@ -18182,6 +18185,7 @@ export const steamGameDetails: SteamGameMap = {
       'Philosophical',
       'Relaxing',
     ],
+    blurredUserTags: ['Walking Simulator'],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '211400': {
@@ -20752,7 +20756,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/252410/ss_b03e0452ea16e460ea4cc18fd8ccd6647de1ba98.600x338.jpg',
     shortDescription:
-      "||SteamWorld Dig|| is an action-adventure puzzler with strong Metroidvanian influences set in the ||SteamWorld|| Universe. You'll need to dig deep into the earth, gather resources to upgrade your tools and abilities, take on enemies, solve challenging puzzles and uncover the secrets to save a dying town.",
+      "||SteamWorld Dig|| is an action-adventure puzzler with strong Metroidvanian influences set in the ||SteamWorld|| Universe. You'll need to ||dig deep|| into the ||earth||, gather resources to upgrade your tools and abilities, take on enemies, solve challenging puzzles and uncover the secrets to save a dying town.",
     releaseDate: 'Dec 5, 2013',
     developer: 'Image & Form Games',
     publisher: 'Image & Form Games',
@@ -20779,7 +20783,8 @@ export const steamGameDetails: SteamGameMap = {
       'Casual',
       'Sci-fi',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: ['Robots', 'Mining', 'Steampunk'],
+    clueOrder: ['details', 'tags', 'desc'],
   },
   '252610': {
     name: 'Death Road to Canada',
@@ -25238,7 +25243,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/360430/ss_9dfb17389a586cb03b807f38fd294d7e3745c332.600x338.jpg',
     shortDescription:
-      "After Lincoln Clay's surrogate family, the black mob, is betrayed and killed by the Italian ||Mafia||, Lincoln builds a new family and blazes a path of revenge through the Mafioso responsible.",
+      "After Lincoln Clay's surrogate family, the black mob, is betrayed and killed by the Italian ||Mafia||, Lincoln builds a new family and blazes a path of revenge through the ||Mafioso|| responsible.",
     releaseDate: 'May 19, 2020',
     developer: 'Hangar 13',
     publisher: '2K',
@@ -30123,7 +30128,21 @@ export const steamGameDetails: SteamGameMap = {
       'Puzzle Platformer',
       'Atmospheric',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: [
+      'Female Protagonist',
+      'Pixel Graphics',
+      'Great Soundtrack',
+      'Indie',
+      'Platformer',
+      'Singleplayer',
+      '2D',
+      '2D Platformer',
+    ],
+    overrideCensoredTitle: 'C||elest||e',
+    clueOrder: ['details', 'tags', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Hard',
   },
   '505230': {
     name: 'Pathologic 2',
@@ -39275,7 +39294,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1007040/ss_815e4a10007c6948316cac958971823dbfc66bc4.600x338.jpg',
     shortDescription:
-      'Stand and fight for humanity. This arcade shooter takes place in the year 2022, as the Earth Defense Force fends off an all-out attack by unknown life forms. Become an EDF soldier, battle against endless hordes of immense enemies, and restore peace to the earth.',
+      'Stand and fight for humanity. This arcade shooter takes place in the year 2022, as the ||Earth Defense Force|| fends off an all-out attack by unknown life forms. Become an ||EDF|| soldier, battle against endless hordes of immense enemies, and restore peace to the earth.',
     releaseDate: 'Jul 11, 2019',
     developer: 'SANDLOT',
     publisher: 'D3PUBLISHER',
@@ -40389,7 +40408,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1088850/ss_815ef8c726e21a388d8ca331c2609c2d46ceeb32.600x338.jpg',
     shortDescription:
-      "Fire up a wild ride across the cosmos with a fresh take on Marvel's ||Guardians|| of the ||Galaxy||. In this action-adventure game, you are Star-Lord leading the unpredictable ||Guardians|| from one explosion of chaos to the next. You got this. Probably.",
+      "Fire up a wild ride across the cosmos with a fresh take on ||Marvel's Guardians of the Galaxy||. In this ||action-adventure|| game, ||you are Star||-Lord leading the unpredictable ||Guardians|| from one explosion of chaos to the next. You got this. Probably.",
     releaseDate: 'Oct 26, 2021',
     developer: 'Eidos-Montréal',
     publisher: 'Eidos Interactive Corp.',
@@ -40416,7 +40435,10 @@ export const steamGameDetails: SteamGameMap = {
       'Great Soundtrack',
       'Cinematic',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    clueOrder: ['desc', 'details', 'tags'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Medium',
   },
   '1089090': {
     name: 'ONE PIECE: PIRATE WARRIORS 4',
@@ -49098,13 +49120,14 @@ export const steamGameDetails: SteamGameMap = {
     name: 'Ratchet & Clank: Rift Apart',
     appId: 1895880,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1895880/ss_852202ce40cd9c558f7f732a9c2e23a6980bca6f.600x338.jpg',
-    secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1895880/ss_31b29f38b6c97cf8c4cd80936f2defd347a62091.600x338.jpg',
+    secondaryScreenshot:
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1895880/ss_5d2c999ecdccbc200121318b479bf0bdeb16b9b9.600x338.jpg',
     shortDescription:
-      'Blast your way through an interdimensional adventure with ||Ratchet|| and ||Clank|| – now on PC! Help them take on an evil emperor from another reality as you jump between action-packed worlds and beyond at hyper-speed!',
+      'Blast your way through an interdimensional adventure with ||Ratchet and Clank|| – now on PC! ||Help them|| take on an evil emperor ||from another reality as you jump between action-packed worlds and beyond at hyper-speed!||',
+    originalReleaseDate: 'Jun 11, 2021',
     releaseDate: 'Jul 26, 2023',
-    developer: 'Insomniac Games',
+    developer: '||Insomniac Games||',
     publisher: 'PlayStation Publishing LLC',
     tags: [],
     features: [],
@@ -49129,7 +49152,8 @@ export const steamGameDetails: SteamGameMap = {
       'Story Rich',
       'Cute',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurScreenshotQuarter: 'bottom',
+    clueOrder: ['desc', 'tags', 'details'],
   },
   '1898300': {
     name: 'ASKA',
@@ -53074,7 +53098,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2679460/ss_9809b4bfb257dc3e4f39f3f54fad1768234c03ad.600x338.jpg',
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2679460/ss_ec0825cd3ecfa6c74e3041c5842bcb3453e7cb45.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2679460/ss_edd0ac6a3973c14a6ea5f05c2db0756fdeb7adfd.600x338.jpg',
     shortDescription:
       'After his assassination, the will of the late king decrees the next monarch to be elected by the people. Forge bonds and win over a kingdom divided in this award-winning fantasy RPG with turn-based and action combat, party customization with powerful Archetypes, and hours of exploration.',
     releaseDate: 'Oct 10, 2024',
@@ -53103,7 +53127,7 @@ export const steamGameDetails: SteamGameMap = {
       'Third Person',
       'Colorful',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    clueOrder: ['ss', 'tags', 'desc', 'details'],
   },
   '2688950': {
     name: 'Planet Coaster 2',
@@ -54136,4 +54160,6 @@ export const CLOSE_GUESS_SERIES: string[] = [
   'pillars of eternity',
   'spongebob',
   'deus ex',
+  'fallout',
+  'marvel',
 ];
