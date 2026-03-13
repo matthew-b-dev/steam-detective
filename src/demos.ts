@@ -290,6 +290,12 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile4: 'Ratchet & Clank: Rift Apart',
   },
   '2026-03-14': {
+    caseFile1: 'SUPERHOT',
+    caseFile2: 'Metaphor: ReFantazio',
+    caseFile3: 'FEZ',
+    caseFile4: 'Fallout Shelter',
+  },
+  '2026-03-15': {
     caseFile1: 'Suicide Squad: Kill the Justice League',
     caseFile2: 'Fields of Mistria',
     caseFile3: "Don't Starve",
@@ -297,10 +303,9 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
   },
 };
 
-// Easy/Med Metaphor: ReFantazio
-
+// Hard 3/14: Bomb Rush Cyberfunk
+// Hard: Keep Talking and Nobody Explodes
 // Spelunky (change original release?)
-// Fallout Shelter
 // Med/Hard: SteamWorld Dig
 // Hard: Crypt of the NecroDancer
 // Hard: Super Auto Pets
