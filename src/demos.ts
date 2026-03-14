@@ -296,6 +296,12 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile4: 'Fallout Shelter',
   },
   '2026-03-15': {
+    caseFile1: 'Sekiro: Shadows Die Twice',
+    caseFile2: 'Tropico 6',
+    caseFile3: 'Jump King',
+    caseFile4: 'Bloons TD 6',
+  },
+  '2026-03-16': {
     caseFile1: 'Suicide Squad: Kill the Justice League',
     caseFile2: 'Fields of Mistria',
     caseFile3: "Don't Starve",
@@ -303,12 +309,16 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
   },
 };
 
-// Hard 3/14: Bomb Rush Cyberfunk
+// Easy: 3/16: CONTROL
+// Easy: BioShock
+// Easy: Remnant II
+// Easy: State of Decay 2
+// Easy: Far Cry 5
+// Hard 3/16: Bomb Rush Cyberfunk
 // Hard: Keep Talking and Nobody Explodes
 // Spelunky (change original release?)
-// Med/Hard: SteamWorld Dig
+// Hard (10k rev): SteamWorld Dig
 // Hard: Crypt of the NecroDancer
 // Hard: Super Auto Pets
-// Hard: Jump King
 // Darwin Project
 // April 1st: Skyrim: thumbs down review "the game doesnt work the horse flies"

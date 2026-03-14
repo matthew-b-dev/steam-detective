@@ -11375,15 +11375,14 @@ export const steamGameDetails: SteamGameMap = {
     name: 'Sekiro: Shadows Die Twice',
     appId: 814380,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/814380/ss_0f7b0f8ed9ffc49aba26f9328caa9a1d59ad60f0.600x338.jpg',
-    secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/814380/ss_2685dd844a2a523b6c7ec207d46a538db6a908cd.600x338.jpg',
+    secondaryScreenshot:
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/814380/ss_15f0e9982621aed44900215ad283811af0779b1d.600x338.jpg',
     shortDescription:
-      'Game of the Year - The Game Awards 2019 Best Action Game of 2019 - IGN Carve your own clever path to vengeance in the award winning adventure from developer FromSoftware, creators of Bloodborne and the Dark Souls series. Take Revenge. Restore Your Honor. Kill Ingeniously.',
+      '||Game of the Year - The Game Awards 2019|| Best Action Game of 2019 - IGN ||Carve your own clever path to vengeance in the award winning adventure from developer FromSoftware, creators of Bloodborne and the Dark Souls series.|| Take Revenge. Restore ||Your Honor||. Kill Ingeniously.',
     releaseDate: 'Mar 21, 2019',
     developer: 'FromSoftware, Inc.',
-    publisher:
-      'Activision (Excluding Japan and Asia), FromSoftware, Inc. (Japan), 方块游戏 (Asia)',
+    publisher: 'Activision, FromSoftware, Inc.',
     tags: ['Action', 'Adventure'],
     features: [],
     allReviewSummary: {
@@ -11412,7 +11411,21 @@ export const steamGameDetails: SteamGameMap = {
       'Rhythm',
       'Dark',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: [
+      'Adventure',
+      'Third Person',
+      'Open World',
+      'Story Rich',
+      'Stealth',
+      'Ninja',
+      'Action',
+      'Singleplayer',
+    ],
+    screenshotFocusPoint: [100, 25, 64],
+    clueOrder: ['desc', 'ss', 'tags', 'details'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
   },
   '359550': {
     name: "Tom Clancy's Rainbow Six Siege",
@@ -22525,43 +22538,6 @@ export const steamGameDetails: SteamGameMap = {
     ],
     clueOrder: ['tags', 'details', 'desc'],
   },
-  '293760': {
-    name: 'Automation - The Car Company Tycoon Game',
-    appId: 293760,
-    primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/293760/95a3164efdadcef9005dda7d7eb7b0173fe992e1/ss_95a3164efdadcef9005dda7d7eb7b0173fe992e1.600x338.jpg',
-    secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/293760/3ef3a25c534cd2517b04d2019af55b281a489b10/ss_3ef3a25c534cd2517b04d2019af55b281a489b10.600x338.jpg',
-    shortDescription:
-      "Make your dream cars a reality with ||Automation||'s unparalleled car and engine design tools. Gain a competitive edge through smart engineering and business decisions to help you build an automotive empire. Will you become an industry leader, or just a footnote in automotive history?",
-    releaseDate: 'Mar 12, 2015',
-    developer: 'Camshaft Software Ltd',
-    publisher: 'Camshaft Software Ltd',
-    tags: [],
-    features: [],
-    allReviewSummary: {
-      count: 16798,
-      rating: 'Very Positive',
-    },
-    userTags: [
-      'Simulation',
-      'Management',
-      'Building',
-      'Sandbox',
-      'Automobile Sim',
-      'Realistic',
-      'Crafting',
-      'Strategy',
-      'Early Access',
-      'Education',
-      'Moddable',
-      'Indie',
-      'Racing',
-      'Automation',
-      'Economy',
-    ],
-    clueOrder: ['tags', 'details', 'desc'],
-  },
   '294860': {
     name: 'Valkyria Chronicles',
     appId: 294860,
@@ -23125,7 +23101,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/306020/ss_538eb0ecbb0f25f04988e5de7f513467da16b906.600x338.jpg',
     shortDescription:
-      'Five-star tower defense with unrivaled depth and replayability. The ||Bloons|| are back in full HD glory and this time they mean business! Build awesome towers, choose your favorite upgrades, hire new Special Agents, and pop every last invading Bloon in the most popular tower defense series in history.',
+      'Five-star ||tower defense|| with unrivaled depth and replayability. The ||Bloons|| are back in full HD glory and this time they mean business! Build awesome towers, choose your favorite upgrades, hire new Special Agents, and pop every last invading Bloon in the most popular tower defense series in history.',
     releaseDate: 'Nov 19, 2014',
     developer: 'Ninja Kiwi',
     publisher: 'Ninja Kiwi',
@@ -23152,7 +23128,7 @@ export const steamGameDetails: SteamGameMap = {
       'Replay Value',
       'Difficult',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    clueOrder: ['details', 'desc', 'tags'],
   },
   '307690': {
     name: 'Sleeping Dogs',
@@ -29662,7 +29638,7 @@ export const steamGameDetails: SteamGameMap = {
     name: 'Tropico 6',
     appId: 492720,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/492720/ss_b42df2bcf6dfa639490169474181bec8f2929b27.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/492720/ss_5de618f60881ebcc143c33d152f628c6ae149b5b.600x338.jpg',
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/492720/ss_436ad59ec875edddf5db2a255189eed6dba3bf3f.600x338.jpg',
     shortDescription:
@@ -29693,7 +29669,10 @@ export const steamGameDetails: SteamGameMap = {
       'Funny',
       'Choices Matter',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    clueOrder: ['details', 'tags', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Hard',
   },
   '493490': {
     name: 'City Car Driving',
@@ -29853,7 +29832,7 @@ export const steamGameDetails: SteamGameMap = {
     shortDescription:
       "The dead have risen and civilization has fallen. Now it's up to you to gather survivors, scavenge for resources and build a community in a post-apocalyptic world – a world where you define what it means to survive in this ultimate zombie survival simulation.",
     releaseDate: 'Mar 13, 2020',
-    developer: 'Undead Labs',
+    developer: '||Undead|| Labs',
     publisher: 'Xbox Game Studios',
     tags: [],
     features: [],
@@ -32521,43 +32500,6 @@ export const steamGameDetails: SteamGameMap = {
       'Political',
       'Diplomacy',
       'Politics',
-    ],
-    clueOrder: ['tags', 'details', 'desc'],
-  },
-  '605740': {
-    name: 'Flashing Lights - Police, Firefighting, Emergency Services (EMS) Simulator',
-    appId: 605740,
-    primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/605740/ss_0c8cd6600c55cd19146d55bcaf5a5486d9b83449.600x338.jpg',
-    secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/605740/ss_fc81a24850ca162ab5345f4eb9771e6cc2e9d74b.600x338.jpg',
-    shortDescription:
-      'Play solo or in up to 10-player multiplayer co-op! ||Flashing|| ||Lights|| is an open world police, firefighting and ||EMS|| simulator game with plenty of opportunity for role-play or more relaxed fun with friends. Become the law or save lives! Discover leagues of player-created mods!',
-    releaseDate: 'May 15, 2023',
-    developer: 'Nils Jakrins',
-    publisher: 'Excalibur Games',
-    tags: [],
-    features: [],
-    allReviewSummary: {
-      count: 17982,
-      rating: 'Very Positive',
-    },
-    userTags: [
-      'Adventure',
-      'Driving',
-      'Simulation',
-      'Automobile Sim',
-      'Physics',
-      'Crime',
-      'Shooter',
-      'Open World',
-      'Realistic',
-      'Third-Person Shooter',
-      'Destruction',
-      'Multiplayer',
-      'RPG',
-      'Sandbox',
-      'Third Person',
     ],
     clueOrder: ['tags', 'details', 'desc'],
   },
@@ -37451,9 +37393,9 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/870780/ss_8376498631b089e52fb5c75ffe119e0de5e6aed1.600x338.jpg',
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/870780/ss_5a16ce565951479e142c56a23f19d88333d84945.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/870780/ss_455ab81ea90f5668ff384d60d68baef1e2e74e55.600x338.jpg',
     shortDescription:
-      'Winner of over 80 awards, ||Control|| is a visually stunning third-person action-adventure that will keep you on the edge of your seat.',
+      'A corruptive presence has invaded the ||Federal Bureau of Control||…Only you have the power to stop it. The world is now your weapon in an epic fight to annihilate an ominous enemy through deep and unpredictable environments. Containment has failed, humanity is at stake. Will you regain ||control||?',
     releaseDate: '27 Aug, 2020',
     developer: 'Remedy Entertainment',
     publisher: 'Remedy Entertainment',
@@ -37480,7 +37422,11 @@ export const steamGameDetails: SteamGameMap = {
       'Shooter',
       'Metroidvania',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: ['Female Protagonist'],
+    clueOrder: ['desc', 'tags', 'details'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
   },
   '871720': {
     name: 'Ultimate Custom Night',
@@ -38523,7 +38469,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/960090/ss_c8525f327db944b0c0b9cedeeeca15c5c55797a2.600x338.jpg',
     shortDescription:
-      'The ||Bloons|| are back and better than ever! Get ready for a massive 3D tower defense game designed to give you hours and hours of the best strategy gaming available.',
+      'The ||Bloons|| are back and better than ever! Get ready for a massive ||3D tower defense|| game designed to give you hours and hours of the best strategy gaming available.\nCraft your perfect defense from a combination of powerful ||Monkey Towers|| and awesome Heroes, then ||pop|| every last invading ||Bloon||! Over a decade of ||tower defense|| pedigree and regular massive updates makes ||Bloons TD 6|| a favorite game for millions of players.',
     releaseDate: 'Dec 17, 2018',
     developer: 'Ninja Kiwi',
     publisher: 'Ninja Kiwi',
@@ -38550,7 +38496,11 @@ export const steamGameDetails: SteamGameMap = {
       'Difficult',
       'Touch-Friendly',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    overrideCensoredTitle: 'B||l||oo||ns|| T||D|| ||6||',
+    clueOrder: ['desc', 'details', 'tags'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
   },
   '960170': {
     name: 'DJMAX RESPECT V',
@@ -38697,43 +38647,6 @@ export const steamGameDetails: SteamGameMap = {
       'Team-Based',
       'Controller',
       'Realistic',
-    ],
-    clueOrder: ['tags', 'details', 'desc'],
-  },
-  '962730': {
-    name: 'Skater XL - The Ultimate Skateboarding Game',
-    appId: 962730,
-    primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/962730/ss_fff8ba046548e8f178f86a21595e1fa6ed3b5090.600x338.jpg',
-    secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/962730/ss_990ff791ec8eaa16075699a0e40a4c1d51b15e0b.600x338.jpg',
-    shortDescription:
-      'Experience unparalleled board control and responsiveness while you skate iconic real-world skate spots. This is the evolution of skateboarding gameplay. With Independent Foot Control and unique physics-based gameplay, skate gamers finally have the expressive controls they have always dreamed of.',
-    releaseDate: 'Jul 28, 2020',
-    developer: 'Easy Day Studios Pty Ltd',
-    publisher: 'Easy Day Studios Pty Ltd',
-    tags: [],
-    features: [],
-    allReviewSummary: {
-      count: 19587,
-      rating: 'Very Positive',
-    },
-    userTags: [
-      'Skateboarding',
-      'Skating',
-      'Multiplayer',
-      'Sports',
-      'Sandbox',
-      'Online Co-Op',
-      'Physics',
-      'Moddable',
-      'Character Customization',
-      'Simulation',
-      'Adventure',
-      'Mod',
-      'Controller',
-      'Action',
-      'Singleplayer',
     ],
     clueOrder: ['tags', 'details', 'desc'],
   },
@@ -39898,7 +39811,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1061090/ss_c2c31148aaec7b3a6912bf0afcda8ab28d5ad970.600x338.jpg',
     shortDescription:
-      'Take up the challenge and face true high-stakes platforming in ||Jump King||! Struggle upwards in search of the Smoking Hot Babe of legend, but explore with care; a single missed jump could lead to a long fall back down...',
+      'Take up the challenge and face true ||high-stakes platforming in Jump King||! Struggle ||upwards|| in search of the Smoking Hot Babe of legend, but explore with care; a ||single missed jump|| could lead to a ||long fall back down...||',
     releaseDate: 'May 3, 2019',
     developer: 'Nexile',
     publisher: 'Nexile',
@@ -39926,7 +39839,7 @@ export const steamGameDetails: SteamGameMap = {
       'Funny',
     ],
     screenshotLetterbox: true,
-    clueOrder: ['tags', 'details', 'desc'],
+    clueOrder: ['desc', 'details', 'tags'],
     debugProcessed: true,
     debugRefined: true,
     difficulty: 'Hard',
@@ -51531,43 +51444,6 @@ export const steamGameDetails: SteamGameMap = {
     ],
     clueOrder: ['tags', 'details', 'desc'],
   },
-  '2291760': {
-    name: "Papa's Freezeria Deluxe",
-    appId: 2291760,
-    primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2291760/ss_0dea2f637568c519c2e4dac588230a077969161c.600x338.jpg',
-    secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2291760/ss_c0542b61371985711e32c1c6d1ad7dd28ffa6af6.600x338.jpg',
-    shortDescription:
-      "Return to Calypso Island to serve seasonal sundae treats in ||Papa's Freezeria Deluxe||! Craft sundaes in the ||Freezeria|| for all your quirky customers while earning tips, points and Special Recipes. Switch gears and take a trip in the Food Truck to concoct your own chilly creations and see who shows up!",
-    releaseDate: 'Mar 31, 2023',
-    developer: 'Flipline Studios',
-    publisher: 'Flipline Studios',
-    tags: [],
-    features: [],
-    allReviewSummary: {
-      count: 12552,
-      rating: 'Overwhelmingly Positive',
-    },
-    userTags: [
-      'Cooking',
-      'Time Management',
-      'Simulation',
-      'Casual',
-      'Job Simulator',
-      'Strategy',
-      'Character Customization',
-      'Management',
-      'Singleplayer',
-      'Indie',
-      'Nostalgia',
-      '2D',
-      'Cult Classic',
-      'Family Friendly',
-      'Classic',
-    ],
-    clueOrder: ['tags', 'details', 'desc'],
-  },
   '2296990': {
     name: 'We Were Here Expeditions: The FriendShip',
     appId: 2296990,
@@ -53213,42 +53089,6 @@ export const steamGameDetails: SteamGameMap = {
       'Dating Sim',
       'RPG',
       'Co-op',
-    ],
-    clueOrder: ['tags', 'details', 'desc'],
-  },
-  '2707940': {
-    name: 'FPV Kamikaze Drone',
-    appId: 2707940,
-    primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2707940/ss_21e017b9e1cbbecdfcd0a3c8aacec6f3f8afa3a2.600x338.jpg',
-    secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2707940/ss_53c95e53987db1fc33da4c0285dfaf795f860581.600x338.jpg',
-    shortDescription:
-      '||FPV Kamikaze Drone|| is a tactical game focused on ||FPV|| drones in modern warfare. Control drones in first-person in single-player and co-op, and in multiplayer play as a third-person soldier who finds and uses ||FPV|| drones during combat.',
-    releaseDate: 'Dec 15, 2023',
-    developer: 'HFM Games',
-    publisher: 'HFM Games',
-    tags: [],
-    features: [],
-    allReviewSummary: {
-      count: 11347,
-      rating: 'Very Positive',
-    },
-    userTags: [
-      'Simulation',
-      'Action',
-      'War',
-      'First-Person',
-      'Shooter',
-      'Combat',
-      'Singleplayer',
-      'Early Access',
-      'Multiplayer',
-      'Flight',
-      'Massively Multiplayer',
-      'Military',
-      'Psychological Horror',
-      'VR',
     ],
     clueOrder: ['tags', 'details', 'desc'],
   },
