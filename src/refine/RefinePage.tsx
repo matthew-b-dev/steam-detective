@@ -6,6 +6,8 @@ import { RefineNavbar } from './RefineNavbar.tsx';
 import { RefineGameView } from './RefineGameView.tsx';
 
 const GAME_ORDER_KEY = 'steam-detective-game-order';
+const DRAFTS_KEY = 'steam-detective-refine-drafts';
+const SERIES_DRAFTS_KEY = 'steam-detective-refine-series';
 
 /**
  * Deep clone a SteamGameMap so mutations don't touch the original import.
@@ -32,16 +34,34 @@ const cloneGameMap = (map: SteamGameMap): SteamGameMap => {
 
 export const RefinePage: React.FC = () => {
   const [mode, setMode] = useState<'refine' | 'choose'>('refine');
-  const [games, setGames] = useState<SteamGameMap>(() =>
-    cloneGameMap(steamGameDetails),
-  );
+  const [games, setGames] = useState<SteamGameMap>(() => {
+    const base = cloneGameMap(steamGameDetails);
+    try {
+      const stored = sessionStorage.getItem(DRAFTS_KEY);
+      if (stored) {
+        const drafts: Record<string, SteamGame> = JSON.parse(stored);
+        for (const [id, game] of Object.entries(drafts)) {
+          if (id in base) base[id] = game;
+        }
+      }
+    } catch {
+      /* ignore */
+    }
+    return base;
+  });
   const gamesRef = useRef(games);
   useEffect(() => {
     gamesRef.current = games;
   }, [games]);
-  const [closeGuessSeries, setCloseGuessSeries] = useState<string[]>(() => [
-    ...CLOSE_GUESS_SERIES,
-  ]);
+  const [closeGuessSeries, setCloseGuessSeries] = useState<string[]>(() => {
+    try {
+      const stored = sessionStorage.getItem(SERIES_DRAFTS_KEY);
+      if (stored) return JSON.parse(stored);
+    } catch {
+      /* ignore */
+    }
+    return [...CLOSE_GUESS_SERIES];
+  });
   // Initialize customOrder from localStorage or fallback to Object.keys
   // eslint-disable-next-line no-unused-vars, @typescript-eslint/no-unused-vars
   const [customOrder, _setCustomOrder] = useState<string[]>(() => {
@@ -72,6 +92,18 @@ export const RefinePage: React.FC = () => {
   useEffect(() => {
     localStorage.setItem(GAME_ORDER_KEY, JSON.stringify(customOrder));
   }, [customOrder]);
+
+  // Persist closeGuessSeries edits to sessionStorage so HMR reloads don't lose them
+  useEffect(() => {
+    try {
+      sessionStorage.setItem(
+        SERIES_DRAFTS_KEY,
+        JSON.stringify(closeGuessSeries),
+      );
+    } catch {
+      /* ignore */
+    }
+  }, [closeGuessSeries]);
 
   // Filter appIds based on mode - use customOrder which preserves file/randomized order
   const appIds = useMemo(() => {
@@ -147,10 +179,18 @@ export const RefinePage: React.FC = () => {
 
   // Update a single game property
   const updateGame = useCallback((appId: string, patch: Partial<SteamGame>) => {
-    setGames((prev) => ({
-      ...prev,
-      [appId]: { ...prev[appId], ...patch },
-    }));
+    setGames((prev) => {
+      const updated = { ...prev[appId], ...patch };
+      try {
+        const stored = sessionStorage.getItem(DRAFTS_KEY);
+        const drafts = stored ? JSON.parse(stored) : {};
+        drafts[appId] = updated;
+        sessionStorage.setItem(DRAFTS_KEY, JSON.stringify(drafts));
+      } catch {
+        /* ignore storage errors */
+      }
+      return { ...prev, [appId]: updated };
+    });
   }, []);
 
   // Export
