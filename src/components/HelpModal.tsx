@@ -32,7 +32,7 @@ const HelpModal: React.FC<HelpModalProps> = ({ isOpen, onClose }) => {
         <ul className='space-y-3 mb-6 text-left list-disc pl-6 text-sm'>
           <li>
             <b>SteamDetective.wtf</b> is a daily <i>Steam game</i> trivia
-            puzzle/challenge where you <b>guess a Steam game</b> based on clues
+            puzzle/challenge where you <b>guess Steam games</b> based on clues
             revealed one at a time.
           </li>
           <li>
@@ -52,9 +52,9 @@ const HelpModal: React.FC<HelpModalProps> = ({ isOpen, onClose }) => {
             .
           </li>
           <li>
-            You'll receive <b>up to 6 clues</b> about the game, the order of
-            which will depend on the game. Each wrong guess or skip reveals the
-            next clue.
+            You'll receive <b>up to 6 clues</b> about each game ("case file"),
+            the order of which will depend on the game. Each wrong guess or skip
+            reveals the next clue.
           </li>
           <li>
             The clues include: <b>User-defined tags</b>, <b>Game Details</b>{' '}
@@ -64,7 +64,7 @@ const HelpModal: React.FC<HelpModalProps> = ({ isOpen, onClose }) => {
           </li>
           <li>
             Every day there are four "<b>Case Files</b>" (games) to solve. Try
-            to guess the game with <b>as few clues as possible</b> for the best
+            to guess each game with <b>as few clues as possible</b> for the best
             score!
           </li>
         </ul>
