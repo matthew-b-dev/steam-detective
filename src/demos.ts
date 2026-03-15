@@ -302,6 +302,12 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile4: 'Bloons TD 6',
   },
   '2026-03-16': {
+    caseFile1: 'BioShock',
+    caseFile2: 'Unpacking',
+    caseFile3: 'Loop Hero',
+    caseFile4: 'Control',
+  },
+  '2026-03-17': {
     caseFile1: 'Suicide Squad: Kill the Justice League',
     caseFile2: 'Fields of Mistria',
     caseFile3: "Don't Starve",
@@ -309,11 +315,12 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
   },
 };
 
-// Easy: 3/16: CONTROL
-// Easy: BioShock
+// Easy (final) 3/17:  Deus Ex: Human Revolution
 // Easy: Remnant II
 // Easy: State of Decay 2
 // Easy: Far Cry 5
+// Easy: Bully
+// 3/19 (to match Crimson release): Black Desert
 // Hard 3/16: Bomb Rush Cyberfunk
 // Hard: Keep Talking and Nobody Explodes
 // Spelunky (change original release?)

@@ -14812,7 +14812,11 @@ export const steamGameDetails: SteamGameMap = {
       'Adventure',
       'Underwater',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    overrideCensoredTitle: 'B||io||Sh||ock||',
+    clueOrder: ['ss', 'details', 'desc', 'tags'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
   },
   '7940': {
     name: 'Call of Duty 4: Modern Warfare (2007)',
@@ -19727,11 +19731,11 @@ export const steamGameDetails: SteamGameMap = {
     name: 'Deus Ex: Human Revolution',
     appId: 238010,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/238010/ss_33f23de4cf18cbf6f676902096337716f9e19a52.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/238010/ss_af1341ecafdca9be97d32620d957a384dce5f4ad.600x338.jpg',
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/238010/ss_69362b98ecc4d707a5c92853539b60e0d622d268.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/238010/ss_33f23de4cf18cbf6f676902096337716f9e19a52.600x338.jpg',
     shortDescription:
-      "You play Adam Jensen, an ex-SWAT specialist who's been handpicked to oversee the defensive needs of one of America's most experimental biotechnology firms. Your job is to safeguard company secrets, but when a black ops team breaks in and kills the very scientists you were hired to protect, everything you thought you knew about your job...",
+      "You play ||Adam Jensen||, an ex-SWAT specialist who's been handpicked to oversee the defensive needs of one of America's most experimental biotechnology firms. Your job is to safeguard company secrets, but when a black ops team breaks in and kills the very scientists you were hired to protect, everything you thought you knew about your job changes.",
     releaseDate: 'Oct 25, 2013',
     developer: 'Eidos Montreal',
     publisher: 'Eidos Interactive Corp.',
@@ -19758,7 +19762,12 @@ export const steamGameDetails: SteamGameMap = {
       'Immersive Sim',
       'Adventure',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: ['Cyberpunk', 'Transhumanism'],
+    blurScreenshotQuarter: 'bottom',
+    clueOrder: ['desc', 'tags', 'details'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
   },
   '238090': {
     name: 'Sniper Elite 3',
@@ -30695,7 +30704,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/536220/ss_063c96aae06909c6736c721f4b56af4cbb04efee.600x338.jpg',
     shortDescription:
-      'After society was ripped apart by undead hands, pockets of civilization emerge from the chaos. But at what cost? Can the living be trusted on this new frontier?',
+      'After society was ripped apart by ||undead|| hands, pockets of civilization emerge from the chaos. But at what cost? Can the ||living|| be trusted on this new frontier?',
     releaseDate: 'Dec 20, 2016',
     developer: 'Telltale Games',
     publisher: 'Skybound Games',
@@ -33944,43 +33953,6 @@ export const steamGameDetails: SteamGameMap = {
     ],
     clueOrder: ['tags', 'details', 'desc'],
   },
-  '673750': {
-    name: 'Super Bunny Man',
-    appId: 673750,
-    primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/673750/ss_579ce20bccd2cb8e2958f1c3a23f143ae3ecfe0c.600x338.jpg',
-    secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/673750/ss_ef277971a83a7257c41c0e6aa279f018380f74f7.600x338.jpg',
-    shortDescription:
-      'A physics-based co-op platformer about a guy in a rabbit costume! Team up with a friend or three (local or online) to beat levels, find hidden carrots and race against the clock. Experience bunny madness. Embrace carrot chaos. Become ||Super Bunny Man||.',
-    releaseDate: 'May 16, 2023',
-    developer: 'Catobyte',
-    publisher: 'Catobyte Ltd',
-    tags: [],
-    features: [],
-    allReviewSummary: {
-      count: 11390,
-      rating: 'Very Positive',
-    },
-    userTags: [
-      'Platformer',
-      'Sandbox',
-      'Multiplayer',
-      'Co-op',
-      'Singleplayer',
-      'Funny',
-      'Online Co-Op',
-      'Physics',
-      'Local Co-Op',
-      'Party',
-      'Comedy',
-      'Casual',
-      '2D Platformer',
-      'Puzzle Platformer',
-      'Memes',
-    ],
-    clueOrder: ['tags', 'details', 'desc'],
-  },
   '673880': {
     name: 'Warhammer 40,000: Mechanicus',
     appId: 673880,
@@ -34803,7 +34775,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/704850/ss_c0662c6cdb37d108632ebb54b12265bbfa750283.600x338.jpg',
     shortDescription:
-      'Become the best thief. Gather intel, steal things and sell them to buy hi-tech equipment. Do everything that a real thief does.',
+      'Become the best ||thief||. Gather intel, steal things and sell them to buy hi-tech equipment. Do everything that a real ||thief|| does.',
     releaseDate: 'Nov 9, 2018',
     developer: 'Noble Muffins',
     publisher: 'PlayWay S.A.',
@@ -36079,16 +36051,20 @@ export const steamGameDetails: SteamGameMap = {
       'Survival',
       'Action RPG',
       'Hack and Slash',
-      'Exploration',
+      'Sci-fi',
       'Sandbox',
-      'Building',
+      'Mecha-suit',
       'Crafting',
       'Isometric',
       'Singleplayer',
       'RTS',
       'Economy',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    overrideCensoredTitle: '||The|| R||ift||br||eak||er',
+    clueOrder: ['tags', 'desc', 'details'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Hard',
   },
   '784080': {
     name: 'MechWarrior 5: Mercenaries',
@@ -37395,7 +37371,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/870780/ss_455ab81ea90f5668ff384d60d68baef1e2e74e55.600x338.jpg',
     shortDescription:
-      'A corruptive presence has invaded the ||Federal Bureau of Control||…Only you have the power to stop it. The world is now your weapon in an epic fight to annihilate an ominous enemy through deep and unpredictable environments. Containment has failed, humanity is at stake. Will you regain ||control||?',
+      'A corruptive presence has invaded the ||Federal Bureau of Control||…Only you have the power to stop it. The world is now your weapon in an epic fight to annihilate an ominous enemy through deep and unpredictable environments. Containment has failed, humanity is at stake. Will you ||regain control||?',
     releaseDate: '27 Aug, 2020',
     developer: 'Remedy Entertainment',
     publisher: 'Remedy Entertainment',
@@ -37422,7 +37398,7 @@ export const steamGameDetails: SteamGameMap = {
       'Shooter',
       'Metroidvania',
     ],
-    blurredUserTags: ['Female Protagonist'],
+    blurredUserTags: ['Female Protagonist', 'Sci-fi'],
     clueOrder: ['desc', 'tags', 'details'],
     debugProcessed: true,
     debugRefined: true,
@@ -40965,7 +40941,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1135690/ss_9b358510285a4b70e446237de5996bc434415c01.600x338.jpg',
     shortDescription:
-      "||Unpacking|| is a zen puzzle game about the familiar experience of pulling possessions out of boxes and fitting them into a new home. Part block-fitting puzzle, part home decoration, you are invited to create a satisfying living space while learning clues about the life you're ||unpacking||.",
+      "||Unpacking is a zen puzzle game about the familiar experience of pulling possessions out of boxes and fitting them into a new home.|| Part block-fitting puzzle, part home decoration, ||you are invited to create a satisfying living space while learning clues about the life you're unpacking.||",
     releaseDate: 'Nov 1, 2021',
     developer: 'Witch Beam',
     publisher: 'Humble Games',
@@ -40992,7 +40968,19 @@ export const steamGameDetails: SteamGameMap = {
       'Female Protagonist',
       'Isometric',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    clueOrder: ['review', 'details', 'desc', 'tags'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Medium',
+    reviewClue: {
+      review:
+        "There could be endless iterations of this game and I would never get bored. I would love to see a sequel that tells someone else's story, as I just find it so fascinating to see someone's life unfold through the process of ||unpacking into their new home||. I absolutely love this game, and it has kept my spirits up through rough times. One of my go-to games when I just need to feel calm and grounded. ... (edited for length)",
+      votedUp: true,
+      votesUp: 24,
+      weightedScore: undefined,
+      authorPlaytimeHours: 38.9,
+      timestamp: 1770793429,
+    },
   },
   '1142710': {
     name: 'Total War: WARHAMMER III',
@@ -43581,7 +43569,8 @@ export const steamGameDetails: SteamGameMap = {
       'Story Rich',
       'Fantasy',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    overrideCensoredTitle: 'L||oop|| H||er||o',
+    clueOrder: ['tags', 'desc', 'details'],
   },
   '1284410': {
     name: 'GWENT: The Witcher Card Game',
@@ -44220,7 +44209,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1337520/ss_7db68cef7a37fd405697f1939e6fd90e7d4783d1.600x338.jpg',
     shortDescription:
-      'Carefully designed, beautifully remastered, and loaded with new ways to play—||Risk|| of ||Rain|| is back and better than ever! Dive into the iconic roguelike full of unique loot combinations, enhanced with new Survivors, overhauled multiplayer, fan favorite content from ||Risk|| of ||Rain|| 2, and more!',
+      'Carefully designed, beautifully remastered, and loaded with new ways to play—||Risk of Rain|| is back and better than ever! Dive into the iconic roguelike full of unique loot combinations, enhanced with new Survivors, overhauled multiplayer, fan favorite content from ||Risk of Rain|| 2, and more!',
     releaseDate: 'Nov 8, 2023',
     developer: 'Hopoo Games',
     publisher: 'Gearbox Publishing',
