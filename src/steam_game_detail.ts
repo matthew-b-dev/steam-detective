@@ -15183,11 +15183,12 @@ export const steamGameDetails: SteamGameMap = {
     name: 'Bully',
     appId: 12200,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/12200/0000006051.600x338.jpg',
-    secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/12200/0000006052.600x338.jpg',
+    secondaryScreenshot:
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/12200/0000006066.600x338.jpg',
     shortDescription:
-      '||Bully|| tells the story of mischievous 15-year-old Jimmy Hopkins as he goes through the hilarity and awkwardness of adolescence. Beat the jocks at dodge ball, play pranks on the preppies, save the nerds, kiss the girl and navigate the social hierarchy in the worst school around.',
+      '||Bully tells the story of|| mischievous 15-year-old Jimmy Hopkins as he goes through the hilarity and awkwardness of adolescence. ||Beat the jocks at dodge ball, play pranks on the preppies, save the nerds, kiss the girl and|| navigate the social hierarchy in the worst ||school|| around.',
+    originalReleaseDate: 'Oct 17, 2006',
     releaseDate: 'Oct 21, 2008',
     developer: 'Rockstar New England',
     publisher: 'Rockstar Games',
@@ -15198,6 +15199,7 @@ export const steamGameDetails: SteamGameMap = {
       rating: 'Very Positive',
     },
     userTags: [
+      'Classic',
       'Open World',
       'Action',
       'Adventure',
@@ -15206,7 +15208,6 @@ export const steamGameDetails: SteamGameMap = {
       'Comedy',
       'Great Soundtrack',
       'Funny',
-      'Classic',
       'Dark Humor',
       'Story Rich',
       'Sandbox',
@@ -15214,7 +15215,11 @@ export const steamGameDetails: SteamGameMap = {
       'Exploration',
       'Atmospheric',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    overrideCensoredTitle: 'B||ull||y',
+    clueOrder: ['desc', 'tags', 'details'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
   },
   '12210': {
     name: 'Grand Theft Auto IV',
@@ -19735,8 +19740,8 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/238010/ss_33f23de4cf18cbf6f676902096337716f9e19a52.600x338.jpg',
     shortDescription:
-      "You play ||Adam Jensen||, an ex-SWAT specialist who's been handpicked to oversee the defensive needs of one of America's most experimental biotechnology firms. Your job is to safeguard company secrets, but when a black ops team breaks in and kills the very scientists you were hired to protect, everything you thought you knew about your job changes.",
-    releaseDate: 'Oct 25, 2013',
+      "You play ||Adam Jensen||, an ||ex-SWAT|| specialist who's been handpicked to oversee the defensive needs of one of America's most experimental ||biotechnology|| firms. Your job is to safeguard company secrets, ||but when a black ops team breaks in and kills the very scientists you were hired to protect, everything you thought you knew about your job changes.||",
+    releaseDate: 'Aug 23, 2011',
     developer: 'Eidos Montreal',
     publisher: 'Eidos Interactive Corp.',
     tags: [],
@@ -19849,9 +19854,9 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/239160/ss_b40d2b3cf97b4a38f7d3bf896f9339a33886c0ff.600x338.jpg',
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/239160/ss_b56f3d8c4a96f2fb9e5edee81fde0c3ebf48c0b3.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/239160/ss_5dd761ac579348371230ca313d7ade06a9931aa9.600x338.jpg',
     shortDescription:
-      "Garrett, the Master ||Thief||, steps out of the shadows into the City. In this treacherous place, where the Baron's Watch spreads a rising tide of fear and oppression, his skills are the only things he can trust. Even the most cautious citizens and their best-guarded possessions are not safe from his reach.",
+      "Garrett, the ||Master Thief||, steps out of the shadows into the City. In this treacherous place, where the Baron's Watch spreads a rising tide of fear and oppression, his skills are the only things he can trust. ||Even the most cautious citizens and their best-guarded possessions are not safe from his reach.||",
     releaseDate: 'Feb 27, 2014',
     developer: 'Eidos-Montréal',
     publisher: 'Eidos Interactive Corp.',
@@ -19863,12 +19868,12 @@ export const steamGameDetails: SteamGameMap = {
     },
     userTags: [
       'Stealth',
-      'Action',
+      'Reboot',
       'First-Person',
       'Adventure',
       'Singleplayer',
       'Dark',
-      'Reboot',
+      'Action',
       'Steampunk',
       'Atmospheric',
       'Horror',
@@ -19878,7 +19883,11 @@ export const steamGameDetails: SteamGameMap = {
       'Heist',
       'Medieval',
     ],
+    overrideCensoredTitle: 'T||hie||f',
     clueOrder: ['tags', 'details', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Medium',
   },
   '239350': {
     name: 'Spelunky',
@@ -20772,8 +20781,11 @@ export const steamGameDetails: SteamGameMap = {
       'Casual',
       'Sci-fi',
     ],
-    blurredUserTags: ['Robots', 'Mining', 'Steampunk'],
-    clueOrder: ['details', 'tags', 'desc'],
+    blurredUserTags: ['Robots', 'Mining'],
+    clueOrder: ['details', 'desc', 'tags'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Hard',
   },
   '252610': {
     name: 'Death Road to Canada',
@@ -22777,7 +22789,8 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/302510/ss_27fd86c85a7c99a532a3b01b28f9cc86dc2c7c7d.600x338.jpg',
     shortDescription:
-      '“||Ryse: Son of Rome||” tells the story of Marius Titus, a young Roman soldier who witnesses the murder of his family at the hands of barbarian bandits, then travels with the Roman army to Britannia to seek revenge.',
+      '||Ryse: Son of Rome|| tells the story of Marius Titus, a young ||Roman|| soldier who witnesses the murder of his family at the hands of barbarian bandits, then travels with the ||Roman|| army to Britannia to seek revenge.',
+    originalReleaseDate: 'Nov 22, 2013',
     releaseDate: 'Oct 10, 2014',
     developer: 'Crytek',
     publisher: 'Crytek ',
@@ -24979,7 +24992,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/350080/ss_9b11ca32b4d911518a1a8739b37821e4edd93568.600x338.jpg',
     shortDescription:
-      '||Wolfenstein: The Old Blood|| is a standalone prequel to the critically acclaimed first-person action-adventure shooter, ||Wolfenstein||: The New Order. This adventure spans eight chapters and features the hallmarks of MachineGames – thrilling action, immersive story, and intense FPS combat.',
+      '||Wolfenstein: The Old Blood|| is a standalone prequel to the critically acclaimed first-person action-adventure shooter, ||Wolfenstein: The New Order||. This adventure spans eight chapters and features the hallmarks of MachineGames – thrilling action, immersive story, and intense FPS combat.',
     releaseDate: 'May 4, 2015',
     developer: 'MachineGames',
     publisher: 'Bethesda Softworks',
@@ -27354,7 +27367,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/407530/ss_472d17ecd47b2f38fdd3dc1f2d46967f4ee92b5e.600x338.jpg',
     shortDescription:
-      '||ARK: The Survival of the Fittest|| is a prototype spin-off of ||ARK||: ||Survival|| Evolved, pitting up to 60 combatants against each other in a fast-paced, action-packed struggle for survival, where players are ultimately pushed into an epic final showdown leading their Dinosaur Armies into battle.',
+      '||ARK: The Survival of the Fittest|| is a prototype spin-off of ||ARK||: ||Survival Evolved||, pitting up to 60 combatants against each other in a fast-paced, action-packed struggle for survival, where players are ultimately pushed into an epic final showdown leading their Dinosaur Armies into battle.',
     releaseDate: 'Aug 29, 2017',
     developer: 'Studio Wildcard',
     publisher: 'Studio Wildcard',
@@ -37593,12 +37606,12 @@ export const steamGameDetails: SteamGameMap = {
     name: 'XCOM: Chimera Squad',
     appId: 882100,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/882100/ss_05da9ecfa48f79eaf04f1efa02043130c81d2b52.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/882100/ss_cdfbe0e462e9bb0c5ab831e49a07ab91928c1624.600x338.jpg',
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/882100/ss_29e66f5367aa6f42db117bf1bd13ef3167ee6be1.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/882100/ss_85c538c08dbc74a109dd13f47e14a9678146b1e2.600x338.jpg',
     shortDescription:
-      '||XCOM: Chimera Squad|| delivers an all-new story and turn-based tactical combat experience in the ||XCOM|| universe.',
-    releaseDate: '23 Apr, 2020',
+      'After years of alien rule, humanity won the war for Earth. But when the Overlords fled the planet, they left their former soldiers behind. Now, five years after the events of ||XCOM|| 2, humans and aliens are working together to forge a civilization of cooperation and coexistence.',
+    releaseDate: 'Apr 23, 2020',
     developer: 'Firaxis Games',
     publisher: '2K',
     tags: [],
@@ -37624,7 +37637,10 @@ export const steamGameDetails: SteamGameMap = {
       'Action',
       'Female Protagonist',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    clueOrder: ['ss', 'tags', 'details', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Medium',
   },
   '885970': {
     name: 'Total War: ROME REMASTERED',
@@ -42798,9 +42814,9 @@ export const steamGameDetails: SteamGameMap = {
     name: 'Jurassic World Evolution 2',
     appId: 1244460,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1244460/ss_e2043f89661bf4da80628e6ab1e97b0a67f1c7ed.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1244460/ss_07e3315833ed65b2c968214c617e6bbbea514654.600x338.jpg',
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1244460/ss_96527037800b404246c4e508062c925eabae20a6.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1244460/ss_e2043f89661bf4da80628e6ab1e97b0a67f1c7ed.600x338.jpg',
     shortDescription:
       "||Jurassic World Evolution 2|| is the much-anticipated sequel to Frontier's highly successful ||Jurassic|| ||World|| ||Evolution||. This bold new era in the ||Jurassic|| ||World|| ||Evolution|| game franchise builds upon the ground-breaking and immersive 2018 management simulation.",
     releaseDate: '9 Nov, 2021',
@@ -53883,6 +53899,7 @@ export const CLOSE_GUESS_SERIES: string[] = [
   'spider-man',
   'splinter cell',
   'spongebob',
+  'steamworld',
   'subnautica',
   'super mario',
   'the legend of zelda',

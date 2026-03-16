@@ -308,6 +308,12 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile4: 'Control',
   },
   '2026-03-17': {
+    caseFile1: 'Bully',
+    caseFile2: 'XCOM: Chimera Squad',
+    caseFile3: 'SteamWorld Dig',
+    caseFile4: 'Deus Ex: Human Revolution',
+  },
+  '2026-03-18': {
     caseFile1: 'Suicide Squad: Kill the Justice League',
     caseFile2: 'Fields of Mistria',
     caseFile3: "Don't Starve",
@@ -315,16 +321,16 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
   },
 };
 
-// Easy (final) 3/17:  Deus Ex: Human Revolution
+// 2nd game of 3/18 (fully refined): Thief
+// Med: Batman: Arkham Asylum (update Original release date)
+// Med: Ryse: Son of Rome
 // Easy: Remnant II
 // Easy: State of Decay 2
 // Easy: Far Cry 5
-// Easy: Bully
 // 3/19 (to match Crimson release): Black Desert
 // Hard 3/16: Bomb Rush Cyberfunk
 // Hard: Keep Talking and Nobody Explodes
 // Spelunky (change original release?)
-// Hard (10k rev): SteamWorld Dig
 // Hard: Crypt of the NecroDancer
 // Hard: Super Auto Pets
 // Darwin Project
