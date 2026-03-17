@@ -314,6 +314,12 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile4: 'Deus Ex: Human Revolution',
   },
   '2026-03-18': {
+    caseFile1: 'Overwatch',
+    caseFile2: 'Thief',
+    caseFile3: 'Chivalry: Medieval Warfare',
+    caseFile4: 'Just Cause 3',
+  },
+  '2026-03-19': {
     caseFile1: 'Suicide Squad: Kill the Justice League',
     caseFile2: 'Fields of Mistria',
     caseFile3: "Don't Starve",
@@ -321,9 +327,9 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
   },
 };
 
-// 2nd game of 3/18 (fully refined): Thief
 // Med: Batman: Arkham Asylum (update Original release date)
 // Med: Ryse: Son of Rome
+// Easy: Star Wars Battlefront II
 // Easy: Remnant II
 // Easy: State of Decay 2
 // Easy: Far Cry 5

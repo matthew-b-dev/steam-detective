@@ -759,6 +759,7 @@ export const dummyGames: string[] = [
   'Sam & Max Save The World Remastered',
   'Genshin Impact',
   'Fury Unleashed',
+  'Just Cause',
   'Coffee Talk',
   '9 Monkeys of Shaolin',
   'Nexomon: Extinction',

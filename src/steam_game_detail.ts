@@ -1796,7 +1796,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/225540/ss_ae30914f50d33b12e5c1d65426cc94ed4e497bfa.600x338.jpg',
     shortDescription:
-      'With over 1000 km² of complete freedom from sky to seabed, ||Rico Rodriguez|| returns to unleash chaos in the most creative and explosive ways imaginable.',
+      'With over 1000 km² of complete freedom from sky to seabed, ||Rico|| Rodriguez returns to unleash chaos in the most creative and explosive ways imaginable.',
     releaseDate: 'Nov 30, 2015',
     developer: 'Avalanche Studios',
     publisher: 'Square Enix',
@@ -1829,10 +1829,19 @@ export const steamGameDetails: SteamGameMap = {
       'RPG',
     ],
     blurredUserTags: ['Destruction'],
-    clueOrder: ['details', 'tags', 'desc'],
+    clueOrder: ['review', 'details', 'tags', 'desc'],
     debugProcessed: true,
     debugRefined: true,
     difficulty: 'Hard',
+    reviewClue: {
+      review:
+        'one of the best games ever. The franchise fell of at 4, ||just cause|| 3 just had the perfect balance of enough story to justify the ||crazy|| stuff you do without boring you to death and not taking itself seriously at all. Oh and the graphics are INSANE for ||2015||',
+      votedUp: true,
+      votesUp: 7,
+      weightedScore: '0.620745539665222168',
+      authorPlaytimeHours: 12,
+      timestamp: 1768777887,
+    },
   },
   '227300': {
     name: 'Euro Truck Simulator 2',
@@ -18400,11 +18409,11 @@ export const steamGameDetails: SteamGameMap = {
     name: 'Chivalry: Medieval Warfare',
     appId: 219640,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/219640/ss_170b491759e866cf5c3d8f707283e9095383dc5f.600x338.jpg',
+      'https://shared.steamstatic.com/store_item_assets/steam/apps/219640/ss_676e7c0e215c173c84c6ff344a3d05bf681e5b1a.600x338.jpg',
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/219640/ss_ca4c8198b38329dc90ef9d4cff6434863369ff21.600x338.jpg',
     shortDescription:
-      'Besiege castles and raid villages in ||Chivalry: Medieval Warfare||, a fast-paced medieval first person slasher with a focus on multiplayer battles',
+      'Besiege castles and raid villages in ||Chivalry: Medieval Warfare||, a fast-paced medieval first person slasher with a focus on multiplayer battles. [ ... ] The game is skill-based and controls like an FPS, but instead of guns and grenades, players are given swords, shields, maces, battleaxes and longbows.',
     releaseDate: 'Oct 16, 2012',
     developer: 'Torn Banner Studios',
     publisher: 'Torn Banner Studios',
@@ -18424,14 +18433,19 @@ export const steamGameDetails: SteamGameMap = {
       'Violent',
       'PvP',
       'Indie',
-      'Third Person',
+      'Competitive',
       'Competitive',
       'Team-Based',
       'Hack and Slash',
       'Co-op',
       'Historical',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: ['Medieval', 'Swordplay'],
+    overrideCensoredTitle: 'Ch||ivalry||: Me||dieval|| Wa||rfare||',
+    clueOrder: ['details', 'tags', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Hard',
   },
   '219890': {
     name: 'Antichamber',
@@ -37417,43 +37431,6 @@ export const steamGameDetails: SteamGameMap = {
     debugRefined: true,
     difficulty: 'Easy',
   },
-  '871720': {
-    name: 'Ultimate Custom Night',
-    appId: 871720,
-    primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/871720/ss_0663312e4957c04b7aa714e98533ee1c7e650778.600x338.jpg',
-    secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/871720/ss_34b4f70690c78c9efbfc68285b8b4d33f034e3c9.600x338.jpg',
-    shortDescription:
-      'Welcome to the ultimate FNAF mashup, featuring 50 selectable characters and custom difficulties!',
-    releaseDate: 'Jun 27, 2018',
-    developer: 'Scott Cawthon',
-    publisher: 'Scott Cawthon',
-    tags: [],
-    features: [],
-    allReviewSummary: {
-      count: 61832,
-      rating: 'Overwhelmingly Positive',
-    },
-    userTags: [
-      'Free to Play',
-      'Horror',
-      'Singleplayer',
-      'Difficult',
-      'Survival Horror',
-      'Robots',
-      'Strategy',
-      'First-Person',
-      'Survival',
-      'Dark',
-      'Indie',
-      'Point & Click',
-      'Action',
-      'Psychological Horror',
-      'Atmospheric',
-    ],
-    clueOrder: ['tags', 'details', 'desc'],
-  },
   '872200': {
     name: 'Rogue Company',
     appId: 872200,
@@ -42407,11 +42384,11 @@ export const steamGameDetails: SteamGameMap = {
     name: 'STAR WARS Battlefront II',
     appId: 1237950,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1237950/ss_4d4265ec83814642cc303d5fe312da8cf6d6a80f.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1237950/ss_5b05cfc5e4e6a3f4bde51f2b20370e5f367bddf4.600x338.jpg',
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1237950/ss_625abcf051f814c2f009ac9322d4c470271fa0e2.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1237950/ss_741f131aba46c488d750062c1b5715c286681e9d.600x338.jpg',
     shortDescription:
-      'Be the hero in the ultimate ||STAR|| ||WARS|| battle fantasy with ||STAR WARS Battlefront II||: Celebration Edition!',
+      'Embark on an endless ||Star Wars|| journey from the best-selling ||Star Wars|| video game franchise of all time. Experience rich multiplayer ||battlegrounds|| across all three eras - ||prequel||, classic and ||new trilogy|| - or rise as a new hero and discover an emotionally gripping single-player story spanning thirty years.',
     releaseDate: '11 Jun, 2020',
     developer: 'DICE',
     publisher: 'Electronic Arts',
@@ -42438,7 +42415,10 @@ export const steamGameDetails: SteamGameMap = {
       'Third Person',
       'Controller',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    clueOrder: ['details', 'tags', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
   },
   '1238000': {
     name: 'Mass Effect',
@@ -51746,14 +51726,15 @@ export const steamGameDetails: SteamGameMap = {
     name: 'Overwatch',
     appId: 2357570,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2357570/b17b61def60cb8b3f693cb3a6b80152f7963b04e/ss_b17b61def60cb8b3f693cb3a6b80152f7963b04e.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2357570/5bf1bef7045a75815f6dfc36f016c7cdf5e1fafd/ss_5bf1bef7045a75815f6dfc36f016c7cdf5e1fafd.600x338.jpg',
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2357570/78e99c6da684734a84fcd69aff1baa7b5fe996f6/ss_78e99c6da684734a84fcd69aff1baa7b5fe996f6.600x338.jpg',
     shortDescription:
       '||Overwatch||, A FUTURE WORTH FIGHTING FOR! ||Overwatch|| is an always-on and ever-evolving free-to-play, team-based action game set in an optimistic future, where every match is the ultimate 5v5 or 6v6 battlefield brawl.',
+    originalReleaseDate: 'May 24, 2016',
     releaseDate: 'Aug 10, 2023',
-    developer: 'Blizzard Entertainment, Inc.',
-    publisher: 'Blizzard Entertainment, Inc.',
+    developer: '||Blizzard Entertainment, Inc.||',
+    publisher: '||Blizzard Entertainment, Inc.||',
     tags: [],
     features: [],
     allReviewSummary: {
@@ -51777,7 +51758,19 @@ export const steamGameDetails: SteamGameMap = {
       'Co-op',
       'Sci-fi',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    clueOrder: ['details', 'review', 'desc', 'tags'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
+    reviewClue: {
+      review:
+        "Y'know what, it doesn't excuse all of the BS ||Blizzard|| pulled with the launch of ||Overwatch 2||, or how they completely dropped the ball with the promised story mode, but I can safely say that this is the game I've been missing since 2022. I think the current dev team should be commended for having the courage to admit their previous mistakes and course-correct instead of continuing down that road.\n\nIf you're still mad at ||Blizzard|| and refuse to touch this game ever again, I don't blame you. But I'm also not going to let bygones get in the way of me enjoying the hell out of this game.",
+      votedUp: true,
+      votesUp: 24,
+      weightedScore: undefined,
+      authorPlaytimeHours: 22.7,
+      timestamp: 1772928330,
+    },
   },
   '2365810': {
     name: 'Pseudoregalia',
@@ -53911,4 +53904,6 @@ export const CLOSE_GUESS_SERIES: string[] = [
   'warhammer',
   'witcher',
   'xcom',
+  'chivalry',
+  'just cause',
 ];
