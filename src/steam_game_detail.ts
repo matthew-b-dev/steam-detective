@@ -12202,6 +12202,7 @@ export const steamGameDetails: SteamGameMap = {
   },
   '1145350': {
     name: 'Hades II',
+    searchTerms: ['hades 2'],
     appId: 1145350,
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1145350/ss_f28befd916e59b8bf0a8a801b8a498b8adaa01eb.600x338.jpg',
@@ -31849,7 +31850,7 @@ export const steamGameDetails: SteamGameMap = {
       'Strategy',
       '3D',
     ],
-    overrideCensoredTitle: 'Bl||ack|| De||se||rt',
+    overrideCensoredTitle: 'Bl||ack|| De||ser||t',
     clueOrder: ['review', 'tags', 'details', 'desc'],
     debugProcessed: true,
     debugRefined: true,
