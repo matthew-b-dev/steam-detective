@@ -18,24 +18,54 @@ export const ClueTitle: React.FC<ClueTitleProps> = ({
   blurTitleAndAsAmpersand,
   overrideCensoredTitle,
 }) => {
-  // Helper to randomize a character while preserving type
-  const randomizeChar = (char: string): string => {
-    if (/[A-Z]/.test(char)) {
-      return String.fromCharCode(65 + Math.floor(Math.random() * 26));
-    } else if (/[a-z]/.test(char)) {
-      return String.fromCharCode(97 + Math.floor(Math.random() * 26));
-    } else if (/[0-9]/.test(char)) {
-      return Math.floor(Math.random() * 10).toString();
+  // Helper to render normal text with extra margin on spaces
+  const renderNormalText = (text: string): ReactElement => {
+    const chars: ReactElement[] = [];
+    for (let i = 0; i < text.length; i++) {
+      const char = text[i];
+      if (char === ' ') {
+        // Spaces with extra margins to make them visually distinct
+        chars.push(
+          <span key={`char-${i}`} className='mx-1'>
+            {' '}
+          </span>,
+        );
+      } else {
+        // Regular characters
+        chars.push(<span key={`char-${i}`}>{char}</span>);
+      }
     }
-    return char;
+    return <span>{chars}</span>;
   };
 
-  // Helper to censor text by randomizing alphanumeric characters
-  const censorText = (text: string): string => {
-    return text
-      .split('')
-      .map((char) => randomizeChar(char))
-      .join('');
+  // Helper to render redacted text as spaced underscores
+  const renderRedactedText = (text: string): ReactElement => {
+    const chars: ReactElement[] = [];
+    for (let i = 0; i < text.length; i++) {
+      const char = text[i];
+      if (char === ' ') {
+        // Keep spaces with extra margins to make them visually distinct
+        chars.push(
+          <span key={`char-${i}`} className='mx-1'>
+            {' '}
+          </span>,
+        );
+      } else if (char === ':') {
+        chars.push(
+          <span key={`char-${i}`} className='mx-1'>
+            {':'}
+          </span>,
+        );
+      } else {
+        // Replace non-whitespace with spaced underscore
+        chars.push(
+          <span key={`char-${i}`} className='mx-0.5'>
+            _
+          </span>,
+        );
+      }
+    }
+    return <span>{chars}</span>;
   };
 
   // Helper to render text with censored parts (||text||)
@@ -50,20 +80,15 @@ export const ClueTitle: React.FC<ClueTitleProps> = ({
       if (match.index > lastIndex) {
         parts.push(
           <span key={`text-${lastIndex}`}>
-            {text.slice(lastIndex, match.index)}
+            {renderNormalText(text.slice(lastIndex, match.index))}
           </span>,
         );
       }
 
-      // Add censored text with blur
-      const censoredText = censorText(match[1]);
+      // Add censored text as spaced underscores
       parts.push(
-        <span
-          key={`censored-${match.index}`}
-          style={{ filter: 'blur(7px)' }}
-          className='select-none'
-        >
-          {censoredText}
+        <span key={`censored-${match.index}`}>
+          {renderRedactedText(match[1])}
         </span>,
       );
 
@@ -73,7 +98,9 @@ export const ClueTitle: React.FC<ClueTitleProps> = ({
     // Add remaining text after last censored part
     if (lastIndex < text.length) {
       parts.push(
-        <span key={`text-${lastIndex}`}>{text.slice(lastIndex)}</span>,
+        <span key={`text-${lastIndex}`}>
+          {renderNormalText(text.slice(lastIndex))}
+        </span>,
       );
     }
 

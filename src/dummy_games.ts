@@ -366,7 +366,6 @@ export const dummyGames: string[] = [
   'Stellaris',
   'Rive',
   'SAMURAI WARRIORS: Spirit of Sanada',
-  'Black Desert Online',
   'Project X Zone 2',
   'Fallout 3',
   'Mother Russia Bleeds',

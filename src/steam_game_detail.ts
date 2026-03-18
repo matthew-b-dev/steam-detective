@@ -12204,11 +12204,11 @@ export const steamGameDetails: SteamGameMap = {
     name: 'Hades II',
     appId: 1145350,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1145350/ss_ef0f63061d0a0a9a7e46f3b84f125d25330e8f19.600x338.jpg',
-    secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1145350/ss_f28befd916e59b8bf0a8a801b8a498b8adaa01eb.600x338.jpg',
+    secondaryScreenshot:
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1145350/ss_ef0f63061d0a0a9a7e46f3b84f125d25330e8f19.600x338.jpg',
     shortDescription:
-      'Battle beyond the Underworld using dark sorcery to take on the Titan of Time in this bewitching sequel to the award-winning rogue-like dungeon crawler.',
+      'Battle beyond the ||Underworld|| using dark sorcery to take on the Titan of Time in this bewitching sequel to the award-winning ||rogue||-||like|| dungeon crawler.',
     releaseDate: 'Sep 25, 2025',
     developer: 'Supergiant Games',
     publisher: 'Supergiant Games',
@@ -12239,7 +12239,20 @@ export const steamGameDetails: SteamGameMap = {
       'LGBTQ+',
       'Perma Death',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    overrideCensoredTitle: 'Ha||de||s ||II||',
+    clueOrder: ['review', 'desc', 'tags', 'details'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
+    reviewClue: {
+      review:
+        'Like ||Hades|| 1 but with magic, pets, arcana, and hexes,\nAmazing combat, banger music, excellent game about beating up your ||grandfather||.',
+      votedUp: true,
+      votesUp: 55,
+      weightedScore: '0.821802258491516113',
+      authorPlaytimeHours: 49,
+      timestamp: 1767417958,
+    },
   },
   '955050': {
     name: 'Bright Memory',
@@ -20431,11 +20444,11 @@ export const steamGameDetails: SteamGameMap = {
     name: 'Crypt of the NecroDancer',
     appId: 247080,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/247080/ss_849069b2208a21d5adfc00d67e5b8b428e2d0677.600x338.jpg',
-    secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/247080/ss_bb057affa1f4ccac14d1a58e5707cd0fd66e82e7.600x338.jpg',
+    secondaryScreenshot:
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/247080/ss_4cb7271c0eba37c15afd2c64cc1b58c0c386f4e2.600x338.jpg',
     shortDescription:
-      '||Crypt of the NecroDancer|| is an award winning hardcore roguelike rhythm game. Move to the music and deliver beatdowns to the beat! Groove to the epic Danny Baranowsky soundtrack, or select songs from your own MP3 collection!',
+      '||Crypt of the NecroDancer|| is an award winning hardcore ||roguelike rhythm|| game. Move to the music and deliver beatdowns to the beat! Groove to the epic Danny Baranowsky soundtrack, or select songs from your own MP3 collection!',
     releaseDate: 'Apr 23, 2015',
     developer: 'Brace Yourself Games',
     publisher: 'Brace Yourself Games',
@@ -20462,7 +20475,11 @@ export const steamGameDetails: SteamGameMap = {
       'Roguelite',
       'Procedural Generation',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    overrideCensoredTitle: 'Cr||yp||t ||of|| t||he|| Ne||cro||Da||nc||er',
+    clueOrder: ['desc', 'tags', 'details'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Hard',
   },
   '248390': {
     name: 'Craft The World',
@@ -23755,7 +23772,7 @@ export const steamGameDetails: SteamGameMap = {
       'Psychological Horror',
       'Political',
     ],
-    overrideCensoredTitle: 'S||uicide|| S||quad||: ||Kill the Justice League||',
+    overrideCensoredTitle: 'S||uicide|| S||quad:|| ||Kill the Justice League||',
     clueOrder: ['details', 'desc', 'tags'],
     debugProcessed: true,
     debugRefined: true,
@@ -31800,11 +31817,12 @@ export const steamGameDetails: SteamGameMap = {
     name: 'Black Desert',
     appId: 582660,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/582660/b784aa30aea23768ef2b793b9a064347d3609b6d/ss_b784aa30aea23768ef2b793b9a064347d3609b6d.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/582660/ss_e2cfd7db29677295dc76311d151d795ea818ced2.600x338.jpg',
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/582660/ss_a4c2348412fec008a7dadacb52793bc2f6185f26.600x338.jpg',
     shortDescription:
-      'Played by over 20 million Adventurers - ||Black Desert|| Online is an open-world, action MMORPG. Experience intense, action-packed combat, battle massive world bosses, fight alongside friends to siege and conquer castles, and train in professions such as fishing, trading, crafting, cooking, and more!',
+      'Played by over 20 million Adventurers - ||Black Desert|| is an open-world, action MMORPG. Experience intense, action-packed combat, battle massive world bosses, fight alongside friends to siege and conquer castles, and train in professions such as fishing, trading, crafting, cooking, and more!',
+    originalReleaseDate: 'Jul 14, 2015 (South Korea)',
     releaseDate: 'May 24, 2017',
     developer: 'Pearl Abyss',
     publisher: 'Pearl Abyss',
@@ -31823,7 +31841,7 @@ export const steamGameDetails: SteamGameMap = {
       'Crafting',
       'Medieval',
       'PvP',
-      'First-Person',
+      'Open World',
       'Action-Adventure',
       'Character Customization',
       'Open World',
@@ -31831,7 +31849,20 @@ export const steamGameDetails: SteamGameMap = {
       'Strategy',
       '3D',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    overrideCensoredTitle: 'Bl||ack|| De||se||rt',
+    clueOrder: ['review', 'tags', 'details', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Medium',
+    reviewClue: {
+      review:
+        "... (edited for length)\nUnfortunately, the core gameplay revolves around endless grinding, AFK fishing, and the quiet realization that progress costs either time, patience, or real money.\n\nA beautiful ||MMO|| that hooks you with style, keeps you with grind, and eventually convinces you to leave your PC running while you go to sleep. Perfect for anyone looking for a game that keeps playing even when you don't.",
+      votedUp: false,
+      votesUp: 92,
+      weightedScore: undefined,
+      authorPlaytimeHours: 37.5,
+      timestamp: 1771138322,
+    },
   },
   '583950': {
     name: 'Artifact',
@@ -38693,7 +38724,7 @@ export const steamGameDetails: SteamGameMap = {
     ],
     screenshotFocusPoint: [27, 93, 150],
     overrideCensoredTitle:
-      'S||pongeBob|| S||quar||eP||ants||: ||Ba||tt||le for ||B||ikini|| B||ottom - Rehydrated||',
+      'S||pongeBob|| S||quar||eP||ants:|| ||Ba||tt||le for ||B||ikini|| B||ottom|| - R||ehydrated||',
     clueOrder: ['ss', 'tags', 'details', 'desc'],
     debugProcessed: true,
     debugRefined: true,
@@ -42865,7 +42896,7 @@ export const steamGameDetails: SteamGameMap = {
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1250410': {
-    name: 'Microsoft Flight Simulator (2020)',
+    name: 'Microsoft Flight Simulator 2020',
     appId: 1250410,
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1250410/ss_d31fefd20eda54107d0414c779d0058c8b030233.600x338.jpg',
@@ -52473,11 +52504,11 @@ export const steamGameDetails: SteamGameMap = {
     name: 'Microsoft Flight Simulator 2024',
     appId: 2537590,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2537590/ss_62dee3ea5e0ef5989a33b93eecab18c41d865b72.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2537590/ss_5ec36e4ebb03c43fcc5d659d9a2d6d55384541e7.600x338.jpg',
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2537590/ss_2c5ad31f74f8787cd1f2180ec3001d6b6d46b8f9.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2537590/ss_d9ee5342a23df208728bc2d062e34c2fcdc6194f.600x338.jpg',
     shortDescription:
-      'Explore the world with our largest fleet of aircraft and take simulation to new heights while pursuing your aviation career within ||Microsoft Flight Simulator 2024||.',
+      'Explore the world with our largest fleet of ||aircraft|| and take simulation to new heights while pursuing your ||aviation|| career within ||Microsoft Flight|| Simulator ||2024||.',
     releaseDate: 'Nov 19, 2024',
     developer: 'Asobo Studio',
     publisher: 'Xbox Game Studios',
@@ -52504,7 +52535,18 @@ export const steamGameDetails: SteamGameMap = {
       'Relaxing',
       'Nonlinear',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: ['Flight'],
+    overrideCensoredTitle: 'Mi||crosoft|| Fl||ight|| Si||mulator|| 202||4||',
+    clueOrder: ['details', 'review', 'tags', 'desc'],
+    reviewClue: {
+      review:
+        'still broken, Waiting for crop spraying in helicopters to be fix for over a year. span in and crash, crash mid air.',
+      votedUp: false,
+      votesUp: 3,
+      weightedScore: undefined,
+      authorPlaytimeHours: 612.9,
+      timestamp: 1770739038,
+    },
   },
   '2551020': {
     name: 'One-armed robber',

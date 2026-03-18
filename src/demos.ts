@@ -320,6 +320,12 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile4: 'Just Cause 3',
   },
   '2026-03-19': {
+    caseFile1: 'Hades II',
+    caseFile2: 'Black Desert',
+    caseFile3: 'Crypt of the NecroDancer',
+    caseFile4: 'Microsoft Flight Simulator 2024',
+  },
+  '2026-03-20': {
     caseFile1: 'Suicide Squad: Kill the Justice League',
     caseFile2: 'Fields of Mistria',
     caseFile3: "Don't Starve",
@@ -327,17 +333,19 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
   },
 };
 
-// Med: Batman: Arkham Asylum (update Original release date)
-// Med: Ryse: Son of Rome
+// Easy: Horizon Zero Dawn
 // Easy: Star Wars Battlefront II
 // Easy: Remnant II
 // Easy: State of Decay 2
 // Easy: Far Cry 5
-// 3/19 (to match Crimson release): Black Desert
+
+// Med: Batman: Arkham Asylum (update Original release date)
+// Med: Ryse: Son of Rome
+
 // Hard 3/16: Bomb Rush Cyberfunk
 // Hard: Keep Talking and Nobody Explodes
-// Spelunky (change original release?)
-// Hard: Crypt of the NecroDancer
+// Hard: Spelunky (change original release?)
 // Hard: Super Auto Pets
-// Darwin Project
+// Hard: Darwin Project
+
 // April 1st: Skyrim: thumbs down review "the game doesnt work the horse flies"
