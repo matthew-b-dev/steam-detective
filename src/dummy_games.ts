@@ -733,8 +733,6 @@ export const dummyGames: string[] = [
   'Skater XL',
   'Tomb Raider: Legend',
   'Tomb Raider: Underworld',
-  'The Division',
-  'The Division 2',
   'MotoGP 20',
   'Rock of Ages 3: Make & Break',
   'Tennis World Tour 2',

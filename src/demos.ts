@@ -326,6 +326,12 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile4: 'Microsoft Flight Simulator 2024',
   },
   '2026-03-20': {
+    caseFile1: 'Battlefield 4',
+    caseFile2: 'THE FINALS',
+    caseFile3: 'Donut County',
+    caseFile4: "Tom Clancy's The Division",
+  },
+  '2026-03-21': {
     caseFile1: 'Suicide Squad: Kill the Justice League',
     caseFile2: 'Fields of Mistria',
     caseFile3: "Don't Starve",
@@ -333,6 +339,10 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
   },
 };
 
+// 3/21 first game: Far Cry 5
+// 3/21 final game: L.A. Noire (fully refined)
+
+// Easy (Fully Refined): Old School RuneScape
 // Easy: Horizon Zero Dawn
 // Easy: Star Wars Battlefront II
 // Easy: Remnant II

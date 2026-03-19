@@ -13,20 +13,49 @@ interface RefineTitleProps {
 
 // Duplicated from ClueTitle to avoid modifying existing components
 const renderCensoredText = (text: string): ReactElement[] => {
-  const randomizeChar = (char: string): string => {
-    if (/[A-Z]/.test(char))
-      return String.fromCharCode(65 + Math.floor(Math.random() * 26));
-    if (/[a-z]/.test(char))
-      return String.fromCharCode(97 + Math.floor(Math.random() * 26));
-    if (/[0-9]/.test(char)) return Math.floor(Math.random() * 10).toString();
-    return char;
+  // Helper to render normal text with extra margin on spaces
+  const renderNormalText = (text: string): ReactElement => {
+    const chars: ReactElement[] = [];
+    for (let i = 0; i < text.length; i++) {
+      const char = text[i];
+      if (char === ' ') {
+        // Spaces with extra margins to make them visually distinct
+        chars.push(
+          <span key={`char-${i}`} className='mx-2'>
+            {' '}
+          </span>,
+        );
+      } else {
+        // Regular characters
+        chars.push(<span key={`char-${i}`}>{char}</span>);
+      }
+    }
+    return <span>{chars}</span>;
   };
 
-  const censorText = (t: string): string =>
-    t
-      .split('')
-      .map((c) => randomizeChar(c))
-      .join('');
+  // Helper to render redacted text as spaced underscores
+  const renderRedactedText = (text: string): ReactElement => {
+    const chars: ReactElement[] = [];
+    for (let i = 0; i < text.length; i++) {
+      const char = text[i];
+      if (char === ' ') {
+        // Keep spaces with extra margins to make them visually distinct
+        chars.push(
+          <span key={`char-${i}`} className='mx-2'>
+            {' '}
+          </span>,
+        );
+      } else {
+        // Replace non-whitespace with spaced underscore
+        chars.push(
+          <span key={`char-${i}`} className='mx-0.5'>
+            _
+          </span>,
+        );
+      }
+    }
+    return <span>{chars}</span>;
+  };
 
   const parts: ReactElement[] = [];
   const pattern = /\|\|(.+?)\|\|/g;
@@ -37,25 +66,24 @@ const renderCensoredText = (text: string): ReactElement[] => {
     if (match.index > lastIndex) {
       parts.push(
         <span key={`text-${lastIndex}`}>
-          {text.slice(lastIndex, match.index)}
+          {renderNormalText(text.slice(lastIndex, match.index))}
         </span>,
       );
     }
-    const censored = censorText(match[1]);
     parts.push(
-      <span
-        key={`censored-${match.index}`}
-        style={{ filter: 'blur(7px)' }}
-        className='select-none'
-      >
-        {censored}
+      <span key={`censored-${match.index}`}>
+        {renderRedactedText(match[1])}
       </span>,
     );
     lastIndex = pattern.lastIndex;
   }
 
   if (lastIndex < text.length) {
-    parts.push(<span key={`text-${lastIndex}`}>{text.slice(lastIndex)}</span>);
+    parts.push(
+      <span key={`text-${lastIndex}`}>
+        {renderNormalText(text.slice(lastIndex))}
+      </span>,
+    );
   }
 
   return parts;

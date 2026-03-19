@@ -1362,7 +1362,7 @@ export const steamGameDetails: SteamGameMap = {
       'Sandbox',
       'Sci-fi',
     ],
-    overrideCensoredTitle: "A||ssassin's|| C||reed|| ||Revelations||",
+    overrideCensoredTitle: "A||ssassin||'||s|| C||reed|| R||evelations||",
     clueOrder: ['details', 'desc', 'tags'],
     debugProcessed: true,
     debugRefined: true,
@@ -12202,7 +12202,6 @@ export const steamGameDetails: SteamGameMap = {
   },
   '1145350': {
     name: 'Hades II',
-    searchTerms: ['hades 2'],
     appId: 1145350,
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1145350/ss_f28befd916e59b8bf0a8a801b8a498b8adaa01eb.600x338.jpg',
@@ -12242,6 +12241,7 @@ export const steamGameDetails: SteamGameMap = {
     ],
     overrideCensoredTitle: 'Ha||de||s ||II||',
     clueOrder: ['review', 'desc', 'tags', 'details'],
+    searchTerms: ['hades 2'],
     debugProcessed: true,
     debugRefined: true,
     difficulty: 'Easy',
@@ -17353,7 +17353,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/110800/ss_4f4fb0ecc8d8e94215f604a3b9ed229034d40bbd.600x338.jpg',
     shortDescription:
-      "In his fight to climb the ranks and do what's right, LAPD detective Cole Phelps must unravel the truth behind a string of arson attacks, conspiracies, and brutal murders, battling the L.A. underworld and even members of his own department.",
+      "In his fight to ||climb the ranks|| and do what's right, ||LAPD detective Cole|| Phelps must unravel the truth behind a string of ||arson|| attacks, conspiracies, and brutal murders, battling the ||L.A.|| underworld and even members of his own ||department||.",
     releaseDate: 'Nov 8, 2011',
     developer: 'Team Bondi',
     publisher: 'Rockstar Games',
@@ -17380,7 +17380,11 @@ export const steamGameDetails: SteamGameMap = {
       'Mature',
       'Nudity',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    clueOrder: ['details', 'desc', 'tags'],
+    searchTerms: ['la noire'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
   },
   '113200': {
     name: 'The Binding of Isaac',
@@ -22849,7 +22853,10 @@ export const steamGameDetails: SteamGameMap = {
       'Open World',
       'RPG',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    clueOrder: ['desc', 'tags', 'details'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Medium',
   },
   '302670': {
     name: 'Call to Arms',
@@ -25651,10 +25658,10 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/365590/6a63daf99f4725057f6959b95ffa2f3adc6842c1/ss_6a63daf99f4725057f6959b95ffa2f3adc6842c1.600x338.jpg',
     shortDescription:
-      'A tactical open world third-person shooter set in New York after a deadly pandemic. Team up or go solo to restore order against deadly factions, secure loot, and conquer high-risk endgame challenges.',
+      '||A tactical open world third-person shooter set in|| New York after a deadly pandemic. ||Team up or go solo to restore order against deadly factions, secure loot, and conquer high-risk endgame challenges.||',
     releaseDate: 'Mar 7, 2016',
     developer: 'Massive Entertainment',
-    publisher: 'Ubisoft',
+    publisher: '||Ubisoft||',
     tags: [],
     features: [],
     allReviewSummary: {
@@ -25678,7 +25685,11 @@ export const steamGameDetails: SteamGameMap = {
       'Third Person',
       'Singleplayer',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    overrideCensoredTitle: "T||om|| Cl||ancy||'||s|| T||he|| Di||visio||n",
+    clueOrder: ['desc', 'details', 'tags'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
   },
   '367450': {
     name: 'Poly Bridge',
@@ -31124,7 +31135,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/552520/ss_64406d71653c589377e8c589ece9e3941b6fff50.600x338.jpg',
     shortDescription:
-      'Discover the open world of Hope County, Montana, besieged by a fanatical doomsday cult. Dive into the action solo or two-player co-op in the story campaign, use a vast arsenal of weapons and allies, and free Hope County from Joseph Seed and his cult.',
+      '||Discover the open world|| of Hope County, ||Montana||, besieged by a ||fanatical doomsday cult||. Dive into the action solo or two-player co-op ||in the story campaign||, use a vast arsenal of weapons ||and allies, and free Hope County from Joseph Seed and his cult.||',
     releaseDate: 'Mar 26, 2018',
     developer: 'Ubisoft Montreal',
     publisher: 'Ubisoft',
@@ -31151,7 +31162,10 @@ export const steamGameDetails: SteamGameMap = {
       'Hunting',
       'Adventure',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    clueOrder: ['desc', 'tags', 'details'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
   },
   '552990': {
     name: 'World of Warships',
@@ -34778,7 +34792,7 @@ export const steamGameDetails: SteamGameMap = {
       'Puzzle',
       'Physics',
       'Short',
-      'Adventure',
+      'Cartoony',
       'Great Soundtrack',
       'Singleplayer',
       'Family Friendly',
@@ -34787,7 +34801,21 @@ export const steamGameDetails: SteamGameMap = {
       '3D',
       'Stylized',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    overrideCensoredTitle: 'D||on||ut C||oun||ty',
+    clueOrder: ['details', 'review', 'desc', 'tags'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Hard',
+    reviewClue: {
+      review: "It's Katamari, but you send things to hell.",
+      votedUp: true,
+      votesUp: 61,
+      weightedScore: undefined,
+      authorPlaytimeHours: 0.9,
+      timestamp: 1535414600,
+      reviewUrl:
+        'https://steamcommunity.com/id/greatlakes123/recommended/702670/',
+    },
   },
   '704270': {
     name: 'Generation Zero',
@@ -38429,9 +38457,9 @@ export const steamGameDetails: SteamGameMap = {
     name: 'Kerbal Space Program 2',
     appId: 954850,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/954850/ss_d881b2a7f0045d1407523241fdbe0122ca181d27.600x338.jpg',
-    secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/954850/ss_dd14514813830a14b5797d318da8c64e7a3cf756.600x338.jpg',
+    secondaryScreenshot:
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/954850/ss_d881b2a7f0045d1407523241fdbe0122ca181d27.600x338.jpg',
     shortDescription:
       '||Kerbal Space Program 2|| is the sequel to the acclaimed space-flight simulation game ||Kerbal|| ||Space|| ||Program||. Enter the next generation of space adventure with exciting new parts, stunning visuals, fully revamped UI and Map View, and rich new environments to explore.',
     releaseDate: 'Feb 24, 2023',
@@ -42641,11 +42669,12 @@ export const steamGameDetails: SteamGameMap = {
     name: 'Battlefield 4',
     appId: 1238860,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1238860/ss_8cd5ec2e4bf1986bc01265db93f184e38e3b1236.600x338.jpg',
-    secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1238860/ss_03f32767fd67f15723ffcd68c92e425265a0ca3d.600x338.jpg',
+    secondaryScreenshot:
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1238860/ss_fb5219a8fde71d6e29b95c35a95fe4f9769c2004.600x338.jpg',
     shortDescription:
-      'Embrace unrivaled destruction in ||Battlefield 4||. Revel in the glorious chaos of all-out war packed with rewarding, tactical challenges in an interactive environment.',
+      'Embrace unrivaled destruction in ||Battlefield 4||. Dominate tactical challenges in a huge interactive environment — demolish buildings shielding your enemies, lead an assault from the back of a gun boat, or make a little C4 go a long way. In massive 64-player battles, use all your resources and play to your strengths to carve your own path to victory.',
+    originalReleaseDate: 'Oct 29, 2013',
     releaseDate: 'Jun 11, 2020',
     developer: 'DICE',
     publisher: 'Electronic Arts',
@@ -42672,7 +42701,11 @@ export const steamGameDetails: SteamGameMap = {
       'Controller',
       'Tactical',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    overrideCensoredTitle: 'B||attlefield|| ||4||',
+    clueOrder: ['ss', 'tags', 'desc', 'details'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
   },
   '1239690': {
     name: 'Retrowave',
@@ -44307,11 +44340,12 @@ export const steamGameDetails: SteamGameMap = {
     name: 'Old School RuneScape',
     appId: 1343370,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1343370/ss_fab277591d7bc78c3f1839fbe4e79b02a506add9.600x338.jpg',
-    secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1343370/ss_ac85572b2f56a10c2e6f57424aaa493a0f2de654.600x338.jpg',
+    secondaryScreenshot:
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1343370/ss_fab277591d7bc78c3f1839fbe4e79b02a506add9.600x338.jpg',
     shortDescription:
-      "The best retro fantasy MMORPG on the planet. ||Old|| ||School|| is ||RuneScape|| but… older! This is the open world you know and love, but as it was in 2007. Saying that, it's even better than that – ||Old|| ||School|| is shaped by you, its players, with regular new content, fixes and expansions voted for by the fans!",
+      "The best retro fantasy MMORPG on the planet. ||Old|| ||School|| is ||RuneScape|| but… older! This is the open world you know and love, but as it was in 2007. Saying that, it's even better than that – ||Old School|| is shaped by you, its players, with regular new content, fixes and expansions voted for by the fans!",
+    originalReleaseDate: 'Feb 22, 2013',
     releaseDate: 'Feb 24, 2021',
     developer: 'Jagex Ltd',
     publisher: 'Jagex Ltd',
@@ -44325,12 +44359,12 @@ export const steamGameDetails: SteamGameMap = {
       'MMORPG',
       'Free to Play',
       'Nostalgia',
-      'Adventure',
+      'Medieval',
       'Fantasy',
       'Story Rich',
-      'Massively Multiplayer',
-      'Multiplayer',
-      'RPG',
+      'Adventure',
+      'Classic',
+      'Reboot',
       'Character Customization',
       'Third Person',
       'PvE',
@@ -44338,7 +44372,12 @@ export const steamGameDetails: SteamGameMap = {
       'Old School',
       'PvP',
     ],
+    screenshotFocusPoint: [44, 100, 182],
+    overrideCensoredTitle: 'O||ld|| Sc||hool|| R||une||Sc||ape||',
     clueOrder: ['tags', 'details', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
   },
   '1343400': {
     name: 'RuneScape ',
@@ -48908,6 +48947,7 @@ export const steamGameDetails: SteamGameMap = {
       '3D',
       'Dark Fantasy',
     ],
+    overrideCensoredTitle: "An||other|| C||rab||'||s|| T||reasure||",
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1888930': {
@@ -50319,11 +50359,11 @@ export const steamGameDetails: SteamGameMap = {
     name: 'THE FINALS',
     appId: 2073850,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2073850/320437621741c7be66de4b42d7633b9b0a60fd49/ss_320437621741c7be66de4b42d7633b9b0a60fd49.600x338.jpg',
-    secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2073850/3c20dd5e9fcfbbbabe8f9050b06de2c1a8eba471/ss_3c20dd5e9fcfbbbabe8f9050b06de2c1a8eba471.600x338.jpg',
+    secondaryScreenshot:
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2073850/320437621741c7be66de4b42d7633b9b0a60fd49/ss_320437621741c7be66de4b42d7633b9b0a60fd49.600x338.jpg',
     shortDescription:
-      "||THE FINALS|| is the world's first Dynamism Shooter, a free-to-play, fast-paced, physics-driven, first-person shooter set on the stage of the biggest Gameshow of the future! Fight for Fans and fortune in fully-destructible, virtual Arenas that guarantee no two rounds will ever play the same!",
+      "||THE FINALS is the world's first Dynamism Shooter, a free-to-play, fast-paced, physics-driven,|| first-person shooter set on the stage of the biggest Gameshow of the future! Fight for Fans and fortune in fully||-destructible||, virtual Arenas that guarantee no two rounds will ever play the same!",
     releaseDate: '7 Dec, 2023',
     developer: 'Embark Studios',
     publisher: 'Embark Studios',
@@ -50350,7 +50390,11 @@ export const steamGameDetails: SteamGameMap = {
       'Online Co-Op',
       'Combat',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    overrideCensoredTitle: 'T||HE|| F||INAL||S',
+    clueOrder: ['desc', 'details', 'tags'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Medium',
   },
   '2074920': {
     name: 'The First Descendant',
@@ -53941,6 +53985,7 @@ export const CLOSE_GUESS_SERIES: string[] = [
   'the legend of zelda',
   'the lord of the rings',
   'the sims',
+  'tom clancy',
   'tomb raider',
   'torchlight',
   'truck simulator',
