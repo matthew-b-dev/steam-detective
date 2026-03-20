@@ -42,9 +42,7 @@ const SteamReviewCard: React.FC<{
   editableVotesUp?: number;
   editableVotedFunny?: number;
   onSelect: () => void;
-  // eslint-disable-next-line no-unused-vars
   onMoveUp?: () => void;
-  // eslint-disable-next-line no-unused-vars
   onMoveDown?: () => void;
   // eslint-disable-next-line no-unused-vars
   onTextChange?: (text: string) => void;
