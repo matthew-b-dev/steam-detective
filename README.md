@@ -14,7 +14,7 @@ At least for the moment, some number of people are actually playing this game ev
 
 ## Gameplay
 
-Each case file presents clues in a fixed reveal order: user-defined tags (basically a list of genres), a description (with the game title and related terms cleverly redacted), two screenshots of the game, and finally the partially-redacted title of the game. Players can _either_ type a guess into an autocomplete input after each clue _or_ they can simply skip to the next clue if they have no idea. Making an incorrect guess automatically triggers the next clue. Correctly guessing the title immediately displays all clues and un-redacts all the information. A link to the game's real Steam page is included after the title is displayed.
+Each case file presents clues in a reveal order that will depend on the game: user-defined tags (basically a list of genres), a description (with the game title and related terms cleverly redacted), two screenshots of the game, and finally the partially-redacted title of the game. Players can _either_ type a guess into an autocomplete input after each clue _or_ they can simply skip to the next clue if they have no idea. Making an incorrect guess automatically triggers the next clue. Correctly guessing the title immediately displays all clues and un-redacts all the information. A link to the game's real Steam page is included after the title is displayed.
 
 Points are awarded per case file based on how many guesses were used:
 
