@@ -387,7 +387,6 @@ export const dummyGames: string[] = [
   'One Piece: Burning Blood',
   'Valkyria Revolution',
   'Dragon Quest Heroes 2',
-  'L.A. Noire Remastered',
   'Batman: The Enemy Within - Episode 1',
   'Bulletstorm: Full Clip Edition',
   'ELEX',
