@@ -345,7 +345,10 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
   },
 };
 
+// 2026-03-22, First: Borderlands 3
+
 // Easy (Fully Refined): Old School RuneScape
+// Easy (Fully Refined): DEATHLOOP
 // Easy: Horizon Zero Dawn
 // Easy: Star Wars Battlefront II
 // Easy: Remnant II
@@ -354,7 +357,8 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
 // Med: Batman: Arkham Asylum (update Original release date)
 // Med: Ryse: Son of Rome
 
-// Hard 3/16: Bomb Rush Cyberfunk
+// Hard (Fully Refined): Tales of Arise
+// Hard: Bomb Rush Cyberfunk
 // Hard: Keep Talking and Nobody Explodes
 // Hard: Spelunky (change original release?)
 // Hard: Super Auto Pets

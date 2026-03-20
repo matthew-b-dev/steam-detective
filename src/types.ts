@@ -2,6 +2,7 @@ export interface Review {
   review: string;
   votedUp: boolean;
   votesUp: number;
+  votedFunny?: number;
   weightedScore?: number | string;
   authorPlaytimeHours: number;
   timestamp: number;
@@ -31,10 +32,17 @@ export interface SteamGame {
   blurScreenshotQuarter?: 'top' | 'bottom'; // If specified, blurs the top or bottom quarter of screenshots (applies to both)
   screenshotLetterbox?: boolean; // If true, adds vertical black bars (contain) instead of cropping for non-16:9 screenshots
   transformScreenshotScale?: number; // If specified, applies transform: scale(#) to the big screenshot
-  screenshotFocusPoint?: [number, number, number?]; // [widthPercent, heightPercent, zoom%] — zooms the primary screenshot. heightPercent: 100=top, 0=bottom. zoom: 1–175, default 75. e.g. [50,50,75]=center at 75%
+  screenshotFocusPoint?: [number, number, number?]; // [widthPercent, heightPercent, zoom%] - zooms the primary screenshot. heightPercent: 100=top, 0=bottom. zoom: 1–175, default 75. e.g. [50,50,75]=center at 75%
   blurTitleAndAsAmpersand?: boolean; // If true, replace 'and' with '&' in the title
   overrideCensoredTitle?: string; // Manually define censored title with || markers for custom censoring
-  clueOrder?: ('desc' | 'details' | 'tags' | 'ss' | 'review')[]; // Custom order for first 3-4 clues. 'ss' inserts the primary screenshot into the order. 'review' inserts the review clues (replaces secondary screenshot). Last fixed clues are always: (ss if not in order), (secondary screenshot or review), title. Default: ['tags', 'details', 'desc']
+  clueOrder?: (
+    | 'desc'
+    | 'details'
+    | 'tags'
+    | 'ss'
+    | 'review'
+    | 'details+tags'
+  )[]; // Custom order for first 3-4 clues. 'ss' inserts the primary screenshot into the order. 'review' inserts the review clues (replaces secondary screenshot). 'details+tags' bundles the Details and Tags clues into a single reveal step. Last fixed clues are always: (ss if not in order), (secondary screenshot or review), title. Default: ['tags', 'details', 'desc']
   reviewClue?: Review; // DEPRECATED: A specific review chosen as a clue (replaces secondary screenshot). Use reviewClues instead.
   reviewClues?: Review[]; // Array of reviews chosen as clues (replaces secondary screenshot). All reviews shown together. The review text may contain ||censored|| markers.
   searchTerms?: string[]; // Additional search terms/aliases for the dropdown

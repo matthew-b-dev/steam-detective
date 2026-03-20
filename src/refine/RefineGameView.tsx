@@ -24,7 +24,7 @@ interface RefineGameViewProps {
   onUpdate: (patch: Partial<SteamGame>) => void;
 }
 
-type ClueType = 'desc' | 'details' | 'tags' | 'ss' | 'review';
+type ClueType = 'desc' | 'details' | 'tags' | 'ss' | 'review' | 'details+tags';
 
 const CLUE_LABELS: Record<ClueType, string> = {
   desc: 'Description',
@@ -32,6 +32,7 @@ const CLUE_LABELS: Record<ClueType, string> = {
   tags: 'Tags',
   ss: 'Screenshot',
   review: 'Review',
+  'details+tags': 'Details+Tags',
 };
 
 const DEFAULT_CLUE_ORDER: ClueType[] = ['tags', 'details', 'desc'];
@@ -172,6 +173,29 @@ export const RefineGameView: React.FC<RefineGameViewProps> = ({
     onUpdate({ clueOrder: rebuildClueOrder(baseClueOrder, newPos) });
   };
 
+  const hasDetailsTags = clueOrder.includes('details+tags');
+
+  const handleBundleDetailsTagsToggle = (checked: boolean) => {
+    if (checked) {
+      // Replace the first 'tags' or 'details' entry in baseClueOrder with 'details+tags'
+      // and remove the other one.
+      const firstIdx = baseClueOrder.findIndex(
+        (c) => c === 'tags' || c === 'details',
+      );
+      const newBase = baseClueOrder.filter(
+        (c) => c !== 'tags' && c !== 'details',
+      ) as ClueType[];
+      newBase.splice(firstIdx >= 0 ? firstIdx : 0, 0, 'details+tags');
+      onUpdate({ clueOrder: rebuildClueOrder(newBase, reviewOrderPosition) });
+    } else {
+      // Replace 'details+tags' with 'tags' then 'details' at its position
+      const idx = baseClueOrder.indexOf('details+tags');
+      const newBase = [...baseClueOrder] as ClueType[];
+      newBase.splice(idx, 1, 'tags', 'details');
+      onUpdate({ clueOrder: rebuildClueOrder(newBase, reviewOrderPosition) });
+    }
+  };
+
   const handleReviewClueToggle = (checked: boolean) => {
     if (checked) {
       // Enable: insert review at position 4 (or end of baseClueOrder if shorter)
@@ -194,6 +218,11 @@ export const RefineGameView: React.FC<RefineGameViewProps> = ({
 
   // Check if clue order has duplicates
   const hasDuplicateClues = new Set(clueOrder).size !== clueOrder.length;
+
+  // Check if 'details+tags' is mixed with standalone 'details' or 'tags'
+  const hasInvalidDetailsTags =
+    clueOrder.includes('details+tags') &&
+    (clueOrder.includes('details') || clueOrder.includes('tags'));
 
   // Calculate difficulty stats across all games
   const difficultyStats = useMemo(() => {
@@ -283,7 +312,9 @@ export const RefineGameView: React.FC<RefineGameViewProps> = ({
           {/* Clue order dropdowns */}
           <div
             className={`flex flex-wrap items-center gap-4 rounded-lg px-4 py-3 ${
-              hasDuplicateClues ? 'bg-red-900/40' : 'bg-[#171a21]'
+              hasDuplicateClues || hasInvalidDetailsTags
+                ? 'bg-red-900/40'
+                : 'bg-[#171a21]'
             }`}
           >
             {Array.from({ length: baseClueOrder.length }, (_, idx) => (
@@ -297,8 +328,19 @@ export const RefineGameView: React.FC<RefineGameViewProps> = ({
                   className='bg-zinc-800 border border-zinc-600 rounded px-2 py-1 text-sm'
                 >
                   {(hasSsInOrder
-                    ? (['desc', 'details', 'tags', 'ss'] as ClueType[])
-                    : (['desc', 'details', 'tags'] as ClueType[])
+                    ? ([
+                        'desc',
+                        'details',
+                        'tags',
+                        'ss',
+                        'details+tags',
+                      ] as ClueType[])
+                    : ([
+                        'desc',
+                        'details',
+                        'tags',
+                        'details+tags',
+                      ] as ClueType[])
                   ).map((opt) => (
                     <option key={opt} value={opt}>
                       {CLUE_LABELS[opt]}
@@ -338,6 +380,20 @@ export const RefineGameView: React.FC<RefineGameViewProps> = ({
                 className='w-4 h-4 accent-blue-500'
               />
               <span className='text-xs text-gray-400'>Include screenshot</span>
+            </label>
+            {/* Bundle Details+Tags checkbox */}
+            <label className='flex items-center gap-2 cursor-pointer'>
+              <input
+                type='checkbox'
+                checked={hasDetailsTags}
+                onChange={(e) =>
+                  handleBundleDetailsTagsToggle(e.target.checked)
+                }
+                className='w-4 h-4 accent-orange-500'
+              />
+              <span className='text-xs text-orange-300'>
+                Bundle Details+Tags
+              </span>
             </label>
             {/* Use Review clue checkbox */}
             <label className='flex items-center gap-2 cursor-pointer'>
@@ -539,11 +595,11 @@ export const RefineGameView: React.FC<RefineGameViewProps> = ({
 
         {/* User Tags */}
         <RefineTags game={game} isComplete={revealAll} onUpdate={onUpdate} />
-        {/* Reviews section — always shown so you can browse & select */}
+        {/* Reviews section - always shown so you can browse & select */}
         <div className='bg-[#171a21] rounded-lg px-4 py-4'>
           <RefineReviews game={game} onUpdate={onUpdate} />
         </div>
-        {/* Review clue preview — canonical last, below all other clues */}
+        {/* Review clue preview - canonical last, below all other clues */}
         {(game.reviewClues && game.reviewClues.length > 0) ||
         game.reviewClue ? (
           <div className='px-4 py-3 border-t border-[rgba(255,255,255,0.06)]'>

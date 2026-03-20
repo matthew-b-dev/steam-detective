@@ -5411,7 +5411,21 @@ export const steamGameDetails: SteamGameMap = {
       'Hack and Slash',
       'Multiplayer',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    clueOrder: ['details+tags', 'desc', 'review'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
+    reviewClues: [
+      {
+        review:
+          'Alrite, so I was introduced to this franchise thanks to ||Tales|| of Berseria. Great skits, funny moment, great character development, alrite villian. But ||this Arise||, holy ♥♥♥♥ do not get me started, it was so bad. So, do not jump to this game if your standard is Berseria, there will be no funny scene at all. I do not want to spoil but villain in this game is just so bad and rushed omg. DO NOT BUY THIS GAME',
+        votedUp: false,
+        votesUp: 5,
+        weightedScore: '0.53899461030960083',
+        authorPlaytimeHours: 52,
+        timestamp: 1767172081,
+      },
+    ],
   },
   '261640': {
     name: 'Borderlands: The Pre-Sequel',
@@ -7569,7 +7583,7 @@ export const steamGameDetails: SteamGameMap = {
       'Cooking',
       'Mining',
     ],
-    clueOrder: ['details', 'tags', 'review', 'desc'],
+    clueOrder: ['details+tags', 'review', 'desc'],
     reviewClues: [
       {
         review:
@@ -21371,7 +21385,6 @@ export const steamGameDetails: SteamGameMap = {
   },
   '265550': {
     name: 'Dead Rising 3',
-    overrideCensoredTitle: 'De||ad|| Ri||sing|| ||3||',
     appId: 265550,
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/265550/ss_dc6fede140a9897dba7adae5aa39a50d49cfa77d.600x338.jpg',
@@ -21406,6 +21419,7 @@ export const steamGameDetails: SteamGameMap = {
       'Sandbox',
     ],
     screenshotFocusPoint: [100, 100, 75],
+    overrideCensoredTitle: 'De||ad|| Ri||sing|| ||3||',
     clueOrder: ['review', 'desc', 'ss', 'details', 'tags'],
     debugProcessed: true,
     debugRefined: true,
@@ -24895,15 +24909,15 @@ export const steamGameDetails: SteamGameMap = {
       'Funny',
     ],
     overrideCensoredTitle:
-      'Ke||ep|| Ta||lki||ng a||nd|| No||bod||y E||xplod||es',
-    clueOrder: ['review', 'details', 'tags', 'desc'],
+      'K||eep|| Ta||lki||ng a||nd|| No||bod||y E||xplod||es',
+    clueOrder: ['review', 'details+tags', 'desc'],
     debugProcessed: true,
     debugRefined: true,
     difficulty: 'Hard',
     reviewClues: [
       {
         review:
-          "there's nothing quite like screaming at your friend to cut the ||red wire|| while they insist there are three ||red wire||s. The concept is genuinely brilliant: one person ||defuse||s, one reads the manual, and somehow both of you still manage to ||blow up|| anyway. ... (edited for length)",
+          "there's nothing quite like screaming at your friend to cut the red ||wire|| while they insist there are three red ||wire||s. The concept is genuinely brilliant: one person ||defuse||s, one reads the manual, and somehow both of you still manage to ||blow up|| anyway. ... (edited for length)",
         votedUp: true,
         votesUp: 1,
         weightedScore: undefined,
@@ -27225,7 +27239,8 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/397540/ss_f2053d688ec55f2269c47b24313539938bef9064.600x338.jpg',
     shortDescription:
-      'The original shooter-looter returns, packing bazillions of guns and a mayhem-fueled adventure! Blast through new worlds and enemies as one of four new Vault Hunters.',
+      'The original shooter-looter returns, packing ||bazillions of guns|| and a mayhem-fueled adventure! Blast through new worlds and enemies as one of four new ||Vault Hunters||.',
+    originalReleaseDate: 'Sep 13, 2019 (Epic Games Store)',
     releaseDate: 'Mar 13, 2020',
     developer: 'Gearbox Software',
     publisher: '2K',
@@ -27252,7 +27267,30 @@ export const steamGameDetails: SteamGameMap = {
       'First-Person',
       'Violent',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: ['Looter Shooter', 'Loot'],
+    overrideCensoredTitle: 'Bo||rderlan||ds ||3||',
+    clueOrder: ['review', 'tags', 'desc', 'details'],
+    reviewClues: [
+      {
+        review:
+          'The gun play is by far the best in the series.\nThe story is by far the worst in the series.',
+        votedUp: true,
+        votesUp: 98,
+        weightedScore: undefined,
+        authorPlaytimeHours: 207,
+        timestamp: 1764028800,
+      },
+      {
+        review:
+          'Go to ||Borderlands3||\\||OakGame||\\Content\\Paks and delete/rename the following files:\n\npakchunk3-WindowsNoEditor.pak\nthrough\npakchunk3-WindowsNoEditor_11_P.pak\n\nThis skips all dialogue in the game, rendering it playable. ',
+        votedUp: true,
+        votesUp: 1044,
+        votedFunny: 343,
+        weightedScore: undefined,
+        authorPlaytimeHours: 39,
+        timestamp: 1688774400,
+      },
+    ],
   },
   '397950': {
     name: 'Clustertruck',
@@ -35152,43 +35190,6 @@ export const steamGameDetails: SteamGameMap = {
     ],
     clueOrder: ['tags', 'details', 'desc'],
   },
-  '729040': {
-    name: 'Borderlands Game of the Year Enhanced',
-    appId: 729040,
-    primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/729040/ss_ef109a2667cf7d690426e657ad3cc1990205aeea.600x338.jpg',
-    secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/729040/ss_8de560caa17336bf6c2f5044b0e8aab2c0af6eff.600x338.jpg',
-    shortDescription:
-      'Discover the original co-op shooter-looter, crammed with new enhancements! As one of 4 trigger-happy mercenaries with RPG progression, equip bazillions of guns to take on the desert planet Pandora.',
-    releaseDate: 'Aug 31, 2023',
-    developer: 'Gearbox Software',
-    publisher: '2K',
-    tags: [],
-    features: [],
-    allReviewSummary: {
-      count: 27011,
-      rating: 'Mostly Positive',
-    },
-    userTags: [
-      'FPS',
-      'Co-op',
-      'Shooter',
-      'First-Person',
-      'Loot',
-      'Online Co-Op',
-      'Action',
-      'RPG',
-      'Looter Shooter',
-      'Dark Humor',
-      'Comedy',
-      'Action RPG',
-      'Singleplayer',
-      'Gore',
-      'Multiplayer',
-    ],
-    clueOrder: ['tags', 'details', 'desc'],
-  },
   '731490': {
     name: 'Crash Bandicoot N. Sane Trilogy',
     appId: 731490,
@@ -39842,7 +39843,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1056960/ss_d6efa0778e158291b5d756e3624c3e0a73ce442e.600x338.jpg',
     shortDescription:
-      "||Wolfenstein: Youngblood|| is the first modern co-op ||Wolfenstein|| adventure. Team up with a friend or play solo as one of BJ Blazkowicz's twin daughters and wield a powerful arsenal of new weapons, gadgets, and abilities to liberate Paris from the Nazis.",
+      "||Wolfenstein||: ||Youngblood|| is the first modern co-op ||Wolfenstein|| adventure. Team up with a friend or play solo as one of ||BJ|| ||Blazkowicz||'s twin daughters and wield a powerful arsenal of new weapons, gadgets, and abilities to liberate Paris from the Nazis.",
     releaseDate: 'Jul 25, 2019',
     developer: 'MachineGames',
     publisher: 'Bethesda Softworks',
@@ -43048,11 +43049,11 @@ export const steamGameDetails: SteamGameMap = {
     name: 'DEATHLOOP',
     appId: 1252330,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1252330/ss_26bfb9a442924c466a844086646727f5d6191810.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1252330/ss_b18d58a9b6a161bf3b253044b9b3edb91802be0c.600x338.jpg',
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1252330/ss_b05a1ef5c5a43860f7728637c7047695d0d52236.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1252330/ss_c676a68cd1bf16216bc29138a48382bb7b3dd737.600x338.jpg',
     shortDescription:
-      '||DEATHLOOP|| is a next-gen FPS from Arkane Lyon, the award-winning studio behind Dishonored. In ||DEATHLOOP||, two rival assassins are trapped in a mysterious timeloop on the island of Blackreef, doomed to repeat the same day for eternity.',
+      '||DEATHLOOP|| is a next-gen FPS from ||Arkane Lyon||, the award-winning studio behind ||Dishonored||. In ||DEATHLOOP||, two rival assassins are trapped in a mysterious ||timeloop|| on the island of Blackreef, doomed to ||repeat the same day for eternity||.',
     releaseDate: 'Sep 13, 2021',
     developer: 'Arkane Studios',
     publisher: 'Bethesda Softworks',
@@ -43079,7 +43080,11 @@ export const steamGameDetails: SteamGameMap = {
       'PvP',
       'Tactical',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    overrideCensoredTitle: 'DE||ATHLO||OP',
+    clueOrder: ['desc', 'tags', 'details'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
   },
   '1253920': {
     name: 'Rogue Legacy 2',
@@ -54025,6 +54030,7 @@ export const CLOSE_GUESS_SERIES: string[] = [
   'age of empires',
   'arma',
   'bioshock',
+  'borderlands',
   'call of duty',
   'cities:',
   'civilization',

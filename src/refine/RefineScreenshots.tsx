@@ -53,7 +53,7 @@ export const RefineScreenshots: React.FC<RefineScreenshotsProps> = ({
     onUpdate({ screenshotFocusPoint: undefined });
   };
 
-  // Derived live preview — updates on every keystroke before blur/commit
+  // Derived live preview - updates on every keystroke before blur/commit
   const previewX = parseFloat(focusX);
   const previewY = parseFloat(focusY);
   const previewZoom = parseFloat(focusZoom);
@@ -113,7 +113,7 @@ export const RefineScreenshots: React.FC<RefineScreenshotsProps> = ({
             </div>
           </div>
         )}
-        {/* Focus point crosshair overlay — only on primary */}
+        {/* Focus point crosshair overlay - only on primary */}
         {isPrimary && activeFocusPoint && (
           <div
             className='absolute pointer-events-none'

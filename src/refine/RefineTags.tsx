@@ -48,7 +48,7 @@ export const RefineTags: React.FC<RefineTagsProps> = ({
     if (newTag && newTag !== oldTag) {
       const newUserTags = [...game.userTags];
       newUserTags[index] = newTag;
-      // Keep blurredUserTags in sync — replace old tag name if it was blurred
+      // Keep blurredUserTags in sync - replace old tag name if it was blurred
       const newBlurred = blurredTags.map((t) => (t === oldTag ? newTag : t));
       onUpdate({
         userTags: newUserTags,

@@ -390,7 +390,7 @@ export const DailyDashboard: React.FC = () => {
             </button>
           </div>
           <span className='px-3 py-1.5 bg-zinc-800 rounded text-sm text-zinc-200'>
-            {perfectCount !== null ? perfectCount : '—'} 👍
+            {perfectCount !== null ? perfectCount : '-'} 👍
           </span>
         </div>
 
@@ -429,7 +429,7 @@ export const DailyDashboard: React.FC = () => {
                 label='Page Views'
                 value={
                   <span className='flex items-center gap-1.5'>
-                    {pageViewCount ?? '—'}
+                    {pageViewCount ?? '-'}
                     <EyeIcon className='h-5 w-5 text-zinc-500' />
                   </span>
                 }

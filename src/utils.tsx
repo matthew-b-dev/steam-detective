@@ -25,7 +25,7 @@ export interface MissedGuess {
   isClose: boolean;
 }
 
-// A single turn in the game — either a skip or a guess
+// A single turn in the game - either a skip or a guess
 export type Turn =
   | { type: 'skip' }
   | { type: 'guess'; isClose: boolean; isCorrect: boolean };

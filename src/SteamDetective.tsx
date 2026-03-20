@@ -154,6 +154,7 @@ const SteamDetectiveGame: React.FC<SteamDetectiveGameProps> = ({
   const clueOrder = dailyGame?.clueOrder || ['tags', 'details', 'desc'];
   const hasSsInOrder = clueOrder.includes('ss');
   const hasReviewInOrder = clueOrder.includes('review');
+  const hasDetailsTags = clueOrder.includes('details+tags');
   const configuredCount = clueOrder.length; // 3, 4, or (rarely) 5 if both ss+review
 
   const clueMapping: Record<string, number> = {
@@ -165,28 +166,50 @@ const SteamDetectiveGame: React.FC<SteamDetectiveGameProps> = ({
   };
 
   const getShowClues = (): boolean[] => {
-    const result = [false, false, false, false, false, false];
+    // 7 slots: [tags, details, desc, primary_ss, review_or_secondary_ss, title, secondary_ss_when_details+tags+review]
+    const result = [false, false, false, false, false, false, false];
 
     if (state.isComplete) {
-      return [true, true, true, true, true, true];
+      // Slot[6] is only for the secondary screenshot in the details+tags+review combo.
+      // For all other configurations (including plain review without details+tags),
+      // the secondary screenshot is never a clue and must not appear on completion.
+      return [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        hasDetailsTags && hasReviewInOrder,
+      ];
     }
 
-    for (let i = 0; i < state.currentClue && i < 6; i++) {
+    for (let i = 0; i < state.currentClue && i < 7; i++) {
       if (i < configuredCount && i < clueOrder.length) {
         const clueType = clueOrder[i];
-        const clueIndex = clueMapping[clueType] - 1;
-        result[clueIndex] = true;
+        if (clueType === 'details+tags') {
+          result[0] = true; // tags slot
+          result[1] = true; // details slot
+        } else {
+          const clueIndex = clueMapping[clueType] - 1;
+          result[clueIndex] = true;
+        }
       } else if (!hasSsInOrder && i === configuredCount) {
         // Primary screenshot auto-reveal: fires after all configured clues
         // (only when primary screenshot wasn't placed in the configured order via 'ss')
         result[3] = true;
       } else if (
-        !hasReviewInOrder &&
+        (!hasReviewInOrder || hasDetailsTags) &&
         i === configuredCount + (!hasSsInOrder ? 1 : 0)
       ) {
-        // Secondary screenshot auto-reveal: fires after primary screenshot
-        // (only when review clue isn't replacing secondary screenshot)
-        result[4] = true;
+        // Secondary screenshot auto-reveal: fires after primary screenshot.
+        // When details+tags+review is active, slot[4] is used by the review clue,
+        // so secondary screenshot gets its own dedicated slot[6].
+        if (hasDetailsTags && hasReviewInOrder) {
+          result[6] = true;
+        } else {
+          result[4] = true;
+        }
       } else if (i === 5) {
         result[5] = true;
       }
@@ -214,16 +237,23 @@ const SteamDetectiveGame: React.FC<SteamDetectiveGameProps> = ({
     };
 
     // clueNames maps result array index (0-5) to canonical position key.
-    // result[4] is showClue5 — it's used for the review clue when hasReviewInOrder,
+    // result[4] is showClue5 - it's used for the review clue when hasReviewInOrder,
     // or for the secondary screenshot otherwise.
     const clueNames: (keyof typeof canonicalPositions)[] = [
       'tags',
       'details',
       'desc',
       'screenshot1',
-      hasReviewInOrder ? 'review' : 'screenshot2',
+      hasReviewInOrder && !hasDetailsTags ? 'review' : 'screenshot2',
       'title',
     ];
+    // When details+tags+review is active, review is already covered by slot[4]
+    // above (mapped as screenshot2 since secondary ss is now separate), and
+    // slot[6] holds the separately-revealed secondary screenshot.
+    if (hasDetailsTags && hasReviewInOrder) {
+      clueNames[4] = 'review';
+      clueNames.push('screenshot2');
+    }
 
     const getLowestPosition = (clues: boolean[]): number => {
       let lowestPosition = -1;
@@ -255,14 +285,21 @@ const SteamDetectiveGame: React.FC<SteamDetectiveGameProps> = ({
     const aNewClueRevealed =
       showClues.filter(Boolean).length >
       prevShowCluesRef.current.filter(Boolean).length;
-    const beforeSecondaryScreenshot = state.currentClue < 5;
+
+    // True when slot[4] (secondary screenshot) just auto-revealed as an actual
+    // screenshot (not a review). In that case we suppress scroll since it renders
+    // inside the same screenshot widget as the primary, no visible layout growth.
+    const secondaryScreenshotJustAutoRevealed =
+      !hasReviewInOrder &&
+      !hasDetailsTags &&
+      !prevShowCluesRef.current[4] &&
+      showClues[4];
 
     const ssJustRevealedNonFirst =
       !isFirstClue &&
       hasSsInOrder &&
       screenshotNowVisible &&
-      !screenshotWasVisible &&
-      beforeSecondaryScreenshot;
+      !screenshotWasVisible;
 
     const ssVisibleAndNewClueRevealed =
       !isFirstClue &&
@@ -270,7 +307,7 @@ const SteamDetectiveGame: React.FC<SteamDetectiveGameProps> = ({
       screenshotNowVisible &&
       screenshotWasVisible &&
       aNewClueRevealed &&
-      beforeSecondaryScreenshot;
+      !secondaryScreenshotJustAutoRevealed;
 
     const getClueContainerElement = () => {
       return document.querySelector(
@@ -292,7 +329,11 @@ const SteamDetectiveGame: React.FC<SteamDetectiveGameProps> = ({
       );
     };
 
+    // Title reveal (slot[5]) should never trigger an auto-scroll.
+    const titleJustRevealed = !prevShowCluesRef.current[5] && showClues[5];
+
     if (
+      !titleJustRevealed &&
       clueContainerBottomNearViewportBottom() &&
       !isFirstClue &&
       (currentLowestPosition > prevLowestPosition ||

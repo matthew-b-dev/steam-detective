@@ -31,16 +31,6 @@ const renderRawReview = (text: string) => {
   ));
 };
 
-/** Helper to find review in current selection */
-const isReviewSelected = (
-  review: Review,
-  selectedReviews: Review[],
-): boolean => {
-  return selectedReviews.some(
-    (r) => r.timestamp === review.timestamp && r.votedUp === review.votedUp,
-  );
-};
-
 /** A single Steam-styled review card */
 const SteamReviewCard: React.FC<{
   review: Review;
@@ -50,6 +40,7 @@ const SteamReviewCard: React.FC<{
   editableHrs?: number;
   editableTimestamp?: number;
   editableVotesUp?: number;
+  editableVotedFunny?: number;
   onSelect: () => void;
   // eslint-disable-next-line no-unused-vars
   onMoveUp?: () => void;
@@ -63,6 +54,8 @@ const SteamReviewCard: React.FC<{
   onTimestampChange?: (timestamp: number) => void;
   // eslint-disable-next-line no-unused-vars
   onVotesUpChange?: (votes: number) => void;
+  // eslint-disable-next-line no-unused-vars
+  onVotedFunnyChange?: (funny: number) => void;
 }> = ({
   review,
   isSelected,
@@ -71,6 +64,7 @@ const SteamReviewCard: React.FC<{
   editableHrs,
   editableTimestamp,
   editableVotesUp,
+  editableVotedFunny,
   onSelect,
   onMoveUp,
   onMoveDown,
@@ -78,6 +72,7 @@ const SteamReviewCard: React.FC<{
   onHrsChange,
   onTimestampChange,
   onVotesUpChange,
+  onVotedFunnyChange,
 }) => {
   const isRecommended = review.votedUp;
 
@@ -196,12 +191,12 @@ const SteamReviewCard: React.FC<{
         )}
       </div>
 
-      {/* Review text — editable when selected, read-only otherwise */}
+      {/* Review text - editable when selected, read-only otherwise */}
       <div className='px-3 py-2'>
         {isSelected && onTextChange ? (
           <div>
             <div className='text-[10px] text-gray-500 mb-1'>
-              Edit review text — use{' '}
+              Edit review text - use{' '}
               <code className='text-blue-400'>||text||</code> to censor/blur
               portions. use "... (edited for length)" to cut off:
             </div>
@@ -219,7 +214,7 @@ const SteamReviewCard: React.FC<{
         )}
       </div>
 
-      {/* Helpful count + link */}
+      {/* Helpful / Funny counts + link */}
       <div className='px-3 pb-2 text-[11px] text-gray-500 flex flex-col gap-0.5'>
         {(editableVotesUp ?? review.votesUp) > 0 || isSelected ? (
           isSelected && onVotesUpChange ? (
@@ -237,11 +232,33 @@ const SteamReviewCard: React.FC<{
             </div>
           ) : (
             <span>
-              {editableVotesUp ?? review.votesUp}{' '}
+              {(editableVotesUp ?? review.votesUp).toLocaleString()}{' '}
               {(editableVotesUp ?? review.votesUp) === 1 ? 'person' : 'people'}{' '}
               found this review helpful
             </span>
           )
+        ) : null}
+        {isSelected && onVotedFunnyChange ? (
+          <div className='space-y-1'>
+            <label className='block text-gray-600'>Found Funny:</label>
+            <input
+              type='number'
+              min='0'
+              value={editableVotedFunny ?? review.votedFunny ?? 0}
+              onChange={(e) =>
+                onVotedFunnyChange(Math.max(0, parseInt(e.target.value) || 0))
+              }
+              className='bg-zinc-800 border border-zinc-600 rounded px-1.5 py-0.5 text-gray-300 text-xs focus:outline-none focus:border-blue-500 w-fit'
+            />
+          </div>
+        ) : (editableVotedFunny ?? review.votedFunny ?? 0) > 0 ? (
+          <span>
+            {(editableVotedFunny ?? review.votedFunny!).toLocaleString()}{' '}
+            {(editableVotedFunny ?? review.votedFunny) === 1
+              ? 'person'
+              : 'people'}{' '}
+            found this review funny
+          </span>
         ) : null}
         {review.reviewUrl && (
           <a
@@ -266,6 +283,10 @@ export const RefineReviews: React.FC<RefineReviewsProps> = ({
     null,
   );
   const [loadError, setLoadError] = useState(false);
+  // Stable identity map: availableReviews index → selectedReviews index.
+  // Using this instead of timestamp-based matching so editing the timestamp
+  // field doesn't break the selection state.
+  const [avToSel, setAvToSel] = useState<Map<number, number>>(new Map());
 
   // Dynamically import reviews.json via a virtual Vite module.
   useEffect(() => {
@@ -273,13 +294,37 @@ export const RefineReviews: React.FC<RefineReviewsProps> = ({
     const load = async () => {
       try {
         // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-        // @ts-ignore — resolved by the Vite virtual module plugin; tsc never sees this file
+        // @ts-ignore - resolved by the Vite virtual module plugin; tsc never sees this file
         const mod = (await import('../reviews.json')) as {
           default: ReviewsJson;
         };
         if (cancelled) return;
         const entry = mod.default[String(game.appId)];
-        setAvailableReviews(entry?.mostHelpfulReviews ?? []);
+        const reviews = entry?.mostHelpfulReviews ?? [];
+        setAvailableReviews(reviews);
+        // Build the initial avToSel map by matching the already-selected reviews
+        // against the freshly-loaded available list (only needs timestamp-match once).
+        const currentSelected =
+          game.reviewClues || (game.reviewClue ? [game.reviewClue] : []);
+        const map = new Map<number, number>();
+        currentSelected.forEach((selReview, selIdx) => {
+          const avIdx = reviews.findIndex(
+            (r) =>
+              r.timestamp === selReview.timestamp &&
+              r.votedUp === selReview.votedUp,
+          );
+          if (avIdx >= 0) map.set(avIdx, selIdx);
+        });
+        // Any selected review that didn't match an available review gets an
+        // orphan virtual key (negative). This happens when the timestamp was
+        // edited - the saved data no longer matches reviews.json.
+        const matchedSelIdxs = new Set(map.values());
+        currentSelected.forEach((_, selIdx) => {
+          if (!matchedSelIdxs.has(selIdx)) {
+            map.set(-(selIdx + 1), selIdx);
+          }
+        });
+        setAvToSel(map);
       } catch {
         if (!cancelled) setLoadError(true);
       }
@@ -294,32 +339,42 @@ export const RefineReviews: React.FC<RefineReviewsProps> = ({
   const selectedReviews =
     game.reviewClues || (game.reviewClue ? [game.reviewClue] : []);
 
-  const handleSelect = (review: Review) => {
-    const isCurrentlySelected = isReviewSelected(review, selectedReviews);
+  const handleSelect = (avIdx: number, review: Review) => {
+    const isCurrentlySelected = avToSel.has(avIdx);
 
     if (isCurrentlySelected) {
-      // Remove this review from the list
-      const updated = selectedReviews.filter(
-        (r) =>
-          !(r.timestamp === review.timestamp && r.votedUp === review.votedUp),
-      );
+      const selIdx = avToSel.get(avIdx)!;
+      const updated = selectedReviews.filter((_, i) => i !== selIdx);
+      // Rebuild map: remove this entry and decrement indices above selIdx.
+      // Orphan virtual keys are -(selIdx+1); keep them in sync with new selIdx.
+      const newMap = new Map<number, number>();
+      avToSel.forEach((sIdx, aIdx) => {
+        if (aIdx === avIdx) return;
+        const newSIdx = sIdx > selIdx ? sIdx - 1 : sIdx;
+        const newAIdx = aIdx < 0 ? -(newSIdx + 1) : aIdx;
+        newMap.set(newAIdx, newSIdx);
+      });
+      setAvToSel(newMap);
       const newClueOrder =
         updated.length === 0
           ? game.clueOrder?.filter((c) => c !== 'review')
           : game.clueOrder;
       onUpdate({
         reviewClues: updated.length > 0 ? updated : undefined,
-        reviewClue: undefined, // clear old format
+        reviewClue: undefined,
         clueOrder: newClueOrder,
       });
     } else {
-      // Add this review to the list
+      const newSelIdx = selectedReviews.length;
+      const newMap = new Map(avToSel);
+      newMap.set(avIdx, newSelIdx);
+      setAvToSel(newMap);
       const updated = [...selectedReviews, { ...review }];
       const currentOrder = game.clueOrder ?? ['tags', 'details', 'desc'];
       const hasReviewInOrder = currentOrder.includes('review');
       const patch: Partial<SteamGame> = {
         reviewClues: updated,
-        reviewClue: undefined, // clear old format
+        reviewClue: undefined,
       };
       if (!hasReviewInOrder) {
         patch.clueOrder = [...currentOrder, 'review'];
@@ -328,18 +383,55 @@ export const RefineReviews: React.FC<RefineReviewsProps> = ({
     }
   };
 
-  const handleMoveUp = (index: number) => {
-    if (index <= 0) return;
+  const handleMoveUp = (avIdx: number) => {
+    const selIdx = avToSel.get(avIdx);
+    if (selIdx === undefined || selIdx <= 0) return;
     const updated = [...selectedReviews];
-    [updated[index - 1], updated[index]] = [updated[index], updated[index - 1]];
+    [updated[selIdx - 1], updated[selIdx]] = [
+      updated[selIdx],
+      updated[selIdx - 1],
+    ];
     onUpdate({ reviewClues: updated });
+    // Swap entries; keep orphan virtual keys in sync with their new selIdx.
+    const newMap = new Map(avToSel);
+    let otherAvIdx: number | undefined;
+    avToSel.forEach((sIdx, aIdx) => {
+      if (sIdx === selIdx - 1) otherAvIdx = aIdx;
+    });
+    if (otherAvIdx !== undefined) {
+      const newOtherKey = otherAvIdx < 0 ? -(selIdx + 1) : otherAvIdx;
+      const newThisKey = avIdx < 0 ? -(selIdx - 1 + 1) : avIdx;
+      newMap.delete(avIdx);
+      newMap.delete(otherAvIdx);
+      newMap.set(newOtherKey, selIdx);
+      newMap.set(newThisKey, selIdx - 1);
+    }
+    setAvToSel(newMap);
   };
 
-  const handleMoveDown = (index: number) => {
-    if (index >= selectedReviews.length - 1) return;
+  const handleMoveDown = (avIdx: number) => {
+    const selIdx = avToSel.get(avIdx);
+    if (selIdx === undefined || selIdx >= selectedReviews.length - 1) return;
     const updated = [...selectedReviews];
-    [updated[index], updated[index + 1]] = [updated[index + 1], updated[index]];
+    [updated[selIdx], updated[selIdx + 1]] = [
+      updated[selIdx + 1],
+      updated[selIdx],
+    ];
     onUpdate({ reviewClues: updated });
+    const newMap = new Map(avToSel);
+    let otherAvIdx: number | undefined;
+    avToSel.forEach((sIdx, aIdx) => {
+      if (sIdx === selIdx + 1) otherAvIdx = aIdx;
+    });
+    if (otherAvIdx !== undefined) {
+      const newOtherKey = otherAvIdx < 0 ? -(selIdx + 1) : otherAvIdx;
+      const newThisKey = avIdx < 0 ? -(selIdx + 1 + 1) : avIdx;
+      newMap.delete(avIdx);
+      newMap.delete(otherAvIdx);
+      newMap.set(newOtherKey, selIdx);
+      newMap.set(newThisKey, selIdx + 1);
+    }
+    setAvToSel(newMap);
   };
 
   const handleTextChange = (index: number, text: string) => {
@@ -366,10 +458,19 @@ export const RefineReviews: React.FC<RefineReviewsProps> = ({
     onUpdate({ reviewClues: updated });
   };
 
+  const handleVotedFunnyChange = (index: number, funny: number) => {
+    const updated = [...selectedReviews];
+    updated[index] = {
+      ...updated[index],
+      votedFunny: funny > 0 ? funny : undefined,
+    };
+    onUpdate({ reviewClues: updated });
+  };
+
   if (loadError) {
     return (
       <div className='text-xs text-gray-500 italic px-1'>
-        reviews.json not found — place it at <code>src/reviews.json</code> to
+        reviews.json not found - place it at <code>src/reviews.json</code> to
         enable review clue selection.
       </div>
     );
@@ -407,19 +508,57 @@ export const RefineReviews: React.FC<RefineReviewsProps> = ({
           </div>
         </div>
       )}
+      {/* Orphaned reviews: selected but no longer matching any available review
+           (e.g. timestamp was edited). Rendered above the list so always visible. */}
+      {Array.from(avToSel.entries())
+        .filter(([avIdx]) => avIdx < 0)
+        .sort((a, b) => a[1] - b[1])
+        .map(([avIdx, selIdx]) => {
+          const orphan = selectedReviews[selIdx];
+          if (!orphan) return null;
+          return (
+            <div key={avIdx}>
+              <div className='text-[10px] text-yellow-500 mb-1 px-1'>
+                ⚠ Edited review (timestamp changed - no longer in reviews.json)
+              </div>
+              <SteamReviewCard
+                review={orphan}
+                isSelected={true}
+                selectionIndex={selIdx + 1}
+                editableText={orphan.review}
+                editableHrs={orphan.authorPlaytimeHours}
+                editableTimestamp={orphan.timestamp}
+                editableVotesUp={orphan.votesUp}
+                editableVotedFunny={orphan.votedFunny}
+                onSelect={() => handleSelect(avIdx, orphan)}
+                onMoveUp={selIdx > 0 ? () => handleMoveUp(avIdx) : undefined}
+                onMoveDown={
+                  selIdx < selectedReviews.length - 1
+                    ? () => handleMoveDown(avIdx)
+                    : undefined
+                }
+                onTextChange={(t) => handleTextChange(selIdx, t)}
+                onHrsChange={(h) => handleHrsChange(selIdx, h)}
+                onTimestampChange={(ts) => handleTimestampChange(selIdx, ts)}
+                onVotesUpChange={(v) => handleVotesUpChange(selIdx, v)}
+                onVotedFunnyChange={(f) => handleVotedFunnyChange(selIdx, f)}
+              />
+            </div>
+          );
+        })}
       {availableReviews.map((review, idx) => {
-        const isSelected = isReviewSelected(review, selectedReviews);
-        const selectionIndex = selectedReviews.findIndex(
-          (r) =>
-            r.timestamp === review.timestamp && r.votedUp === review.votedUp,
-        );
+        const selectionIndex = avToSel.get(idx) ?? -1;
+        const isSelected = selectionIndex >= 0;
 
-        // Get the actual editable values from selected reviews array
-        const selectedReview = selectedReviews[selectionIndex];
+        // Get the actual editable values from the selected reviews array
+        const selectedReview = isSelected
+          ? selectedReviews[selectionIndex]
+          : undefined;
         const editableText = selectedReview?.review;
         const editableHrs = selectedReview?.authorPlaytimeHours;
         const editableTimestamp = selectedReview?.timestamp;
         const editableVotesUp = selectedReview?.votesUp;
+        const editableVotedFunny = selectedReview?.votedFunny;
 
         return (
           <SteamReviewCard
@@ -431,13 +570,10 @@ export const RefineReviews: React.FC<RefineReviewsProps> = ({
             editableHrs={editableHrs}
             editableTimestamp={editableTimestamp}
             editableVotesUp={editableVotesUp}
-            onSelect={() => handleSelect(review)}
-            onMoveUp={
-              isSelected ? () => handleMoveUp(selectionIndex) : undefined
-            }
-            onMoveDown={
-              isSelected ? () => handleMoveDown(selectionIndex) : undefined
-            }
+            editableVotedFunny={editableVotedFunny}
+            onSelect={() => handleSelect(idx, review)}
+            onMoveUp={isSelected ? () => handleMoveUp(idx) : undefined}
+            onMoveDown={isSelected ? () => handleMoveDown(idx) : undefined}
             onTextChange={
               isSelected
                 ? (t) => handleTextChange(selectionIndex, t)
@@ -454,6 +590,11 @@ export const RefineReviews: React.FC<RefineReviewsProps> = ({
             onVotesUpChange={
               isSelected
                 ? (v) => handleVotesUpChange(selectionIndex, v)
+                : undefined
+            }
+            onVotedFunnyChange={
+              isSelected
+                ? (f) => handleVotedFunnyChange(selectionIndex, f)
                 : undefined
             }
           />

@@ -309,6 +309,9 @@ export const RefinePage: React.FC = () => {
           lines.push(`        review: ${JSON.stringify(review.review)},`);
           lines.push(`        votedUp: ${JSON.stringify(review.votedUp)},`);
           lines.push(`        votesUp: ${review.votesUp},`);
+          if (review.votedFunny) {
+            lines.push(`        votedFunny: ${review.votedFunny},`);
+          }
           lines.push(
             `        weightedScore: ${JSON.stringify(review.weightedScore)},`,
           );

@@ -172,7 +172,7 @@ export const ClueScreenshot: React.FC<ClueScreenshotProps> = ({
                   style={{ border: '3px dashed rgba(255,255,255,0.50)' }}
                 />
               )}
-            {/* Zoom indicator — only on large slot when primary is showing with a focus point, hidden once complete */}
+            {/* Zoom indicator - only on large slot when primary is showing with a focus point, hidden once complete */}
             {largeSrc === primaryScreenshotUrl &&
               screenshotFocusPoint &&
               !isComplete && (

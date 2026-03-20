@@ -16,8 +16,15 @@ export const ClueContainer: React.FC<ClueContainerProps> = ({ caseFile }) => {
   const { dailyGame, censoredDescription, isComplete, showClues } =
     useSteamDetectiveGame();
 
-  const [showClue1, showClue2, showClue3, showClue4, showClue5, showClue6] =
-    showClues;
+  const [
+    showClue1,
+    showClue2,
+    showClue3,
+    showClue4,
+    showClue5,
+    showClue6,
+    showClue7 = false,
+  ] = showClues;
   const [primaryIsMain, setPrimaryIsMain] = useState(true);
 
   // When reviewClues/reviewClue is configured, it takes the secondary screenshot slot.
@@ -29,21 +36,25 @@ export const ClueContainer: React.FC<ClueContainerProps> = ({ caseFile }) => {
     (dailyGame.reviewClue ? [dailyGame.reviewClue] : []);
 
   // When swapped, flip both slots together so secondaryScreenshot prop never
-  // changes between defined and undefined — FsLightbox uses hook counts that
+  // changes between defined and undefined - FsLightbox uses hook counts that
   // depend on the sources array length, so keeping it stable prevents crashes.
+  // showClue7 is the dedicated secondary-screenshot slot used when the
+  // details+tags+review combo is active (hasReviewClue is true but secondary
+  // ss should still be shown independently).
+  const secondaryIsRevealed = showClue7 || (showClue5 && !hasReviewClue);
   const mainScreenshot =
-    !hasReviewClue && !primaryIsMain && dailyGame.secondaryScreenshot
+    secondaryIsRevealed && !primaryIsMain && dailyGame.secondaryScreenshot
       ? dailyGame.secondaryScreenshot
       : dailyGame.primaryScreenshot;
   const thumbnailScreenshot =
-    !hasReviewClue && dailyGame.secondaryScreenshot
+    secondaryIsRevealed && dailyGame.secondaryScreenshot
       ? primaryIsMain
         ? dailyGame.secondaryScreenshot
         : dailyGame.primaryScreenshot
       : undefined;
 
   const handleSwapScreenshots = () => {
-    if (showClue5 && !hasReviewClue && dailyGame.secondaryScreenshot) {
+    if (secondaryIsRevealed && dailyGame.secondaryScreenshot) {
       setPrimaryIsMain(!primaryIsMain);
     }
   };
@@ -72,9 +83,7 @@ export const ClueContainer: React.FC<ClueContainerProps> = ({ caseFile }) => {
           primaryScreenshotUrl={dailyGame.primaryScreenshot}
           show={showClue4}
           showSecondary={
-            showClue5 &&
-            !hasReviewClue &&
-            dailyGame.secondaryScreenshot !== undefined
+            secondaryIsRevealed && dailyGame.secondaryScreenshot !== undefined
           }
           blurScreenshotQuarter={dailyGame.blurScreenshotQuarter}
           screenshotLetterbox={dailyGame.screenshotLetterbox}
@@ -105,7 +114,7 @@ export const ClueContainer: React.FC<ClueContainerProps> = ({ caseFile }) => {
           show={showClue1}
           isComplete={isComplete}
         />
-        {/* Review clue(s) — canonical last position, replaces secondary screenshot */}
+        {/* Review clue(s) - canonical last position, replaces secondary screenshot */}
         {hasReviewClue && (
           <ClueReview
             reviews={reviewsForClue}

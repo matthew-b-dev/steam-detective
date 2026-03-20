@@ -38,7 +38,7 @@ const renderLineWithEditedMarker = (
   // split with a capturing group alternates: plain, match, plain, match, ...
   parts.forEach((part, idx) => {
     if (idx % 2 === 1) {
-      // captured match — the marker itself (with optional leading '...')
+      // captured match - the marker itself (with optional leading '...')
       result.push(
         <span key={`${lineKey}-efl${idx}`} style={editedForLengthStyle}>
           {part}
@@ -155,13 +155,25 @@ const ReviewCard: React.FC<{ review: Review; isComplete: boolean }> = ({
       </div>
 
       {/* Footer: helpful count */}
-      {review.votesUp > 0 && (
+      {(review.votesUp > 0 || (review.votedFunny ?? 0) > 0) && (
         <div
-          className='py-2 text-[11px] text-gray-400 border-t'
+          className='py-2 text-[11px] text-gray-400 border-t flex flex-col gap-0.5'
           style={{ borderColor: 'rgba(255,255,255,0.08)' }}
         >
-          {review.votesUp} {review.votesUp === 1 ? 'person' : 'people'} found
-          this review helpful
+          {(review.votedFunny ?? 0) > 0 && (
+            <span>
+              {review.votedFunny!.toLocaleString()}{' '}
+              {review.votedFunny === 1 ? 'person' : 'people'} found this review
+              funny
+            </span>
+          )}
+          {review.votesUp > 0 && (
+            <span>
+              {review.votesUp.toLocaleString()}{' '}
+              {review.votesUp === 1 ? 'person' : 'people'} found this review
+              helpful
+            </span>
+          )}
         </div>
       )}
     </div>

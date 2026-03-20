@@ -174,7 +174,7 @@ const renderCensoredLineWithEditedMarker = (
   // split with a capturing group alternates: plain, match, plain, match, ...
   parts.forEach((part, idx) => {
     if (idx % 2 === 1) {
-      // captured match — the marker itself (with optional leading '...')
+      // captured match - the marker itself (with optional leading '...')
       result.push(
         <span key={`${lineIdx}-efl${idx}`} style={editedForLengthStyle}>
           {part}

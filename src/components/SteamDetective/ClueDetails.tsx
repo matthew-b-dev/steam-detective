@@ -75,19 +75,65 @@ export const ClueDetails: React.FC<ClueDetailsProps> = ({
     return text.replace(/\|\|(.+?)\|\|/g, '$1');
   };
 
+  // Wrap parenthetical suffixes like " (South Korea)" in a subtler italic style.
+  // Operates on the already-processed display value (string or ReactElement[]).
+  const withStyledParens = (
+    display: string | ReactElement[],
+  ): string | ReactElement[] => {
+    const applyToString = (s: string): ReactElement[] => {
+      const match = s.match(/^(.*?)(\s*\([^)]+\)\s*)$/);
+      if (!match) return [<span key='full'>{s}</span>];
+      return [
+        <span key='main'>{match[1]}</span>,
+        <span key='paren' className='text-[#8a9ba8] italic'>
+          {match[2]}
+        </span>,
+      ];
+    };
+
+    if (typeof display === 'string') {
+      return applyToString(display);
+    }
+    // For ReactElement arrays (censored mode): check if the last element is a
+    // plain text span whose content ends with a parenthetical and style it.
+    if (display.length === 0) return display;
+    const last = display[display.length - 1];
+    const lastProps = last.props as { children?: unknown };
+    if (last.type !== 'span' || typeof lastProps.children !== 'string') {
+      return display;
+    }
+    const lastText: string = lastProps.children;
+    const match = lastText.match(/^(.*?)(\s*\([^)]+\)\s*)$/);
+    if (!match) return display;
+    const styled = [
+      ...display.slice(0, -1),
+      <span key={last.key}>{match[1]}</span>,
+      <span key={`${last.key}-paren`} className='text-[#8a9ba8] italic'>
+        {match[2]}
+      </span>,
+    ];
+    return styled;
+  };
+
   // Determine what to display for release date, developer and publisher
-  const displayReleaseDate = isComplete
-    ? getUncensoredText(releaseDate)
-    : renderCensoredText(releaseDate);
+  const displayReleaseDate = withStyledParens(
+    isComplete
+      ? getUncensoredText(releaseDate)
+      : renderCensoredText(releaseDate),
+  );
   const displayEarlyAccessDate = earlyAccessDate
-    ? isComplete
-      ? getUncensoredText(earlyAccessDate)
-      : renderCensoredText(earlyAccessDate)
+    ? withStyledParens(
+        isComplete
+          ? getUncensoredText(earlyAccessDate)
+          : renderCensoredText(earlyAccessDate),
+      )
     : null;
   const displayOriginalReleaseDate = originalReleaseDate
-    ? isComplete
-      ? getUncensoredText(originalReleaseDate)
-      : renderCensoredText(originalReleaseDate)
+    ? withStyledParens(
+        isComplete
+          ? getUncensoredText(originalReleaseDate)
+          : renderCensoredText(originalReleaseDate),
+      )
     : null;
   const displayDeveloper = isComplete
     ? getUncensoredText(developer)
