@@ -1,2 +1,5 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+src/steam_game_detail.ts linguist-generated
+src/dummy_games.ts linguist-generated
+src/demos.ts linguist-generated

@@ -14581,7 +14581,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/440/ss_e3aedb2ab36bba8cfe611b1e0eaa807e4bb2d742.600x338.jpg',
     shortDescription:
       'Nine distinct classes provide a broad range of tactical abilities and personalities. Constantly updated with new game modes, maps, equipment and, most importantly, hats!',
-    releaseDate: '10 Oct, 2007',
+    releaseDate: 'Oct 10, 2007',
     developer: 'Valve',
     publisher: 'Valve',
     tags: [],
@@ -15661,7 +15661,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/21000/0000005468.600x338.jpg',
     shortDescription:
       'When all the villains in Arkham Asylum team up and break loose, only the dynamic duo is bold enough to take them on to save Gotham City. The fun of ||LEGO||, the drama of ||Batman|| and the uniqueness of the combination makes for a comical and exciting adventure in ||LEGO Batman: The Videogame||.',
-    releaseDate: '29 Sep, 2008',
+    releaseDate: 'Sep 29, 2008',
     developer: "Traveller's Tales",
     publisher: 'Warner Bros. Interactive Entertainment',
     tags: [],
@@ -17024,7 +17024,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/67370/ss_282ccfcd2bb1fd2f7d5b26cb504404fed7266805.600x338.jpg',
     shortDescription:
       'An intense first person shooter that delivers a twisted and gripping narrative of tragedy, modern crime drama, and supernatural horror.',
-    releaseDate: '9 Feb, 2012',
+    releaseDate: 'Feb 9, 2012',
     developer: 'Digital Extremes',
     publisher: '2K',
     tags: [],
@@ -17949,7 +17949,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/208650/ss_4c9d5fb849b1a7169184a37db000919b276056fe.600x338.jpg',
     shortDescription:
       "||Batman: Arkham Knight|| brings the award-winning ||Arkham|| trilogy from Rocksteady Studios to its epic conclusion. Developed exclusively for New-Gen platforms, ||Batman: Arkham Knight|| introduces Rocksteady's uniquely designed version of the Batmobile.",
-    releaseDate: '23 Jun, 2015',
+    releaseDate: 'Jun 23, 2015',
     developer: 'Rocksteady Studios',
     publisher: 'WB Games',
     tags: [],
@@ -17986,7 +17986,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/209000/ss_1f444402878ebdef6d54386d2a0cdfacbc7b4ee4.600x338.jpg',
     shortDescription:
       'As of December 4, 2016, the online services portion of ||Batman: Arkham Origins|| has been retired. We thank those that have joined us to battle. The Single player campaign may still be played and enjoyed offline. For any questions relating to ||Batman: Arkham Origins||, please contact WB Games customer service.',
-    releaseDate: '24 Oct, 2013',
+    releaseDate: 'Oct 24, 2013',
     developer: 'WB Games Montreal',
     publisher: 'Warner Bros. Interactive Entertainment',
     tags: [],
@@ -18511,7 +18511,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/220440/ss_4ee2134ba7a118241db88f211660d28bedfc062c.600x338.jpg',
     shortDescription:
       "In this retelling of Dante's origin story which is set against a contemporary backdrop, ||DmC|| ||Devil|| ||May|| ||Cry|| retains the stylish action.",
-    releaseDate: '24 Jan, 2013',
+    releaseDate: 'Jan 24, 2013',
     developer: 'Ninja Theory',
     publisher: 'Capcom',
     tags: [],
@@ -19292,7 +19292,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/230290/0725d96f2fb6b74cc79eba09bbd6707dae05e523/ss_0725d96f2fb6b74cc79eba09bbd6707dae05e523.600x338.jpg',
     shortDescription:
       'Create &amp; destroy on an unimaginable scale with a realistic physics-based space simulator. Explore the beauty of our universe and the fragility of our planet. Use science to bend the laws of gravity, collide planets, boil away oceans, fire epic space lasers, and customize your universe.',
-    releaseDate: '24 Aug, 2015',
+    releaseDate: 'Aug 24, 2015',
     developer: 'Giant Army',
     publisher: 'Giant Army',
     tags: [],
@@ -20754,7 +20754,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/251150/ss_2ee548710d945a0d36a036b178b6bdac9ddf4cad.600x338.jpg',
     shortDescription:
       "Hailed as one of the largest, longest and most meticulously detailed turn-based JRPG series of all time, this first chapter in the ongoing ||Trails|| saga sets the stage for what's quickly become Ys developer Nihon Falcom's most popular and best-selling franchise in their entire 30+ year history.",
-    releaseDate: '29 Jul, 2014',
+    releaseDate: 'Jul 29, 2014',
     developer: 'Nihon Falcom',
     publisher: 'XSEED Games',
     tags: [],
@@ -21017,7 +21017,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/254700/ss_967184a307f57c18fbe140c23eaf137ba26b5282.600x338.jpg',
     shortDescription:
       "(Release: 2014) Special agent Leon S. Kennedy is sent on a mission to rescue the U.S. President's daughter who has been kidnapped.",
-    releaseDate: '27 Feb, 2014',
+    releaseDate: 'Feb 27, 2014',
     developer: 'Capcom',
     publisher: 'Capcom',
     tags: [],
@@ -21165,7 +21165,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/257850/ss_19c973259b736f14c4541ba044f3761b39a18737.600x338.jpg',
     shortDescription:
       'Explore a beautiful, vast and ruined world riddled with dangers and lost technologies.',
-    releaseDate: '31 Mar, 2016',
+    releaseDate: 'Mar 31, 2016',
     developer: 'Heart Machine',
     publisher: 'Heart Machine',
     tags: [],
@@ -21239,7 +21239,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/261030/ss_454381383bf829f3a93f964a3b66192d129fa92e.600x338.jpg',
     shortDescription:
       '||The Walking Dead: Season Two|| continues the story of Clementine, a young girl orphaned by the undead apocalypse. Left to fend for herself, she has been forced to learn how to survive in a world gone mad.',
-    releaseDate: '17 Dec, 2013',
+    releaseDate: 'Dec 17, 2013',
     developer: 'Telltale Games',
     publisher: 'Skybound Games',
     tags: [],
@@ -21350,7 +21350,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/265550/ss_dc6fede140a9897dba7adae5aa39a50d49cfa77d.600x338.jpg',
     shortDescription:
       'Explore the zombie-infested city of Los Perdidos, and find a way to escape before a military strike wipes the entire city, and everyone in it, off the map.',
-    releaseDate: '5 Sep, 2014',
+    releaseDate: 'Sep 5, 2014',
     developer: 'Capcom Game Studio Vancouver',
     publisher: 'Capcom',
     tags: [],
@@ -21498,7 +21498,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/268050/ss_c24855357d250b23a1912ed85fc126451e188284.600x338.jpg',
     shortDescription:
       'Developed by Shinji Mikami -- creator of the seminal Resident ||Evil|| series -- and the talented team at Tango Gameworks, ||The Evil Within|| embodies the meaning of pure survival horror. Highly-crafted environments, horrifying anxiety, and an intricate story are combined to create an immersive world that will bring you to the height of tension.',
-    releaseDate: '13 Oct, 2014',
+    releaseDate: 'Oct 13, 2014',
     developer: 'Tango Gameworks',
     publisher: 'Bethesda Softworks',
     tags: [],
@@ -21609,7 +21609,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/269950/ss_5bce5e0885835e7bd244edbc836edeb4ddba3f48.600x338.jpg',
     shortDescription:
       "The future of flight simulation is now! ||X-Plane 11|| is the detailed, realistic, and modern simulator you've been waiting for. Intuitive user interface, 3-D cockpits, new effects, 3-D sound, living airports and world-wide scenery.",
-    releaseDate: '30 Mar, 2017',
+    releaseDate: 'Mar 30, 2017',
     developer: 'Laminar Research',
     publisher: 'Laminar Research',
     tags: [],
@@ -23089,7 +23089,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/304430/ss_b15d0a5c037198b5b9db6a82fedf5018f1b43de5.600x338.jpg',
     shortDescription:
       'Hunted and alone, a boy finds himself drawn into the center of a dark project. ||INSIDE|| is a dark, narrative-driven platformer combining intense action with challenging puzzles. It has been critically acclaimed for its moody art style, ambient soundtrack and unsettling atmosphere.',
-    releaseDate: '7 Jul, 2016',
+    releaseDate: 'Jul 7, 2016',
     developer: 'Playdead',
     publisher: 'Playdead',
     tags: [],
@@ -23459,7 +23459,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/311690/ss_9d3f304b18e8cd1cf6ac4a886bec474e0b677800.600x338.jpg',
     shortDescription:
       "||Enter the Gungeon|| is a bullet hell dungeon crawler following a band of misfits seeking to shoot, loot, dodge roll and table-flip their way to personal absolution by reaching the legendary ||Gungeon||'s ultimate treasure: the gun that can kill the past.",
-    releaseDate: '5 Apr, 2016',
+    releaseDate: 'Apr 5, 2016',
     developer: 'Dodge Roll',
     publisher: 'Devolver Digital',
     tags: [],
@@ -23871,7 +23871,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/320240/ss_aa92ec09d1195bffd80c773f18af98a8f3e2e874.600x338.jpg',
     shortDescription:
       'From the independent studio that brought you Contrast, ||We Happy Few|| is an action/adventure game set in a drug-fuelled, retrofuturistic city in an alternative 1960s England. Hide, fight and conform your way out of this delusional, Joy-obsessed world.',
-    releaseDate: '10 Aug, 2018',
+    releaseDate: 'Aug 10, 2018',
     developer: 'Compulsion Games',
     publisher: 'Gearbox Publishing',
     tags: [],
@@ -24357,7 +24357,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/332950/ss_c68d367e3fabaeceecc110538d0033bf00d01653.600x338.jpg',
     shortDescription:
       "Death awaits you in ||Dark Deception||, a story-driven first-person horror maze game. There's nowhere to hide &amp; nowhere to catch your breath. Run or die - it's your choice. Trapped in a realm of nightmarish mazes with a mysterious woman, your only hope of survival is to find a way to escape.",
-    releaseDate: '26 Sep, 2018',
+    releaseDate: 'Sep 26, 2018',
     developer: 'Glowstick Entertainment',
     publisher: 'Glowstick Entertainment',
     tags: [],
@@ -24736,7 +24736,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/339340/ss_b0199743726c2c5a2ce61069dce8e106a80add04.600x338.jpg',
     shortDescription:
       "Before the mansion, before the destruction of Raccoon City, there was ||Resident Evil 0||. Now remastered with improved visuals and sounds, as well as the all-new Wesker Mode, there's never been a better time to experience the origins of the ||Resident|| ||Evil|| story.",
-    releaseDate: '19 Jan, 2016',
+    releaseDate: 'Jan 19, 2016',
     developer: 'CAPCOM Co., Ltd.',
     publisher: 'CAPCOM Co., Ltd.',
     tags: [],
@@ -24847,7 +24847,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/341940/ss_a5da230a02cb74e50890ea3fad469e99a27c42a5.600x338.jpg',
     shortDescription:
       '||Hatred|| is a violent twin-stick shooter, in which you take the role of The Antagonist fighting against all of humanity.',
-    releaseDate: '1 Jun, 2015',
+    releaseDate: 'Jun 1, 2015',
     developer: 'Destructive Creations',
     publisher: 'Destructive Creations',
     tags: [],
@@ -25437,7 +25437,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/362930/ss_410d650eac6ef84fea23846319c3836be1b77544.600x338.jpg',
     shortDescription:
       'Join ||Garfield|| and his friends in the funniest fast and fur-ious game! What character do you want to play with? ||Garfield||, Odie, Jon, Nermal... you choose! Take part in no-holds-barred crazy races.',
-    releaseDate: '16 Oct, 2015',
+    releaseDate: 'Oct 16, 2015',
     developer: 'Artefacts Studio',
     publisher: 'Microids',
     tags: [],
@@ -25885,7 +25885,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/368340/ss_7fecc64f6470652a1464371fa9e7a767a84fd95d.600x338.jpg',
     shortDescription:
       'A retro-inspired 2D Action RPG set in the distant future. ||CrossCode|| combines 16-bit SNES-style graphics with butter-smooth physics, a fast-paced combat system, and engaging puzzle mechanics, served with a gripping sci-fi story.',
-    releaseDate: '20 Sep, 2018',
+    releaseDate: 'Sep 20, 2018',
     developer: 'Radical Fish Games',
     publisher: 'Deck13',
     tags: [],
@@ -26404,7 +26404,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/383870/ss_c7e16bc8d5a6d40ab1f7c339395d26d8f6eb57ff.600x338.jpg',
     shortDescription:
       '||Firewatch|| is a single-player first-person mystery set in the Wyoming wilderness, where your only emotional lifeline is the person on the other end of a ||handheld|| radio.',
-    releaseDate: '9 Feb, 2016',
+    releaseDate: 'Feb 9, 2016',
     developer: 'Campo Santo',
     publisher: 'Panic',
     tags: [],
@@ -26593,7 +26593,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/386940/ss_808712896e499b291b913abf5cf30c736f0d6ea0.600x338.jpg',
     shortDescription:
       '||Ultimate Chicken Horse|| is a party platformer game where you build the level as you play, placing traps and hazards to screw your friends over, but trying not to screw yourself.',
-    releaseDate: '4 Mar, 2016',
+    releaseDate: 'Mar 4, 2016',
     developer: 'Clever Endeavour Games',
     publisher: 'Clever Endeavour Games',
     tags: [],
@@ -26741,7 +26741,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/391220/ss_be8bcd75e7dbf8cf7d8c861e15c12211b39f160d.600x338.jpg',
     shortDescription:
       "||Rise of the Tomb Raider||: 20 Year Celebration includes the base game and Season Pass featuring all-new content. Explore Croft Manor in the new “Blood Ties” story, then defend it against a zombie invasion in “Lara's Nightmare”.",
-    releaseDate: '9 Feb, 2016',
+    releaseDate: 'Feb 9, 2016',
     developer: 'Crystal Dynamics',
     publisher: 'Crystal Dynamics',
     tags: [],
@@ -26889,7 +26889,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/393080/ss_2b4d64fa2d2bf220b977313d0dfddc8cdb2a69d8.600x338.jpg',
     shortDescription:
       'One of the most critically-acclaimed games in history, ||Call|| of ||Duty||: ||Modern|| ||Warfare|| is back, remastered in true high-definition, featuring improved textures, physically based rendering, high-dynamic range lighting and much more.',
-    releaseDate: '27 Jul, 2017',
+    releaseDate: 'Jul 27, 2017',
     developer: 'Raven Software',
     publisher: 'Activision',
     tags: [],
@@ -27078,7 +27078,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/396750/ss_5832d8465bb172d3a05b554138cf12db9fde56a6.600x338.jpg',
     shortDescription:
       '||EVERSPACE|| combines fast-paced combat with roguelike elements, great visuals and a captivating story. It takes you on a challenging journey through an ever-changing, beautifully crafted universe full of surprises. Shoot, craft and loot your way to victory while the odds are stacked against you.',
-    releaseDate: '25 May, 2017',
+    releaseDate: 'May 25, 2017',
     developer: 'ROCKFISH Games',
     publisher: 'ROCKFISH Games',
     tags: [],
@@ -27522,7 +27522,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/410340/ss_9309490d78104abbaa60276966537e6ff0a82666.600x338.jpg',
     shortDescription:
       '||Liftoff|| is a drone simulator that translates the rush of first-person view drone flight to the digital world. Join the biggest community for virtual ||FPV|| racing and freestyle!',
-    releaseDate: '13 Sep, 2018',
+    releaseDate: 'Sep 13, 2018',
     developer: 'LuGus Studios',
     publisher: 'LuGus Studios',
     tags: [],
@@ -27853,7 +27853,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/420290/ss_d40660309387b09a99d3901cae1d15cda3a72360.600x338.jpg',
     shortDescription:
       '||Blackwake|| is a multiplayer naval FPS focused on teamwork and cooperation. Fire the cannons, sink enemy ships or board them with firearms and steel.',
-    releaseDate: '19 Feb, 2020',
+    releaseDate: 'Feb 19, 2020',
     developer: 'Mastfire Studios Pty Ltd',
     publisher: 'Mastfire Studios Pty Ltd',
     tags: [],
@@ -27890,7 +27890,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/420530/ss_8a8639313a9cfc5d39e17fad5fe4b819379f1101.600x338.jpg',
     shortDescription:
       '||OneShot|| is a surreal ||top down|| Puzzle/Adventure game with unique gameplay capabilities. You are to guide a child through a mysterious world on a mission to restore its long-dead sun. The world knows you exist.',
-    releaseDate: '8 Dec, 2016',
+    releaseDate: 'Dec 8, 2016',
     developer: 'Future Cat LLC',
     publisher: 'KOMODO',
     tags: [],
@@ -28154,7 +28154,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/427730/ss_7a1ac45b999abdebab725939978a6a7c3c66f614.600x338.jpg',
     shortDescription:
       "Who's ||Your|| ||Daddy|| is a casual multiplayer game featuring a clueless father attempting to prevent his infant son from certain death. Play with up to 7 of your friends, and test your parenting skills in a competitive setup with wacky physics and over 67 potentially ominous household items.",
-    releaseDate: '13 May, 2016',
+    releaseDate: 'May 13, 2016',
     developer: 'Evil Tortilla Games',
     publisher: 'Evil Tortilla Games',
     tags: [],
@@ -28228,7 +28228,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/429050/ss_5f0333abcf1355303d8c867e978d332849fe7330.600x338.jpg',
     shortDescription:
       'Hunt and eat other fish - simply, grow into larger beasts!',
-    releaseDate: '8 Jan, 2016',
+    releaseDate: 'Jan 8, 2016',
     developer: 'Old B1ood',
     publisher: 'Greens s.r.o.',
     tags: [],
@@ -28894,7 +28894,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/456750/ss_07e2fd645fe4b94a64f4ca41f0f82fdb59b19637.600x338.jpg',
     shortDescription:
       'Lured to a remote island, you find yourself confined within the rooms of an ominous mansion. You must draw upon all your puzzle-solving ability to navigate a series of trials devised by a mysterious figure known only as “The Craftsman”. Do you have what it takes to escape?',
-    releaseDate: '13 Nov, 2018',
+    releaseDate: 'Nov 13, 2018',
     developer: 'Fireproof Games',
     publisher: 'Fireproof Games',
     tags: [],
@@ -28931,7 +28931,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/460790/ss_438168c4effdc8a3affef680e33efeb52fc372eb.600x338.jpg',
     shortDescription:
       "PlatinumGames' universally acclaimed action masterpiece finally comes to PC. Experience the over-the-top stylish action in 60fps at unlocked HD resolutions. The definitive way to play: being bad never felt so good.",
-    releaseDate: '11 Apr, 2017',
+    releaseDate: 'Apr 11, 2017',
     developer: 'PlatinumGames',
     publisher: 'SEGA',
     tags: [],
@@ -29005,7 +29005,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/460950/ss_d4f8ef350ac44c096f8137208c381cac31e68242.600x338.jpg',
     shortDescription:
       '||Katana ZERO|| is a stylish neo-noir, action-platformer featuring breakneck action and instant-death combat. Slash, dash, and manipulate time to unravel your past in a beautifully brutal acrobatic display.',
-    releaseDate: '18 Apr, 2019',
+    releaseDate: 'Apr 18, 2019',
     developer: 'Askiisoft',
     publisher: 'Devolver Digital',
     tags: [],
@@ -29116,7 +29116,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/464060/ss_e2bef88dbfb5af9cbf2fefb2ffc18eb7d2631d60.600x338.jpg',
     shortDescription:
       '||RUINER|| is a brutal action shooter set in the year 2091 in the cyber metropolis Rengkok. A wired psychopath lashes out against a corrupt system to uncover the truth and retrieve his kidnapped brother under the guidance of a secretive hacker friend.',
-    releaseDate: '26 Sep, 2017',
+    releaseDate: 'Sep 26, 2017',
     developer: 'Reikon Games',
     publisher: 'Devolver Digital',
     tags: [],
@@ -29190,7 +29190,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/470220/ss_31903bb595a99d94dfd953300d3ddd6cf120a82b.600x338.jpg',
     shortDescription:
       '||UNO|| is the iconic card game reimagined with a large variety of gameplay and customization options. Play solo or with friends, personalize your experience from rules to cosmetics, and try the Happy Hour!',
-    releaseDate: '3 Jan, 2017',
+    releaseDate: 'Jan 3, 2017',
     developer: 'Ubisoft Entertainment',
     publisher: 'Ubisoft Entertainment',
     tags: [],
@@ -29486,7 +29486,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/488790/ss_c3be86ef593551a05364c6b0d9c1b0446c18415b.600x338.jpg',
     shortDescription:
       "From the creators of ||South|| ||Park||, Trey Parker and Matt Stone, comes ||South Park: The Fractured But Whole||, a sequel to 2014's award-winning ||South|| ||Park||: The Stick of Truth.",
-    releaseDate: '16 Oct, 2017',
+    releaseDate: 'Oct 16, 2017',
     developer: 'Ubisoft San Francisco',
     publisher: 'Ubisoft',
     tags: [],
@@ -29785,7 +29785,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/493520/ss_9d8761c261598880f5e4eec4975276ff72e4e7d9.600x338.jpg',
     shortDescription:
       '||GTFO|| is a hardcore cooperative horror shooter that throws you from gripping suspense to explosive action in a heartbeat. Stealth, strategy, and teamwork are necessary to survive in your deadly, underground prison. Work together or die together.',
-    releaseDate: '9 Dec, 2021',
+    releaseDate: 'Dec 9, 2021',
     developer: '10 Chambers',
     publisher: '10 Chambers',
     tags: [],
@@ -30081,7 +30081,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/503560/ss_61cf91a927908f98a5d668522e20cfa48d9add0a.600x338.jpg',
     shortDescription:
       'Game about the difficult work of people that manage emergency lines and services. Answer incoming calls and react properly - give first aid instructions, advise, dispatch correct number of firemen / police / ambulances, or sometimes - just ignore the call. Play on ANY CITY in the world!',
-    releaseDate: '24 Feb, 2017',
+    releaseDate: 'Feb 24, 2017',
     developer: 'Jutsu Games',
     publisher: 'Games Operators',
     tags: [],
@@ -30118,7 +30118,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/504230/ss_03bfe6bd5ddac7f747c8d2aa1a4f82cfd53c6dcb.600x338.jpg',
     shortDescription:
       'Help Madeline survive her inner demons on her journey to the top of ||Celeste|| Mountain, in this super-tight platformer from the creators of TowerFall. Brave hundreds of hand-crafted challenges, uncover devious secrets, and piece together the mystery of the mountain.',
-    releaseDate: '25 Jan, 2018',
+    releaseDate: 'Jan 25, 2018',
     developer: 'Maddy Makes Games Inc.',
     publisher: 'Maddy Makes Games Inc.',
     tags: [],
@@ -30169,7 +30169,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/505230/ss_072c820ef96365d9f333f7e67be4ba660186bf54.600x338.jpg',
     shortDescription:
       '||Pathologic 2|| is a groundbreaking open-world horror RPG. Resist the plague. Make medicine. Heal people. Perform an autopsy. Trade to get what you need. Fight and kill if necessary. Survive. Struggle with an outbreak in a secluded rural town that is rapidly turning into hell.',
-    releaseDate: '23 May, 2019',
+    releaseDate: 'May 23, 2019',
     developer: 'Ice-Pick Lodge',
     publisher: 'tinyBuild',
     tags: [],
@@ -30317,7 +30317,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/517630/ss_9e6fe9056d9f63c98fd9e0312f44a20df91dfd23.600x338.jpg',
     shortDescription:
       'Rogue agent Rico Rodriguez journeys to Solis, a huge South American world home of conflict, oppression and extreme weather conditions. Strap into your wingsuit, equip your fully customizable grappling hook, and get ready to bring the thunder!',
-    releaseDate: '4 Dec, 2018',
+    releaseDate: 'Dec 4, 2018',
     developer: 'Avalanche Studios',
     publisher: 'Square Enix',
     tags: [],
@@ -30687,7 +30687,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/532210/ss_1fd2aad8a9192812c737b9c14205ac1b8c233e2b.600x338.jpg',
     shortDescription:
       "After a tragic incident, brothers Sean and Daniel Diaz run away from home. Fearing the police, and dealing with Daniel's new telekinetic power, the boys head to Mexico. Each stop on their journey brings new friends and new challenges.",
-    releaseDate: '26 Sep, 2018',
+    releaseDate: 'Sep 26, 2018',
     developer: 'DONTNOD Entertainment',
     publisher: 'Square Enix',
     tags: [],
@@ -30798,7 +30798,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/536270/ss_a04daacab5e13d844c1473b106a98bdb439de732.600x338.jpg',
     shortDescription:
       'Survive your evolution in Neogene Africa starting 10 million years ago. ||Ancestors: The Humankind Odyssey|| is a third-person open world survival game where you Explore, Expand, and Evolve to advance your clan to the next generation in the exciting new adventure from Panache Digital Games.',
-    releaseDate: '27 Aug, 2020',
+    releaseDate: 'Aug 27, 2020',
     developer: 'Panache Digital Games',
     publisher: 'Private Division',
     tags: [],
@@ -31504,7 +31504,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/568220/ss_71db0d954dcec5585f201a781db6dac2df041b85.600x338.jpg',
     shortDescription:
       'A roguelite monster-management simulation inspired by the likes of the SCP Foundation, Cabin in the Woods, and Warehouse 13. Order your employees to perform work with the creatures and watch as it unfolds; harness greater energy, and expand the facility',
-    releaseDate: '9 Apr, 2018',
+    releaseDate: 'Apr 9, 2018',
     developer: 'ProjectMoon',
     publisher: 'ProjectMoon',
     tags: [],
@@ -31578,7 +31578,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/570940/ss_92b2ba470cbfdb8839b649b3f478e5531dd81a17.600x338.jpg',
     shortDescription:
       'Then, there was fire. Re-experience the critically acclaimed, genre-defining game that started it all. Beautifully remastered, return to Lordran in stunning high-definition detail running at 60fps.',
-    releaseDate: '23 May, 2018',
+    releaseDate: 'May 23, 2018',
     developer: 'QLOC',
     publisher: 'FromSoftware, Inc.',
     tags: [],
@@ -31726,7 +31726,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/578650/ss_4fe162d9752bc89c2de14ba549ffb6a6260b09aa.600x338.jpg',
     shortDescription:
       "||The Outer Worlds|| is an award-winning single-player RPG from Obsidian Entertainment and Private Division. As you explore a space colony, the character you decide to become will determine how this player-driven story unfolds. In the colony's corporate equation, you are the unplanned variable.",
-    releaseDate: '23 Oct, 2020',
+    releaseDate: 'Oct 23, 2020',
     developer: 'Obsidian Entertainment',
     publisher: 'Private Division',
     tags: [],
@@ -31925,7 +31925,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/584400/ss_93ee106db863c16e00989ad9d51bcbea4af91ab0.600x338.jpg',
     shortDescription:
       '||Sonic Mania|| is an all-new adventure with ||Sonic||, Tails, and Knuckles full of unique bosses, rolling 2D landscapes, and fun classic gameplay.',
-    releaseDate: '29 Aug, 2017',
+    releaseDate: 'Aug 29, 2017',
     developer: 'Christian Whitehead',
     publisher: 'SEGA',
     tags: [],
@@ -32113,7 +32113,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/589360/ss_852c54214c20932dd085eea36692800c28a7beaa.600x338.jpg',
     shortDescription:
       'Join the young king Evan as he sets out on an epic quest to found a new kingdom and, with the help of some new friends, unite his world, saving its people from a terrible evil.',
-    releaseDate: '23 Mar, 2018',
+    releaseDate: 'Mar 23, 2018',
     developer: 'LEVEL5 Inc.',
     publisher: 'BANDAI NAMCO Entertainment',
     tags: [],
@@ -32261,7 +32261,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/594650/77321e59cbedd4bb9c1bab532a9ca02ddd89eb7a/ss_77321e59cbedd4bb9c1bab532a9ca02ddd89eb7a.600x338.jpg',
     shortDescription:
       '||Hunt: Showdown 1896|| is a new era of the addictively unforgiving extraction shooter. In corrupted backwaters lost to history, fight back alone – or with friends – against timeless evil. Twisted monsters and other ruthless Hunters stand between you and your Bounty. Risk everything as ||Hunt|| consumes you',
-    releaseDate: '27 Aug, 2019',
+    releaseDate: 'Aug 27, 2019',
     developer: 'Crytek',
     publisher: 'Crytek',
     tags: [],
@@ -32520,7 +32520,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/601840/ss_b3eae62fa975c76ddfa187e3c002a005f234b24a.600x338.jpg',
     shortDescription:
       '||Griftlands|| is a deck-building roguelite where you negotiate, fight, steal or otherwise persuade others to get your way. Every decision is important, be it the jobs you take, the friends you make, or the cards you collect.',
-    releaseDate: '1 Jun, 2021',
+    releaseDate: 'Jun 1, 2021',
     developer: 'Klei Entertainment',
     publisher: 'Klei Entertainment',
     tags: [],
@@ -32706,7 +32706,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/607080/ss_1b76e40ca9d92bfe8a51ec0603460641229676d4.600x338.jpg',
     shortDescription:
       'Combining quirky missions and mysterious conspiracies, ||Psychonauts 2|| is a platform-adventure game with cinematic style and tons of customizable psychic powers.',
-    releaseDate: '24 Aug, 2021',
+    releaseDate: 'Aug 24, 2021',
     developer: 'Double Fine Productions',
     publisher: 'Xbox Game Studios',
     tags: [],
@@ -32780,7 +32780,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/610370/ss_63e3744aef636d584b7d4cd8dc98b2e6629192b2.600x338.jpg',
     shortDescription:
       '||Desperados III|| is a story-driven, hardcore tactical stealth game, set in a ruthless Wild West scenario. Play smart if you want to succeed. A good plan can make the difference between survival and finding yourself at the business end of a pistol.',
-    releaseDate: '16 Jun, 2020',
+    releaseDate: 'Jun 16, 2020',
     developer: 'Mimimi Games',
     publisher: 'THQ Nordic',
     tags: [],
@@ -33150,7 +33150,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/627270/ss_6c134ed979e8abf86364bf4a3d32e35dde16b696.600x338.jpg',
     shortDescription:
       'Build and power up the ultimate version of your favourite DC legends in ||INJUSTICE 2||. This is your Legend. Your Journey. Your ||Injustice||.',
-    releaseDate: '30 Nov, 2017',
+    releaseDate: 'Nov 30, 2017',
     developer: 'NetherRealm Studios',
     publisher: 'WB Games',
     tags: [],
@@ -33224,7 +33224,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/629730/ss_5d241a6573de42453029c4dbb06130e7d69734bc.600x338.jpg',
     shortDescription:
       '||Blade|| &amp; ||Sorcery|| is a built-for-VR medieval fantasy with full physics driven melee, ranged and magic combat. Become a powerful warrior, ranger or sorcerer and devastate your enemies.',
-    releaseDate: '17 Jun, 2024',
+    releaseDate: 'Jun 17, 2024',
     developer: 'WarpFrog',
     publisher: 'WarpFrog',
     tags: [],
@@ -34220,7 +34220,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/675260/ss_e38946bf5460e24db97d4629b29d1811eb92e24d.600x338.jpg',
     shortDescription:
       'In this latest chapter from the award-winning studio behind ||Batman|| - The ||Telltale|| ||Series||, both Bruce Wayne and ||Batman|| will be forced into precarious new roles. The Riddler has returned to terrorize Gotham City, but his gruesome puzzles merely foreshadow an even greater crisis.',
-    releaseDate: '8 Aug, 2017',
+    releaseDate: 'Aug 8, 2017',
     developer: 'Telltale',
     publisher: 'Telltale',
     tags: [],
@@ -34442,7 +34442,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/686810/ss_9b0d65c3c557fe8de37faed89582a6ddad90895e.600x338.jpg',
     shortDescription:
       'Join the ever expanding experience of ||Hell Let Loose|| - a hardcore World War Two first person shooter with epic battles of 100 players with infantry, tanks, artillery, a dynamically shifting front line and a unique resource based RTS-inspired meta-game.',
-    releaseDate: '27 Jul, 2021',
+    releaseDate: 'Jul 27, 2021',
     developer: 'Expression Games',
     publisher: 'Team17',
     tags: [],
@@ -34900,7 +34900,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/707030/ss_f48ed178d90e7604269097de7fcfd08245c91a08.600x338.jpg',
     shortDescription:
       "||POSTAL 4: No Regerts|| is a satirical and outrageous comedic open world first person shooter and the long-awaited true sequel to what's been fondly dubbed as &quot;The Worst Game Ever&quot;, ||POSTAL|| 2!",
-    releaseDate: '20 Apr, 2022',
+    releaseDate: 'Apr 20, 2022',
     developer: 'Running With Scissors',
     publisher: 'Running With Scissors',
     tags: [],
@@ -35233,7 +35233,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/736260/ss_9eadb1cdc09f574d49d32a722d7bda5813c96a64.600x338.jpg',
     shortDescription:
       '||Baba Is You|| is a puzzle game where the rules you have to follow are present as blocks you can interact with. By manipulating them, you can change how the game works, repurpose things you find in the levels and cause surprising interactions!',
-    releaseDate: '13 Mar, 2019',
+    releaseDate: 'Mar 13, 2019',
     developer: 'Hempuli Oy',
     publisher: 'Hempuli Oy',
     tags: [],
@@ -35307,7 +35307,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/738060/ss_d5d78d97b22ef5e7f6946a2042d95e56f4984af7.600x338.jpg',
     shortDescription:
       "Start your own ||Freddy|| Fazbear's ||Pizzeria|| with ||Freddy|| Fazbear ||Pizzeria|| ||Simulator||!",
-    releaseDate: '4 Dec, 2017',
+    releaseDate: 'Dec 4, 2017',
     developer: 'Scott Cawthon',
     publisher: 'Scott Cawthon',
     tags: [],
@@ -35344,7 +35344,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/738520/ss_e81cfce7684ed47116e7b38acb950cd2dfc50cb7.600x338.jpg',
     shortDescription:
       'Survive in outer space! Together with your immortal chicken, discover the truth behind your sudden spaceship crash. Craft tools, pilot vehicles, and even control space stations to survive and explore the wreckage.',
-    releaseDate: '25 Feb, 2021',
+    releaseDate: 'Feb 25, 2021',
     developer: 'RedRuins Softworks',
     publisher: 'HypeTrain Digital',
     tags: [],
@@ -35640,7 +35640,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/763890/ss_f5a6c358f0ce9366cd5372c2049fda4370085ede.600x338.jpg',
     shortDescription:
       "||Wildermyth|| follows heroes over their whole careers, from their pitchfork days to their powerful primes, and on into old age and memory. It's a party-based procedural storytelling RPG where tactical combat and story decisions will alter your world and reshape your cast of characters.",
-    releaseDate: '15 Jun, 2021',
+    releaseDate: 'Jun 15, 2021',
     developer: 'Worldwalker Games LLC',
     publisher: 'Worldwalker Games LLC',
     tags: [],
@@ -35825,7 +35825,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/773951/ss_b6b63b6158bb64c3d0445232fafb48e63aa1871a.600x338.jpg',
     shortDescription:
       'In the anarchic world of ||Freeman: Guerrilla Warfare||, only the mightiest warlord rules. Start with a pistol and a few militias, you will set yourself on a wild and ambitious journey towards world domination. Enjoy the immersive combination of intense FPS and sandbox strategy.',
-    releaseDate: '4 Oct, 2019',
+    releaseDate: 'Oct 4, 2019',
     developer: 'KK Game Studio',
     publisher: 'KK Game Studio',
     tags: [],
@@ -35973,7 +35973,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/774861/2007fbac369a5ded32db12921bea1f195c0db6a5/ss_2007fbac369a5ded32db12921bea1f195c0db6a5.600x338.jpg',
     shortDescription:
       '||Project Winter|| 2.0: Cabin Fever is an 8-player survival and social deception game where teamwork is vital, but betrayal is inevitable. Face the wilderness, uncover traitors, and survive paranoia in this streamlined yet chaotic multiplayer experience.',
-    releaseDate: '23 May, 2019',
+    releaseDate: 'May 23, 2019',
     developer: 'Other Ocean Interactive',
     publisher: 'Other Ocean Group',
     tags: [],
@@ -36010,7 +36010,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/775500/ss_1120f94885d497869ad027f248b57eb8d277ccc1.600x338.jpg',
     shortDescription:
       'Choose between Yuito and Kasane, elite psionics each armed with a talent in psychokinesis and their own reason to fight. Complete both of their stories to unlock all the mysteries of a Brain Punk future caught between technology and psychic abilities.',
-    releaseDate: '24 Jun, 2021',
+    releaseDate: 'Jun 24, 2021',
     developer: 'BANDAI NAMCO Studios Inc.',
     publisher: 'BANDAI NAMCO Entertainment',
     tags: [],
@@ -36084,7 +36084,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/780290/ss_2acbbddbdda962a3707ba0824167e2ccacd3592c.600x338.jpg',
     shortDescription:
       'Lead your band of mercenaries in the land of ||Gloomhaven||, work with unsavoury individuals, shape the fate of the region, fight your way through horrific places and get rich or die trying in this ruthless Tactical-RPG.',
-    releaseDate: '20 Oct, 2021',
+    releaseDate: 'Oct 20, 2021',
     developer: 'Flaming Fowl Studios',
     publisher: 'Twin Sails Interactive',
     tags: [],
@@ -36199,7 +36199,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/787860/ss_fa32d926d8115d648588ffa8da2b5f61053b7b10.600x338.jpg',
     shortDescription:
       'The best-selling franchise takes a giant leap forward with a complete overhaul of the graphics engine, offering the most striking and immersive visuals and effects, along with the deepest and most complete farming experience ever.',
-    releaseDate: '19 Nov, 2018',
+    releaseDate: 'Nov 19, 2018',
     developer: 'Giants Software',
     publisher: 'Giants Software',
     tags: [],
@@ -36682,7 +36682,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/834910/ss_ea7fe76f3a7a91725489d8213b4a882b11580db4.600x338.jpg',
     shortDescription:
       'Set sail for the ultimate pirate experience! Embark on a grand adventure alongside thousands of other players in one of the largest game worlds ever built (and even claim a piece of it to call your own). Build your ship, assemble your crew, sail the high seas, and become a pirate legend!',
-    releaseDate: '22 Dec, 2018',
+    releaseDate: 'Dec 22, 2018',
     developer: 'Grapeshot Games',
     publisher: 'Grapeshot Games',
     tags: [],
@@ -36756,7 +36756,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/835960/ss_4f849d7ecfa4a7bf7d3f181fb797eecebf6f3bc2.600x338.jpg',
     shortDescription:
       "||The Talos Principle 2|| is a thought-provoking first-person puzzle experience that greatly expands on the first game's philosophical themes and stunning environments with increasingly mind-bending challenges.",
-    releaseDate: '2 Nov, 2023',
+    releaseDate: 'Nov 2, 2023',
     developer: 'Croteam',
     publisher: 'Devolver Digital',
     tags: [],
@@ -36941,7 +36941,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/847370/ss_02db5be67f3a355e70eae25464d0ee3a4c2d0161.600x338.jpg',
     shortDescription:
       '||Sunset Overdrive|| transforms an open-world apocalypse into your tactical playground. Zip, grind and wall-run across ||Sunset|| City with an unconventional arsenal. Hyper-agility, unique weapons, and customizable abilities deliver an explosive and irreverent adventure in the end times.',
-    releaseDate: '16 Nov, 2018',
+    releaseDate: 'Nov 16, 2018',
     developer: 'Insomniac Games',
     publisher: 'Xbox Game Studios',
     tags: [],
@@ -37459,7 +37459,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/870780/ss_455ab81ea90f5668ff384d60d68baef1e2e74e55.600x338.jpg',
     shortDescription:
       'A corruptive presence has invaded the ||Federal Bureau of Control||…Only you have the power to stop it. The world is now your weapon in an epic fight to annihilate an ominous enemy through deep and unpredictable environments. Containment has failed, humanity is at stake. Will you ||regain control||?',
-    releaseDate: '27 Aug, 2020',
+    releaseDate: 'Aug 27, 2020',
     developer: 'Remedy Entertainment',
     publisher: 'Remedy Entertainment',
     tags: [],
@@ -38166,7 +38166,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/934700/ss_480f620579dbf5514834cea9db59b1ccfb8de8d3.600x338.jpg',
     shortDescription:
       'A deadly virus is spreading across Los Angeles, turning its inhabitants into zombies. Bitten, infected, but more than just immune, uncover the truth behind the outbreak and discover who - or what - you are. Survive, evolve and become the ultimate Zombie Slayer.',
-    releaseDate: '22 Apr, 2024',
+    releaseDate: 'Apr 22, 2024',
     developer: 'Dambuster Studios',
     publisher: 'Deep Silver',
     tags: [],
@@ -39804,7 +39804,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1059990/8df015cc7f9147d8785709bd96f8f20e077765d1/ss_8df015cc7f9147d8785709bd96f8f20e077765d1.600x338.jpg',
     shortDescription:
       'Honk, blow, &amp; toot your way through over 60 songs, collect all 50 unique Tromboner Cards, and uncover the mysteries of the Trombiverse. Do you have what it takes to become the true ||Trombone Champ||?',
-    releaseDate: '15 Sep, 2022',
+    releaseDate: 'Sep 15, 2022',
     developer: 'Holy Wow Studios LLC',
     publisher: 'Holy Wow Studios LLC',
     tags: [],
@@ -39956,7 +39956,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1065310/ss_feae13d5c4d396ab932842ea24159689b1c3fc85.600x338.jpg',
     shortDescription:
       'A dark menace consumes the Old ||West||. In solo or coop, fight with style in visceral, explosive combat against bloodthirsty monstrosities. Eradicate the vampiric hordes with your lightning-fueled gauntlet and become a Wild ||West|| Superhero.',
-    releaseDate: '21 Nov, 2022',
+    releaseDate: 'Nov 21, 2022',
     developer: 'Flying Wild Hog',
     publisher: 'Focus Entertainment',
     tags: [],
@@ -40329,7 +40329,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1089980/ss_9692cdda55dde547314f583905deb2099275d967.600x338.jpg',
     shortDescription:
       'A choose-your-own-path where failing is more fun than succeeding.',
-    releaseDate: '7 Aug, 2020',
+    releaseDate: 'Aug 7, 2020',
     developer: 'PuffballsUnited',
     publisher: 'Innersloth',
     tags: [],
@@ -40403,7 +40403,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1097840/ss_9429a77bad31287dc7c68a6925eb893eeee65f5e.600x338.jpg',
     shortDescription:
       "From one of gaming's most acclaimed sagas, ||Gears|| is bigger than ever. With all-out war descending, Kait Diaz breaks away to uncover her connection to the enemy and discovers the true danger to Sera – herself.",
-    releaseDate: '9 Sep, 2019',
+    releaseDate: 'Sep 9, 2019',
     developer: 'The Coalition',
     publisher: 'Xbox Game Studios',
     tags: [],
@@ -40440,7 +40440,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1102190/ss_de1c1453ce68155196cf15143047a615f28aee34.600x338.jpg',
     shortDescription:
       "||Monster Train|| is a strategic roguelike deck building game with a twist. Set on a train to hell, you'll use tactical decision making to defend multiple vertical battlegrounds. With real time competitive multiplayer and endless replayability, ||Monster Train|| is always on time.",
-    releaseDate: '21 May, 2020',
+    releaseDate: 'May 21, 2020',
     developer: 'Shiny Shoe',
     publisher: 'Good Shepherd Entertainment',
     tags: [],
@@ -40514,7 +40514,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1106840/ss_69888496c502a48f800b83b95ee722c789a27b06.600x338.jpg',
     shortDescription:
       '||Hydroneer|| is a mining and base building sandbox. Dig for gold and other resources to turn a profit and enhance your mining operation. Build a base of operations, forge weapons, go fishing, and dig deep!',
-    releaseDate: '8 May, 2020',
+    releaseDate: 'May 8, 2020',
     developer: 'Foulball Hangover',
     publisher: 'Foulball Hangover',
     tags: [],
@@ -40551,7 +40551,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1113000/ss_c92cef1e572183055dab3d8bcdcbc5fe55deb0cc.600x338.jpg',
     shortDescription:
       'A coming of age story that sets the protagonist and his friends on a journey kickstarted by a chain of serial murders.',
-    releaseDate: '13 Jun, 2020',
+    releaseDate: 'Jun 13, 2020',
     developer: 'ATLUS',
     publisher: 'SEGA',
     tags: [],
@@ -40588,7 +40588,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1113120/ss_236f68d8b1a0c891b401689fcd0e9030f6550b74.600x338.jpg',
     shortDescription:
       "||IXION|| is an unrelenting, city-building odyssey across the stars. As Administrator of the Tiqqun, DOLOS' prototype space station, you are tasked with balancing preservation and exploration as you manage infrastructure, resources and crew. Can you keep the flame of humanity alight in the cold dark?",
-    releaseDate: '7 Dec, 2022',
+    releaseDate: 'Dec 7, 2022',
     developer: 'Bulwark Studios',
     publisher: 'Kasedo Games',
     tags: [],
@@ -40847,7 +40847,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1127400/ss_e072ee95cfadac2674575814218137caaad2ee69.600x338.jpg',
     shortDescription:
       'An open-ended factory management game with RTS and tower defense elements.',
-    releaseDate: '26 Sep, 2019',
+    releaseDate: 'Sep 26, 2019',
     developer: 'AnukenDev',
     publisher: 'AnukenDev',
     tags: [],
@@ -41155,7 +41155,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1147560/ss_4d085911571f127e48dc392c0db50d97e810fb39.600x338.jpg',
     shortDescription:
       "Guide '||Skul||' on his quest to single-handedly take on the Imperial Army and rescue his King from captivity, in an action-packed rogue-lite 2D platformer for the ages.",
-    releaseDate: '20 Jan, 2021',
+    releaseDate: 'Jan 20, 2021',
     developer: 'SOUTHPAW GAMES',
     publisher: 'NEOWIZ',
     tags: [],
@@ -41227,7 +41227,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1149460/ss_aa5a09717e6432d3bd61e6d7b20ac622c6f27502.600x338.jpg',
     shortDescription:
       '||ICARUS|| is a solo or multiplayer PvE survival game. Explore a savage wilderness in the aftermath of terraforming gone wrong. Complete narrative quests as either Open World operations or Individual Missions. Explore, build, craft and hunt while seeking your fortune and prospecting for exotic matter.',
-    releaseDate: '3 Dec, 2021',
+    releaseDate: 'Dec 3, 2021',
     developer: 'RocketWerkz',
     publisher: 'RocketWerkz',
     tags: [],
@@ -41893,7 +41893,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1190000/ss_640ae3f1f1638aa40d95b561dd04d89366fa9ddd.600x338.jpg',
     shortDescription:
       'Work your way to a service empire. Get your hands dirty in a highly realistic simulation game that pays major attention to details. Pay a visit to a new Auction house and buy cars in various conditions. Expand your range of services by investing in a new work space and equipment.',
-    releaseDate: '11 Aug, 2021',
+    releaseDate: 'Aug 11, 2021',
     developer: 'Red Dot Games',
     publisher: 'PlayWay S.A.',
     tags: [],
@@ -42075,7 +42075,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1206560/ss_54c925a46d6b769b22fdde20c88b61f7e4a4d426.600x338.jpg',
     shortDescription:
       '||WorldBox|| is the ULTIMATE god simulator and sandbox game. A petri dish for your fantasy civilizations. Create your own world or destroy it using many powers. Watch civilizations grow, form kingdoms, colonize new lands, sail to far continents, wars to ignite, empires to fall and towns to burn!',
-    releaseDate: '2 Dec, 2021',
+    releaseDate: 'Dec 2, 2021',
     developer: 'Maxim Karpenko',
     publisher: 'Maxim Karpenko',
     tags: [],
@@ -42112,7 +42112,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1213210/ss_77f4464527f8c4e01bccb9e94c2af485e3dd0e08.600x338.jpg',
     shortDescription:
       '||Command|| &amp; ||Conquer|| and Red Alert are both remastered in 4K by the former Westwood Studios team members. Includes all 3 expansions, rebuilt multiplayer, a modernized UI, Map Editor, bonus footage gallery, and over 7 hours of remastered music.',
-    releaseDate: '5 Jun, 2020',
+    releaseDate: 'Jun 5, 2020',
     developer: 'Petroglyph',
     publisher: 'Electronic Arts',
     tags: [],
@@ -42223,7 +42223,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1222700/ss_55237e6d80cf3f9e2f3f0fa41d710a7ea35b022b.600x338.jpg',
     shortDescription:
       '||A Way Out|| is an exclusively co-op adventure where you play the role of one of two prisoners making their daring escape from prison.',
-    releaseDate: '18 Jun, 2020',
+    releaseDate: 'Jun 18, 2020',
     developer: 'Hazelight Studios',
     publisher: 'Electronic Arts',
     tags: [],
@@ -42449,7 +42449,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1237950/ss_741f131aba46c488d750062c1b5715c286681e9d.600x338.jpg',
     shortDescription:
       'Embark on an endless ||Star Wars|| journey from the best-selling ||Star Wars|| video game franchise of all time. Experience rich multiplayer ||battlegrounds|| across all three eras - ||prequel||, classic and ||new trilogy|| - or rise as a new hero and discover an emotionally gripping single-player story spanning thirty years.',
-    releaseDate: '11 Jun, 2020',
+    releaseDate: 'Jun 11, 2020',
     developer: 'DICE',
     publisher: 'Electronic Arts',
     tags: [],
@@ -42753,7 +42753,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1240210/ss_1b523c5986c28eae7eddad3880ff45f242c2f280.600x338.jpg',
     shortDescription:
       "||There|| is no game. So don't go messing things up by clicking everywhere. You don't want to be kicked out of your video game world, do you? Of course not!",
-    releaseDate: '6 Aug, 2020',
+    releaseDate: 'Aug 6, 2020',
     developer: 'Draw Me A Pixel',
     publisher: 'Draw Me A Pixel',
     tags: [],
@@ -42790,7 +42790,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1240440/11b6e12f4fe97f00ef37d4d9c7b730bfd5d07fdd/ss_11b6e12f4fe97f00ef37d4d9c7b730bfd5d07fdd.600x338.jpg',
     shortDescription:
       "From one of gaming's most iconic sagas, ||Halo|| is bigger than ever. Featuring an expansive open-world campaign and a dynamic free to play multiplayer experience.",
-    releaseDate: '15 Nov, 2021',
+    releaseDate: 'Nov 15, 2021',
     developer: '343 Industries',
     publisher: 'Xbox Game Studios',
     tags: [],
@@ -42864,7 +42864,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1244460/ss_e2043f89661bf4da80628e6ab1e97b0a67f1c7ed.600x338.jpg',
     shortDescription:
       "||Jurassic World Evolution 2|| is the much-anticipated sequel to Frontier's highly successful ||Jurassic|| ||World|| ||Evolution||. This bold new era in the ||Jurassic|| ||World|| ||Evolution|| game franchise builds upon the ground-breaking and immersive 2018 management simulation.",
-    releaseDate: '9 Nov, 2021',
+    releaseDate: 'Nov 9, 2021',
     developer: 'Frontier Developments',
     publisher: 'Frontier Developments',
     tags: [],
@@ -42975,7 +42975,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1252330/ss_b05a1ef5c5a43860f7728637c7047695d0d52236.600x338.jpg',
     shortDescription:
       '||DEATHLOOP|| is a next-gen FPS from Arkane Lyon, the award-winning studio behind Dishonored. In ||DEATHLOOP||, two rival assassins are trapped in a mysterious timeloop on the island of Blackreef, doomed to repeat the same day for eternity.',
-    releaseDate: '13 Sep, 2021',
+    releaseDate: 'Sep 13, 2021',
     developer: 'Arkane Studios',
     publisher: 'Bethesda Softworks',
     tags: [],
@@ -43345,7 +43345,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1272080/ss_af05bb8f8199b48aea40a696031e959ba4842d84.600x338.jpg',
     shortDescription:
       "||PAYDAY 3|| is the much anticipated sequel to one of the most popular co-op shooters ever. Since its release, ||PAYDAY||-players have been reveling in the thrill of a perfectly planned and executed heist. That's what makes ||PAYDAY|| a high-octane, co-op FPS experience without equal.",
-    releaseDate: '21 Sep, 2023',
+    releaseDate: 'Sep 21, 2023',
     developer: 'Starbreeze Studios',
     publisher: 'Starbreeze Entertainment',
     tags: [],
@@ -43493,7 +43493,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1277400/ss_e869a68f8a36e894766a1c94824fc7c26436ed7e.600x338.jpg',
     shortDescription:
       'A new adventure awaits you in this second installment of the turn-based RPG series set in the world of ||Monster|| ||Hunter||! Become a Rider and form bonds with friendly monsters known as Monsties to fight alongside them as you take part in an epic story.',
-    releaseDate: '8 Jul, 2021',
+    releaseDate: 'Jul 8, 2021',
     developer: 'CAPCOM Co., Ltd.',
     publisher: 'CAPCOM Co., Ltd.',
     tags: [],
@@ -44573,7 +44573,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1361320/ss_13b8efd3ef1ddfecebe999b26d7e2c67b462cfc1.600x338.jpg',
     shortDescription:
       'The disappearance of an ambitious engineer and his high-society wife provokes a hunt for a precious artefact. The trail leads you to the attic of their home, and the discovery of an old, peculiar dollhouse. What secrets lie within these walls?',
-    releaseDate: '11 Feb, 2021',
+    releaseDate: 'Feb 11, 2021',
     developer: 'Fireproof Games',
     publisher: 'Fireproof Games',
     tags: [],
@@ -44829,7 +44829,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1371980/56066f44f29e8b042c482e0b0680bc101bf1ecd5/ss_56066f44f29e8b042c482e0b0680bc101bf1ecd5.600x338.jpg',
     shortDescription:
       'From Moon Studios, the award-winning creators of Ori and the Blind Forest and Ori and the Will of the Wisps, comes ||No Rest for the Wicked||, a unique, visceral Action RPG set in a hand-crafted world with Souls-like combat. Featuring co-op for up to four players.',
-    releaseDate: '18 Apr, 2024',
+    releaseDate: 'Apr 18, 2024',
     developer: 'Moon Studios GmbH',
     publisher: 'Moon Studios GmbH',
     tags: [],
@@ -44900,7 +44900,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1372280/ss_db37ae4bb301a6f6c930fec302bc0c243a3af04c.600x338.jpg',
     shortDescription:
       "This is the latest addition to the series of 2D fighting games based on ||TYPE||-MOON's visual novel, Tsukihime. The curtain rises once more on dramatic battles played out with familiar characters from Tsukihime: A Piece of Blue Glass Moon.",
-    releaseDate: '29 Sep, 2021',
+    releaseDate: 'Sep 29, 2021',
     developer: 'FRENCH-BREAD',
     publisher: 'Lasengle Inc.',
     tags: [],
@@ -45603,7 +45603,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1451190/ss_c4cde7af2d5a1485a624451aafc7fd8dc2e1e3e7.600x338.jpg',
     shortDescription:
       'Become ||Undisputed|| in the most authentic boxing game to date! Featuring true to life visuals, bone-jarring action, and more licensed boxers than ever before, ||Undisputed|| gives you unprecedented control to master every inch of the ring.',
-    releaseDate: '8 Oct, 2024',
+    releaseDate: 'Oct 8, 2024',
     developer: 'Steel City Interactive',
     publisher: 'Deep Silver',
     tags: [],
@@ -45640,7 +45640,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1454400/ss_0ccbd62dbbf733bf630885d76f7bdf61af93d0be.600x338.jpg',
     shortDescription:
       'An idle game about making cookies! Originally released in 2013 on the web, and actively developed since then. This is the official version for Steam.',
-    releaseDate: '1 Sep, 2021',
+    releaseDate: 'Sep 1, 2021',
     developer: 'Orteil',
     publisher: 'Playsaurus',
     tags: [],
@@ -45973,7 +45973,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1490890/ss_c1270311ded5c2268fb0e0ebd66c0c099193fe6f.600x338.jpg',
     shortDescription: 'Become the Blade that Destroys Demons!',
-    releaseDate: '15 Oct, 2021',
+    releaseDate: 'Oct 15, 2021',
     developer: 'CyberConnect2',
     publisher: 'SEGA',
     tags: [],
@@ -46158,7 +46158,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1509960/ss_f356434b667dd6f5ff948a87d4d8486d29e31b36.600x338.jpg',
     shortDescription:
       '||PICO PARK|| is a cooperative local/online multiplay action puzzle game for 2-8 players.',
-    releaseDate: '7 May, 2021',
+    releaseDate: 'May 7, 2021',
     developer: 'TECOPARK',
     publisher: 'TECOPARK',
     tags: [],
@@ -46232,7 +46232,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1522820/ss_233f151eca027215270cd6133334971039cd5d1d.600x338.jpg',
     shortDescription:
       'Slice, burn, toss, zap, grind and gib massive hordes of repugnant orcs in this long-awaited successor to the award-winning ||Orcs|| ||Must|| ||Die||! series.',
-    releaseDate: '23 Jul, 2021',
+    releaseDate: 'Jul 23, 2021',
     developer: 'Robot Entertainment',
     publisher: 'Robot Entertainment',
     tags: [],
@@ -46454,7 +46454,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1549970/ss_b0cb31b2977312de10720ddf052e0a8a74a85d6a.600x338.jpg',
     shortDescription:
       '||Aliens: Fireteam Elite|| is a cooperative third-person survival game set in the iconic Alien Universe. Battle through hordes of different types of Xenomorph, customize your character and gear, and level-up as you try to contain this ever-growing threat.',
-    releaseDate: '23 Aug, 2021',
+    releaseDate: 'Aug 23, 2021',
     developer: 'Cold Iron Studios',
     publisher: 'Cold Iron Studios',
     tags: [],
@@ -46528,7 +46528,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1557740/ss_a45fb5c56e1d445aa225f1f471f58375d145b121.600x338.jpg',
     shortDescription:
       '||Rounds|| is a 1v1 rogue-lite shooter where each round gets more intense. The losing player of each round unlocks clever upgrades to create a better build to counter their opponent.',
-    releaseDate: '1 Apr, 2021',
+    releaseDate: 'Apr 1, 2021',
     developer: 'Landfall',
     publisher: 'Landfall',
     tags: [],
@@ -46565,7 +46565,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1562700/ss_dc42526e8a4db7c389494d0a14d5c21da1974c51.600x338.jpg',
     shortDescription:
       '||SANABI|| is an exhilarating stylish dystopian action-platformer. Play as a legendary retired veteran and use your signature prosthetic arm to jump over cliffs and skyscrapers, zip through bullets and traps and defeat powerful enemies.',
-    releaseDate: '8 Nov, 2023',
+    releaseDate: 'Nov 8, 2023',
     developer: 'WONDER POTION',
     publisher: 'NEOWIZ',
     tags: [],
@@ -46787,7 +46787,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1590320/ss_ed4fc01c9b3e7f3b7278a06a6ed14a70e1728848.600x338.jpg',
     shortDescription:
       '||Bro Falls|| is an asymmetric massively multiplayer party game with chaotic elements, trap activations and big ||Falls||. Up-to 60 online players in a showdown party and only one who can get the victory. Play as Brokkoli to activate the traps or avoid them as a juicy food and win the rounds.',
-    releaseDate: '30 Dec, 2021',
+    releaseDate: 'Dec 30, 2021',
     developer: 'Boros Bros',
     publisher: 'Boros Bros',
     tags: [],
@@ -47083,7 +47083,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1611910/ss_b74eb0d9ff840354d08cc54dac10ee837fee5b45.600x338.jpg',
     shortDescription:
       "Lead humanity's greatest weapon, the Grey Knights, in this fast-paced turn-based tactical RPG. Root out and purge a galaxy-spanning plague in a cinematic, story-driven campaign, using the tactics and talents of your own personalised squad of ||Daemonhunters||.",
-    releaseDate: '5 May, 2022',
+    releaseDate: 'May 5, 2022',
     developer: 'Complex Games',
     publisher: 'Frontier Foundry',
     tags: [],
@@ -47231,7 +47231,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1637320/ss_b3718daa8a5e9bc8deddf5057a4723f36d73c83f.600x338.jpg',
     shortDescription:
       'Defend against waves of alien monsters in this unique roguelike action miner. Dig for resources, collect useful gadgets, and upgrade equipment to increase odds of survival – just hurry back before your dome is destroyed!',
-    releaseDate: '27 Sep, 2022',
+    releaseDate: 'Sep 27, 2022',
     developer: 'Bippinbits',
     publisher: 'Raw Fury',
     tags: [],
@@ -47561,7 +47561,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1676840/ss_477c8834d3ff816d99a8aeb0b3c1a2a193167b27.600x338.jpg',
     shortDescription:
       "Battle against Fahrul's tyrannical Queen alone or as a party of four players in the sequel to For The ||King||, the massively popular turn-based roguelite tabletop RPG. Will you unravel the once beloved Queen's terrible secret?",
-    releaseDate: '2 Nov, 2023',
+    releaseDate: 'Nov 2, 2023',
     developer: 'IronOak Games',
     publisher: 'Curve Games',
     tags: [],
@@ -47635,7 +47635,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1677740/b1e411d6848040ccdc53498e3cac1b4101c6a96a/ss_b1e411d6848040ccdc53498e3cac1b4101c6a96a.600x338.jpg',
     shortDescription:
       'Ready for the chaos? ||Stumble Guys|| is a 32-player, fast-paced multiplayer party royale where players dash, jump, and fall across hilarious obstacle courses in a fun race to be the last one standing.',
-    releaseDate: '7 Oct, 2021',
+    releaseDate: 'Oct 7, 2021',
     developer: 'Scopely',
     publisher: 'Scopely',
     tags: [],
@@ -47820,7 +47820,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1716740/ss_b2821283cb140cd5a6289a8160016b6a60d8f96e.600x338.jpg',
     shortDescription:
       '||Starfield|| is the first new universe in 25 years from Bethesda Game Studios, the award-winning creators of The Elder Scrolls V: Skyrim and Fallout 4.',
-    releaseDate: '5 Sep, 2023',
+    releaseDate: 'Sep 5, 2023',
     developer: 'Bethesda Game Studios',
     publisher: 'Bethesda Softworks',
     tags: [],
@@ -47857,7 +47857,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1740720/ss_25eb605c11ed758622f07888ca275d33bfbfb41c.600x338.jpg',
     shortDescription:
       "||Have a Nice Death|| is a 2D action roguelike where you play as an overworked ||Death||, whose employees have run rampant, completely throwing off the balance of souls - and his vacation plans. In order to restore order, you'll have to grab your trusty scythe and show your employees who's boss.",
-    releaseDate: '22 Mar, 2023',
+    releaseDate: 'Mar 22, 2023',
     developer: 'Magic Design Studios',
     publisher: 'Arc Games',
     tags: [],
@@ -48847,7 +48847,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1875830/ss_4ac51a73942a430483060858a322f5e6a9eecf0b.600x338.jpg',
     shortDescription:
       'Become a mighty demigod and battle through a decimated Tokyo in a war between angels and demons. Make new allies along your journey, engage in intense, turn-based combat, recruit hundreds of demons and forge your own path to dictate the fate of all existence.',
-    releaseDate: '13 Jun, 2024',
+    releaseDate: 'Jun 13, 2024',
     developer: 'ATLUS',
     publisher: 'SEGA',
     tags: [],
@@ -49223,7 +49223,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1928980/ss_ef96bc708ecb47967afcd5eb06d8b1e502a5a7be.600x338.jpg',
     shortDescription:
       "||Nightingale|| is an open world survival crafting game, where you'll adventure across the mysterious and dangerous Fae Realms. As a daring Realmwalker, you'll defeat monstrous enemies, survive hostile environments, and build elaborate estates in a visually stunning Gaslamp Fantasy world.",
-    releaseDate: '20 Feb, 2024',
+    releaseDate: 'Feb 20, 2024',
     developer: 'Inflexion Games',
     publisher: 'Inflexion Games',
     tags: [],
@@ -49408,7 +49408,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1944430/ss_9b76a5884a33d51e67a4b46ff1037dab6e49b354.600x338.jpg',
     shortDescription:
       '||Amnesia: The Bunker|| is a first-person horror game set in a WW1 bunker. A relentless, AI-driven monster stalks you. Survival depends on finding tools, crafting items, and keeping the lights on.',
-    releaseDate: '6 Jun, 2023',
+    releaseDate: 'Jun 6, 2023',
     developer: 'Frictional Games',
     publisher: 'Frictional Games',
     tags: [],
@@ -49519,7 +49519,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1949740/ss_98bdf4a0883f9fb42f16301435ca7d1679e5993c.600x338.jpg',
     shortDescription:
       'Dave is the banana man who is keep shooting enemies and get their banana,and use some cool mechanic such as dash,double jump,grapple hook and rocket jump.If you are finding fast paced shooter game,this is what you need',
-    releaseDate: '1 May, 2022',
+    releaseDate: 'May 1, 2022',
     developer: 'CodingDaniel',
     publisher: 'CodingDaniel',
     tags: [],
@@ -49556,7 +49556,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1954200/ss_e5eededd88d1d923114b796babb21d0eb209a475.600x338.jpg',
     shortDescription:
       'A story-driven, action adventure combining exploration with fast-paced combat. Untangle the past as ||Kena||, a young Spirit Guide in search of the sacred Mountain Shrine. Help free the spirits trapped in a forgotten village with the help of the Rot, her adorable (yet powerful) spirit companions.',
-    releaseDate: '26 Sep, 2022',
+    releaseDate: 'Sep 26, 2022',
     developer: 'Ember Lab',
     publisher: 'Ember Lab',
     tags: [],
@@ -49704,7 +49704,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1966900/ss_e7709844afbd28c7596f832e396e9af59cb7577b.600x338.jpg',
     shortDescription:
       '||20 Minutes Till Dawn|| is a survival roguelite where endless hordes of creatures lurk from the dark. Craft an array of overpowering builds and eradicate waves of Lovecraftian nightmares. Will you be able to survive the night?',
-    releaseDate: '8 Jun, 2023',
+    releaseDate: 'Jun 8, 2023',
     developer: 'flanne',
     publisher: 'Erabit',
     tags: [],
@@ -49926,7 +49926,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1997040/ss_5ba602d69cf8ff8e1ab55eba4854ace31d09593a.600x338.jpg',
     shortDescription:
       "||MARVEL SNAP|| is a fast-paced Collectible Card Game that reimagines the genre with innovative mechanics. Winner of multiple awards like 'Best Strategy Game' and 'Breakthrough Game of the Year,' we invite you to join millions of players worldwide – Jump right in!",
-    releaseDate: '22 Aug, 2023',
+    releaseDate: 'Aug 22, 2023',
     developer: 'Second Dinner Studios, Inc.',
     publisher: '',
     tags: [],
@@ -50000,7 +50000,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2000950/ss_aa043742143d678b18c27c6035c23ea8a1c26544.600x338.jpg',
     shortDescription:
       'Experience a visceral Campaign or assemble your team in the ultimate online playground with multiple Special Ops challenges and a mix of Multiplayer maps and modes.',
-    releaseDate: '8 Mar, 2023',
+    releaseDate: 'Mar 8, 2023',
     developer: 'Infinity Ward',
     publisher: 'Activision',
     tags: [],
@@ -50364,7 +50364,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2073850/320437621741c7be66de4b42d7633b9b0a60fd49/ss_320437621741c7be66de4b42d7633b9b0a60fd49.600x338.jpg',
     shortDescription:
       "||THE FINALS is the world's first Dynamism Shooter, a free-to-play, fast-paced, physics-driven,|| first-person shooter set on the stage of the biggest Gameshow of the future! Fight for Fans and fortune in fully||-destructible||, virtual Arenas that guarantee no two rounds will ever play the same!",
-    releaseDate: '7 Dec, 2023',
+    releaseDate: 'Dec 7, 2023',
     developer: 'Embark Studios',
     publisher: 'Embark Studios',
     tags: [],
@@ -50701,7 +50701,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2141730/b7fa3a5e0ac4d91e27c4b749c7df671febae2ad6/ss_b7fa3a5e0ac4d91e27c4b749c7df671febae2ad6.600x338.jpg',
     shortDescription:
       "A visually lifelike co-op horror for 1-6 people. Journey through 10 procedurally generated levels, using what's available to survive and progress deeper into the ||Backrooms||.",
-    releaseDate: '18 Oct, 2022',
+    releaseDate: 'Oct 18, 2022',
     developer: 'Triiodide Studios',
     publisher: 'Triiodide Studios',
     tags: [],
@@ -51071,7 +51071,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2218750/ss_2d104ee2c73776ba9019f3a5050c4d5942a56e93.600x338.jpg',
     shortDescription:
       'Slay hordes of terrifying monsters in this horde survival roguelite. Descend into the ||Halls of Torment|| where the Lords of the underworld await you. Treasures, magical trinkets, and a growing cast of heroes will grant you the power to vanquish these horrors from beyond. How long can you survive?',
-    releaseDate: '24 Sep, 2024',
+    releaseDate: 'Sep 24, 2024',
     developer: 'Chasing Carrots',
     publisher: 'Chasing Carrots',
     tags: [],
@@ -51733,7 +51733,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2344520/ee4b4e1ba9c8a07f40aff563c7c43fd04477d60c/ss_ee4b4e1ba9c8a07f40aff563c7c43fd04477d60c.600x338.jpg',
     shortDescription:
       'Join the fight for Sanctuary in ||Diablo|| ||IV||, the ultimate action RPG adventure. Experience the critically acclaimed campaign and new seasonal content.',
-    releaseDate: '17 Oct, 2023',
+    releaseDate: 'Oct 17, 2023',
     developer: 'Blizzard Entertainment, Inc.',
     publisher: 'Blizzard Entertainment, Inc.',
     tags: [],
@@ -51894,7 +51894,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2369390/ss_65c6467467795423bb959aa2c76ad2659f6553cd.600x338.jpg',
     shortDescription:
       "Enter the adrenaline-filled world of a modern-day guerrilla revolution. With stunning vistas, visceral gunplay, and a huge variety of gameplay experiences, there's never been a better time to join the fight.",
-    releaseDate: '11 May, 2023',
+    releaseDate: 'May 11, 2023',
     developer: 'Ubisoft Toronto',
     publisher: 'Ubisoft',
     tags: [],
@@ -52150,7 +52150,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2437170/ss_c0b6ac841bd59ba016bacd81e56e16eaffb7346f.600x338.jpg',
     shortDescription:
       "Become a god and wage war in ||SMITE 2||, the free-to-play Unreal Engine 5-powered sequel to the legendary third-person action MOBA. If you love challenging competition, intense action, ability-driven combat, rewarding teamwork, or godly mythology, you'll see why 40+ million players love ||SMITE||.",
-    releaseDate: '27 Aug, 2024',
+    releaseDate: 'Aug 27, 2024',
     developer: 'Titan Forge Games',
     publisher: 'Hi-Rez Studios',
     tags: [],
@@ -52332,7 +52332,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2488620/ef2ffcbbe719f986d6f00512c49ebee93588639c/ss_ef2ffcbbe719f986d6f00512c49ebee93588639c.600x338.jpg',
     shortDescription:
       'Join the grid and Be One of the 20. Drive like the greatest in EA SPORTS™ ||F1|| 24, the official video game of the 2024 FIA Formula One World Championship™.',
-    releaseDate: '31 May, 2024',
+    releaseDate: 'May 31, 2024',
     developer: 'Codemasters',
     publisher: 'Electronic Arts',
     tags: [],
@@ -52639,7 +52639,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2567870/ss_4a3cc896599f535905fda9aae0c964a5fcff4bb3.600x338.jpg',
     shortDescription:
       'From the depths of hell, climb chained to your friends through diverse worlds. Solo or co-op, try to reach the summit and discover what awaits you there...',
-    releaseDate: '19 Jun, 2024',
+    releaseDate: 'Jun 19, 2024',
     developer: 'Anegar Games',
     publisher: 'Anegar Games',
     tags: [],
@@ -53112,7 +53112,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2698940/404d4a443efc6ff31eab3902e932f836ee83ec94/ss_404d4a443efc6ff31eab3902e932f836ee83ec94.600x338.jpg',
     shortDescription:
       "Welcome to ||Motorfest||, the ultimate open-world driving experience. Explore the Hawaiian islands of O'ahu and Maui. Celebrate the best of car culture through 20+ themed campaigns (street racing, offroad, drift...) and collect hundreds of iconic vehicles. Enjoy the game free for five hours!",
-    releaseDate: '18 Apr, 2024',
+    releaseDate: 'Apr 18, 2024',
     developer: 'Ubisoft Ivory Tower',
     publisher: 'Ubisoft',
     tags: [],
@@ -53871,7 +53871,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3595230/c06cc6508d956e43f97e08a6126f069364e14775/ss_c06cc6508d956e43f97e08a6126f069364e14775.600x338.jpg',
     shortDescription:
       '||Call of Duty: Modern Warfare II|| drops players into an unprecedented global conflict that features the iconic Operators of Task Force 141.',
-    releaseDate: '22 Oct, 2022',
+    releaseDate: 'Oct 22, 2022',
     developer: 'Infinity Ward',
     publisher: 'Activision',
     tags: [],
