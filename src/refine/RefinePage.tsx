@@ -27,6 +27,9 @@ const cloneGameMap = (map: SteamGameMap): SteamGameMap => {
       clueOrder: game.clueOrder ? [...game.clueOrder] : undefined,
       searchTerms: game.searchTerms ? [...game.searchTerms] : undefined,
       reviewClue: game.reviewClue ? { ...game.reviewClue } : undefined,
+      reviewClues: game.reviewClues
+        ? game.reviewClues.map((r) => ({ ...r }))
+        : undefined,
     };
   }
   return clone;
@@ -299,21 +302,43 @@ export const RefinePage: React.FC = () => {
       if (game.debugNotes) {
         lines.push(`    debugNotes: ${JSON.stringify(game.debugNotes)},`);
       }
-      if (game.reviewClue) {
-        lines.push(`    reviewClue: {`);
-        lines.push(`      review: ${JSON.stringify(game.reviewClue.review)},`);
+      if (game.reviewClues && game.reviewClues.length > 0) {
+        lines.push(`    reviewClues: [`);
+        game.reviewClues.forEach((review, idx) => {
+          lines.push(`      {`);
+          lines.push(`        review: ${JSON.stringify(review.review)},`);
+          lines.push(`        votedUp: ${JSON.stringify(review.votedUp)},`);
+          lines.push(`        votesUp: ${review.votesUp},`);
+          lines.push(
+            `        weightedScore: ${JSON.stringify(review.weightedScore)},`,
+          );
+          lines.push(
+            `        authorPlaytimeHours: ${review.authorPlaytimeHours},`,
+          );
+          lines.push(`        timestamp: ${review.timestamp},`);
+          lines.push(`      }${idx < game.reviewClues!.length - 1 ? ',' : ''}`);
+        });
+        lines.push(`    ],`);
+      } else if (game.reviewClue) {
+        // Backward compatibility: convert old reviewClue to reviewClues
+        lines.push(`    reviewClues: [`);
+        lines.push(`      {`);
         lines.push(
-          `      votedUp: ${JSON.stringify(game.reviewClue.votedUp)},`,
-        );
-        lines.push(`      votesUp: ${game.reviewClue.votesUp},`);
-        lines.push(
-          `      weightedScore: ${JSON.stringify(game.reviewClue.weightedScore)},`,
+          `        review: ${JSON.stringify(game.reviewClue.review)},`,
         );
         lines.push(
-          `      authorPlaytimeHours: ${game.reviewClue.authorPlaytimeHours},`,
+          `        votedUp: ${JSON.stringify(game.reviewClue.votedUp)},`,
         );
-        lines.push(`      timestamp: ${game.reviewClue.timestamp},`);
-        lines.push(`    },`);
+        lines.push(`        votesUp: ${game.reviewClue.votesUp},`);
+        lines.push(
+          `        weightedScore: ${JSON.stringify(game.reviewClue.weightedScore)},`,
+        );
+        lines.push(
+          `        authorPlaytimeHours: ${game.reviewClue.authorPlaytimeHours},`,
+        );
+        lines.push(`        timestamp: ${game.reviewClue.timestamp},`);
+        lines.push(`      }`);
+        lines.push(`    ],`);
       }
 
       lines.push(`  },`);

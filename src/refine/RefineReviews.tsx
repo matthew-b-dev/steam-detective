@@ -31,15 +31,54 @@ const renderRawReview = (text: string) => {
   ));
 };
 
+/** Helper to find review in current selection */
+const isReviewSelected = (
+  review: Review,
+  selectedReviews: Review[],
+): boolean => {
+  return selectedReviews.some(
+    (r) => r.timestamp === review.timestamp && r.votedUp === review.votedUp,
+  );
+};
+
 /** A single Steam-styled review card */
 const SteamReviewCard: React.FC<{
   review: Review;
   isSelected: boolean;
+  selectionIndex?: number; // Position in selected reviews (1-indexed)
   editableText?: string;
+  editableHrs?: number;
+  editableTimestamp?: number;
+  editableVotesUp?: number;
   onSelect: () => void;
   // eslint-disable-next-line no-unused-vars
+  onMoveUp?: () => void;
+  // eslint-disable-next-line no-unused-vars
+  onMoveDown?: () => void;
+  // eslint-disable-next-line no-unused-vars
   onTextChange?: (text: string) => void;
-}> = ({ review, isSelected, editableText, onSelect, onTextChange }) => {
+  // eslint-disable-next-line no-unused-vars
+  onHrsChange?: (hrs: number) => void;
+  // eslint-disable-next-line no-unused-vars
+  onTimestampChange?: (timestamp: number) => void;
+  // eslint-disable-next-line no-unused-vars
+  onVotesUpChange?: (votes: number) => void;
+}> = ({
+  review,
+  isSelected,
+  selectionIndex,
+  editableText,
+  editableHrs,
+  editableTimestamp,
+  editableVotesUp,
+  onSelect,
+  onMoveUp,
+  onMoveDown,
+  onTextChange,
+  onHrsChange,
+  onTimestampChange,
+  onVotesUpChange,
+}) => {
   const isRecommended = review.votedUp;
 
   return (
@@ -75,27 +114,86 @@ const SteamReviewCard: React.FC<{
             }`}
           >
             {isRecommended ? 'Recommended' : 'Not Recommended'}
+            {isSelected && selectionIndex !== undefined && (
+              <span className='text-xs ml-2 text-gray-400'>
+                (Position {selectionIndex})
+              </span>
+            )}
           </span>
-          <span className='text-[11px] text-gray-400'>
-            {review.authorPlaytimeHours.toLocaleString()} hrs on record
-          </span>
+          {isSelected && onHrsChange ? (
+            <input
+              type='number'
+              min='0'
+              value={editableHrs ?? review.authorPlaytimeHours}
+              onChange={(e) =>
+                onHrsChange(Math.max(0, parseInt(e.target.value) || 0))
+              }
+              className='text-[11px] bg-zinc-800 border border-zinc-600 rounded px-1.5 py-0.5 text-gray-300 focus:outline-none focus:border-blue-500 w-fit'
+            />
+          ) : (
+            <span className='text-[11px] text-gray-400'>
+              {(editableHrs ?? review.authorPlaytimeHours).toLocaleString()} hrs
+              on record
+            </span>
+          )}
         </div>
-        {/* Select / Deselect button */}
-        <button
-          onClick={onSelect}
-          className={`flex-shrink-0 text-xs px-2 py-1 rounded font-semibold transition-colors ${
-            isSelected
-              ? 'bg-red-700 hover:bg-red-600 text-white'
-              : 'bg-blue-700 hover:bg-blue-600 text-white'
-          }`}
-        >
-          {isSelected ? 'Remove' : 'Use as Clue'}
-        </button>
+        <div className='flex-shrink-0 flex gap-1'>
+          {isSelected && (selectionIndex ?? 0) > 1 && onMoveUp && (
+            <button
+              onClick={onMoveUp}
+              className='text-xs px-2 py-1 rounded bg-gray-700 hover:bg-gray-600 text-white'
+              title='Move up'
+            >
+              ↑
+            </button>
+          )}
+          {isSelected && onMoveDown && (
+            <button
+              onClick={onMoveDown}
+              className='text-xs px-2 py-1 rounded bg-gray-700 hover:bg-gray-600 text-white'
+              title='Move down'
+            >
+              ↓
+            </button>
+          )}
+          {/* Select / Deselect button */}
+          <button
+            onClick={onSelect}
+            className={`text-xs px-2 py-1 rounded font-semibold transition-colors ${
+              isSelected
+                ? 'bg-red-700 hover:bg-red-600 text-white'
+                : 'bg-blue-700 hover:bg-blue-600 text-white'
+            }`}
+          >
+            {isSelected ? 'Remove' : 'Use as Clue'}
+          </button>
+        </div>
       </div>
 
       {/* Date */}
       <div className='px-3 pt-1.5 text-[11px] text-gray-500'>
-        Posted: {formatTimestamp(review.timestamp)}
+        {isSelected && onTimestampChange ? (
+          <div className='space-y-1'>
+            <label className='block text-gray-600'>Posted Date:</label>
+            <input
+              type='date'
+              value={
+                new Date((editableTimestamp ?? review.timestamp) * 1000)
+                  .toISOString()
+                  .split('T')[0]
+              }
+              onChange={(e) => {
+                const newDate = new Date(e.target.value);
+                onTimestampChange(Math.floor(newDate.getTime() / 1000));
+              }}
+              className='bg-zinc-800 border border-zinc-600 rounded px-1.5 py-1 text-gray-300 text-xs focus:outline-none focus:border-blue-500'
+            />
+          </div>
+        ) : (
+          <span>
+            Posted: {formatTimestamp(editableTimestamp ?? review.timestamp)}
+          </span>
+        )}
       </div>
 
       {/* Review text — editable when selected, read-only otherwise */}
@@ -123,12 +221,28 @@ const SteamReviewCard: React.FC<{
 
       {/* Helpful count + link */}
       <div className='px-3 pb-2 text-[11px] text-gray-500 flex flex-col gap-0.5'>
-        {review.votesUp > 0 && (
-          <span>
-            {review.votesUp} {review.votesUp === 1 ? 'person' : 'people'} found
-            this review helpful
-          </span>
-        )}
+        {(editableVotesUp ?? review.votesUp) > 0 || isSelected ? (
+          isSelected && onVotesUpChange ? (
+            <div className='space-y-1'>
+              <label className='block text-gray-600'>Found Helpful:</label>
+              <input
+                type='number'
+                min='0'
+                value={editableVotesUp ?? review.votesUp}
+                onChange={(e) =>
+                  onVotesUpChange(Math.max(0, parseInt(e.target.value) || 0))
+                }
+                className='bg-zinc-800 border border-zinc-600 rounded px-1.5 py-0.5 text-gray-300 text-xs focus:outline-none focus:border-blue-500 w-fit'
+              />
+            </div>
+          ) : (
+            <span>
+              {editableVotesUp ?? review.votesUp}{' '}
+              {(editableVotesUp ?? review.votesUp) === 1 ? 'person' : 'people'}{' '}
+              found this review helpful
+            </span>
+          )
+        ) : null}
         {review.reviewUrl && (
           <a
             href={review.reviewUrl}
@@ -176,27 +290,36 @@ export const RefineReviews: React.FC<RefineReviewsProps> = ({
     };
   }, [game.appId]);
 
-  const selectedReview = game.reviewClue;
+  // Get selected reviews - support both new reviewClues and old reviewClue for backward compat
+  const selectedReviews =
+    game.reviewClues || (game.reviewClue ? [game.reviewClue] : []);
 
   const handleSelect = (review: Review) => {
-    if (
-      selectedReview &&
-      selectedReview.timestamp === review.timestamp &&
-      selectedReview.votedUp === review.votedUp
-    ) {
-      // Deselect: clear reviewClue AND remove 'review' from clueOrder
-      const newClueOrder = game.clueOrder?.filter((c) => c !== 'review');
+    const isCurrentlySelected = isReviewSelected(review, selectedReviews);
+
+    if (isCurrentlySelected) {
+      // Remove this review from the list
+      const updated = selectedReviews.filter(
+        (r) =>
+          !(r.timestamp === review.timestamp && r.votedUp === review.votedUp),
+      );
+      const newClueOrder =
+        updated.length === 0
+          ? game.clueOrder?.filter((c) => c !== 'review')
+          : game.clueOrder;
       onUpdate({
-        reviewClue: undefined,
+        reviewClues: updated.length > 0 ? updated : undefined,
+        reviewClue: undefined, // clear old format
         clueOrder: newClueOrder,
       });
     } else {
-      // Select this review (copy it so user can edit text).
-      // Also ensure 'review' is in clueOrder (at position 4 by default)
+      // Add this review to the list
+      const updated = [...selectedReviews, { ...review }];
       const currentOrder = game.clueOrder ?? ['tags', 'details', 'desc'];
       const hasReviewInOrder = currentOrder.includes('review');
-      const patch: Partial<import('../types').SteamGame> = {
-        reviewClue: { ...review },
+      const patch: Partial<SteamGame> = {
+        reviewClues: updated,
+        reviewClue: undefined, // clear old format
       };
       if (!hasReviewInOrder) {
         patch.clueOrder = [...currentOrder, 'review'];
@@ -205,9 +328,42 @@ export const RefineReviews: React.FC<RefineReviewsProps> = ({
     }
   };
 
-  const handleTextChange = (text: string) => {
-    if (!selectedReview) return;
-    onUpdate({ reviewClue: { ...selectedReview, review: text } });
+  const handleMoveUp = (index: number) => {
+    if (index <= 0) return;
+    const updated = [...selectedReviews];
+    [updated[index - 1], updated[index]] = [updated[index], updated[index - 1]];
+    onUpdate({ reviewClues: updated });
+  };
+
+  const handleMoveDown = (index: number) => {
+    if (index >= selectedReviews.length - 1) return;
+    const updated = [...selectedReviews];
+    [updated[index], updated[index + 1]] = [updated[index + 1], updated[index]];
+    onUpdate({ reviewClues: updated });
+  };
+
+  const handleTextChange = (index: number, text: string) => {
+    const updated = [...selectedReviews];
+    updated[index] = { ...updated[index], review: text };
+    onUpdate({ reviewClues: updated });
+  };
+
+  const handleHrsChange = (index: number, hrs: number) => {
+    const updated = [...selectedReviews];
+    updated[index] = { ...updated[index], authorPlaytimeHours: hrs };
+    onUpdate({ reviewClues: updated });
+  };
+
+  const handleTimestampChange = (index: number, timestamp: number) => {
+    const updated = [...selectedReviews];
+    updated[index] = { ...updated[index], timestamp };
+    onUpdate({ reviewClues: updated });
+  };
+
+  const handleVotesUpChange = (index: number, votes: number) => {
+    const updated = [...selectedReviews];
+    updated[index] = { ...updated[index], votesUp: votes };
+    onUpdate({ reviewClues: updated });
   };
 
   if (loadError) {
@@ -236,23 +392,70 @@ export const RefineReviews: React.FC<RefineReviewsProps> = ({
       <div className='text-xs text-gray-400 uppercase tracking-wide'>
         Available Reviews ({availableReviews.length})
       </div>
+      {selectedReviews.length > 0 && (
+        <div className='bg-blue-950 border border-blue-800 rounded p-2 text-xs text-blue-200'>
+          <div className='font-semibold mb-1'>
+            Selected Reviews: {selectedReviews.length}
+          </div>
+          <div className='space-y-1'>
+            {selectedReviews.map((r, idx) => (
+              <div key={idx} className='text-blue-300'>
+                {idx + 1}. {r.votedUp ? '✓' : '✗'} {r.authorPlaytimeHours} hrs |{' '}
+                {r.review.substring(0, 50)}...
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
       {availableReviews.map((review, idx) => {
-        const isSelected =
-          !!selectedReview &&
-          selectedReview.timestamp === review.timestamp &&
-          selectedReview.votedUp === review.votedUp;
+        const isSelected = isReviewSelected(review, selectedReviews);
+        const selectionIndex = selectedReviews.findIndex(
+          (r) =>
+            r.timestamp === review.timestamp && r.votedUp === review.votedUp,
+        );
 
-        // For the editable text: when selected, we use the potentially-edited text
-        const editableText = isSelected ? selectedReview!.review : undefined;
+        // Get the actual editable values from selected reviews array
+        const selectedReview = selectedReviews[selectionIndex];
+        const editableText = selectedReview?.review;
+        const editableHrs = selectedReview?.authorPlaytimeHours;
+        const editableTimestamp = selectedReview?.timestamp;
+        const editableVotesUp = selectedReview?.votesUp;
 
         return (
           <SteamReviewCard
             key={idx}
             review={review}
             isSelected={isSelected}
+            selectionIndex={isSelected ? selectionIndex + 1 : undefined}
             editableText={editableText}
+            editableHrs={editableHrs}
+            editableTimestamp={editableTimestamp}
+            editableVotesUp={editableVotesUp}
             onSelect={() => handleSelect(review)}
-            onTextChange={isSelected ? handleTextChange : undefined}
+            onMoveUp={
+              isSelected ? () => handleMoveUp(selectionIndex) : undefined
+            }
+            onMoveDown={
+              isSelected ? () => handleMoveDown(selectionIndex) : undefined
+            }
+            onTextChange={
+              isSelected
+                ? (t) => handleTextChange(selectionIndex, t)
+                : undefined
+            }
+            onHrsChange={
+              isSelected ? (h) => handleHrsChange(selectionIndex, h) : undefined
+            }
+            onTimestampChange={
+              isSelected
+                ? (ts) => handleTimestampChange(selectionIndex, ts)
+                : undefined
+            }
+            onVotesUpChange={
+              isSelected
+                ? (v) => handleVotesUpChange(selectionIndex, v)
+                : undefined
+            }
           />
         );
       })}

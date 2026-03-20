@@ -180,10 +180,11 @@ export const RefineGameView: React.FC<RefineGameViewProps> = ({
         clueOrder: rebuildClueOrder(baseClueOrder, defaultPos),
       });
     } else {
-      // Disable: remove 'review' from clueOrder and clear reviewClue
+      // Disable: remove 'review' from clueOrder and clear both reviewClue and reviewClues
       onUpdate({
         clueOrder: baseClueOrder,
         reviewClue: undefined,
+        reviewClues: undefined,
       });
     }
   };
@@ -543,65 +544,81 @@ export const RefineGameView: React.FC<RefineGameViewProps> = ({
           <RefineReviews game={game} onUpdate={onUpdate} />
         </div>
         {/* Review clue preview — canonical last, below all other clues */}
-        {game.reviewClue && (
+        {(game.reviewClues && game.reviewClues.length > 0) ||
+        game.reviewClue ? (
           <div className='px-4 py-3 border-t border-[rgba(255,255,255,0.06)]'>
             <div className='text-gray-400 text-xs uppercase mb-2'>
-              Review Clue (position {reviewOrderPosition ?? '?'} in reveal
-              order):
+              Review Clue
+              {(game.reviewClues?.length ?? 0) + (game.reviewClue ? 1 : 0) > 1
+                ? 's'
+                : ''}{' '}
+              (position
+              {(game.reviewClues?.length ?? 0) + (game.reviewClue ? 1 : 0) > 1
+                ? 's'
+                : ''}{' '}
+              {reviewOrderPosition ?? '?'} in reveal order):
             </div>
-            <div className='rounded-md border border-purple-700/50 bg-purple-900/10 overflow-hidden'>
-              {/* Header */}
-              <div className='flex items-start gap-3 px-3 pt-3 pb-2 border-b border-[rgba(255,255,255,0.08)]'>
+            <div className='space-y-2'>
+              {(
+                game.reviewClues || (game.reviewClue ? [game.reviewClue] : [])
+              ).map((review, idx) => (
                 <div
-                  className='flex-shrink-0 flex items-center justify-center'
-                  style={{
-                    width: 40,
-                    height: 40,
-                    backgroundColor: game.reviewClue.votedUp
-                      ? '#174766'
-                      : '#602f35',
-                  }}
+                  key={idx}
+                  className='rounded-md border border-purple-700/50 bg-purple-900/10 overflow-hidden'
                 >
-                  {game.reviewClue.votedUp ? (
-                    <ThumbsUpIcon width={40} height={40} />
-                  ) : (
-                    <ThumbsDownIcon width={40} height={40} />
-                  )}
+                  {/* Header */}
+                  <div className='flex items-start gap-3 px-3 pt-3 pb-2 border-b border-[rgba(255,255,255,0.08)]'>
+                    <div
+                      className='flex-shrink-0 flex items-center justify-center'
+                      style={{
+                        width: 40,
+                        height: 40,
+                        backgroundColor: review.votedUp ? '#174766' : '#602f35',
+                      }}
+                    >
+                      {review.votedUp ? (
+                        <ThumbsUpIcon width={40} height={40} />
+                      ) : (
+                        <ThumbsDownIcon width={40} height={40} />
+                      )}
+                    </div>
+                    <div className='flex flex-col'>
+                      <span
+                        className={`text-sm font-bold ${
+                          review.votedUp ? 'text-[#66c0f4]' : 'text-[#c94f4f]'
+                        }`}
+                      >
+                        {review.votedUp ? 'Recommended' : 'Not Recommended'}
+                        {(game.reviewClues?.length ?? 0) > 1 && (
+                          <span className='text-xs ml-2 text-gray-400'>
+                            (#{idx + 1})
+                          </span>
+                        )}
+                      </span>
+                      <span className='text-[11px] text-gray-400'>
+                        {review.authorPlaytimeHours.toLocaleString()} hrs on
+                        record
+                      </span>
+                    </div>
+                  </div>
+                  <div className='px-3 py-2 text-sm text-gray-300 leading-relaxed'>
+                    {revealAll
+                      ? review.review
+                          .replace(/\|\|(.+?)\|\|/g, '$1')
+                          .split('\n')
+                          .map((line, i, arr) => (
+                            <span key={i}>
+                              {line}
+                              {i < arr.length - 1 && <br />}
+                            </span>
+                          ))
+                      : renderCensoredReview(review.review)}
+                  </div>
                 </div>
-                <div className='flex flex-col'>
-                  <span
-                    className={`text-sm font-bold ${
-                      game.reviewClue.votedUp
-                        ? 'text-[#66c0f4]'
-                        : 'text-[#c94f4f]'
-                    }`}
-                  >
-                    {game.reviewClue.votedUp
-                      ? 'Recommended'
-                      : 'Not Recommended'}
-                  </span>
-                  <span className='text-[11px] text-gray-400'>
-                    {game.reviewClue.authorPlaytimeHours.toLocaleString()} hrs
-                    on record
-                  </span>
-                </div>
-              </div>
-              <div className='px-3 py-2 text-sm text-gray-300 leading-relaxed'>
-                {revealAll
-                  ? game.reviewClue.review
-                      .replace(/\|\|(.+?)\|\|/g, '$1')
-                      .split('\n')
-                      .map((line, i, arr) => (
-                        <span key={i}>
-                          {line}
-                          {i < arr.length - 1 && <br />}
-                        </span>
-                      ))
-                  : renderCensoredReview(game.reviewClue.review)}
-              </div>
+              ))}
             </div>
           </div>
-        )}
+        ) : null}
       </div>
     </div>
   );

@@ -332,6 +332,12 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile4: "Tom Clancy's The Division",
   },
   '2026-03-21': {
+    caseFile1: 'Far Cry 5',
+    caseFile2: 'Dead Rising 3',
+    caseFile3: 'Keep Talking and Nobody Explodes',
+    caseFile4: 'L.A. Noire',
+  },
+  '2026-03-22': {
     caseFile1: 'Suicide Squad: Kill the Justice League',
     caseFile2: 'Fields of Mistria',
     caseFile3: "Don't Starve",
@@ -339,15 +345,11 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
   },
 };
 
-// 3/21 first game: Far Cry 5
-// 3/21 final game: L.A. Noire (fully refined)
-
 // Easy (Fully Refined): Old School RuneScape
 // Easy: Horizon Zero Dawn
 // Easy: Star Wars Battlefront II
 // Easy: Remnant II
 // Easy: State of Decay 2
-// Easy: Far Cry 5
 
 // Med: Batman: Arkham Asylum (update Original release date)
 // Med: Ryse: Son of Rome

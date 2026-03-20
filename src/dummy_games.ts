@@ -185,7 +185,6 @@ export const dummyGames: string[] = [
   'The Golf Club',
   'Ultra Street Fighter IV',
   'Unepic',
-  'Dead Rising 3: Apocalypse Edition',
   'Moebius: Empire Rising',
   'Blue Estate',
   'One Piece: Romance Dawn',

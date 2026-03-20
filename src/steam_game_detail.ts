@@ -1643,15 +1643,17 @@ export const steamGameDetails: SteamGameMap = {
     debugProcessed: true,
     debugRefined: true,
     difficulty: 'Medium',
-    reviewClue: {
-      review:
-        'Fun game, like a ||steampunk||, zombie, Victorian England version of Hitman.',
-      votedUp: true,
-      votesUp: 5,
-      weightedScore: '0.581749081611633301',
-      authorPlaytimeHours: 73,
-      timestamp: 1768831191,
-    },
+    reviewClues: [
+      {
+        review:
+          'Fun game, like a ||steampunk||, zombie, Victorian England version of Hitman.',
+        votedUp: true,
+        votesUp: 5,
+        weightedScore: '0.581749081611633301',
+        authorPlaytimeHours: 73,
+        timestamp: 1768831191,
+      },
+    ],
   },
   '218620': {
     name: 'PAYDAY 2',
@@ -1833,15 +1835,17 @@ export const steamGameDetails: SteamGameMap = {
     debugProcessed: true,
     debugRefined: true,
     difficulty: 'Hard',
-    reviewClue: {
-      review:
-        'one of the best games ever. The franchise fell of at 4, ||just cause|| 3 just had the perfect balance of enough story to justify the ||crazy|| stuff you do without boring you to death and not taking itself seriously at all. Oh and the graphics are INSANE for ||2015||',
-      votedUp: true,
-      votesUp: 7,
-      weightedScore: '0.620745539665222168',
-      authorPlaytimeHours: 12,
-      timestamp: 1768777887,
-    },
+    reviewClues: [
+      {
+        review:
+          'one of the best games ever. The franchise fell of at 4, ||just cause|| 3 just had the perfect balance of enough story to justify the ||crazy|| stuff you do without boring you to death and not taking itself seriously at all. Oh and the graphics are INSANE for ||2015||',
+        votedUp: true,
+        votesUp: 7,
+        weightedScore: '0.620745539665222168',
+        authorPlaytimeHours: 12,
+        timestamp: 1768777887,
+      },
+    ],
   },
   '227300': {
     name: 'Euro Truck Simulator 2',
@@ -2998,15 +3002,17 @@ export const steamGameDetails: SteamGameMap = {
     debugProcessed: true,
     debugRefined: true,
     difficulty: 'Hard',
-    reviewClue: {
-      review:
-        'I bought ||Oxygen Not Included|| thinking it was a cute ||space|| colony sim. What I got instead was a highly accurate anxiety generator where I personally invent new and creative ways to ||suffocate cartoon|| people.\n\nEvery run starts the same: "This time I know what I’m doing." Two hours later my base is full of ||carbon dioxide||, the toilets are backed up, everyone is stressed, and a dupe named Meep is vomiting in the drinking water while I desperately Google “why is my colony dying ||ONI.||” The game explains nothing, punishes everything, and somehow makes thermodynamics feel like a personal attack.\n\n10/10.',
-      votedUp: true,
-      votesUp: 10,
-      weightedScore: '0.652082264423370361',
-      authorPlaytimeHours: 126,
-      timestamp: 1769280115,
-    },
+    reviewClues: [
+      {
+        review:
+          'I bought ||Oxygen Not Included|| thinking it was a cute ||space|| colony sim. What I got instead was a highly accurate anxiety generator where I personally invent new and creative ways to ||suffocate cartoon|| people.\n\nEvery run starts the same: "This time I know what I’m doing." Two hours later my base is full of ||carbon dioxide||, the toilets are backed up, everyone is stressed, and a dupe named Meep is vomiting in the drinking water while I desperately Google “why is my colony dying ||ONI.||” The game explains nothing, punishes everything, and somehow makes thermodynamics feel like a personal attack.\n\n10/10.',
+        votedUp: true,
+        votesUp: 10,
+        weightedScore: '0.652082264423370361',
+        authorPlaytimeHours: 126,
+        timestamp: 1769280115,
+      },
+    ],
   },
   '477160': {
     name: 'Human Fall Flat',
@@ -5193,15 +5199,17 @@ export const steamGameDetails: SteamGameMap = {
     debugRefined: true,
     difficulty: 'Easy',
     debugNotes: 'delete',
-    reviewClue: {
-      review:
-        "This is a truly great game, one of my favorites of all time. The world is perfectly put together, and although it takes a long time to learn it flows well. The ||combat|| is challenging and well designed, the game has lots of replay value. It isn't too hard to see why this and a couple other games launched an entire genre.",
-      votedUp: true,
-      votesUp: 2,
-      weightedScore: '0.50462639331817627',
-      authorPlaytimeHours: 344,
-      timestamp: 1767991007,
-    },
+    reviewClues: [
+      {
+        review:
+          "This is a truly great game, one of my favorites of all time. The world is perfectly put together, and although it takes a long time to learn it flows well. The ||combat|| is challenging and well designed, the game has lots of replay value. It isn't too hard to see why this and a couple other games launched an entire genre.",
+        votedUp: true,
+        votesUp: 2,
+        weightedScore: '0.50462639331817627',
+        authorPlaytimeHours: 344,
+        timestamp: 1767991007,
+      },
+    ],
   },
   '883710': {
     name: 'Resident Evil 2',
@@ -5351,15 +5359,17 @@ export const steamGameDetails: SteamGameMap = {
     debugProcessed: true,
     debugRefined: true,
     difficulty: 'Medium',
-    reviewClue: {
-      review:
-        '||"I don\'t believe in Melitele, don\'t believe in the existence of other gods either... . You ask me what I believe in, in that case. I believe in the sword."||\n\n||This game deserves every bit of admiration that it gets.|| Don\'t let the "the ||combat|| sucks" prevent you from playing it. Besides the base game, those ||2|| expansions are ||two of the best expansions ever made||. And oh, NEVER, never skip or ignore ||GWENT games||. Just give it a shot, you\'ll love it.',
-      votedUp: true,
-      votesUp: 7,
-      weightedScore: '0.60000002384185791',
-      authorPlaytimeHours: 74,
-      timestamp: 1767393977,
-    },
+    reviewClues: [
+      {
+        review:
+          '||"I don\'t believe in Melitele, don\'t believe in the existence of other gods either... . You ask me what I believe in, in that case. I believe in the sword."||\n\n||This game deserves every bit of admiration that it gets.|| Don\'t let the "the ||combat|| sucks" prevent you from playing it. Besides the base game, those ||2|| expansions are ||two of the best expansions ever made||. And oh, NEVER, never skip or ignore ||GWENT games||. Just give it a shot, you\'ll love it.',
+        votedUp: true,
+        votesUp: 7,
+        weightedScore: '0.60000002384185791',
+        authorPlaytimeHours: 74,
+        timestamp: 1767393977,
+      },
+    ],
   },
   '740130': {
     name: 'Tales of Arise',
@@ -7423,15 +7433,17 @@ export const steamGameDetails: SteamGameMap = {
     debugProcessed: true,
     debugRefined: true,
     difficulty: 'Hard',
-    reviewClue: {
-      review:
-        "Peaked in the first act.\nNot Recommended\n\n||Inscryption|| is a brilliant 3-hour demo for a game that doesn't actually exist. The first act is a masterclass in atmosphere and ||deck-building||, set in a creepy, high-stakes ||cabin|| that feels like a classic in the making. Then, the game ... (edited for length)",
-      votedUp: false,
-      votesUp: 9,
-      weightedScore: '0.534515857696533203',
-      authorPlaytimeHours: 5,
-      timestamp: 1767602555,
-    },
+    reviewClues: [
+      {
+        review:
+          "Peaked in the first act.\nNot Recommended\n\n||Inscryption|| is a brilliant 3-hour demo for a game that doesn't actually exist. The first act is a masterclass in atmosphere and ||deck-building||, set in a creepy, high-stakes ||cabin|| that feels like a classic in the making. Then, the game ... (edited for length)",
+        votedUp: false,
+        votesUp: 9,
+        weightedScore: '0.534515857696533203',
+        authorPlaytimeHours: 5,
+        timestamp: 1767602555,
+      },
+    ],
   },
   '387990': {
     name: 'Scrap Mechanic',
@@ -7558,15 +7570,17 @@ export const steamGameDetails: SteamGameMap = {
       'Mining',
     ],
     clueOrder: ['details', 'tags', 'review', 'desc'],
-    reviewClue: {
-      review:
-        'Stardew Valley but anime. Truth be told, a lot of the features in this game are somewhat better than Stardew, especially the affinity with townsfolk.',
-      votedUp: true,
-      votesUp: 64,
-      weightedScore: '0.840762555599212646',
-      authorPlaytimeHours: 25,
-      timestamp: 1770739361,
-    },
+    reviewClues: [
+      {
+        review:
+          'Stardew Valley but anime. Truth be told, a lot of the features in this game are somewhat better than Stardew, especially the affinity with townsfolk.',
+        votedUp: true,
+        votesUp: 64,
+        weightedScore: '0.840762555599212646',
+        authorPlaytimeHours: 25,
+        timestamp: 1770739361,
+      },
+    ],
   },
   '244210': {
     name: 'Assetto Corsa',
@@ -9239,15 +9253,17 @@ export const steamGameDetails: SteamGameMap = {
       'Choose Your Own Adventure',
     ],
     clueOrder: ['review', 'desc', 'details', 'tags'],
-    reviewClue: {
-      review:
-        'Was gonna refund the game untill, I saw Zeus with his whole bare hog, within my 1 hour of playtime. ... (edited for length)',
-      votedUp: true,
-      votesUp: 8,
-      weightedScore: '0.61949688196182251',
-      authorPlaytimeHours: 26,
-      timestamp: 1769364439,
-    },
+    reviewClues: [
+      {
+        review:
+          'Was gonna refund the game untill, I saw Zeus with his whole bare hog, within my 1 hour of playtime. ... (edited for length)',
+        votedUp: true,
+        votesUp: 8,
+        weightedScore: '0.61949688196182251',
+        authorPlaytimeHours: 26,
+        timestamp: 1769364439,
+      },
+    ],
   },
   '239140': {
     name: 'Dying Light',
@@ -10479,15 +10495,17 @@ export const steamGameDetails: SteamGameMap = {
     debugProcessed: true,
     debugRefined: true,
     difficulty: 'Hard',
-    reviewClue: {
-      review:
-        'Placed units carefully.\nPressed start.\nEverything went wrong instantly.\nBattle lasted 4 seconds.\n\nThis game taught me:\n• Numbers mean nothing\n• Balance is fictional\n• One dragon can end civilizations\n\nWar has changed.\n\n10/10 military strategist simulator.',
-      votedUp: true,
-      votesUp: 39,
-      weightedScore: '0.781391263008117676',
-      authorPlaytimeHours: 3,
-      timestamp: 1768786414,
-    },
+    reviewClues: [
+      {
+        review:
+          'Placed units carefully.\nPressed start.\nEverything went wrong instantly.\nBattle lasted 4 seconds.\n\nThis game taught me:\n• Numbers mean nothing\n• Balance is fictional\n• One dragon can end civilizations\n\nWar has changed.\n\n10/10 military strategist simulator.',
+        votedUp: true,
+        votesUp: 39,
+        weightedScore: '0.781391263008117676',
+        authorPlaytimeHours: 3,
+        timestamp: 1768786414,
+      },
+    ],
   },
   '367520': {
     name: 'Hollow Knight',
@@ -11618,15 +11636,17 @@ export const steamGameDetails: SteamGameMap = {
     debugProcessed: true,
     debugRefined: true,
     difficulty: 'Hard',
-    reviewClue: {
-      review:
-        'It´s a cool game, but sometimes you end up fighting the camera instead fighting the Bosses. Come on, let me be in charge of my own game. It does not matter because I end up shooting everything anyway because fighting close can get you killed.\n\nThe game is not bad, and it´s kind of frightening how without humanity, there´s lush green and grass everywhere. The graphics and soundtracks are also astonishing.\n\n',
-      votedUp: true,
-      votesUp: 11,
-      weightedScore: '0.587729573249816895',
-      authorPlaytimeHours: 5,
-      timestamp: 1768756073,
-    },
+    reviewClues: [
+      {
+        review:
+          'It´s a cool game, but sometimes you end up fighting the camera instead fighting the Bosses. Come on, let me be in charge of my own game. It does not matter because I end up shooting everything anyway because fighting close can get you killed.\n\nThe game is not bad, and it´s kind of frightening how without humanity, there´s lush green and grass everywhere. The graphics and soundtracks are also astonishing.\n\n',
+        votedUp: true,
+        votesUp: 11,
+        weightedScore: '0.587729573249816895',
+        authorPlaytimeHours: 5,
+        timestamp: 1768756073,
+      },
+    ],
   },
   '391540': {
     name: 'Undertale',
@@ -12245,15 +12265,17 @@ export const steamGameDetails: SteamGameMap = {
     debugProcessed: true,
     debugRefined: true,
     difficulty: 'Easy',
-    reviewClue: {
-      review:
-        'Like ||Hades|| 1 but with magic, pets, arcana, and hexes,\nAmazing combat, banger music, excellent game about beating up your ||grandfather||.',
-      votedUp: true,
-      votesUp: 55,
-      weightedScore: '0.821802258491516113',
-      authorPlaytimeHours: 49,
-      timestamp: 1767417958,
-    },
+    reviewClues: [
+      {
+        review:
+          'Like ||Hades|| 1 but with magic, pets, arcana, and hexes,\nAmazing combat, banger music, excellent game about beating up your ||grandfather||.',
+        votedUp: true,
+        votesUp: 55,
+        weightedScore: '0.821802258491516113',
+        authorPlaytimeHours: 49,
+        timestamp: 1767417958,
+      },
+    ],
   },
   '955050': {
     name: 'Bright Memory',
@@ -12385,15 +12407,17 @@ export const steamGameDetails: SteamGameMap = {
     debugProcessed: true,
     debugRefined: true,
     difficulty: 'Hard',
-    reviewClue: {
-      review:
-        'This game is perfect for exterminating the disgusting bugs that have gained sentience and believe their ||place in the galaxy|| is wanted. Every time another species is purged I feel clean and calm inside.',
-      votedUp: true,
-      votesUp: 15,
-      weightedScore: '0.677238821983337402',
-      authorPlaytimeHours: 51,
-      timestamp: 1768639489,
-    },
+    reviewClues: [
+      {
+        review:
+          'This game is perfect for exterminating the disgusting bugs that have gained sentience and believe their ||place in the galaxy|| is wanted. Every time another species is purged I feel clean and calm inside.',
+        votedUp: true,
+        votesUp: 15,
+        weightedScore: '0.677238821983337402',
+        authorPlaytimeHours: 51,
+        timestamp: 1768639489,
+      },
+    ],
   },
   '230410': {
     name: 'Warframe',
@@ -13704,15 +13728,17 @@ export const steamGameDetails: SteamGameMap = {
       'Hack and Slash',
     ],
     clueOrder: ['review', 'desc', 'tags', 'details'],
-    reviewClue: {
-      review:
-        '||Devil May Cry 5 is great because its combat is still some of the best ever made:|| fast, deep, and endlessly stylish. Seven years later, it still stands up thanks to its tight gameplay design, smooth controls, strong performance, and visuals that aged well. ||DMC5 focuses on|| pure action mastery, which keeps it fun and replayable.',
-      votedUp: true,
-      votesUp: 6,
-      weightedScore: '0.537572264671325684',
-      authorPlaytimeHours: 89,
-      timestamp: 1767513431,
-    },
+    reviewClues: [
+      {
+        review:
+          '||Devil May Cry 5 is great because its combat is still some of the best ever made:|| fast, deep, and endlessly stylish. Seven years later, it still stands up thanks to its tight gameplay design, smooth controls, strong performance, and visuals that aged well. ||DMC5 focuses on|| pure action mastery, which keeps it fun and replayable.',
+        votedUp: true,
+        votesUp: 6,
+        weightedScore: '0.537572264671325684',
+        authorPlaytimeHours: 89,
+        timestamp: 1767513431,
+      },
+    ],
   },
   '1229490': {
     name: 'ULTRAKILL',
@@ -14716,15 +14742,17 @@ export const steamGameDetails: SteamGameMap = {
       'PvE',
     ],
     clueOrder: ['review', 'details', 'tags', 'desc'],
-    reviewClue: {
-      review:
-        'I thought its some kind of a free indie mobile game but then I just realized its made by ♥♥♥♥♥♥♥ Valve😭 ||after finishing this peak and looking at the credits. No wonder that the game has actual good mechanics and it actually feels like it have a soul.||\n\nNot sure how good it is by playing solo but its definitely a good experience when playing with friends.\n||We actually expect it to be some wacky arcady shooter but it turns out that this game is very highly tactical.||',
-      votedUp: true,
-      votesUp: 5,
-      weightedScore: undefined,
-      authorPlaytimeHours: 2.5,
-      timestamp: 1771534523,
-    },
+    reviewClues: [
+      {
+        review:
+          'I thought its some kind of a free indie mobile game but then I just realized its made by ♥♥♥♥♥♥♥ Valve😭 ||after finishing this peak and looking at the credits. No wonder that the game has actual good mechanics and it actually feels like it have a soul.||\n\nNot sure how good it is by playing solo but its definitely a good experience when playing with friends.\n||We actually expect it to be some wacky arcady shooter but it turns out that this game is very highly tactical.||',
+        votedUp: true,
+        votesUp: 5,
+        weightedScore: undefined,
+        authorPlaytimeHours: 2.5,
+        timestamp: 1771534523,
+      },
+    ],
   },
   '1250': {
     name: 'Killing Floor',
@@ -16625,7 +16653,7 @@ export const steamGameDetails: SteamGameMap = {
     shortDescription:
       '||The Sims 3||: Create the perfect world with full customization at your fingertips. Refine personalities and help fulfill destinies.',
     releaseDate: 'Jan 27, 2011',
-    developer: 'The Sims Studio',
+    developer: 'The ||Sims|| Studio',
     publisher: 'Electronic Arts',
     tags: [],
     features: [],
@@ -21343,13 +21371,14 @@ export const steamGameDetails: SteamGameMap = {
   },
   '265550': {
     name: 'Dead Rising 3',
+    overrideCensoredTitle: 'De||ad|| Ri||sing|| ||3||',
     appId: 265550,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/265550/ss_129f2f5e120ae057862ea222ad394fd1cfdfdc8b.600x338.jpg',
-    secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/265550/ss_dc6fede140a9897dba7adae5aa39a50d49cfa77d.600x338.jpg',
+    secondaryScreenshot:
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/265550/ss_129f2f5e120ae057862ea222ad394fd1cfdfdc8b.600x338.jpg',
     shortDescription:
-      'Explore the zombie-infested city of Los Perdidos, and find a way to escape before a military strike wipes the entire city, and everyone in it, off the map.',
+      'Explore the ||zombie||-infested city of Los Perdidos, and find a way to escape before a military strike wipes the entire city, and everyone in it, off the map.',
     releaseDate: 'Sep 5, 2014',
     developer: 'Capcom Game Studio Vancouver',
     publisher: 'Capcom',
@@ -21376,7 +21405,22 @@ export const steamGameDetails: SteamGameMap = {
       'Online Co-Op',
       'Sandbox',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    screenshotFocusPoint: [100, 100, 75],
+    clueOrder: ['review', 'desc', 'ss', 'details', 'tags'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Medium',
+    reviewClues: [
+      {
+        review:
+          "||Dead Rising|| 3 is a decent ||zombie|| game, but is nothing like the prior games of the series. The fun and soul of the game is gone. We go from ||Frank|| West and ||Chuck|| Greene, both oddballs and bravado in their own way, to a whiny and weak willed protagonist, with fickle 'friends' and a nonsense story that makes each character less likable as you progress. ... (edited for length)",
+        votedUp: false,
+        votesUp: 12,
+        weightedScore: undefined,
+        authorPlaytimeHours: 73.6,
+        timestamp: 1771640440,
+      },
+    ],
   },
   '265630': {
     name: 'Fistful of Frags',
@@ -23200,6 +23244,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/307690/ss_a4681f10ebee79a31369504b17303f476ca84a45.600x338.jpg',
     shortDescription:
       'The Definitive Edition of the critically acclaimed, award winning open-world action adventure, reworked, rebuilt and re-mastered for the new generation. With all previously available DLC included and a wealth of tech and visual improvements, Hong Kong has never felt so alive.',
+    originalReleaseDate: 'Aug 14, 2012',
     releaseDate: 'Oct 8, 2014',
     developer: 'United Front Games',
     publisher: 'Square Enix',
@@ -23226,7 +23271,18 @@ export const steamGameDetails: SteamGameMap = {
       'Atmospheric',
       'Shooter',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    clueOrder: ['tags', 'details', 'desc', 'review'],
+    reviewClues: [
+      {
+        review:
+          "It's disrespecting to say it's a ||GTA|| Clone. A wonderful game you should grab on sale if you enjoy the ||Hong Kong|| triad esthetic",
+        votedUp: true,
+        votesUp: 3,
+        weightedScore: undefined,
+        authorPlaytimeHours: 15.7,
+        timestamp: 1770587121,
+      },
+    ],
   },
   '307780': {
     name: 'Mortal Kombat X',
@@ -24643,15 +24699,17 @@ export const steamGameDetails: SteamGameMap = {
     ],
     clueOrder: ['review', 'desc', 'details', 'tags'],
     difficulty: 'Medium',
-    reviewClue: {
-      review:
-        "So sad that the story was cut off in mid-sentence... It should've become a finished trilogy. The game is one of the best ||cyberpunk-styled|| immersive ||sim|| ever made, and ||Jensen|| is my personal favourite protagonist: hella stylish and charismatic!",
-      votedUp: true,
-      votesUp: 4,
-      weightedScore: undefined,
-      authorPlaytimeHours: 95.7,
-      timestamp: 1771628742,
-    },
+    reviewClues: [
+      {
+        review:
+          "So sad that the story was cut off in mid-sentence... It should've become a finished trilogy. The game is one of the best ||cyberpunk-styled|| immersive ||sim|| ever made, and ||Jensen|| is my personal favourite protagonist: hella stylish and charismatic!",
+        votedUp: true,
+        votesUp: 4,
+        weightedScore: undefined,
+        authorPlaytimeHours: 95.7,
+        timestamp: 1771628742,
+      },
+    ],
   },
   '337320': {
     name: 'Paint the Town Red',
@@ -24836,7 +24894,23 @@ export const steamGameDetails: SteamGameMap = {
       'Family Friendly',
       'Funny',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    overrideCensoredTitle:
+      'Ke||ep|| Ta||lki||ng a||nd|| No||bod||y E||xplod||es',
+    clueOrder: ['review', 'details', 'tags', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Hard',
+    reviewClues: [
+      {
+        review:
+          "there's nothing quite like screaming at your friend to cut the ||red wire|| while they insist there are three ||red wire||s. The concept is genuinely brilliant: one person ||defuse||s, one reads the manual, and somehow both of you still manage to ||blow up|| anyway. ... (edited for length)",
+        votedUp: true,
+        votesUp: 1,
+        weightedScore: undefined,
+        authorPlaytimeHours: 17.8,
+        timestamp: 1771551844,
+      },
+    ],
   },
   '341940': {
     name: 'Hatred',
@@ -31135,7 +31209,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/552520/ss_64406d71653c589377e8c589ece9e3941b6fff50.600x338.jpg',
     shortDescription:
-      '||Discover the open world|| of Hope County, ||Montana||, besieged by a ||fanatical doomsday cult||. Dive into the action solo or two-player co-op ||in the story campaign||, use a vast arsenal of weapons ||and allies, and free Hope County from Joseph Seed and his cult.||',
+      '||Discover the open world|| of Hope County, ||Montana||, besieged by a ||fanatical doomsday cult||. Dive into the action solo or two-player co-op ||in the story campaign||, use a vast arsenal of weapons ||and allies, and|| free Hope County from ||Joseph Seed|| and his ||cult||.',
     releaseDate: 'Mar 26, 2018',
     developer: 'Ubisoft Montreal',
     publisher: 'Ubisoft',
@@ -31869,15 +31943,17 @@ export const steamGameDetails: SteamGameMap = {
     debugProcessed: true,
     debugRefined: true,
     difficulty: 'Medium',
-    reviewClue: {
-      review:
-        "... (edited for length)\nUnfortunately, the core gameplay revolves around endless grinding, AFK fishing, and the quiet realization that progress costs either time, patience, or real money.\n\nA beautiful ||MMO|| that hooks you with style, keeps you with grind, and eventually convinces you to leave your PC running while you go to sleep. Perfect for anyone looking for a game that keeps playing even when you don't.",
-      votedUp: false,
-      votesUp: 92,
-      weightedScore: undefined,
-      authorPlaytimeHours: 37.5,
-      timestamp: 1771138322,
-    },
+    reviewClues: [
+      {
+        review:
+          "... (edited for length)\nUnfortunately, the core gameplay revolves around endless grinding, AFK fishing, and the quiet realization that progress costs either time, patience, or real money.\n\nA beautiful ||MMO|| that hooks you with style, keeps you with grind, and eventually convinces you to leave your PC running while you go to sleep. Perfect for anyone looking for a game that keeps playing even when you don't.",
+        votedUp: false,
+        votesUp: 92,
+        weightedScore: undefined,
+        authorPlaytimeHours: 37.5,
+        timestamp: 1771138322,
+      },
+    ],
   },
   '583950': {
     name: 'Artifact',
@@ -34806,16 +34882,16 @@ export const steamGameDetails: SteamGameMap = {
     debugProcessed: true,
     debugRefined: true,
     difficulty: 'Hard',
-    reviewClue: {
-      review: "It's Katamari, but you send things to hell.",
-      votedUp: true,
-      votesUp: 61,
-      weightedScore: undefined,
-      authorPlaytimeHours: 0.9,
-      timestamp: 1535414600,
-      reviewUrl:
-        'https://steamcommunity.com/id/greatlakes123/recommended/702670/',
-    },
+    reviewClues: [
+      {
+        review: "It's Katamari, but you send things to hell.",
+        votedUp: true,
+        votesUp: 61,
+        weightedScore: undefined,
+        authorPlaytimeHours: 0.9,
+        timestamp: 1535414600,
+      },
+    ],
   },
   '704270': {
     name: 'Generation Zero',
@@ -41025,15 +41101,17 @@ export const steamGameDetails: SteamGameMap = {
     debugProcessed: true,
     debugRefined: true,
     difficulty: 'Medium',
-    reviewClue: {
-      review:
-        "There could be endless iterations of this game and I would never get bored. I would love to see a sequel that tells someone else's story, as I just find it so fascinating to see someone's life unfold through the process of ||unpacking into their new home||. I absolutely love this game, and it has kept my spirits up through rough times. One of my go-to games when I just need to feel calm and grounded. ... (edited for length)",
-      votedUp: true,
-      votesUp: 24,
-      weightedScore: undefined,
-      authorPlaytimeHours: 38.9,
-      timestamp: 1770793429,
-    },
+    reviewClues: [
+      {
+        review:
+          "There could be endless iterations of this game and I would never get bored. I would love to see a sequel that tells someone else's story, as I just find it so fascinating to see someone's life unfold through the process of ||unpacking into their new home||. I absolutely love this game, and it has kept my spirits up through rough times. One of my go-to games when I just need to feel calm and grounded. ... (edited for length)",
+        votedUp: true,
+        votesUp: 24,
+        weightedScore: undefined,
+        authorPlaytimeHours: 38.9,
+        timestamp: 1770793429,
+      },
+    ],
   },
   '1142710': {
     name: 'Total War: WARHAMMER III',
@@ -48958,7 +49036,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1888930/ss_89fffc2857dcae29dee2a09f1be33d745610e19d.600x338.jpg',
     shortDescription:
-      'Discover the award-winning game that inspired the critically acclaimed television show. Guide Joel and Ellie through a post-apocalyptic America, and encounter unforgettable allies and enemies in The ||Last|| of ||Us||™.',
+      'Discover the award-winning game that inspired the critically acclaimed television show. Guide Joel and Ellie through a post-apocalyptic America, and encounter unforgettable allies and enemies in ||The Last of Us||.',
     releaseDate: 'Mar 28, 2023',
     developer: 'Naughty Dog LLC',
     publisher: 'PlayStation Publishing LLC',
@@ -51838,15 +51916,17 @@ export const steamGameDetails: SteamGameMap = {
     debugProcessed: true,
     debugRefined: true,
     difficulty: 'Easy',
-    reviewClue: {
-      review:
-        "Y'know what, it doesn't excuse all of the BS ||Blizzard|| pulled with the launch of ||Overwatch 2||, or how they completely dropped the ball with the promised story mode, but I can safely say that this is the game I've been missing since 2022. I think the current dev team should be commended for having the courage to admit their previous mistakes and course-correct instead of continuing down that road.\n\nIf you're still mad at ||Blizzard|| and refuse to touch this game ever again, I don't blame you. But I'm also not going to let bygones get in the way of me enjoying the hell out of this game.",
-      votedUp: true,
-      votesUp: 24,
-      weightedScore: undefined,
-      authorPlaytimeHours: 22.7,
-      timestamp: 1772928330,
-    },
+    reviewClues: [
+      {
+        review:
+          "Y'know what, it doesn't excuse all of the BS ||Blizzard|| pulled with the launch of ||Overwatch 2||, or how they completely dropped the ball with the promised story mode, but I can safely say that this is the game I've been missing since 2022. I think the current dev team should be commended for having the courage to admit their previous mistakes and course-correct instead of continuing down that road.\n\nIf you're still mad at ||Blizzard|| and refuse to touch this game ever again, I don't blame you. But I'm also not going to let bygones get in the way of me enjoying the hell out of this game.",
+        votedUp: true,
+        votesUp: 24,
+        weightedScore: undefined,
+        authorPlaytimeHours: 22.7,
+        timestamp: 1772928330,
+      },
+    ],
   },
   '2365810': {
     name: 'Pseudoregalia',
@@ -52583,15 +52663,17 @@ export const steamGameDetails: SteamGameMap = {
     blurredUserTags: ['Flight'],
     overrideCensoredTitle: 'Mi||crosoft|| Fl||ight|| Si||mulator|| 202||4||',
     clueOrder: ['details', 'review', 'tags', 'desc'],
-    reviewClue: {
-      review:
-        'still broken, Waiting for crop spraying in helicopters to be fix for over a year. span in and crash, crash mid air.',
-      votedUp: false,
-      votesUp: 3,
-      weightedScore: undefined,
-      authorPlaytimeHours: 612.9,
-      timestamp: 1770739038,
-    },
+    reviewClues: [
+      {
+        review:
+          'still broken, Waiting for crop spraying in helicopters to be fix for over a year. span in and crash, crash mid air.',
+        votedUp: false,
+        votesUp: 3,
+        weightedScore: undefined,
+        authorPlaytimeHours: 612.9,
+        timestamp: 1770739038,
+      },
+    ],
   },
   '2551020': {
     name: 'One-armed robber',
@@ -53954,6 +54036,7 @@ export const CLOSE_GUESS_SERIES: string[] = [
   'dragon ball',
   'elder scrolls',
   'fallout',
+  'far cry',
   'final fantasy',
   'forza',
   'half-life',

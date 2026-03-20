@@ -20,8 +20,13 @@ export const ClueContainer: React.FC<ClueContainerProps> = ({ caseFile }) => {
     showClues;
   const [primaryIsMain, setPrimaryIsMain] = useState(true);
 
-  // When a reviewClue is configured, it takes the secondary screenshot slot.
-  const hasReviewClue = !!dailyGame.reviewClue;
+  // When reviewClues/reviewClue is configured, it takes the secondary screenshot slot.
+  const hasReviewClue =
+    !!(dailyGame.reviewClues && dailyGame.reviewClues.length > 0) ||
+    !!dailyGame.reviewClue;
+  const reviewsForClue =
+    dailyGame.reviewClues ||
+    (dailyGame.reviewClue ? [dailyGame.reviewClue] : []);
 
   // When swapped, flip both slots together so secondaryScreenshot prop never
   // changes between defined and undefined — FsLightbox uses hook counts that
@@ -100,10 +105,10 @@ export const ClueContainer: React.FC<ClueContainerProps> = ({ caseFile }) => {
           show={showClue1}
           isComplete={isComplete}
         />
-        {/* Review clue — canonical last position, replaces secondary screenshot */}
+        {/* Review clue(s) — canonical last position, replaces secondary screenshot */}
         {hasReviewClue && (
           <ClueReview
-            review={dailyGame.reviewClue!}
+            reviews={reviewsForClue}
             isComplete={isComplete}
             show={showClue5}
           />
