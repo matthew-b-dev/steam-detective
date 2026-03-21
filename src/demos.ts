@@ -338,6 +338,12 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile4: 'L.A. Noire',
   },
   '2026-03-22': {
+    caseFile1: 'Borderlands 3',
+    caseFile2: 'Super Auto Pets',
+    caseFile3: 'DYSMANTLE',
+    caseFile4: 'Jurassic World Evolution',
+  },
+  '2026-03-23': {
     caseFile1: 'Suicide Squad: Kill the Justice League',
     caseFile2: 'Fields of Mistria',
     caseFile3: "Don't Starve",
@@ -359,9 +365,7 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
 
 // Hard (Fully Refined): Tales of Arise
 // Hard: Bomb Rush Cyberfunk
-// Hard: Keep Talking and Nobody Explodes
 // Hard: Spelunky (change original release?)
-// Hard: Super Auto Pets
 // Hard: Darwin Project
 
 // April 1st: Skyrim: thumbs down review "the game doesnt work the horse flies"

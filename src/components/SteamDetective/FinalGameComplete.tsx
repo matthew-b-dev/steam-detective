@@ -19,6 +19,7 @@ import AnimatedTotalScoreDisplay from './AnimatedTotalScoreDisplay';
 import { useDailyGame } from '../../hooks/useDailyGame';
 import { ArrowPathIcon } from '@heroicons/react/20/solid';
 import toast from 'react-hot-toast';
+import GameIdeaCard from '../GameIdeaCard';
 
 interface CaseFileState {
   totalGuesses: number;
@@ -257,6 +258,8 @@ const FinalGameComplete: React.FC<FinalGameCompleteProps> = ({
             </span>{' '}
             See you then!
           </div>
+
+          <GameIdeaCard />
 
           {/* Feedback Buttons */}
           <SteamDetectiveFeedbackButtons

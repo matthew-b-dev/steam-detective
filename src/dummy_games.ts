@@ -384,6 +384,7 @@ export const dummyGames: string[] = [
   'Until Dawn: Rush of Blood (VR)',
   'Valley',
   'Grow Up!',
+  'Jurassic World Evolution 3',
   'One Piece: Burning Blood',
   'Valkyria Revolution',
   'Dragon Quest Heroes 2',

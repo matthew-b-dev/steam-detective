@@ -110,16 +110,23 @@ export const hashSeededCensorText = (text: string): string => {
 };
 
 // Helper to render description with censored parts
+const bracketNoteStyle: React.CSSProperties = {
+  color: '#8a909a',
+};
+
+// Matches ||censored|| or [bracket note]
+const DESCRIPTION_PATTERN = /\|\|(.+?)\|\||(\[[^\]]*\])/g;
+
 export const renderCensoredDescription = (
   description: string,
 ): ReactElement[] => {
   const parts: ReactElement[] = [];
-  const pattern = /\|\|(.+?)\|\|/g;
+  const pattern = new RegExp(DESCRIPTION_PATTERN.source, 'g');
   let lastIndex = 0;
   let match;
 
   while ((match = pattern.exec(description)) !== null) {
-    // Add text before the censored part
+    // Add text before the match
     if (match.index > lastIndex) {
       parts.push(
         <span key={`text-${lastIndex}`}>
@@ -128,22 +135,73 @@ export const renderCensoredDescription = (
       );
     }
 
-    // Add censored text with blur
-    const censoredText = censorText(match[1]);
-    parts.push(
-      <span
-        key={`censored-${match.index}`}
-        style={{ filter: 'blur(7px)' }}
-        className='select-none'
-      >
-        {censoredText}
-      </span>,
-    );
+    if (match[1] !== undefined) {
+      // ||text|| - censored with blur
+      const censoredText = censorText(match[1]);
+      parts.push(
+        <span
+          key={`censored-${match.index}`}
+          style={{ filter: 'blur(7px)' }}
+          className='select-none'
+        >
+          {censoredText}
+        </span>,
+      );
+    } else {
+      // [text] - bracket note, gray italic
+      parts.push(
+        <span key={`bracket-${match.index}`} style={bracketNoteStyle}>
+          {match[0]}
+        </span>,
+      );
+    }
 
     lastIndex = pattern.lastIndex;
   }
 
-  // Add remaining text after last censored part
+  // Add remaining text after last match
+  if (lastIndex < description.length) {
+    parts.push(
+      <span key={`text-${lastIndex}`}>{description.slice(lastIndex)}</span>,
+    );
+  }
+
+  return parts;
+};
+
+// Like renderCensoredDescription but reveals ||censored|| text; still styles [bracket notes]
+export const renderUncensoredDescription = (
+  description: string,
+): ReactElement[] => {
+  const parts: ReactElement[] = [];
+  const pattern = new RegExp(DESCRIPTION_PATTERN.source, 'g');
+  let lastIndex = 0;
+  let match;
+
+  while ((match = pattern.exec(description)) !== null) {
+    if (match.index > lastIndex) {
+      parts.push(
+        <span key={`text-${lastIndex}`}>
+          {description.slice(lastIndex, match.index)}
+        </span>,
+      );
+    }
+
+    if (match[1] !== undefined) {
+      // ||text|| - reveal uncensored
+      parts.push(<span key={`uncensored-${match.index}`}>{match[1]}</span>);
+    } else {
+      // [text] - bracket note, gray italic
+      parts.push(
+        <span key={`bracket-${match.index}`} style={bracketNoteStyle}>
+          {match[0]}
+        </span>,
+      );
+    }
+
+    lastIndex = pattern.lastIndex;
+  }
+
   if (lastIndex < description.length) {
     parts.push(
       <span key={`text-${lastIndex}`}>{description.slice(lastIndex)}</span>,

@@ -3295,11 +3295,11 @@ export const steamGameDetails: SteamGameMap = {
     name: 'Jurassic World Evolution',
     appId: 648350,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/648350/ss_6062bc87b549ef44acb16e48944b6b69de818325.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/648350/ss_3cd930d79ab40e040f452fe2f8d98c55cd603cb5.600x338.jpg',
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/648350/ss_25621aefd0f01b56d777260cc63c75100869d828.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/648350/ss_5566c1ffb55224c0b394e334e9eab92901bd30bb.600x338.jpg',
     shortDescription:
-      'Place yourself at the heart of the ||Jurassic|| franchise and build your own ||Jurassic World||. Bioengineer ||dinosaurs|| that think, feel and react intelligently to the world around them and face threats posed by espionage, ||breakouts|| and devastating ||tropical|| storms in an uncertain world where life ||always finds a way||.',
+      'Place yourself at the heart of the ||Jurassic|| franchise and build your own ||Jurassic World||. Bioengineer ||dinosaurs|| that think, feel and react intelligently to the world around them and face threats posed by espionage, ||breakouts|| and devastating ||tropical|| storms in an uncertain world where life always finds a way.',
     releaseDate: 'Jun 11, 2018',
     developer: 'Frontier Developments',
     publisher: 'Frontier Developments',
@@ -3332,10 +3332,22 @@ export const steamGameDetails: SteamGameMap = {
       'Adventure',
     ],
     blurredUserTags: ['Dinosaurs'],
-    clueOrder: ['tags', 'details', 'desc'],
+    overrideCensoredTitle: 'J||u||r||assic|| Wo||rld|| Ev||olutio||n',
+    clueOrder: ['details+tags', 'review', 'desc'],
     debugProcessed: true,
     debugRefined: true,
     difficulty: 'Hard',
+    reviewClues: [
+      {
+        review:
+          'Good game not as good as ||jurassic|| world ||evolution|| 2 or 3 but this is the first game and its still good and fun and also kind of difficult but its still fun!',
+        votedUp: true,
+        votesUp: 2,
+        weightedScore: '0.526938259601593018',
+        authorPlaytimeHours: 66,
+        timestamp: 1768090730,
+      },
+    ],
   },
   '678950': {
     name: 'DRAGON BALL FighterZ',
@@ -27239,7 +27251,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/397540/ss_f2053d688ec55f2269c47b24313539938bef9064.600x338.jpg',
     shortDescription:
-      'The original shooter-looter returns, packing ||bazillions of guns|| and a mayhem-fueled adventure! Blast through new worlds and enemies as one of four new ||Vault Hunters||.',
+      'The original shooter-looter returns, packing bazillions of guns and a mayhem-fueled adventure! Blast through new worlds and enemies as one of four new ||Vault Hunters||.',
     originalReleaseDate: 'Sep 13, 2019 (Epic Games Store)',
     releaseDate: 'Mar 13, 2020',
     developer: 'Gearbox Software',
@@ -36974,13 +36986,14 @@ export const steamGameDetails: SteamGameMap = {
   },
   '846770': {
     name: 'DYSMANTLE',
+    searchTerms: ['dismantle'],
     appId: 846770,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/846770/ss_13369ed97d45aa3c12e503bd68955e9b16cbc6bd.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/846770/ss_86d43118c22fd7313f51660c27b4025a8b5894d0.600x338.jpg',
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/846770/ss_e22f4d73c153d6bd2e1943566092f0eea53be5bc.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/846770/ss_13369ed97d45aa3c12e503bd68955e9b16cbc6bd.600x338.jpg',
     shortDescription:
-      'Ascend from your shelter. Ruin everything. Escape the wretched island. ⚔️🔨🎣🌱🌵🍰 Explore. Fight. Level up. Survive. Gather. Craft. Harvest. Hunt. Build. Farm. Solve puzzles. Fish. Cook. Live. Enjoy the bittersweet post-apocalypse.',
+      'Ascend from your shelter. Ruin everything. Escape the wretched island. ⚔️🔨🎣🌱🌵🍰 Explore. Fight. Level up. Survive. Gather. Craft. Harvest. Hunt. Build. Farm. Solve puzzles. Fish. Cook. Live. Enjoy the bittersweet post-apocalypse. [...] \nOver 99% of everything can be broken for materials with the right equipment.',
     releaseDate: 'Nov 16, 2021',
     developer: '10tons Ltd',
     publisher: '10tons Ltd',
@@ -37007,7 +37020,20 @@ export const steamGameDetails: SteamGameMap = {
       'Hunting',
       'Fishing',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: ['Destruction'],
+    overrideCensoredTitle: 'DY||SM||AN||TL||E',
+    clueOrder: ['details+tags', 'review', 'desc'],
+    reviewClues: [
+      {
+        review:
+          'Besides breaking things, the game is primarily about exploration. There are a lot of different activities to do - there are quests, puzzles, combat trials, tower defense, and even farming and fishing. None of them are particularly challenging, but they do give a nice variety to the game. ... (edited for length)',
+        votedUp: true,
+        votesUp: 136,
+        weightedScore: undefined,
+        authorPlaytimeHours: 63,
+        timestamp: 1644624000,
+      },
+    ],
   },
   '847370': {
     name: 'Sunset Overdrive',
@@ -47861,11 +47887,11 @@ export const steamGameDetails: SteamGameMap = {
     name: 'Super Auto Pets',
     appId: 1714040,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1714040/ss_ce4c7db7a9a1375a17cb7727dec8e6c4078bed62.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1714040/ss_b349668fe7de40d36b1a8aedb1070d3e6ca74078.600x338.jpg',
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1714040/ss_f61be4caff97d77b7df02bcdadee2687232e991f.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1714040/ss_e4f02d8b78f1546a0c7a6a2656e906c7f0add4bf.600x338.jpg',
     shortDescription:
-      'Build the strongest team of pets and tussle with your friends!',
+      'Build a team of cute ||pets|| with unique abilities. Battle against other players. Everything is at your own pace in this chill free-to-play ||auto battler||.',
     releaseDate: 'Sep 24, 2021',
     developer: 'Team Wood Games',
     publisher: 'Team Wood Games',
@@ -47892,7 +47918,19 @@ export const steamGameDetails: SteamGameMap = {
       'Minimalist',
       'Combat',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    overrideCensoredTitle: 'Su||per|| A||uto|| P||et||s',
+    clueOrder: ['review', 'desc', 'details+tags'],
+    reviewClues: [
+      {
+        review:
+          "Whether you're running Honey Badger or Shrimp Scampi, there's juice for every squeeze.\n\nLow skill floor and high skill ceiling. I won my first 10-piece after seven hours of play. I'm watching Deer summon Buses in my dreams. ",
+        votedUp: true,
+        votesUp: 101,
+        weightedScore: undefined,
+        authorPlaytimeHours: 15,
+        timestamp: 1633564800,
+      },
+    ],
   },
   '1716740': {
     name: 'Starfield',
@@ -54046,6 +54084,7 @@ export const CLOSE_GUESS_SERIES: string[] = [
   'final fantasy',
   'forza',
   'half-life',
+  'jurassic',
   'lego',
   'life is strange',
   'mafia',

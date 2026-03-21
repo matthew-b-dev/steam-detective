@@ -1,6 +1,10 @@
 import type { ReactElement } from 'react';
 import { motion } from 'framer-motion';
-import { clueVariants, decodeHtmlEntities } from './utils';
+import {
+  clueVariants,
+  decodeHtmlEntities,
+  renderUncensoredDescription,
+} from './utils';
 
 interface ClueDescriptionProps {
   shortDescription: string;
@@ -15,11 +19,6 @@ export const ClueDescription: React.FC<ClueDescriptionProps> = ({
   isComplete,
   show,
 }) => {
-  // Remove censorship markers (||text||) when showing uncensored version
-  const getUncensoredDescription = (text: string) => {
-    return text.replace(/\|\|(.+?)\|\|/g, '$1');
-  };
-
   return (
     <motion.div
       layout
@@ -35,7 +34,7 @@ export const ClueDescription: React.FC<ClueDescriptionProps> = ({
         </div>
         <div>
           {isComplete
-            ? getUncensoredDescription(decodeHtmlEntities(shortDescription))
+            ? renderUncensoredDescription(decodeHtmlEntities(shortDescription))
             : censoredDescription}
         </div>
       </div>
