@@ -152,16 +152,26 @@ const GameIdeaModal: React.FC<{ onClose: () => void }> = ({ onClose }) => {
                 Steam Game URL <span className='text-red-400'>*</span>
               </label>
               <input
-                type='url'
+                type='text'
                 name='steamUrl'
                 required
+                maxLength={255}
                 value={form.steamUrl}
                 onChange={handleChange}
                 placeholder='e.g. https://store.steampowered.com/...'
                 className={`w-full bg-zinc-800 border rounded px-3 py-1.5 text-sm focus:outline-none focus:border-zinc-400 ${
-                  alreadyUsed ? 'border-red-500' : 'border-zinc-600'
+                  alreadyUsed
+                    ? 'border-red-500'
+                    : form.steamUrl.length >= 255
+                      ? 'border-yellow-500'
+                      : 'border-zinc-600'
                 }`}
               />
+              {form.steamUrl.length >= 255 && (
+                <p className='mt-1 text-xs text-yellow-500 font-medium'>
+                  ⚠ Maximum 255 characters reached.
+                </p>
+              )}
               {!form.steamUrl && (
                 <p className='mt-1 text-xs text-zinc-500'>
                   <b>Checked automatically</b> to see if the game has already
@@ -190,11 +200,21 @@ const GameIdeaModal: React.FC<{ onClose: () => void }> = ({ onClose }) => {
               <textarea
                 name='notes'
                 rows={4}
+                maxLength={1500}
                 value={form.notes}
                 onChange={handleChange}
                 placeholder='Anything else I should know?'
-                className='w-full bg-zinc-800 border border-zinc-600 rounded px-3 py-1.5 text-sm focus:outline-none focus:border-zinc-400 resize-y'
+                className={`w-full bg-zinc-800 border rounded px-3 py-1.5 text-sm focus:outline-none focus:border-zinc-400 resize-y ${
+                  form.notes.length >= 1500
+                    ? 'border-yellow-500'
+                    : 'border-zinc-600'
+                }`}
               />
+              {form.notes.length >= 1500 && (
+                <p className='mt-1 text-xs text-yellow-500 font-medium'>
+                  ⚠ Maximum 1500 characters reached.
+                </p>
+              )}
             </div>
 
             {/* Follow-up contact */}
@@ -209,11 +229,21 @@ const GameIdeaModal: React.FC<{ onClose: () => void }> = ({ onClose }) => {
               <input
                 type='text'
                 name='contact'
+                maxLength={255}
                 value={form.contact}
                 onChange={handleChange}
                 placeholder='Discord handle / Email'
-                className='w-full bg-zinc-800 border border-zinc-600 rounded px-3 py-1.5 text-sm focus:outline-none focus:border-zinc-400'
+                className={`w-full bg-zinc-800 border rounded px-3 py-1.5 text-sm focus:outline-none focus:border-zinc-400 ${
+                  form.contact.length >= 255
+                    ? 'border-yellow-500'
+                    : 'border-zinc-600'
+                }`}
               />
+              {form.contact.length >= 255 && (
+                <p className='mt-1 text-xs text-yellow-500 font-medium'>
+                  ⚠ Maximum 255 characters reached.
+                </p>
+              )}
             </div>
 
             {/* Credit */}
@@ -230,11 +260,21 @@ const GameIdeaModal: React.FC<{ onClose: () => void }> = ({ onClose }) => {
               <input
                 type='text'
                 name='credit'
+                maxLength={255}
                 value={form.credit}
                 onChange={handleChange}
                 placeholder='Name / initials / handle / anything'
-                className='w-full bg-zinc-800 border border-zinc-600 rounded px-3 py-1.5 text-sm focus:outline-none focus:border-zinc-400'
+                className={`w-full bg-zinc-800 border rounded px-3 py-1.5 text-sm focus:outline-none focus:border-zinc-400 ${
+                  form.credit.length >= 255
+                    ? 'border-yellow-500'
+                    : 'border-zinc-600'
+                }`}
               />
+              {form.credit.length >= 255 && (
+                <p className='mt-1 text-xs text-yellow-500 font-medium'>
+                  ⚠ Maximum 255 characters reached.
+                </p>
+              )}
             </div>
 
             {/* Actions */}
