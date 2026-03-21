@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { XMarkIcon, LinkIcon } from '@heroicons/react/16/solid';
 import { LightBulbIcon } from '@heroicons/react/24/outline';
@@ -34,6 +34,26 @@ const GameIdeaModal: React.FC<{ onClose: () => void }> = ({ onClose }) => {
   const [form, setForm] = useState<FormState>(EMPTY_FORM);
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
+  const [viewportStyle, setViewportStyle] = useState<React.CSSProperties>({});
+
+  // Keep modal anchored to the visual viewport so iOS keyboard doesn't push it off-screen
+  useEffect(() => {
+    const vv = window.visualViewport;
+    if (!vv) return;
+    const update = () => {
+      setViewportStyle({
+        height: `${vv.height}px`,
+        transform: `translateY(${vv.offsetTop}px)`,
+      });
+    };
+    update();
+    vv.addEventListener('resize', update);
+    vv.addEventListener('scroll', update);
+    return () => {
+      vv.removeEventListener('resize', update);
+      vv.removeEventListener('scroll', update);
+    };
+  }, []);
 
   const extractAppId = (url: string): string | null => {
     const match = url.match(/\/app\/(\d+)/);
@@ -79,14 +99,15 @@ const GameIdeaModal: React.FC<{ onClose: () => void }> = ({ onClose }) => {
 
   return (
     <motion.div
-      className='fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80'
+      className='fixed inset-x-0 top-0 z-50 flex items-center justify-center bg-black bg-opacity-80'
+      style={viewportStyle}
       onClick={onClose}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.2 }}
     >
       <motion.div
-        className='bg-zinc-900 rounded-lg px-5 py-6 sm:px-8 sm:py-8 max-w-md w-full mx-2 sm:mx-4 relative'
+        className='bg-zinc-900 rounded-lg px-5 py-6 sm:px-8 sm:py-8 max-w-md w-full mx-2 sm:mx-4 relative overflow-y-auto max-h-[90%]'
         onClick={(e) => e.stopPropagation()}
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
