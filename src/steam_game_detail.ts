@@ -22889,6 +22889,7 @@ export const steamGameDetails: SteamGameMap = {
   },
   '302510': {
     name: 'Ryse: Son of Rome',
+    searchTerms: ['rise son of rome', 'rise: son of rome'],
     appId: 302510,
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/302510/ss_bcbd3405df6d1332416994090544456e39d36188.600x338.jpg',
@@ -22896,7 +22897,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/302510/ss_27fd86c85a7c99a532a3b01b28f9cc86dc2c7c7d.600x338.jpg',
     shortDescription:
       '||Ryse: Son of Rome|| tells the story of Marius Titus, a young ||Roman|| soldier who witnesses the murder of his family at the hands of barbarian bandits, then travels with the ||Roman|| army to Britannia to seek revenge.',
-    originalReleaseDate: 'Nov 22, 2013',
+    originalReleaseDate: 'Nov 22, 2013 (Xbox One)',
     releaseDate: 'Oct 10, 2014',
     developer: 'Crytek',
     publisher: 'Crytek ',
@@ -22923,10 +22924,38 @@ export const steamGameDetails: SteamGameMap = {
       'Open World',
       'RPG',
     ],
-    clueOrder: ['desc', 'tags', 'details'],
+    blurredUserTags: [
+      'Historical',
+      'Rome',
+      'Quick-Time Events',
+      'Hack and Slash',
+      'Gore',
+      'Singleplayer',
+    ],
+    clueOrder: ['details+tags', 'review', 'desc'],
     debugProcessed: true,
     debugRefined: true,
     difficulty: 'Medium',
+    reviewClues: [
+      {
+        review:
+          'Sometimes in the world of RDR2s and GTAs with couple hundred hours of playtime I need me some couple hours of ||Rome||-themed button-spamming QTE-fest with beautiful graphics to just zone off. ... (edited for length)',
+        votedUp: true,
+        votesUp: 8,
+        weightedScore: undefined,
+        authorPlaytimeHours: 22.5,
+        timestamp: 1770922547,
+      },
+      {
+        review:
+          'the story is great and the ||executions|| are very brutal. the graphics hold up amazing for a 2014 game. the only downside is the multiplayer is dead so you better have friends if you want to play it.\n\nARE YOU NOT ENTERTAINED!? yes i am very entertained ',
+        votedUp: true,
+        votesUp: 37,
+        weightedScore: undefined,
+        authorPlaytimeHours: 10,
+        timestamp: 1742169600,
+      },
+    ],
   },
   '302670': {
     name: 'Call to Arms',
@@ -36986,7 +37015,6 @@ export const steamGameDetails: SteamGameMap = {
   },
   '846770': {
     name: 'DYSMANTLE',
-    searchTerms: ['dismantle'],
     appId: 846770,
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/846770/ss_86d43118c22fd7313f51660c27b4025a8b5894d0.600x338.jpg',
@@ -37023,6 +37051,7 @@ export const steamGameDetails: SteamGameMap = {
     blurredUserTags: ['Destruction'],
     overrideCensoredTitle: 'DY||SM||AN||TL||E',
     clueOrder: ['details+tags', 'review', 'desc'],
+    searchTerms: ['dismantle'],
     reviewClues: [
       {
         review:
@@ -44453,7 +44482,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1343370/ss_fab277591d7bc78c3f1839fbe4e79b02a506add9.600x338.jpg',
     shortDescription:
-      "The best retro fantasy MMORPG on the planet. ||Old|| ||School|| is ||RuneScape|| but… older! This is the open world you know and love, but as it was in 2007. Saying that, it's even better than that – ||Old School|| is shaped by you, its players, with regular new content, fixes and expansions voted for by the fans!",
+      "The best retro fantasy MMORPG on the planet. ||Old School is RuneScape but… older!|| This is the open world you know and love, but as it was in 2007. Saying that, it's even better than that – ||Old School|| is shaped by you, its players, with regular new content, fixes and expansions voted for by the fans!",
     originalReleaseDate: 'Feb 22, 2013',
     releaseDate: 'Feb 24, 2021',
     developer: 'Jagex Ltd',
@@ -44481,9 +44510,10 @@ export const steamGameDetails: SteamGameMap = {
       'Old School',
       'PvP',
     ],
-    screenshotFocusPoint: [44, 100, 182],
+    screenshotFocusPoint: [53, 90, 180],
     overrideCensoredTitle: 'O||ld|| Sc||hool|| R||une||Sc||ape||',
-    clueOrder: ['tags', 'details', 'desc'],
+    clueOrder: ['tags', 'desc', 'details'],
+    searchTerms: ['osrs'],
     debugProcessed: true,
     debugRefined: true,
     difficulty: 'Easy',
@@ -46035,7 +46065,20 @@ export const steamGameDetails: SteamGameMap = {
       'Exploration',
       'FPS',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: ['Supernatural'],
+    overrideCensoredTitle: 'Gh||ost||w||ire||: To||ky||o',
+    clueOrder: ['desc', 'details+tags', 'review'],
+    reviewClues: [
+      {
+        review:
+          "Bethesda & Tango really nailed the rainy Tokyo vibe, with every street feeling authentic - from the narrow alleyways to the neon lit buildings. Combat is really fun with a variety of Yokai to deal with, though it's more geared towards action than horror.\n\nPlentiful and varied side missions keep you busy, though collecting spirits that are peppered around the map can become slightly tedious after a while. ... (edited for length)",
+        votedUp: true,
+        votesUp: 2,
+        weightedScore: undefined,
+        authorPlaytimeHours: 54,
+        timestamp: 1773619200,
+      },
+    ],
   },
   '1488200': {
     name: 'Symphony of War: The Nephilim Saga',
@@ -54099,6 +54142,7 @@ export const CLOSE_GUESS_SERIES: string[] = [
   'pillars of eternity',
   'prototype',
   'resident evil',
+  'runescape',
   'saints row',
   'serious sam',
   'silent hill',

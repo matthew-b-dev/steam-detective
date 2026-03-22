@@ -4,6 +4,7 @@ import { XMarkIcon, LinkIcon } from '@heroicons/react/16/solid';
 import { LightBulbIcon } from '@heroicons/react/24/outline';
 import useBodyScrollLock from '../hooks/useBodyScrollLock';
 import { sendFeedback } from '../lib/supabaseClient';
+import { isLocalhost } from '../utils';
 import { steamGameDetails } from '../steam_game_detail.generated';
 import { STEAM_DETECTIVE_DEMO_DAYS } from '../demos';
 
@@ -144,7 +145,18 @@ const GameIdeaModal: React.FC<{ onClose: () => void }> = ({ onClose }) => {
             </button>
           </div>
         ) : (
-          <form onSubmit={handleSubmit} className='space-y-4 text-sm'>
+          <form
+            onSubmit={handleSubmit}
+            onKeyDown={(e) => {
+              if (
+                e.key === 'Enter' &&
+                (e.target as HTMLElement).tagName !== 'TEXTAREA'
+              ) {
+                e.preventDefault();
+              }
+            }}
+            className='space-y-4 text-sm'
+          >
             {/* Steam Game URL */}
             <div>
               <label className='flex items-center gap-1 text-gray-300 mb-1 font-medium'>
@@ -314,7 +326,11 @@ const GameIdeaCard: React.FC = () => {
         <button
           onClick={() => {
             setShowModal(true);
-            sendFeedback('custom', '`[Event]` Opened Suggest Case File Modal');
+            if (!isLocalhost())
+              sendFeedback(
+                'custom',
+                '`[Event]` Opened Suggest Case File Modal',
+              );
           }}
           className='text-yellow-500 hover:text-yellow-400 underline bg-transparent border-0 p-0 cursor-pointer outline-none'
         >

@@ -18,8 +18,8 @@ import {
   isDateSelectable,
   isLocalhost,
 } from './utils';
-import { getDateFromRoute } from './demos';
 import { sendFeedback } from './lib/supabaseClient';
+import { getDateFromRoute } from './demos';
 import analyzeIcon from './assets/analyze-48.png';
 import calendarIcon from './assets/calendar-48.png';
 import blueGamesFolderIcon from './assets/games-folder-48.png';
@@ -169,7 +169,14 @@ function App() {
                   </button>
                   <button
                     className='relative text-gray-400 w-full justify-center sm:mt-2 hover:text-gray-300 transition-colors flex items-center gap-1 px-2 bg-transparent sm:border-1 sm:border-zinc-700 sm:px-3 sm:py-1'
-                    onClick={() => setShowStats(true)}
+                    onClick={() => {
+                      setShowStats(true);
+                      if (!isLocalhost())
+                        sendFeedback(
+                          'custom',
+                          '`[Event]` Opened My Stats Modal',
+                        );
+                    }}
                   >
                     <ChartBarIcon className='h-6 w-6 sm:h-4 sm:w-4' />
                     <span className='text-sm font-semibold hidden sm:inline relative top-[-1px]'>
