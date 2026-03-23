@@ -48,6 +48,7 @@ export interface SteamGame {
   searchTerms?: string[]; // Additional search terms/aliases for the dropdown
   features: string[];
   allReviewSummary: ReviewSummary;
+  suggestedBy?: string;
   debugProcessed?: true;
   debugRefined?: true;
   debugDelete?: true;

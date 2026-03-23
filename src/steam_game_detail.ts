@@ -14704,12 +14704,12 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/550/ss_2eae29fbdfe8e5e8999b96d8bb28c5db70507968.600x338.jpg',
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/550/ss_29b3b4f2a3994c889f6fc12e0781d9d4726ef33f.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/550/ss_1d9d6e638c8ad4b04fac0f49ca32947b31396f24.600x338.jpg',
     shortDescription:
       'Set in the zombie apocalypse, ||Left 4 Dead 2|| is a co-operative action horror FPS takes you and your friends through the cities, swamps and cemeteries of the Deep South, from Savannah to New Orleans across five expansive campaigns.',
     releaseDate: 'Nov 16, 2009',
-    developer: 'Valve',
-    publisher: 'Valve',
+    developer: '||Valve||',
+    publisher: '||Valve||',
     tags: [],
     features: [],
     allReviewSummary: {
@@ -14726,14 +14726,39 @@ export const steamGameDetails: SteamGameMap = {
       'Action',
       'Survival',
       'Horror',
-      'First-Person',
+      'Sequel',
       'Gore',
       'Team-Based',
       'Moddable',
       'Survival Horror',
       'Post-apocalyptic',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: [
+      'Zombies',
+      'Action',
+      'Survival',
+      'Multiplayer',
+      'Shooter',
+      'Online Co-Op',
+      'Horror',
+      'Co-op',
+    ],
+    overrideCensoredTitle: 'L||eft|| ||4|| D||ead|| 2',
+    clueOrder: ['details+tags', 'review', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
+    reviewClues: [
+      {
+        review:
+          'Timeless zombie game that managed to stay relevant even after a decade of its release, cheers to another decade.',
+        votedUp: true,
+        votesUp: 139,
+        weightedScore: undefined,
+        authorPlaytimeHours: 5132,
+        timestamp: 1673049600,
+      },
+    ],
   },
   '630': {
     name: 'Alien Swarm',
@@ -22889,7 +22914,6 @@ export const steamGameDetails: SteamGameMap = {
   },
   '302510': {
     name: 'Ryse: Son of Rome',
-    searchTerms: ['rise son of rome', 'rise: son of rome'],
     appId: 302510,
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/302510/ss_bcbd3405df6d1332416994090544456e39d36188.600x338.jpg',
@@ -22933,6 +22957,7 @@ export const steamGameDetails: SteamGameMap = {
       'Singleplayer',
     ],
     clueOrder: ['details+tags', 'review', 'desc'],
+    searchTerms: ['rise son of rome', 'rise: son of rome'],
     debugProcessed: true,
     debugRefined: true,
     difficulty: 'Medium',
@@ -29153,11 +29178,11 @@ export const steamGameDetails: SteamGameMap = {
     name: 'Katana ZERO',
     appId: 460950,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/460950/ss_c269a57182b021d2aac2bb8d42421d0ef301360d.600x338.jpg',
-    secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/460950/ss_d4f8ef350ac44c096f8137208c381cac31e68242.600x338.jpg',
+    secondaryScreenshot:
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/460950/ss_b33ce3a83dfa206b0927f50076f6092d6e478736.600x338.jpg',
     shortDescription:
-      '||Katana ZERO|| is a stylish neo-noir, action-platformer featuring breakneck action and instant-death combat. Slash, dash, and manipulate time to unravel your past in a beautifully brutal acrobatic display.',
+      '||Katana ZERO|| is a stylish neo-noir, ||action-platformer|| featuring breakneck action and instant-death combat. Slash, dash, and manipulate time to unravel your past in a beautifully brutal acrobatic display.',
     releaseDate: 'Apr 18, 2019',
     developer: 'Askiisoft',
     publisher: 'Devolver Digital',
@@ -29184,7 +29209,22 @@ export const steamGameDetails: SteamGameMap = {
       'Singleplayer',
       'Time Manipulation',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    overrideCensoredTitle: 'K||atan||a Z||ER||O',
+    clueOrder: ['review', 'desc', 'details+tags'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Hard',
+    suggestedBy: 'aReize',
+    reviewClues: [
+      {
+        review: 'platformer Hotline Miami on cocaine with samurai sword ',
+        votedUp: true,
+        votesUp: 70,
+        weightedScore: undefined,
+        authorPlaytimeHours: 7,
+        timestamp: 1655856000,
+      },
+    ],
   },
   '462780': {
     name: 'Darksiders',
@@ -42393,7 +42433,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1222730/ss_5bb8a4fad528909994731becae7653fd24124d7f.600x338.jpg',
     shortDescription:
-      'Master the art of starfighter combat in the authentic piloting experience ||STAR WARS: Squadrons||. Feel the adrenaline of first-person multiplayer space dogfights alongside your squadron, and buckle up in a thrilling ||STAR|| ||WARS|| story.',
+      'Master the art of ||starfighter|| combat in the authentic piloting experience ||STAR WARS: Squadrons||. Feel the adrenaline of first-person multiplayer ||space|| dogfights alongside your ||squadron||, and buckle up in a thrilling ||STAR|| ||WARS|| story.',
     releaseDate: 'Oct 1, 2020',
     developer: 'MOTIVE',
     publisher: 'Electronic Arts',
@@ -42406,13 +42446,13 @@ export const steamGameDetails: SteamGameMap = {
     userTags: [
       'Flight',
       'Space',
-      'VR',
+      'Licensed',
       'Multiplayer',
       'Singleplayer',
       'Sci-fi',
       'Action',
       'Simulation',
-      'First-Person',
+      'VR',
       'PvP',
       'Spaceships',
       'Online Co-Op',
@@ -42420,7 +42460,10 @@ export const steamGameDetails: SteamGameMap = {
       'Controller',
       'Shooter',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    clueOrder: ['details', 'desc', 'tags'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Medium',
   },
   '1229380': {
     name: 'Everhood',
@@ -47823,7 +47866,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1681430/ss_e0209a1154436c29bf3ccf4bf4b30e9f9224e9fc.600x338.jpg',
     shortDescription:
-      'Become the legendary part man, part machine, all cop hero and deliver justice in Old Detroit.',
+      'Become the legendary part ||man, part machine, all cop hero|| and deliver justice in Old Detroit.',
     releaseDate: 'Nov 2, 2023',
     developer: 'Teyon',
     publisher: 'Nacon',
@@ -47850,7 +47893,19 @@ export const steamGameDetails: SteamGameMap = {
       'Soundtrack',
       'RPG',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    overrideCensoredTitle: 'R||obo||C||op||: R||ogu||e C||it||y',
+    clueOrder: ['desc', 'review', 'details+tags'],
+    reviewClues: [
+      {
+        review:
+          "A truly Great game that stays perfectly true to the movie You literally feel like the ||RoboCop||, heavy powerful and invincible It's a masterpiece for any fan",
+        votedUp: true,
+        votesUp: 2,
+        weightedScore: undefined,
+        authorPlaytimeHours: 14,
+        timestamp: 1773360000,
+      },
+    ],
   },
   '1686940': {
     name: 'Bopl Battle',
@@ -53967,7 +54022,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3146520/ss_93c1c90ce81dbf0fd3ca2aada73e1ff4c5e62a9a.600x338.jpg',
     shortDescription:
-      '||WEBFISHING|| a multiplayer chatroom-focused fishing game! Relax and fish (on the web!)',
+      '||WEBFISHING|| a multiplayer chatroom-focused fishing game! Relax and fish ||(on the web!)||',
     releaseDate: 'Oct 11, 2024',
     developer: 'lamedeveloper',
     publisher: 'lamedeveloper',

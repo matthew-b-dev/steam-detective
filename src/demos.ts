@@ -350,6 +350,12 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile4: 'DEATHLOOP',
   },
   '2026-03-24': {
+    caseFile1: 'Left 4 Dead 2',
+    caseFile2: 'RoboCop: Rogue City',
+    caseFile3: 'Katana ZERO',
+    caseFile4: 'STAR WARS: Squadrons',
+  },
+  '2026-03-25': {
     caseFile1: 'Suicide Squad: Kill the Justice League',
     caseFile2: 'Fields of Mistria',
     caseFile3: "Don't Starve",
@@ -361,10 +367,9 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
 // Easy: Star Wars Battlefront II
 // Easy: Remnant II
 // Easy: State of Decay 2
-// Easy: Left 4 Dead 2
 
 // Med: Batman: Arkham Asylum (update Original release date)
-// Med: WEBFISHING (60k rev)
+// Med: WEBFISHING (60k rev)? needs work
 
 // Hard (Fully Refined): Tales of Arise
 // Hard: Bomb Rush Cyberfunk

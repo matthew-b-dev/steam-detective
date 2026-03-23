@@ -439,6 +439,7 @@ const SteamDetectiveGame: React.FC<SteamDetectiveGameProps> = ({
           onContinueToNextCase={onContinueToNextCase}
           previousTotalScore={previousTotalScore}
           isCurrentCaseFile={isCurrentCaseFile}
+          suggestedBy={dailyGame.suggestedBy}
         />
         <ClueContainer caseFile={`casefile-${caseFileNumber}`} />
       </div>

@@ -35,6 +35,7 @@ interface GameCompleteProps {
   onContinueToNextCase?: () => void;
   previousTotalScore?: number; // Total score before this case file
   isCurrentCaseFile?: boolean;
+  suggestedBy?: string;
 }
 
 // Calculate score based on total guesses
@@ -61,6 +62,7 @@ export const GameComplete: React.FC<GameCompleteProps> = ({
   onContinueToNextCase,
   previousTotalScore = 0,
   isCurrentCaseFile = true,
+  suggestedBy,
 }) => {
   const [animatedScore, setAnimatedScore] = useState(previousTotalScore);
   const [scoreAnimationComplete, setScoreAnimationComplete] = useState(false);
@@ -194,6 +196,12 @@ export const GameComplete: React.FC<GameCompleteProps> = ({
             </a>
           </div>
         </h2>
+        {suggestedBy && (
+          <div className='text-center text-gray-400'>
+            💬 Game suggested by:{' '}
+            <span className='text-gray-200'>{suggestedBy}</span>
+          </div>
+        )}
 
         {/* Score & Guesses Summary */}
         <div className='text-center text-sm mt-1'>
