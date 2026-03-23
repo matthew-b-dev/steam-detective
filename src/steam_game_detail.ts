@@ -54206,6 +54206,7 @@ export const CLOSE_GUESS_SERIES: string[] = [
   'spider-man',
   'splinter cell',
   'spongebob',
+  'star wars',
   'steamworld',
   'subnautica',
   'super mario',
