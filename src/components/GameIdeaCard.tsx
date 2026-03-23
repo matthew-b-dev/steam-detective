@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { XMarkIcon, LinkIcon } from '@heroicons/react/16/solid';
-import { LightBulbIcon } from '@heroicons/react/24/outline';
+import {
+  LightBulbIcon,
+  InformationCircleIcon,
+} from '@heroicons/react/24/outline';
 import useBodyScrollLock from '../hooks/useBodyScrollLock';
 import { sendFeedback } from '../lib/supabaseClient';
 import { isLocalhost } from '../utils';
@@ -159,10 +162,14 @@ const GameIdeaModal: React.FC<{ onClose: () => void }> = ({ onClose }) => {
           >
             {/* Steam Game URL */}
             <div>
-              <label className='flex items-center gap-1 text-gray-300 mb-1 font-medium'>
+              <label className='flex items-center gap-1 text-gray-300 font-medium'>
                 <LinkIcon className='h-3.5 w-3.5 shrink-0' />
                 Steam Game URL <span className='text-red-400'>*</span>
               </label>
+              <p className='mb-1 flex items-center gap-1 text-xs text-zinc-400'>
+                <InformationCircleIcon className='h-3.5 w-3.5 shrink-0' />
+                Tip: Games with <b>7.5k+ reviews</b> work best for challenges.
+              </p>
               <input
                 type='text'
                 name='steamUrl'
