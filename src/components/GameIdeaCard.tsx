@@ -168,7 +168,7 @@ const GameIdeaModal: React.FC<{ onClose: () => void }> = ({ onClose }) => {
               </label>
               <p className='mb-1 flex items-center gap-1 text-xs text-zinc-400'>
                 <InformationCircleIcon className='h-3.5 w-3.5 shrink-0' />
-                Tip: Games with <b>7.5k+ reviews</b> work best for challenges.
+                Tip: Games with 7.5k+ reviews work best for challenges.
               </p>
               <input
                 type='text'
