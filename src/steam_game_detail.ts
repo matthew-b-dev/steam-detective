@@ -7698,9 +7698,10 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1151640/ss_d09106060fb7de8bf342c23df18b14debc8a15a3.600x338.jpg',
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1151640/ss_271f850eec3f96b22aa17be35b948268e0771c7f.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1151640/ss_15f5759c441e4e5f51e1a8ee333e4ab9df9aa783.600x338.jpg',
     shortDescription:
-      "||Experience Aloy's|| legendary quest to unravel the mysteries of ||a future|| Earth ruled by ||Machines||. Use devastating tactical attacks against your ||prey|| and explore a majestic open world in this award-winning action RPG!",
+      "Experience ||Aloy||'s legendary quest to unravel the mysteries of a future Earth ruled by Machines. Use devastating tactical attacks against your prey and explore a majestic open world in this award-winning action RPG!",
+    originalReleaseDate: 'Feb 28, 2017 (PlayStation 4)',
     releaseDate: 'Aug 7, 2020',
     developer: '||Guerrilla||',
     publisher: 'PlayStation Publishing LLC',
@@ -7732,11 +7733,41 @@ export const steamGameDetails: SteamGameMap = {
       'Stealth',
       'Dinosaurs',
     ],
-    blurredUserTags: ['Female Protagonist'],
-    clueOrder: ['desc', 'tags', 'details'],
+    blurredUserTags: [
+      'Female Protagonist',
+      'Robots',
+      'Post-apocalyptic',
+      'Action',
+      'RPG',
+      'Story Rich',
+      'Singleplayer',
+      'Open World',
+    ],
+    overrideCensoredTitle: 'Ho||rizon|| Z||ero|| D||aw||n',
+    clueOrder: ['review', 'details+tags', 'desc'],
     debugProcessed: true,
     debugRefined: true,
     difficulty: 'Easy',
+    reviewClues: [
+      {
+        review:
+          "The sun came up over a mountain as I was looking up to scout out some glinthawks. I literally raised my hand to my forehead in real life in an attempt to block the sun's rays. That's how immersive this game is. Or how dumb I am. Either way, you should buy this game. One of my favorite single-player open-world experiences ever. ",
+        votedUp: true,
+        votesUp: 341,
+        weightedScore: '0.523809552192687988',
+        authorPlaytimeHours: 98,
+        timestamp: 1638230400,
+      },
+      {
+        review:
+          'robots are cool ||dinosaurs|| are cool when you put them together its this game ',
+        votedUp: true,
+        votesUp: 53,
+        weightedScore: '0.545454561710357666',
+        authorPlaytimeHours: 54,
+        timestamp: 1695772800,
+      },
+    ],
   },
   '2161700': {
     name: 'Persona 3 Reload',
@@ -13811,11 +13842,11 @@ export const steamGameDetails: SteamGameMap = {
     name: 'My Summer Car',
     appId: 516750,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/516750/ss_8e4bee8eac58c980c6d8476f848fdb89a80186c6.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/516750/ss_6546e5dd102a3f870d76b2cb83a1d8f812978a28.600x338.jpg',
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/516750/ss_4310893aa75878f8150dfb0b8e794372a2117ba2.600x338.jpg',
     shortDescription:
-      '||My Summer Car|| is the ultimate ||car owning||, building, fixing, ||tuning||, maintenance AND permadeath life survival simulator. ||You start the game with hundreds of loose parts and assemble both car and engine||.',
+      '||My Summer Car|| is the ultimate car owning, building, fixing, tuning, maintenance AND permadeath life survival simulator. You start the game with hundreds of loose parts and assemble both car and engine.',
     releaseDate: 'Jan 8, 2025',
     developer: 'Amistech Games',
     publisher: 'Amistech Games',
@@ -13846,7 +13877,18 @@ export const steamGameDetails: SteamGameMap = {
       'Adventure',
       'Psychological Horror',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    clueOrder: ['review', 'tags', 'details', 'desc'],
+    reviewClues: [
+      {
+        review:
+          ">It's Sunday\r\n>No food in the fridge\r\n>Teimo's is closed\r\n>Die of hunger while chopping firewood\r\n>Respawn at the church & it's pitch black outside\r\n>Respawning gives the hangover effect\r\n>Attempt to ride the bus home only to die of hunger again as soon as we hit the highway\r\n>Die of hunger 4 more times until Teimo's opens the following Monday morning\r\n>Buy 5 packs of sausages as well as some milk\r\n>Wait outside at the intersection to possibly hitch a ride home from cousin Pena\r\n>Notice uncle's blue van sitting at the inspection shop\r\n>Steal it in broad daylight & drive home like a bat out of hell\r\n>Go back to chopping firewood\r\n\r\nThis whole process felt like an hour long, I must say it was quite the Finnish misadventure",
+        votedUp: true,
+        votesUp: 24,
+        weightedScore: '0.668631017208099365',
+        authorPlaytimeHours: 75,
+        timestamp: 1767891687,
+      },
+    ],
   },
   '359320': {
     name: 'Elite Dangerous',
@@ -14877,6 +14919,7 @@ export const steamGameDetails: SteamGameMap = {
       'Cute',
       'Survival',
     ],
+    screenshotLetterbox: true,
     clueOrder: ['tags', 'details', 'desc'],
   },
   '7670': {
@@ -29214,7 +29257,6 @@ export const steamGameDetails: SteamGameMap = {
     debugProcessed: true,
     debugRefined: true,
     difficulty: 'Hard',
-    suggestedBy: 'aReize',
     reviewClues: [
       {
         review: 'platformer Hotline Miami on cocaine with samurai sword ',
@@ -32788,7 +32830,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/606150/ss_af36aa1ca2e534a999938cff0eb04409668f5b10.600x338.jpg',
     shortDescription:
-      '||Moonlighter|| is an Action RPG with rogue-lite elements that demonstrates two sides of the coin – revealing everyday routines of Will, an adventurous shopkeeper that secretly dreams of becoming a hero.',
+      '||Moonlighter|| is an Action RPG with ||rogue-lite|| elements that demonstrates two sides of the coin – revealing everyday routines of Will, an adventurous shopkeeper that secretly dreams of becoming a hero.',
     releaseDate: 'May 29, 2018',
     developer: 'Digital Sun',
     publisher: '11 bit studios',
@@ -32799,14 +32841,14 @@ export const steamGameDetails: SteamGameMap = {
       rating: 'Very Positive',
     },
     userTags: [
-      'Hack and Slash',
+      'Management',
       'Pixel Graphics',
-      'Dungeon Crawler',
+      'Hack and Slash',
       'Roguelite',
       'Roguelike',
       'Action Roguelike',
       'RPG',
-      'Management',
+      'Dungeon Crawler',
       'Action RPG',
       'Procedural Generation',
       'Character Action Game',
@@ -32815,7 +32857,28 @@ export const steamGameDetails: SteamGameMap = {
       'Exploration',
       'Singleplayer',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: [
+      'Roguelike',
+      'Action Roguelike',
+      'Roguelite',
+      'Procedural Generation',
+    ],
+    overrideCensoredTitle: 'Mo||onlight||er',
+    clueOrder: ['details+tags', 'desc', 'review'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Medium',
+    reviewClues: [
+      {
+        review:
+          'I debated whether to recommend or not. Overall, I love the concept of the game. I think the idea of running a shop using the loot you gain from raiding dungeons is wonderful. The graphics are fantastic as well. That being said, I think the combat and gameplay could be more enjoyable. I struggled to stay invested for the long term.\n\n7/10 ',
+        votedUp: true,
+        votesUp: 45,
+        weightedScore: undefined,
+        authorPlaytimeHours: 9,
+        timestamp: 1673654400,
+      },
+    ],
   },
   '606280': {
     name: 'Darksiders III',
@@ -45821,7 +45884,8 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1454400/ss_0ccbd62dbbf733bf630885d76f7bdf61af93d0be.600x338.jpg',
     shortDescription:
-      'An idle game about making cookies! Originally released in 2013 on the web, and actively developed since then. This is the official version for Steam.',
+      '||Cookie Clicker|| is a game about making an absurd amount of ||cookies||. To help you in this endeavor, you will recruit a wide variety of helpful ||cookie|| makers, like friendly ||Grandmas||, Farms, Factories, and otherworldly ||Portals||.',
+    originalReleaseDate: 'Aug 8, 2013 (Browser-based)',
     releaseDate: 'Sep 1, 2021',
     developer: 'Orteil',
     publisher: 'Playsaurus',
@@ -45839,8 +45903,8 @@ export const steamGameDetails: SteamGameMap = {
       'Pixel Graphics',
       'Management',
       'Horror',
-      'Economy',
-      'Collectathon',
+      'Cute',
+      'Lovecraftian',
       'Funny',
       'Resource Management',
       '2D',
@@ -45848,7 +45912,12 @@ export const steamGameDetails: SteamGameMap = {
       'Strategy',
       'Comedy',
     ],
+    screenshotFocusPoint: [100, 84, 30],
+    overrideCensoredTitle: 'Co||okie|| C||licke||r',
     clueOrder: ['tags', 'details', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
   },
   '1455840': {
     name: 'Dorfromantik',
@@ -49585,11 +49654,11 @@ export const steamGameDetails: SteamGameMap = {
     name: 'Darkest Dungeon II',
     appId: 1940340,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1940340/ss_bc4c7aec5704ed4108a181ec9a790c3fea4a9f12.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1940340/ss_d9ace881030b51b9f405198111df391f4573d092.600x338.jpg',
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1940340/ss_254e72f3356e62496b02c1faf7852bb5053e0338.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1940340/ss_bc4c7aec5704ed4108a181ec9a790c3fea4a9f12.600x338.jpg',
     shortDescription:
-      '||Darkest Dungeon II|| is a roguelike road trip of the damned. Form a party, equip your stagecoach, and set off across the decaying landscape on a last gasp quest to avert the apocalypse. The greatest dangers you face, however, may come from within...',
+      '||Darkest Dungeon II|| is a ||roguelike|| road trip of the damned. Form a party, equip your stagecoach, and set off across the ||decaying landscape on a last gasp quest to avert the apocalypse||. The greatest dangers you face, however, may come from within...',
     releaseDate: 'May 8, 2023',
     developer: 'Red Hook Studios',
     publisher: 'Red Hook Studios',
@@ -49608,7 +49677,7 @@ export const steamGameDetails: SteamGameMap = {
       'Singleplayer',
       'Roguelike',
       'Perma Death',
-      'Turn-Based',
+      'Sequel',
       'Turn-Based Combat',
       'CRPG',
       'Story Rich',
@@ -49616,7 +49685,30 @@ export const steamGameDetails: SteamGameMap = {
       'Gothic',
       '2D',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: [
+      'Turn-Based Tactics',
+      'Perma Death',
+      'Dungeon Crawler',
+      'Singleplayer',
+      'Lovecraftian',
+      'Dark Fantasy',
+    ],
+    overrideCensoredTitle: 'Da||rkest|| Du||ngeo||n ||II||',
+    clueOrder: ['desc', 'details+tags', 'review'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Hard',
+    reviewClues: [
+      {
+        review:
+          'I’m loving the updated visuals in ||Darkest Dungeon 2||. They kept the same gritty, gothic style but added some slick animations that make everything feel way more alive. ... (edited for length)',
+        votedUp: true,
+        votesUp: 30,
+        weightedScore: undefined,
+        authorPlaytimeHours: 101,
+        timestamp: 1727913600,
+      },
+    ],
   },
   '1944430': {
     name: 'Amnesia: The Bunker',
@@ -54172,6 +54264,7 @@ export const CLOSE_GUESS_SERIES: string[] = [
   'civilization',
   'creed',
   'crusader kings',
+  'darkest dungeon',
   'dark souls',
   'deus ex',
   'doom',
@@ -54182,6 +54275,7 @@ export const CLOSE_GUESS_SERIES: string[] = [
   'final fantasy',
   'forza',
   'half-life',
+  'horizon',
   'jurassic',
   'lego',
   'life is strange',

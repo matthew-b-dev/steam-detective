@@ -407,7 +407,6 @@ export const dummyGames: string[] = [
   'Toukiden 2',
   'Last Day of June',
   "Super Lucky's Tale",
-  'Horizon Zero Dawn Complete Edition',
   'Snipperclips',
   'Hey! Pikmin',
   'Micro Machines World Series',

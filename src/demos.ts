@@ -356,6 +356,12 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile4: 'STAR WARS: Squadrons',
   },
   '2026-03-25': {
+    caseFile1: 'Horizon Zero Dawn',
+    caseFile2: 'Moonlighter',
+    caseFile3: 'Darkest Dungeon II',
+    caseFile4: 'Cookie Clicker',
+  },
+  '2026-03-26': {
     caseFile1: 'Suicide Squad: Kill the Justice League',
     caseFile2: 'Fields of Mistria',
     caseFile3: "Don't Starve",
@@ -367,12 +373,19 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
 // Easy: Star Wars Battlefront II
 // Easy: Remnant II
 // Easy: State of Decay 2
+// Easy: Plants vs. Zombies
+// Easy: Stardew Valley
+// Inevitable (Last): Divinity: Original Sin 2
 
 // Med: Batman: Arkham Asylum (update Original release date)
 // Med: WEBFISHING (60k rev)? needs work
+// Med: Tropico 4 (Last Tropico 3/15)
+// Med: Clustertruck
 
+// Hard: Albion Online
 // Hard (Fully Refined): Tales of Arise
 // Hard: Bomb Rush Cyberfunk
+// Hard: What Remains of Edith Finch (50k rev)
 // Hard: Spelunky (change original release?)
 // Hard: Darwin Project
 
