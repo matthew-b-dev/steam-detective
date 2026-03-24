@@ -166,10 +166,14 @@ const GameIdeaModal: React.FC<{ onClose: () => void }> = ({ onClose }) => {
                 <LinkIcon className='h-3.5 w-3.5 shrink-0' />
                 Steam Game URL <span className='text-red-400'>*</span>
               </label>
-              <p className='mb-1 flex items-center gap-1 text-xs text-zinc-400'>
-                <InformationCircleIcon className='h-3.5 w-3.5 shrink-0' />
-                Tip: Games with <b>7.5k+ reviews</b> work best for challenges.
-              </p>
+<p className='mb-1 flex items-center gap-1 text-xs text-zinc-400'>
+  <InformationCircleIcon className='h-3.5 w-3.5 shrink-0' />
+  <span>
+    Note: Games must have{' '}
+    <span className='text-yellow-500'>at least 7.5k reviews</span> to be
+    considered.
+  </span>
+</p>
               <input
                 type='text'
                 name='steamUrl'
