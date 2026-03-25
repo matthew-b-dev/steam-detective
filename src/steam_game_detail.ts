@@ -45904,7 +45904,6 @@ export const steamGameDetails: SteamGameMap = {
       'Management',
       'Horror',
       'Cute',
-      'Lovecraftian',
       'Funny',
       'Resource Management',
       '2D',

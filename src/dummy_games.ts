@@ -54,7 +54,6 @@ export const dummyGames: string[] = [
   'The Dark Eye: Memoria',
   'Monster Loves You',
   'Goodbye Deponia',
-  'Cookie Clicker',
   'Gas Guzzlers Extreme',
   'Sorcery Saga: Curse of the Great Curry God',
   'Ms. Splosion Man',
