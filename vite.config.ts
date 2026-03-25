@@ -29,4 +29,13 @@ export default defineConfig({
     },
   ],
   base: '/',
+  server: {
+    proxy: {
+      '/steam-review-proxy': {
+        target: 'https://steamcommunity.com',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/steam-review-proxy/, ''),
+      },
+    },
+  },
 });

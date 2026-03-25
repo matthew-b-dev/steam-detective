@@ -20,6 +20,78 @@ const formatTimestamp = (timestamp: number): string => {
   return date.toLocaleDateString('en-US', { month: 'long', day: 'numeric' });
 };
 
+/** Parse a Steam review page HTML string into a Review object. */
+const parseSteamReviewHtml = (
+  html: string,
+  sourceUrl: string,
+): Review | null => {
+  const parser = new DOMParser();
+  const doc = parser.parseFromString(html, 'text/html');
+
+  const reviewTextEl = doc.querySelector('#ReviewText');
+  if (!reviewTextEl) return null;
+  // Replace <br> elements with newline characters before extracting text.
+  reviewTextEl.querySelectorAll('br').forEach((br) => br.replaceWith('\n'));
+  const reviewText = reviewTextEl.textContent?.trim() ?? '';
+  if (!reviewText) return null;
+
+  const ratingSummaryEl = doc.querySelector('.ratingSummary');
+  const votedUp = ratingSummaryEl?.textContent?.trim() === 'Recommended';
+
+  // Hours: prefer "at review time", fall back to "on record"
+  const playTimeText = doc.querySelector('.playTime')?.textContent ?? '';
+  let authorPlaytimeHours = 0;
+  let authorPlaytimeAtReview: number | undefined;
+  const reviewTimeMatch = playTimeText.match(
+    /([\d,]+\.?\d*)\s*hrs?\s+at\s+review\s+time/i,
+  );
+  if (reviewTimeMatch) {
+    authorPlaytimeAtReview = parseFloat(reviewTimeMatch[1].replace(/,/g, ''));
+    authorPlaytimeHours = authorPlaytimeAtReview;
+  }
+  const totalHrsMatch = playTimeText.match(
+    /([\d,]+\.?\d*)\s*hrs?\s+on\s+record/i,
+  );
+  if (totalHrsMatch) {
+    authorPlaytimeHours = parseFloat(totalHrsMatch[1].replace(/,/g, ''));
+  }
+
+  // Timestamp from "Posted: Nov 24, 2023 @ 12:04am"
+  let timestamp = Math.floor(Date.now() / 1000);
+  const dateText =
+    doc.querySelector('.recommendation_date')?.textContent?.trim() ?? '';
+  const dateMatch = dateText.match(/Posted:\s*(.+?)(?:\s*@|$)/);
+  if (dateMatch) {
+    const parsed = new Date(dateMatch[1].trim());
+    if (!isNaN(parsed.getTime()))
+      timestamp = Math.floor(parsed.getTime() / 1000);
+  }
+
+  // Helpful / funny counts from the ratingBar text content
+  const ratingBarText = doc.querySelector('.ratingBar')?.textContent ?? '';
+  let votesUp = 0;
+  let votedFunny: number | undefined;
+  const helpfulMatch = ratingBarText.match(
+    /([\d,]+)\s+people?\s+found\s+this\s+review\s+helpful/i,
+  );
+  if (helpfulMatch) votesUp = parseInt(helpfulMatch[1].replace(/,/g, ''), 10);
+  const funnyMatch = ratingBarText.match(
+    /([\d,]+)\s+people?\s+found\s+this\s+review\s+funny/i,
+  );
+  if (funnyMatch) votedFunny = parseInt(funnyMatch[1].replace(/,/g, ''), 10);
+
+  return {
+    review: reviewText,
+    votedUp,
+    votesUp,
+    votedFunny: votedFunny && votedFunny > 0 ? votedFunny : undefined,
+    authorPlaytimeHours,
+    authorPlaytimeAtReview,
+    timestamp,
+    reviewUrl: sourceUrl,
+  };
+};
+
 /** Render review text with newlines. Strips any ||markers|| for the raw preview. */
 const renderRawReview = (text: string) => {
   const stripped = text.replace(/\|\|(.+?)\|\|/g, '$1');
@@ -117,9 +189,10 @@ const SteamReviewCard: React.FC<{
             <input
               type='number'
               min='0'
+              step='0.1'
               value={editableHrs ?? review.authorPlaytimeHours}
               onChange={(e) =>
-                onHrsChange(Math.max(0, parseInt(e.target.value) || 0))
+                onHrsChange(Math.max(0, parseFloat(e.target.value) || 0))
               }
               className='text-[11px] bg-zinc-800 border border-zinc-600 rounded px-1.5 py-0.5 text-gray-300 focus:outline-none focus:border-blue-500 w-fit'
             />
@@ -285,6 +358,74 @@ export const RefineReviews: React.FC<RefineReviewsProps> = ({
   // Using this instead of timestamp-based matching so editing the timestamp
   // field doesn't break the selection state.
   const [avToSel, setAvToSel] = useState<Map<number, number>>(new Map());
+
+  const [importUrl, setImportUrl] = useState('');
+  const [importLoading, setImportLoading] = useState(false);
+  const [importError, setImportError] = useState<string | null>(null);
+
+  const handleImportUrl = async () => {
+    setImportError(null);
+    const url = importUrl.trim();
+    if (!url) return;
+
+    let proxyPath: string;
+    try {
+      const parsed = new URL(url);
+      if (!parsed.hostname.includes('steamcommunity.com')) {
+        setImportError('URL must be a steamcommunity.com review URL.');
+        return;
+      }
+      // Validate the appId in the URL matches this game.
+      const appIdMatch = parsed.pathname.match(/\/recommended\/(\d+)/);
+      if (appIdMatch && appIdMatch[1] !== String(game.appId)) {
+        setImportError(
+          `This review is for app ${appIdMatch[1]}, but the current game is ${game.appId}.`,
+        );
+        return;
+      }
+      proxyPath = '/steam-review-proxy' + parsed.pathname + parsed.search;
+    } catch {
+      setImportError('Invalid URL.');
+      return;
+    }
+
+    setImportLoading(true);
+    try {
+      const res = await fetch(proxyPath);
+      if (!res.ok) {
+        setImportError(`Fetch failed: HTTP ${res.status}`);
+        return;
+      }
+      const html = await res.text();
+      const importedReview = parseSteamReviewHtml(html, url);
+      if (!importedReview) {
+        setImportError(
+          'Could not parse review from page. Make sure the URL points to a single Steam review.',
+        );
+        return;
+      }
+      // Add as an orphan-style custom review (not backed by reviews.json).
+      const newSelIdx = selectedReviews.length;
+      const orphanKey = -(newSelIdx + 1);
+      const newMap = new Map(avToSel);
+      newMap.set(orphanKey, newSelIdx);
+      setAvToSel(newMap);
+      const currentOrder = game.clueOrder ?? ['tags', 'details', 'desc'];
+      const patch: Partial<SteamGame> = {
+        reviewClues: [...selectedReviews, importedReview],
+        reviewClue: undefined,
+      };
+      if (!currentOrder.includes('review')) {
+        patch.clueOrder = [...currentOrder, 'review'];
+      }
+      onUpdate(patch);
+      setImportUrl('');
+    } catch (e) {
+      setImportError(`Error fetching review: ${String(e)}`);
+    } finally {
+      setImportLoading(false);
+    }
+  };
 
   // Dynamically import reviews.json via a virtual Vite module.
   useEffect(() => {
@@ -478,10 +619,75 @@ export const RefineReviews: React.FC<RefineReviewsProps> = ({
     return <div className='text-xs text-gray-500 italic'>Loading reviews…</div>;
   }
 
+  const importFromUrlSection = (
+    <div className='border border-dashed border-gray-600 rounded p-3 space-y-2'>
+      <div className='text-xs text-gray-400 font-semibold'>
+        Import Review from Steam URL
+      </div>
+      <div className='flex gap-2'>
+        <input
+          type='text'
+          value={importUrl}
+          onChange={(e) => setImportUrl(e.target.value)}
+          onKeyDown={(e) => e.key === 'Enter' && handleImportUrl()}
+          placeholder='https://steamcommunity.com/id/.../recommended/...'
+          className='flex-1 bg-zinc-900 border border-zinc-600 rounded px-2 py-1 text-xs text-gray-200 focus:outline-none focus:border-blue-500'
+        />
+        <button
+          onClick={handleImportUrl}
+          disabled={importLoading || !importUrl.trim()}
+          className='text-xs px-3 py-1 rounded bg-blue-700 hover:bg-blue-600 text-white disabled:opacity-50 whitespace-nowrap'
+        >
+          {importLoading ? 'Fetching…' : 'Import'}
+        </button>
+      </div>
+      {importError && <div className='text-xs text-red-400'>{importError}</div>}
+    </div>
+  );
+
   if (availableReviews.length === 0) {
     return (
-      <div className='text-xs text-gray-500 italic'>
-        No reviews found for this game in reviews.json.
+      <div className='space-y-3'>
+        {importFromUrlSection}
+        {Array.from(avToSel.entries())
+          .filter(([avIdx]) => avIdx < 0)
+          .sort((a, b) => a[1] - b[1])
+          .map(([avIdx, selIdx]) => {
+            const orphan = selectedReviews[selIdx];
+            if (!orphan) return null;
+            return (
+              <div key={avIdx}>
+                <div className='text-[10px] text-yellow-500 mb-1 px-1'>
+                  ⚠ Imported/edited review (not in reviews.json)
+                </div>
+                <SteamReviewCard
+                  review={orphan}
+                  isSelected={true}
+                  selectionIndex={selIdx + 1}
+                  editableText={orphan.review}
+                  editableHrs={orphan.authorPlaytimeHours}
+                  editableTimestamp={orphan.timestamp}
+                  editableVotesUp={orphan.votesUp}
+                  editableVotedFunny={orphan.votedFunny}
+                  onSelect={() => handleSelect(avIdx, orphan)}
+                  onMoveUp={selIdx > 0 ? () => handleMoveUp(avIdx) : undefined}
+                  onMoveDown={
+                    selIdx < selectedReviews.length - 1
+                      ? () => handleMoveDown(avIdx)
+                      : undefined
+                  }
+                  onTextChange={(t) => handleTextChange(selIdx, t)}
+                  onHrsChange={(h) => handleHrsChange(selIdx, h)}
+                  onTimestampChange={(ts) => handleTimestampChange(selIdx, ts)}
+                  onVotesUpChange={(v) => handleVotesUpChange(selIdx, v)}
+                  onVotedFunnyChange={(f) => handleVotedFunnyChange(selIdx, f)}
+                />
+              </div>
+            );
+          })}
+        <div className='text-xs text-gray-500 italic'>
+          No reviews found for this game in reviews.json.
+        </div>
       </div>
     );
   }
@@ -506,8 +712,9 @@ export const RefineReviews: React.FC<RefineReviewsProps> = ({
           </div>
         </div>
       )}
+      {importFromUrlSection}
       {/* Orphaned reviews: selected but no longer matching any available review
-           (e.g. timestamp was edited). Rendered above the list so always visible. */}
+           (e.g. timestamp was edited, or imported from URL). Rendered above the list. */}
       {Array.from(avToSel.entries())
         .filter(([avIdx]) => avIdx < 0)
         .sort((a, b) => a[1] - b[1])
@@ -517,7 +724,7 @@ export const RefineReviews: React.FC<RefineReviewsProps> = ({
           return (
             <div key={avIdx}>
               <div className='text-[10px] text-yellow-500 mb-1 px-1'>
-                ⚠ Edited review (timestamp changed - no longer in reviews.json)
+                ⚠ Imported/edited review (not in reviews.json)
               </div>
               <SteamReviewCard
                 review={orphan}

@@ -362,6 +362,12 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile4: 'Cookie Clicker',
   },
   '2026-03-26': {
+    caseFile1: 'Starfield',
+    caseFile2: 'Warhammer: Vermintide 2',
+    caseFile3: 'FTL: Faster Than Light',
+    caseFile4: 'Divinity: Original Sin 2',
+  },
+  '2026-03-27': {
     caseFile1: 'Suicide Squad: Kill the Justice League',
     caseFile2: 'Fields of Mistria',
     caseFile3: "Don't Starve",
@@ -375,7 +381,7 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
 // Easy: State of Decay 2
 // Easy: Plants vs. Zombies
 // Easy: Stardew Valley
-// Inevitable (Last): Divinity: Original Sin 2
+// Inevitable (Last): Dragon Age: The Veilguard
 
 // Med: Batman: Arkham Asylum (update Original release date)
 // Med: WEBFISHING (60k rev)? needs work
