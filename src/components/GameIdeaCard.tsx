@@ -166,14 +166,14 @@ const GameIdeaModal: React.FC<{ onClose: () => void }> = ({ onClose }) => {
                 <LinkIcon className='h-3.5 w-3.5 shrink-0' />
                 Steam Game URL <span className='text-red-400'>*</span>
               </label>
-<p className='mb-1 flex items-center gap-1 text-xs text-zinc-400'>
-  <InformationCircleIcon className='h-3.5 w-3.5 shrink-0' />
-  <span>
-    Note: Games must have{' '}
-    <span className='text-yellow-500'>at least 7.5k reviews</span> to be
-    considered.
-  </span>
-</p>
+              <p className='mb-1 flex items-center gap-1 text-xs text-zinc-400'>
+                <InformationCircleIcon className='h-3.5 w-3.5 shrink-0' />
+                <span>
+                  Note: Games must have{' '}
+                  <span className='text-yellow-500'>at least 7.5k reviews</span>{' '}
+                  to be considered.
+                </span>
+              </p>
               <input
                 type='text'
                 name='steamUrl'
@@ -330,9 +330,6 @@ const GameIdeaCard: React.FC = () => {
   return (
     <>
       <div className='text-sm text-gray-400 text-center'>
-        <span className='inline-block bg-yellow-400 text-black text-[10px] font-bold leading-none px-1 py-0.5 rounded mr-1.5 align-middle'>
-          NEW
-        </span>
         Have an idea for a case file? You can{' '}
         <button
           onClick={() => {

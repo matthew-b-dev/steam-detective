@@ -81,7 +81,7 @@ export const ClueDetails: React.FC<ClueDetailsProps> = ({
     display: string | ReactElement[],
   ): string | ReactElement[] => {
     const applyToString = (s: string): ReactElement[] => {
-      const match = s.match(/^(.*?)(\s*\([^)]+\)\s*)$/);
+      const match = s.match(/^(.*?)(\s*(?:\([^)]+\)\s*)+)$/);
       if (!match) return [<span key='full'>{s}</span>];
       return [
         <span key='main'>{match[1]}</span>,
@@ -103,7 +103,7 @@ export const ClueDetails: React.FC<ClueDetailsProps> = ({
       return display;
     }
     const lastText: string = lastProps.children;
-    const match = lastText.match(/^(.*?)(\s*\([^)]+\)\s*)$/);
+    const match = lastText.match(/^(.*?)(\s*(?:\([^)]+\)\s*)+)$/);
     if (!match) return display;
     const styled = [
       ...display.slice(0, -1),

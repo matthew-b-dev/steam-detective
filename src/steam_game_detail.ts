@@ -8008,8 +8008,8 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/435150/ss_34a428cdd26113e8645b77331d9fc82fcc50a4a2.600x338.jpg',
     shortDescription:
       "The critically acclaimed RPG that raised the bar, from the creators of ||Baldur's Gate|| 3. Gather your party. Master deep, tactical combat. Venture as a party of up to four - but know that only one of you will have the chance to become a God.",
-    releaseDate: 'Sep 14, 2017',
     earlyAccessDate: 'Sep 15, 2016',
+    releaseDate: 'Sep 14, 2017',
     developer: '||Larian Studios||',
     publisher: '||Larian Studios||',
     tags: ['Adventure', 'RPG', 'Strategy'],
@@ -14927,11 +14927,11 @@ export const steamGameDetails: SteamGameMap = {
     name: 'Plants vs. Zombies',
     appId: 3590,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3590/0000008150.600x338.jpg',
-    secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3590/0000008151.600x338.jpg',
+    secondaryScreenshot:
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3590/0000008156.600x338.jpg',
     shortDescription:
-      "||Zombies|| are invading your home, and the only defense is your arsenal of plants! Armed with an alien nursery-worth of zombie-zapping plants like peashooters and cherry bombs, you'll need to think fast and plant faster to stop dozens of types of zombies dead in their tracks.",
+      "Zombies are invading your home, and the only defense is your arsenal of ||plants||! Armed with an alien nursery-worth of zombie-zapping ||plant||s like ||pea||shooters and cherry bombs, you'll need to think fast and plant faster to stop dozens of types of zombies dead in their tracks.",
     releaseDate: 'May 5, 2009',
     developer: 'PopCap Games, Inc.',
     publisher: 'PopCap Games, Inc.',
@@ -14958,8 +14958,12 @@ export const steamGameDetails: SteamGameMap = {
       'Cute',
       'Survival',
     ],
-    screenshotLetterbox: true,
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: ['Zombies'],
+    clueOrder: ['ss', 'tags', 'details', 'desc'],
+    searchTerms: ['plants vs zombies'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
   },
   '7670': {
     name: 'BioShock',
@@ -20047,6 +20051,7 @@ export const steamGameDetails: SteamGameMap = {
   },
   '239350': {
     name: 'Spelunky',
+    overrideCensoredTitle: 'Sp||elunk||y',
     appId: 239350,
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/239350/ss_8fb56a4fb17d6c777c12952d6642652b063b5528.600x338.jpg',
@@ -20054,6 +20059,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/239350/ss_1fa00992272eea478c750d925c9eda920fa760a8.600x338.jpg',
     shortDescription:
       '||Spelunky|| is a unique platformer with randomized levels that offer a challenging new experience each time you play. Journey deep underground and explore fantastic places filled with all manner of monsters, traps, and treasure.',
+    originalReleaseDate: 'Dec 21, 2008 ("Classic") (Freeware)',
     releaseDate: 'Aug 8, 2013',
     developer: 'Mossmouth',
     publisher: 'Mossmouth',
@@ -20080,7 +20086,32 @@ export const steamGameDetails: SteamGameMap = {
       'Singleplayer',
       'Adventure',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: [
+      'Roguelike',
+      'Local Co-Op',
+      'Replay Value',
+      'Action Roguelike',
+      'Procedural Generation',
+      'Indie',
+      'Arcade',
+      '2D',
+      'Difficult',
+    ],
+    clueOrder: ['details+tags', 'review', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Hard',
+    reviewClues: [
+      {
+        review:
+          "Nothing says 'fun' like being brutally murdered by a ||bat|| you didn’t even see, or losing 30 minutes of careful progress because you accidentally pressed the wrong button near a ||shopkeeper|| who suddenly turns into John Wick on caffeine. The controls are tight, the gameplay is flawless, and the game’s only real flaw is that it hates you personally. Every death feels fair: fairly humiliating, fairly avoidable, and fairly inevitable.",
+        votedUp: true,
+        votesUp: 7,
+        weightedScore: undefined,
+        authorPlaytimeHours: 20.7,
+        timestamp: 1755489600,
+      },
+    ],
   },
   '239820': {
     name: 'Game Dev Tycoon',
@@ -29151,9 +29182,9 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/460930/ss_989a4ab6b0ef9759f2aa94510b77c7669836f40e.600x338.jpg',
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/460930/ss_5a5afdfe87c53cae9efa3d559e588501abfe88c6.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/460930/ss_c8fb21808c02c66037df923c261924ad6d4aa959.600x338.jpg',
     shortDescription:
-      "Create a team with up to 3 friends in ||Tom Clancy's Ghost Recon Wildlands|| and enjoy the ultimate military shooter experience set in a massive, dangerous, and responsive open world.",
+      "Create a team with up to 3 friends in Tom Clancy's ||Ghost Recon Wildlands|| and enjoy the ultimate military shooter experience set in a massive, dangerous, and responsive open world.",
     releaseDate: 'Mar 6, 2017',
     developer: 'Ubisoft Paris',
     publisher: 'Ubisoft',
@@ -29180,7 +29211,30 @@ export const steamGameDetails: SteamGameMap = {
       'Adventure',
       'Survival',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    clueOrder: ['review', 'details+tags', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
+    reviewClues: [
+      {
+        review:
+          'Got stuck on a mission with friends, hopped back in a year later and finished the mission. now we run the Santa Maria Cartel straight out the backdoors of Bolivia.',
+        votedUp: true,
+        votesUp: 28,
+        weightedScore: undefined,
+        authorPlaytimeHours: 29,
+        timestamp: 1692417600,
+      },
+      {
+        review:
+          'I love the open world and the environment, I love the music, I love the (somewhat simplified) tacti-coolness, I love the sandboxyness, I love the illusion of freedom, I love the difficulty tweaking, I love the coop, I love the hidden stuff, I love the immersion, I love all the fun it gave me. \n\nI don\'t really care about the "story" (it\'s got some CIA drama or something, lol).\n... (edited for length)',
+        votedUp: true,
+        votesUp: 23,
+        weightedScore: undefined,
+        authorPlaytimeHours: 15.6,
+        timestamp: 1736744400,
+      },
+    ],
   },
   '460950': {
     name: 'Katana ZERO',
@@ -33951,7 +34005,29 @@ export const steamGameDetails: SteamGameMap = {
       'Third Person',
       'Simulation',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: [
+      'Racing',
+      'Action',
+      'Flight',
+      'Automobile Sim',
+      'Driving',
+    ],
+    overrideCensoredTitle: 'T||he|| Cr||ew|| ||2||',
+    clueOrder: ['details+tags', 'review', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Medium',
+    reviewClues: [
+      {
+        review:
+          '||The Crew 2|| still delivers in 2026. I played this game for years. The huge USA map is unmatched and perfect for cruising, exploring, and making dumb memories with friends ... (edited for length)',
+        votedUp: true,
+        votesUp: 9,
+        weightedScore: undefined,
+        authorPlaytimeHours: 217,
+        timestamp: 1774566774,
+      },
+    ],
   },
   '653530': {
     name: 'Return of the Obra Dinn',
@@ -48839,13 +48915,13 @@ export const steamGameDetails: SteamGameMap = {
     name: 'Dragon Age: The Veilguard',
     appId: 1845910,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1845910/ss_a252774678fde933d4fbee722db855b731b0e627.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1845910/ss_5165ce61bcc15e27dc8a6217f2bb328cbe46b5c0.600x338.jpg',
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1845910/ss_94c6e6f26435702105b83e76804cd27710543fcc.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1845910/ss_90183c305ccf080f68a9d230a7f97884b7546ff6.600x338.jpg',
     shortDescription:
-      'Unite the ||Veilguard|| and defy the gods in ||Dragon|| ||Age||™: The ||Veilguard||, an immersive single-player RPG.',
+      'Enter the world of Thedas, a vibrant land of rugged wilderness, treacherous labyrinths, and glittering cities - steeped in conflict and secret magics. Now, a pair of corrupt ancient gods have broken free from centuries of darkness and are hellbent on destroying the world.',
     releaseDate: 'Oct 31, 2024',
-    developer: 'BioWare',
+    developer: '||BioWare||',
     publisher: 'Electronic Arts',
     tags: [],
     features: [],
@@ -48861,13 +48937,48 @@ export const steamGameDetails: SteamGameMap = {
       'Politics',
       'Action RPG',
       'Strategy',
-      'CRPG',
-      'Turn-Based Tactics',
+      'Action',
+      'Adventure',
       'Character Customization',
       'Third Person',
       'Action',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: [
+      'LGBTQ+',
+      'Singleplayer',
+      'Fantasy',
+      'RPG',
+      'Action RPG',
+      'Politics',
+      'Strategy',
+      'Action',
+      'Character Customization',
+    ],
+    overrideCensoredTitle: 'Dr||agon|| A||ge||: T||he|| Ve||ilgua||rd',
+    clueOrder: ['details+tags', 'review', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
+    reviewClues: [
+      {
+        review:
+          'Speaking as someone who has been a fan since the early games, it pains me to downvote this. I tried my hardest to keep an open mind, to support and enjoy it, and consider the rough development timeline it has suffered. However, ultimately, despite being good enough as an RPG, ||Veilguard|| is NOT a good ||Dragon Age|| game.',
+        votedUp: false,
+        votesUp: 7440,
+        weightedScore: undefined,
+        authorPlaytimeHours: 133.1,
+        timestamp: 1732510800,
+      },
+      {
+        review:
+          'I think this is a fairly good game - just not a good ||Dragon Age|| game. It would probably rate much higher and do better if was an entirely different franchise instead. [...] While the graphics are lovely, they seem to be not quite right for the franchise and that, along with the way they have represented much of the story/companion/main missions, and an under-emphasis of deeper and richer RPG elements seems to rather have the effect of Disney-fying it ... (edited for length)',
+        votedUp: true,
+        votesUp: 13,
+        weightedScore: undefined,
+        authorPlaytimeHours: 67,
+        timestamp: 1774565454,
+      },
+    ],
   },
   '1846170': {
     name: 'Iron Lung',
@@ -54267,6 +54378,7 @@ export const CLOSE_GUESS_SERIES: string[] = [
   'dark souls',
   'deus ex',
   'doom',
+  'dragon age',
   'dragon ball',
   'elder scrolls',
   'fallout',
@@ -54303,6 +54415,7 @@ export const CLOSE_GUESS_SERIES: string[] = [
   'steamworld',
   'subnautica',
   'super mario',
+  'the crew',
   'the legend of zelda',
   'the lord of the rings',
   'the sims',

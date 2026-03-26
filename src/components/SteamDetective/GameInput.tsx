@@ -74,7 +74,7 @@ export const GameInput: React.FC<GameInputProps> = ({
       (opt.searchTerms?.some((t) => t.toLowerCase().startsWith(searchLower)) ??
         false);
 
-    return filtered.sort((a, b) => {
+    const sorted = filtered.sort((a, b) => {
       const aExact = isExact(a);
       const bExact = isExact(b);
       if (aExact !== bExact) return aExact ? -1 : 1;
@@ -83,6 +83,14 @@ export const GameInput: React.FC<GameInputProps> = ({
       if (aPrefix !== bPrefix) return aPrefix ? -1 : 1;
       return a.label.localeCompare(b.label);
     });
+
+    // Cap results for very common short words that match hundreds of games
+    const NOISY_WORDS = new Set(['the']);
+    if (NOISY_WORDS.has(inputValue.trim().toLowerCase())) {
+      return sorted.slice(0, 100);
+    }
+
+    return sorted;
   }, [inputValue, effectiveLength, gameOptions]);
 
   const handleChange = (selected: GameOption | null) => {

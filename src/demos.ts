@@ -368,6 +368,12 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile4: 'Divinity: Original Sin 2',
   },
   '2026-03-27': {
+    caseFile1: "Tom Clancy's Ghost Recon Wildlands",
+    caseFile2: 'The Crew 2',
+    caseFile3: 'Spelunky',
+    caseFile4: 'Dragon Age: The Veilguard',
+  },
+  '2026-03-28': {
     caseFile1: 'Suicide Squad: Kill the Justice League',
     caseFile2: 'Fields of Mistria',
     caseFile3: "Don't Starve",
@@ -375,11 +381,12 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
   },
 };
 
+// First 3/28: Plants vs. Zombies (fully refined)
+
 // Easy: Horizon Zero Dawn
 // Easy: Star Wars Battlefront II
 // Easy: Remnant II
 // Easy: State of Decay 2
-// Easy: Plants vs. Zombies
 // Easy: Stardew Valley
 // Inevitable (Last): Dragon Age: The Veilguard
 
@@ -392,7 +399,6 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
 // Hard (Fully Refined): Tales of Arise
 // Hard: Bomb Rush Cyberfunk
 // Hard: What Remains of Edith Finch (50k rev)
-// Hard: Spelunky (change original release?)
 // Hard: Darwin Project
 
 // April 1st: Skyrim: thumbs down review "the game doesnt work the horse flies"
