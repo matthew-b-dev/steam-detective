@@ -11080,16 +11080,17 @@ export const steamGameDetails: SteamGameMap = {
   },
   '582010': {
     name: 'Monster Hunter: World',
+    searchTerms: ['monster hunter world'],
     appId: 582010,
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/582010/ss_a262c53b8629de7c6547933dc0b49d31f4e1b1f1.600x338.jpg',
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/582010/ss_6b4986a37c7b5c185a796085c002febcdd5357b5.600x338.jpg',
     shortDescription:
-      'Welcome to a new world! In ||Monster Hunter: World||, the latest installment in the series, you can enjoy the ultimate hunting experience, using everything at your disposal to hunt monsters in a new world teeming with surprises and excitement.',
+      'Welcome to a new world! In ||Monster Hunter: World||, the ||latest|| installment in the series, you can enjoy the ultimate hunting experience, using everything at your disposal to hunt ||monsters|| in a new world teeming with surprises and excitement.',
     releaseDate: 'Aug 8, 2018',
-    developer: 'CAPCOM Co., Ltd.',
-    publisher: 'CAPCOM Co., Ltd.',
+    developer: '||CAPCOM Co., Ltd.||',
+    publisher: '||CAPCOM Co., Ltd.||',
     tags: ['Action'],
     features: [],
     allReviewSummary: {
@@ -11118,7 +11119,31 @@ export const steamGameDetails: SteamGameMap = {
       'MMORPG',
       'Souls-like',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    clueOrder: ['review', 'details+tags', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Medium',
+    reviewClues: [
+      {
+        review:
+          'amazing game, love turning the ||endangered wildlife|| into new boots.',
+        votedUp: true,
+        votesUp: 6,
+        weightedScore: '0.60000002384185791',
+        authorPlaytimeHours: 70,
+        timestamp: 1769412969,
+      },
+      {
+        review:
+          "One of my friends introduced me to a game that included arm wrestling and I only started playing to beat them via button mashing. After 3 days of recovery... I played again for the actual gameplay. And I think I've found the virtual form of crack.",
+        votedUp: true,
+        votesUp: 136,
+        votedFunny: 75,
+        weightedScore: undefined,
+        authorPlaytimeHours: 266,
+        timestamp: 1703307600,
+      },
+    ],
   },
   '714010': {
     name: 'Aimlabs',
@@ -20051,7 +20076,6 @@ export const steamGameDetails: SteamGameMap = {
   },
   '239350': {
     name: 'Spelunky',
-    overrideCensoredTitle: 'Sp||elunk||y',
     appId: 239350,
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/239350/ss_8fb56a4fb17d6c777c12952d6642652b063b5528.600x338.jpg',
@@ -20097,6 +20121,7 @@ export const steamGameDetails: SteamGameMap = {
       '2D',
       'Difficult',
     ],
+    overrideCensoredTitle: 'Sp||elunk||y',
     clueOrder: ['details+tags', 'review', 'desc'],
     debugProcessed: true,
     debugRefined: true,
@@ -38700,7 +38725,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/954740/ss_55e615613a7d60799c94bd32e87f3dccbb4006f9.600x338.jpg',
     shortDescription:
-      "||Terminator: Resistance||, is a first-person shooter set during the 'Future War' scenario that was only glimpsed at in the iconic films, 'THE TERMINATOR' and 'T2: JUDGMENT DAY'. The machines are destined to lose, but at what cost?",
+      "Experience the events leading up to the decisive final battle for the fate of mankind in the war against ||the machines||. ||Terminator: Resistance||, is a first-person shooter set during the '||Future|| War' scenario that was only glimpsed at in the iconic ||films, 'THE TERMINATOR' and 'T2: JUDGMENT DAY'.|| The ||machines|| are destined to lose, but at what cost?",
     releaseDate: 'Nov 14, 2019',
     developer: 'Teyon',
     publisher: 'Reef Entertainment',
@@ -38713,7 +38738,7 @@ export const steamGameDetails: SteamGameMap = {
     userTags: [
       'FPS',
       'Post-apocalyptic',
-      'Choices Matter',
+      'Licensed',
       'Sci-fi',
       'First-Person',
       'Singleplayer',
@@ -38727,7 +38752,23 @@ export const steamGameDetails: SteamGameMap = {
       'Futuristic',
       'Crafting',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: ['Robots', 'Sci-fi'],
+    overrideCensoredTitle: 'Te||rmin||at||or||: Re||sistanc||e',
+    clueOrder: ['desc', 'details+tags', 'review'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Medium',
+    reviewClues: [
+      {
+        review:
+          'how the ♥♥♥♥ did game devs make a better ||terminator|| story (post ||terminator|| 1-2) then the ||terminator|| film makers',
+        votedUp: true,
+        votesUp: 2,
+        weightedScore: undefined,
+        authorPlaytimeHours: 9.7,
+        timestamp: 1774651486,
+      },
+    ],
   },
   '954850': {
     name: 'Kerbal Space Program 2',
@@ -41186,7 +41227,21 @@ export const steamGameDetails: SteamGameMap = {
       'Top-Down',
       'Beautiful',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    clueOrder: ['review', 'details+tags', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Medium',
+    reviewClues: [
+      {
+        review:
+          "no game has ever caused me the same amount of unadulterated rage as this game when it spawns houses of a new color in the midst of of an entire community of another color of house and it's destination is 2 rivers and 17 intersections away. this game ♥♥♥♥♥♥ me the ♥♥♥♥ off. it's so peak.",
+        votedUp: true,
+        votesUp: 10,
+        weightedScore: undefined,
+        authorPlaytimeHours: 7.3,
+        timestamp: 1771865330,
+      },
+    ],
   },
   '1128000': {
     name: 'Cube World',
@@ -46679,11 +46734,11 @@ export const steamGameDetails: SteamGameMap = {
     name: 'The Callisto Protocol',
     appId: 1544020,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1544020/ss_4daaba46ca4be453dfdc2c1c2af5f96c85921457.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1544020/ss_5437b99db6289ef8ec9360be734c7a716879efd3.600x338.jpg',
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1544020/ss_187717234058d8d23583cbde9dcd0b22456fcd2d.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1544020/ss_280f5ffea54130c0ad44afdab59417a4fdf2b294.600x338.jpg',
     shortDescription:
-      "Survive to escape the horrors of ||Callisto|| and uncover the dark secrets of Jupiter's dead moon.",
+      "In this narrative-driven, third-person ||survival horror|| game set 300 years in the future, the player will take on the role of Jacob Lee – a victim of fate thrown into Black Iron Prison, a maximum-security penitentiary located on Jupiter's moon, ||Callisto||.",
     releaseDate: 'Dec 1, 2022',
     developer: 'Striking Distance Studios',
     publisher: 'KRAFTON, Inc.',
@@ -46710,7 +46765,41 @@ export const steamGameDetails: SteamGameMap = {
       'Realistic',
       'Adventure',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    overrideCensoredTitle: 'T||he|| C||allisto|| P||ro||to||co||l',
+    clueOrder: ['desc', 'details+tags', 'review'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Hard',
+    reviewClues: [
+      {
+        review:
+          'Dam, I admit I like the game. I had fun, it’s absolutely not as good as the Dead Space games but it’s got the same visceral gameplay that made them so satisfying. It’s also really fun to explore, but it’s definitely flawed.\n\nI was going to recommend it, I wanted to even! And then it hit me.\n\nThey put the real ending in paid DLC…',
+        votedUp: false,
+        votesUp: 1289,
+        weightedScore: undefined,
+        authorPlaytimeHours: 20.1,
+        timestamp: 1670907600,
+      },
+      {
+        review:
+          'The best jumpscares this game has are my fps counter dropping from 60 to 20 every time I see an enemy',
+        votedUp: false,
+        votesUp: 1291,
+        votedFunny: 1112,
+        weightedScore: undefined,
+        authorPlaytimeHours: 9.2,
+        timestamp: 1669957200,
+      },
+      {
+        review:
+          'Artistically, It is Deadspace. Which means it is beautifully spooky, full of gore, and contains many jump scares. 10/10, nailed that part.\n\nUnfortunately the actual gameplay is irritatingly clunky and extremely tedious ... (edited for length)',
+        votedUp: false,
+        votesUp: 984,
+        weightedScore: undefined,
+        authorPlaytimeHours: 16.6,
+        timestamp: 1670043600,
+      },
+    ],
   },
   '1548850': {
     name: 'Six Days in Fallujah',
@@ -49540,6 +49629,7 @@ export const steamGameDetails: SteamGameMap = {
   },
   '1922560': {
     name: 'Plants vs. Zombies Garden Warfare 2',
+    searchTerms: ['plants vs zombies garden warfare 2'],
     appId: 1922560,
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1922560/ss_e91dfdfc1ef370eeb8bc6d294152838fa04267b8.600x338.jpg',
@@ -54370,6 +54460,7 @@ export const CLOSE_GUESS_SERIES: string[] = [
   'bioshock',
   'borderlands',
   'call of duty',
+  'chivalry',
   'cities:',
   'civilization',
   'creed',
@@ -54388,18 +54479,21 @@ export const CLOSE_GUESS_SERIES: string[] = [
   'half-life',
   'horizon',
   'jurassic',
+  'just cause',
   'lego',
   'life is strange',
   'mafia',
   'marvel',
   'max payne',
   'middle-earth',
+  'monster hunter',
   'mount and blade',
   'need for speed',
   'ori and',
   'payday',
   'persona',
   'pillars of eternity',
+  'plants vs',
   'prototype',
   'resident evil',
   'runescape',
@@ -54426,6 +54520,4 @@ export const CLOSE_GUESS_SERIES: string[] = [
   'warhammer',
   'witcher',
   'xcom',
-  'chivalry',
-  'just cause',
 ];

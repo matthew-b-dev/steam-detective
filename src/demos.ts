@@ -374,6 +374,12 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile4: 'Dragon Age: The Veilguard',
   },
   '2026-03-28': {
+    caseFile1: 'Plants vs. Zombies',
+    caseFile2: 'Terminator: Resistance',
+    caseFile3: 'The Callisto Protocol',
+    caseFile4: 'Monster Hunter: World',
+  },
+  '2026-03-29': {
     caseFile1: 'Suicide Squad: Kill the Justice League',
     caseFile2: 'Fields of Mistria',
     caseFile3: "Don't Starve",
@@ -381,15 +387,16 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
   },
 };
 
-// First 3/28: Plants vs. Zombies (fully refined)
+// 3-29: Mini Motorways
+// 3-29 Medium: Crab Champions
 
 // Easy: Horizon Zero Dawn
 // Easy: Star Wars Battlefront II
 // Easy: Remnant II
 // Easy: State of Decay 2
 // Easy: Stardew Valley
-// Inevitable (Last): Dragon Age: The Veilguard
 
+// Med: Death's Door
 // Med: Batman: Arkham Asylum (update Original release date)
 // Med: WEBFISHING (60k rev)? needs work
 // Med: Tropico 4 (Last Tropico 3/15)
