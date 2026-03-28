@@ -307,7 +307,7 @@ export const GameComplete: React.FC<GameCompleteProps> = ({
               <button
                 onClick={() => {
                   setVideoRevealed(true);
-                  if (isLocalhost())
+                  if (!isLocalhost())
                     sendFeedback('custom', '`[Event]` Revealed Embedded Video');
                 }}
                 className='inline-flex items-center gap-1 text-center text-yellow-400 underline cursor-pointer bg-transparent border-0 p-0 text-sm'

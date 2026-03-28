@@ -305,6 +305,11 @@ export const RefinePage: React.FC = () => {
       if (game.suggestedBy) {
         lines.push(`    suggestedBy: ${JSON.stringify(game.suggestedBy)},`);
       }
+      if (game.gameCompleteYoutubeEmbed) {
+        lines.push(
+          `    gameCompleteYoutubeEmbed: ${JSON.stringify(game.gameCompleteYoutubeEmbed)},`,
+        );
+      }
       if (game.reviewClues && game.reviewClues.length > 0) {
         lines.push(`    reviewClues: [`);
         game.reviewClues.forEach((review, idx) => {

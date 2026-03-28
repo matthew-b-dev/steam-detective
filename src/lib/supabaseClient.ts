@@ -26,6 +26,7 @@ export const sendNewSteamScore = async (
   playerScore: number,
   caseGuesses?: [number, number, number, number],
   puzzleDate?: string,
+  gamesPlayed?: number,
 ): Promise<void> => {
   console.log('sending score: ', playerScore, caseGuesses);
   const { error } = await supabase.from('scores').insert({
@@ -40,6 +41,7 @@ export const sendNewSteamScore = async (
           case4_guesses: caseGuesses[3],
         }
       : {}),
+    ...(gamesPlayed != null ? { games_played: gamesPlayed } : {}),
   });
 
   if (error) {

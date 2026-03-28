@@ -85,7 +85,15 @@ const FinalGameComplete: React.FC<FinalGameCompleteProps> = ({
                   state.caseFile4?.totalGuesses ?? 7,
                 ] as [number, number, number, number])
               : undefined;
-            await sendNewSteamScore(totalScore, caseGuesses, puzzleDate);
+            const gamesPlayed = Object.keys(localStorage).filter((k) =>
+              k.startsWith('steam-detective-state-'),
+            ).length;
+            await sendNewSteamScore(
+              totalScore,
+              caseGuesses,
+              puzzleDate,
+              gamesPlayed,
+            );
             saveTotalScoreSent(puzzleDate);
           } catch (error) {
             console.error('Error sending score:', error);
