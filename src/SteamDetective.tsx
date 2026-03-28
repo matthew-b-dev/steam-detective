@@ -596,6 +596,20 @@ const SteamDetective: React.FC<SteamDetectiveProps> = ({
       <Toaster position='top-center' />
       <hr className='h-[1px] bg-gray-700 border-none mb-3'></hr>
 
+      {/* Update banner */}
+      <div className='flex items-stretch text-xs rounded overflow-hidden border border-blue-500 mb-3 bg-blue-600/20'>
+        <div className='flex items-center gap-1 bg-blue-600 px-2 py-1.5 font-semibold whitespace-nowrap text-white'>
+          <span>✨</span>
+          <span>Update</span>
+        </div>
+        <div className='px-2 py-1.5 text-gray-200'>
+          Game searching is now more flexible, potentially displaying search
+          results that don&apos;t <em>exactly</em> match the query.
+          <br />
+          Thank you for your patience on this feature &lt;3
+        </div>
+      </div>
+
       {/* If no demo configured for this date, show "brb" post-it note */}
       {!dailyGameCheck && (
         <>

@@ -1,5 +1,7 @@
 import type { ReactElement } from 'react';
 
+export const SEARCH_DEBOUNCE_MS = 700;
+
 // Helper function to get review color class based on rating
 export const getReviewColorClass = (rating: string): string => {
   switch (rating) {

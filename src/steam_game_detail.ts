@@ -16496,7 +16496,7 @@ export const steamGameDetails: SteamGameMap = {
         votedFunny: 8,
         weightedScore: undefined,
         authorPlaytimeHours: 2.1,
-        timestamp: 1667883600,
+        timestamp: 1320710400,
       },
     ],
   },

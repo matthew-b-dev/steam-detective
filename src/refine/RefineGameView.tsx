@@ -1,9 +1,11 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import Select from 'react-select';
+import MiniSearch from 'minisearch';
 import type { SteamGame } from '../types';
 import type { SteamGameMap } from '../steam_game_detail';
 import { dummyGames } from '../dummy_games';
 import { RefineTitle } from './RefineTitle.tsx';
+import { SEARCH_DEBOUNCE_MS } from '../components/SteamDetective/utils';
 import { RefineScreenshots } from './RefineScreenshots.tsx';
 import { RefineDescription } from './RefineDescription.tsx';
 import { RefineDetails } from './RefineDetails.tsx';
@@ -37,6 +39,32 @@ const CLUE_LABELS: Record<ClueType, string> = {
 
 const DEFAULT_CLUE_ORDER: ClueType[] = ['tags', 'details', 'desc'];
 
+const SearchingMessage = () => (
+  <div className='flex items-center justify-start gap-2 py-4 px-3 text-sm text-gray-500'>
+    <svg
+      className='animate-spin h-4 w-4 flex-shrink-0'
+      viewBox='0 0 24 24'
+      fill='none'
+    >
+      <circle
+        cx='12'
+        cy='12'
+        r='10'
+        stroke='currentColor'
+        strokeWidth='3'
+        opacity='0.3'
+      />
+      <path
+        d='M12 2a10 10 0 0 1 10 10'
+        stroke='currentColor'
+        strokeWidth='3'
+        strokeLinecap='round'
+      />
+    </svg>
+    <span>Loading...</span>
+  </div>
+);
+
 export const RefineGameView: React.FC<RefineGameViewProps> = ({
   game,
   allGames,
@@ -50,6 +78,12 @@ export const RefineGameView: React.FC<RefineGameViewProps> = ({
     JSON.stringify(closeGuessSeries),
   );
   const [searchInput, setSearchInput] = useState('');
+  const [debouncedSearchInput, setDebouncedSearchInput] = useState('');
+
+  useEffect(() => {
+    const timer = setTimeout(() => setDebouncedSearchInput(searchInput), SEARCH_DEBOUNCE_MS);
+    return () => clearTimeout(timer);
+  }, [searchInput]);
   const [searchTermsJson, setSearchTermsJson] = useState(() =>
     game.searchTerms && game.searchTerms.length > 0
       ? JSON.stringify(game.searchTerms)
@@ -105,23 +139,89 @@ export const RefineGameView: React.FC<RefineGameViewProps> = ({
       .sort((a, b) => a.label.localeCompare(b.label));
   }, [allGames]);
 
+  // Tokenizer: split on separators, strip remaining non-alphanumeric from each token.
+  // Mirrors GameInput's tokenizer so search preview behaves identically to the real game.
+  const miniSearch = useMemo(() => {
+    const ms = new MiniSearch({
+      fields: ['name', 'searchTerms'],
+      idField: 'id',
+      tokenize: (text: string) =>
+        text
+          .split(/[\s\-:._&|()]+/)
+          .map((t) => t.replace(/[^a-zA-Z0-9]/g, ''))
+          .filter((t) => t.length > 0),
+      processTerm: (term: string) => term.toLowerCase(),
+    });
+    ms.addAll(
+      gameOptions.map((o) => ({
+        id: o.value,
+        name: o.value,
+        searchTerms: o.searchTerms.join(' '),
+      })),
+    );
+    return ms;
+  }, [gameOptions]);
+
+  // Live effective length — controls menu open/close immediately.
   const effectiveSearchLength = useMemo(() => {
     let length = searchInput.length;
     if (searchInput.startsWith(': ')) length -= 2;
     return length;
   }, [searchInput]);
 
+  // Debounced effective length — controls when search actually runs.
+  const debouncedSearchEffectiveLength = useMemo(() => {
+    let length = debouncedSearchInput.length;
+    if (debouncedSearchInput.startsWith(': ')) length -= 2;
+    return length;
+  }, [debouncedSearchInput]);
+
   const filteredOptions = useMemo(() => {
-    if (!searchInput || effectiveSearchLength < 3) return [];
-    const lower = searchInput.toLowerCase();
-    return gameOptions.filter((opt) => {
-      const matchesLabel = opt.label.toLowerCase().includes(lower);
-      const matchesSearch = opt.searchTerms.some((t) =>
-        t.toLowerCase().includes(lower),
-      );
-      return matchesLabel || matchesSearch;
+    if (!debouncedSearchInput || debouncedSearchEffectiveLength < 3) return [];
+
+    let results = miniSearch.search(debouncedSearchInput, {
+      prefix: true,
+      fuzzy: 0.2,
+      combineWith: 'AND',
+      boost: { name: 2 },
     });
-  }, [searchInput, effectiveSearchLength, gameOptions]);
+
+    const NOISY_WORDS = new Set(['the']);
+    if (NOISY_WORDS.has(debouncedSearchInput.trim().toLowerCase())) {
+      results = results.slice(0, 100);
+    }
+
+    const queryLower = debouncedSearchInput.toLowerCase();
+    const firstToken = queryLower.split(/\s+/)[0];
+    const tier = (name: string): number => {
+      const nameLower = name.toLowerCase();
+      if (nameLower.startsWith(queryLower)) return 0;
+      if (nameLower.startsWith(firstToken)) return 1;
+      if (
+        nameLower.split(/[\s\-:._&|()]+/).some((w) => w.startsWith(firstToken))
+      )
+        return 2;
+      return 3;
+    };
+
+    const scoreMap = new Map(results.map((r, i) => [r.id as string, i]));
+    return gameOptions
+      .filter((o) => scoreMap.has(o.value))
+      .sort((a, b) => {
+        const ta = tier(a.value);
+        const tb = tier(b.value);
+        if (ta !== tb) return ta - tb;
+        return (scoreMap.get(a.value) ?? 999) - (scoreMap.get(b.value) ?? 999);
+      });
+  }, [
+    debouncedSearchInput,
+    debouncedSearchEffectiveLength,
+    miniSearch,
+    gameOptions,
+  ]);
+
+  const isSearchPending =
+    effectiveSearchLength >= 3 && searchInput !== debouncedSearchInput;
 
   const handleSeriesJsonBlur = () => {
     try {
@@ -443,7 +543,7 @@ export const RefineGameView: React.FC<RefineGameViewProps> = ({
           <div className='bg-[#171a21] rounded-lg px-4 py-3'>
             <div className='text-xs text-gray-400 mb-1'>Search Preview</div>
             <Select
-              options={filteredOptions}
+              options={isSearchPending ? [] : filteredOptions}
               value={null}
               onChange={() => {}}
               placeholder='Guess the game...'
@@ -451,10 +551,16 @@ export const RefineGameView: React.FC<RefineGameViewProps> = ({
               inputValue={searchInput}
               onInputChange={setSearchInput}
               menuIsOpen={effectiveSearchLength >= 3}
+              isLoading={isSearchPending}
               filterOption={() => true}
               components={{
                 IndicatorSeparator: () => null,
                 DropdownIndicator: () => null,
+                LoadingIndicator: () => null,
+                LoadingMessage: SearchingMessage,
+                NoOptionsMessage: () => (
+                  <div className='py-4 px-3 text-sm text-black text-center'>No results</div>
+                ),
               }}
               styles={{
                 control: (provided) => ({
