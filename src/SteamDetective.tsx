@@ -440,6 +440,7 @@ const SteamDetectiveGame: React.FC<SteamDetectiveGameProps> = ({
           previousTotalScore={previousTotalScore}
           isCurrentCaseFile={isCurrentCaseFile}
           suggestedBy={dailyGame.suggestedBy}
+          gameCompleteYoutubeEmbed={dailyGame.gameCompleteYoutubeEmbed}
         />
         <ClueContainer caseFile={`casefile-${caseFileNumber}`} />
       </div>
@@ -458,6 +459,8 @@ const SteamDetective: React.FC<SteamDetectiveProps> = ({
   onDatePickerClick,
 }) => {
   const puzzleDate = getPuzzleDate();
+  // Lock the puzzle date at mount so all operations in this session use a consistent date.
+  const [sessionPuzzleDate] = useState(() => getUtcDateString());
   const [timeLeft] = useState<{ h: number; m: number }>(() =>
     getTimeUntilNextGame(),
   );
@@ -466,23 +469,20 @@ const SteamDetective: React.FC<SteamDetectiveProps> = ({
   const dailyGameCheck = useDailyGame(1);
 
   // Get current case file from state (1-4)
-  const [currentCaseFile, setCurrentCaseFile] = useState(() => {
-    const currentPuzzleDate = getUtcDateString();
-    return getCurrentCaseFile(currentPuzzleDate);
-  });
+  const [currentCaseFile, setCurrentCaseFile] = useState(() =>
+    getCurrentCaseFile(sessionPuzzleDate),
+  );
 
   // Check if all cases are complete
   const [allCasesComplete, setAllCasesComplete] = useState(() => {
-    const currentPuzzleDate = getUtcDateString();
-    const state = getUnifiedState(currentPuzzleDate);
+    const state = getUnifiedState(sessionPuzzleDate);
     return !!state?.allCasesComplete;
   });
 
   // Track if final game complete has been shown
   // Initialize based on whether all cases are complete
   const [showFinalGameComplete, setShowFinalGameComplete] = useState(() => {
-    const currentPuzzleDate = getUtcDateString();
-    const state = getUnifiedState(currentPuzzleDate);
+    const state = getUnifiedState(sessionPuzzleDate);
     return !!state?.allCasesComplete; // Show immediately if already complete
   });
   const hasScheduledFinalComplete = useRef(false);
@@ -490,8 +490,7 @@ const SteamDetective: React.FC<SteamDetectiveProps> = ({
   // Poll localStorage to detect when current case file completes
   useEffect(() => {
     const checkCompletion = () => {
-      const currentPuzzleDate = getUtcDateString();
-      const state = getUnifiedState(currentPuzzleDate);
+      const state = getUnifiedState(sessionPuzzleDate);
       if (state) {
         // Check if current case file is complete
         const caseFileKey = `caseFile${currentCaseFile}` as keyof typeof state;
@@ -503,7 +502,7 @@ const SteamDetective: React.FC<SteamDetectiveProps> = ({
           // Case file 4 is complete - show final game complete immediately
           if (!allCasesComplete) {
             setAllCasesComplete(true);
-            saveAllCasesComplete(currentPuzzleDate);
+            saveAllCasesComplete(sessionPuzzleDate);
           }
 
           // Show final game complete immediately (score sending is handled by FinalGameComplete)
@@ -518,16 +517,20 @@ const SteamDetective: React.FC<SteamDetectiveProps> = ({
     checkCompletion();
     const interval = setInterval(checkCompletion, 500);
     return () => clearInterval(interval);
-  }, [currentCaseFile, allCasesComplete, showFinalGameComplete]);
+  }, [
+    currentCaseFile,
+    allCasesComplete,
+    showFinalGameComplete,
+    sessionPuzzleDate,
+  ]);
 
   const handleContinueToNextCase = useCallback(() => {
     const nextCaseFile = currentCaseFile + 1;
     if (nextCaseFile <= 4) {
       setCurrentCaseFile(nextCaseFile);
-      const currentPuzzleDate = getUtcDateString();
-      saveCurrentCaseFile(currentPuzzleDate, nextCaseFile);
+      saveCurrentCaseFile(sessionPuzzleDate, nextCaseFile);
     }
-  }, [currentCaseFile]);
+  }, [currentCaseFile, sessionPuzzleDate]);
 
   // Scroll to true top AFTER the new case file has been inserted into the DOM
   const prevCaseFileRef = useRef(currentCaseFile);
@@ -539,8 +542,7 @@ const SteamDetective: React.FC<SteamDetectiveProps> = ({
   }, [currentCaseFile]);
 
   const handleResetPuzzle = async () => {
-    const currentPuzzleDate = getUtcDateString();
-    clearPuzzleState(currentPuzzleDate);
+    clearPuzzleState(sessionPuzzleDate);
     window?.location?.reload?.();
   };
 
@@ -549,8 +551,7 @@ const SteamDetective: React.FC<SteamDetectiveProps> = ({
 
   // Get missed case files
   const getMissedCaseFiles = useCallback(() => {
-    const currentPuzzleDate = getUtcDateString();
-    const state = getUnifiedState(currentPuzzleDate);
+    const state = getUnifiedState(sessionPuzzleDate);
     const missed: Array<{ caseNumber: number; gameName: string }> = [];
 
     if (!state) return missed;
@@ -570,23 +571,25 @@ const SteamDetective: React.FC<SteamDetectiveProps> = ({
     }
 
     return missed;
-  }, []);
+  }, [sessionPuzzleDate]);
 
   // Get previous total score for a case file
-  const getPreviousTotalScore = useCallback((caseFileNumber: number) => {
-    const currentPuzzleDate = getUtcDateString();
-    const state = getUnifiedState(currentPuzzleDate);
+  const getPreviousTotalScore = useCallback(
+    (caseFileNumber: number) => {
+      const state = getUnifiedState(sessionPuzzleDate);
 
-    if (!state || !state.caseFileScores) return 0;
+      if (!state || !state.caseFileScores) return 0;
 
-    // Sum scores for all case files before this one
-    let total = 0;
-    for (let i = 0; i < caseFileNumber - 1; i++) {
-      total += state.caseFileScores[i] || 0;
-    }
+      // Sum scores for all case files before this one
+      let total = 0;
+      for (let i = 0; i < caseFileNumber - 1; i++) {
+        total += state.caseFileScores[i] || 0;
+      }
 
-    return total;
-  }, []);
+      return total;
+    },
+    [sessionPuzzleDate],
+  );
 
   return (
     <div className='text-[#c7d5e0]'>
@@ -637,8 +640,9 @@ const SteamDetective: React.FC<SteamDetectiveProps> = ({
               >
                 <FinalGameComplete
                   show={showFinalGameComplete}
-                  totalScore={getTotalScore(getUtcDateString())}
+                  totalScore={getTotalScore(sessionPuzzleDate)}
                   missedCaseFiles={getMissedCaseFiles()}
+                  puzzleDate={sessionPuzzleDate}
                 />
               </motion.div>
             )}

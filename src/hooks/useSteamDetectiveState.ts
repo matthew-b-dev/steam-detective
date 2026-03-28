@@ -16,7 +16,9 @@ export const useSteamDetectiveState = (
   gameName?: string,
   caseFileNumber: number = 1, // Now 1-4
 ) => {
-  const puzzleDate = getUtcDateString();
+  // Lock the date at mount so saves always go to the correct key
+  // even if the component re-renders after midnight.
+  const [puzzleDate] = useState(() => getUtcDateString());
 
   // Load or initialize state
   const loadState = useCallback((): SteamDetectiveState => {

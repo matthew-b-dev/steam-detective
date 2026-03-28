@@ -6,7 +6,6 @@ import {
 } from '../../lib/supabaseClient';
 import {
   getUnifiedState,
-  getUtcDateString,
   getRealUtcDateString,
   getRankEmoji,
   saveTotalScoreSent,
@@ -32,12 +31,14 @@ interface FinalGameCompleteProps {
   show: boolean;
   totalScore: number;
   missedCaseFiles: Array<{ caseNumber: number; gameName: string }>;
+  puzzleDate: string;
 }
 
 const FinalGameComplete: React.FC<FinalGameCompleteProps> = ({
   show,
   totalScore,
   missedCaseFiles,
+  puzzleDate,
 }) => {
   const [scoresLoading, setScoresLoading] = useState(true);
   const [todayScores, setTodayScores] = useState<number[]>([]);
@@ -69,8 +70,7 @@ const FinalGameComplete: React.FC<FinalGameCompleteProps> = ({
       setScoresLoading(true);
 
       try {
-        const currentPuzzleDate = getUtcDateString();
-        const state = getUnifiedState(currentPuzzleDate);
+        const state = getUnifiedState(puzzleDate);
 
         // Send score if not already sent (check both ref and localStorage)
         if (!hasSentScoreThisSession.current && !state?.totalScoreSent) {
@@ -85,15 +85,15 @@ const FinalGameComplete: React.FC<FinalGameCompleteProps> = ({
                   state.caseFile4?.totalGuesses ?? 7,
                 ] as [number, number, number, number])
               : undefined;
-            await sendNewSteamScore(totalScore, caseGuesses);
-            saveTotalScoreSent(currentPuzzleDate);
+            await sendNewSteamScore(totalScore, caseGuesses, puzzleDate);
+            saveTotalScoreSent(puzzleDate);
           } catch (error) {
             console.error('Error sending score:', error);
           }
         }
 
         // Fetch all scores for today (after send completes)
-        const scores = await fetchNewSteamScores();
+        const scores = await fetchNewSteamScores(puzzleDate);
         setTodayScores(scores);
 
         // Calculate percentile and rank (higher score is better, so count worse scores)
@@ -123,7 +123,7 @@ const FinalGameComplete: React.FC<FinalGameCompleteProps> = ({
     };
 
     sendAndFetchScores();
-  }, [show, totalScore]);
+  }, [show, totalScore, puzzleDate]);
 
   // Generate share text
   const handleCopyToShare = useCallback(() => {
@@ -156,8 +156,7 @@ const FinalGameComplete: React.FC<FinalGameCompleteProps> = ({
       return emojis.join('');
     };
 
-    const currentPuzzleDate = getUtcDateString();
-    const state = getUnifiedState(currentPuzzleDate);
+    const state = getUnifiedState(puzzleDate);
     if (!state) return;
 
     const caseFileEmojis = [];
@@ -180,11 +179,10 @@ const FinalGameComplete: React.FC<FinalGameCompleteProps> = ({
     }
 
     const realToday = getRealUtcDateString();
-    const rawPuzzleDate = getUtcDateString();
     const baseUrl =
-      rawPuzzleDate === realToday
+      puzzleDate === realToday
         ? 'https://SteamDetective.wtf/'
-        : `https://SteamDetective.wtf/d/${rawPuzzleDate}`;
+        : `https://SteamDetective.wtf/d/${puzzleDate}`;
 
     const rankEmoji = getRankEmoji(userRank, todayScores.length);
     const rankText =
@@ -196,7 +194,7 @@ const FinalGameComplete: React.FC<FinalGameCompleteProps> = ({
 
     navigator.clipboard.writeText(shareText);
     toast.success('Copied to clipboard!');
-  }, [totalScore, userRank, todayScores.length]);
+  }, [totalScore, userRank, todayScores.length, puzzleDate]);
 
   if (!show) return null;
 

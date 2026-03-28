@@ -302,6 +302,9 @@ export const RefinePage: React.FC = () => {
       if (game.debugNotes) {
         lines.push(`    debugNotes: ${JSON.stringify(game.debugNotes)},`);
       }
+      if (game.suggestedBy) {
+        lines.push(`    suggestedBy: ${JSON.stringify(game.suggestedBy)},`);
+      }
       if (game.reviewClues && game.reviewClues.length > 0) {
         lines.push(`    reviewClues: [`);
         game.reviewClues.forEach((review, idx) => {

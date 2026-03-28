@@ -25,10 +25,11 @@ export const sendFeedback = async (
 export const sendNewSteamScore = async (
   playerScore: number,
   caseGuesses?: [number, number, number, number],
+  puzzleDate?: string,
 ): Promise<void> => {
   console.log('sending score: ', playerScore, caseGuesses);
   const { error } = await supabase.from('scores').insert({
-    created_at: getUtcDateString(),
+    created_at: puzzleDate ?? getUtcDateString(),
     score: playerScore,
     gametype: 'steam',
     ...(caseGuesses
@@ -47,8 +48,10 @@ export const sendNewSteamScore = async (
 };
 
 // New function for fetching scores from the scores table
-export const fetchNewSteamScores = async (): Promise<number[]> => {
-  const today = getUtcDateString();
+export const fetchNewSteamScores = async (
+  puzzleDate?: string,
+): Promise<number[]> => {
+  const today = puzzleDate ?? getUtcDateString();
 
   const { data, error } = await supabase
     .from('scores')

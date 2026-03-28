@@ -119,6 +119,7 @@ const DESCRIPTION_PATTERN = /\|\|(.+?)\|\||(\[[^\]]*\])/g;
 
 export const renderCensoredDescription = (
   description: string,
+  keyPrefix: string = '',
 ): ReactElement[] => {
   const parts: ReactElement[] = [];
   const pattern = new RegExp(DESCRIPTION_PATTERN.source, 'g');
@@ -129,7 +130,7 @@ export const renderCensoredDescription = (
     // Add text before the match
     if (match.index > lastIndex) {
       parts.push(
-        <span key={`text-${lastIndex}`}>
+        <span key={`${keyPrefix}text-${lastIndex}`}>
           {description.slice(lastIndex, match.index)}
         </span>,
       );
@@ -140,7 +141,7 @@ export const renderCensoredDescription = (
       const censoredText = censorText(match[1]);
       parts.push(
         <span
-          key={`censored-${match.index}`}
+          key={`${keyPrefix}censored-${match.index}`}
           style={{ filter: 'blur(7px)' }}
           className='select-none'
         >
@@ -150,7 +151,10 @@ export const renderCensoredDescription = (
     } else {
       // [text] - bracket note, gray italic
       parts.push(
-        <span key={`bracket-${match.index}`} style={bracketNoteStyle}>
+        <span
+          key={`${keyPrefix}bracket-${match.index}`}
+          style={bracketNoteStyle}
+        >
           {match[0]}
         </span>,
       );
@@ -162,7 +166,9 @@ export const renderCensoredDescription = (
   // Add remaining text after last match
   if (lastIndex < description.length) {
     parts.push(
-      <span key={`text-${lastIndex}`}>{description.slice(lastIndex)}</span>,
+      <span key={`${keyPrefix}text-${lastIndex}`}>
+        {description.slice(lastIndex)}
+      </span>,
     );
   }
 
@@ -227,7 +233,8 @@ const renderCensoredLineWithEditedMarker = (
   lineIdx: number,
 ): ReactElement[] => {
   const parts = line.split(EDITED_FOR_LENGTH_RE);
-  if (parts.length === 1) return renderCensoredDescription(line);
+  if (parts.length === 1)
+    return renderCensoredDescription(line, `l${lineIdx}-`);
   const result: ReactElement[] = [];
   // split with a capturing group alternates: plain, match, plain, match, ...
   parts.forEach((part, idx) => {
@@ -239,7 +246,7 @@ const renderCensoredLineWithEditedMarker = (
         </span>,
       );
     } else if (part) {
-      result.push(...renderCensoredDescription(part));
+      result.push(...renderCensoredDescription(part, `l${lineIdx}-s${idx}-`));
     }
   });
   return result;

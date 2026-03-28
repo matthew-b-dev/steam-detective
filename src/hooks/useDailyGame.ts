@@ -1,11 +1,12 @@
-import { useMemo } from 'react';
+import { useMemo, useState } from 'react';
 import { steamGameDetails } from '../steam_game_detail.generated';
 import { getUtcDateString } from '../utils';
 import { STEAM_DETECTIVE_DEMO_DAYS } from '../demos';
 
 export const useDailyGame = (caseFileNumber: number = 1) => {
   // caseFileNumber is 1-4
-  const utcDate = getUtcDateString();
+  // Lock the date at mount so re-renders after midnight don't swap the puzzle mid-session.
+  const [utcDate] = useState(() => getUtcDateString());
 
   const dailyGame = useMemo(() => {
     // If there's no demo configured for this date, return null

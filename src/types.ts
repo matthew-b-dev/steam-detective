@@ -49,6 +49,10 @@ export interface SteamGame {
   features: string[];
   allReviewSummary: ReviewSummary;
   suggestedBy?: string;
+  gameCompleteYoutubeEmbed?: {
+    url: string; // YouTube watch URL, e.g. https://www.youtube.com/watch?v=...
+    textReveal?: string; // If set, show this text instead of the embed; clicking it reveals the embed
+  };
   debugProcessed?: true;
   debugRefined?: true;
   debugDelete?: true;

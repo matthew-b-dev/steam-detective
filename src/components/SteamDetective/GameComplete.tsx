@@ -6,9 +6,12 @@ import {
   saveCaseFileScore,
   saveCaseFileAnimationPlayed,
   hasCaseFileAnimationPlayed,
+  isLocalhost,
 } from '../../utils';
+import { sendFeedback } from '../../lib/supabaseClient';
 import { MAX_CLUES } from './utils';
 import { PlayIcon, StarIcon } from '@heroicons/react/24/solid';
+import { VideoCameraIcon } from '@heroicons/react/24/solid';
 import blueGamesFolderIcon from '../../assets/games-folder-48.png';
 import greenGamesFolderIcon from '../../assets/green-games-folder-48.png';
 import purpleGamesFolderIcon from '../../assets/purple-games-folder-48.png';
@@ -36,7 +39,21 @@ interface GameCompleteProps {
   previousTotalScore?: number; // Total score before this case file
   isCurrentCaseFile?: boolean;
   suggestedBy?: string;
+  gameCompleteYoutubeEmbed?: {
+    url: string;
+    textReveal?: string;
+  };
 }
+
+const getYoutubeEmbedUrl = (url: string): string | null => {
+  try {
+    const videoId = new URL(url).searchParams.get('v');
+    if (videoId) return `https://www.youtube.com/embed/${videoId}`;
+  } catch {
+    // invalid URL
+  }
+  return null;
+};
 
 // Calculate score based on total guesses
 const calculateScore = (totalGuesses: number): number => {
@@ -63,9 +80,11 @@ export const GameComplete: React.FC<GameCompleteProps> = ({
   previousTotalScore = 0,
   isCurrentCaseFile = true,
   suggestedBy,
+  gameCompleteYoutubeEmbed,
 }) => {
   const [animatedScore, setAnimatedScore] = useState(previousTotalScore);
   const [scoreAnimationComplete, setScoreAnimationComplete] = useState(false);
+  const [videoRevealed, setVideoRevealed] = useState(false);
 
   // Calculate scores
   const currentCaseScore = calculateScore(totalGuesses);
@@ -153,6 +172,11 @@ export const GameComplete: React.FC<GameCompleteProps> = ({
     caseFileNumber,
     currentCaseScore,
   ]);
+
+  const youtubeEmbedUrl = gameCompleteYoutubeEmbed
+    ? getYoutubeEmbedUrl(gameCompleteYoutubeEmbed.url)
+    : null;
+  const youtubeTextReveal = gameCompleteYoutubeEmbed?.textReveal;
 
   const correct = totalGuesses <= MAX_CLUES;
   const preDisplayNameContent = correct ? (
@@ -270,6 +294,43 @@ export const GameComplete: React.FC<GameCompleteProps> = ({
             </button>
           </div>
         )}
+
+        {/* YouTube embed 
+          gameCompleteYoutubeEmbed: {
+            url: 'https://www.youtube.com/watch?v=Hv6RbEOlqRo',
+            textReveal: 'uuuuuuuuuuuuuuuuuu ...',
+          },
+        */}
+        {youtubeEmbedUrl &&
+          (youtubeTextReveal && !videoRevealed ? (
+            <div className='relative group flex justify-center mt-2'>
+              <button
+                onClick={() => {
+                  setVideoRevealed(true);
+                  if (isLocalhost())
+                    sendFeedback('custom', '`[Event]` Revealed Embedded Video');
+                }}
+                className='inline-flex items-center gap-1 text-center text-yellow-400 underline cursor-pointer bg-transparent border-0 p-0 text-sm'
+              >
+                <VideoCameraIcon className='w-4 h-4 flex-shrink-0 text-white' />
+                {youtubeTextReveal}
+              </button>
+              <div className='pointer-events-none absolute bottom-full left-1/2 -translate-x-1/2 mb-1 w-max max-w-[11rem] rounded bg-zinc-900 border border-zinc-600 px-2 py-1 text-xs text-gray-300 text-center invisible group-hover:visible group-focus-within:visible z-10'>
+                Watch an embedded video
+              </div>
+            </div>
+          ) : (
+            <div className='mt-4 w-full aspect-video'>
+              <iframe
+                src={youtubeEmbedUrl}
+                className='w-full h-full rounded'
+                title='video'
+                frameBorder='0'
+                allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+                allowFullScreen
+              />
+            </div>
+          ))}
       </motion.div>
     </div>
   );
