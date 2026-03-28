@@ -11080,7 +11080,6 @@ export const steamGameDetails: SteamGameMap = {
   },
   '582010': {
     name: 'Monster Hunter: World',
-    searchTerms: ['monster hunter world'],
     appId: 582010,
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/582010/ss_a262c53b8629de7c6547933dc0b49d31f4e1b1f1.600x338.jpg',
@@ -11120,6 +11119,7 @@ export const steamGameDetails: SteamGameMap = {
       'Souls-like',
     ],
     clueOrder: ['review', 'details+tags', 'desc'],
+    searchTerms: ['monster hunter world'],
     debugProcessed: true,
     debugRefined: true,
     difficulty: 'Medium',
@@ -14984,6 +14984,7 @@ export const steamGameDetails: SteamGameMap = {
       'Survival',
     ],
     blurredUserTags: ['Zombies'],
+    screenshotFocusPoint: [76, 91, 25],
     clueOrder: ['ss', 'tags', 'details', 'desc'],
     searchTerms: ['plants vs zombies'],
     debugProcessed: true,
@@ -46732,6 +46733,7 @@ export const steamGameDetails: SteamGameMap = {
   },
   '1544020': {
     name: 'The Callisto Protocol',
+    searchTerms: ['the calisto protocol'],
     appId: 1544020,
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1544020/ss_5437b99db6289ef8ec9360be734c7a716879efd3.600x338.jpg',
@@ -49629,7 +49631,6 @@ export const steamGameDetails: SteamGameMap = {
   },
   '1922560': {
     name: 'Plants vs. Zombies Garden Warfare 2',
-    searchTerms: ['plants vs zombies garden warfare 2'],
     appId: 1922560,
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1922560/ss_e91dfdfc1ef370eeb8bc6d294152838fa04267b8.600x338.jpg',
@@ -49664,6 +49665,7 @@ export const steamGameDetails: SteamGameMap = {
       'Cute',
     ],
     clueOrder: ['tags', 'details', 'desc'],
+    searchTerms: ['plants vs zombies garden warfare 2'],
   },
   '1928420': {
     name: 'Farlight 84',
