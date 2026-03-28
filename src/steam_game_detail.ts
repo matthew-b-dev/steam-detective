@@ -1324,6 +1324,7 @@ export const steamGameDetails: SteamGameMap = {
   },
   '201870': {
     name: "Assassin's Creed Revelations",
+    searchTerms: ['assassins creed revelations'],
     appId: 201870,
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/201870/ss_28cb1321a03e8cf2af89b2f9ab441380b093db1e.600x338.jpg',
@@ -6961,6 +6962,7 @@ export const steamGameDetails: SteamGameMap = {
   },
   '289650': {
     name: "Assassin's Creed Unity",
+    searchTerms: ['assassins creed unity'],
     appId: 289650,
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/289650/ss_19c1c8d52d714fe8d0a0277c36832b4e0ad5def3.600x338.jpg',
@@ -9306,6 +9308,7 @@ export const steamGameDetails: SteamGameMap = {
   },
   '812140': {
     name: "Assassin's Creed Odyssey",
+    searchTerms: ['assassins creed odyssey'],
     appId: 812140,
     primaryScreenshot:
       'https://images.steamusercontent.com/ugc/961973937747672117/5784CE61922EE3F434325163C17B8C915AEFE3D5/?imw=600&imh=338&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false',
@@ -10825,16 +10828,17 @@ export const steamGameDetails: SteamGameMap = {
   },
   '582160': {
     name: "Assassin's Creed Origins",
+    searchTerms: ['assassins creed origins'],
     appId: 582160,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/582160/ss_1a0ab42e93e51c48ad9a6bda7f408958e09a43b0.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/582160/ss_4de2c8e9d81b3855bbee2708381aa7a56810ba70.600x338.jpg',
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/582160/ss_c4a4545f51c6836ac11c31427944fc7df813edfb.600x338.jpg',
     shortDescription:
-      "Explore Ancient Egypt in this action-adventure game. Battle powerful enemies, unveil conspiracies, and discover the origin story of the Assassin's Brotherhood.",
+      "Explore Ancient Egypt in this action-adventure game from Ubisoft. Battle powerful enemies, unveil conspiracies, and discover the origin story of the ||Assassin||'s Brotherhood. ",
     releaseDate: 'Oct 26, 2017',
-    developer: 'Ubisoft Montreal',
-    publisher: 'Ubisoft',
+    developer: '||Ubisoft Montreal||',
+    publisher: '||Ubisoft||',
     tags: ['Action', 'Adventure', 'RPG'],
     features: [],
     allReviewSummary: {
@@ -10863,7 +10867,30 @@ export const steamGameDetails: SteamGameMap = {
       'Sexual Content',
       'Co-op',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: ['Parkour', 'Assassin', 'Stealth'],
+    clueOrder: ['review', 'details+tags', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
+    reviewClues: [
+      {
+        review: 'The reason why the crocodiles are all extinct',
+        votedUp: true,
+        votesUp: 84,
+        weightedScore: undefined,
+        authorPlaytimeHours: 90.4,
+        timestamp: 1551330000,
+      },
+      {
+        review:
+          "Farmers: We can't afford to pay taxes\n||Bayek||: I'll go and talk to the magistrate\nMission update: Kill the magistrate",
+        votedUp: true,
+        votesUp: 93,
+        weightedScore: undefined,
+        authorPlaytimeHours: 40,
+        timestamp: 1673240400,
+      },
+    ],
   },
   '678960': {
     name: 'CODE VEIN',
@@ -15511,6 +15538,7 @@ export const steamGameDetails: SteamGameMap = {
   },
   '15100': {
     name: "Assassin's Creed",
+    searchTerms: ['assassins creed'],
     appId: 15100,
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/15100/0000003837.600x338.jpg',
@@ -15814,10 +15842,11 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/20900/ss_b26db23a0b4b4e07a6466c84f009cbdbb13091f7.600x338.jpg',
     shortDescription:
-      'Become ||The Witcher||, Geralt of Rivia, a legendary monster slayer caught in a web of intrigue woven by forces vying for control of the world. Make difficult decisions and live with the consequences in a game that will immerse you in an extraordinary tale like no other.',
+      'Become ||The Witcher||, ||Geralt|| of ||Rivia||, a legendary monster slayer caught in a web of intrigue woven by forces vying for control of the world. Make difficult decisions and live with the consequences in a game that will immerse you in an extraordinary tale like no other.',
+    originalReleaseDate: 'Oct 26, 2007',
     releaseDate: 'Sep 19, 2008',
-    developer: 'CD PROJEKT RED',
-    publisher: 'CD PROJEKT RED',
+    developer: '||CD PROJEKT RED||',
+    publisher: '||CD PROJEKT RED||',
     tags: [],
     features: [],
     allReviewSummary: {
@@ -15833,7 +15862,7 @@ export const steamGameDetails: SteamGameMap = {
       'Choices Matter',
       'Action',
       'Third Person',
-      'Nudity',
+      'Dark Fantasy',
       'Adventure',
       'Dark Fantasy',
       'Based On A Novel',
@@ -15841,7 +15870,31 @@ export const steamGameDetails: SteamGameMap = {
       'Open World',
       'Great Soundtrack',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    overrideCensoredTitle: '||The|| Wi||tch||er',
+    clueOrder: ['review', 'details+tags', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
+    reviewClues: [
+      {
+        review:
+          'Many think this game was bad, it\'s not. What people really mean is, "this is from 2007 and I don\'t like that."\n\nEach of the three games had their pros and cons. The combat in this first one is a con for most folks but its really not that bad. You have to use certain sword styles against different opponents and you have to time your mouse clicks to keep the combo going. ... (edited for length)',
+        votedUp: true,
+        votesUp: 241,
+        weightedScore: undefined,
+        authorPlaytimeHours: 62,
+        timestamp: 1498363200,
+      },
+      {
+        review:
+          'Combat worthy of an MMORPG, a story that feels dark not out of mature world building sensibilities but rather a desire to be seen as edgy. ... (edited for length)',
+        votedUp: false,
+        votesUp: 8,
+        weightedScore: undefined,
+        authorPlaytimeHours: 52.8,
+        timestamp: 1771649728,
+      },
+    ],
   },
   '21000': {
     name: 'LEGO Batman: The Videogame',
@@ -16141,6 +16194,7 @@ export const steamGameDetails: SteamGameMap = {
   },
   '33230': {
     name: "Assassin's Creed 2",
+    searchTerms: ['assassins creed 2'],
     appId: 33230,
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/33230/ss_dd6a4d319cda32c24a4e16a0a62908e82673f458.600x338.jpg',
@@ -16394,7 +16448,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/39000/ss_0a2737c1e130a51b3d415d55a7a80bb1d8b74fff.600x338.jpg',
     shortDescription:
-      'NASA has once again landed on the lunar surface with the goal of colonization, research, and further exploration. Shortly after the return to the Moon, NASA has established a small outpost on the south pole of the moon called ||Moonbase Alpha||.',
+      'NASA has once again landed on the lunar surface with the goal of colonization, research, and further exploration. Shortly after the return to the Moon, NASA has established a small outpost on the south pole of the moon called M||oonbase|| A||lpha||.',
     releaseDate: 'Jul 6, 2010',
     developer: 'Virtual Heroes',
     publisher: 'NASA',
@@ -16418,7 +16472,33 @@ export const steamGameDetails: SteamGameMap = {
       'Walking Simulator',
       'Co-op',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    overrideCensoredTitle: 'Mo||onb||as||e|| A||lph||a',
+    clueOrder: ['review', 'details+tags', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Medium',
+    reviewClues: [
+      {
+        review:
+          'Rest in piece John Madden, the legend. Forever written in stone in this Text To Speech simulator about being in ||space||.',
+        votedUp: true,
+        votesUp: 148,
+        votedFunny: 7,
+        weightedScore: undefined,
+        authorPlaytimeHours: 1.1,
+        timestamp: 1640667600,
+      },
+      {
+        review:
+          'your tax dollars went into making the greatest text-to-speech program ever made.\n\naeiou. aeiou. aeiou? aeiou!',
+        votedUp: true,
+        votesUp: 47,
+        votedFunny: 8,
+        weightedScore: undefined,
+        authorPlaytimeHours: 2.1,
+        timestamp: 1667883600,
+      },
+    ],
   },
   '39120': {
     name: 'RIFT',
@@ -16845,6 +16925,7 @@ export const steamGameDetails: SteamGameMap = {
   },
   '48190': {
     name: "Assassin's Creed Brotherhood",
+    searchTerms: ['assassins creed brotherhood'],
     appId: 48190,
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/48190/ss_412a6e71dcafa32ba9165d329cbd97e8669e0df4.600x338.jpg',
@@ -23653,6 +23734,7 @@ export const steamGameDetails: SteamGameMap = {
   },
   '311560': {
     name: "Assassin's Creed Rogue",
+    searchTerms: ['assassins creed rogue'],
     appId: 311560,
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/311560/ss_907bf97f0b1f52e0f16afa2a86eab2d6d8a5c773.600x338.jpg',
@@ -26171,6 +26253,7 @@ export const steamGameDetails: SteamGameMap = {
   },
   '368500': {
     name: "Assassin's Creed Syndicate",
+    searchTerms: ['assassins creed syndicate'],
     appId: 368500,
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/368500/ss_349dc173bd543fddd7b667253e3429e9565fe098.600x338.jpg',
@@ -29264,6 +29347,7 @@ export const steamGameDetails: SteamGameMap = {
   },
   '460950': {
     name: 'Katana ZERO',
+    suggestedBy: 'aReize',
     appId: 460950,
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/460950/ss_d4f8ef350ac44c096f8137208c381cac31e68242.600x338.jpg',
@@ -36223,7 +36307,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/774801/c9ec8a4e69786f5f6202ee4466e0b7dd76f0b0df/ss_c9ec8a4e69786f5f6202ee4466e0b7dd76f0b0df.600x338.jpg',
     shortDescription:
-      'Claw your way across exotic islands combining fluid movement with fast paced combat to become a ||Crab|| Champion in this third person roguelike shooter.',
+      'Claw your way across exotic islands combining fluid movement with fast paced combat to become a ||Crab Champion|| in this third person roguelike shooter.',
     releaseDate: 'Apr 1, 2023',
     developer: 'Noisestorm',
     publisher: 'Noisestorm',
@@ -36250,7 +36334,31 @@ export const steamGameDetails: SteamGameMap = {
       'Action',
       'PvE',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    overrideCensoredTitle: 'C||rab|| Ch||ampio||ns',
+    clueOrder: ['review', 'desc', 'details+tags'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
+    reviewClues: [
+      {
+        review: 'Bisque of Rain',
+        votedUp: true,
+        votesUp: 490,
+        votedFunny: 343,
+        weightedScore: undefined,
+        authorPlaytimeHours: 19,
+        timestamp: 1681704000,
+      },
+      {
+        review: 'Risk of Rangoon',
+        votedUp: true,
+        votesUp: 396,
+        votedFunny: 264,
+        weightedScore: undefined,
+        authorPlaytimeHours: 26.7,
+        timestamp: 1680840000,
+      },
+    ],
   },
   '774861': {
     name: 'Project Winter',
@@ -46733,7 +46841,6 @@ export const steamGameDetails: SteamGameMap = {
   },
   '1544020': {
     name: 'The Callisto Protocol',
-    searchTerms: ['the calisto protocol'],
     appId: 1544020,
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1544020/ss_5437b99db6289ef8ec9360be734c7a716879efd3.600x338.jpg',
@@ -46769,6 +46876,7 @@ export const steamGameDetails: SteamGameMap = {
     ],
     overrideCensoredTitle: 'T||he|| C||allisto|| P||ro||to||co||l',
     clueOrder: ['desc', 'details+tags', 'review'],
+    searchTerms: ['the calisto protocol'],
     debugProcessed: true,
     debugRefined: true,
     difficulty: 'Hard',
@@ -51503,6 +51611,7 @@ export const steamGameDetails: SteamGameMap = {
   },
   '2208920': {
     name: "Assassin's Creed Valhalla",
+    searchTerms: ['assassins creed valhalla'],
     appId: 2208920,
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2208920/ss_103481084a59b34837113daf27c04679caf743f3.600x338.jpg',
@@ -54165,6 +54274,7 @@ export const steamGameDetails: SteamGameMap = {
   },
   '3035570': {
     name: "Assassin's Creed Mirage",
+    searchTerms: ['assassins creed mirage'],
     appId: 3035570,
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3035570/7333a21ec2f874f5b5a09064b1770852bb269b86/ss_7333a21ec2f874f5b5a09064b1770852bb269b86.600x338.jpg',

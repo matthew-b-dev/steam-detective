@@ -380,6 +380,12 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile4: 'Monster Hunter: World',
   },
   '2026-03-29': {
+    caseFile1: "Assassin's Creed Origins",
+    caseFile2: 'Crab Champions',
+    caseFile3: 'Moonbase Alpha',
+    caseFile4: 'The Witcher',
+  },
+  '2026-03-30': {
     caseFile1: 'Suicide Squad: Kill the Justice League',
     caseFile2: 'Fields of Mistria',
     caseFile3: "Don't Starve",
@@ -387,14 +393,16 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
   },
 };
 
-// 3-29: Mini Motorways
-// 3-29 Medium: Crab Champions
+// 3/30 Hard: Shadow Tactics: Blades of the Shogun
+// 3/31 Hard: Mini Motorways
 
 // Easy: Horizon Zero Dawn
 // Easy: Star Wars Battlefront II
 // Easy: Remnant II
 // Easy: State of Decay 2
 // Easy: Stardew Valley
+// Easy: Ghost of Tsushima DIRECTOR'S CUT (change name, add PS4 release)
+// Easy: Any AC Game (last 3/29): Revelations, Unity, (1), (2), Brotherhood, Rogue, Syndicate, Valhalla, Mirage
 
 // Med: Death's Door
 // Med: Batman: Arkham Asylum (update Original release date)
