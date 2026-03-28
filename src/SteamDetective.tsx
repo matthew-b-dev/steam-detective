@@ -605,8 +605,9 @@ const SteamDetective: React.FC<SteamDetectiveProps> = ({
         <div className='px-2 py-1.5 text-gray-200'>
           Game searching is now more flexible, potentially displaying search
           results that don&apos;t <em>exactly</em> match the query.
-          <br />
-          Thank you for your patience on this feature &lt;3
+          <div className='mt-1.5'>
+            Thank you for your patience on this feature &lt;3
+          </div>
         </div>
       </div>
 
