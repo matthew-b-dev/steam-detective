@@ -21,7 +21,7 @@ export const sendFeedback = async (
   }
 };
 
-// New function for sending scores to the scores table
+// function for sending scores to the scores table
 export const sendNewSteamScore = async (
   playerScore: number,
   caseGuesses?: [number, number, number, number],
@@ -49,7 +49,7 @@ export const sendNewSteamScore = async (
   }
 };
 
-// New function for fetching scores from the scores table
+// function for fetching scores from the scores table
 export const fetchNewSteamScores = async (
   puzzleDate?: string,
 ): Promise<number[]> => {
@@ -97,23 +97,6 @@ export const fetchDailyScoreData = async (
   }
 
   return data ?? [];
-};
-
-// Legacy functions - kept for backwards compatibility but no longer used
-export const sendSteamDetectiveScore = async (
-  guesses: number,
-  caseFile: 'easy' | 'expert' = 'easy',
-): Promise<void> => {
-  console.log('sending steam detective score: ', guesses, caseFile);
-  const { error } = await supabase.from('steam_scores').insert({
-    created_at: getUtcDateString(),
-    guesses: guesses,
-    case_file: caseFile,
-  });
-
-  if (error) {
-    console.error('Error sending steam detective score:', error);
-  }
 };
 
 export const fetchPageViewCount = async (date: string): Promise<number> => {

@@ -3,10 +3,11 @@ import Select from 'react-select';
 import MiniSearch from 'minisearch';
 import { allGameNames, gameSearchTerms } from '../../all_game_names.generated';
 import type { MissedGuess } from '../../utils';
-import { SEARCH_DEBOUNCE_MS } from './utils';
-
-// Common words that are valid searches but match hundreds of games — cap for performance
-const NOISY_WORDS = new Set(['the']);
+import {
+  SEARCH_DEBOUNCE_MS,
+  queryMeaningfulLength,
+  SEARCH_FUZZY,
+} from './utils';
 
 // Split on common separators, then strip remaining non-alphanumeric chars from each token.
 // "Assassin's" → "assassins", "Half-Life" → ["half","life"], "NieR:Automata" → ["nier","automata"]
@@ -16,7 +17,7 @@ const tokenize = (text: string): string[] =>
     .map((t) => t.replace(/[^a-zA-Z0-9]/g, ''))
     .filter((t) => t.length > 0);
 
-// Build index once at module load — all games, keyed by name, indexing both the name and
+// Build index once at module load - all games, keyed by name, indexing both the name and
 // any explicit searchTerms aliases (e.g. "assassins creed", "hades 2", "osrs").
 const gameSearch = new MiniSearch({
   fields: ['name', 'searchTerms'],
@@ -82,7 +83,10 @@ export const GameInput: React.FC<GameInputProps> = ({
   const [debouncedInput, setDebouncedInput] = useState('');
 
   useEffect(() => {
-    const timer = setTimeout(() => setDebouncedInput(inputValue), SEARCH_DEBOUNCE_MS);
+    const timer = setTimeout(
+      () => setDebouncedInput(inputValue),
+      SEARCH_DEBOUNCE_MS,
+    );
     return () => clearTimeout(timer);
   }, [inputValue]);
 
@@ -92,41 +96,31 @@ export const GameInput: React.FC<GameInputProps> = ({
     [previousGuesses],
   );
 
-  // Effective length of the *live* input — controls menu open/close instantly.
-  // Excludes a leading ": " so players can't cheaply surface all "Game: The Subtitle"
-  // games by typing ": T" (3 chars total, only 1 meaningful char).
-  const effectiveLength = useMemo(() => {
-    let length = inputValue.length;
-    if (inputValue.startsWith(':') && inputValue.startsWith(': ')) {
-      length = inputValue.length - 2;
-    }
-    return length;
-  }, [inputValue]);
+  // Meaningful char count of the live input - controls menu open/close instantly.
+  // Uses queryMeaningfulLength so padding tricks ("mi ", "m-i", ":mi") can't
+  // bypass the 3-char minimum with fewer than 3 real alphanumeric characters.
+  const effectiveLength = useMemo(
+    () => queryMeaningfulLength(inputValue),
+    [inputValue],
+  );
 
-  // Effective length of the debounced input — controls when search actually runs.
-  const debouncedEffectiveLength = useMemo(() => {
-    let length = debouncedInput.length;
-    if (debouncedInput.startsWith(':') && debouncedInput.startsWith(': ')) {
-      length = debouncedInput.length - 2;
-    }
-    return length;
-  }, [debouncedInput]);
+  // Same check on the debounced value - gates the actual MiniSearch call.
+  const debouncedEffectiveLength = useMemo(
+    () => queryMeaningfulLength(debouncedInput),
+    [debouncedInput],
+  );
 
   const filteredOptions = useMemo(() => {
     if (!debouncedInput || debouncedEffectiveLength < 3) return [];
 
     let results = gameSearch.search(debouncedInput, {
       prefix: true,
-      fuzzy: 0.2,
+      fuzzy: SEARCH_FUZZY,
       combineWith: 'AND',
       boost: { name: 2 },
     });
 
     results = results.filter((r) => !guessedNames.has(r.id as string));
-
-    if (NOISY_WORDS.has(debouncedInput.trim().toLowerCase())) {
-      results = results.slice(0, 100);
-    }
 
     // Post-sort: prefer titles that start with the query over fuzzy/substring matches.
     // Tier 0: title starts with the full query string ("border" → "Borderlands")
@@ -159,7 +153,8 @@ export const GameInput: React.FC<GameInputProps> = ({
         value: r.id as string,
         label: r.id as string,
         searchTerms: gameSearchTerms[r.id as string] ?? [],
-      }));
+      }))
+      .slice(0, 100);
   }, [debouncedInput, debouncedEffectiveLength, guessedNames]);
 
   // Show spinner while the user is typing but the debounce hasn't settled yet.
@@ -192,7 +187,9 @@ export const GameInput: React.FC<GameInputProps> = ({
           LoadingIndicator: () => null,
           LoadingMessage: SearchingMessage,
           NoOptionsMessage: () => (
-            <div className='py-4 px-3 text-sm text-black text-center'>No results</div>
+            <div className='py-4 px-3 text-sm text-black text-center'>
+              No results
+            </div>
           ),
         }}
         styles={{

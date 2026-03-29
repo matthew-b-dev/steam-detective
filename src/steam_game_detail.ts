@@ -1324,7 +1324,6 @@ export const steamGameDetails: SteamGameMap = {
   },
   '201870': {
     name: "Assassin's Creed Revelations",
-    searchTerms: ['assassins creed revelations'],
     appId: 201870,
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/201870/ss_28cb1321a03e8cf2af89b2f9ab441380b093db1e.600x338.jpg',
@@ -1365,6 +1364,7 @@ export const steamGameDetails: SteamGameMap = {
     ],
     overrideCensoredTitle: "A||ssassin||'||s|| C||reed|| R||evelations||",
     clueOrder: ['details', 'desc', 'tags'],
+    searchTerms: ['assassins creed revelations'],
     debugProcessed: true,
     debugRefined: true,
     difficulty: 'Medium',
@@ -6962,7 +6962,6 @@ export const steamGameDetails: SteamGameMap = {
   },
   '289650': {
     name: "Assassin's Creed Unity",
-    searchTerms: ['assassins creed unity'],
     appId: 289650,
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/289650/ss_19c1c8d52d714fe8d0a0277c36832b4e0ad5def3.600x338.jpg',
@@ -7002,6 +7001,7 @@ export const steamGameDetails: SteamGameMap = {
       'Beautiful',
     ],
     clueOrder: ['tags', 'details', 'desc'],
+    searchTerms: ['assassins creed unity'],
   },
   '1284210': {
     name: 'Guild Wars 2',
@@ -9308,7 +9308,6 @@ export const steamGameDetails: SteamGameMap = {
   },
   '812140': {
     name: "Assassin's Creed Odyssey",
-    searchTerms: ['assassins creed odyssey'],
     appId: 812140,
     primaryScreenshot:
       'https://images.steamusercontent.com/ugc/961973937747672117/5784CE61922EE3F434325163C17B8C915AEFE3D5/?imw=600&imh=338&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false',
@@ -9349,6 +9348,7 @@ export const steamGameDetails: SteamGameMap = {
       'Choose Your Own Adventure',
     ],
     clueOrder: ['review', 'desc', 'details', 'tags'],
+    searchTerms: ['assassins creed odyssey'],
     reviewClues: [
       {
         review:
@@ -10828,8 +10828,6 @@ export const steamGameDetails: SteamGameMap = {
   },
   '582160': {
     name: "Assassin's Creed Origins",
-    overrideCensoredTitle: "A||ssassin||'||s|| C||reed|| O||rigin||s",
-    searchTerms: ['assassins creed origins'],
     appId: 582160,
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/582160/ss_4de2c8e9d81b3855bbee2708381aa7a56810ba70.600x338.jpg',
@@ -10869,7 +10867,9 @@ export const steamGameDetails: SteamGameMap = {
       'Co-op',
     ],
     blurredUserTags: ['Parkour', 'Assassin', 'Stealth'],
+    overrideCensoredTitle: "A||ssassin||'||s|| C||reed|| O||rigin||s",
     clueOrder: ['review', 'details+tags', 'desc'],
+    searchTerms: ['assassins creed origins'],
     debugProcessed: true,
     debugRefined: true,
     difficulty: 'Easy',
@@ -12697,6 +12697,7 @@ export const steamGameDetails: SteamGameMap = {
   },
   '413150': {
     name: 'Stardew Valley',
+    overrideCensoredTitle: 'St||ardew|| Va||lle||y',
     appId: 413150,
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/413150/ss_b887651a93b0525739049eb4194f633de2df75be.600x338.jpg',
@@ -12735,7 +12736,31 @@ export const steamGameDetails: SteamGameMap = {
       'Great Soundtrack',
       'Fishing',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: ['Farming Sim', 'Agriculture'],
+    clueOrder: ['review', 'details+tags', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
+    reviewClues: [
+      {
+        review:
+          '||Stardew Valley|| is the kind of game where you sit down to play a ||cute farming|| game for a little bit and suddenly it’s 2 a.m. and you’re emotionally invested in a ||town mayor|| who lost his shorts. I love this game and its community so much.',
+        votedUp: true,
+        votesUp: 150,
+        weightedScore: '0.921061515808105469',
+        authorPlaytimeHours: 40,
+        timestamp: 1767484912,
+      },
+      {
+        review:
+          'Tried rizzing a baddie, asked her to dance, she replies "Eww, no way!"... I move on and 100 hours later I\'m making millions selling pineapples\n10/10 it will help you set your priorities straight',
+        votedUp: true,
+        votesUp: 101,
+        weightedScore: '0.862818658351898193',
+        authorPlaytimeHours: 188,
+        timestamp: 1767667546,
+      },
+    ],
   },
   '1583230': {
     name: 'High On Life',
@@ -15539,7 +15564,6 @@ export const steamGameDetails: SteamGameMap = {
   },
   '15100': {
     name: "Assassin's Creed",
-    searchTerms: ['assassins creed'],
     appId: 15100,
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/15100/0000003837.600x338.jpg',
@@ -15574,6 +15598,7 @@ export const steamGameDetails: SteamGameMap = {
       'Realistic',
     ],
     clueOrder: ['tags', 'details', 'desc'],
+    searchTerms: ['assassins creed'],
   },
   '15620': {
     name: 'Warhammer 40,000: Dawn of War II',
@@ -16195,7 +16220,6 @@ export const steamGameDetails: SteamGameMap = {
   },
   '33230': {
     name: "Assassin's Creed 2",
-    searchTerms: ['assassins creed 2'],
     appId: 33230,
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/33230/ss_dd6a4d319cda32c24a4e16a0a62908e82673f458.600x338.jpg',
@@ -16227,6 +16251,7 @@ export const steamGameDetails: SteamGameMap = {
       'Atmospheric',
     ],
     clueOrder: ['tags', 'details', 'desc'],
+    searchTerms: ['assassins creed 2'],
   },
   '33930': {
     name: 'Arma 2: Operation Arrowhead',
@@ -16378,10 +16403,11 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/35140/ss_312e1fccf930e7aad2a531727c4280f05a22c73c.600x338.jpg',
     shortDescription:
-      "Experience what it's like to be ||Batman|| and face off against Gotham's greatest villians. Explore every inch of ||Arkham|| ||Asylum|| and roam freely on the infamous island.",
+      "Experience what it's like to be ||Batman|| and face off against ||Gotham||'s greatest villians. Explore every inch of ||Arkham|| ||Asylum|| and roam freely on the infamous island. [...] Investigate as ||Batman||, the world's greatest detective, by solving intricate puzzles with the help of cutting edge forensic tools including x-ray scanning, fingerprint scans, \"||Amido Black||\" spray and a pheromone tracker.",
+    originalReleaseDate: 'Aug 25, 2009 (PS3, X360)',
     releaseDate: 'Mar 26, 2010',
-    developer: 'Rocksteady Studios',
-    publisher: 'WB Games',
+    developer: '||Rocksteady Studios||',
+    publisher: '||WB Games||',
     tags: [],
     features: [],
     allReviewSummary: {
@@ -16402,7 +16428,23 @@ export const steamGameDetails: SteamGameMap = {
       'Atmospheric',
       'Story Rich',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: ['Comic Book', 'Superhero', 'Detective'],
+    overrideCensoredTitle: 'B||atman||: Ar||kham|| As||ylum||',
+    clueOrder: ['details+tags', 'review', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Medium',
+    reviewClues: [
+      {
+        review:
+          'The combat was the first of its kind and unlike any ||other fighting|| game during the time. The music may not be the best of the series, but it fits well. No other video game makes you feel more like ||Batman|| than the ||Batman||: ||Arkham|| series. And it all began here.',
+        votedUp: true,
+        votesUp: 16,
+        weightedScore: undefined,
+        authorPlaytimeHours: 18.7,
+        timestamp: 1508644800,
+      },
+    ],
   },
   '35720': {
     name: 'Trine 2: Complete Story',
@@ -16926,7 +16968,6 @@ export const steamGameDetails: SteamGameMap = {
   },
   '48190': {
     name: "Assassin's Creed Brotherhood",
-    searchTerms: ['assassins creed brotherhood'],
     appId: 48190,
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/48190/ss_412a6e71dcafa32ba9165d329cbd97e8669e0df4.600x338.jpg',
@@ -16960,6 +17001,7 @@ export const steamGameDetails: SteamGameMap = {
       'Atmospheric',
     ],
     clueOrder: ['tags', 'details', 'desc'],
+    searchTerms: ['assassins creed brotherhood'],
   },
   '48240': {
     name: 'Anno 2070',
@@ -19743,13 +19785,14 @@ export const steamGameDetails: SteamGameMap = {
   },
   '233720': {
     name: 'Surgeon Simulator',
+    searchTerms: ['surgery simulator'],
     appId: 233720,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/233720/ss_2649ec090dbd500cc561a1dce6d844a6068ce242.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/233720/ss_f2343e0de5a72c826b736db2fc833102cb403c42.600x338.jpg',
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/233720/ss_02ee2afbc5c87558de81f440fd2cb0ef42139cb2.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/233720/ss_fd1f6447b72589bad832d6a3840deb5dad92b3f8.600x338.jpg',
     shortDescription:
-      '||Surgeon Simulator|| is an over-the-top operation sim, stitching together pitch-black humour with life-saving surgery. Become Dr. Burke, a would-be surgeon with a less than conventional toolkit, as he performs procedures on patients including the Heavy from TF2! ...is that a hammer?',
+      '||Surgeon Simulator|| is an over-the-top ||operation|| sim, stitching together pitch-black humour with life-saving ||surgery||. Become ||Dr.|| Burke, a would-be ||surgeon|| with a less than conventional toolkit, as he performs ||procedures|| on ||patients||.',
     releaseDate: 'Apr 19, 2013',
     developer: 'Bossa Studios',
     publisher: 'Infogrames',
@@ -19776,7 +19819,22 @@ export const steamGameDetails: SteamGameMap = {
       'Aliens',
       'Singleplayer',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    overrideCensoredTitle: 'Su||rgeon|| Si||mulato||r',
+    clueOrder: ['review', 'desc', 'details+tags'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
+    reviewClues: [
+      {
+        review:
+          'You go in thinking, "How hard can ||surgery|| be?" Five seconds later, you’ve thrown a ||scalpel|| across the room, accidentally punched the ||patient||, and somehow removed an ||organ|| that was not on the checklist. Congratulations, you are now banned from every ||hospital||.\n\nThe controls are the real boss fight. Each finger feels like it has its own personality and none of them want to cooperate. Picking up a tool becomes a high-stakes mission. Using it correctly? That’s a miracle. ... (edited for length)',
+        votedUp: true,
+        votesUp: 0,
+        weightedScore: undefined,
+        authorPlaytimeHours: 0.9,
+        timestamp: 1774812277,
+      },
+    ],
   },
   '234650': {
     name: 'Shadowrun Returns',
@@ -21131,7 +21189,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/253230/ss_b9a71f27ac4c7428666490065b872087c9d8cacb.600x338.jpg',
     shortDescription:
-      '||A Hat in Time|| is a cute-as-heck 3D platformer featuring a little girl who stitches hats for wicked powers! Freely explore giant worlds and recover ||Time|| Pieces to travel to new heights!',
+      '||A Hat in Time|| is a cute-as-heck 3D platformer featuring a little girl who stitches hats for wicked powers! Freely explore giant worlds and recover Time Pieces to travel to new heights!',
     releaseDate: 'Oct 5, 2017',
     developer: 'Gears for Breakfast',
     publisher: 'Gears for Breakfast',
@@ -23735,7 +23793,6 @@ export const steamGameDetails: SteamGameMap = {
   },
   '311560': {
     name: "Assassin's Creed Rogue",
-    searchTerms: ['assassins creed rogue'],
     appId: 311560,
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/311560/ss_907bf97f0b1f52e0f16afa2a86eab2d6d8a5c773.600x338.jpg',
@@ -23770,6 +23827,7 @@ export const steamGameDetails: SteamGameMap = {
       'Quick-Time Events',
     ],
     clueOrder: ['tags', 'details', 'desc'],
+    searchTerms: ['assassins creed rogue'],
   },
   '311690': {
     name: 'Enter the Gungeon',
@@ -26254,7 +26312,6 @@ export const steamGameDetails: SteamGameMap = {
   },
   '368500': {
     name: "Assassin's Creed Syndicate",
-    searchTerms: ['assassins creed syndicate'],
     appId: 368500,
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/368500/ss_349dc173bd543fddd7b667253e3429e9565fe098.600x338.jpg',
@@ -26290,6 +26347,7 @@ export const steamGameDetails: SteamGameMap = {
       'Great Soundtrack',
     ],
     clueOrder: ['tags', 'details', 'desc'],
+    searchTerms: ['assassins creed syndicate'],
   },
   '371660': {
     name: 'Far Cry Primal',
@@ -29348,7 +29406,6 @@ export const steamGameDetails: SteamGameMap = {
   },
   '460950': {
     name: 'Katana ZERO',
-    suggestedBy: 'aReize',
     appId: 460950,
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/460950/ss_d4f8ef350ac44c096f8137208c381cac31e68242.600x338.jpg',
@@ -29387,6 +29444,7 @@ export const steamGameDetails: SteamGameMap = {
     debugProcessed: true,
     debugRefined: true,
     difficulty: 'Hard',
+    suggestedBy: 'aReize',
     reviewClues: [
       {
         review: 'platformer Hotline Miami on cocaine with samurai sword ',
@@ -41310,7 +41368,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1127500/ss_7a57d11fd0d3a097b02645f96b49f81793b6ac7f.600x338.jpg',
     shortDescription:
-      '||Mini Motorways|| is a strategy simulation game about designing the road map for a growing city. Build a traffic network, one road at a time, to create a bustling metropolis. Redesign your roads and place your motorways to get everyone where they need to go. How long can you keep the city moving?',
+      'M||ini||&nbsp;&nbsp;M||otorways|| is a strategy simulation game about designing the road map for a growing city. Build a traffic network, one road at a time, to create a bustling metropolis. Redesign your roads and place your motorways to get everyone where they need to go. How long can you keep the city moving?',
     releaseDate: 'Jul 20, 2021',
     developer: 'Dinosaur Polo Club',
     publisher: 'Dinosaur Polo Club',
@@ -41322,6 +41380,7 @@ export const steamGameDetails: SteamGameMap = {
     },
     userTags: [
       'Strategy',
+      'Transportation',
       'Simulation',
       'Casual',
       'Management',
@@ -41329,7 +41388,6 @@ export const steamGameDetails: SteamGameMap = {
       'Puzzle',
       'Indie',
       'Relaxing',
-      'Transportation',
       'Singleplayer',
       'Building',
       'Stylized',
@@ -41337,6 +41395,7 @@ export const steamGameDetails: SteamGameMap = {
       'Top-Down',
       'Beautiful',
     ],
+    overrideCensoredTitle: 'Mi||ni|| Mo||to||rw||ay||s',
     clueOrder: ['review', 'details+tags', 'desc'],
     debugProcessed: true,
     debugRefined: true,
@@ -41344,7 +41403,16 @@ export const steamGameDetails: SteamGameMap = {
     reviewClues: [
       {
         review:
-          "no game has ever caused me the same amount of unadulterated rage as this game when it spawns houses of a new color in the midst of of an entire community of another color of house and it's destination is 2 rivers and 17 intersections away. this game ♥♥♥♥♥♥ me the ♥♥♥♥ off. it's so peak.",
+          "Fun game to play if you like the management style of arcade game, can be frustrating but that's what makes it fun. Does feel like some destination spawns are intentionally ragebait but I'll live.",
+        votedUp: true,
+        votesUp: 1,
+        weightedScore: undefined,
+        authorPlaytimeHours: 46,
+        timestamp: 1772362654,
+      },
+      {
+        review:
+          "no game has ever caused me the same amount of unadulterated rage as this game when it spawns houses of a new color in the midst of of an entire community of another color of house and it's destination is 2 rivers and 17 intersections away. this game is ♥♥♥♥♥♥ me the ♥♥♥♥ off. it's so peak.",
         votedUp: true,
         votesUp: 10,
         weightedScore: undefined,
@@ -51612,7 +51680,6 @@ export const steamGameDetails: SteamGameMap = {
   },
   '2208920': {
     name: "Assassin's Creed Valhalla",
-    searchTerms: ['assassins creed valhalla'],
     appId: 2208920,
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2208920/ss_103481084a59b34837113daf27c04679caf743f3.600x338.jpg',
@@ -51647,6 +51714,7 @@ export const steamGameDetails: SteamGameMap = {
       'Historical',
     ],
     clueOrder: ['tags', 'details', 'desc'],
+    searchTerms: ['assassins creed valhalla'],
   },
   '2212330': {
     name: 'Your Only Move Is HUSTLE',
@@ -54275,7 +54343,6 @@ export const steamGameDetails: SteamGameMap = {
   },
   '3035570': {
     name: "Assassin's Creed Mirage",
-    searchTerms: ['assassins creed mirage'],
     appId: 3035570,
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3035570/7333a21ec2f874f5b5a09064b1770852bb269b86/ss_7333a21ec2f874f5b5a09064b1770852bb269b86.600x338.jpg',
@@ -54310,6 +54377,7 @@ export const steamGameDetails: SteamGameMap = {
       'Atmospheric',
     ],
     clueOrder: ['tags', 'details', 'desc'],
+    searchTerms: ['assassins creed mirage'],
   },
   '3070070': {
     name: 'TCG Card Shop Simulator',

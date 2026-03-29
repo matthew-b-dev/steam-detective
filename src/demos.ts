@@ -386,6 +386,12 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile4: 'The Witcher',
   },
   '2026-03-30': {
+    caseFile1: 'Stardew Valley',
+    caseFile2: 'Batman: Arkham Asylum',
+    caseFile3: 'Mini Motorways',
+    caseFile4: 'Surgeon Simulator',
+  },
+  '2026-03-31': {
     caseFile1: 'Suicide Squad: Kill the Justice League',
     caseFile2: 'Fields of Mistria',
     caseFile3: "Don't Starve",
@@ -393,19 +399,16 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
   },
 };
 
-// 3/30 Hard: Shadow Tactics: Blades of the Shogun
-// 3/31 Hard: Mini Motorways
+// 3/31 Med: A Hat in Time
+// 3/31 Hard: Shadow Tactics: Blades of the Shogun
 
-// Easy: Horizon Zero Dawn
 // Easy: Star Wars Battlefront II
 // Easy: Remnant II
 // Easy: State of Decay 2
-// Easy: Stardew Valley
 // Easy: Ghost of Tsushima DIRECTOR'S CUT (change name, add PS4 release)
 // Easy: Any AC Game (last 3/29): Revelations, Unity, (1), (2), Brotherhood, Rogue, Syndicate, Valhalla, Mirage
 
 // Med: Death's Door
-// Med: Batman: Arkham Asylum (update Original release date)
 // Med: WEBFISHING (60k rev)? needs work
 // Med: Tropico 4 (Last Tropico 3/15)
 // Med: Clustertruck

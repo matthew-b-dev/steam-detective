@@ -6,6 +6,10 @@ import type { SteamGameMap } from '../steam_game_detail';
 import { dummyGames } from '../dummy_games';
 import { RefineTitle } from './RefineTitle.tsx';
 import { SEARCH_DEBOUNCE_MS } from '../components/SteamDetective/utils';
+import {
+  queryMeaningfulLength,
+  SEARCH_FUZZY,
+} from '../components/SteamDetective/utils';
 import { RefineScreenshots } from './RefineScreenshots.tsx';
 import { RefineDescription } from './RefineDescription.tsx';
 import { RefineDetails } from './RefineDetails.tsx';
@@ -81,7 +85,10 @@ export const RefineGameView: React.FC<RefineGameViewProps> = ({
   const [debouncedSearchInput, setDebouncedSearchInput] = useState('');
 
   useEffect(() => {
-    const timer = setTimeout(() => setDebouncedSearchInput(searchInput), SEARCH_DEBOUNCE_MS);
+    const timer = setTimeout(
+      () => setDebouncedSearchInput(searchInput),
+      SEARCH_DEBOUNCE_MS,
+    );
     return () => clearTimeout(timer);
   }, [searchInput]);
   const [searchTermsJson, setSearchTermsJson] = useState(() =>
@@ -162,34 +169,27 @@ export const RefineGameView: React.FC<RefineGameViewProps> = ({
     return ms;
   }, [gameOptions]);
 
-  // Live effective length — controls menu open/close immediately.
-  const effectiveSearchLength = useMemo(() => {
-    let length = searchInput.length;
-    if (searchInput.startsWith(': ')) length -= 2;
-    return length;
-  }, [searchInput]);
+  // Live meaningful length - controls menu open/close immediately.
+  const effectiveSearchLength = useMemo(
+    () => queryMeaningfulLength(searchInput),
+    [searchInput],
+  );
 
-  // Debounced effective length — controls when search actually runs.
-  const debouncedSearchEffectiveLength = useMemo(() => {
-    let length = debouncedSearchInput.length;
-    if (debouncedSearchInput.startsWith(': ')) length -= 2;
-    return length;
-  }, [debouncedSearchInput]);
+  // Debounced meaningful length - gates the actual MiniSearch call.
+  const debouncedSearchEffectiveLength = useMemo(
+    () => queryMeaningfulLength(debouncedSearchInput),
+    [debouncedSearchInput],
+  );
 
   const filteredOptions = useMemo(() => {
     if (!debouncedSearchInput || debouncedSearchEffectiveLength < 3) return [];
 
-    let results = miniSearch.search(debouncedSearchInput, {
+    const results = miniSearch.search(debouncedSearchInput, {
       prefix: true,
-      fuzzy: 0.2,
+      fuzzy: SEARCH_FUZZY,
       combineWith: 'AND',
       boost: { name: 2 },
     });
-
-    const NOISY_WORDS = new Set(['the']);
-    if (NOISY_WORDS.has(debouncedSearchInput.trim().toLowerCase())) {
-      results = results.slice(0, 100);
-    }
 
     const queryLower = debouncedSearchInput.toLowerCase();
     const firstToken = queryLower.split(/\s+/)[0];
@@ -212,7 +212,8 @@ export const RefineGameView: React.FC<RefineGameViewProps> = ({
         const tb = tier(b.value);
         if (ta !== tb) return ta - tb;
         return (scoreMap.get(a.value) ?? 999) - (scoreMap.get(b.value) ?? 999);
-      });
+      })
+      .slice(0, 100);
   }, [
     debouncedSearchInput,
     debouncedSearchEffectiveLength,
@@ -559,7 +560,9 @@ export const RefineGameView: React.FC<RefineGameViewProps> = ({
                 LoadingIndicator: () => null,
                 LoadingMessage: SearchingMessage,
                 NoOptionsMessage: () => (
-                  <div className='py-4 px-3 text-sm text-black text-center'>No results</div>
+                  <div className='py-4 px-3 text-sm text-black text-center'>
+                    No results
+                  </div>
                 ),
               }}
               styles={{

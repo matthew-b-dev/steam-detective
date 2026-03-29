@@ -2,6 +2,32 @@ import type { ReactElement } from 'react';
 
 export const SEARCH_DEBOUNCE_MS = 700;
 
+/**
+ * Fuzzy tolerance for MiniSearch queries (fractional, per-token).
+ * floor(SEARCH_FUZZY x tokenLength) = max edit distance allowed.
+ * 0.2 -> 1 edit for 5–9 char tokens
+ * 0.35 -> 2 edits for 6+ char tokens (catches transpositions like "hutner" -> "hunter")
+ */
+export const SEARCH_FUZZY = 0.35;
+
+/**
+ * Returns the number of meaningful alphanumeric characters in a search query.
+ * Strips the leading ": " subtitle-cheat prefix, then tokenizes identically to
+ * MiniSearch (split on separators, strip remaining non-alphanumeric), and sums
+ * the resulting token lengths.
+ *
+ * This is the correct value to gate against the 3-char minimum - raw string
+ * length is exploitable (e.g. "mi " or "m-i" are 3 chars but only 2 meaningful).
+ */
+export const queryMeaningfulLength = (input: string): number => {
+  let s = input;
+  if (s.startsWith(': ')) s = s.slice(2);
+  return s
+    .split(/[\s\-:._&|()]+/)
+    .map((t) => t.replace(/[^a-zA-Z0-9]/g, ''))
+    .reduce((sum, t) => sum + t.length, 0);
+};
+
 // Helper function to get review color class based on rating
 export const getReviewColorClass = (rating: string): string => {
   switch (rating) {

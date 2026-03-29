@@ -598,8 +598,8 @@ const SteamDetective: React.FC<SteamDetectiveProps> = ({
       <hr className='h-[1px] bg-gray-700 border-none mb-3'></hr>
 
       {/* Update banner */}
-      <div className='flex items-stretch text-xs rounded overflow-hidden border border-blue-500 mb-3 bg-blue-600/20'>
-        <div className='flex items-center gap-1 bg-blue-600 px-2 py-1.5 font-semibold whitespace-nowrap text-white'>
+      <div className='flex items-stretch text-xs rounded overflow-hidden border border-gray-500 mb-3 bg-gray-600/20'>
+        <div className='flex items-center gap-1 bg-gray-800/40 border-r border-gray-600 px-2 py-1.5 font-semibold whitespace-nowrap text-white'>
           <div className='flex align-middle'>
             <InformationCircleIcon className='h-4 w-4 shrink-0 mr-1 relative top-[1px]' />
             Update
