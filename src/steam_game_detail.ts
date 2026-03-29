@@ -10828,6 +10828,7 @@ export const steamGameDetails: SteamGameMap = {
   },
   '582160': {
     name: "Assassin's Creed Origins",
+    overrideCensoredTitle: "A||ssassin||'||s|| C||reed|| O||rigin||s",
     searchTerms: ['assassins creed origins'],
     appId: 582160,
     primaryScreenshot:
