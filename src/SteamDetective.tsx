@@ -42,6 +42,7 @@ import greenGamesFolderIcon from './assets/green-games-folder-48.png';
 import purpleGamesFolderIcon from './assets/purple-games-folder-48.png';
 import redGamesFolderIcon from './assets/red-games-folder-48.png';
 import analyzeIcon from './assets/analyze-48.png';
+import { InformationCircleIcon } from '@heroicons/react/24/outline';
 
 // Map case file numbers to their folder icons
 const getCaseFileIcon = (caseFileNumber: number): string => {
@@ -599,8 +600,10 @@ const SteamDetective: React.FC<SteamDetectiveProps> = ({
       {/* Update banner */}
       <div className='flex items-stretch text-xs rounded overflow-hidden border border-blue-500 mb-3 bg-blue-600/20'>
         <div className='flex items-center gap-1 bg-blue-600 px-2 py-1.5 font-semibold whitespace-nowrap text-white'>
-          <span>✨</span>
-          <span>Update</span>
+          <div className='flex align-middle'>
+            <InformationCircleIcon className='h-4 w-4 shrink-0 mr-1 relative top-[1px]' />
+            Update
+          </div>
         </div>
         <div className='px-2 py-1.5 text-gray-200'>
           Game searching is now more flexible, potentially displaying search
