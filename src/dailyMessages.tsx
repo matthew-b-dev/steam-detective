@@ -3,11 +3,13 @@ import React from 'react';
 export const dailyMessages: Record<string, React.ReactNode> = {
   '2026-04-01': (
     <div>
-      🎉 April Fools! Poisson d'avril! Pesce d’aprile! エイプリルフール ! April
-      April! Eén april, Kikker in je bil{' '}
-      <span className='text-gray-400 italic'>(??? pardon me?)</span> !
-      Aprilsnar! 만우절 ! April, april, din dumma sill! Prima aprilis! Primeiro
-      de abril! Dumma sill! Prima Aprilis! 愚人节快乐 !
+      🎉 <b>April Fools!</b> Poisson d'avril! Pesce d’aprile! エイプリルフール !
+      April April! Eén april, Kikker in je bil{' '}
+      <span className='text-gray-400 italic'>(??? pardon me?)</span> !{' '}
+      Πρωταπριλιά! ¡Inocente, inocente! Aprillia, syö silliä, juo kuravettä
+      päälle <span className='text-gray-400 italic'>(???)</span> ! Первое апреля
+      никому не ВЕРЯ! Aprilsnar! 만우절 ! April, april, din dumma sill!
+      Aprilvis! Primeiro de abril! Prima Aprilis! 愚人节快乐 !
     </div>
   ),
 };
@@ -25,5 +27,8 @@ Brazil	Primeiro de abril!	First of April!
 China	愚人节快乐 ! (Yúrénjié kuàilè!)	Happy Fools' Day!
 South Korea	만우절 ! (Manujeol!)	April Fools' Day!
 Japan	エイプリルフール ! (Eipuriru Fūru!)	April Fool!
-
+Finland  Aprillia, syö silliä, juo kuravettä päälle!
+Belgium Aprilvis!
+Greek Πρωταπριλιά!
+Russian Первое апреля никому не ВЕРЯ!
 */
