@@ -26507,7 +26507,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/611670/ss_3737964d741715847d62317e6598c86847cb1cfa.600x338.jpg',
     shortDescription:
-      'A true, full-length open-world game for VR has arrived from Bethesda Game Studios. Skyrim VR (the answer to this Case File,) reimagines the complete epic fantasy masterpiece with an unparalleled sense of scale, depth, and immersion. Skyrim VR also includes all official add-ons.',
+      'A true, full-length open-world game for VR has arrived from Bethesda Game Studios. Skyrim VR (the answer to this Case File,) reimagines the complete epic fantasy masterpiece with an unparalleled sense of scale, depth, and immersion. ||Skyrim VR|| also includes all official add-ons.',
     releaseDate: 'Apr 2, 2018',
     developer: 'Bethesda Game Studios',
     publisher: 'Bethesda Softworks',
@@ -26546,7 +26546,7 @@ export const steamGameDetails: SteamGameMap = {
       'Magic',
     ],
     overrideCensoredTitle: '||The Elder Scrolls V||: Skyrim VR',
-    clueOrder: ['tags', 'ss', 'details', 'desc'],
+    clueOrder: ['ss', 'tags', 'details', 'desc'],
     debugProcessed: true,
     debugRefined: true,
     difficulty: 'Easy',
