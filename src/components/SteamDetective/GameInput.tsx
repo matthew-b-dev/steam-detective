@@ -71,12 +71,14 @@ interface GameInputProps {
   onGuess: (selected: GameOption | null) => void;
   disabled?: boolean;
   previousGuesses?: MissedGuess[];
+  excludeOptions?: string[];
 }
 
 export const GameInput: React.FC<GameInputProps> = ({
   onGuess,
   disabled,
   previousGuesses = [],
+  excludeOptions,
 }) => {
   const [guess, setGuess] = useState<GameOption | null>(null);
   const [inputValue, setInputValue] = useState('');
@@ -122,6 +124,11 @@ export const GameInput: React.FC<GameInputProps> = ({
 
     results = results.filter((r) => !guessedNames.has(r.id as string));
 
+    if (excludeOptions && excludeOptions.length > 0) {
+      const excludeSet = new Set(excludeOptions);
+      results = results.filter((r) => !excludeSet.has(r.id as string));
+    }
+
     // Post-sort: prefer titles that start with the query over fuzzy/substring matches.
     // Tier 0: title starts with the full query string ("border" → "Borderlands")
     // Tier 1: title starts with the first query token (handles multi-word queries)
@@ -155,7 +162,7 @@ export const GameInput: React.FC<GameInputProps> = ({
         searchTerms: gameSearchTerms[r.id as string] ?? [],
       }))
       .slice(0, 100);
-  }, [debouncedInput, debouncedEffectiveLength, guessedNames]);
+  }, [debouncedInput, debouncedEffectiveLength, guessedNames, excludeOptions]);
 
   // Show spinner while the user is typing but the debounce hasn't settled yet.
   const isSearchPending = effectiveLength >= 3 && inputValue !== debouncedInput;

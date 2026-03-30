@@ -15,6 +15,8 @@ export interface ReviewSummary {
   rating: string;
 }
 
+// Note: if updates are made to this interface, they MUST be supported by the Export function of the Refine tool `handleExport`
+// i.e. Exporting games should properly export new properties in this interface.
 export interface SteamGame {
   name: string;
   appId: number;
@@ -46,6 +48,7 @@ export interface SteamGame {
   reviewClue?: Review; // DEPRECATED: A specific review chosen as a clue (replaces secondary screenshot). Use reviewClues instead.
   reviewClues?: Review[]; // Array of reviews chosen as clues (replaces secondary screenshot). All reviews shown together. The review text may contain ||censored|| markers.
   searchTerms?: string[]; // Additional search terms/aliases for the dropdown
+  excludeOptions?: string[]; // Game names to exclude from the search dropdown only for this puzzle
   features: string[];
   allReviewSummary: ReviewSummary;
   suggestedBy?: string;

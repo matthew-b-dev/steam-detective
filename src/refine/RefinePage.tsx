@@ -290,6 +290,11 @@ export const RefinePage: React.FC = () => {
       if (game.searchTerms && game.searchTerms.length > 0) {
         lines.push(`    searchTerms: ${JSON.stringify(game.searchTerms)},`);
       }
+      if (game.excludeOptions && game.excludeOptions.length > 0) {
+        lines.push(
+          `    excludeOptions: ${JSON.stringify(game.excludeOptions)},`,
+        );
+      }
       if (game.debugProcessed) {
         lines.push(`    debugProcessed: true,`);
       }

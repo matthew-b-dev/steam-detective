@@ -19,6 +19,7 @@ import { useDailyGame } from '../../hooks/useDailyGame';
 import { ArrowPathIcon } from '@heroicons/react/20/solid';
 import toast from 'react-hot-toast';
 import GameIdeaCard from '../GameIdeaCard';
+import { dailyMessages } from '../../dailyMessages';
 
 interface CaseFileState {
   totalGuesses: number;
@@ -214,6 +215,9 @@ const FinalGameComplete: React.FC<FinalGameCompleteProps> = ({
       className='mx-auto mt-4 px-1 md:px-4'
     >
       <div className='bg-zinc-800/40 rounded-lg p-3 md:p-6 mb-6 min-h-[466px]'>
+        {dailyMessages[puzzleDate] && (
+          <div className='text-center mb-4'>{dailyMessages[puzzleDate]}</div>
+        )}
         {/* Score Animation */}
         <AnimatedTotalScoreDisplay
           totalScore={totalScore}

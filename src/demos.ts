@@ -392,6 +392,18 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile4: 'Surgeon Simulator',
   },
   '2026-03-31': {
+    caseFile1: 'Ghost of Tsushima',
+    caseFile2: 'ULTRAKILL',
+    caseFile3: 'Bomb Rush Cyberfunk',
+    caseFile4: 'Wolfenstein: The Old Blood',
+  },
+  '2026-04-01': {
+    caseFile1: 'The Elder Scrolls V: Skyrim',
+    caseFile2: 'The Elder Scrolls V: Skyrim Special Edition',
+    caseFile3: 'The Elder Scrolls V: Skyrim VR',
+    caseFile4: 'The Elder Scrolls V: Skyrim Soundtrack',
+  },
+  '2026-04-02': {
     caseFile1: 'Suicide Squad: Kill the Justice League',
     caseFile2: 'Fields of Mistria',
     caseFile3: "Don't Starve",

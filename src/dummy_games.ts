@@ -16,6 +16,7 @@ export const dummyGames: string[] = [
   'Malicious Fallen',
   'Bridge Constructor',
   "Wooden Sen'SeY",
+  'Ghost of Yotei',
   'Gomo',
   'Batman: Arkham Asylum',
   'Batman: Arkham City',

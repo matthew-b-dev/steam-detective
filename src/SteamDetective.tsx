@@ -42,7 +42,6 @@ import greenGamesFolderIcon from './assets/green-games-folder-48.png';
 import purpleGamesFolderIcon from './assets/purple-games-folder-48.png';
 import redGamesFolderIcon from './assets/red-games-folder-48.png';
 import analyzeIcon from './assets/analyze-48.png';
-import { InformationCircleIcon } from '@heroicons/react/24/outline';
 
 // Map case file numbers to their folder icons
 const getCaseFileIcon = (caseFileNumber: number): string => {
@@ -410,7 +409,11 @@ const SteamDetectiveGame: React.FC<SteamDetectiveGameProps> = ({
             </div>
           )}
           {!state.isComplete && (
-            <GameInput onGuess={handleGuess} previousGuesses={state.guesses} />
+            <GameInput
+              onGuess={handleGuess}
+              previousGuesses={state.guesses}
+              excludeOptions={dailyGame.excludeOptions}
+            />
           )}
           {!state.isComplete && (
             <div className='pb-12 sm:pb-6 relative flex justify-center items-end'>
@@ -598,6 +601,7 @@ const SteamDetective: React.FC<SteamDetectiveProps> = ({
       <hr className='h-[1px] bg-gray-700 border-none mb-3'></hr>
 
       {/* Update banner */}
+      {/* 
       <div className='flex items-stretch text-xs rounded overflow-hidden border border-gray-500 mb-3 bg-gray-600/20'>
         <div className='flex items-center gap-1 bg-gray-800/40 border-r border-gray-600 px-2 py-1.5 font-semibold whitespace-nowrap text-white'>
           <div className='flex align-middle'>
@@ -613,7 +617,7 @@ const SteamDetective: React.FC<SteamDetectiveProps> = ({
           </div>
         </div>
       </div>
-
+      */}
       {/* If no demo configured for this date, show "brb" post-it note */}
       {!dailyGameCheck && (
         <>
