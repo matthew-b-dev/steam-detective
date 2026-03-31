@@ -54861,7 +54861,7 @@ export const steamGameDetails: SteamGameMap = {
         review:
           "Not worth $16 in the slightest. It's genuinely comparable to downloading the ||soundtrack|| off of YouTube. \nIt's all MP3s with no metadata and no album cover, no FLACs or WAVs, just $16 for something you could spend 5 minutes creating on your own.",
         votedUp: false,
-        votesUp: 0,
+        votesUp: 1,
         weightedScore: undefined,
         authorPlaytimeHours: 0,
         timestamp: 1774900712,
