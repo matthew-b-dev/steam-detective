@@ -43,6 +43,9 @@ export const ClueMoreFromDeveloper: React.FC<ClueMoreFromDeveloperProps> = ({
   useEffect(() => {
     const el = scrollRef.current;
     if (!el) return;
+    // Some mobile browsers snap to a non-zero position on initial layout.
+    // Explicitly reset to the start after mount.
+    el.scrollLeft = 0;
     updateScrollState();
     const observer = new ResizeObserver(updateScrollState);
     observer.observe(el);
