@@ -178,27 +178,22 @@ export const ClueMoreFromDeveloper: React.FC<ClueMoreFromDeveloperProps> = ({
                       : game.blurred && !isComplete
                         ? {
                             'data-tooltip-id': 'mfd-tooltip',
-                            'data-tooltip-content':
-                              'A game that would give away the answer',
+                            'data-tooltip-content': 'A game in the same series',
                           }
                         : {})}
                   />
                   {/* Blur overlay — hidden once case file is complete */}
                   {game.blurred && !isComplete && (
                     <div
-                      className='absolute inset-0 rounded flex flex-col items-center justify-center pointer-events-none'
+                      className='absolute inset-0 rounded flex flex-col items-center justify-center pointer-events-none uppercase text-white text-[14px] font-bold'
                       style={{
                         backdropFilter: 'blur(20px)',
                         WebkitBackdropFilter: 'blur(20px)',
                         backgroundColor: 'rgba(0,0,0,0.45)',
                       }}
                     >
-                      <span className='text-gray-200 text-[9px] font-semibold tracking-widest uppercase select-none'>
-                        RELATED TITLE
-                      </span>
-                      <span className='text-white text-[10px] font-bold tracking-widest uppercase select-none mt-0.5'>
-                        REDACTED
-                      </span>
+                      <span className=' select-none'>A GAME IN THE</span>
+                      <span className='select-none mt-0.5'>SAME SERIES</span>
                     </div>
                   )}
                 </div>
