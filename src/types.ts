@@ -15,7 +15,7 @@ export interface ReviewSummary {
   rating: string;
 }
 
-// Note: if updates are made to this interface, they MUST be supported by the Export function of the Refine tool `handleExport`
+// Note: if updates are made to this interface, they MUST be supported by the Export function of the Refine tool `handleExport` (RefinePage.tsx)
 // i.e. Exporting games should properly export new properties in this interface.
 export interface SteamGame {
   name: string;
@@ -37,6 +37,8 @@ export interface SteamGame {
   screenshotFocusPoint?: [number, number, number?]; // [widthPercent, heightPercent, zoom%] - zooms the primary screenshot. heightPercent: 100=top, 0=bottom. zoom: 1–175, default 75. e.g. [50,50,75]=center at 75%
   blurTitleAndAsAmpersand?: boolean; // If true, replace 'and' with '&' in the title
   overrideCensoredTitle?: string; // Manually define censored title with || markers for custom censoring
+  moreFromThisDeveloper?: { id: number; name: string; blurred?: boolean }[]; // Other games from the same developer shown as a clue. blurred=true games show a REDACTED overlay until the case file is complete.
+  developerDescription?: string; // Optional "About the Developer" blurb shown alongside the MFD clue. Supports ||censored|| markers.
   clueOrder?: (
     | 'desc'
     | 'details'
@@ -44,7 +46,7 @@ export interface SteamGame {
     | 'ss'
     | 'review'
     | 'details+tags'
-  )[]; // Custom order for first 3-4 clues. 'ss' inserts the primary screenshot into the order. 'review' inserts the review clues (replaces secondary screenshot). 'details+tags' bundles the Details and Tags clues into a single reveal step. Last fixed clues are always: (ss if not in order), (secondary screenshot or review), title. Default: ['tags', 'details', 'desc']
+  )[]; // Custom order for first 3-4 clues. 'ss' inserts the primary screenshot into the order. 'review' inserts the review clues (replaces secondary screenshot). 'details+tags' bundles the Details and Tags clues into a single reveal step. The "More from this Developer" clue (if present) is always revealed together with the Details clue, keeping its canonical position between Tags and Reviews. Last fixed clues are always: (ss if not in order), (secondary screenshot or review), title. Default: ['tags', 'details', 'desc']
   reviewClue?: Review; // DEPRECATED: A specific review chosen as a clue (replaces secondary screenshot). Use reviewClues instead.
   reviewClues?: Review[]; // Array of reviews chosen as clues (replaces secondary screenshot). All reviews shown together. The review text may contain ||censored|| markers.
   searchTerms?: string[]; // Additional search terms/aliases for the dropdown

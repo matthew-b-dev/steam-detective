@@ -96,7 +96,12 @@ const SteamDetectiveGame: React.FC<SteamDetectiveGameProps> = ({
   isCurrentCaseFile = true,
 }) => {
   const [flashGuesses, setFlashGuesses] = useState(false);
+
+  // Tracks the previous state of which clues were shown
+  // Used in order to detect when new clues are revealed and trigger auto-scroll behavior.
   const prevShowCluesRef = useRef<boolean[]>([
+    false,
+    false,
     false,
     false,
     false,
@@ -112,6 +117,9 @@ const SteamDetectiveGame: React.FC<SteamDetectiveGameProps> = ({
 
   const censoredDescription = useCensoredDescription(
     dailyGame?.shortDescription || '',
+  );
+  const censoredDeveloperDescription = useCensoredDescription(
+    dailyGame?.developerDescription || '',
   );
 
   const { state, setState } = useSteamDetectiveState(
@@ -155,6 +163,8 @@ const SteamDetectiveGame: React.FC<SteamDetectiveGameProps> = ({
   const hasSsInOrder = clueOrder.includes('ss');
   const hasReviewInOrder = clueOrder.includes('review');
   const hasDetailsTags = clueOrder.includes('details+tags');
+  // MFD is bundled with the Details reveal — derived from data, not clueOrder
+  const hasMFD = (dailyGame?.moreFromThisDeveloper?.length ?? 0) > 0;
   const configuredCount = clueOrder.length; // 3, 4, or (rarely) 5 if both ss+review
 
   const clueMapping: Record<string, number> = {
@@ -166,13 +176,14 @@ const SteamDetectiveGame: React.FC<SteamDetectiveGameProps> = ({
   };
 
   const getShowClues = (): boolean[] => {
-    // 7 slots: [tags, details, desc, primary_ss, review_or_secondary_ss, title, secondary_ss_when_details+tags+review]
-    const result = [false, false, false, false, false, false, false];
+    // 8 slots: [tags, details, desc, primary_ss, review_or_secondary_ss, title, secondary_ss_when_details+tags+review, moreFromDev]
+    const result = [false, false, false, false, false, false, false, false];
 
     if (state.isComplete) {
       // Slot[6] is only for the secondary screenshot in the details+tags+review combo.
       // For all other configurations (including plain review without details+tags),
       // the secondary screenshot is never a clue and must not appear on completion.
+      // Slot[7] is moreFromDev - show on completion only if game has it configured.
       return [
         true,
         true,
@@ -181,10 +192,11 @@ const SteamDetectiveGame: React.FC<SteamDetectiveGameProps> = ({
         true,
         true,
         hasDetailsTags && hasReviewInOrder,
+        hasMFD,
       ];
     }
 
-    for (let i = 0; i < state.currentClue && i < 7; i++) {
+    for (let i = 0; i < state.currentClue && i < 8; i++) {
       if (i < configuredCount && i < clueOrder.length) {
         const clueType = clueOrder[i];
         if (clueType === 'details+tags') {
@@ -215,6 +227,9 @@ const SteamDetectiveGame: React.FC<SteamDetectiveGameProps> = ({
       }
     }
 
+    // MFD is always revealed together with the Details clue (slot[1])
+    if (hasMFD) result[7] = result[1];
+
     return result;
   };
 
@@ -233,10 +248,11 @@ const SteamDetectiveGame: React.FC<SteamDetectiveGameProps> = ({
       desc: 3,
       details: 4,
       tags: 5,
-      review: 6, // review is canonical-last, below tags
+      moreFromDev: 6, // between tags and review
+      review: 7, // review is canonical-last, below moreFromDev
     };
 
-    // clueNames maps result array index (0-5) to canonical position key.
+    // clueNames maps result array index (0-7) to canonical position key.
     // result[4] is showClue5 - it's used for the review clue when hasReviewInOrder,
     // or for the secondary screenshot otherwise.
     const clueNames: (keyof typeof canonicalPositions)[] = [
@@ -246,13 +262,14 @@ const SteamDetectiveGame: React.FC<SteamDetectiveGameProps> = ({
       'screenshot1',
       hasReviewInOrder && !hasDetailsTags ? 'review' : 'screenshot2',
       'title',
+      'screenshot2', // slot[6]: secondary ss in details+tags+review combo
+      'moreFromDev', // slot[7]: more from this developer
     ];
     // When details+tags+review is active, review is already covered by slot[4]
     // above (mapped as screenshot2 since secondary ss is now separate), and
     // slot[6] holds the separately-revealed secondary screenshot.
     if (hasDetailsTags && hasReviewInOrder) {
       clueNames[4] = 'review';
-      clueNames.push('screenshot2');
     }
 
     const getLowestPosition = (clues: boolean[]): number => {
@@ -383,6 +400,7 @@ const SteamDetectiveGame: React.FC<SteamDetectiveGameProps> = ({
     <SteamDetectiveGameProvider
       dailyGame={dailyGame}
       censoredDescription={censoredDescription}
+      censoredDeveloperDescription={censoredDeveloperDescription}
       isComplete={state.isComplete}
       showClues={showClues}
     >

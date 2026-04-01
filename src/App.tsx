@@ -78,7 +78,9 @@ function App() {
       // On localhost, skip the selectable check to allow future dates
       if (
         routeDate === realToday ||
-        (!isLocalhost() && !isDateSelectable(routeDate))
+        (!isLocalhost() &&
+          !isDateSelectable(routeDate) &&
+          !window?.location?.href?.includes('/admin'))
       ) {
         // Force a full page reload to properly load today's puzzle state
         window.location.href = '/';

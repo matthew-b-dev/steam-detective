@@ -404,6 +404,12 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile4: 'The Elder Scrolls V: Skyrim Soundtrack',
   },
   '2026-04-02': {
+    caseFile1: 'The Outer Worlds',
+    caseFile2: 'Hi-Fi RUSH',
+    caseFile3: 'Tactical Breach Wizards',
+    caseFile4: 'Planet Coaster',
+  },
+  '2026-04-03': {
     caseFile1: 'Suicide Squad: Kill the Justice League',
     caseFile2: 'Fields of Mistria',
     caseFile3: "Don't Starve",
@@ -411,8 +417,9 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
   },
 };
 
-// 3/31 Med: A Hat in Time
-// 3/31 Hard: Shadow Tactics: Blades of the Shogun
+// 4/3 Easy (First?): God of War Ragnarok
+// 4/3 Med: A Hat in Time
+// 4/3 Hard: Shadow Tactics: Blades of the Shogun
 
 // Easy: Star Wars Battlefront II
 // Easy: Remnant II
@@ -424,6 +431,8 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
 // Med: WEBFISHING (60k rev)? needs work
 // Med: Tropico 4 (Last Tropico 3/15)
 // Med: Clustertruck
+// Med: Detroit: Become Human or Heavy Rain and show other games from this Dev, but blur Quantic Dream
+// Med (30k): SIGNALIS
 
 // Hard: Albion Online
 // Hard (Fully Refined): Tales of Arise

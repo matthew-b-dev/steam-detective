@@ -3740,6 +3740,11 @@ export const steamGameDetails: SteamGameMap = {
       'Epic',
     ],
     clueOrder: ['review', 'desc', 'tags', 'details'],
+    excludeOptions: [
+      'The Elder Scrolls V: Skyrim Special Edition',
+      'The Elder Scrolls V: Skyrim VR',
+      'The Elder Scrolls V: Skyrim Soundtrack',
+    ],
     debugProcessed: true,
     debugRefined: true,
     difficulty: 'Easy',
@@ -3762,11 +3767,6 @@ export const steamGameDetails: SteamGameMap = {
         authorPlaytimeHours: 0,
         timestamp: 1388880000,
       },
-    ],
-    excludeOptions: [
-      'The Elder Scrolls V: Skyrim Special Edition',
-      'The Elder Scrolls V: Skyrim VR',
-      'The Elder Scrolls V: Skyrim Soundtrack',
     ],
   },
   '99900': {
@@ -22522,14 +22522,14 @@ export const steamGameDetails: SteamGameMap = {
     name: 'Planet Coaster',
     appId: 493340,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/493340/ss_e3661fafe7f2e701ef91528e7b803857a418f6dd.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/493340/ss_2dc8515e96439dd5c3003ee6927ba9730b1439c3.600x338.jpg',
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/493340/ss_a8e5a30dec8285b1d461d2b3d3b3870dfbc1c4d0.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/493340/ss_44296ad506cba732d9db7895ddc7c20d0e8aaca8.600x338.jpg',
     shortDescription:
       '||Planet Coaster|| - the future of coaster park simulation games has arrived! Surprise, delight and thrill incredible crowds as you build your coaster park empire - let your imagination run wild, and share your success with the world.',
     releaseDate: 'Nov 17, 2016',
-    developer: 'Frontier Developments, Aspyr (Mac)',
-    publisher: 'Frontier Developments, Aspyr (Mac)',
+    developer: 'Frontier Developments',
+    publisher: 'Frontier Developments',
     tags: ['Action', 'Adventure', 'Casual', 'Simulation', 'Strategy'],
     features: [],
     allReviewSummary: {
@@ -22541,7 +22541,7 @@ export const steamGameDetails: SteamGameMap = {
       'Building',
       'Management',
       'Sandbox',
-      'Family Friendly',
+      'Themepark',
       'Relaxing',
       'Strategy',
       'Singleplayer',
@@ -22559,7 +22559,30 @@ export const steamGameDetails: SteamGameMap = {
       'Multiplayer',
     ],
     blurScreenshotQuarter: 'top',
-    clueOrder: ['tags', 'details', 'desc'],
+    overrideCensoredTitle: 'Pl||ane||t Co||aste||r',
+    clueOrder: ['details', 'review', 'tags', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
+    reviewClues: [
+      {
+        review:
+          "[...] It does have fps drops, buggy pathways, dumb ||park|| guests , notifications bug out, random symmetry problems with building, structure pieces can suddenly glitch, there's more but I'll cut it here. \nBest advice keep your ||parks|| size and detailing reasonable ... (edited for length)",
+        votedUp: true,
+        votesUp: 3,
+        weightedScore: undefined,
+        authorPlaytimeHours: 369.4,
+        timestamp: 1774915200,
+      },
+    ],
+    moreFromThisDeveloper: [
+      { id: 648350, name: 'Jurassic World Evolution' },
+      { id: 1244460, name: 'Jurassic World Evolution 2' },
+      { id: 2591280, name: 'F1 Manager 2024' },
+      { id: 2688950, name: 'Planet Coaster 2', blurred: true },
+    ],
+    developerDescription:
+      'At Frontier, we specialise in creating endless possibilities in playful, fun, creative worlds. With a rich history spanning over thirty years, we are best known for our creative management simulation games.',
   },
   '493490': {
     name: 'City Car Driving',
@@ -25027,6 +25050,7 @@ export const steamGameDetails: SteamGameMap = {
   },
   '578650': {
     name: 'The Outer Worlds',
+    overrideCensoredTitle: 'T||he|| Ou||ter|| Wo||rlds||',
     appId: 578650,
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/578650/ss_a1de8cccb606fa0896b42c127318c7a34d35a98a.600x338.jpg',
@@ -25035,6 +25059,7 @@ export const steamGameDetails: SteamGameMap = {
     shortDescription:
       "||The Outer Worlds|| is an award-winning single-player RPG from Obsidian Entertainment and Private Division. As you explore a space colony, the character you decide to become will determine how this player-driven story unfolds. In the colony's corporate equation, you are the unplanned variable.",
     releaseDate: 'Oct 23, 2020',
+    originalReleaseDate: 'Oct 25, 2019 (Epic Games Store)',
     developer: 'Obsidian Entertainment',
     publisher: 'Private Division',
     tags: [],
@@ -25060,7 +25085,22 @@ export const steamGameDetails: SteamGameMap = {
       'Character Customization',
       'Action',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: ['Sci-fi'],
+    clueOrder: ['review', 'details+tags', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
+    reviewClues: [
+      {
+        review:
+          "If you're expecting Fallout New Vegas part 2, you might be a bit disappointed since that's not what ||the Outer Worlds|| is, but if you are looking towards a single player RPG with FPS combat you'll have a good enough time. I found the dialogue and story telling to be the strongest part of the game. ... (edited for length)",
+        votedUp: true,
+        votesUp: 164,
+        weightedScore: undefined,
+        authorPlaytimeHours: 56.3,
+        timestamp: 1655524800,
+      },
+    ],
   },
   '581320': {
     name: 'Insurgency: Sandstorm',
@@ -26545,17 +26585,17 @@ export const steamGameDetails: SteamGameMap = {
       'Fantasy',
       'Magic',
     ],
+    screenshotFocusPoint: [48, 0, 80],
     overrideCensoredTitle: '||The Elder Scrolls V||: Skyrim VR',
     clueOrder: ['ss', 'tags', 'details', 'desc'],
-    debugProcessed: true,
-    debugRefined: true,
-    difficulty: 'Easy',
     excludeOptions: [
       'The Elder Scrolls V: Skyrim Special Edition',
       'The Elder Scrolls V: Skyrim',
       'The Elder Scrolls V: Skyrim Soundtrack',
     ],
-    screenshotFocusPoint: [48, 0, 80],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
   },
   '612880': {
     name: 'Wolfenstein II: The New Colossus',
@@ -35385,11 +35425,11 @@ export const steamGameDetails: SteamGameMap = {
     name: 'Tactical Breach Wizards',
     appId: 1043810,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1043810/ss_c3b796b5e159b2ed4078ca74212e627ffa92b111.600x338.jpg',
-    secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1043810/ss_e1a7ace21c2a2f1c38fcb4284aa22c9e0bb12661.600x338.jpg',
+    secondaryScreenshot:
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1043810/ss_c3b796b5e159b2ed4078ca74212e627ffa92b111.600x338.jpg',
     shortDescription:
-      'In ||Tactical Breach Wizards||, you lead a team of renegade wizards in kevlar through turn-based battles to unravel a modern conspiracy plot. Combine their unique spells in clever ways, or rewind time to try every crazy plan you can think of to punch a Traffic Warlock through a 4th story window.',
+      'In ||Tactical Breach Wizards||, you lead a team of renegade ||wizards|| in kevlar through turn-based battles to unravel a modern conspiracy plot. Combine their unique spells in clever ways, or rewind time to try every crazy plan you can think of to punch a Traffic Warlock through a 4th story window.',
     releaseDate: 'Aug 22, 2024',
     developer: 'Suspicious Developments',
     publisher: 'Suspicious Developments',
@@ -35402,21 +35442,33 @@ export const steamGameDetails: SteamGameMap = {
     userTags: [
       'Turn-Based Tactics',
       'Puzzle',
-      'Story Rich',
-      'Turn-Based Strategy',
-      'Turn-Based',
+      'Military',
+      'Magic',
+      'Fantasy',
       'Funny',
-      'Singleplayer',
+      'Story Rich',
       'Tactical',
-      'Strategy RPG',
-      'Tactical RPG',
+      'Turn-Based Strategy',
+      'Singleplayer',
       'RPG',
       'Military',
       'Adventure',
       'Indie',
       'Isometric',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: ['Magic', 'Fantasy'],
+    screenshotLetterbox: true,
+    overrideCensoredTitle: 'Ta||ctica||l Br||each|| W||izard||s',
+    clueOrder: ['details', 'tags', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Hard',
+    moreFromThisDeveloper: [
+      { id: 268130, name: 'Heat Signature' },
+      { id: 206190, name: 'Gunpoint' },
+    ],
+    developerDescription:
+      'We generally make games that encourage you to think of clever plans and/or knock someone through a window.',
   },
   '1046030': {
     name: 'ISLANDERS',
@@ -39402,7 +39454,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1222690/ss_a106df995b9051e24ebe5abdec168ea3495bfda4.600x338.jpg',
     shortDescription:
-      'Winner of over 130 Game of the Year awards, discover the definitive ||Dragon|| ||Age||: ||Inquisition|| experience. The Game of the Year Edition includes the critically acclaimed game, all three official add-ons - Jaws of Hakkon, The Descent, and Trespasser - and more.',
+      'Winner of over 130 Game of the Year awards. When the sky opens up and rains down chaos, the world needs heroes. Become the savior of Thedas in ||Dragon Age: Inquisition||. You are the Inquisitor, tasked with saving the world from itself. But the road ahead is paved with difficult decisions.',
     releaseDate: 'Jun 4, 2020',
     developer: 'BioWare',
     publisher: 'Electronic Arts',
@@ -47820,7 +47872,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1817230/ss_8a13650ffe930da77593dae80f0118588c46a5ca.600x338.jpg',
     shortDescription:
-      'Test your abilities in two new game modes, uncover new rewards and even a few secrets in the Arcade Challenge! Update! Feel the beat as wannabe rockstar Chai and his ragtag team fight against an evil megacorp in a world that syncs to the music.',
+      'Feel the beat as wannabe rockstar Chai and his ragtag team fight against an evil megacorp in a world that syncs to the music.',
     releaseDate: 'Jan 25, 2023',
     developer: 'Tango Gameworks',
     publisher: 'KRAFTON, Inc.',
@@ -47839,7 +47891,7 @@ export const steamGameDetails: SteamGameMap = {
       'Cartoony',
       'Action-Adventure',
       'Music',
-      'Platformer',
+      '3D Platformer',
       'Character Action Game',
       'Spectacle fighter',
       'Colorful',
@@ -47847,7 +47899,32 @@ export const steamGameDetails: SteamGameMap = {
       'Stylized',
       "Beat 'em up",
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: ['Rhythm', 'Music', 'Action', 'Cartoony'],
+    overrideCensoredTitle: 'H||i||-||F||i R||US||H',
+    clueOrder: ['review', 'details+tags', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Medium',
+    reviewClues: [
+      {
+        review:
+          'Releases the same day it was announced.\nHypes you up AFTER its release.\nActually fun, original, and satisfying.\nHas you ||kicking ♥♥♥ to the beat||. \nHigh-quality game. Only asks for $||29||.||99||... in 2023.',
+        votedUp: true,
+        votesUp: 4845,
+        weightedScore: undefined,
+        authorPlaytimeHours: 18.1,
+        timestamp: 1674709200,
+      },
+      {
+        review: 'It has two separate boss fights set to Nine Inch Nails songs',
+        votedUp: true,
+        votesUp: 148,
+        votedFunny: 3,
+        weightedScore: undefined,
+        authorPlaytimeHours: 10.8,
+        timestamp: 1691467200,
+      },
+    ],
   },
   '1818450': {
     name: 'STALCRAFT: X',
@@ -51779,13 +51856,14 @@ export const steamGameDetails: SteamGameMap = {
     name: 'God of War Ragnarok',
     appId: 2322010,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2322010/ss_7c59382e67eadf779e0e15c3837ee91158237f11.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2322010/ss_1848b58003fcc199092227f871770a216d9430f9.600x338.jpg',
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2322010/ss_05f27139b15c5410d07cd59b7b52adbdf73e13da.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2322010/ss_244a3845262a2a15b3a355ecf2881b8ccd5b1401.600x338.jpg',
     shortDescription:
-      '||Kratos|| and ||Atreus|| embark on a mythic journey for answers before ||Ragnarök|| arrives – now on PC.',
+      "The sequel to the critically acclaimed ||God of War (2018)||, ||God of War Ragnarok|| picks up with ||Fimbulwinter|| well underway. ||Kratos|| and ||Atreus|| must journey to each of the Nine Realms in search of answers as ||Odin||'s forces in ||Asgard|| prepare for a prophesied battle that will end the world. ",
+    originalReleaseDate: 'Nov 9, 2022 (PS4, PS5)',
     releaseDate: 'Sep 19, 2024',
-    developer: 'Santa Monica Studio, Jetpack Interactive',
+    developer: '||Santa Monica Studio||, Jetpack Interactive',
     publisher: 'PlayStation Publishing LLC',
     tags: ['Action', 'Adventure', 'RPG'],
     features: [],
@@ -51815,11 +51893,11 @@ export const steamGameDetails: SteamGameMap = {
       'Gore',
       'Souls-like',
     ],
-    blurScreenshotQuarter: 'bottom',
+    blurredUserTags: ['Mythology'],
     clueOrder: ['desc', 'details', 'tags'],
     debugProcessed: true,
     debugRefined: true,
-    difficulty: 'Medium',
+    difficulty: 'Easy',
   },
   '2322560': {
     name: 'Love Is All Around',
@@ -54811,6 +54889,11 @@ export const steamGameDetails: SteamGameMap = {
     overrideCensoredTitle:
       '||The|| ||Elder|| ||Scrolls|| ||V||: Skyrim Special Edition',
     clueOrder: ['details+tags', 'review', 'desc'],
+    excludeOptions: [
+      'The Elder Scrolls V: Skyrim Soundtrack',
+      'The Elder Scrolls V: Skyrim VR',
+      'The Elder Scrolls V: Skyrim',
+    ],
     debugProcessed: true,
     debugRefined: true,
     difficulty: 'Easy',
@@ -54824,11 +54907,6 @@ export const steamGameDetails: SteamGameMap = {
         authorPlaytimeHours: 117,
         timestamp: 1511049600,
       },
-    ],
-    excludeOptions: [
-      'The Elder Scrolls V: Skyrim Soundtrack',
-      'The Elder Scrolls V: Skyrim VR',
-      'The Elder Scrolls V: Skyrim',
     ],
   },
   '1240360': {
@@ -54853,6 +54931,11 @@ export const steamGameDetails: SteamGameMap = {
     screenshotLetterbox: true,
     overrideCensoredTitle: 'Answer: Skyrim Soundtrack',
     clueOrder: ['review', 'desc', 'details', 'tags'],
+    excludeOptions: [
+      'The Elder Scrolls V: Skyrim Special Edition',
+      'The Elder Scrolls V: Skyrim VR',
+      'The Elder Scrolls V: Skyrim',
+    ],
     debugProcessed: true,
     debugRefined: true,
     difficulty: 'Easy',
@@ -54875,11 +54958,6 @@ export const steamGameDetails: SteamGameMap = {
         authorPlaytimeHours: 0,
         timestamp: 1759636800,
       },
-    ],
-    excludeOptions: [
-      'The Elder Scrolls V: Skyrim Special Edition',
-      'The Elder Scrolls V: Skyrim VR',
-      'The Elder Scrolls V: Skyrim',
     ],
   },
 };
@@ -54922,6 +55000,7 @@ export const CLOSE_GUESS_SERIES: string[] = [
   'mount and blade',
   'need for speed',
   'ori and',
+  'outer w',
   'payday',
   'persona',
   'pillars of eternity',

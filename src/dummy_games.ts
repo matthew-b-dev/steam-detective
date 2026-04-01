@@ -292,7 +292,6 @@ export const dummyGames: string[] = [
   'Tachyon Project',
   'Dropsy',
   'Apotheon',
-  'Planet Coaster',
   'Kirby: Planet Robobot',
   'This Is the Police',
   'Metroid Prime: Federation Force',

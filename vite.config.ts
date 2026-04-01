@@ -36,6 +36,11 @@ export default defineConfig({
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/steam-review-proxy/, ''),
       },
+      '/steam-store-proxy': {
+        target: 'https://store.steampowered.com',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/steam-store-proxy/, ''),
+      },
     },
   },
 });

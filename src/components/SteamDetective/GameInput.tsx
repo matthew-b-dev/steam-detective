@@ -10,17 +10,28 @@ import {
 } from './utils';
 
 // Split on common separators, then strip remaining non-alphanumeric chars from each token.
-// "Assassin's" → "assassins", "Half-Life" → ["half","life"], "NieR:Automata" → ["nier","automata"]
+// "Assassin's" -> "assassins", "Half-Life" -> ["half","life"], "NieR:Automata" -> ["nier","automata"]
 const tokenize = (text: string): string[] =>
   text
     .split(/[\s\-:._&|()]+/)
     .map((t) => t.replace(/[^a-zA-Z0-9]/g, ''))
     .filter((t) => t.length > 0);
 
+// Compact form of a name: strips joining punctuation without splitting on it.
+// "Hi-Fi Rush" -> "HiFi Rush", "Watch_Dogs" -> "WatchDogs", "NieR:Automata" -> "NierAutomata"
+// This lets players type "hifi rush" or "watchdogs" and still find the game.
+const compactName = (name: string): string => name.replace(/[-:._'&]+/g, '');
+
+// Hardcoded query -> pinned-result exceptions.
+// When the trimmed, lowercased query exactly matches a key, that game is forced to the top.
+const RESULT_OVERRIDES: Record<string, string> = {
+  'outer worlds': 'The Outer Worlds',
+};
+
 // Build index once at module load - all games, keyed by name, indexing both the name and
 // any explicit searchTerms aliases (e.g. "assassins creed", "hades 2", "osrs").
 const gameSearch = new MiniSearch({
-  fields: ['name', 'searchTerms'],
+  fields: ['name', 'nameCompact', 'searchTerms'],
   idField: 'id',
   tokenize,
   processTerm: (term: string) => term.toLowerCase(),
@@ -30,6 +41,7 @@ gameSearch.addAll(
   allGameNames.map((name) => ({
     id: name,
     name,
+    nameCompact: compactName(name),
     searchTerms: (gameSearchTerms[name] ?? []).join(' '),
   })),
 );
@@ -130,7 +142,7 @@ export const GameInput: React.FC<GameInputProps> = ({
     }
 
     // Post-sort: prefer titles that start with the query over fuzzy/substring matches.
-    // Tier 0: title starts with the full query string ("border" → "Borderlands")
+    // Tier 0: title starts with the full query string ("border" -> "Borderlands")
     // Tier 1: title starts with the first query token (handles multi-word queries)
     // Tier 2: any word inside the title starts with the first query token
     // Tier 3: everything else (fuzzy matches like "New Order" matching "border")
@@ -148,13 +160,20 @@ export const GameInput: React.FC<GameInputProps> = ({
       return 3;
     };
 
+    const pinnedName = RESULT_OVERRIDES[queryLower.trim()];
+
     return results
       .map((r, i) => ({ r, i }))
       .sort((a, b) => {
+        // Pinned override always goes first
+        if (pinnedName) {
+          if (a.r.id === pinnedName) return -1;
+          if (b.r.id === pinnedName) return 1;
+        }
         const ta = tier(a.r.id as string);
         const tb = tier(b.r.id as string);
         if (ta !== tb) return ta - tb;
-        return a.i - b.i; // preserve MiniSearch score order within tier
+        return a.i - b.i;
       })
       .map(({ r }) => ({
         value: r.id as string,

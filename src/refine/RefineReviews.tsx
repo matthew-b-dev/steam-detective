@@ -354,7 +354,7 @@ export const RefineReviews: React.FC<RefineReviewsProps> = ({
     null,
   );
   const [loadError, setLoadError] = useState(false);
-  // Stable identity map: availableReviews index → selectedReviews index.
+  // Stable identity map: availableReviews index -> selectedReviews index.
   // Using this instead of timestamp-based matching so editing the timestamp
   // field doesn't break the selection state.
   const [avToSel, setAvToSel] = useState<Map<number, number>>(new Map());

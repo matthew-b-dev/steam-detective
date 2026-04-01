@@ -38,3 +38,4 @@ scripts/fetch-new-games.js
 scripts/fetch-progress.json
 scripts/fetched-games-redacted.json
 scripts/fetched-games.json
+scripts/example-more-from.html

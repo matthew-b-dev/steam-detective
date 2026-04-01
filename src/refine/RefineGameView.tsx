@@ -15,6 +15,7 @@ import { RefineDescription } from './RefineDescription.tsx';
 import { RefineDetails } from './RefineDetails.tsx';
 import { RefineTags } from './RefineTags.tsx';
 import { RefineReviews } from './RefineReviews.tsx';
+import { RefineMoreFromDeveloper } from './RefineMoreFromDeveloper.tsx';
 import ThumbsUpIcon from '../assets/thumbsup.svg?react';
 import ThumbsDownIcon from '../assets/thumbsdown.svg?react';
 import { renderCensoredReview } from '../components/SteamDetective/utils';
@@ -101,15 +102,17 @@ export const RefineGameView: React.FC<RefineGameViewProps> = ({
     DEFAULT_CLUE_ORDER) as ClueType[];
   const hasSsInOrder = clueOrder.includes('ss');
   const hasReviewInOrder = clueOrder.includes('review');
+  // MFD is no longer part of clueOrder — it's always bundled with Details
+  const hasMFD = (game.moreFromThisDeveloper?.length ?? 0) > 0;
 
-  // Base order excludes 'review' (review position is controlled separately)
+  // Base order excludes 'review'
   const baseClueOrder = clueOrder.filter((c) => c !== 'review') as ClueType[];
   // 1-indexed position of 'review' within the full clueOrder, or null
   const reviewOrderPosition: number | null = hasReviewInOrder
     ? clueOrder.indexOf('review') + 1
     : null;
 
-  /** Rebuild clueOrder by inserting 'review' at the given 1-indexed position into baseOrder. */
+  /** Rebuild clueOrder by inserting 'review' back at its position into baseOrder. */
   const rebuildClueOrder = (
     newBase: ClueType[],
     newReviewPos: number | null,
@@ -150,7 +153,7 @@ export const RefineGameView: React.FC<RefineGameViewProps> = ({
   // Mirrors GameInput's tokenizer so search preview behaves identically to the real game.
   const miniSearch = useMemo(() => {
     const ms = new MiniSearch({
-      fields: ['name', 'searchTerms'],
+      fields: ['name', 'nameCompact', 'searchTerms'],
       idField: 'id',
       tokenize: (text: string) =>
         text
@@ -163,6 +166,7 @@ export const RefineGameView: React.FC<RefineGameViewProps> = ({
       gameOptions.map((o) => ({
         id: o.value,
         name: o.value,
+        nameCompact: o.value.replace(/[-:._'&]+/g, ''),
         searchTerms: o.searchTerms.join(' '),
       })),
     );
@@ -267,11 +271,15 @@ export const RefineGameView: React.FC<RefineGameViewProps> = ({
   const handleClueOrderChange = (index: number, value: ClueType) => {
     const newBase = [...baseClueOrder] as ClueType[];
     newBase[index] = value;
-    onUpdate({ clueOrder: rebuildClueOrder(newBase, reviewOrderPosition) });
+    onUpdate({
+      clueOrder: rebuildClueOrder(newBase, reviewOrderPosition),
+    });
   };
 
   const handleReviewPositionChange = (newPos: number) => {
-    onUpdate({ clueOrder: rebuildClueOrder(baseClueOrder, newPos) });
+    onUpdate({
+      clueOrder: rebuildClueOrder(baseClueOrder, newPos),
+    });
   };
 
   const hasDetailsTags = clueOrder.includes('details+tags');
@@ -287,13 +295,17 @@ export const RefineGameView: React.FC<RefineGameViewProps> = ({
         (c) => c !== 'tags' && c !== 'details',
       ) as ClueType[];
       newBase.splice(firstIdx >= 0 ? firstIdx : 0, 0, 'details+tags');
-      onUpdate({ clueOrder: rebuildClueOrder(newBase, reviewOrderPosition) });
+      onUpdate({
+        clueOrder: rebuildClueOrder(newBase, reviewOrderPosition),
+      });
     } else {
       // Replace 'details+tags' with 'tags' then 'details' at its position
       const idx = baseClueOrder.indexOf('details+tags');
       const newBase = [...baseClueOrder] as ClueType[];
       newBase.splice(idx, 1, 'tags', 'details');
-      onUpdate({ clueOrder: rebuildClueOrder(newBase, reviewOrderPosition) });
+      onUpdate({
+        clueOrder: rebuildClueOrder(newBase, reviewOrderPosition),
+      });
     }
   };
 
@@ -307,11 +319,18 @@ export const RefineGameView: React.FC<RefineGameViewProps> = ({
     } else {
       // Disable: remove 'review' from clueOrder and clear both reviewClue and reviewClues
       onUpdate({
-        clueOrder: baseClueOrder,
+        clueOrder: rebuildClueOrder(baseClueOrder, null),
         reviewClue: undefined,
         reviewClues: undefined,
       });
     }
+  };
+
+  const handleMFDToggle = (checked: boolean) => {
+    if (!checked) {
+      onUpdate({ moreFromThisDeveloper: undefined });
+    }
+    // When checked, data is added via the Fetch button in the MFD panel below
   };
 
   // Check if refined is checked but difficulty is not set
@@ -457,22 +476,21 @@ export const RefineGameView: React.FC<RefineGameViewProps> = ({
                 checked={hasSsInOrder}
                 onChange={(e) => {
                   if (e.target.checked) {
-                    const newBase = [
-                      ...(baseClueOrder
-                        .filter((c) => c !== 'ss')
-                        .slice(0, 3) as ClueType[]),
+                    const withoutSs = baseClueOrder.filter((c) => c !== 'ss');
+                    const newBase: ClueType[] = [
+                      ...(withoutSs.slice(0, 3) as ClueType[]),
                       'ss' as ClueType,
                     ];
                     onUpdate({
                       clueOrder: rebuildClueOrder(newBase, reviewOrderPosition),
                     });
                   } else {
-                    const newBase = baseClueOrder
+                    const withoutSs = baseClueOrder
                       .filter((c) => c !== 'ss')
                       .slice(0, 3) as ClueType[];
                     onUpdate({
                       clueOrder: rebuildClueOrder(
-                        newBase.length === 3 ? newBase : DEFAULT_CLUE_ORDER,
+                        withoutSs.length === 3 ? withoutSs : DEFAULT_CLUE_ORDER,
                         reviewOrderPosition,
                       ),
                     });
@@ -524,6 +542,16 @@ export const RefineGameView: React.FC<RefineGameViewProps> = ({
                 </select>
               </div>
             )}
+            {/* Include More from this Developer checkbox */}
+            <label className='flex items-center gap-2 cursor-pointer'>
+              <input
+                type='checkbox'
+                checked={hasMFD}
+                onChange={(e) => handleMFDToggle(e.target.checked)}
+                className='w-4 h-4 accent-teal-500'
+              />
+              <span className='text-xs text-teal-300'>More from Developer</span>
+            </label>
           </div>
 
           {/* Close Guess Series */}
@@ -704,6 +732,13 @@ export const RefineGameView: React.FC<RefineGameViewProps> = ({
 
         {/* User Tags */}
         <RefineTags game={game} isComplete={revealAll} onUpdate={onUpdate} />
+        {/* More from this Developer section - canonical between tags and review */}
+        <div className='bg-[#171a21] rounded-lg px-4 py-4'>
+          <div className='text-xs text-gray-400 uppercase tracking-wide mb-3'>
+            More from this Developer
+          </div>
+          <RefineMoreFromDeveloper game={game} onUpdate={onUpdate} />
+        </div>
         {/* Reviews section - always shown so you can browse & select */}
         <div className='bg-[#171a21] rounded-lg px-4 py-4'>
           <RefineReviews game={game} onUpdate={onUpdate} />

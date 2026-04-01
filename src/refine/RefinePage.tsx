@@ -30,6 +30,10 @@ const cloneGameMap = (map: SteamGameMap): SteamGameMap => {
       reviewClues: game.reviewClues
         ? game.reviewClues.map((r) => ({ ...r }))
         : undefined,
+      moreFromThisDeveloper: game.moreFromThisDeveloper
+        ? game.moreFromThisDeveloper.map((item) => ({ ...item }))
+        : undefined,
+      developerDescription: game.developerDescription,
     };
   }
   return clone;
@@ -355,6 +359,16 @@ export const RefinePage: React.FC = () => {
         lines.push(`        timestamp: ${game.reviewClue.timestamp},`);
         lines.push(`      }`);
         lines.push(`    ],`);
+      }
+      if (game.moreFromThisDeveloper && game.moreFromThisDeveloper.length > 0) {
+        lines.push(
+          `    moreFromThisDeveloper: ${JSON.stringify(game.moreFromThisDeveloper)},`,
+        );
+      }
+      if (game.developerDescription) {
+        lines.push(
+          `    developerDescription: ${JSON.stringify(game.developerDescription)},`,
+        );
       }
 
       lines.push(`  },`);

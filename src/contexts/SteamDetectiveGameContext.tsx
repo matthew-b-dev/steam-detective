@@ -5,6 +5,7 @@ import type { SteamGame } from '../types';
 interface SteamDetectiveGameContextValue {
   dailyGame: SteamGame;
   censoredDescription: ReactElement[];
+  censoredDeveloperDescription: ReactElement[];
   isComplete: boolean;
   showClues: boolean[];
 }
@@ -17,16 +18,25 @@ interface SteamDetectiveGameProviderProps {
   children: ReactNode;
   dailyGame: SteamGame;
   censoredDescription: ReactElement[];
+  censoredDeveloperDescription: ReactElement[];
   isComplete: boolean;
   showClues: boolean[];
 }
 
 export const SteamDetectiveGameProvider: React.FC<
   SteamDetectiveGameProviderProps
-> = ({ children, dailyGame, censoredDescription, isComplete, showClues }) => {
+> = ({
+  children,
+  dailyGame,
+  censoredDescription,
+  censoredDeveloperDescription,
+  isComplete,
+  showClues,
+}) => {
   const value = {
     dailyGame,
     censoredDescription,
+    censoredDeveloperDescription,
     isComplete,
     showClues,
   };

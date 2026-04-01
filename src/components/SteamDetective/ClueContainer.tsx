@@ -7,14 +7,20 @@ import { ClueDescription } from './ClueDescription';
 import { ClueDetails } from './ClueDetails';
 import { ClueTags } from './ClueTags';
 import { ClueReview } from './ClueReview';
+import { ClueMoreFromDeveloper } from './ClueMoreFromDeveloper';
 
 interface ClueContainerProps {
   caseFile: 'easy' | 'expert' | `casefile-${number}`;
 }
 
 export const ClueContainer: React.FC<ClueContainerProps> = ({ caseFile }) => {
-  const { dailyGame, censoredDescription, isComplete, showClues } =
-    useSteamDetectiveGame();
+  const {
+    dailyGame,
+    censoredDescription,
+    censoredDeveloperDescription,
+    isComplete,
+    showClues,
+  } = useSteamDetectiveGame();
 
   const [
     showClue1,
@@ -24,6 +30,7 @@ export const ClueContainer: React.FC<ClueContainerProps> = ({ caseFile }) => {
     showClue5,
     showClue6,
     showClue7 = false,
+    showClue8 = false,
   ] = showClues;
   const [primaryIsMain, setPrimaryIsMain] = useState(true);
 
@@ -114,6 +121,21 @@ export const ClueContainer: React.FC<ClueContainerProps> = ({ caseFile }) => {
           show={showClue1}
           isComplete={isComplete}
         />
+        {/* More from this Developer clue - canonical between tags and review */}
+        {dailyGame.moreFromThisDeveloper &&
+          dailyGame.moreFromThisDeveloper.length > 0 && (
+            <ClueMoreFromDeveloper
+              games={dailyGame.moreFromThisDeveloper}
+              censoredDeveloperDescription={
+                censoredDeveloperDescription.length > 0
+                  ? censoredDeveloperDescription
+                  : undefined
+              }
+              developerDescription={dailyGame.developerDescription}
+              show={showClue8}
+              isComplete={isComplete}
+            />
+          )}
         {/* Review clue(s) - canonical last position, replaces secondary screenshot */}
         {hasReviewClue && (
           <ClueReview

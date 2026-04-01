@@ -109,10 +109,10 @@ const makeSeededRng = (seed: number): (() => number) => {
  * so the same input always renders identically.
  *
  * Rules:
- * - Uppercase letters → random uppercase from UPPER_POOL (I and L are preserved as-is)
- * - Lowercase letters → random lowercase from LOWER_POOL (i and l are preserved as-is)
- * - Digits → random digit
- * - Everything else (spaces, dashes, apostrophes, symbols…) → unchanged
+ * - Uppercase letters -> random uppercase from UPPER_POOL (I and L are preserved as-is)
+ * - Lowercase letters -> random lowercase from LOWER_POOL (i and l are preserved as-is)
+ * - Digits -> random digit
+ * - Everything else (spaces, dashes, apostrophes, symbols…) -> unchanged
  */
 export const hashSeededCensorText = (text: string): string => {
   const rng = makeSeededRng(hashString(text));
@@ -298,7 +298,7 @@ export const MAX_CLUES = 6;
  * focusPoint: [widthPercent, heightPercent, zoom?]
  *   widthPercent:  0 = left,   100 = right
  *   heightPercent: 0 = bottom, 100 = top  (inverted vs CSS)
- *   zoom:          1–100, default 75  (scale = 1 + zoom/100, so 75 → scale 1.75)
+ *   zoom:          1–100, default 75  (scale = 1 + zoom/100, so 75 -> scale 1.75)
  * e.g. [50, 50, 75] = center at 75% zoom
  */
 export const DEFAULT_SCREENSHOT_ZOOM = 75;

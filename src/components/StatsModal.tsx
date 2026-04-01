@@ -111,7 +111,7 @@ function computeStats(): ComputedStats {
     }
 
     // Streak eligibility: fully complete + played on release day
-    // playedOnReleaseDate === undefined → legacy → treat as true (generous)
+    // playedOnReleaseDate === undefined -> legacy -> treat as true (generous)
     const playedOnTime = state.playedOnReleaseDate !== false;
     dailyStreakEligible.push(state.allCasesComplete === true && playedOnTime);
   }

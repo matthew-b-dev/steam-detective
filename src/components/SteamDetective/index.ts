@@ -9,5 +9,6 @@ export { ClueScreenshot } from './ClueScreenshot';
 export { ClueDescription } from './ClueDescription';
 export { ClueDetails } from './ClueDetails';
 export { ClueTags } from './ClueTags';
+export { ClueMoreFromDeveloper } from './ClueMoreFromDeveloper';
 export { default as SteamDetectiveFeedbackButtons } from './SteamDetectiveFeedbackButtons';
 export * from './utils';
