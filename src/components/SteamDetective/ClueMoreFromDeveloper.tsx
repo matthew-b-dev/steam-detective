@@ -123,7 +123,7 @@ export const ClueMoreFromDeveloper: React.FC<ClueMoreFromDeveloperProps> = ({
               className='pointer-events-none absolute left-0 top-0 bottom-0 w-12 z-10 transition-opacity duration-300'
               style={{
                 background:
-                  'linear-gradient(to right, rgba(0,0,0,1), transparent)',
+                  'linear-gradient(to right, rgba(0,0,0,0.8), transparent)',
                 opacity: canScrollLeft ? 1 : 0,
               }}
             />
@@ -132,7 +132,7 @@ export const ClueMoreFromDeveloper: React.FC<ClueMoreFromDeveloperProps> = ({
               className='pointer-events-none absolute right-0 top-0 bottom-0 w-12 z-10 transition-opacity duration-300'
               style={{
                 background:
-                  'linear-gradient(to left, rgba(0,0,0,1), transparent)',
+                  'linear-gradient(to left, rgba(0,0,0,0.8), transparent)',
                 opacity: canScrollRight ? 1 : 0,
               }}
             />
@@ -159,6 +159,7 @@ export const ClueMoreFromDeveloper: React.FC<ClueMoreFromDeveloperProps> = ({
                     className='w-full rounded select-none'
                     draggable={false}
                     style={{ display: 'block' }}
+                    onLoad={updateScrollState}
                     onContextMenu={(e) => e.preventDefault()}
                     {...((!game.blurred || isComplete) && game.name
                       ? {
