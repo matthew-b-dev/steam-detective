@@ -28,6 +28,7 @@ export const ClueMoreFromDeveloper: React.FC<ClueMoreFromDeveloperProps> = ({
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(false);
   const [snapActive, setSnapActive] = useState(false);
+  const loadedCountRef = useRef(0);
   const [isTouchDevice] = useState(
     () => window.matchMedia('(hover: none)').matches,
   );
@@ -44,13 +45,8 @@ export const ClueMoreFromDeveloper: React.FC<ClueMoreFromDeveloperProps> = ({
   useEffect(() => {
     const el = scrollRef.current;
     if (!el) return;
-    // Disable snap, force position to start, then re-enable snap.
-    // This prevents mobile browsers snapping to a wrong position during image layout.
     el.scrollLeft = 0;
-    requestAnimationFrame(() => {
-      if (scrollRef.current) scrollRef.current.scrollLeft = 0;
-      setSnapActive(true);
-    });
+    loadedCountRef.current = 0;
     updateScrollState();
     const observer = new ResizeObserver(updateScrollState);
     observer.observe(el);
@@ -60,6 +56,17 @@ export const ClueMoreFromDeveloper: React.FC<ClueMoreFromDeveloperProps> = ({
       el.removeEventListener('scroll', updateScrollState);
     };
   }, [updateScrollState]);
+
+  const handleImageLoad = useCallback(() => {
+    loadedCountRef.current += 1;
+    updateScrollState();
+    if (loadedCountRef.current >= games.length) {
+      // All images loaded — reset position then enable snap so the browser
+      // snaps from a known-good scrollLeft=0 rather than wherever it drifted.
+      if (scrollRef.current) scrollRef.current.scrollLeft = 0;
+      setSnapActive(true);
+    }
+  }, [games.length, updateScrollState]);
 
   const scroll = useCallback((dir: 'left' | 'right') => {
     const el = scrollRef.current;
@@ -159,7 +166,8 @@ export const ClueMoreFromDeveloper: React.FC<ClueMoreFromDeveloperProps> = ({
                     className='w-full rounded select-none'
                     draggable={false}
                     style={{ display: 'block' }}
-                    onLoad={updateScrollState}
+                    onLoad={handleImageLoad}
+                    onError={handleImageLoad}
                     onContextMenu={(e) => e.preventDefault()}
                     {...((!game.blurred || isComplete) && game.name
                       ? {
