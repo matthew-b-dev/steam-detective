@@ -27,6 +27,7 @@ export const ClueMoreFromDeveloper: React.FC<ClueMoreFromDeveloperProps> = ({
   const [isOverflowing, setIsOverflowing] = useState(false);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(false);
+  const [snapActive, setSnapActive] = useState(false);
   const [isTouchDevice] = useState(
     () => window.matchMedia('(hover: none)').matches,
   );
@@ -43,9 +44,13 @@ export const ClueMoreFromDeveloper: React.FC<ClueMoreFromDeveloperProps> = ({
   useEffect(() => {
     const el = scrollRef.current;
     if (!el) return;
-    // Some mobile browsers snap to a non-zero position on initial layout.
-    // Explicitly reset to the start after mount.
+    // Disable snap, force position to start, then re-enable snap.
+    // This prevents mobile browsers snapping to a wrong position during image layout.
     el.scrollLeft = 0;
+    requestAnimationFrame(() => {
+      if (scrollRef.current) scrollRef.current.scrollLeft = 0;
+      setSnapActive(true);
+    });
     updateScrollState();
     const observer = new ResizeObserver(updateScrollState);
     observer.observe(el);
@@ -135,7 +140,7 @@ export const ClueMoreFromDeveloper: React.FC<ClueMoreFromDeveloperProps> = ({
               ref={scrollRef}
               className='flex-1 flex gap-2 overflow-x-auto'
               style={{
-                scrollSnapType: 'x mandatory',
+                scrollSnapType: snapActive ? 'x mandatory' : 'none',
                 WebkitOverflowScrolling: 'touch',
               }}
             >
