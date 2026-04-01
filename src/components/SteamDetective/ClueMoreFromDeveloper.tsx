@@ -147,7 +147,8 @@ export const ClueMoreFromDeveloper: React.FC<ClueMoreFromDeveloperProps> = ({
               ref={scrollRef}
               className='flex-1 flex gap-2 overflow-x-auto'
               style={{
-                scrollSnapType: snapActive ? 'x mandatory' : 'none',
+                scrollSnapType:
+                  snapActive && !isTouchDevice ? 'x mandatory' : 'none',
                 WebkitOverflowScrolling: 'touch',
               }}
             >
