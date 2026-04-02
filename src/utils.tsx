@@ -609,7 +609,6 @@ export const getPercentileMessage = (
 
   // Determine if this is today's puzzle or a past puzzle
   const isToday = !puzzleDate || puzzleDate === getRealUtcDateString();
-  const dateText = isToday ? 'today' : `on ${puzzleDate}`;
 
   if (score === highestScore) {
     const countAtTop = todayScores.filter((s) => s === highestScore).length;
