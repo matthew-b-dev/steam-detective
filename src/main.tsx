@@ -23,8 +23,9 @@ const isLocalhost =
   }
 })();
 
-// Render the refine tool on localhost at /refine, otherwise render the main app
+// Render the refine tool on localhost at /refine, games at /games, otherwise render the main app
 const isRefinePage = isLocalhost && window.location.pathname === '/refine';
+const isGamesPage = isLocalhost && window.location.pathname === '/games';
 const isDailyDashPage = window.location.pathname === '/dailydash';
 
 if (isRefinePage) {
@@ -32,6 +33,13 @@ if (isRefinePage) {
     document.title = 'Refine SteamDetective';
     ReactDOM.createRoot(document.getElementById('root')!).render(
       <RefinePage />,
+    );
+  });
+} else if (isGamesPage) {
+  import('./games/GamesIndex.tsx').then(({ GamesIndex }) => {
+    document.title = 'Steam Games Library';
+    ReactDOM.createRoot(document.getElementById('root')!).render(
+      <GamesIndex />,
     );
   });
 } else if (isDailyDashPage) {

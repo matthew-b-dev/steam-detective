@@ -2,6 +2,7 @@ import { useState, useMemo, useCallback, useEffect, useRef } from 'react';
 import type { SteamGame } from '../types';
 import type { SteamGameMap } from '../steam_game_detail';
 import { steamGameDetails, CLOSE_GUESS_SERIES } from '../steam_game_detail';
+import { isLocalhost } from '../utils';
 import { RefineNavbar } from './RefineNavbar.tsx';
 import { RefineGameView } from './RefineGameView.tsx';
 
@@ -111,6 +112,20 @@ export const RefinePage: React.FC = () => {
       /* ignore */
     }
   }, [closeGuessSeries]);
+
+  // Prevent accidental tab closure on localhost /refine route
+  useEffect(() => {
+    if (!isLocalhost()) return;
+
+    const handleBeforeUnload = (e: BeforeUnloadEvent) => {
+      e.preventDefault();
+      e.returnValue = '';
+      return '';
+    };
+
+    window.addEventListener('beforeunload', handleBeforeUnload);
+    return () => window.removeEventListener('beforeunload', handleBeforeUnload);
+  }, []);
 
   // Filter appIds based on mode - use customOrder which preserves file/randomized order
   const appIds = useMemo(() => {

@@ -7648,7 +7648,7 @@ export const steamGameDetails: SteamGameMap = {
     tags: ['Action', 'RPG', 'Free To Play'],
     features: [],
     allReviewSummary: {
-      count: 1138,
+      count: 656913,
       rating: 'Very Positive',
     },
     userTags: [
