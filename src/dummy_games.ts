@@ -244,7 +244,7 @@ export const dummyGames: string[] = [
   'Chibi-Robo!: Zip Lash',
   'Godzilla',
   'Borderlands',
-  'God of War III Remastered',
+  'God of War III',
   'State of Decay: Year One Survival Edition',
   'Homeworld Remastered Collection',
   'Kerbal Space Program',

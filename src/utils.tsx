@@ -6,6 +6,35 @@ import {
 } from './demos';
 import { CLOSE_GUESS_SERIES } from './steam_game_detail.generated';
 
+const ROMAN_TO_ARABIC: Record<string, string> = {
+  II: '2',
+  III: '3',
+  IV: '4',
+  V: '5',
+  VI: '6',
+  VII: '7',
+  VIII: '8',
+  IX: '9',
+  X: '10',
+  XI: '11',
+  XII: '12',
+  XIII: '13',
+  XIV: '14',
+  XV: '15',
+  XVI: '16',
+  XVII: '17',
+  XVIII: '18',
+  XIX: '19',
+};
+
+const ROMAN_RE = new RegExp(
+  `\\b(${Object.keys(ROMAN_TO_ARABIC).join('|')})\\b`,
+  'g',
+);
+
+export const arabicNumerals = (name: string): string =>
+  name.replace(ROMAN_RE, (m) => ROMAN_TO_ARABIC[m]);
+
 // Subtitle configuration
 export interface SubtitleConfig {
   content: ReactNode;
@@ -596,7 +625,7 @@ export const getPercentileMessage = (
   }
 
   if (percentile === 0) {
-    return `That's the worst score ${dateText}. 🤷`;
+    return `Tomorrow is another day!`;
   } else {
     return `That's better than ${percentile}% of players.`;
   }

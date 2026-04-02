@@ -5274,7 +5274,31 @@ export const steamGameDetails: SteamGameMap = {
       'Controller',
       'Local Co-Op',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    overrideCensoredTitle: 'Sp||eed||R||unners||',
+    clueOrder: ['review', 'details+tags', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Hard',
+    reviewClues: [
+      {
+        review:
+          "Friend was winning, he got double grapple hooked. We don't talk anymore.",
+        votedUp: true,
+        votesUp: 28,
+        weightedScore: undefined,
+        authorPlaytimeHours: 15.4,
+        timestamp: 1466827200,
+      },
+      {
+        review:
+          "it's like MarioKart, but a ||platformer|| instead of a driving game. It will be impossible for you to play this game with friends and not have a good time",
+        votedUp: true,
+        votesUp: 64,
+        weightedScore: undefined,
+        authorPlaytimeHours: 6,
+        timestamp: 1483315200,
+      },
+    ],
   },
   '207610': {
     name: 'The Walking Dead',
@@ -15307,10 +15331,10 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/330830/ss_8556b92452154f28ce434800599e2d16c7e82ab4.600x338.jpg',
     shortDescription:
-      "||Tales from the Borderlands|| is a five-part episodic game set on the unforgiving world of Pandora between the events of ||Borderlands|| 2 and ||Borderlands|| 3. This is a story full of ||Borderlands||' trademark humor, following two adventurers on their quest for greatness.",
-    releaseDate: 'Feb 16, 2021',
+      "||Tales from the Borderlands|| is a five-part episodic game set on the unforgiving ||world|| of ||Pandora|| between the events of ||Borderlands 2|| and ||Borderlands|| 3. This is a story full of ||Borderlands'|| trademark ||humor||, following two adventurers on their quest for greatness.",
+    releaseDate: 'Nov 25, 2014',
     developer: 'Telltale Games',
-    publisher: '2K',
+    publisher: '||2K||',
     tags: [],
     features: [],
     allReviewSummary: {
@@ -15334,7 +15358,31 @@ export const steamGameDetails: SteamGameMap = {
       'Dark Humor',
       'Sci-fi',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: ['Comedy'],
+    overrideCensoredTitle: 'Ta||les|| f||rom|| t||he|| B||orderlands||',
+    clueOrder: ['desc', 'details+tags', 'review'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Medium',
+    reviewClues: [
+      {
+        review: 'Whenever in doubt, Loader Bot has your back!',
+        votedUp: true,
+        votesUp: 16,
+        weightedScore: undefined,
+        authorPlaytimeHours: 13.3,
+        timestamp: 1758340800,
+      },
+      {
+        review:
+          "You carry a life-sized hologram of Handsome ||Jack|| inside your head and if that isn't incredible, I don't know what is.",
+        votedUp: true,
+        votesUp: 49,
+        weightedScore: undefined,
+        authorPlaytimeHours: 37.2,
+        timestamp: 1426564800,
+      },
+    ],
   },
   '332310': {
     name: 'LEGO Worlds',
@@ -21645,8 +21693,8 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/462780/ss_c166845ff5ca9171e00f6b3972ad71acffc30802.600x338.jpg',
     shortDescription:
       'Deceived by the forces of evil into prematurely bringing about the end of the world, War – the first Horseman of the Apocalypse – stands accused of breaking the sacred law by inciting a war between Heaven and Hell.',
-    releaseDate: 'Nov 29, 2016',
-    developer: 'KAIKO',
+    releaseDate: 'Sep 23, 2010',
+    developer: 'Vigil Games',
     publisher: 'THQ Nordic',
     tags: [],
     features: [],
@@ -24545,7 +24593,7 @@ export const steamGameDetails: SteamGameMap = {
     shortDescription:
       'Explore a land filled with lost legends, ancient powers, and ferocious monsters in ||TUNIC||, an isometric action game about a small fox on a big adventure.',
     releaseDate: 'Mar 16, 2022',
-    developer: 'TUNIC Team',
+    developer: '||TUNIC|| Team',
     publisher: 'Finji',
     tags: [],
     features: [],
@@ -24570,7 +24618,22 @@ export const steamGameDetails: SteamGameMap = {
       'Colorful',
       'Nonlinear',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: ['Isometric'],
+    clueOrder: ['review', 'details+tags', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Medium',
+    reviewClues: [
+      {
+        review:
+          'This game is packed with secrets in many layers, and figuring out the world, how to make progress, solving (the many) puzzles, filling-in your ||manual||, all of it feels very rewarding. The combat difficulty can be a little extreme sometimes, mainly in boss fights, but the core of the game really is answering all the questions that it presents to you while you play, all along the lines of "How do I ____?" and "What is ____?"',
+        votedUp: true,
+        votesUp: 1,
+        weightedScore: undefined,
+        authorPlaytimeHours: 24.6,
+        timestamp: 1772590525,
+      },
+    ],
   },
   '553850': {
     name: 'HELLDIVERS 2',
@@ -25050,7 +25113,6 @@ export const steamGameDetails: SteamGameMap = {
   },
   '578650': {
     name: 'The Outer Worlds',
-    overrideCensoredTitle: 'T||he|| Ou||ter|| Wo||rlds||',
     appId: 578650,
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/578650/ss_a1de8cccb606fa0896b42c127318c7a34d35a98a.600x338.jpg',
@@ -25058,8 +25120,8 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/578650/ss_4fe162d9752bc89c2de14ba549ffb6a6260b09aa.600x338.jpg',
     shortDescription:
       "||The Outer Worlds|| is an award-winning single-player RPG from Obsidian Entertainment and Private Division. As you explore a space colony, the character you decide to become will determine how this player-driven story unfolds. In the colony's corporate equation, you are the unplanned variable.",
-    releaseDate: 'Oct 23, 2020',
     originalReleaseDate: 'Oct 25, 2019 (Epic Games Store)',
+    releaseDate: 'Oct 23, 2020',
     developer: 'Obsidian Entertainment',
     publisher: 'Private Division',
     tags: [],
@@ -25086,6 +25148,7 @@ export const steamGameDetails: SteamGameMap = {
       'Action',
     ],
     blurredUserTags: ['Sci-fi'],
+    overrideCensoredTitle: 'T||he|| Ou||ter|| Wo||rlds||',
     clueOrder: ['review', 'details+tags', 'desc'],
     debugProcessed: true,
     debugRefined: true,
@@ -28881,6 +28944,7 @@ export const steamGameDetails: SteamGameMap = {
       'Open World',
       'Co-op',
     ],
+    blurredUserTags: ['Offroad'],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '692850': {
@@ -46820,43 +46884,6 @@ export const steamGameDetails: SteamGameMap = {
     debugRefined: true,
     difficulty: 'Medium',
   },
-  '1712830': {
-    name: "Baldi's Basics Classic Remastered",
-    appId: 1712830,
-    primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1712830/ss_3cf1174d24a4518a3e992555ff5bf32e401a1223.600x338.jpg',
-    secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1712830/ss_6f10e1ec2d06659c82488a6d53add00ce63baf1d.600x338.jpg',
-    shortDescription:
-      "Escape Baldi's schoolhouse again in this new remastered version of Baldi's ||Basics|| ||Classic||! Use stealth and strategy to collect all 7 notebooks and win! Featuring three games in one, gameplay improvements, a more authentic art style, accessibility improvements, and brand new ways to play!",
-    releaseDate: 'Oct 21, 2022',
-    developer: 'Basically Games',
-    publisher: 'Basically Games, LLC',
-    tags: [],
-    features: [],
-    allReviewSummary: {
-      count: 14786,
-      rating: 'Very Positive',
-    },
-    userTags: [
-      'Horror',
-      'Stealth',
-      'Retro',
-      'Parody',
-      'Funny',
-      'Action',
-      'Survival Horror',
-      'First-Person',
-      'Indie',
-      'Singleplayer',
-      'Pixel Graphics',
-      'Surreal',
-      'Exploration',
-      'FPS',
-      '3D',
-    ],
-    clueOrder: ['tags', 'details', 'desc'],
-  },
   '1714040': {
     name: 'Super Auto Pets',
     appId: 1714040,
@@ -51860,7 +51887,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2322010/ss_244a3845262a2a15b3a355ecf2881b8ccd5b1401.600x338.jpg',
     shortDescription:
-      "The sequel to the critically acclaimed ||God of War (2018)||, ||God of War Ragnarok|| picks up with ||Fimbulwinter|| well underway. ||Kratos|| and ||Atreus|| must journey to each of the Nine Realms in search of answers as ||Odin||'s forces in ||Asgard|| prepare for a prophesied battle that will end the world. ",
+      "||The sequel to the critically acclaimed God of War (2018), God of War Ragnarok picks up with Fimbulwinter well underway||.&nbsp;&nbsp;&nbsp; ||Kratos|| and ||Atreus|| must journey to each of the Nine Realms in search of answers as ||Odin||'s forces in ||Asgard|| prepare for a prophesied battle that will end the world. ",
     originalReleaseDate: 'Nov 9, 2022 (PS4, PS5)',
     releaseDate: 'Sep 19, 2024',
     developer: '||Santa Monica Studio||, Jetpack Interactive',
@@ -51868,7 +51895,7 @@ export const steamGameDetails: SteamGameMap = {
     tags: ['Action', 'Adventure', 'RPG'],
     features: [],
     allReviewSummary: {
-      count: 13515,
+      count: 28946,
       rating: 'Very Positive',
     },
     userTags: [
@@ -51893,7 +51920,6 @@ export const steamGameDetails: SteamGameMap = {
       'Gore',
       'Souls-like',
     ],
-    blurredUserTags: ['Mythology'],
     clueOrder: ['desc', 'details', 'tags'],
     debugProcessed: true,
     debugRefined: true,
@@ -54986,6 +55012,7 @@ export const CLOSE_GUESS_SERIES: string[] = [
   'final fantasy',
   'forza',
   'ghost of',
+  'god of war',
   'half-life',
   'horizon',
   'jurassic',

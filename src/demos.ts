@@ -410,6 +410,12 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile4: 'Planet Coaster',
   },
   '2026-04-03': {
+    caseFile1: 'God of War Ragnarok',
+    caseFile2: 'TUNIC',
+    caseFile3: 'SpeedRunners',
+    caseFile4: 'Tales from the Borderlands',
+  },
+  '2026-04-04': {
     caseFile1: 'Suicide Squad: Kill the Justice League',
     caseFile2: 'Fields of Mistria',
     caseFile3: "Don't Starve",
@@ -417,9 +423,9 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
   },
 };
 
-// 4/3 Easy (First?): God of War Ragnarok
-// 4/3 Med: A Hat in Time
-// 4/3 Hard: Shadow Tactics: Blades of the Shogun
+// 4/4 Med: A Hat in Time
+// 4/4 Hard: Shadow Tactics: Blades of the Shogun
+// 4/4 Final: Enter the Gungeon
 
 // Easy: Star Wars Battlefront II
 // Easy: Remnant II
@@ -427,6 +433,7 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
 // Easy: Ghost of Tsushima DIRECTOR'S CUT (change name, add PS4 release)
 // Easy: Any AC Game (last 3/29): Revelations, Unity, (1), (2), Brotherhood, Rogue, Syndicate, Valhalla, Mirage
 
+// Med: Into the Breach
 // Med: Death's Door
 // Med: WEBFISHING (60k rev)? needs work
 // Med: Tropico 4 (Last Tropico 3/15)
@@ -434,6 +441,7 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
 // Med: Detroit: Become Human or Heavy Rain and show other games from this Dev, but blur Quantic Dream
 // Med (30k): SIGNALIS
 
+// Hard (13k): Sunset Overdrive
 // Hard: Albion Online
 // Hard (Fully Refined): Tales of Arise
 // Hard: Bomb Rush Cyberfunk
