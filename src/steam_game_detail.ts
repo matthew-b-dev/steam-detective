@@ -35456,7 +35456,7 @@ export const steamGameDetails: SteamGameMap = {
       'Indie',
       'Isometric',
     ],
-    blurredUserTags: ['Magic', 'Fantasy'],
+    blurredUserTags: ['Fantasy'],
     screenshotLetterbox: true,
     overrideCensoredTitle: 'Ta||ctica||l Br||each|| W||izard||s',
     clueOrder: ['details', 'tags', 'desc'],
