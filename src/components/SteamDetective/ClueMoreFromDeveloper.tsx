@@ -7,7 +7,7 @@ import {
   renderUncensoredDescription,
   decodeHtmlEntities,
 } from './utils';
-import questionsImg from '../../assets/questions.jpg';
+import grayImg from '../../assets/gray.jpg';
 
 interface ClueMoreFromDeveloperProps {
   games: { id: number; name: string; blurred?: boolean }[];
@@ -165,13 +165,18 @@ export const ClueMoreFromDeveloper: React.FC<ClueMoreFromDeveloperProps> = ({
                   <img
                     src={
                       game.blurred && !isComplete
-                        ? questionsImg
+                        ? grayImg
                         : `https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/${game.id}/header.jpg`
                     }
                     alt=''
                     className='w-full rounded select-none'
                     draggable={false}
-                    style={{ display: 'block' }}
+                    style={{
+                      display: 'block',
+                      ...(game.blurred && !isComplete
+                        ? { border: '2px dashed white' }
+                        : {}),
+                    }}
                     onLoad={handleImageLoad}
                     onError={handleImageLoad}
                     onContextMenu={(e) => e.preventDefault()}
@@ -190,13 +195,7 @@ export const ClueMoreFromDeveloper: React.FC<ClueMoreFromDeveloperProps> = ({
                   {/* Text overlay for blurred/redacted games */}
                   {game.blurred && !isComplete && (
                     <div className='absolute inset-0 rounded flex flex-col items-center justify-center pointer-events-none uppercase text-white text-[14px] font-bold tracking-widest'>
-                      <span
-                        className='select-none text-center leading-tight'
-                        style={{
-                          filter:
-                            'drop-shadow(0 0 2px rgba(0,0,0,1)) drop-shadow(0 0 2px rgba(0,0,0,1)) drop-shadow(0 0 4px rgba(0,0,0,1)) drop-shadow(0 0 4px rgba(0,0,0,1)) drop-shadow(0 0 8px rgba(0,0,0,1)) drop-shadow(0 0 8px rgba(0,0,0,1)) drop-shadow(0 0 12px rgba(0,0,0,1)) drop-shadow(0 0 16px rgba(0,0,0,1))',
-                        }}
-                      >
+                      <span className='select-none text-center leading-tight'>
                         A GAME IN THE
                         <br />
                         SAME SERIES
