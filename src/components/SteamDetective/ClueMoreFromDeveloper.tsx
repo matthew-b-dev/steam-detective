@@ -7,6 +7,7 @@ import {
   renderUncensoredDescription,
   decodeHtmlEntities,
 } from './utils';
+import questionsImg from '../../assets/questions.jpg';
 
 interface ClueMoreFromDeveloperProps {
   games: { id: number; name: string; blurred?: boolean }[];
@@ -162,7 +163,11 @@ export const ClueMoreFromDeveloper: React.FC<ClueMoreFromDeveloperProps> = ({
                   }}
                 >
                   <img
-                    src={`https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/${game.id}/header.jpg`}
+                    src={
+                      game.blurred && !isComplete
+                        ? questionsImg
+                        : `https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/${game.id}/header.jpg`
+                    }
                     alt=''
                     className='w-full rounded select-none'
                     draggable={false}
@@ -182,18 +187,20 @@ export const ClueMoreFromDeveloper: React.FC<ClueMoreFromDeveloperProps> = ({
                           }
                         : {})}
                   />
-                  {/* Blur overlay — hidden once case file is complete */}
+                  {/* Text overlay for blurred/redacted games */}
                   {game.blurred && !isComplete && (
-                    <div
-                      className='absolute inset-0 rounded flex flex-col items-center justify-center pointer-events-none uppercase text-white text-[14px] font-bold'
-                      style={{
-                        backdropFilter: 'blur(20px)',
-                        WebkitBackdropFilter: 'blur(20px)',
-                        backgroundColor: 'rgba(0,0,0,0.45)',
-                      }}
-                    >
-                      <span className=' select-none'>A GAME IN THE</span>
-                      <span className='select-none mt-0.5'>SAME SERIES</span>
+                    <div className='absolute inset-0 rounded flex flex-col items-center justify-center pointer-events-none uppercase text-white text-[14px] font-bold tracking-widest'>
+                      <span
+                        className='select-none text-center leading-tight'
+                        style={{
+                          filter:
+                            'drop-shadow(0 0 2px rgba(0,0,0,1)) drop-shadow(0 0 2px rgba(0,0,0,1)) drop-shadow(0 0 4px rgba(0,0,0,1)) drop-shadow(0 0 4px rgba(0,0,0,1)) drop-shadow(0 0 8px rgba(0,0,0,1)) drop-shadow(0 0 8px rgba(0,0,0,1)) drop-shadow(0 0 12px rgba(0,0,0,1)) drop-shadow(0 0 16px rgba(0,0,0,1))',
+                        }}
+                      >
+                        A GAME IN THE
+                        <br />
+                        SAME SERIES
+                      </span>
                     </div>
                   )}
                 </div>
