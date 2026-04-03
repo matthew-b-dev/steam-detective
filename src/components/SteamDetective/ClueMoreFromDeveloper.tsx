@@ -95,8 +95,23 @@ export const ClueMoreFromDeveloper: React.FC<ClueMoreFromDeveloperProps> = ({
           isComplete ? 'opacity-100' : ''
         }`}
       >
-        <div className='text-gray-400 text-sm mb-2'>
-          {`${games.length > 1 ? 'Featured games' : 'Another game'} from this Developer (${games.length})`}
+        {censoredDeveloperDescription &&
+          censoredDeveloperDescription.length > 0 && (
+            <div className='text-sm text-gray-200 leading-relaxed max-w-[600px]'>
+              <div className='text-gray-400 text-sm'>About the Developer:</div>
+              <div className='italic mt-1'>
+                "
+                {isComplete
+                  ? renderUncensoredDescription(
+                      decodeHtmlEntities(developerDescription!),
+                    )
+                  : censoredDeveloperDescription}
+                "
+              </div>
+            </div>
+          )}
+        <div className='text-gray-400 text-sm mb-2 mt-3'>
+          {`${games.length > 1 ? 'Featured games' : 'Another game'} from this Developer${games.length > 1 ? ` (${games.length})` : ':'}`}
         </div>
         <div className='flex items-center gap-1'>
           {/* Left arrow - desktop only, always reserve space when overflowing */}
@@ -244,21 +259,6 @@ export const ClueMoreFromDeveloper: React.FC<ClueMoreFromDeveloperProps> = ({
             borderRadius: '4px',
           }}
         />
-        {censoredDeveloperDescription &&
-          censoredDeveloperDescription.length > 0 && (
-            <div className='mt-3 text-sm text-gray-200 leading-relaxed max-w-[600px]'>
-              <div className='text-gray-400 text-sm'>About the Developer:</div>
-              <div className='italic'>
-                "
-                {isComplete
-                  ? renderUncensoredDescription(
-                      decodeHtmlEntities(developerDescription!),
-                    )
-                  : censoredDeveloperDescription}
-                "
-              </div>
-            </div>
-          )}
       </div>
     </motion.div>
   );

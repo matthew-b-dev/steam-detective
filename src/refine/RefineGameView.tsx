@@ -10,7 +10,7 @@ import {
   queryMeaningfulLength,
   SEARCH_FUZZY,
 } from '../components/SteamDetective/utils';
-import { arabicNumerals } from '../utils';
+import { arabicNumerals, digitNumerals } from '../utils';
 import { RefineScreenshots } from './RefineScreenshots.tsx';
 import { RefineDescription } from './RefineDescription.tsx';
 import { RefineDetails } from './RefineDetails.tsx';
@@ -154,7 +154,13 @@ export const RefineGameView: React.FC<RefineGameViewProps> = ({
   // Mirrors GameInput's tokenizer so search preview behaves identically to the real game.
   const miniSearch = useMemo(() => {
     const ms = new MiniSearch({
-      fields: ['name', 'nameCompact', 'nameNumerals', 'searchTerms'],
+      fields: [
+        'name',
+        'nameCompact',
+        'nameNumerals',
+        'nameWordNumerals',
+        'searchTerms',
+      ],
       idField: 'id',
       tokenize: (text: string) =>
         text
@@ -169,6 +175,7 @@ export const RefineGameView: React.FC<RefineGameViewProps> = ({
         name: o.value,
         nameCompact: o.value.replace(/[-:._'&]+/g, ''),
         nameNumerals: arabicNumerals(o.value),
+        nameWordNumerals: digitNumerals(o.value),
         searchTerms: o.searchTerms.join(' '),
       })),
     );

@@ -50,9 +50,7 @@ export const getDateFromRoute = (): string | null => {
   return null;
 };
 
-// Demo days configuration - hardcode specific games for specific dates
-// Format: 'YYYY-MM-DD': { caseFile1: 'Game', caseFile2: 'Game', caseFile3: 'Game', caseFile4: 'Game' }
-// You can specify 1-4 case files. Unspecified case files will use the normal random selection.
+// Demo days configuration - games for specific dates
 export const STEAM_DETECTIVE_DEMO_DAYS: {
   [date: string]: {
     caseFile1?: string;
@@ -416,6 +414,12 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile4: 'Tales from the Borderlands',
   },
   '2026-04-04': {
+    caseFile1: 'Half-Life 2: Episode Two',
+    caseFile2: 'A Hat in Time',
+    caseFile3: 'Sunset Overdrive',
+    caseFile4: 'The Sims 3',
+  },
+  '2026-04-05': {
     caseFile1: 'Suicide Squad: Kill the Justice League',
     caseFile2: 'Fields of Mistria',
     caseFile3: "Don't Starve",
@@ -423,9 +427,8 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
   },
 };
 
-// 4/4 Med: A Hat in Time
-// 4/4 Hard: Shadow Tactics: Blades of the Shogun
-// 4/4 Final: Enter the Gungeon
+// 4/5 Hard: Shadow Tactics: Blades of the Shogun
+// 4/5 Final: Enter the Gungeon
 
 // Easy: Star Wars Battlefront II
 // Easy: Remnant II

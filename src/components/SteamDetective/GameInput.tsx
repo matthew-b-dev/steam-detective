@@ -2,7 +2,7 @@ import { useState, useMemo, useEffect } from 'react';
 import Select from 'react-select';
 import MiniSearch from 'minisearch';
 import { allGameNames, gameSearchTerms } from '../../all_game_names.generated';
-import { arabicNumerals, type MissedGuess } from '../../utils';
+import { arabicNumerals, digitNumerals, type MissedGuess } from '../../utils';
 import {
   SEARCH_DEBOUNCE_MS,
   queryMeaningfulLength,
@@ -31,7 +31,13 @@ const RESULT_OVERRIDES: Record<string, string> = {
 // Build index once at module load - all games, keyed by name, indexing both the name and
 // any explicit searchTerms aliases (e.g. "assassins creed", "hades 2", "osrs").
 const gameSearch = new MiniSearch({
-  fields: ['name', 'nameCompact', 'nameNumerals', 'searchTerms'],
+  fields: [
+    'name',
+    'nameCompact',
+    'nameNumerals',
+    'nameWordNumerals',
+    'searchTerms',
+  ],
   idField: 'id',
   tokenize,
   processTerm: (term: string) => term.toLowerCase(),
@@ -43,6 +49,7 @@ gameSearch.addAll(
     name,
     nameCompact: compactName(name),
     nameNumerals: arabicNumerals(name),
+    nameWordNumerals: digitNumerals(name),
     searchTerms: (gameSearchTerms[name] ?? []).join(' '),
   })),
 );

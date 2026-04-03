@@ -11,57 +11,25 @@ interface RefineMoreFromDeveloperProps {
   onUpdate: (patch: Partial<SteamGame>) => void;
 }
 
-/** Extracts {id, name} pairs from Steam store page HTML by finding the "More from" carousel. */
-const parseMoreFromHtml = (html: string): { id: number; name: string }[] => {
+/** Parses game {id, name} entries from Steam search results_html. */
+const parseSearchResultsHtml = (
+  resultsHtml: string,
+  excludeAppId: number,
+): { id: number; name: string }[] => {
   const parser = new DOMParser();
-  const doc = parser.parseFromString(html, 'text/html');
-
-  const headerPattern = /store_item_assets\/steam\/apps\/(\d+)\/header\.jpg/;
+  const doc = parser.parseFromString(resultsHtml, 'text/html');
   const results: { id: number; name: string }[] = [];
   const seen = new Set<number>();
 
-  // Match any carousel feature target (e.g. "creatorhome-carousel", "publisher-carousel", etc.)
-  const carousels = doc.querySelectorAll('[data-featuretarget$="-carousel"]');
-
-  for (const carousel of carousels) {
-    // Approach 1: parse data-props JSON for appIDs (no name — supplement with img scan below)
-    const dataProps = carousel.getAttribute('data-props');
-    if (dataProps) {
-      try {
-        const props = JSON.parse(dataProps);
-        if (Array.isArray(props.appIDs)) {
-          for (const rawId of props.appIDs) {
-            const id = Number(rawId);
-            if (!isNaN(id) && !seen.has(id)) {
-              seen.add(id);
-              results.push({ id, name: '' }); // name filled in by img scan below
-            }
-          }
-        }
-      } catch {
-        // fall through
-      }
-    }
-
-    // Approach 2: scan header.jpg <img> elements within the carousel for id + alt name
-    for (const img of carousel.querySelectorAll('img[src]')) {
-      const src = img.getAttribute('src') ?? '';
-      const name = (img.getAttribute('alt') ?? '').trim();
-      const match = headerPattern.exec(src);
-      if (match) {
-        const id = Number(match[1]);
-        if (!isNaN(id)) {
-          const existing = results.find((r) => r.id === id);
-          if (existing) {
-            // Back-fill name if we had it from data-props without a name
-            if (!existing.name && name) existing.name = name;
-          } else if (!seen.has(id)) {
-            seen.add(id);
-            results.push({ id, name });
-          }
-        }
-      }
-    }
+  for (const el of doc.querySelectorAll('[data-ds-appid]')) {
+    const rawId = el.getAttribute('data-ds-appid');
+    if (!rawId) continue;
+    const id = Number(rawId);
+    if (isNaN(id) || seen.has(id) || id === excludeAppId) continue;
+    seen.add(id);
+    const titleEl = el.querySelector('.title');
+    const name = titleEl?.textContent?.trim() ?? '';
+    results.push({ id, name });
   }
 
   return results;
@@ -83,17 +51,28 @@ export const RefineMoreFromDeveloper: React.FC<
     setImportError(null);
     setImportLoading(true);
     try {
-      const res = await fetch(`/steam-store-proxy/app/${game.appId}`);
+      const developer = game.developer?.replaceAll('|', '');
+      if (!developer) {
+        setImportError('No developer name found for this game.');
+        return;
+      }
+      const url = `/steam-store-proxy/search/results/?developer=${encodeURIComponent(developer)}&infinite=1`;
+      const res = await fetch(url);
       if (!res.ok) {
         setImportError(`Fetch failed: HTTP ${res.status}`);
         return;
       }
-      const html = await res.text();
-      const ids = parseMoreFromHtml(html);
+      const json = (await res.json()) as {
+        success: number;
+        results_html?: string;
+      };
+      if (!json.results_html) {
+        setImportError('No results returned from Steam search.');
+        return;
+      }
+      const ids = parseSearchResultsHtml(json.results_html, game.appId);
       if (ids.length === 0) {
-        setImportError(
-          'No "More from this Developer" carousel found on that page.',
-        );
+        setImportError(`No other games found for developer "${developer}".`);
         return;
       }
       setPreviewItems(ids);
@@ -292,10 +271,10 @@ const DevDescriptionEditor: React.FC<DevDescriptionEditorProps> = ({
       </div>
       {censoredPreview && (
         <div className='text-sm text-gray-200 leading-relaxed max-w-[600px] rounded bg-zinc-900/60 px-3 py-2'>
-          <div className='text-gray-400 text-xs uppercase mb-1'>
+          <div className='text-gray-400 text-xs uppercase'>
             About the Developer:
           </div>
-          <div>{censoredPreview}</div>
+          <div className='mt-2'>{censoredPreview}</div>
         </div>
       )}
       <textarea

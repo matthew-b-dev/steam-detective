@@ -357,7 +357,9 @@ const SteamDetectiveGame: React.FC<SteamDetectiveGameProps> = ({
         ssJustRevealedNonFirst ||
         ssVisibleAndNewClueRevealed)
     ) {
-      const scrollAmount = 220;
+      // If MFD carousel is currently shown, add extra scroll to account for its height
+      const moreFromDevIsShown = showClues[7];
+      const scrollAmount = moreFromDevIsShown ? 380 : 220;
 
       setTimeout(() => {
         window.scrollBy({

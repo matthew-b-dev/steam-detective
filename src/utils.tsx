@@ -35,6 +35,41 @@ const ROMAN_RE = new RegExp(
 export const arabicNumerals = (name: string): string =>
   name.replace(ROMAN_RE, (m) => ROMAN_TO_ARABIC[m]);
 
+// Spelled-out number form of a name: replaces English number words with Arabic digits.
+// "Half-Life 2: Episode One" -> "Half-Life 2: Episode 1"
+// Lets players type "episode 1" and find games whose titles use written-out numbers.
+const WORDS_TO_DIGITS: Record<string, string> = {
+  zero: '0',
+  one: '1',
+  two: '2',
+  three: '3',
+  four: '4',
+  five: '5',
+  six: '6',
+  seven: '7',
+  eight: '8',
+  nine: '9',
+  ten: '10',
+  eleven: '11',
+  twelve: '12',
+  thirteen: '13',
+  fourteen: '14',
+  fifteen: '15',
+  sixteen: '16',
+  seventeen: '17',
+  eighteen: '18',
+  nineteen: '19',
+  twenty: '20',
+};
+
+const WORDS_RE = new RegExp(
+  `\\b(${Object.keys(WORDS_TO_DIGITS).join('|')})\\b`,
+  'gi',
+);
+
+export const digitNumerals = (name: string): string =>
+  name.replace(WORDS_RE, (m) => WORDS_TO_DIGITS[m.toLowerCase()]);
+
 // Subtitle configuration
 export interface SubtitleConfig {
   content: ReactNode;

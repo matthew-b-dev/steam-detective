@@ -46,14 +46,14 @@ export const steamGameDetails: SteamGameMap = {
     name: 'Half-Life 2: Episode Two',
     appId: 420,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/420/ss_d2964cd9bd36406c4c3b2a90c21ab3d6ba0e6cca.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/420/ss_e69f62707e63558e234cd2e4f1a00315b6ed61bd.600x338.jpg',
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/420/ss_1e01dc71d9abed491e89b1c1393164da6061f377.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/420/ss_3ce99d4845ca60b795c5577372d25a382f2bb954.600x338.jpg',
     shortDescription:
-      '||Half-Life 2: Episode Two|| is the second in a trilogy of new games created by Valve that extends the award-winning and best-selling Half-Life adventure. As Dr. Gordon Freeman, you were last seen exiting City 17 with Alyx Vance as the Citadel erupted amidst a storm of unknown proportions.',
+      '||Half-Life 2: Episode Two|| is the second in a trilogy of new games created by Valve that extends the award-winning and best-selling ||Half-Life|| adventure. As Dr. ||Gordon Freeman||, you were last seen exiting City 17 with ||Alyx|| Vance as the Citadel erupted amidst a storm of unknown proportions.',
     releaseDate: 'Oct 10, 2007',
-    developer: 'Valve',
-    publisher: 'Valve',
+    developer: '||Valve||',
+    publisher: '||Valve||',
     tags: [],
     features: [],
     allReviewSummary: {
@@ -77,7 +77,35 @@ export const steamGameDetails: SteamGameMap = {
       'Great Soundtrack',
       'Dystopian',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: [
+      'Sci-fi',
+      'First-Person',
+      'Classic',
+      'Adventure',
+      'Aliens',
+      'Action',
+      'Story Rich',
+    ],
+    screenshotLetterbox: true,
+    overrideCensoredTitle: 'H||alf||-L||ife 2||: E||pisode|| ||Tw||o',
+    clueOrder: ['details+tags', 'review', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
+    reviewClues: [
+      {
+        review:
+          'the store description still says "new trilogy of games" :( still waiting for the next one almost 20 years later',
+        votedUp: true,
+        votesUp: 1,
+        weightedScore: undefined,
+        authorPlaytimeHours: 8.9,
+        timestamp: 1771367388,
+      },
+    ],
+    moreFromThisDeveloper: [{ id: 583950, name: 'Artifact' }],
+    developerDescription:
+      "||Valve's|| debut title, ||Half-Life||, was released in 19||98||. Since then, we've released dozens of titles that changed the world (and one that didn't). Today, ||millions of|| people play our games every day.",
   },
   '440': {
     name: 'Team Fortress 2',
@@ -2883,13 +2911,14 @@ export const steamGameDetails: SteamGameMap = {
     name: 'The Sims 3',
     appId: 47890,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/47890/ss_88f5012197f111d3eb60dfe2788c1abb13bfcbed.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/47890/ss_1d3690a6f52a700d5ef0f5a0929e58674cc95eb6.600x338.jpg',
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/47890/ss_445ee935552da8d81a043b9d5dd26061e9679682.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/47890/ss_1f0684c76b6ae09f15ff3b5d1a4cc8eee46a211c.600x338.jpg',
     shortDescription:
-      '||The Sims 3||: Create the perfect world with full customization at your fingertips. Refine personalities and help fulfill destinies.',
+      "Play with Life. Create the lives you've always wanted!\nReady to live a freer, more creative life? In ||The Sims 3||, you can let your fantasies run wild as you design your ideal world.",
+    originalReleaseDate: 'Jun 2, 2009',
     releaseDate: 'Jan 27, 2011',
-    developer: 'The ||Sims|| Studio',
+    developer: '||The Sims Studio, Maxis||',
     publisher: 'Electronic Arts',
     tags: [],
     features: [],
@@ -2914,7 +2943,29 @@ export const steamGameDetails: SteamGameMap = {
       'Adventure',
       'Replay Value',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: [
+      'Life Sim',
+      'Sandbox',
+      'Building',
+      'Romance',
+      'Casual',
+      'Simulation',
+      'Character Customization',
+    ],
+    blurScreenshotQuarter: 'bottom',
+    overrideCensoredTitle: 'T||he|| Si||ms|| ||3||',
+    clueOrder: ['details+tags', 'review', 'desc'],
+    reviewClues: [
+      {
+        review:
+          'This is the best of ||The Sims|| games. However, in 2021 it is not worth the price tag. To own everything would cost you almost $500.00 when not on sale. ... (edited for length)',
+        votedUp: false,
+        votesUp: 176,
+        weightedScore: undefined,
+        authorPlaytimeHours: 355.2,
+        timestamp: 1618286400,
+      },
+    ],
   },
   '48000': {
     name: 'LIMBO',
@@ -10441,7 +10492,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/253230/ss_eb442a7301b8a0d8e94c4064575ebe68d77deb12.600x338.jpg',
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/253230/ss_b9a71f27ac4c7428666490065b872087c9d8cacb.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/253230/ss_40164f47cf9968dca15a1e70547bf286b32b93c1.600x338.jpg',
     shortDescription:
       '||A Hat in Time|| is a cute-as-heck 3D platformer featuring a little girl who stitches hats for wicked powers! Freely explore giant worlds and recover Time Pieces to travel to new heights!',
     releaseDate: 'Oct 5, 2017',
@@ -10470,7 +10521,23 @@ export const steamGameDetails: SteamGameMap = {
       'Co-op',
       'Moddable',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: ['Female Protagonist'],
+    overrideCensoredTitle: '||A|| H||at|| i||n|| Ti||me||',
+    clueOrder: ['review', 'details+tags', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Medium',
+    reviewClues: [
+      {
+        review:
+          'Fantastic kickstarter game. Inspired by games like Super Mario Sunshine with an art style reminiscent of Wind Waker, it’s a great, cute, intense, and occasionally scary time. ... (edited for length)',
+        votedUp: true,
+        votesUp: 104,
+        weightedScore: undefined,
+        authorPlaytimeHours: 103.3,
+        timestamp: 1508284800,
+      },
+    ],
   },
   '253250': {
     name: 'Stonehearth',
@@ -32171,13 +32238,15 @@ export const steamGameDetails: SteamGameMap = {
   },
   '847370': {
     name: 'Sunset Overdrive',
+    overrideCensoredTitle: 'Su||nset|| Ov||erdriv||e',
     appId: 847370,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/847370/ss_bc4e90bd5505c06e70f58ae96b12f6be4835c0eb.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/847370/ss_fdd2c21037567f512f15e85a285e62f94a554ccf.600x338.jpg',
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/847370/ss_02db5be67f3a355e70eae25464d0ee3a4c2d0161.600x338.jpg',
     shortDescription:
       '||Sunset Overdrive|| transforms an open-world apocalypse into your tactical playground. Zip, grind and wall-run across ||Sunset|| City with an unconventional arsenal. Hyper-agility, unique weapons, and customizable abilities deliver an explosive and irreverent adventure in the end times.',
+    originalReleaseDate: 'Oct 28, 2014',
     releaseDate: 'Nov 16, 2018',
     developer: 'Insomniac Games',
     publisher: 'Xbox Game Studios',
@@ -32191,7 +32260,7 @@ export const steamGameDetails: SteamGameMap = {
       'Open World',
       'Action',
       'Parkour',
-      'Character Customization',
+      'Zombies',
       'Third-Person Shooter',
       'Funny',
       'Adventure',
@@ -32199,12 +32268,26 @@ export const steamGameDetails: SteamGameMap = {
       'Comedy',
       'Violent',
       'Colorful',
-      'Zombies',
       'Post-apocalyptic',
       'Great Soundtrack',
       'Third Person',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    clueOrder: ['review', 'details', 'tags', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Hard',
+    reviewClues: [
+      {
+        review:
+          '[...] vulgar nonsense loosely strung together by a bonkers plot about energy drink zombie monsters and evil corporate ||robots|| ... (edited for length)',
+        votedUp: false,
+        votesUp: 159,
+        votedFunny: 18,
+        weightedScore: undefined,
+        authorPlaytimeHours: 95.8,
+        timestamp: 1547096400,
+      },
+    ],
   },
   '848450': {
     name: 'Subnautica: Below Zero',
