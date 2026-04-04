@@ -34368,7 +34368,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/960910/ss_1d8c498b4e3efc5faf10e327dfc2397146a04c75.600x338.jpg',
     shortDescription:
-      'Experience a gripping psychological thriller filled with innumerable twists and turns. The hunt is on for a murderer known only as the Origami Killer. Four characters, each following their own leads, must take part in a desperate attempt to prevent the killer from claiming a new victim.',
+      'Experience a gripping psychological thriller filled with innumerable twists and turns. The hunt is on for a murderer known only as the ||Origami|| Killer. Four characters, each following their own leads, must take part in a desperate attempt to prevent the killer from claiming a new victim.',
     originalReleaseDate: 'Feb 23, 2010 (PS3)',
     releaseDate: 'Jun 18, 2020',
     developer: '||Quantic Dream||',
