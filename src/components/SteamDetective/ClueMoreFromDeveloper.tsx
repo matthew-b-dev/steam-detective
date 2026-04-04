@@ -177,6 +177,10 @@ export const ClueMoreFromDeveloper: React.FC<ClueMoreFromDeveloperProps> = ({
                     maxWidth: 180,
                   }}
                 >
+                  {/* Game title above image */}
+                  <div className='text-white text-[10px] text-center truncate mb-0.5 w-full select-none'>
+                    {game.blurred && !isComplete ? '???' : game.name || ''}
+                  </div>
                   <img
                     src={
                       game.blurred && !isComplete

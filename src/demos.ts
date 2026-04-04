@@ -420,6 +420,12 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile4: 'The Sims 3',
   },
   '2026-04-05': {
+    caseFile1: 'DayZ',
+    caseFile2: 'SIGNALIS',
+    caseFile3: 'A Short Hike',
+    caseFile4: 'Heavy Rain',
+  },
+  '2026-04-06': {
     caseFile1: 'Suicide Squad: Kill the Justice League',
     caseFile2: 'Fields of Mistria',
     caseFile3: "Don't Starve",
@@ -427,9 +433,12 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
   },
 };
 
-// 4/5 Hard: Shadow Tactics: Blades of the Shogun
-// 4/5 Final: Enter the Gungeon
+// 4/6 Hard: Dome Keeper (Fully refined)
+// 4/6 Final: Enter the Gungeon
 
+// Easy (Inevitable): Goat Simulator 3
+// Easy (Inevitable): LEGO Batman: The Videogame
+// Easy (155k): BattleBit Remastered
 // Easy: Star Wars Battlefront II
 // Easy: Remnant II
 // Easy: State of Decay 2
@@ -441,15 +450,10 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
 // Med: WEBFISHING (60k rev)? needs work
 // Med: Tropico 4 (Last Tropico 3/15)
 // Med: Clustertruck
-// Med: Detroit: Become Human or Heavy Rain and show other games from this Dev, but blur Quantic Dream
-// Med (30k): SIGNALIS
 
-// Hard (13k): Sunset Overdrive
+// Shadow Tactics: Blades of the Shogun
 // Hard: Albion Online
 // Hard (Fully Refined): Tales of Arise
 // Hard: Bomb Rush Cyberfunk
 // Hard: What Remains of Edith Finch (50k rev)
 // Hard: Darwin Project
-
-// April 1st: Skyrim: thumbs down review "the game doesnt work the horse flies"
-// April 1st: "GWENT: The Witcher Card Game" , show 2020 CD Projekt Red

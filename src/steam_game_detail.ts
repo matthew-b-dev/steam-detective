@@ -6760,9 +6760,9 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/221100/ss_bf0e5d5538d95a1cb943a7963489ba4df2782942.600x338.jpg',
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/221100/ss_4b71f0ac633c88e8af8de1c4eec0b5b263f989cc.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/221100/ss_9517bb26b6811f70b5b19ece4bce3e90452378d3.600x338.jpg',
     shortDescription:
-      'How long can you survive a post-apocalyptic world? A land overrun with an infected &quot;zombie&quot; population, where you compete with other survivors for limited resources. Will you team up with strangers and stay strong together? Or play as a lone wolf to avoid betrayal? This is ||DayZ|| – this is your story.',
+      'How long can you survive a post-apocalyptic world? A land overrun with an infected "zombie" population, where you compete with other survivors for limited resources. Will you team up with strangers and stay strong together? Or play as a lone wolf to avoid betrayal? This is ||DayZ|| – this is your story.',
     releaseDate: 'Dec 13, 2018',
     developer: 'Bohemia Interactive',
     publisher: 'Bohemia Interactive',
@@ -6789,7 +6789,22 @@ export const steamGameDetails: SteamGameMap = {
       'Survival Horror',
       'Co-op',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    overrideCensoredTitle: '||D||a||y||Z',
+    clueOrder: ['review', 'desc', 'details+tags'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
+    reviewClues: [
+      {
+        review:
+          'a survival game where you spawn with a glow stick, a piece of fruit, and the confidence of a man who will be dead in 7 minutes.\n\n||Zombies||? Mild inconvenience.\nOther players? War criminals.\n... (edited for length)',
+        votedUp: true,
+        votesUp: 105,
+        weightedScore: undefined,
+        authorPlaytimeHours: 1520.3,
+        timestamp: 1770658870,
+      },
+    ],
   },
   '221260': {
     name: 'Little Inferno',
@@ -32238,7 +32253,6 @@ export const steamGameDetails: SteamGameMap = {
   },
   '847370': {
     name: 'Sunset Overdrive',
-    overrideCensoredTitle: 'Su||nset|| Ov||erdriv||e',
     appId: 847370,
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/847370/ss_fdd2c21037567f512f15e85a285e62f94a554ccf.600x338.jpg',
@@ -32272,6 +32286,7 @@ export const steamGameDetails: SteamGameMap = {
       'Great Soundtrack',
       'Third Person',
     ],
+    overrideCensoredTitle: 'Su||nset|| Ov||erdriv||e',
     clueOrder: ['review', 'details', 'tags', 'desc'],
     debugProcessed: true,
     debugRefined: true,
@@ -34349,14 +34364,15 @@ export const steamGameDetails: SteamGameMap = {
     name: 'Heavy Rain',
     appId: 960910,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/960910/ss_d7ed4a5e3d155e23331902909f56f90c752c3643.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/960910/ss_7cbb3063e3473239471d26fb54a5511e5a30ef3d.600x338.jpg',
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/960910/ss_f123d7bbd8c3e55ad42b3048be0d9685cab4bc6a.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/960910/ss_1d8c498b4e3efc5faf10e327dfc2397146a04c75.600x338.jpg',
     shortDescription:
       'Experience a gripping psychological thriller filled with innumerable twists and turns. The hunt is on for a murderer known only as the Origami Killer. Four characters, each following their own leads, must take part in a desperate attempt to prevent the killer from claiming a new victim.',
+    originalReleaseDate: 'Feb 23, 2010 (PS3)',
     releaseDate: 'Jun 18, 2020',
-    developer: 'Quantic Dream',
-    publisher: 'Quantic Dream',
+    developer: '||Quantic Dream||',
+    publisher: '||Quantic Dream||',
     tags: [],
     features: [],
     allReviewSummary: {
@@ -34380,7 +34396,33 @@ export const steamGameDetails: SteamGameMap = {
       'Mystery',
       'Singleplayer',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: ['Quick-Time Events'],
+    overrideCensoredTitle: 'He||avy|| R||ai||n',
+    clueOrder: ['details', 'tags', 'desc', 'review'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
+    reviewClues: [
+      {
+        review: 'Jason? JASON!',
+        votedUp: true,
+        votesUp: 520,
+        votedFunny: 294,
+        weightedScore: undefined,
+        authorPlaytimeHours: 4.6,
+        timestamp: 1672290000,
+      },
+      {
+        review: 'Shaun!!!',
+        votedUp: true,
+        votesUp: 591,
+        votedFunny: 582,
+        weightedScore: undefined,
+        authorPlaytimeHours: 15.4,
+        timestamp: 1592452800,
+      },
+    ],
+    moreFromThisDeveloper: [{ id: 960990, name: 'Beyond: Two Souls' }],
   },
   '960990': {
     name: 'Beyond: Two Souls',
@@ -35810,7 +35852,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1055540/ss_0e864bf975bb71f238de6861fc8fd3d6ed6e4ce8.600x338.jpg',
     shortDescription:
-      '||Hike||, climb, and soar through the peaceful mountainside landscapes of Hawk Peak Provincial Park as you make your way to the summit.',
+      'Hike, climb, and soar through the peaceful mountainside landscapes of Hawk Peak Provincial Park as you make your way to the summit.',
     releaseDate: 'Jul 30, 2019',
     developer: 'adamgryu',
     publisher: 'adamgryu',
@@ -35837,7 +35879,20 @@ export const steamGameDetails: SteamGameMap = {
       'Beautiful',
       'Family Friendly',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: ['Short'],
+    overrideCensoredTitle: '||A|| Sh||ort|| H||ik||e',
+    clueOrder: ['review', 'details+tags', 'desc'],
+    reviewClues: [
+      {
+        review:
+          'One of my favourite little games I played this year. The most relaxing one for sure, with a nostalgic vibe for summers. Beachstickball forever!',
+        votedUp: true,
+        votesUp: 36,
+        weightedScore: undefined,
+        authorPlaytimeHours: 5,
+        timestamp: 1574830800,
+      },
+    ],
   },
   '1056640': {
     name: 'Phantasy Star Online 2 New Genesis',
@@ -40863,7 +40918,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1262350/ss_9d602346170b19121e4baec94f5fab54cc43637c.600x338.jpg',
     shortDescription:
-      'A classic survival horror experience set in a dystopian future where humanity has uncovered a dark secret. Unravel a cosmic mystery, escape terrifying creatures, and scavenge an off-world government facility as Elster, a technician Replika searching for her lost dreams.',
+      'A classic survival horror experience set in a dystopian future where humanity has uncovered a dark secret. Unravel a cosmic mystery, escape terrifying creatures, and scavenge an off-world government facility as ||Elster||, a technician ||Replika|| searching for ||her|| lost dreams.',
     releaseDate: 'Oct 27, 2022',
     developer: 'rose-engine',
     publisher: 'Humble Games',
@@ -40890,7 +40945,22 @@ export const steamGameDetails: SteamGameMap = {
       'Violent',
       'Action',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    overrideCensoredTitle: 'S||IG||NA||LI||S',
+    clueOrder: ['review', 'desc', 'details+tags'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Medium',
+    reviewClues: [
+      {
+        review:
+          "Do you like Evangelion, Monogatari, HP Lovecraft, Silent Hill 2, the original 3 Resident Evils, Ghost in the Shell, NieR Automata, Soma or Friedrich Nietzsche? \n\nIf it was yes to any of them buy it and don't read anything about it.",
+        votedUp: true,
+        votesUp: 400,
+        weightedScore: undefined,
+        authorPlaytimeHours: 9.6,
+        timestamp: 1687406400,
+      },
+    ],
   },
   '1262540': {
     name: 'Need for Speed',
@@ -41474,7 +41544,8 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1284410/ss_7698c5df9f72aca36dbca0f1b63eb29488f608e2.600x338.jpg',
     shortDescription:
-      'Command mighty ||Witcher||-world heroes in epic online PvP card battles!',
+      'Join in The ||Witcher|| universe’s favorite ||card|| game — available for free! Blending the ||CCG|| and ||TCG|| genres, ||GWENT|| sees you clash in fast-paced online PvP duels that combine bluffing, on-the-fly decision making and careful ||deck|| construction.',
+    originalReleaseDate: 'Oct 23, 2018 (GOG)',
     releaseDate: 'May 19, 2020',
     developer: 'CD PROJEKT RED',
     publisher: 'CD PROJEKT RED',
@@ -41494,14 +41565,22 @@ export const steamGameDetails: SteamGameMap = {
       'Trading Card Game',
       'PvP',
       'Fantasy',
-      'Singleplayer',
+      'Turn-Based',
       'Turn-Based',
       'Nudity',
       'Card Battler',
       'Sexual Content',
       'Great Soundtrack',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: ['Trading Card Game', 'Card Game', 'Deckbuilding'],
+    overrideCensoredTitle: 'GW||ENT||: T||he|| W||itcher|| C||ard|| G||ame||',
+    clueOrder: ['details', 'tags', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Medium',
+    moreFromThisDeveloper: [
+      { id: 973760, name: 'Thronebreaker: The Witcher Tales' },
+    ],
   },
   '1285670': {
     name: 'Post Void',
@@ -46233,9 +46312,9 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1637320/ss_f2a52537a6dc3458eadd0cfc40b3916b4eb70bae.600x338.jpg',
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1637320/ss_b3718daa8a5e9bc8deddf5057a4723f36d73c83f.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1637320/ss_7e8e99ca62ac48386cfa23b846c413ce311ce6c3.600x338.jpg',
     shortDescription:
-      'Defend against waves of alien monsters in this unique roguelike action miner. Dig for resources, collect useful gadgets, and upgrade equipment to increase odds of survival – just hurry back before your dome is destroyed!',
+      'Defend against waves of alien monsters in this unique roguelike action miner. Dig for resources, collect useful gadgets, and upgrade equipment to increase odds of survival – just hurry back before your ||dome|| is destroyed!',
     releaseDate: 'Sep 27, 2022',
     developer: 'Bippinbits',
     publisher: 'Raw Fury',
@@ -46249,7 +46328,7 @@ export const steamGameDetails: SteamGameMap = {
       'Singleplayer',
       'Post-apocalyptic',
       'Roguelike',
-      'Action',
+      '2D',
       'Sci-fi',
       'Combat',
       'Resource Management',
@@ -46262,7 +46341,22 @@ export const steamGameDetails: SteamGameMap = {
       'Physics',
       'Exploration',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    overrideCensoredTitle: 'D||om||e K||eepe||r',
+    clueOrder: ['details+tags', 'review', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Medium',
+    reviewClues: [
+      {
+        review:
+          "If the name 'Motherload' jingles any bells, you've come to the right place",
+        votedUp: true,
+        votesUp: 408,
+        weightedScore: undefined,
+        authorPlaytimeHours: 35.2,
+        timestamp: 1664251200,
+      },
+    ],
   },
   '1643320': {
     name: 'S.T.A.L.K.E.R. 2: Heart of Chornobyl',
