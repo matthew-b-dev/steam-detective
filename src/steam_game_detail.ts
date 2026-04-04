@@ -35885,7 +35885,7 @@ export const steamGameDetails: SteamGameMap = {
     reviewClues: [
       {
         review:
-          'One of my favourite little games I played this year. The most relaxing one for sure, with a nostalgic vibe for summers. Beachstickball forever!',
+          'One of my favourite little games released this year. The most relaxing one for sure, with a nostalgic vibe for summers. Beachstickball forever!',
         votedUp: true,
         votesUp: 36,
         weightedScore: undefined,
