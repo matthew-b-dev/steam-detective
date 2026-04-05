@@ -17,6 +17,7 @@ import {
   getRealUtcDateString,
   isDateSelectable,
   isLocalhost,
+  eventFiredThisSession,
 } from './utils';
 import { sendFeedback } from './lib/supabaseClient';
 import { getDateFromRoute } from './demos';
@@ -160,7 +161,10 @@ function App() {
                     className='text-gray-400 w-full justify-center hover:text-gray-300 transition-colors flex items-center gap-1 px-2 bg-transparent sm:border-1 sm:border-zinc-700 sm:px-3 sm:py-1'
                     onClick={() => {
                       setShowHelp(true);
-                      if (IS_PROD)
+                      if (
+                        IS_PROD &&
+                        !eventFiredThisSession('[Help] Opened how to Play')
+                      )
                         sendFeedback('custom', '`[Help]` Opened How To Play');
                     }}
                   >

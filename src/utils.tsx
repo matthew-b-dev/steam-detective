@@ -664,3 +664,21 @@ export const getPercentileMessage = (
     return `That's better than ${percentile}% of players.`;
   }
 };
+
+/**
+ * Tracks if an event has been fired in a session using sessionStorage.
+ * Returns true if this is the first time the event fires this session, false if already fired.
+ * This prevents duplicate events from being logged when a user repeatedly clicks the same button.
+ */
+export const eventFiredThisSession = (eventName: string): boolean => {
+  const key = `steam-detective-session-event-${eventName}`;
+
+  // Check if event was already fired this session
+  if (sessionStorage.getItem(key)) {
+    return true;
+  }
+
+  // Mark this event as fired for this session
+  sessionStorage.setItem(key, 'true');
+  return false;
+};
