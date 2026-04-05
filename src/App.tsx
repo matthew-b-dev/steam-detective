@@ -79,7 +79,7 @@ function App() {
       // On localhost, skip the selectable check to allow future dates
       if (
         routeDate === realToday ||
-        (!isLocalhost() &&
+        (IS_PROD &&
           !isDateSelectable(routeDate) &&
           !window?.location?.href?.includes('/admin'))
       ) {
@@ -177,7 +177,10 @@ function App() {
                     className='relative text-gray-400 w-full justify-center sm:mt-2 hover:text-gray-300 transition-colors flex items-center gap-1 px-2 bg-transparent sm:border-1 sm:border-zinc-700 sm:px-3 sm:py-1'
                     onClick={() => {
                       setShowStats(true);
-                      if (!isLocalhost())
+                      if (
+                        IS_PROD &&
+                        !eventFiredThisSession('[Event] Opened My Stats Modal')
+                      )
                         sendFeedback(
                           'custom',
                           '`[Event]` Opened My Stats Modal',
