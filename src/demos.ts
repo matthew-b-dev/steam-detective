@@ -426,6 +426,12 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile4: 'Heavy Rain',
   },
   '2026-04-06': {
+    caseFile1: 'A Way Out',
+    caseFile2: 'Journey',
+    caseFile3: 'Into the Breach',
+    caseFile4: 'Enter the Gungeon',
+  },
+  '2026-04-07': {
     caseFile1: 'Suicide Squad: Kill the Justice League',
     caseFile2: 'Fields of Mistria',
     caseFile3: "Don't Starve",
@@ -434,7 +440,6 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
 };
 
 // 4/6 Hard: Dome Keeper (Fully refined)
-// 4/6 Final: Enter the Gungeon
 
 // Easy (Inevitable): Goat Simulator 3
 // Easy (Inevitable): LEGO Batman: The Videogame
@@ -445,7 +450,6 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
 // Easy: Ghost of Tsushima DIRECTOR'S CUT (change name, add PS4 release)
 // Easy: Any AC Game (last 3/29): Revelations, Unity, (1), (2), Brotherhood, Rogue, Syndicate, Valhalla, Mirage
 
-// Med: Into the Breach
 // Med: Death's Door
 // Med: WEBFISHING (60k rev)? needs work
 // Med: Tropico 4 (Last Tropico 3/15)

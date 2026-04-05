@@ -14435,11 +14435,11 @@ export const steamGameDetails: SteamGameMap = {
     name: 'Enter the Gungeon',
     appId: 311690,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/311690/ss_bca0036bc452b872a7d9ee3de9e0c9548e8cd4f5.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/311690/ss_16e5c40621bfb6bfe2b9c010861850595e180e48.600x338.jpg',
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/311690/ss_9d3f304b18e8cd1cf6ac4a886bec474e0b677800.600x338.jpg',
     shortDescription:
-      "||Enter the Gungeon|| is a bullet hell dungeon crawler following a band of misfits seeking to shoot, loot, dodge roll and table-flip their way to personal absolution by reaching the legendary ||Gungeon||'s ultimate treasure: the gun that can kill the past.",
+      "||Enter|| the ||Gungeon|| is a ||bullet|| hell dungeon crawler following a band of misfits seeking to ||shoot||, loot, dodge roll and ||table||-flip their way to personal absolution by reaching the legendary ||Gungeon||'s ultimate treasure: the ||gun|| that can kill the past.",
     releaseDate: 'Apr 5, 2016',
     developer: 'Dodge Roll',
     publisher: 'Devolver Digital',
@@ -14466,7 +14466,22 @@ export const steamGameDetails: SteamGameMap = {
       'Top-Down',
       'Shooter',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    overrideCensoredTitle: 'E||nter|| t||he|| Gu||ngeo||n',
+    clueOrder: ['review', 'details', 'desc', 'tags'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Medium',
+    reviewClues: [
+      {
+        review:
+          '★★★★★\n\nThere is a ||gun|| called Bullet that fires rotating ||gun||s which fire streams of bullets.',
+        votedUp: true,
+        votesUp: 6,
+        weightedScore: undefined,
+        authorPlaytimeHours: 31.2,
+        timestamp: 1770796509,
+      },
+    ],
   },
   '312520': {
     name: 'Rain World',
@@ -25897,7 +25912,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/590380/ss_edc919f964fd053441967b89592bc930a65f4171.600x338.jpg',
     shortDescription:
-      'Control powerful mechs from the future to defeat an alien threat. Each attempt to save the world presents a new randomly generated challenge in this turn-based strategy game.',
+      'Control powerful ||mechs|| from the future to defeat an ||alien|| threat. Each attempt to save the world presents a new randomly generated challenge in this turn-based strategy game.',
     releaseDate: 'Feb 27, 2018',
     developer: 'Subset Games',
     publisher: 'Subset Games',
@@ -25908,14 +25923,14 @@ export const steamGameDetails: SteamGameMap = {
       rating: 'Very Positive',
     },
     userTags: [
-      'Strategy',
       'Turn-Based Strategy',
       'Indie',
       'Turn-Based Tactics',
       'Pixel Graphics',
       'Mechs',
+      'Aliens',
       'Roguelike',
-      'Turn-Based',
+      'Strategy',
       'Puzzle',
       'Roguelite',
       'Sci-fi',
@@ -25924,7 +25939,31 @@ export const steamGameDetails: SteamGameMap = {
       'Turn-Based Combat',
       'Isometric',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    overrideCensoredTitle: 'I||n||t||o|| t||he|| Br||each||',
+    clueOrder: ['review', 'details', 'desc', 'tags'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Hard',
+    reviewClues: [
+      {
+        review: 'Playing billiards on the chessboard.',
+        votedUp: true,
+        votesUp: 66,
+        votedFunny: 27,
+        weightedScore: undefined,
+        authorPlaytimeHours: 36.9,
+        timestamp: 1592280000,
+      },
+      {
+        review: 'i want rusting hulks plushies',
+        votedUp: true,
+        votesUp: 22,
+        weightedScore: undefined,
+        authorPlaytimeHours: 42.4,
+        timestamp: 1715832000,
+      },
+    ],
+    moreFromThisDeveloper: [{ id: 212680, name: 'FTL: Faster Than Light' }],
   },
   '594570': {
     name: 'Total War: WARHAMMER II',
@@ -27691,9 +27730,9 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/638230/ss_d4c7bfb15df749b78b6957320a4a23d71d531858.600x338.jpg',
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/638230/ss_c7741b2d22bdd5e5765816c9ef1b1e675616ce81.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/638230/ss_90dde9d4701385c7c7ffe22569ed1855b118ea4c.600x338.jpg',
     shortDescription:
-      'Explore the ancient, mysterious world of ||Journey|| as you soar above ruins and glide across sands to discover its secrets.',
+      'Explore the ancient, mysterious world of ||Journey|| as you soar above ruins and glide across sands to discover its secrets. Play alone or in the company of a fellow traveler and explore its vast world together. Featuring stunning visuals and a Grammy-nominated musical score, ||Journey|| delivers a breathtaking experience like no other. ',
     releaseDate: 'Jun 11, 2020',
     developer: 'thatgamecompany',
     publisher: 'Annapurna Interactive',
@@ -27713,14 +27752,41 @@ export const steamGameDetails: SteamGameMap = {
       'Great Soundtrack',
       'Co-op',
       'Walking Simulator',
-      'Multiplayer',
+      'Short',
       'Casual',
       'Story Rich',
       'Stylized',
       'Music',
       'Family Friendly',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    clueOrder: ['details+tags', 'review', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Medium',
+    reviewClues: [
+      {
+        review:
+          'Played through a beautiful game, which was able to evoke emotions without a single word. Met a companion along the way I affectionately nicknamed "Cornerdot" because of the symbol in their chime. Reached the end together, cried for 10 minutes.\n\nI cannot recommend making ||the journey|| at least once enough. Do yourself a favour and get it.',
+        votedUp: true,
+        votesUp: 12,
+        weightedScore: undefined,
+        authorPlaytimeHours: 2.6,
+        timestamp: 1770498660,
+      },
+      {
+        review:
+          'Whoever played with me and drew a heart at the end... I will never forget you. played with me from start to finish T_T',
+        votedUp: true,
+        votesUp: 1010,
+        weightedScore: undefined,
+        authorPlaytimeHours: 1.7,
+        timestamp: 1604638800,
+      },
+    ],
+    moreFromThisDeveloper: [
+      { id: 2325290, name: 'Sky: Children of the Light' },
+      { id: 966330, name: 'Flower' },
+    ],
   },
   '640820': {
     name: 'Pathfinder: Kingmaker',
@@ -39694,6 +39760,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1222700/ss_55237e6d80cf3f9e2f3f0fa41d710a7ea35b022b.600x338.jpg',
     shortDescription:
       '||A Way Out|| is an exclusively co-op adventure where you play the role of one of two prisoners making their daring escape from prison.',
+    originalReleaseDate: 'Mar 23, 2018 (Origin Store)',
     releaseDate: 'Jun 18, 2020',
     developer: 'Hazelight Studios',
     publisher: 'Electronic Arts',
@@ -39720,7 +39787,30 @@ export const steamGameDetails: SteamGameMap = {
       'Atmospheric',
       'Nudity',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: [
+      'Crime',
+      'Adventure',
+      'Action',
+      'Action-Adventure',
+      'Split Screen',
+    ],
+    overrideCensoredTitle: '||A|| Wa||y|| O||ut||',
+    clueOrder: ['review', 'details+tags', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
+    reviewClues: [
+      {
+        review:
+          '"♥♥♥♥ the Oscars" ? honestly he wasnt wrong. This was by far my favourite cinematic experience of 2018. dont care that we had to wait a couple years for Origin store exclusivity to fall off',
+        votedUp: true,
+        votesUp: 210,
+        votedFunny: 80,
+        weightedScore: undefined,
+        authorPlaytimeHours: 8.2,
+        timestamp: 1592697600,
+      },
+    ],
   },
   '1222730': {
     name: 'STAR WARS: Squadrons',
