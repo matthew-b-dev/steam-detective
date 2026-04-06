@@ -1617,11 +1617,11 @@ export const steamGameDetails: SteamGameMap = {
     name: 'LEGO Batman: The Videogame',
     appId: 21000,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/21000/0000005467.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/21000/0000005473.600x338.jpg',
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/21000/0000005468.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/21000/0000005474.600x338.jpg',
     shortDescription:
-      'When all the villains in Arkham Asylum team up and break loose, only the dynamic duo is bold enough to take them on to save Gotham City. The fun of ||LEGO||, the drama of ||Batman|| and the uniqueness of the combination makes for a comical and exciting adventure in ||LEGO Batman: The Videogame||.',
+      'When all the villains in ||Arkham Asylum|| team up and break loose, only the dynamic duo is bold enough to take them on to save ||Gotham|| City. The fun of LEGO, the drama of ||Batman|| and the uniqueness of the combination makes for a comical and exciting adventure in LEGO ||Batman: The Videogame||.',
     releaseDate: 'Sep 29, 2008',
     developer: "Traveller's Tales",
     publisher: 'Warner Bros. Interactive Entertainment',
@@ -1648,7 +1648,19 @@ export const steamGameDetails: SteamGameMap = {
       'Third Person',
       'Controller',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: ['Superhero'],
+    clueOrder: ['review', 'details+tags', 'desc'],
+    reviewClues: [
+      {
+        review:
+          "[...] It serves as an excellent introduction to both the licensed ||LEGO|| titles developed by Traveler's Tales and the various interpretations of ||the Batman mythos|| from ||DC Comics||, and if you're a fan of either, I'd be rather stunned if you didn't enjoy this.\n\nIt's your standard ||Batman|| plot. This one is not ripped from any existing film or ||comic||, but is instead a new situation made to send you through as much of ||LEGO Gotham|| as it can, as the dynamic duo of ||Batman|| and ||Robin||. ... (edited for length)",
+        votedUp: true,
+        votesUp: 66,
+        weightedScore: undefined,
+        authorPlaytimeHours: 29.8,
+        timestamp: 1414209600,
+      },
+    ],
   },
   '21690': {
     name: 'Resident Evil 5',
@@ -20184,8 +20196,8 @@ export const steamGameDetails: SteamGameMap = {
     shortDescription:
       '||Spelunky 2|| builds upon the unique, randomized challenges that made the original a roguelike classic, offering a huge adventure designed to satisfy players old and new. Meet the next generation of explorers as they find themselves on the Moon, searching for treasure and missing family.',
     releaseDate: 'Sep 29, 2020',
-    developer: 'Mossmouth',
-    publisher: 'Mossmouth',
+    developer: '||Mossmouth||',
+    publisher: '||Mossmouth||',
     tags: [],
     features: [],
     allReviewSummary: {
@@ -20209,7 +20221,14 @@ export const steamGameDetails: SteamGameMap = {
       '2D',
       'Side Scroller',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    overrideCensoredTitle: 'S||pelunk||y 2',
+    clueOrder: ['details', 'tags', 'desc'],
+    moreFromThisDeveloper: [
+      { id: 1147860, name: 'UFO 50' },
+      { id: 239350, name: 'Spelunky', blurred: true },
+    ],
+    developerDescription:
+      'My name is ||Derek Yu||. In 2009, I created ||Mossmouth|| as my personal studio where I can collaborate with cool people to make exciting, dense games full of surprises.',
   },
   '420290': {
     name: 'Blackwake',
@@ -32419,11 +32438,12 @@ export const steamGameDetails: SteamGameMap = {
     name: 'Goat Simulator 3',
     appId: 850190,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/850190/ss_88ddec97bc688866e9f721bfec70ba789d1b24b2.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/850190/ss_712025982bb09e2e6cf5c5d4387f5e20681d573e.600x338.jpg',
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/850190/ss_62ea64e6444e595117eb355d6a7b76c7c131246a.600x338.jpg',
     shortDescription:
       "Pilgor's baaack! Gather your herd and venture forth into ||Goat Simulator 3||; an all-new (at least on Steam), totally realistic, sandbox farmyard experience. Invite up to three friends in local or online co-op, create carnage as a team, or compete in mini-games and then not be friends anymore.",
+    originalReleaseDate: 'Nov 17, 2022 (Epic Store)',
     releaseDate: 'Feb 15, 2024',
     developer: 'Coffee Stain North',
     publisher: 'Coffee Stain Publishing',
@@ -32450,7 +32470,28 @@ export const steamGameDetails: SteamGameMap = {
       'Adventure',
       'Colorful',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    overrideCensoredTitle: 'Go||at|| S||imulato||r 3',
+    clueOrder: ['details+tags', 'desc', 'review'],
+    reviewClues: [
+      {
+        review:
+          'GTA minus the 18+ content and you play as a ||goat||.I highly recommend this game.',
+        votedUp: true,
+        votesUp: 230,
+        weightedScore: undefined,
+        authorPlaytimeHours: 442.8,
+        timestamp: 1710046800,
+      },
+      {
+        review:
+          "I play this game with my kid and his laughter is worth every penny I spent on this. It's great. Get crazy and enjoy the ridiculousness. And it plays great on the steam deck.",
+        votedUp: true,
+        votesUp: 798,
+        weightedScore: undefined,
+        authorPlaytimeHours: 46.7,
+        timestamp: 1717387200,
+      },
+    ],
   },
   '851100': {
     name: 'Touhou Luna Nights',
@@ -44222,11 +44263,11 @@ export const steamGameDetails: SteamGameMap = {
     name: 'Pacific Drive',
     appId: 1458140,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1458140/ss_a753a13813556eb20e02763e82877485dac848ab.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1458140/ss_d3a7abac1b8cc4a09aff0ff023998c6aa0404c3c.600x338.jpg',
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1458140/ss_7dfb1b9087a859b49debadb941269f971b212277.600x338.jpg',
     shortDescription:
-      'Face the supernatural dangers of the Olympic Exclusion Zone with a car as your only lifeline in this driving survival adventure! Scavenge resources, load up your trusty station wagon, and drive like hell to make it through alive.',
+      'Face the supernatural dangers of the Olympic Exclusion Zone with a ||car|| as your only lifeline in this ||driving|| survival adventure! Scavenge resources, load up your trusty ||station wagon||, and ||drive|| like hell to make it through alive.',
     releaseDate: 'Feb 21, 2024',
     developer: 'Ironwood Studios',
     publisher: 'Kepler Interactive',
@@ -44253,7 +44294,24 @@ export const steamGameDetails: SteamGameMap = {
       'Transportation',
       '3D',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: ['Driving'],
+    overrideCensoredTitle: 'P||acifi||c D||riv||e',
+    clueOrder: ['desc', 'details+tags', 'review'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Medium',
+    reviewClues: [
+      {
+        review:
+          'I like cars and modifying them. I like drives in the wilderness. I like survival games. Yeah, I should play a survival game about modifying and driving a station wagon. There are some "obstacles" to avoid. No problem. I\'ve played Mario Kart. [...] This... This is a horror game. ... (edited for length)',
+        votedUp: true,
+        votesUp: 279,
+        votedFunny: 25,
+        weightedScore: undefined,
+        authorPlaytimeHours: 47.2,
+        timestamp: 1733374800,
+      },
+    ],
   },
   '1462040': {
     name: 'FINAL FANTASY VII REMAKE INTERGRADE',

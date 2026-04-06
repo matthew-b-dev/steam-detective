@@ -432,6 +432,12 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile4: 'Enter the Gungeon',
   },
   '2026-04-07': {
+    caseFile1: 'LEGO Batman: The Videogame',
+    caseFile2: 'Spelunky 2',
+    caseFile3: 'Pacific Drive',
+    caseFile4: 'Goat Simulator 3',
+  },
+  '2026-04-08': {
     caseFile1: 'Suicide Squad: Kill the Justice League',
     caseFile2: 'Fields of Mistria',
     caseFile3: "Don't Starve",
@@ -441,8 +447,6 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
 
 // 4/6 Hard: Dome Keeper (Fully refined)
 
-// Easy (Inevitable): Goat Simulator 3
-// Easy (Inevitable): LEGO Batman: The Videogame
 // Easy (155k): BattleBit Remastered
 // Easy: Star Wars Battlefront II
 // Easy: Remnant II
@@ -458,6 +462,5 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
 // Shadow Tactics: Blades of the Shogun
 // Hard: Albion Online
 // Hard (Fully Refined): Tales of Arise
-// Hard: Bomb Rush Cyberfunk
 // Hard: What Remains of Edith Finch (50k rev)
 // Hard: Darwin Project
