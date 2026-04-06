@@ -885,7 +885,6 @@ export const dummyGames: string[] = [
   'THE HOUSE OF THE DEAD: Remake',
   'Atari 50: The Anniversary Celebration',
   'MultiVersus',
-  'Goat Simulator 3',
   'Persona 4 Arena Ultimax',
   'Cursed to Golf',
   'Fobia - St. Dinfna Hotel',
