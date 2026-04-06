@@ -1653,7 +1653,7 @@ export const steamGameDetails: SteamGameMap = {
     reviewClues: [
       {
         review:
-          "[...] It serves as an excellent introduction to both the licensed ||LEGO|| titles developed by Traveler's Tales and the various interpretations of ||the Batman mythos|| from ||DC Comics||, and if you're a fan of either, I'd be rather stunned if you didn't enjoy this.\n\nIt's your standard ||Batman|| plot. This one is not ripped from any existing film or ||comic||, but is instead a new situation made to send you through as much of ||LEGO Gotham|| as it can, as the dynamic duo of ||Batman|| and ||Robin||. ... (edited for length)",
+          "[...] It serves as an excellent introduction to both the licensed ||LEGO|| titles developed by Traveler's Tales and the various interpretations of ||the Batman mythos|| from ||DC Comics||, and if you're a fan of either, I'd be rather stunned if you didn't enjoy this.\n\nIt's your standard ||Batman|| plot. This one is not ripped from any existing film or ||comic||, but is instead a new situation made to send you through as much of ||LEGO Gotham|| as it can, as the ||dynamic|| duo of ||Batman|| and ||Robin||. ... (edited for length)",
         votedUp: true,
         votesUp: 66,
         weightedScore: undefined,
