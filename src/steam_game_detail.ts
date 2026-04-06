@@ -32471,7 +32471,7 @@ export const steamGameDetails: SteamGameMap = {
       'Colorful',
     ],
     blurredUserTags: ['Comedy'],
-    overrideCensoredTitle: 'Go||at|| S||imulato||r 3',
+    overrideCensoredTitle: 'G||oat|| S||imulato||r 3',
     clueOrder: ['details+tags', 'desc', 'review'],
     reviewClues: [
       {
