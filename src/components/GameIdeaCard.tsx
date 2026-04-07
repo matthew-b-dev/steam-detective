@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { XMarkIcon, LinkIcon } from '@heroicons/react/16/solid';
 import {
@@ -75,6 +75,18 @@ const GameIdeaModal: React.FC<{ onClose: () => void }> = ({ onClose }) => {
   const todayUtc = new Date().toISOString().slice(0, 10);
   const alreadyUsed =
     appInDetails && (alreadyUsedDate === null || alreadyUsedDate <= todayUtc);
+
+  const loggedAlreadyUsedRef = useRef<string | null>(null);
+  useEffect(() => {
+    if (alreadyUsed && appId && appId !== loggedAlreadyUsedRef.current) {
+      loggedAlreadyUsedRef.current = appId;
+      if (!isLocalhost())
+        sendFeedback(
+          'custom',
+          `\`[Event]\` User suggested ${alreadyUsedName} (${appId}), but that game has already been used.`,
+        );
+    }
+  }, [alreadyUsed, appId, alreadyUsedName]);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
