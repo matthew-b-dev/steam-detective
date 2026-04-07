@@ -25546,14 +25546,14 @@ export const steamGameDetails: SteamGameMap = {
     name: 'Artifact',
     appId: 583950,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/583950/ss_e40697729d577fe36d2eeea914d9c0d8c75dee34.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/583950/ss_833b2ec2ff0a54cf034e78128d8ba6080e42497d.600x338.jpg',
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/583950/ss_d74d6455fc2ff87e98103552d01b22d62139e1c2.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/583950/ss_e40697729d577fe36d2eeea914d9c0d8c75dee34.600x338.jpg',
     shortDescription:
       '||Artifact|| now features two games: ||Artifact|| Classic, the original Dota 2 trading card game, and ||Artifact|| Foundry, a special edition with streamlined gameplay, new cards, new single-player content, and an improved new player experience.',
     releaseDate: 'Nov 28, 2018',
-    developer: 'Valve',
-    publisher: 'Valve',
+    developer: '||Valve||',
+    publisher: '||Valve||',
     tags: [],
     features: [],
     allReviewSummary: {
@@ -25577,7 +25577,20 @@ export const steamGameDetails: SteamGameMap = {
       'Casual',
       'Turn-Based',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    clueOrder: ['ss', 'details+tags', 'review', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Medium',
+    reviewClues: [
+      {
+        review: 'Gabe bring ||Artifact|| back!',
+        votedUp: true,
+        votesUp: 0,
+        weightedScore: undefined,
+        authorPlaytimeHours: 1.5,
+        timestamp: 1771879918,
+      },
+    ],
   },
   '584400': {
     name: 'Sonic Mania',
@@ -28511,12 +28524,13 @@ export const steamGameDetails: SteamGameMap = {
     name: 'BattleBit Remastered',
     appId: 671860,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/671860/ss_08558f0aa02d2c03c47971cfb39e4af207ac18ff.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/671860/ss_9bb1de4c1890e9df6062b4180abd55b6efe07c8d.600x338.jpg',
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/671860/ss_b4175c430cc50636e44a9e6f07fa3a91bfe01548.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/671860/ss_be17ebebd38e71f88d218c3768750e7248940bb8.600x338.jpg',
     shortDescription:
-      '||BattleBit Remastered|| is a low-poly, massive multiplayer FPS, supporting 254 players per server. Battle on a near-fully destructible map with various vehicles!',
-    releaseDate: 'Jun 15, 2023',
+      "Dive into chaotic, large-scale FPS battles with up to 254 players in ||BattleBit Remastered||! Whether you're storming enemy positions with Assault or building critical defences as support, every role counts in this low-poly, adrenaline-pumping battleground. Squad up with open VOIP and level cities with fully destructible environments. Ready to experience the ultimate team-based warfare?",
+    earlyAccessDate: 'Jun 15, 2023',
+    releaseDate: '(Not yet released)',
     developer: 'SgtOkiDoki',
     publisher: 'SgtOkiDoki',
     tags: [],
@@ -28542,7 +28556,22 @@ export const steamGameDetails: SteamGameMap = {
       'Gun Customization',
       'Class-Based',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    overrideCensoredTitle: 'Ba||ttle||B||it|| Re||mastere||d',
+    clueOrder: ['review', 'details+tags', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Medium',
+    reviewClues: [
+      {
+        review:
+          "I clicked launch after downloading a whopping 2 gigabytes and joined a 254 player server.... it's been 2.5 hours and I just started....\n\nA must have for OG Battlefield fans. Don't let the ||low-Poly|| look distract you. This IS Battlefield spiritually. Already bought it for my boy to join me. ... (edited for length)",
+        votedUp: true,
+        votesUp: 141,
+        weightedScore: undefined,
+        authorPlaytimeHours: 38.1,
+        timestamp: 1688256000,
+      },
+    ],
   },
   '673880': {
     name: 'Warhammer 40,000: Mechanicus',
@@ -31832,7 +31861,19 @@ export const steamGameDetails: SteamGameMap = {
       'Realistic',
       'Action-Adventure',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    overrideCensoredTitle: 'Gr||een|| H||ell||',
+    clueOrder: ['tags', 'details', 'desc', 'review'],
+    reviewClues: [
+      {
+        review:
+          'Day 1: died to a tiger\nDay 2: I manage to run away from the tiger but die from an infection from the scratch the tiger gave me\nDay 3: I completly avoid the tiger but die to a snake bite\nDay 4: I Die in my sleep because i got a fever....\n\n(everything in this game is gonna kill you)',
+        votedUp: true,
+        votesUp: 122,
+        weightedScore: '0.830870270729064941',
+        authorPlaytimeHours: 13,
+        timestamp: 1767642036,
+      },
+    ],
   },
   '816090': {
     name: 'Space Hulk',
@@ -33502,7 +33543,25 @@ export const steamGameDetails: SteamGameMap = {
       'Dungeon Crawler',
       'Metroidvania',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    clueOrder: ['tags', 'details', 'desc', 'review'],
+    reviewClues: [
+      {
+        review: 'a fantastic blend of Bastion and The Legend of Zelda',
+        votedUp: true,
+        votesUp: 15,
+        weightedScore: undefined,
+        authorPlaytimeHours: 38.3,
+        timestamp: 1627776000,
+      },
+      {
+        review: "you're a bird with a sword",
+        votedUp: true,
+        votesUp: 3,
+        weightedScore: undefined,
+        authorPlaytimeHours: 27,
+        timestamp: 1770739849,
+      },
+    ],
   },
   '895400': {
     name: 'Deadside',
@@ -42028,11 +42087,12 @@ export const steamGameDetails: SteamGameMap = {
     name: 'Peglin',
     appId: 1296610,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1296610/ss_1a2afdad48b809a7adecea90516889316d4f21bc.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1296610/ss_d1e6a1d19c49d6a4232ad0d1d39f9c398bde787f.600x338.jpg',
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1296610/ss_71770eca91f44432783fbb971543b36f5f1023e1.600x338.jpg',
     shortDescription:
-      '||Peglin|| is a Pachinko Roguelike - Fight enemies by collecting special orbs and popping pegs to deal damage. Acquire special relics that radically change the game and ensure no two runs are the same. Aim carefully to survive in this unique turn-based RPG!',
+      '||Peglin|| is a ||Pachinko|| Roguelike - Fight enemies by collecting special orbs and popping ||pegs|| to deal damage. Acquire special relics that radically change the game and ensure no two runs are the same. Aim carefully to survive in this unique turn-based RPG!',
+    earlyAccessDate: 'Apr 25, 2022',
     releaseDate: 'Aug 27, 2024',
     developer: 'Red Nexus Games Inc.',
     publisher: 'Red Nexus Games Inc.',
@@ -42046,7 +42106,7 @@ export const steamGameDetails: SteamGameMap = {
       'Deckbuilding',
       'Roguelite',
       'Roguelike',
-      'Pinball',
+      'Pachinko',
       'Turn-Based',
       'Strategy',
       'Perma Death',
@@ -42059,7 +42119,23 @@ export const steamGameDetails: SteamGameMap = {
       'Physics',
       'Singleplayer',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: ['Pachinko'],
+    overrideCensoredTitle: 'P||egli||n',
+    clueOrder: ['review', 'details+tags', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Hard',
+    reviewClues: [
+      {
+        review:
+          "If you're a fan of PopCap's ||Peggle||, you'll get some enjoyment out of it but they didn't synthesize that gameplay with the roguelike deckbuilder formula well enough.\n\nas it stands, it's not worth the $20 pricetag.",
+        votedUp: false,
+        votesUp: 159,
+        weightedScore: undefined,
+        authorPlaytimeHours: 3.1,
+        timestamp: 1650945600,
+      },
+    ],
   },
   '1302240': {
     name: 'Labyrinthine',
@@ -43021,11 +43097,11 @@ export const steamGameDetails: SteamGameMap = {
     name: "Teenage Mutant Ninja Turtles: Shredder's Revenge",
     appId: 1361510,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1361510/ss_3c0c96a66b61231bfa9f0689fb9c9b38f9c88fd8.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1361510/ss_4c1ad063d4032e454de8c0e67f3e01dfebbda56e.600x338.jpg',
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1361510/ss_b02e0168a86d43489e65f8be98cd001f7c0491f0.600x338.jpg',
     shortDescription:
-      "||Teenage|| ||Mutant|| ||Ninja|| ||Turtles||: Shredder's ||Revenge|| reunites Leonardo, Michelangelo, Donatello and Raphael as they kick shell in a beautifully realized beat 'em up.",
+      "||Teenage Mutant Ninja Turtles: Shredder's Revenge|| reunites Leonardo, Michelangelo, Donatello and Raphael as they kick ||shell|| in a beautifully realized beat 'em up.",
     releaseDate: 'Jun 16, 2022',
     developer: 'Tribute Games Inc.',
     publisher: 'Dotemu',
@@ -43052,7 +43128,22 @@ export const steamGameDetails: SteamGameMap = {
       'Cartoon',
       'Family Friendly',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: ['Ninja'],
+    clueOrder: ['review', 'details+tags', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
+    reviewClues: [
+      {
+        review:
+          'Absolute masterpiece. Completely nails the goofiness of the 1987 tv series, beautiful spritework, great soundtrack and audio. This is the best the genre has to offer.',
+        votedUp: true,
+        votesUp: 4,
+        weightedScore: undefined,
+        authorPlaytimeHours: 6.2,
+        timestamp: 1771303986,
+      },
+    ],
   },
   '1363080': {
     name: 'Manor Lords',

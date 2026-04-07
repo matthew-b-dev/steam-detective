@@ -438,6 +438,12 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile4: 'Goat Simulator 3',
   },
   '2026-04-08': {
+    caseFile1: "Teenage Mutant Ninja Turtles: Shredder's Revenge",
+    caseFile2: 'Artifact',
+    caseFile3: 'Peglin',
+    caseFile4: 'BattleBit Remastered',
+  },
+  '2026-04-09': {
     caseFile1: 'Suicide Squad: Kill the Justice League',
     caseFile2: 'Fields of Mistria',
     caseFile3: "Don't Starve",
@@ -445,6 +451,7 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
   },
 };
 
+// 4/6 Hard: Green Hell (Fully refined)
 // 4/6 Hard: Dome Keeper (Fully refined)
 
 // Easy (155k): BattleBit Remastered
@@ -459,7 +466,8 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
 // Med: Tropico 4 (Last Tropico 3/15)
 // Med: Clustertruck
 
-// Shadow Tactics: Blades of the Shogun
+// Hard: TemTem
+// Hard: Shadow Tactics: Blades of the Shogun
 // Hard: Albion Online
 // Hard (Fully Refined): Tales of Arise
 // Hard: What Remains of Edith Finch (50k rev)
