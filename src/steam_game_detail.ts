@@ -25544,6 +25544,7 @@ export const steamGameDetails: SteamGameMap = {
   },
   '583950': {
     name: 'Artifact',
+    overrideCensoredTitle: 'A||rtifac||t',
     appId: 583950,
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/583950/ss_833b2ec2ff0a54cf034e78128d8ba6080e42497d.600x338.jpg',

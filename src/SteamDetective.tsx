@@ -303,14 +303,20 @@ const SteamDetectiveGame: React.FC<SteamDetectiveGameProps> = ({
       showClues.filter(Boolean).length >
       prevShowCluesRef.current.filter(Boolean).length;
 
-    // True when slot[4] (secondary screenshot) just auto-revealed as an actual
-    // screenshot (not a review). In that case we suppress scroll since it renders
-    // inside the same screenshot widget as the primary, no visible layout growth.
+    // True when the secondary screenshot just auto-revealed. In that case we
+    // suppress scroll since it renders at the top of all clues (inside the
+    // same screenshot widget as the primary), so no visible layout growth occurs.
+    // Two slots are possible: slot[4] for the simple case, slot[6] when the
+    // details+tags+review combo is active and the secondary gets its own slot.
     const secondaryScreenshotJustAutoRevealed =
-      !hasReviewInOrder &&
-      !hasDetailsTags &&
-      !prevShowCluesRef.current[4] &&
-      showClues[4];
+      (!hasReviewInOrder &&
+        !hasDetailsTags &&
+        !prevShowCluesRef.current[4] &&
+        showClues[4]) ||
+      (hasDetailsTags &&
+        hasReviewInOrder &&
+        !prevShowCluesRef.current[6] &&
+        showClues[6]);
 
     const ssJustRevealedNonFirst =
       !isFirstClue &&
