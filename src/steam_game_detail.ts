@@ -1312,13 +1312,14 @@ export const steamGameDetails: SteamGameMap = {
     name: 'SPORE',
     appId: 17390,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/17390/0000006439.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/17390/0000006445.600x338.jpg',
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/17390/0000006440.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/17390/0000006439.600x338.jpg',
     shortDescription:
-      'Be the architect of your own universe with ||Spore||, an exciting single-player adventure. From Single Cell to Galactic God, evolve your creature in a universe of your own creations.',
+      'Be the architect of your own universe with ||Spore||, an exciting single-player adventure. From Single ||Cell|| to Galactic God, ||evolve|| your creature in a universe of your own creations.',
+    originalReleaseDate: 'Sep 7, 2008 (Physical, EA Digital)',
     releaseDate: 'Dec 19, 2008',
-    developer: 'Maxis™',
+    developer: 'Maxis',
     publisher: 'Electronic Arts',
     tags: [],
     features: [],
@@ -1343,7 +1344,38 @@ export const steamGameDetails: SteamGameMap = {
       'Adventure',
       'Cartoony',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: [
+      'Cute',
+      'Science',
+      'Space',
+      'Casual',
+      'Colony Sim',
+      'Simulation',
+      'Open World',
+      'God Game',
+    ],
+    overrideCensoredTitle: 'S||POR||E',
+    clueOrder: ['details+tags', 'review', 'desc'],
+    reviewClues: [
+      {
+        review:
+          'The ||creature|| creator in this game is both hilarious and iconic.',
+        votedUp: true,
+        votesUp: 41,
+        weightedScore: undefined,
+        authorPlaytimeHours: 89.8,
+        timestamp: 1581310800,
+      },
+      {
+        review:
+          'the 5 stages, ordered from best to worst:\n||Civilization||\nSpace\n||Tribal||\n||Cell||\n||Creature||',
+        votedUp: true,
+        votesUp: 105,
+        weightedScore: undefined,
+        authorPlaytimeHours: 12.4,
+        timestamp: 1697342400,
+      },
+    ],
   },
   '17460': {
     name: 'Mass Effect (2007)',
@@ -11860,18 +11892,18 @@ export const steamGameDetails: SteamGameMap = {
     name: 'American Truck Simulator',
     appId: 270880,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/270880/ss_758470ddbd783e7ff0caac1a59b7fde4a74bbb67.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/270880/ss_7656a8c8691c82268d0f3ce1f7fe51fba88d0c46.600x338.jpg',
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/270880/ss_ba330377eb0a5bffcdbe10f89d3670b83ad55b3f.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/270880/ss_758470ddbd783e7ff0caac1a59b7fde4a74bbb67.600x338.jpg',
     shortDescription:
-      'Experience legendary ||American trucks|| and deliver various ||cargoes|| across sunny ||California||, sandy ||Nevada||, and the ||Grand Canyon State of Arizona||. ||American Truck Simulator|| takes you on a journey through the breathtaking landscapes and widely recognized landmarks around the ||States||.',
+      'Experience legendary American ||trucks|| and deliver various cargoes across sunny California, sandy Nevada, and the Grand Canyon State of Arizona. ||American Truck Simulator|| takes you on a journey through the breathtaking landscapes and widely recognized landmarks around the States.',
     releaseDate: 'Feb 2, 2016',
     developer: 'SCS Software',
     publisher: 'SCS Software',
     tags: ['Indie', 'Simulation'],
     features: [],
     allReviewSummary: {
-      count: 89396,
+      count: 189321,
       rating: 'Overwhelmingly Positive',
     },
     userTags: [
@@ -11896,7 +11928,39 @@ export const steamGameDetails: SteamGameMap = {
       'Family Friendly',
       'Level Editor',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: [
+      'America',
+      'Open World',
+      'Simulation',
+      'Moddable',
+      'Exploration',
+      'Automobile Sim',
+    ],
+    overrideCensoredTitle: 'Am||erican|| T||ruc||k S||imulato||r',
+    clueOrder: ['review', 'details+tags', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
+    reviewClues: [
+      {
+        review:
+          'My speeding tickets make up over 70% of the United States economy',
+        votedUp: true,
+        votesUp: 506,
+        weightedScore: undefined,
+        authorPlaytimeHours: 2.2,
+        timestamp: 1719633600,
+      },
+      {
+        review:
+          'I am proud to admit that my most anticipated release for any game in recent memory is the Illinois DLC ... (edited for length)',
+        votedUp: true,
+        votesUp: 6,
+        weightedScore: undefined,
+        authorPlaytimeHours: 869.9,
+        timestamp: 1775433600,
+      },
+    ],
   },
   '274170': {
     name: 'Hotline Miami 2: Wrong Number',
@@ -25544,7 +25608,6 @@ export const steamGameDetails: SteamGameMap = {
   },
   '583950': {
     name: 'Artifact',
-    overrideCensoredTitle: 'A||rtifac||t',
     appId: 583950,
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/583950/ss_833b2ec2ff0a54cf034e78128d8ba6080e42497d.600x338.jpg',
@@ -25578,6 +25641,7 @@ export const steamGameDetails: SteamGameMap = {
       'Casual',
       'Turn-Based',
     ],
+    overrideCensoredTitle: 'A||rtifac||t',
     clueOrder: ['ss', 'details+tags', 'review', 'desc'],
     debugProcessed: true,
     debugRefined: true,
@@ -33787,13 +33851,13 @@ export const steamGameDetails: SteamGameMap = {
     name: 'Anno 1800',
     appId: 916440,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/916440/ss_9756553b540fbfefc2d96baafc33aecd7ef1dc44.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/916440/ss_1da8bda360922688c7472f2c3de741fd6e64b7ae.600x338.jpg',
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/916440/ss_cad25bea4177e0c49c104c54138c0b8ba4c1ab3e.600x338.jpg',
     shortDescription:
-      '||Anno 1800|| – Lead the Industrial Revolution! Welcome to the dawn of the Industrial Age. The path you choose will define your world. Are you an innovator or an exploiter? A conqueror or a liberator? How the world remembers your name is up to you.',
+      '_ _ _ _ &nbsp;&nbsp; _ _ 0 _&nbsp;&nbsp;&nbsp;&nbsp;– Lead the Industrial Revolution! Welcome to the dawn of the Industrial Age. ||The path you choose will define your world. Are you an innovator or an exploiter? A conqueror or a liberator? How the world remembers your name is up to you.||',
     releaseDate: 'Apr 16, 2019',
-    developer: 'Ubisoft Mainz',
+    developer: 'Ubisoft Mainz, Blue Byte',
     publisher: 'Ubisoft',
     tags: [],
     features: [],
@@ -33818,7 +33882,32 @@ export const steamGameDetails: SteamGameMap = {
       'Building',
       'Political',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    excludeOptions: ['Anno 2070'],
+    overrideCensoredTitle: 'A||nno|| ||18||00',
+    clueOrder: ['review', 'details+tags', 'desc'],
+    reviewClues: [
+      {
+        review:
+          'Did you know that the sum of the Year digits in every mainline ||Anno|| game is 9? Seriously, all of them: 1602, ||1503||, ||1701||, ||1404||, ||2070||, ||2205||, ||1800||, 117',
+        votedUp: true,
+        votesUp: 371,
+        votedFunny: 9,
+        weightedScore: undefined,
+        authorPlaytimeHours: 19.2,
+        timestamp: 1764979200,
+      },
+      {
+        review:
+          'The game came out 14 hours ago. My played time should speak for itself.',
+        votedUp: true,
+        votesUp: 1,
+        votedFunny: 4,
+        weightedScore: undefined,
+        authorPlaytimeHours: 210.9,
+        authorPlaytimeHoursAtRelease: 13.4,
+        timestamp: 1555459200,
+      },
+    ],
   },
   '918570': {
     name: 'Century: Age of Ashes',
@@ -46551,11 +46640,11 @@ export const steamGameDetails: SteamGameMap = {
     name: 'Dome Keeper',
     appId: 1637320,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1637320/ss_f2a52537a6dc3458eadd0cfc40b3916b4eb70bae.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1637320/ss_8406a10007a2c6aeca051b8abd5ec451586c0c63.600x338.jpg',
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1637320/ss_7e8e99ca62ac48386cfa23b846c413ce311ce6c3.600x338.jpg',
     shortDescription:
-      'Defend against waves of alien monsters in this unique roguelike action miner. Dig for resources, collect useful gadgets, and upgrade equipment to increase odds of survival – just hurry back before your ||dome|| is destroyed!',
+      'Defend against waves of alien monsters in this unique roguelike action miner. Dig for resources, collect useful gadgets, and upgrade equipment to increase odds of survival – just hurry back before your dome is destroyed! Use your drill and keeper equipment to quickly dig out tunnels and explore the depths beneath your dome. Each run has its own unique, procedurally generated map filled with resources and caves to discover. ​ ',
     releaseDate: 'Sep 27, 2022',
     developer: 'Bippinbits',
     publisher: 'Raw Fury',
@@ -46571,11 +46660,11 @@ export const steamGameDetails: SteamGameMap = {
       'Roguelike',
       '2D',
       'Sci-fi',
-      'Combat',
+      'Mining',
       'Resource Management',
       'Tower Defense',
+      'Combat',
       'Pixel Graphics',
-      'Atmospheric',
       'Space',
       'Procedural Generation',
       'Replay Value',
@@ -46590,12 +46679,21 @@ export const steamGameDetails: SteamGameMap = {
     reviewClues: [
       {
         review:
-          "If the name 'Motherload' jingles any bells, you've come to the right place",
+          "If the name 'Motherload' jingles any bells in your decrepit old dome piece, you've come to the right place",
         votedUp: true,
         votesUp: 408,
         weightedScore: undefined,
         authorPlaytimeHours: 35.2,
         timestamp: 1664251200,
+      },
+      {
+        review:
+          "the core gameplay loop is simple but satisfying. mine for resources, upgrade your ||dome||'s defences, and fight off waves of alien attackers. the tension between exploring deeper caverns and getting back to defend your base is always keeping you on your toes. ... (edited for length)",
+        votedUp: true,
+        votesUp: 47,
+        weightedScore: undefined,
+        authorPlaytimeHours: 173.3,
+        timestamp: 1719892800,
       },
     ],
   },
@@ -55409,6 +55507,7 @@ export const steamGameDetails: SteamGameMap = {
 // Special series/franchises where guesses containing the series name are considered "close"
 export const CLOSE_GUESS_SERIES: string[] = [
   'age of empires',
+  'anno',
   'arma',
   'bioshock',
   'borderlands',

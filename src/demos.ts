@@ -444,12 +444,22 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile4: 'BattleBit Remastered',
   },
   '2026-04-09': {
+    caseFile1: 'American Truck Simulator',
+    caseFile2: 'Anno 1800',
+    caseFile3: 'Dome Keeper',
+    caseFile4: 'SPORE',
+  },
+  '2026-04-10': {
     caseFile1: 'Suicide Squad: Kill the Justice League',
     caseFile2: 'Fields of Mistria',
     caseFile3: "Don't Starve",
     caseFile4: 'Satisfactory',
   },
 };
+
+// ****************
+// USE A SCREENSHOT CLUE
+// ****************
 
 // 4/6 Hard: Green Hell (Fully refined)
 // 4/6 Hard: Dome Keeper (Fully refined)

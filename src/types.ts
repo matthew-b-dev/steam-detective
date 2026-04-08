@@ -5,6 +5,7 @@ export interface Review {
   votedFunny?: number;
   weightedScore?: number | string;
   authorPlaytimeHours: number;
+  authorPlaytimeHoursAtRelease?: number;
   timestamp: number;
   reviewUrl?: string;
   authorPlaytimeAtReview?: number;

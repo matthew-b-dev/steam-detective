@@ -350,6 +350,11 @@ export const RefinePage: React.FC = () => {
           lines.push(
             `        authorPlaytimeHours: ${review.authorPlaytimeHours},`,
           );
+          if (review.authorPlaytimeHoursAtRelease != null) {
+            lines.push(
+              `        authorPlaytimeHoursAtRelease: ${review.authorPlaytimeHoursAtRelease},`,
+            );
+          }
           lines.push(`        timestamp: ${review.timestamp},`);
           lines.push(`      }${idx < game.reviewClues!.length - 1 ? ',' : ''}`);
         });
@@ -371,6 +376,11 @@ export const RefinePage: React.FC = () => {
         lines.push(
           `        authorPlaytimeHours: ${game.reviewClue.authorPlaytimeHours},`,
         );
+        if (game.reviewClue.authorPlaytimeHoursAtRelease != null) {
+          lines.push(
+            `        authorPlaytimeHoursAtRelease: ${game.reviewClue.authorPlaytimeHoursAtRelease},`,
+          );
+        }
         lines.push(`        timestamp: ${game.reviewClue.timestamp},`);
         lines.push(`      }`);
         lines.push(`    ],`);

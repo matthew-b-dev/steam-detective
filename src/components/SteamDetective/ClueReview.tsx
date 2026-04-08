@@ -137,6 +137,13 @@ const ReviewCard: React.FC<{ review: Review; isComplete: boolean }> = ({
           </span>
           <span className='text-[11px] text-gray-300 mt-0.1'>
             {review.authorPlaytimeHours.toLocaleString()} hrs on record
+            {review.authorPlaytimeHoursAtRelease != null && (
+              <>
+                {' '}
+                ({review.authorPlaytimeHoursAtRelease.toLocaleString()} hrs at
+                review time)
+              </>
+            )}
           </span>
         </div>
       </div>
