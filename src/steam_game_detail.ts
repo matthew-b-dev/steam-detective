@@ -8650,7 +8650,7 @@ export const steamGameDetails: SteamGameMap = {
     reviewClues: [
       {
         review:
-          "Tron meets Kill Bill\n\n[...] I wasn't sure it was possible for ||Supergiant|| to top ||Bastion||, but as it turns out, they could. What does Tr||ansistor|| actully have to offer? First of all, one of the most unique and challenging gaming experiences I have ever had. The combat system revolves around what the game calls a Turn() sequence--and yes, the partentheses are part of the word. Turn() allows you to freeze time and plan out your every move, but your enemies, a horde of machine-like entities known collectively as the Process, have ways of confounding you. ... (edited for length)",
+          "Tron meets Kill Bill\n\n[...] I wasn't sure it was possible for Supergiant to top Bastion, but as it turns out, they could. What does T||ransistor|| actully have to offer? First of all, one of the most unique and challenging gaming experiences I have ever had. The combat system revolves around what the game calls a Turn() sequence--and yes, the partentheses are part of the word. Turn() allows you to freeze time and plan out your every move, but your enemies, a horde of machine-like entities known collectively as the Process, have ways of confounding you. ... (edited for length)",
         votedUp: true,
         votesUp: 35,
         weightedScore: undefined,
