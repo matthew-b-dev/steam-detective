@@ -450,6 +450,12 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile4: 'SPORE',
   },
   '2026-04-10': {
+    caseFile1: "Dragon's Dogma 2",
+    caseFile2: 'Transistor',
+    caseFile3: 'Worms W.M.D',
+    caseFile4: 'ASTRONEER',
+  },
+  '2026-04-11': {
     caseFile1: 'Suicide Squad: Kill the Justice League',
     caseFile2: 'Fields of Mistria',
     caseFile3: "Don't Starve",
@@ -460,11 +466,9 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
 // ****************
 // USE A SCREENSHOT CLUE
 // ****************
+// 4/11 Easy: Cuphead
+// 4/11 Hard: Green Hell (Fully refined)
 
-// 4/6 Hard: Green Hell (Fully refined)
-// 4/6 Hard: Dome Keeper (Fully refined)
-
-// Easy (155k): BattleBit Remastered
 // Easy: Star Wars Battlefront II
 // Easy: Remnant II
 // Easy: State of Decay 2

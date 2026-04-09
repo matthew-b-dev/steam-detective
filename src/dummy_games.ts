@@ -200,7 +200,6 @@ export const dummyGames: string[] = [
   'Elliot Quest',
   'Hyperdevotion Noire: Goddess Black Heart',
   'Pix the Cat',
-  'Worms Battlegrounds',
   'StarCraft II: Legacy of the Void',
   'Tearaway Unfolded',
   'ScreamRide',

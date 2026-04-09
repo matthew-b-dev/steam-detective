@@ -8613,9 +8613,9 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/237930/ss_1fdf65579ebad27f4d6a6732e44fc84180016a7b.600x338.jpg',
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/237930/ss_9858355976e979758841f05839ccc6224ddaa00e.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/237930/ss_28f612131bb50ec3812d19c33608747f25cd0581.600x338.jpg',
     shortDescription:
-      'Discover the world of ||Transistor||, a sci-fi-themed action RPG from the creators of Bastion.',
+      '_ _ _ _ _ _ _ _ _ _ &nbsp;&nbsp;is a sci-fi themed action RPG that invites you to wield an extraordinary weapon of unknown origin as you fight through a stunning futuristic city. ||Transistor|| seamlessly integrates thoughtful strategic planning into a fast-paced action experience, melding responsive gameplay and rich atmospheric storytelling.',
     releaseDate: 'May 20, 2014',
     developer: 'Supergiant Games',
     publisher: 'Supergiant Games',
@@ -8642,7 +8642,23 @@ export const steamGameDetails: SteamGameMap = {
       'Narration',
       'Strategy',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    overrideCensoredTitle: 'Tr||ansisto||r',
+    clueOrder: ['details', 'tags', 'desc', 'review'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Medium',
+    reviewClues: [
+      {
+        review:
+          "Tron meets Kill Bill\n\n[...] I wasn't sure it was possible for ||Supergiant|| to top ||Bastion||, but as it turns out, they could. What does Tr||ansistor|| actully have to offer? First of all, one of the most unique and challenging gaming experiences I have ever had. The combat system revolves around what the game calls a Turn() sequence--and yes, the partentheses are part of the word. Turn() allows you to freeze time and plan out your every move, but your enemies, a horde of machine-like entities known collectively as the Process, have ways of confounding you. ... (edited for length)",
+        votedUp: true,
+        votesUp: 35,
+        weightedScore: undefined,
+        authorPlaytimeHours: 36.6,
+        timestamp: 1483246800,
+      },
+    ],
+    moreFromThisDeveloper: [{ id: 107100, name: 'Bastion' }],
   },
   '237990': {
     name: 'The Banner Saga',
@@ -15356,7 +15372,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/327030/ss_1730312f4dc95e0ef7223f61c3caebeca4010fc9.600x338.jpg',
     shortDescription:
-      'The worms are back in their most destructive game yet. With a gorgeous, hand-drawn 2D look, brand new weapons, the introduction of crafting, vehicles and buildings plus the return of some much-loved classic weapons and gameplay, ||Worms W.M.D|| is the best worms experience ever.',
+      'Flatten your opponents with the Concrete Donkey. Turn them into chunks of ||worm|| meat with the Holy Hand Grenade. ||Rain down hell from above|| in helicopters or pound them into oblivion with the tank. With 80 weapons and utilities at your fingertips, this is ||Worms|| at its chaotic best!',
     releaseDate: 'Aug 23, 2016',
     developer: 'Team17',
     publisher: 'Team17',
@@ -15369,21 +15385,37 @@ export const steamGameDetails: SteamGameMap = {
     userTags: [
       'Strategy',
       'Multiplayer',
-      'Action',
+      'Cartoony',
       'Turn-Based Strategy',
       'Funny',
       'Local Multiplayer',
       '2D',
       'Turn-Based',
       'Co-op',
-      'Shooter',
+      'Local Co-op',
       'Singleplayer',
       'Local Co-Op',
       'Comedy',
       'Classic',
       'Memes',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: ['2D'],
+    overrideCensoredTitle: 'Wo||rms|| ||W||.||M||.||D||',
+    clueOrder: ['details+tags', 'desc', 'review'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Hard',
+    reviewClues: [
+      {
+        review:
+          "[...] Team17 developed the original ||Worms|| in 1995, heavily inspired by another classic DOS game Scorched Earth. Since then, ||Worms Armageddon|| is probably the only one in the series worth playing. This one ain't it.",
+        votedUp: false,
+        votesUp: 3,
+        weightedScore: undefined,
+        authorPlaytimeHours: 1.3,
+        timestamp: 1738713600,
+      },
+    ],
   },
   '329050': {
     name: 'Devil May Cry 4',
@@ -16910,11 +16942,12 @@ export const steamGameDetails: SteamGameMap = {
     name: 'ASTRONEER',
     appId: 361420,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/361420/ss_539bc5211ccdad2bc6cc70e4af40194d74eb0256.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/361420/ss_c7c54244add5ac921f2ae5b28f6f3efbc8470823.600x338.jpg',
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/361420/ss_858b8bece04b753a6b35a009776a4de9dd6e0df7.600x338.jpg',
     shortDescription:
-      'Interact with strange new worlds in a unique and tactile way, molding the environment itself as if it were clay in your hands. Build your base, master resource management, automate your production lines, and more as you unravel the mysteries of the ||universe||, alone or with friends.',
+      'Interact with strange new worlds in a unique and tactile way, molding the environment itself as if it were clay in your hands. Build your base, master resource management, automate your production lines, and more as you unravel the mysteries of the universe, alone or with friends. Build custom bases throughout the solar system to survive and thrive anywhere!',
+    originalReleaseDate: 'Dec 16, 2016',
     releaseDate: 'Feb 5, 2019',
     developer: 'System Era Softworks',
     publisher: 'System Era Softworks',
@@ -16946,7 +16979,23 @@ export const steamGameDetails: SteamGameMap = {
       'Simulation',
       'Indie',
     ],
-    clueOrder: ['details', 'desc', 'tags'],
+    blurredUserTags: ['Space'],
+    overrideCensoredTitle: 'AS||TRONEE||R',
+    clueOrder: ['review', 'details+tags', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Medium',
+    reviewClues: [
+      {
+        review:
+          'Hour 1 - What the ♥♥♥♥ do I even do?\nHour 3 - Tethers. I finally know why they are so useful. \nHour 5 - I have a vehicle now to explore\nHour 5.5 - Vehicle fell in to giant cavern\nHour 7 - Built giant ♥♥♥ ramp out of cavern\nHour 8 - Built a ||shuttle|| to explore other ||planets||\nHour 10 - Emptiness inside.\n\nLoved the Game.',
+        votedUp: true,
+        votesUp: 51,
+        weightedScore: undefined,
+        authorPlaytimeHours: 10.2,
+        timestamp: 1514696400,
+      },
+    ],
   },
   '362490': {
     name: 'Exanima',
@@ -33882,9 +33931,9 @@ export const steamGameDetails: SteamGameMap = {
       'Building',
       'Political',
     ],
-    excludeOptions: ['Anno 2070'],
     overrideCensoredTitle: 'A||nno|| ||18||00',
     clueOrder: ['review', 'details+tags', 'desc'],
+    excludeOptions: ['Anno 2070'],
     reviewClues: [
       {
         review:
@@ -50744,18 +50793,18 @@ export const steamGameDetails: SteamGameMap = {
     name: "Dragon's Dogma 2",
     appId: 2054970,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2054970/ss_f419f8b6577558b40ce8c384f4bfaabbf44c8a8e.600x338.jpg',
-    secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2054970/ss_084be4d2bf3c7365c2b684c4b5578a1ad8deefac.600x338.jpg',
+    secondaryScreenshot:
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2054970/ss_037861574d85abdfb8908204e446544abd92effe.600x338.jpg',
     shortDescription:
-      "Dragon's ||Dogma|| 2 is a single player, narrative driven action-RPG that challenges the players to choose their own experience – from the appearance of their Arisen, their vocation, their party, how to approach different situations and more - in a truly immersive fantasy world.",
+      "||Dragon||&nbsp;'s&nbsp;&nbsp;&nbsp;||Dogma||&nbsp; 2 is a single player, narrative driven action-RPG that challenges the players to choose their own experience – from the appearance of their Arisen, their vocation, their party, how to approach different situations and more - in a truly immersive fantasy world.",
     releaseDate: 'Mar 21, 2024',
     developer: 'CAPCOM Co., Ltd.',
     publisher: 'CAPCOM Co., Ltd.',
     tags: [],
     features: [],
     allReviewSummary: {
-      count: 58542,
+      count: 113229,
       rating: 'Mixed',
     },
     userTags: [
@@ -50765,14 +50814,29 @@ export const steamGameDetails: SteamGameMap = {
       'Fantasy',
       'Singleplayer',
       'Action',
-      'Adventure',
+      'Sequel',
       'Dragons',
       'Character Customization',
       'Magic',
       'Action-Adventure',
       'Medieval',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: ['Dragons'],
+    clueOrder: ['review', 'details+tags', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
+    reviewClues: [
+      {
+        review:
+          "I can sum up my disappointment with the fact that you spend the entire game fighting the same 4-5 enemy types that you spent the whole game fighting in ||DD||1. Goblins, Saurians, harpies, wolves, and humans make up 99% of all normal encounters. ||DD||2 has almost all of the problems that 1 had, and more. [...] Bigger world, better open world mechanics, not nearly enough content to go in it.\n\nI enjoyed the game, but I just can't recommend it given the context, especially at $70.\n(edited for length)",
+        votedUp: false,
+        votesUp: 826,
+        weightedScore: undefined,
+        authorPlaytimeHours: 67.9,
+        timestamp: 1713672000,
+      },
+    ],
   },
   '2058180': {
     name: 'Judgment',
@@ -55520,6 +55584,7 @@ export const CLOSE_GUESS_SERIES: string[] = [
   'darkest dungeon',
   'dark souls',
   'deus ex',
+  'dogma',
   'doom',
   'dragon age',
   'dragon ball',
