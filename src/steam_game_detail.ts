@@ -1279,8 +1279,8 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/17300/0000005236.600x338.jpg',
     shortDescription:
-      'Adapt to Survive  An epic story thrusts players into an ever-changing environment, forcing them to adapt their tactics and approach to conquer battlefields ranging from newly frozen jungle to zero-gravity alien environments. Suit up!  A high-tech Nanosuit allows gamers to augment their abilities in real time on the battlefield.',
-    releaseDate: 'Sep 17, 2008',
+      'Adapt to Survive. An epic story thrusts players into an ever-changing environment, forcing them to adapt their tactics and approach to conquer battlefields ranging from newly frozen jungle to zero-gravity alien environments. Suit up! A high-tech Nanosuit allows gamers to augment their abilities in real time on the battlefield.',
+    releaseDate: 'Nov 13, 2007',
     developer: 'Crytek',
     publisher: 'Electronic Arts',
     tags: [],
@@ -1306,7 +1306,32 @@ export const steamGameDetails: SteamGameMap = {
       'Adventure',
       'Story Rich',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    screenshotLetterbox: true,
+    blurScreenshotQuarter: 'bottom',
+    clueOrder: ['review', 'tags', 'desc', 'details'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
+    reviewClues: [
+      {
+        review: 'Causing people to misspell the word "||crisis||" since 2007.',
+        votedUp: true,
+        votesUp: 30,
+        votedFunny: 46,
+        weightedScore: undefined,
+        authorPlaytimeHours: 14.2,
+        timestamp: 1586232000,
+      },
+      {
+        review:
+          '||Can it run Crysis?||\n\n7 years later, yes. \n\ni7-4790K\nGTX 980\n8GB RAM',
+        votedUp: true,
+        votesUp: 32,
+        weightedScore: undefined,
+        authorPlaytimeHours: 18.5,
+        timestamp: 1417737600,
+      },
+    ],
   },
   '17390': {
     name: 'SPORE',
@@ -16947,7 +16972,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/361420/ss_858b8bece04b753a6b35a009776a4de9dd6e0df7.600x338.jpg',
     shortDescription:
       'Interact with strange new worlds in a unique and tactile way, molding the environment itself as if it were clay in your hands. Build your base, master resource management, automate your production lines, and more as you unravel the mysteries of the universe, alone or with friends. Build custom bases throughout the solar system to survive and thrive anywhere!',
-    originalReleaseDate: 'Dec 16, 2016',
+    earlyAccessDate: 'Dec 16, 2016',
     releaseDate: 'Feb 5, 2019',
     developer: 'System Era Softworks',
     publisher: 'System Era Softworks',
@@ -41990,14 +42015,15 @@ export const steamGameDetails: SteamGameMap = {
     name: "Tiny Tina's Wonderlands",
     appId: 1286680,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1286680/ss_e7499467fb6dbff279fdffd96ec380b157c5791a.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1286680/ss_24bef9c08e3f51b99030dd7972312fc7628f29aa.600x338.jpg',
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1286680/ss_9eec41e5b6d47e4a63fb7f0a0eed4819baeee4f5.600x338.jpg',
     shortDescription:
-      'Embark on an epic adventure full of whimsy, wonder, and high-powered weaponry! Roll your own multiclass hero then shoot, loot, slash, and cast on a quest to stop the Dragon Lord.',
+      'Embark on an epic adventure full of whimsy, wonder, and high-powered weaponry! Bullets, magic, and broadswords collide across this chaotic fantasy world brought to life by the unpredictable ||Tiny Tina||. Roll your own multiclass hero and loot, shoot, slash, and cast your way through outlandish monsters and loot-filled dungeons on a quest to stop the tyrannical Dragon Lord.',
+    originalReleaseDate: 'Mar 25, 2022 (Epic Store)',
     releaseDate: 'Jun 23, 2022',
-    developer: 'Gearbox Software',
-    publisher: '2K',
+    developer: '||Gearbox Software||',
+    publisher: '||2K||',
     tags: [],
     features: [],
     allReviewSummary: {
@@ -42007,10 +42033,10 @@ export const steamGameDetails: SteamGameMap = {
     userTags: [
       'Loot',
       'Looter Shooter',
-      'Adventure',
+      'RPG',
       'Multiplayer',
       'Shooter',
-      'RPG',
+      'Adventure',
       'FPS',
       'Fantasy',
       'Online Co-Op',
@@ -42021,7 +42047,31 @@ export const steamGameDetails: SteamGameMap = {
       'Character Customization',
       'Narration',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: [
+      'FPS',
+      'Action',
+      'Adventure',
+      'Looter Shooter',
+      'Multiplayer',
+      'Shooter',
+    ],
+    screenshotFocusPoint: [1, 95, 75],
+    overrideCensoredTitle: "T||iny|| T||ina||'||s|| W||onderlands||",
+    clueOrder: ['ss', 'details+tags', 'review', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Medium',
+    reviewClues: [
+      {
+        review:
+          "||Gearbox|| is yet another developer to fail to capture the \"whimsical fun of D&D\". Or perhaps failed to realize that's something that people want? It's beyond me why they thought they could adapt their (by this point, mediocre) ||looter-shooter|| formula to that.\n\nIt is kind of cruelly ironic that this is the first game they've been bold enough to release at  $||70||. Especially for a spinoff of the main series!",
+        votedUp: false,
+        votesUp: 7,
+        weightedScore: undefined,
+        authorPlaytimeHours: 22.7,
+        timestamp: 1662595200,
+      },
+    ],
   },
   '1286830': {
     name: 'STAR WARS: The Old Republic',
@@ -43622,11 +43672,11 @@ export const steamGameDetails: SteamGameMap = {
     name: 'Viewfinder',
     appId: 1382070,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1382070/ss_504c7776817cb8a36104b31d803d18acf52b669f.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1382070/ss_d22c4b6658142f800ca80c34582c988ca9b34858.600x338.jpg',
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1382070/ss_6ab66f69441e3168c97bbe8020603faa75fffa48.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1382070/ss_1392613d4ff0f7c3f989cc899cb40ce93b3ff8fb.600x338.jpg',
     shortDescription:
-      'Challenge perception, redefine reality, and reshape the world around you with an instant camera. ||Viewfinder|| is a new single player game offering gamers hours of interesting and fun experiences while uncovering the mysteries left behind.',
+      'V _ _ _ _ _ _ _ _ _&nbsp;&nbsp;is a mind-bending first person adventure game in which you can bring pictures to life by placing them into the world. Challenge perception, redefine reality, and reshape the world around you with an instant ||camera||.',
     releaseDate: 'Jul 18, 2023',
     developer: 'Sad Owl Studios',
     publisher: 'Thunderful Publishing',
@@ -43653,7 +43703,25 @@ export const steamGameDetails: SteamGameMap = {
       'Exploration',
       '3D Platformer',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: ['Surreal', 'Abstract'],
+    screenshotFocusPoint: [0, 28, 110],
+    overrideCensoredTitle: 'V||iew||f||inder||',
+    clueOrder: ['details+tags', 'review', 'ss', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Medium',
+    reviewClues: [
+      {
+        review:
+          '||Snapshot||, Superliminal and Antichamber walk into an Escher painting. My personal game of the year for 2023.',
+        votedUp: true,
+        votesUp: 100,
+        votedFunny: 21,
+        weightedScore: undefined,
+        authorPlaytimeHours: 14.8,
+        timestamp: 1690344000,
+      },
+    ],
   },
   '1382330': {
     name: 'Persona 5 Strikers',
@@ -55438,7 +55506,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3949040/7d246f94e4ec2ff4c7be3ded82bcdd558274d7c7/ss_7d246f94e4ec2ff4c7be3ded82bcdd558274d7c7.600x338.jpg',
     shortDescription:
-      'A co-op adventure about driving your Recreational Vehicle home.',
+      '"_ _&nbsp;&nbsp;&nbsp; _ _ _ _ _ &nbsp;&nbsp; Y _ _ ?"&nbsp; is a co-op adventure about driving your Recreational Vehicle home.',
     releaseDate: 'Oct 21, 2025',
     developer: 'Nuggets Entertainment',
     publisher: 'Nuggets Entertainment',
@@ -55448,8 +55516,34 @@ export const steamGameDetails: SteamGameMap = {
       count: 24796,
       rating: 'Very Positive',
     },
-    userTags: [],
-    clueOrder: ['tags', 'details', 'desc'],
+    userTags: [
+      'Multiplayer',
+      'Co-op',
+      'Funny',
+      'Driving',
+      'Adventure',
+      'Physics',
+      '3D',
+      'First-Person',
+      'Exploration',
+      'Indie',
+    ],
+    clueOrder: ['review', 'details+tags', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Hard',
+    reviewClues: [
+      {
+        review:
+          'My favorite friend-slop of 2025. A very educational game that teaches the most important survival lessons you can learn. \n-||Beer|| makes you stronger.\n-||Cigarettes|| make you faster.\n-Burgers are all-healing.\n-Bears can rip through ||solid steel|| in 6 seconds flat.\n-The ||RV|| is simultaneously the most rugged, and ||flimsy vehicle|| ever constructed.',
+        votedUp: true,
+        votesUp: 1201,
+        votedFunny: 589,
+        weightedScore: undefined,
+        authorPlaytimeHours: 13.7,
+        timestamp: 1761969600,
+      },
+    ],
   },
   '489830': {
     name: 'The Elder Scrolls V: Skyrim Special Edition',
@@ -55575,6 +55669,7 @@ export const CLOSE_GUESS_SERIES: string[] = [
   'arma',
   'bioshock',
   'borderlands',
+  'derlands',
   'call of duty',
   'chivalry',
   'cities:',

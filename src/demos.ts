@@ -456,6 +456,12 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile4: 'ASTRONEER',
   },
   '2026-04-11': {
+    caseFile1: 'Crysis',
+    caseFile2: 'Viewfinder',
+    caseFile3: 'RV There Yet?',
+    caseFile4: "Tiny Tina's Wonderlands",
+  },
+  '2026-04-12': {
     caseFile1: 'Suicide Squad: Kill the Justice League',
     caseFile2: 'Fields of Mistria',
     caseFile3: "Don't Starve",
@@ -475,6 +481,7 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
 // Easy: Ghost of Tsushima DIRECTOR'S CUT (change name, add PS4 release)
 // Easy: Any AC Game (last 3/29): Revelations, Unity, (1), (2), Brotherhood, Rogue, Syndicate, Valhalla, Mirage
 
+// Med: Gotham Knights
 // Med: Death's Door
 // Med: WEBFISHING (60k rev)? needs work
 // Med: Tropico 4 (Last Tropico 3/15)
