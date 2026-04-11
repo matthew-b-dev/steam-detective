@@ -462,6 +462,12 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile4: "Tiny Tina's Wonderlands",
   },
   '2026-04-12': {
+    caseFile1: 'Cuphead',
+    caseFile2: 'Frostpunk',
+    caseFile3: 'The Forgotten City',
+    caseFile4: 'Far Cry 2',
+  },
+  '2026-04-13': {
     caseFile1: 'Suicide Squad: Kill the Justice League',
     caseFile2: 'Fields of Mistria',
     caseFile3: "Don't Starve",
@@ -472,7 +478,6 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
 // ****************
 // USE A SCREENSHOT CLUE
 // ****************
-// 4/11 Easy: Cuphead
 // 4/11 Hard: Green Hell (Fully refined)
 
 // Easy: Star Wars Battlefront II

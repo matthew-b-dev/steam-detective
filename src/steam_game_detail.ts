@@ -1526,11 +1526,11 @@ export const steamGameDetails: SteamGameMap = {
     name: 'Far Cry 2',
     appId: 19900,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/19900/0000004532.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/19900/0000004537.600x338.jpg',
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/19900/0000004533.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/19900/0000004528.600x338.jpg',
     shortDescription:
-      "You are a gun for hire, trapped in a war-torn African state, stricken with malaria and forced to make deals with corrupt warlords on both sides of the conflict in order to make this country your home. You must identify and exploit your enemies' weaknesses, neutralizing their superior numbers and firepower with surprise, subversion,...",
+      "You are a gun for hire, trapped in a war-torn African state, stricken with malaria and forced to make deals with corrupt warlords on both sides of the conflict in order to make this country your home. You must identify and exploit your enemies' weaknesses, neutralizing their superior numbers and firepower with surprise, subversion, cunning and of course brute force.",
     releaseDate: 'Oct 22, 2008',
     developer: 'Ubisoft Montreal',
     publisher: 'Ubisoft',
@@ -1545,8 +1545,8 @@ export const steamGameDetails: SteamGameMap = {
       'FPS',
       'Action',
       'Shooter',
+      'Sequel',
       'Singleplayer',
-      'First-Person',
       'Multiplayer',
       'Adventure',
       'Realistic',
@@ -1557,7 +1557,22 @@ export const steamGameDetails: SteamGameMap = {
       'Exploration',
       'Story Rich',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    screenshotLetterbox: true,
+    clueOrder: ['desc', 'tags', 'details', 'review'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Medium',
+    reviewClues: [
+      {
+        review:
+          "You like drivin'? You like shootin'? You like killing the same 4 dudes at the same outpost 17,348 times? Like communicable disease transmitted by insects? Like those things in that order? You'll love ||Far Cry|| 2",
+        votedUp: true,
+        votesUp: 74,
+        weightedScore: undefined,
+        authorPlaytimeHours: 29.8,
+        timestamp: 1608181200,
+      },
+    ],
   },
   '20900': {
     name: 'The Witcher',
@@ -11744,7 +11759,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/268910/ss_615455299355eaf552c638c7ea5b24a8b46e02dd.600x338.jpg',
     shortDescription:
-      '||Cuphead|| is a classic run and gun action game heavily focused on boss battles. Inspired by ||cartoons|| of the ||193||0s, the visuals and audio are painstakingly created with the same techniques of the era, i.e. traditional ||hand drawn cel animation||, ||watercolor|| backgrounds, and original jazz recordings.',
+      '||Cuphead|| is a classic run and gun action game heavily focused on boss battles. Inspired by ||cartoons|| of the 1930s, the visuals and audio are painstakingly created with the same techniques of the era, i.e. traditional ||hand drawn cel|| animation, ||watercolor|| backgrounds, and original jazz recordings.',
     releaseDate: 'Sep 29, 2017',
     developer: 'Studio MDHR Entertainment Inc.',
     publisher: 'Studio MDHR Entertainment Inc.',
@@ -11776,10 +11791,41 @@ export const steamGameDetails: SteamGameMap = {
       'Souls-like',
       'Funny',
     ],
-    clueOrder: ['desc', 'details', 'tags'],
+    blurredUserTags: [
+      'Difficult',
+      'Hand-drawn',
+      'Multiplayer',
+      'Local Co-Op',
+      'Great Soundtrack',
+      'Cartoon',
+      'Co-op',
+    ],
+    clueOrder: ['review', 'details+tags', 'desc'],
     debugProcessed: true,
     debugRefined: true,
     difficulty: 'Easy',
+    reviewClues: [
+      {
+        review:
+          "I can't beat the Devil because i am color blind and can't see the little pink sparks but the most of the game is very cool.",
+        votedUp: true,
+        votesUp: 157,
+        votedFunny: 123,
+        weightedScore: undefined,
+        authorPlaytimeHours: 232,
+        authorPlaytimeHoursAtRelease: 16.1,
+        timestamp: 1514937600,
+      },
+      {
+        review:
+          "No colorblind options, it makes this game impossible for me to identify what I'm allowed to parry and what I can't.",
+        votedUp: false,
+        votesUp: 20,
+        weightedScore: '0.679676830768585205',
+        authorPlaytimeHours: 1,
+        timestamp: 1767320629,
+      },
+    ],
   },
   '269210': {
     name: 'Hero Siege',
@@ -15200,11 +15246,11 @@ export const steamGameDetails: SteamGameMap = {
     name: 'Frostpunk',
     appId: 323190,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/323190/ss_03fc3089daf0785e3bf34b32c385e80defefaeb4.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/323190/ss_9f89445fe1e07acc39d3537037f33eb90ad5834e.600x338.jpg',
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/323190/ss_28db92509d505c855b07d480d749119fc147c84c.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/323190/ss_2fc6ed1e46755d6ad6091d8c1f75d94b912d1144.600x338.jpg',
     shortDescription:
-      "||Frostpunk|| is the first society survival game. As the ruler of the last city on Earth, it is your duty to manage both its citizens and infrastructure. What decisions will you make to ensure your society's survival? What will you do when pushed to breaking point? Who will you become in the process?",
+      "||Frostpunk|| is the first ||society|| survival game. As the ruler of the last city on Earth, it is your duty to manage both its ||citizens|| and infrastructure. What decisions will you make to ensure your ||society||'s survival? What will you do when pushed to breaking point? Who will you become in the process?",
     releaseDate: 'Apr 24, 2018',
     developer: '11 bit studios',
     publisher: '11 bit studios',
@@ -15236,10 +15282,33 @@ export const steamGameDetails: SteamGameMap = {
       'Great Soundtrack',
       'Real-Time with Pause',
     ],
-    clueOrder: ['desc', 'tags', 'details'],
+    blurredUserTags: [
+      'Colony Sim',
+      'Base-Building',
+      'City Builder',
+      'Building',
+      'Resource Management',
+    ],
+    overrideCensoredTitle: 'F||rost||p||unk||',
+    clueOrder: ['details+tags', 'desc', 'review'],
     debugProcessed: true,
     debugRefined: true,
-    difficulty: 'Easy',
+    difficulty: 'Medium',
+    reviewClues: [
+      {
+        review:
+          '||Frostpunk|| is a horror game disguised as a morality-testing city planner / manager.\n\n[...] Still replay the game every New Year as a tradition at this point. Windows open, -10*C outside, "yep, that\'s exactly how my citizens feel right now" (it is currently -70*C for them).',
+        votedUp: true,
+        votesUp: 16,
+        weightedScore: '0.673269808292388916',
+        authorPlaytimeHours: 148,
+        timestamp: 1768665349,
+      },
+    ],
+    moreFromThisDeveloper: [
+      { id: 1601570, name: 'The Alters' },
+      { id: 282070, name: 'This War of Mine' },
+    ],
   },
   '323470': {
     name: 'DRAGON BALL XENOVERSE',
@@ -33327,11 +33396,11 @@ export const steamGameDetails: SteamGameMap = {
     name: 'The Forgotten City',
     appId: 874260,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/874260/ss_b7dde47ffbef23c2d5255a676fa7be227248b3e5.600x338.jpg',
-    secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/874260/ss_e6d1b75e48ca08e8fd4d7178056db885dcf86279.600x338.jpg',
+    secondaryScreenshot:
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/874260/ss_fb96b0983fcaa27be22257587796d5e6ea60ff20.600x338.jpg',
     shortDescription:
-      '||The Forgotten City|| is a narrative-driven time loop adventure in ancient Rome. Discover the ruins of an ancient underground city, travel 2000 years into the past, and unravel the mystery of who destroyed it by cleverly exploiting the power to wind back time. The fate of the city is in your hands.',
+      '_ _ _ &nbsp;&nbsp; _ _ _ _ _ _ _ _ _  &nbsp;&nbsp;C_ _ _ &nbsp;&nbsp; is a narrative-driven time loop adventure in ancient Rome. Discover the ruins of an ancient underground city, travel 2000 years into the past, and unravel the mystery of who destroyed it by cleverly exploiting the power to wind back time. The fate of the city is in your hands.',
     releaseDate: 'Jul 28, 2021',
     developer: 'Modern Storyteller',
     publisher: 'Dear Villagers',
@@ -33358,7 +33427,23 @@ export const steamGameDetails: SteamGameMap = {
       'Philosophical',
       'Great Soundtrack',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: ['Time Travel'],
+    overrideCensoredTitle: 'T||he|| F||orgotte||n C||ity||',
+    clueOrder: ['review', 'details+tags', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Hard',
+    reviewClues: [
+      {
+        review:
+          '[...] Made by Australian Indie devs, this game once again proves how the modding community releases bangers.\n\nWhile this game is a complete full-scale remake of the original 2015 mod, one can still feel the ||Skyrim|| DNA. ... (edited for length)',
+        votedUp: true,
+        votesUp: 6,
+        weightedScore: undefined,
+        authorPlaytimeHours: 16,
+        timestamp: 1645660800,
+      },
+    ],
   },
   '880940': {
     name: 'Pummel Party',
