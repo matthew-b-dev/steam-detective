@@ -42064,7 +42064,7 @@ export const steamGameDetails: SteamGameMap = {
     reviewClues: [
       {
         review:
-          "||Gearbox|| is yet another developer to fail to capture the \"whimsical fun of D&D\". Or perhaps failed to realize that's something that people want? It's beyond me why they thought they could adapt their (by this point, mediocre) ||looter-shooter|| formula to that.\n\nIt is kind of cruelly ironic that this is the first game they've been bold enough to release at  $||70||. Especially for a spinoff of the main series!",
+          "Gearbox is yet another developer to fail to capture the \"whimsical fun of D&D\". Or perhaps failed to realize that's something that people want? It's beyond me why they thought they could adapt their (by this point, mediocre) ||looter-shooter|| formula to that.\n\nIt is kind of cruelly ironic that this is the first game they've been bold enough to release at  $||70||. Especially for a spinoff of the main series!",
         votedUp: false,
         votesUp: 7,
         weightedScore: undefined,
