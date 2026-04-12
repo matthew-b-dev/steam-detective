@@ -468,6 +468,15 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile4: 'Far Cry 2',
   },
   '2026-04-13': {
+    caseFile1: 'LEGO The Lord of the Rings',
+    caseFile2: 'CrossCode',
+    caseFile3: 'Starship Troopers: Terran Command',
+    caseFile4: 'Gang Beasts',
+  },
+
+  // 4-14 Med: Mass Effect Andromeda
+
+  '2026-04-14': {
     caseFile1: 'Suicide Squad: Kill the Justice League',
     caseFile2: 'Fields of Mistria',
     caseFile3: "Don't Starve",
@@ -475,17 +484,21 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
   },
 };
 
+// Suggestion: Escape Simulator
+
 // ****************
 // USE A SCREENSHOT CLUE
 // ****************
 // 4/11 Hard: Green Hell (Fully refined)
 
+// Easy: Ori and the Blind Forest
+// Easy: Split Fiction
 // Easy: Star Wars Battlefront II
 // Easy: Remnant II
 // Easy: State of Decay 2
-// Easy: Ghost of Tsushima DIRECTOR'S CUT (change name, add PS4 release)
 // Easy: Any AC Game (last 3/29): Revelations, Unity, (1), (2), Brotherhood, Rogue, Syndicate, Valhalla, Mirage
 
+// Med: Luck be a Landlord
 // Med: Gotham Knights
 // Med: Death's Door
 // Med: WEBFISHING (60k rev)? needs work

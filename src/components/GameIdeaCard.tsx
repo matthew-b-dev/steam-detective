@@ -24,6 +24,7 @@ interface FormState {
   notes: string;
   contact: string;
   credit: string;
+  reviewsAcknowledged: boolean;
 }
 
 const EMPTY_FORM: FormState = {
@@ -31,6 +32,7 @@ const EMPTY_FORM: FormState = {
   notes: '',
   contact: '',
   credit: '',
+  reviewsAcknowledged: false,
 };
 
 const GameIdeaModal: React.FC<{ onClose: () => void }> = ({ onClose }) => {
@@ -91,7 +93,14 @@ const GameIdeaModal: React.FC<{ onClose: () => void }> = ({ onClose }) => {
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
-    setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+    const { name, value, type } = e.target as HTMLInputElement;
+    const checked = (e.target as HTMLInputElement).checked;
+    setForm((prev) => ({
+      ...prev,
+      [name]: type === 'checkbox' ? checked : value,
+      // Reset acknowledgement whenever the URL changes
+      ...(name === 'steamUrl' ? { reviewsAcknowledged: false } : {}),
+    }));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -220,9 +229,25 @@ const GameIdeaModal: React.FC<{ onClose: () => void }> = ({ onClose }) => {
                 </p>
               )}
               {appId && !alreadyUsed && (
-                <p className='mt-1 text-xs text-green-400'>
-                  ✅ App ID: {appId}
-                </p>
+                <>
+                  <p className='mt-1 text-xs text-green-400'>App ID: {appId}</p>
+                  <label className='mt-2 flex items-start gap-2 cursor-pointer'>
+                    <input
+                      type='checkbox'
+                      name='reviewsAcknowledged'
+                      required
+                      checked={form.reviewsAcknowledged}
+                      onChange={handleChange}
+                      className='mt-0.5 shrink-0 accent-yellow-500'
+                    />
+                    <span className='text-xs text-zinc-400'>
+                      I understand that this game won't be considered if it has
+                      less than{' '}
+                      <span className='text-yellow-500'>7.5k Reviews</span> on
+                      Steam. <span className='text-red-400'>**</span>
+                    </span>
+                  </label>
+                </>
               )}
             </div>
 

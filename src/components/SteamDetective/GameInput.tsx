@@ -26,6 +26,11 @@ const compactName = (name: string): string => name.replace(/[-:._'&]+/g, '');
 // When the trimmed, lowercased query exactly matches a key, that game is forced to the top.
 const RESULT_OVERRIDES: Record<string, string> = {
   'outer worlds': 'The Outer Worlds',
+  'lord of the': 'The Lord of the Rings Online',
+  'lord of the rings': 'The Lord of the Rings Online',
+  'the lord of': 'The Lord of the Rings Online',
+  'the lord of the': 'The Lord of the Rings Online',
+  'the lord of the rings': 'The Lord of the Rings Online',
 };
 
 // Build index once at module load - all games, keyed by name, indexing both the name and
