@@ -6308,7 +6308,7 @@ export const steamGameDetails: SteamGameMap = {
     reviewClues: [
       {
         review:
-          'It began with their forging of the ||Great LEGO® games||. Two were given to Batman, darkest, genre pushing and most polished of all games. Three were give to the adventurers, great Indiana Jones and Pirates of the Caribbean. And four, four games were gifted to the fans of Star Wars, who above all else desire ||studs||. [...] But they were all of them deceived, for another game was made.\n... (edited for length)',
+          'It began with their forging of the ||Great LEGO® games||. Two were given to Batman, darkest, genre pushing and most polished of all of their games. Three were give to the adventurers, great Indiana Jones and Pirates of the Caribbean. And four, four games were gifted to the fans of Star Wars, who above all else desire ||studs||. [...] But they were all of them deceived, for another game was made.\n... (edited for length)',
         votedUp: true,
         votesUp: 102,
         votedFunny: 73,
