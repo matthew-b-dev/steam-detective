@@ -1403,7 +1403,7 @@ export const steamGameDetails: SteamGameMap = {
     ],
   },
   '17460': {
-    name: 'Mass Effect (2007)',
+    name: 'Mass Effect',
     appId: 17460,
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/17460/0000006620.600x338.jpg',
@@ -32088,18 +32088,18 @@ export const steamGameDetails: SteamGameMap = {
     name: 'Green Hell',
     appId: 815370,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/815370/ss_5acf01bcbf6f17e2fbeb9378f9e604f03d60e81b.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/815370/ss_00a6c0d911636cd47aace8491fa35970de0c4633.600x338.jpg',
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/815370/ss_d87e2a79e9ac8de98c69a38b8447607d7ad3a4b5.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/815370/ss_9c5e649f1c5774db50db4368b762015ae8207b43.600x338.jpg',
     shortDescription:
-      'Plunge into the open-world survival simulation set in the extreme conditions of the uncharted Amazon jungle. Use real-life survival techniques to craft, hunt, fight, and gather resources, set a makeshift shelter, or raise a fortress. Survive alone or team up with your friends and challenge the jungle together.',
+      'Plunge into the open-world survival simulation set in the extreme conditions of the uncharted Amazon jungle. Use real-life survival techniques to craft, hunt, fight, and gather resources, set a makeshift shelter, or raise a fortress. Survive alone or team up with your friends and challenge the jungle together in&nbsp;&nbsp;G _ _ _ _ &nbsp;&nbsp; _ _ _ _ .',
     releaseDate: 'Sep 5, 2019',
     developer: 'Creepy Jar',
     publisher: 'Creepy Jar',
     tags: ['Action', 'Adventure', 'Indie', 'Simulation'],
     features: [],
     allReviewSummary: {
-      count: 24328,
+      count: 33141,
       rating: 'Very Positive',
     },
     userTags: [
@@ -32125,13 +32125,17 @@ export const steamGameDetails: SteamGameMap = {
       'Action-Adventure',
     ],
     overrideCensoredTitle: 'Gr||een|| H||ell||',
-    clueOrder: ['tags', 'details', 'desc', 'review'],
+    clueOrder: ['review', 'details+tags', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Hard',
     reviewClues: [
       {
         review:
-          'Day 1: died to a tiger\nDay 2: I manage to run away from the tiger but die from an infection from the scratch the tiger gave me\nDay 3: I completly avoid the tiger but die to a snake bite\nDay 4: I Die in my sleep because i got a fever....\n\n(everything in this game is gonna kill you)',
+          'Day 1: I died to a ||jaguar||\nDay 2: I manage to run away from the ||jaguar|| but die from an infection from the scratch the ||jaguar|| gave me\nDay 3: I completly avoid the ||jaguar|| but die to a snake bite\nDay 4: Get another infection because I drank water from a stream when I was trying to collect rocks\nDay 5: I Die in my sleep because i got a fever (unrelated)....\n\nThis is a positive review',
         votedUp: true,
         votesUp: 122,
+        votedFunny: 41,
         weightedScore: '0.830870270729064941',
         authorPlaytimeHours: 13,
         timestamp: 1767642036,
@@ -40583,17 +40587,17 @@ export const steamGameDetails: SteamGameMap = {
     clueOrder: ['tags', 'details', 'desc'],
   },
   '1238000': {
-    name: 'Mass Effect Andromeda',
+    name: 'Mass Effect: Andromeda',
     appId: 1238000,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1238000/ss_3bebdd5c7575faf743e28ecbf51d73cbcea491a3.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1238000/ss_016aed121b497aa916a69b6e33d15ab8371c4283.600x338.jpg',
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1238000/ss_7cf27c2a247bb46834764760b7e4a30afa785ba9.600x338.jpg',
     shortDescription:
-      'Return to the ||Mass Effect|| universe &amp; lead the first humans in Andromeda on a desperate search for our new home.',
+      "M||ass Effect||: ||Andromeda|| takes players to the ||Andromeda|| galaxy, far beyond the Milky Way. There, you'll lead the fight for a new home in hostile territory as the Pathfinder, a leader of military-trained explorers. This is the story of humanity’s next chapter, and your choices throughout the game will ultimately determine humanity's survival.",
     originalReleaseDate: 'Mar 21, 2017 (Origin/EA)',
     releaseDate: 'Jun 11, 2020',
-    developer: 'BioWare',
+    developer: '||BioWare||',
     publisher: 'Electronic Arts',
     tags: [],
     features: [],
@@ -40618,7 +40622,31 @@ export const steamGameDetails: SteamGameMap = {
       'Choices Matter',
       'Nudity',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: [
+      'Sci-fi',
+      'Open World',
+      'Third-Person Shooter',
+      'Action RPG',
+      'Space',
+      'Character Customization',
+    ],
+    overrideCensoredTitle: 'M||ass|| E||ffect||: A||ndromeda||',
+    clueOrder: ['details+tags', 'review', 'desc'],
+    reviewClues: [
+      {
+        review:
+          'Good:\n- Fights with the added maneuverability are much more fluid than the previous games.\n\nBad:\n- Everything is an uncanny valley approximation of itself.\n- The faces. Oh, my.',
+        votedUp: false,
+        votesUp: 103,
+        votedFunny: 7,
+        weightedScore: undefined,
+        authorPlaytimeHours: 115.5,
+        timestamp: 1654315200,
+      },
+    ],
+    moreFromThisDeveloper: [
+      { id: 32370, name: 'STAR WARS™ Knights of the Old Republic™' },
+    ],
   },
   '1238060': {
     name: 'Dead Space 3',
@@ -42652,14 +42680,16 @@ export const steamGameDetails: SteamGameMap = {
   },
   '1318690': {
     name: 'shapez',
+    searchTerms: ['shapez.io'],
     appId: 1318690,
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1318690/ss_ee76fa2e3259ab077b8a711b394cf6668d4ec93a.600x338.jpg',
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1318690/ss_13235b05cdd091dc835c68419fa440e6bbfd5114.600x338.jpg',
     shortDescription:
-      '||shapez|| is an easy-going, minimalistic factory building game about the automation of shapes through extraction and satisfying production lines. Adapt to increasingly complex shapes and grow your factory across an infinitely expanding map. Your only limitation is your creativity!',
-    releaseDate: 'Jun 7, 2020',
+      '_ _ _ _ _ z &nbsp;&nbsp;is an easy-going, minimalistic factory building game about the automation of ||shapes|| through extraction and satisfying production lines. Adapt to increasingly complex ||shapes|| and grow your factory across an infinitely expanding map. Your only limitation is your creativity!',
+    originalReleaseDate: 'May 5, 2020 (Web, Free version)',
+    releaseDate: 'Jun 7, 2020 (Paid version)',
     developer: 'Tobias Springer',
     publisher: 'tobspr Games',
     tags: [],
@@ -42670,22 +42700,40 @@ export const steamGameDetails: SteamGameMap = {
     },
     userTags: [
       'Automation',
-      'Base Building',
-      'Resource Management',
-      'Sandbox',
+      'Minimalist',
+      'Factory',
+      '2D',
       'Crafting',
-      'Strategy',
+      'Resource Management',
       'Singleplayer',
       'Management',
       'Building',
-      'Open World',
+      'Sandbox',
       '2D',
       'Puzzle',
       'Casual',
       'Moddable',
       'Simulation',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    overrideCensoredTitle: 's||hape||z',
+    clueOrder: ['review', 'tags', 'details', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Hard',
+    reviewClues: [
+      {
+        review:
+          "While I wouldn't say it's *better* than the other ||conveyor|| belt games, it is both cheaper and far, FAR simpler (in a good way, in my opinion). No survival mechanics in this one. Just build.",
+        votedUp: true,
+        votesUp: 0,
+        weightedScore: undefined,
+        authorPlaytimeHours: 23,
+        timestamp: 1592784000,
+      },
+    ],
+    moreFromThisDeveloper: [{ id: 880580, name: 'YORG.io' }],
+    developerDescription:
+      'Building the future of factory games, one conveyor belt at a time.',
   },
   '1321440': {
     name: 'Cassette Beasts',
@@ -47330,11 +47378,12 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1672970/ss_46ee31494b5d144d5ef6670cb5a1564abbc26fab.600x338.jpg',
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1672970/ss_73b488e696e3ae45f5d0a5750de524c231dab8a2.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1672970/ss_52883e4263c8f8bca14236118ab62c0f70f2c8d0.600x338.jpg',
     shortDescription:
-      'Fight your way through an exciting action-adventure game, inspired by classic dungeon crawlers and set in the ||Minecraft|| universe!',
+      'Fight your way through an exciting action-adventure game, inspired by classic dungeon crawlers and set in the ||Minecraft|| universe! Brave the dungeons alone, or team up with friends! Up to four players can battle together through action-packed, treasure-stuffed, wildly varied levels – all in an epic quest to save the villagers and take down the evil Arch-Illager!',
+    originalReleaseDate: 'May 26, 2020 (Microsoft Store)',
     releaseDate: 'Sep 22, 2021',
-    developer: 'Mojang Studios',
+    developer: '||Mojang Studios||',
     publisher: 'Xbox Game Studios',
     tags: [],
     features: [],
@@ -47359,7 +47408,39 @@ export const steamGameDetails: SteamGameMap = {
       'Voxel',
       'Fantasy',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    overrideCensoredTitle: 'Mi||necraft|| Du||ngeons||',
+    clueOrder: ['review', 'details+tags', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
+    reviewClues: [
+      {
+        review:
+          "Basically a simplified, ||Minecraft||-themed rpg. The kids love it and I don't mind playing it, but it doesn't feel worth grinding for gear/upgrades.",
+        votedUp: true,
+        votesUp: 428,
+        weightedScore: undefined,
+        authorPlaytimeHours: 68.8,
+        timestamp: 1632283200,
+      },
+      {
+        review: 'Decent spinoff.\nNow put actual ||MineCraft|| on Steam.',
+        votedUp: true,
+        votesUp: 144,
+        weightedScore: undefined,
+        authorPlaytimeHours: 24.4,
+        timestamp: 1632873600,
+      },
+      {
+        review:
+          'I get that the game has multiplayer but why do I need a Microsoft account to play singleplayer?',
+        votedUp: false,
+        votesUp: 4,
+        weightedScore: undefined,
+        authorPlaytimeHours: 2.8,
+        timestamp: 1771968897,
+      },
+    ],
   },
   '1674170': {
     name: 'Sprocket',
@@ -55864,6 +55945,7 @@ export const CLOSE_GUESS_SERIES: string[] = [
   'life is strange',
   'mafia',
   'marvel',
+  'mass effect',
   'max payne',
   'middle-earth',
   'monster hunter',

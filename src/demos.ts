@@ -473,10 +473,16 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile3: 'Starship Troopers: Terran Command',
     caseFile4: 'Gang Beasts',
   },
-
-  // 4-14 Med: Mass Effect Andromeda
-
   '2026-04-14': {
+    caseFile1: 'Minecraft Dungeons',
+    caseFile2: 'Green Hell',
+    caseFile3: 'shapez',
+    caseFile4: 'Mass Effect: Andromeda',
+  },
+
+  // First/Last: Watch Dogs: Legion
+
+  '2026-04-15': {
     caseFile1: 'Suicide Squad: Kill the Justice League',
     caseFile2: 'Fields of Mistria',
     caseFile3: "Don't Starve",
@@ -489,7 +495,6 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
 // ****************
 // USE A SCREENSHOT CLUE
 // ****************
-// 4/11 Hard: Green Hell (Fully refined)
 
 // Easy: Ori and the Blind Forest
 // Easy: Split Fiction
@@ -505,6 +510,7 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
 // Med: Tropico 4 (Last Tropico 3/15)
 // Med: Clustertruck
 
+// Hard: Cassette Beasts
 // Hard: TemTem
 // Hard: Shadow Tactics: Blades of the Shogun
 // Hard: Albion Online
