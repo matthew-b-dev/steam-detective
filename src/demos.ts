@@ -479,10 +479,14 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile3: 'shapez',
     caseFile4: 'Mass Effect: Andromeda',
   },
-
-  // First/Last: Watch Dogs: Legion
-
   '2026-04-15': {
+    caseFile1: 'Ori and the Blind Forest',
+    caseFile2: 'Escape the Backrooms',
+    caseFile3: 'Temtem',
+    caseFile4: 'Watch Dogs: Legion',
+  },
+
+  '2026-04-16': {
     caseFile1: 'Suicide Squad: Kill the Justice League',
     caseFile2: 'Fields of Mistria',
     caseFile3: "Don't Starve",

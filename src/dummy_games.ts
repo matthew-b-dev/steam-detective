@@ -947,7 +947,6 @@ export const dummyGames: string[] = [
   "Nobunaga's Ambition: Awakening",
   'Sunday Gold',
   'Batora: Lost Haven',
-  'Temtem',
   'Eternal Threads',
   'A Memoir Blue',
   'Touken Ranbu Warriors',
