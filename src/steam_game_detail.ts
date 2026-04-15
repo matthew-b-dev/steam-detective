@@ -28521,6 +28521,7 @@ export const steamGameDetails: SteamGameMap = {
   '653530': {
     name: 'Return of the Obra Dinn',
     appId: 653530,
+    suggestedBy: 'Stevo',
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/653530/ss_08fd7317f23f33ea1f35e3967772e22518c12732.600x338.jpg',
     secondaryScreenshot:

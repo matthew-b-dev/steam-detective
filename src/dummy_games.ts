@@ -504,7 +504,6 @@ export const dummyGames: string[] = [
   'Ashen',
   'Madden NFL 19',
   'Planet Alpha',
-  'Return of the Obra Dinn',
   'Subnautica',
   'City of Brass',
   'State of Mind',
