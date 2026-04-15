@@ -17848,12 +17848,12 @@ export const steamGameDetails: SteamGameMap = {
     name: 'Far Cry Primal',
     appId: 371660,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/371660/ss_d820e20568ae777eda44fdebe23690e1e5c3d3a0.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/371660/ss_80e2245daaa7180e4c84f4399285af8a4e3a2137.600x338.jpg',
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/371660/ss_ba889584f1312c18efc11b8bbea916a9e118272a.600x338.jpg',
     shortDescription:
-      'The award-winning ||Far|| ||Cry|| franchise returns with its innovative open world gameplay, bringing together massive beasts, breathtaking environments, and unpredictable savage encounters. Welcome to the Stone Age, a time of danger and adventure.',
-    releaseDate: 'Feb 29, 2016',
+      'The award-winning ||Far||&nbsp;&nbsp;||Cry|| franchise returns with its innovative ||open world|| gameplay, bringing together massive ||beasts||, breathtaking environments, and unpredictable savage encounters. Welcome to the ||Stone|| Age, a time of danger and adventure.',
+    releaseDate: 'Feb 23, 2016',
     developer: 'Ubisoft',
     publisher: 'Ubisoft',
     tags: [],
@@ -17879,7 +17879,21 @@ export const steamGameDetails: SteamGameMap = {
       'Mature',
       'Shooter',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    clueOrder: ['desc', 'tags', 'review', 'details'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
+    reviewClues: [
+      {
+        review:
+          'It’s fun to tame saber-tooth tigers and mammoths, but after a while the missions get repetitive. Still, it’s a cool experience if you love survival + action.',
+        votedUp: true,
+        votesUp: 263,
+        weightedScore: undefined,
+        authorPlaytimeHours: 72.4,
+        timestamp: 1756008000,
+      },
+    ],
   },
   '371970': {
     name: 'Barony',
@@ -28508,12 +28522,13 @@ export const steamGameDetails: SteamGameMap = {
     name: 'Return of the Obra Dinn',
     appId: 653530,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/653530/ss_7dd3476ace2170e134141e487f9491d4c9d094f3.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/653530/ss_08fd7317f23f33ea1f35e3967772e22518c12732.600x338.jpg',
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/653530/ss_380dc35237fde7d3863a44270abafc37924d1db4.600x338.jpg',
-    shortDescription: 'Lost at sea 1803 ~ The good ship ||Obra|| ||Dinn||.',
+    shortDescription:
+      "The good ship&nbsp;&nbsp;O _ _ _&nbsp;&nbsp;&nbsp;&nbsp;_ _ _ _&nbsp;&nbsp;&nbsp;~ Lost at sea 1803. In 1802, the merchant ship set out from London for the Orient with over 200 tons of trade goods. Six months later it hadn't met its rendezvous point at the Cape of Good Hope and was declared lost at sea. ",
     releaseDate: 'Oct 18, 2018',
-    developer: 'Lucas Pope',
+    developer: '||Lucas Pope||',
     publisher: '3909',
     tags: [],
     features: [],
@@ -28538,7 +28553,32 @@ export const steamGameDetails: SteamGameMap = {
       'Retro',
       'Multiple Endings',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: ['Mystery', 'Detective', 'First-Person', 'Historical'],
+    clueOrder: ['review', 'details+tags', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Medium',
+    reviewClues: [
+      {
+        review:
+          '||Lucas Pope|| continues to use the medium of videogames like no other. The only ||solo|| dev that could ever pull off a fully 3d game with a  ||1||-bit color scheme.',
+        votedUp: true,
+        votesUp: 74,
+        weightedScore: undefined,
+        authorPlaytimeHours: 12.3,
+        timestamp: 1539835200,
+      },
+      {
+        review: '"Oh yeah, it\'s all coming together" -Me every five minutes',
+        votedUp: true,
+        votesUp: 170,
+        votedFunny: 103,
+        weightedScore: undefined,
+        authorPlaytimeHours: 11.3,
+        timestamp: 1702443600,
+      },
+    ],
+    moreFromThisDeveloper: [{ id: 239030, name: 'Papers, Please' }],
   },
   '655500': {
     name: 'MX Bikes',
@@ -34257,7 +34297,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/921570/ss_ce917ab0bc7a665ee24cc05fa42d7c3901196265.600x338.jpg',
     shortDescription:
-      'Eight travelers. Eight adventures. Eight roles to play. Embark on an epic journey across the vast and wondrous world of Orsterra and discover the captivating stories of each of the eight travelers.',
+      '_ _ _ _ _ _ _ _&nbsp;&nbsp;&nbsp;_ _ _ _ _ _ _ _&nbsp;&nbsp;. Eight travelers. Eight adventures. Eight roles to play. Embark on an epic journey across the vast and wondrous world of Orsterra and discover the captivating stories of each of the eight travelers in',
     releaseDate: 'Jun 7, 2019',
     developer: 'Square Enix',
     publisher: 'Square Enix',
@@ -34284,7 +34324,33 @@ export const steamGameDetails: SteamGameMap = {
       'Anime',
       'Multiple Endings',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: ['Pixel Graphics', 'Open World'],
+    overrideCensoredTitle: 'OC||TOPATH|| T||RAVELE||R',
+    clueOrder: ['review', 'details+tags', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Hard',
+    reviewClues: [
+      {
+        review:
+          'Its a little difficult to get used to do ||8|| stories at the same time. However, I do enjoy the gameplay',
+        votedUp: true,
+        votesUp: 1,
+        weightedScore: undefined,
+        authorPlaytimeHours: 8.7,
+        timestamp: 1563494400,
+      },
+      {
+        review:
+          "Is it ||2.5D||? Is it ||HD||-2D? I don't know, but what I do know is that it's worth about 30 dollars if you can get it on sale. Don't pay 60.",
+        votedUp: true,
+        votesUp: 117,
+        votedFunny: 3,
+        weightedScore: undefined,
+        authorPlaytimeHours: 50.7,
+        timestamp: 1571961600,
+      },
+    ],
   },
   '924970': {
     name: 'Back 4 Blood',
@@ -47720,9 +47786,11 @@ export const steamGameDetails: SteamGameMap = {
     name: 'Persona 5 Royal',
     appId: 1687950,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1687950/ss_663171dc3afce8fe987e57e8659f91b69faa39bc.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1687950/ss_ed4f15d50417a60b5d4b712c8eb0ea1d8ba876bc.600x338.jpg',
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1687950/ss_a3258aba84ae2f2ff13a02a160f7495bfc152adb.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1687950/ss_663171dc3afce8fe987e57e8659f91b69faa39bc.600x338.jpg',
+    zoomLabelPosition: 'br',
+    excludeOptions: ['Persona 5 Strikers'],
     shortDescription:
       'Don the mask and join the Phantom Thieves of Hearts as they stage grand heists, infiltrate the minds of the corrupt, and make them change their ways!',
     releaseDate: 'Oct 20, 2022',
@@ -47756,7 +47824,12 @@ export const steamGameDetails: SteamGameMap = {
       'Detective',
       'Violent',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    screenshotFocusPoint: [82, 61, 105],
+    overrideCensoredTitle: 'P||erson||a ||5|| R||oyal||',
+    clueOrder: ['ss', 'desc', 'tags', 'details'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
   },
   '1693980': {
     name: 'Dead Space',

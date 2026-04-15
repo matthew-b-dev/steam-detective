@@ -296,6 +296,11 @@ export const RefinePage: React.FC = () => {
           `    screenshotFocusPoint: ${JSON.stringify(game.screenshotFocusPoint)},`,
         );
       }
+      if (game.zoomLabelPosition) {
+        lines.push(
+          `    zoomLabelPosition: ${JSON.stringify(game.zoomLabelPosition)},`,
+        );
+      }
       if (game.blurTitleAndAsAmpersand) {
         lines.push(`    blurTitleAndAsAmpersand: true,`);
       }

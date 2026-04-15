@@ -36,6 +36,7 @@ export interface SteamGame {
   screenshotLetterbox?: boolean; // If true, adds vertical black bars (contain) instead of cropping for non-16:9 screenshots
   transformScreenshotScale?: number; // If specified, applies transform: scale(#) to the big screenshot
   screenshotFocusPoint?: [number, number, number?]; // [widthPercent, heightPercent, zoom%] - zooms the primary screenshot. heightPercent: 100=top, 0=bottom. zoom: 1–175, default 75. e.g. [50,50,75]=center at 75%
+  zoomLabelPosition?: 'bl' | 'br' | 'tl' | 'tr'; // Position of the zoom indicator when screenshotFocusPoint is active. 'bl'=bottom-left (default), 'br'=bottom-right, 'tl'=top-left, 'tr'=top-right
   blurTitleAndAsAmpersand?: boolean; // If true, replace 'and' with '&' in the title
   overrideCensoredTitle?: string; // Manually define censored title with || markers for custom censoring
   moreFromThisDeveloper?: { id: number; name: string; blurred?: boolean }[]; // Other games from the same developer shown as a clue. blurred=true games show a REDACTED overlay until the case file is complete.

@@ -150,7 +150,10 @@ const ReviewCard: React.FC<{ review: Review; isComplete: boolean }> = ({
 
       {/* Posted date */}
       <div className='pt-2 px-2 text-[11px] text-gray-400 uppercase bg-[#101923]'>
-        Posted: {formatTimestamp(review.timestamp)}
+        Posted:{' '}
+        <span className='text-gray-300 font-semibold'>
+          {formatTimestamp(review.timestamp)}
+        </span>
       </div>
 
       {/* Review text */}

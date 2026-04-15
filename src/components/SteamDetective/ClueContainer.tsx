@@ -96,6 +96,7 @@ export const ClueContainer: React.FC<ClueContainerProps> = ({ caseFile }) => {
           screenshotLetterbox={dailyGame.screenshotLetterbox}
           transformScreenshotScale={dailyGame.transformScreenshotScale}
           screenshotFocusPoint={dailyGame.screenshotFocusPoint}
+          zoomLabelPosition={dailyGame.zoomLabelPosition}
           onSwapScreenshots={handleSwapScreenshots}
           isComplete={isComplete}
         />

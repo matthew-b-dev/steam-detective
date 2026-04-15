@@ -485,8 +485,13 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile3: 'Temtem',
     caseFile4: 'Watch Dogs: Legion',
   },
-
   '2026-04-16': {
+    caseFile1: 'Far Cry Primal',
+    caseFile2: 'Return of the Obra Dinn',
+    caseFile3: 'OCTOPATH TRAVELER',
+    caseFile4: 'Persona 5 Royal',
+  },
+  '2026-04-17': {
     caseFile1: 'Suicide Squad: Kill the Justice League',
     caseFile2: 'Fields of Mistria',
     caseFile3: "Don't Starve",

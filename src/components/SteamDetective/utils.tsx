@@ -167,10 +167,12 @@ export const renderCensoredDescription = (
     if (match[1] !== undefined) {
       // ||text|| - censored with blur
       const censoredText = censorText(match[1]);
+      const len = match[1].length;
+      const blurAmount = len === 1 ? '4px' : len === 2 ? '5px' : '7px';
       parts.push(
         <span
           key={`${keyPrefix}censored-${match.index}`}
-          style={{ filter: 'blur(7px)' }}
+          style={{ filter: `blur(${blurAmount})` }}
           className='select-none'
         >
           {censoredText}

@@ -26,6 +26,7 @@ interface ClueScreenshotProps {
   screenshotLetterbox?: boolean;
   transformScreenshotScale?: number;
   screenshotFocusPoint?: [number, number, number?];
+  zoomLabelPosition?: 'bl' | 'br' | 'tl' | 'tr';
   isComplete?: boolean;
 }
 
@@ -40,6 +41,7 @@ export const ClueScreenshot: React.FC<ClueScreenshotProps> = ({
   screenshotLetterbox,
   transformScreenshotScale,
   screenshotFocusPoint,
+  zoomLabelPosition = 'bl',
   isComplete = false,
 }) => {
   const bothShown = showSecondary && secondaryScreenshot;
@@ -176,7 +178,17 @@ export const ClueScreenshot: React.FC<ClueScreenshotProps> = ({
             {largeSrc === primaryScreenshotUrl &&
               screenshotFocusPoint &&
               !isComplete && (
-                <div className='absolute bottom-2 left-2 pointer-events-auto group'>
+                <div
+                  className={`absolute pointer-events-auto group ${
+                    zoomLabelPosition === 'bl'
+                      ? 'bottom-2 left-2'
+                      : zoomLabelPosition === 'br'
+                        ? 'bottom-2 right-2'
+                        : zoomLabelPosition === 'tl'
+                          ? 'top-2 left-2'
+                          : 'top-2 right-2'
+                  }`}
+                >
                   <div
                     className='px-1 sm:px-4 py-0.5 sm:py-1.5 rounded text-sm sm:text-2xl font-semibold text-white tracking-wide transition-opacity duration-150 group-hover:opacity-0'
                     style={{
