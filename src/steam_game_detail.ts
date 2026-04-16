@@ -15863,9 +15863,9 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/333640/ss_0d7f344e2478cf941e174078297b5d2adde21567.600x338.jpg',
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/333640/ss_796b188786b8978574444587bf9f4198fb18f724.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/333640/ss_be0b9ec895b5b2a791400dcc72eac8b8ba6f0dbe.600x338.jpg',
     shortDescription:
-      'Inhabit a deeply-simulated science fantasy world and chisel through layers of thousand-year-old civilizations. Build a character from over a hundred mutations and cybernetics. The award-winning sandbox roguelike &amp; RPG full of robots, deep lore, and sentient plants.',
+      'Inhabit a deeply-simulated science fantasy world and chisel through layers of thousand-year-old civilizations. Build a character from over a hundred mutations and cybernetics. The award-winning, traditional, sandbox roguelike &amp; RPG full of robots, deep lore, and sentient plants.',
     releaseDate: 'Dec 5, 2024',
     developer: 'Freehold Games',
     publisher: 'Kitfox Games',
@@ -15879,7 +15879,7 @@ export const steamGameDetails: SteamGameMap = {
       'Procedural Generation',
       'Turn-Based Combat',
       'Open World',
-      'Turn-Based',
+      '2D',
       'Transhumanism',
       'Sci-fi',
       'Traditional Roguelike',
@@ -15892,7 +15892,23 @@ export const steamGameDetails: SteamGameMap = {
       'Survival',
       'Atmospheric',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: ['Traditional Roguelike', 'Replay Value', 'Roguelike'],
+    overrideCensoredTitle: 'C||aves|| o||f|| Q||ud||',
+    clueOrder: ['review', 'details+tags', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Hard',
+    reviewClues: [
+      {
+        review:
+          "A slime fell in love with me. I'm not safe any more because interdimensional beings are hunting me. Cloned my self for a long term friend. Also found and killed my evil twin. Died instantly to a pink crocodile. Would recommend.",
+        votedUp: true,
+        votesUp: 8,
+        weightedScore: undefined,
+        authorPlaytimeHours: 97.6,
+        timestamp: 1776349988,
+      },
+    ],
   },
   '333930': {
     name: 'Dirty Bomb',
@@ -22441,12 +22457,13 @@ export const steamGameDetails: SteamGameMap = {
     name: 'Titan Quest',
     appId: 475150,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/475150/ss_e57fbc3736ff02e541e8a9f927788e95f77b7c12.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/475150/ss_9170dcaa1222fa39219cb631dbabbe11a22f2778.600x338.jpg',
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/475150/ss_f6441346a3c58145a09847e29f668aa077a8feaa.600x338.jpg',
     shortDescription:
-      'For its 10 year anniversary, ||Titan Quest|| will shine in new splendour. This Anniversary Edition combines both ||Titan Quest|| and ||Titan Quest|| Immortal Throne in one game, and has been given a massive overhaul for the ultimate ARPG experience.',
-    releaseDate: 'Aug 31, 2016',
+      'From Age of Empires co-creator Brian Sullivan and Braveheart writer Randall Wallace comes an innovative action role playing game set in ancient Greece, Egypt and Asia. The ||Titans|| have escaped their eternal prison, wreaking havoc upon the earth. The gods seek a hero who can turn the tide in an epic struggle that will determine the fate of both men and gods.',
+    originalReleaseDate: 'Jun 26, 2006 (PC)',
+    releaseDate: 'Aug 31, 2016 (Anniversary)',
     developer: 'Iron Lore Entertainment',
     publisher: 'THQ Nordic',
     tags: [],
@@ -22472,7 +22489,31 @@ export const steamGameDetails: SteamGameMap = {
       'Fantasy',
       'Open World',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: [
+      'Mythology',
+      'Loot',
+      'Multiplayer',
+      'Hack and Slash',
+      'RPG',
+      'Classic',
+      'Isometric',
+    ],
+    clueOrder: ['details+tags', 'review', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Medium',
+    reviewClues: [
+      {
+        review:
+          "Thousands of hours in both games say this is probably tied with Diablo 2 for 'best Action RPG of all time'.\n||Titan Quest|| is the lovechild of conventions set by Diablo 2, and the burning passion of talented developers, and the courage to experiment with the formula of an Action RPG. Things like the enemies dropping only what they actually use ... (edited for length)",
+        votedUp: true,
+        votesUp: 125,
+        votedFunny: 2,
+        weightedScore: undefined,
+        authorPlaytimeHours: 22.5,
+        timestamp: 1472616000,
+      },
+    ],
   },
   '476600': {
     name: 'Call of Duty: WWII',
@@ -28521,7 +28562,6 @@ export const steamGameDetails: SteamGameMap = {
   '653530': {
     name: 'Return of the Obra Dinn',
     appId: 653530,
-    suggestedBy: 'Stevo',
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/653530/ss_08fd7317f23f33ea1f35e3967772e22518c12732.600x338.jpg',
     secondaryScreenshot:
@@ -28559,6 +28599,7 @@ export const steamGameDetails: SteamGameMap = {
     debugProcessed: true,
     debugRefined: true,
     difficulty: 'Medium',
+    suggestedBy: 'Stevo',
     reviewClues: [
       {
         review:
@@ -39407,7 +39448,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1177980/c24ba810983580a876dbfc3c167f02811a7f8588/ss_c24ba810983580a876dbfc3c167f02811a7f8588.600x338.jpg',
     shortDescription:
-      "You're a curious little kitty with a big personality, on an adventure to find your way back home. Explore the city, make new friends with stray animals, wear delightful hats, and leave more than a little chaos in your wake. After all, isn't that what cats do best?",
+      "You're a curious little ||kitty|| with a big personality, on an adventure to find your way back home. Explore the city, make new friends with stray animals, wear delightful hats, and leave more than a little chaos in your wake. After all, isn't that what ||cats|| do best?",
     releaseDate: 'May 9, 2024',
     developer: 'Double Dagger Studio',
     publisher: 'Double Dagger Studio',
@@ -39434,7 +39475,23 @@ export const steamGameDetails: SteamGameMap = {
       'Singleplayer',
       'Open World',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: ['Cats'],
+    clueOrder: ['details+tags', 'review', 'desc'],
+    searchTerms: ['little kitty big city'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Medium',
+    reviewClues: [
+      {
+        review:
+          'Did you play ||Stray|| in 2022 and think "This is nice, I guess, but I don\'t actually feel like i\'m playing as a ||cat|| and that was kind of what I was here for, considering the branding was overwhelming focused on the ||cat||" ? \n\nThis ones for you. You are actually ||a cat|| and, well, you do ||cat things||.',
+        votedUp: true,
+        votesUp: 18,
+        weightedScore: undefined,
+        authorPlaytimeHours: 8.1,
+        timestamp: 1719792000,
+      },
+    ],
   },
   '1180380': {
     name: 'Stay Out',
@@ -40541,13 +40598,14 @@ export const steamGameDetails: SteamGameMap = {
     name: 'Yakuza: Like a Dragon',
     appId: 1235140,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1235140/ss_3672df00523861cd37b0f969d80604003ba14fd4.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1235140/ss_d3fe630add22247a497f0c2d22e568df66a39f48.600x338.jpg',
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1235140/ss_9cecfb713527a480f607bbde54c01763b18bf354.600x338.jpg',
     shortDescription:
-      'Become Ichiban Kasuga, a low-ranking yakuza grunt left on the brink of death by the man he trusted most. Take up your legendary bat and get ready to crack some underworld skulls in dynamic RPG combat set against the backdrop of modern-day Japan.',
+      'Become ||Ichiban Kasuga||, a low-ranking ||yakuza|| grunt left on the brink of death by the man he trusted most. Take up your legendary ||bat|| and get ready to crack some underworld skulls in dynamic RPG combat set against the backdrop of modern-day Japan.',
+    originalReleaseDate: 'Jan 16, 2020 (PS4)',
     releaseDate: 'Nov 10, 2020',
-    developer: 'Ryu Ga Gotoku Studio',
+    developer: '||Ryu Ga Gotoku Studio||',
     publisher: 'SEGA',
     tags: [],
     features: [],
@@ -40572,7 +40630,32 @@ export const steamGameDetails: SteamGameMap = {
       'Violent',
       'Sexual Content',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: ['JRPG', 'Turn-Based'],
+    clueOrder: ['review', 'tags', 'details', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
+    reviewClues: [
+      {
+        review:
+          "someone on twitter once told me ||yakuza|| is like a scorsese ||gangster|| movie where every 30 minutes is interrupted by an episode of the simpsons and i haven't been able to forget ever since",
+        votedUp: true,
+        votesUp: 1878,
+        votedFunny: 940,
+        weightedScore: undefined,
+        authorPlaytimeHours: 115.5,
+        timestamp: 1606539600,
+      },
+      {
+        review:
+          'snubbed by ||Final Fantasy|| for best ||RPG|| at TGAs. ||Final Fantasy|| fans eat your heart out',
+        votedUp: true,
+        votesUp: 0,
+        weightedScore: undefined,
+        authorPlaytimeHours: 93.6,
+        timestamp: 1609113600,
+      },
+    ],
   },
   '1237320': {
     name: 'Sonic Frontiers',
@@ -47790,8 +47873,6 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1687950/ss_ed4f15d50417a60b5d4b712c8eb0ea1d8ba876bc.600x338.jpg',
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1687950/ss_663171dc3afce8fe987e57e8659f91b69faa39bc.600x338.jpg',
-    zoomLabelPosition: 'br',
-    excludeOptions: ['Persona 5 Strikers'],
     shortDescription:
       'Don the mask and join the Phantom Thieves of Hearts as they stage grand heists, infiltrate the minds of the corrupt, and make them change their ways!',
     releaseDate: 'Oct 20, 2022',
@@ -47826,8 +47907,10 @@ export const steamGameDetails: SteamGameMap = {
       'Violent',
     ],
     screenshotFocusPoint: [82, 61, 105],
+    zoomLabelPosition: 'br',
     overrideCensoredTitle: 'P||erson||a ||5|| R||oyal||',
     clueOrder: ['ss', 'desc', 'tags', 'details'],
+    excludeOptions: ['Persona 5 Strikers'],
     debugProcessed: true,
     debugRefined: true,
     difficulty: 'Easy',
@@ -56025,6 +56108,7 @@ export const CLOSE_GUESS_SERIES: string[] = [
   'just cause',
   'lego',
   'life is strange',
+  'like a dragon',
   'mafia',
   'marvel',
   'mass effect',
@@ -56066,5 +56150,6 @@ export const CLOSE_GUESS_SERIES: string[] = [
   'warhammer',
   'dogs',
   'witcher',
+  'yakuza',
   'xcom',
 ];

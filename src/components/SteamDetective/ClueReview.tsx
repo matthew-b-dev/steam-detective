@@ -165,7 +165,7 @@ const ReviewCard: React.FC<{ review: Review; isComplete: boolean }> = ({
       </div>
 
       {/* Footer: helpful count */}
-      {(review.votesUp > 0 || (review.votedFunny ?? 0) > 0) && (
+      {(review.votesUp >= 0 || (review.votedFunny ?? 0) > 0) && (
         <div
           className='py-2 text-[11px] text-gray-400 border-t flex flex-col gap-0.5'
           style={{ borderColor: 'rgba(255,255,255,0.08)' }}
@@ -177,7 +177,9 @@ const ReviewCard: React.FC<{ review: Review; isComplete: boolean }> = ({
               funny
             </span>
           )}
-          {review.votesUp > 0 && (
+          {review.votesUp === 0 ? (
+            <span>No one found this review helpful</span>
+          ) : (
             <span>
               {review.votesUp.toLocaleString()}{' '}
               {review.votesUp === 1 ? 'person' : 'people'} found this review

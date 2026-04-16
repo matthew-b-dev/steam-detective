@@ -287,7 +287,7 @@ const SteamReviewCard: React.FC<{
 
       {/* Helpful / Funny counts + link */}
       <div className='px-3 pb-2 text-[11px] text-gray-500 flex flex-col gap-0.5'>
-        {(editableVotesUp ?? review.votesUp) > 0 || isSelected ? (
+        {(editableVotesUp ?? review.votesUp) >= 0 || isSelected ? (
           isSelected && onVotesUpChange ? (
             <div className='space-y-1'>
               <label className='block text-gray-600'>Found Helpful:</label>
@@ -303,9 +303,9 @@ const SteamReviewCard: React.FC<{
             </div>
           ) : (
             <span>
-              {(editableVotesUp ?? review.votesUp).toLocaleString()}{' '}
-              {(editableVotesUp ?? review.votesUp) === 1 ? 'person' : 'people'}{' '}
-              found this review helpful
+              {(editableVotesUp ?? review.votesUp) === 0
+                ? 'No one found this review helpful'
+                : `${(editableVotesUp ?? review.votesUp).toLocaleString()} ${(editableVotesUp ?? review.votesUp) === 1 ? 'person' : 'people'} found this review helpful`}
             </span>
           )
         ) : null}

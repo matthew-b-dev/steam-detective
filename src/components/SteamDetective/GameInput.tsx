@@ -31,6 +31,7 @@ const RESULT_OVERRIDES: Record<string, string> = {
   'the lord of': 'The Lord of the Rings Online',
   'the lord of the': 'The Lord of the Rings Online',
   'the lord of the rings': 'The Lord of the Rings Online',
+  'like a dragon': 'Yakuza: Like a Dragon',
 };
 
 // Build index once at module load - all games, keyed by name, indexing both the name and

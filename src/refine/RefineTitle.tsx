@@ -142,6 +142,15 @@ export const RefineTitle: React.FC<RefineTitleProps> = ({
           Original Release Date
           <ArrowTopRightOnSquareIcon className='w-3.5 h-3.5' />
         </a>
+        <a
+          href={`https://steamcommunity.com/app/${game.appId}/reviews/?browsefilter=toprated`}
+          target='_blank'
+          rel='noopener noreferrer'
+          className='flex items-center gap-1 text-xs text-[#66c0f4] hover:text-white transition-colors shrink-0 ml-3'
+        >
+          Reviews
+          <ArrowTopRightOnSquareIcon className='w-3.5 h-3.5' />
+        </a>
       </div>
       <div className='flex items-center gap-2'>
         <span className='text-xs text-gray-400 shrink-0'>

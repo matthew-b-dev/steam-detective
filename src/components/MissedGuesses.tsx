@@ -34,6 +34,13 @@ const MissedGuesses: React.FC<MissedGuessesProps> = ({ missedGuesses }) => {
           to happen. I'm so sorry. 😅
         </div>
       )}
+      {missedGuesses.some(
+        (g) => g.isClose && g.name === 'Like a Dragon: Infinite Wealth',
+      ) && (
+        <div className='mt-3 text-sm'>
+          💡 Close! Hint: Check the Year on the reviews.
+        </div>
+      )}
     </div>
   );
 };

@@ -492,6 +492,16 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile4: 'Persona 5 Royal',
   },
   '2026-04-17': {
+    caseFile1: 'Yakuza: Like a Dragon',
+    caseFile2: 'Little Kitty, Big City',
+    caseFile3: 'Caves of Qud',
+    caseFile4: 'Titan Quest',
+  },
+  /* 2026-04-18 
+  Credit: EsJay
+  Game (hard): ShellShock Live
+  */
+  '2026-04-18': {
     caseFile1: 'Suicide Squad: Kill the Justice League',
     caseFile2: 'Fields of Mistria',
     caseFile3: "Don't Starve",
