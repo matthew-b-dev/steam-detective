@@ -24,7 +24,7 @@ export const sendFeedback = async (
 // function for sending scores to the scores table
 export const sendNewSteamScore = async (
   playerScore: number,
-  caseGuesses?: [number, number, number, number],
+  caseGuesses?: number[],
   puzzleDate?: string,
   gamesPlayed?: number,
 ): Promise<void> => {
@@ -35,10 +35,10 @@ export const sendNewSteamScore = async (
     gametype: 'steam',
     ...(caseGuesses
       ? {
-          case1_guesses: caseGuesses[0],
-          case2_guesses: caseGuesses[1],
-          case3_guesses: caseGuesses[2],
-          case4_guesses: caseGuesses[3],
+          case1_guesses: caseGuesses[0] ?? null,
+          case2_guesses: caseGuesses[1] ?? null,
+          case3_guesses: caseGuesses[2] ?? null,
+          case4_guesses: caseGuesses[3] ?? null,
         }
       : {}),
     ...(gamesPlayed != null ? { games_played: gamesPlayed } : {}),

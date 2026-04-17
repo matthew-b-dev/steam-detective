@@ -7,7 +7,7 @@ import {
 } from '../lib/supabaseClient';
 import type { DailyScoreRow } from '../lib/supabaseClient';
 import { getRealUtcDateString } from '../utils';
-import { STEAM_DETECTIVE_DEMO_DAYS } from '../demos';
+import { STEAM_DETECTIVE_DEMO_DAYS, getCaseFileCount } from '../demos';
 import {
   ArrowPathIcon,
   UsersIcon,
@@ -15,8 +15,7 @@ import {
   CheckBadgeIcon,
 } from '@heroicons/react/16/solid';
 
-// ─── Stats helpers ─────────────────────────────────────────────────────────────
-
+// Helkpers
 const mean = (values: number[]): number => {
   if (values.length === 0) return 0;
   return values.reduce((a, b) => a + b, 0) / values.length;
@@ -35,8 +34,6 @@ const avgNonNull = (values: (number | null)[]): number | null => {
   if (filtered.length === 0) return null;
   return mean(filtered);
 };
-
-// ─── Sub-components ─────────────────────────────────────────────────────────────
 
 interface StatCardProps {
   label: string;
@@ -57,14 +54,14 @@ const StatCard = ({ label, value, sub }: StatCardProps) => {
 
 interface ScoreHistogramProps {
   scores: number[];
+  maxScore?: number;
 }
-const ScoreHistogram = ({ scores }: ScoreHistogramProps) => {
+const ScoreHistogram = ({ scores, maxScore }: ScoreHistogramProps) => {
   if (scores.length === 0) return null;
 
-  // 8 fixed buckets: 0–49, 50–99, …, 350–400 (400 is the known max possible score).
-  const SCORE_MAX = 400;
+  const SCORE_MAX = maxScore ?? 400;
   const bucketSize = 50;
-  const numBuckets = SCORE_MAX / bucketSize; // 8
+  const numBuckets = SCORE_MAX / bucketSize;
   const buckets = Array.from({ length: numBuckets }, (_, i) => {
     const lo = i * bucketSize;
     const hi = i === numBuckets - 1 ? SCORE_MAX : lo + bucketSize - 1;
@@ -104,7 +101,7 @@ interface CaseFileRankingProps {
 }
 const CaseFileRanking = ({ rows, selectedDate }: CaseFileRankingProps) => {
   const demoDay = STEAM_DETECTIVE_DEMO_DAYS[selectedDate];
-  const cases = [
+  const allCases = [
     {
       label: 'Case File 1',
       key: 'case1_guesses' as const,
@@ -126,6 +123,8 @@ const CaseFileRanking = ({ rows, selectedDate }: CaseFileRankingProps) => {
       game: demoDay?.caseFile4,
     },
   ];
+  const count = getCaseFileCount(selectedDate);
+  const cases = allCases.slice(0, count);
 
   const ranked = cases
     .map(({ label, key, game }) => {
@@ -288,8 +287,6 @@ const ScorePercentileTable = ({ scores }: ScorePercentileTableProps) => {
   );
 };
 
-// ─── Main DailyDashboard ────────────────────────────────────────────────────────
-
 export const DailyDashboard: React.FC = () => {
   const today = getRealUtcDateString();
   const [selectedDate, setSelectedDate] = useState(today);
@@ -323,17 +320,18 @@ export const DailyDashboard: React.FC = () => {
   }, [selectedDate]);
 
   const scores = useMemo(() => rows.map((r) => r.score), [rows]);
-  const completeRows = useMemo(
-    () =>
-      rows.filter(
-        (r) =>
-          r.case1_guesses !== null &&
-          r.case2_guesses !== null &&
-          r.case3_guesses !== null &&
-          r.case4_guesses !== null,
-      ),
-    [rows],
-  );
+  const completeRows = useMemo(() => {
+    const count = getCaseFileCount(selectedDate);
+    return rows.filter((r) => {
+      const keys: (keyof typeof r)[] = [
+        'case1_guesses',
+        'case2_guesses',
+        'case3_guesses',
+        'case4_guesses',
+      ];
+      return keys.slice(0, count).every((k) => r[k] !== null);
+    });
+  }, [rows, selectedDate]);
 
   const scoreMean = mean(scores);
   const scoreStddev = stddev(scores);
@@ -463,7 +461,10 @@ export const DailyDashboard: React.FC = () => {
 
             {/* Histogram + percentiles */}
             <div className='grid grid-cols-1 sm:grid-cols-2 gap-4'>
-              <ScoreHistogram scores={scores} />
+              <ScoreHistogram
+                scores={scores}
+                maxScore={getCaseFileCount(selectedDate) * 100}
+              />
               <ScorePercentileTable scores={scores} />
             </div>
 

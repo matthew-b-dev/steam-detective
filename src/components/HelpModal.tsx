@@ -52,6 +52,11 @@ const HelpModal: React.FC<HelpModalProps> = ({ isOpen, onClose }) => {
             .
           </li>
           <li>
+            Every day there are several "<b>Case Files</b>" (games) to solve.
+            Try to guess each game with <b>as few clues as possible</b> for the
+            best score!
+          </li>
+          <li>
             You'll receive <b>up to 6 clues</b> about each game ("case file"),
             the order of which will depend on the game. Each wrong guess or skip
             reveals the next clue.
@@ -61,11 +66,6 @@ const HelpModal: React.FC<HelpModalProps> = ({ isOpen, onClose }) => {
             (reviews, release date, developer, publisher), <b>Description</b>,{' '}
             <b>Screenshot #1</b>, <b>Screenshot #2</b>, and{' '}
             <b>Partially-redacted game title</b>.
-          </li>
-          <li>
-            Every day there are four "<b>Case Files</b>" (games) to solve. Try
-            to guess each game with <b>as few clues as possible</b> for the best
-            score!
           </li>
         </ul>
         <button

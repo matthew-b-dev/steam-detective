@@ -113,11 +113,11 @@ export interface UnifiedGameState {
   caseFile2?: SteamDetectiveState;
   caseFile3?: SteamDetectiveState;
   caseFile4?: SteamDetectiveState;
-  caseFileScores?: number[]; // Scores for each completed case file [score1, score2, score3, score4]
-  currentCaseFile?: number; // Track which case file user is on (1-4)
-  allCasesComplete?: boolean; // Track if all 4 cases are complete
+  caseFileScores?: number[]; // Scores for each completed case file
+  currentCaseFile?: number; // Track which case file user is on (1-based)
+  allCasesComplete?: boolean; // Track if all cases are complete
   totalScoreSent?: boolean; // Track if the total score has been sent to the database
-  caseFileAnimationsPlayed?: boolean[]; // Track which case files have played their score animation [cf1, cf2, cf3, cf4]
+  caseFileAnimationsPlayed?: boolean[]; // Track which case files have played their score animation
   playedOnReleaseDate?: boolean; // true = first interaction was on the puzzle's release day; false = played later; undefined = legacy (treated as true)
 }
 

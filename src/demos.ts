@@ -1,22 +1,20 @@
 export const DATE_OVERRIDE: string | null = null; // '2026-02-04' to test specific dates
 
-/*
-
-
-BioShock Infinite
-Hitman: Absolution
-Rust
-The Forest
-Space Engineers
-XCOM 2
-The Witcher 3: Wild Hunt
-Elite Dangerous
-DARK SOULS II
-Frostpunk
-The Long Dark
-Life is Strange - Episode 1
-STAR WARS: The Old Republic
-
+/**
+ * Get the number of case files for a given puzzle date.
+ * Determined by how many caseFile slots are defined in the demo config.
+ * Defaults to 4 for dates without explicit config.
+ */
+export const getCaseFileCount = (puzzleDate: string): number => {
+  const config = STEAM_DETECTIVE_DEMO_DAYS[puzzleDate];
+  if (!config) return 4;
+  let count = 0;
+  if (config.caseFile1) count++;
+  if (config.caseFile2) count++;
+  if (config.caseFile3) count++;
+  if (config.caseFile4) count++;
+  return count || 4;
+};
 
 /**
  * Extract date from URL route pattern /d/YYYY-MM-DD
@@ -499,11 +497,11 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
   },
   '2026-04-18': {
     caseFile1: 'Chivalry 2',
-    caseFile2: 'The Witness',
-    caseFile3: 'Judgment',
-    caseFile4: 'Brutal Legend',
+    caseFile2: 'Brutal Legend',
+    caseFile3: 'The Witness',
   },
-  // 2026-04-19 Hard: AudioSurf
+  // 2026-04-19 Hard: Judgment (fully refined)
+  // 2026-04-20 Hard: AudioSurf
   '2026-04-19': {
     caseFile1: 'Suicide Squad: Kill the Justice League',
     caseFile2: 'Fields of Mistria',

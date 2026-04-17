@@ -8,7 +8,7 @@ export interface GameData {
   used: boolean;
 }
 
-export function loadGamesData(): GameData[] {
+export const loadGamesData = (): GameData[] => {
   // Build set of demo game names
   const demoGameNames = new Set<string>();
   for (const day of Object.values(STEAM_DETECTIVE_DEMO_DAYS)) {
@@ -37,4 +37,4 @@ export function loadGamesData(): GameData[] {
   games.sort((a, b) => b.count - a.count);
 
   return games;
-}
+};

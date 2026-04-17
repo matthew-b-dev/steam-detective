@@ -23,6 +23,7 @@ import {
 import PuzzleDateTime from './components/PuzzleDateTime';
 import ResetPuzzleButton from './components/ResetPuzzleButton';
 import SteamDetectiveFooter from './components/SteamDetectiveFooter';
+import { getCaseFileCount } from './demos';
 import { useDailyGame } from './hooks/useDailyGame';
 import { useCensoredDescription } from './hooks/useCensoredDescription';
 import { useSteamDetectiveState } from './hooks/useSteamDetectiveState';
@@ -30,6 +31,7 @@ import { useGameActions } from './hooks/useGameActions';
 import MissedGuesses from './components/MissedGuesses';
 import { SteamDetectiveGameProvider } from './contexts/SteamDetectiveGameContext';
 import calendarIcon from './assets/calendar-48.png';
+import { XMarkIcon } from '@heroicons/react/16/solid';
 import {
   GameInput,
   SkipButton,
@@ -43,13 +45,19 @@ import purpleGamesFolderIcon from './assets/purple-games-folder-48.png';
 import redGamesFolderIcon from './assets/red-games-folder-48.png';
 import analyzeIcon from './assets/analyze-48.png';
 
+const BANNER_3CASE_KEY = 'steam-detective-banner-3case-v1';
+
 // Map case file numbers to their folder icons
-const getCaseFileIcon = (caseFileNumber: number): string => {
+// The last case file always uses the red icon, regardless of total count.
+const getCaseFileIcon = (
+  caseFileNumber: number,
+  totalCaseFiles: number,
+): string => {
+  if (caseFileNumber === totalCaseFiles) return redGamesFolderIcon;
   const iconMap: Record<number, string> = {
     1: blueGamesFolderIcon,
     2: greenGamesFolderIcon,
     3: purpleGamesFolderIcon,
-    4: redGamesFolderIcon,
   };
   return iconMap[caseFileNumber] || blueGamesFolderIcon;
 };
@@ -84,6 +92,7 @@ const usePreloadFolderIcons = () => {
 
 interface SteamDetectiveGameProps {
   caseFileNumber: number; // 1-4
+  totalCaseFiles: number;
   onContinueToNextCase?: () => void;
   previousTotalScore?: number;
   isCurrentCaseFile?: boolean;
@@ -91,6 +100,7 @@ interface SteamDetectiveGameProps {
 
 const SteamDetectiveGame: React.FC<SteamDetectiveGameProps> = ({
   caseFileNumber,
+  totalCaseFiles,
   onContinueToNextCase,
   previousTotalScore = 0,
   isCurrentCaseFile = true,
@@ -384,19 +394,19 @@ const SteamDetectiveGame: React.FC<SteamDetectiveGameProps> = ({
       <h2 className='text-lg text-white sm:text-2xl mb-[-5px] sm:py-0 sm:mb-0 font-bold'>
         <div className='flex items-center'>
           <img
-            src={getCaseFileIcon(caseFileNumber)}
+            src={getCaseFileIcon(caseFileNumber, totalCaseFiles)}
             className={`transition-opacity duration-200 ${
               iconsLoaded ? 'opacity-100' : 'opacity-0'
             }`}
           />
           <div className='pl-1'>
             Case File #{caseFileNumber}{' '}
-            <span className='text-gray-500'>of 4</span>
+            <span className='text-gray-500'>of {totalCaseFiles}</span>
           </div>
         </div>
       </h2>
     );
-  }, [iconsLoaded, caseFileNumber]);
+  }, [iconsLoaded, caseFileNumber, totalCaseFiles]);
 
   // If there's no demo configured for this date, don't render anything
   // The parent component will handle showing the "brb" message
@@ -466,6 +476,7 @@ const SteamDetectiveGame: React.FC<SteamDetectiveGameProps> = ({
           totalGuesses={state.totalGuesses}
           blurTitleAndAsAmpersand={dailyGame.blurTitleAndAsAmpersand}
           caseFileNumber={caseFileNumber}
+          totalCaseFiles={totalCaseFiles}
           onContinueToNextCase={onContinueToNextCase}
           previousTotalScore={previousTotalScore}
           isCurrentCaseFile={isCurrentCaseFile}
@@ -498,7 +509,10 @@ const SteamDetective: React.FC<SteamDetectiveProps> = ({
   // Check if this is a demo day or if we should show "brb"
   const dailyGameCheck = useDailyGame(1);
 
-  // Get current case file from state (1-4)
+  // Number of case files for today's puzzle (3 or 4)
+  const totalCaseFiles = getCaseFileCount(sessionPuzzleDate);
+
+  // Get current case file from state (1-based)
   const [currentCaseFile, setCurrentCaseFile] = useState(() =>
     getCurrentCaseFile(sessionPuzzleDate),
   );
@@ -528,8 +542,8 @@ const SteamDetective: React.FC<SteamDetectiveProps> = ({
           | SteamDetectiveState
           | undefined;
 
-        if (caseFileState?.isComplete && currentCaseFile === 4) {
-          // Case file 4 is complete - show final game complete immediately
+        if (caseFileState?.isComplete && currentCaseFile === totalCaseFiles) {
+          // Last case file is complete - show final game complete immediately
           if (!allCasesComplete) {
             setAllCasesComplete(true);
             saveAllCasesComplete(sessionPuzzleDate);
@@ -549,6 +563,7 @@ const SteamDetective: React.FC<SteamDetectiveProps> = ({
     return () => clearInterval(interval);
   }, [
     currentCaseFile,
+    totalCaseFiles,
     allCasesComplete,
     showFinalGameComplete,
     sessionPuzzleDate,
@@ -556,11 +571,11 @@ const SteamDetective: React.FC<SteamDetectiveProps> = ({
 
   const handleContinueToNextCase = useCallback(() => {
     const nextCaseFile = currentCaseFile + 1;
-    if (nextCaseFile <= 4) {
+    if (nextCaseFile <= totalCaseFiles) {
       setCurrentCaseFile(nextCaseFile);
       saveCurrentCaseFile(sessionPuzzleDate, nextCaseFile);
     }
-  }, [currentCaseFile, sessionPuzzleDate]);
+  }, [currentCaseFile, totalCaseFiles, sessionPuzzleDate]);
 
   // Scroll to true top AFTER the new case file has been inserted into the DOM
   const prevCaseFileRef = useRef(currentCaseFile);
@@ -586,7 +601,8 @@ const SteamDetective: React.FC<SteamDetectiveProps> = ({
 
     if (!state) return missed;
 
-    for (let i = 1; i <= 4; i++) {
+    const count = getCaseFileCount(sessionPuzzleDate);
+    for (let i = 1; i <= count; i++) {
       const caseFileKey = `caseFile${i}` as keyof typeof state;
       const caseFileState = state[caseFileKey] as
         | SteamDetectiveState
@@ -621,10 +637,45 @@ const SteamDetective: React.FC<SteamDetectiveProps> = ({
     [sessionPuzzleDate],
   );
 
+  const [bannerDismissed, setBannerDismissed] = useState(
+    () => !!localStorage.getItem(BANNER_3CASE_KEY),
+  );
+
+  const dismissBanner = () => {
+    localStorage.setItem(BANNER_3CASE_KEY, '1');
+    setBannerDismissed(true);
+  };
+
   return (
     <div className='text-[#c7d5e0]'>
       <Toaster position='top-center' />
       <hr className='h-[1px] bg-gray-700 border-none mb-3'></hr>
+
+      {/* 3-case-file update banner */}
+      {!bannerDismissed && (
+        <div className='flex items-stretch text-xs sm:text-sm rounded overflow-hidden border border-blue-500/60 mb-3 bg-blue-900/30'>
+          <div className='text-xs flex items-center gap-1 sm:gap-1.5 bg-blue-700/50 border-r border-blue-500/60 px-2 py-1.5 whitespace-nowrap text-blue-100'>
+            <span className='font-bold'>Update:</span>
+            Apr 18
+          </div>
+          <div className='px-2 py-1.5 sm:px-3 sm:py-2.5 text-blue-100 flex-1'>
+            Moving forward, each day will have{' '}
+            <strong>
+              <u>3 Case Files</u>
+            </strong>{' '}
+            instead of 4. Previous days' case files remain unchanged.{' '}
+            <div className='mt-1'>
+              <button
+                onClick={dismissBanner}
+                className='ml-2 inline-flex items-center gap-0.5 leading-none align-baseline text-blue-300 hover:text-white bg-transparent border-0 p-0 cursor-pointer transition-colors underline decoration-dotted'
+              >
+                <XMarkIcon className='h-3 w-3 shrink-0' />
+                Dismiss
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Update banner */}
       {/* 
@@ -678,7 +729,7 @@ const SteamDetective: React.FC<SteamDetectiveProps> = ({
       {/* Only render game content if there's a demo */}
       {dailyGameCheck && (
         <>
-          {/* Final Game Complete - shown after case file 4, appears at TOP */}
+          {/* Final Game Complete - shown after last case file, appears at TOP */}
           <AnimatePresence>
             {showFinalGameComplete && (
               <motion.div
@@ -706,8 +757,9 @@ const SteamDetective: React.FC<SteamDetectiveProps> = ({
               <div key={caseNumber}>
                 <SteamDetectiveGame
                   caseFileNumber={caseNumber}
+                  totalCaseFiles={totalCaseFiles}
                   onContinueToNextCase={
-                    isCurrentCase && caseNumber < 4
+                    isCurrentCase && caseNumber < totalCaseFiles
                       ? handleContinueToNextCase
                       : undefined
                   }

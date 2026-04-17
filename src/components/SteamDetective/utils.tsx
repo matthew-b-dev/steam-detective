@@ -304,12 +304,12 @@ export const MAX_CLUES = 6;
  * e.g. [50, 50, 75] = center at 75% zoom
  */
 export const DEFAULT_SCREENSHOT_ZOOM = 75;
-export function getFocusScale(zoom?: number): number {
+export const getFocusScale = (zoom?: number): number => {
   return 1 + (zoom ?? DEFAULT_SCREENSHOT_ZOOM) / 100;
-}
-export function getScreenshotFocusStyle(
+};
+export const getScreenshotFocusStyle = (
   focusPoint: [number, number, number?],
-): React.CSSProperties {
+): React.CSSProperties => {
   const [widthPercent, heightPercent, zoom] = focusPoint;
   const cssX = widthPercent;
   const cssY = 100 - heightPercent; // CSS: 0%=top, 100%=bottom
@@ -317,7 +317,7 @@ export function getScreenshotFocusStyle(
     transform: `scale(${getFocusScale(zoom)})`,
     transformOrigin: `${cssX}% ${cssY}%`,
   };
-}
+};
 
 // Animation variants
 export const clueVariants = {

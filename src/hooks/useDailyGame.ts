@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'react';
 import { steamGameDetails } from '../steam_game_detail.generated';
 import { getUtcDateString } from '../utils';
-import { STEAM_DETECTIVE_DEMO_DAYS } from '../demos';
+import { STEAM_DETECTIVE_DEMO_DAYS, getCaseFileCount } from '../demos';
 
 export const useDailyGame = (caseFileNumber: number = 1) => {
   // caseFileNumber is 1-4
@@ -11,6 +11,11 @@ export const useDailyGame = (caseFileNumber: number = 1) => {
   const dailyGame = useMemo(() => {
     // If there's no demo configured for this date, return null
     if (!STEAM_DETECTIVE_DEMO_DAYS[utcDate]) {
+      return null;
+    }
+
+    // If the requested case file is beyond this day's case file count, return null
+    if (caseFileNumber > getCaseFileCount(utcDate)) {
       return null;
     }
 

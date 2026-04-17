@@ -9,6 +9,7 @@ import {
   isLocalhost,
 } from '../../utils';
 import { sendFeedback } from '../../lib/supabaseClient';
+import { getCaseFileCount } from '../../demos';
 import { MAX_CLUES } from './utils';
 import { PlayIcon, StarIcon } from '@heroicons/react/24/solid';
 import { VideoCameraIcon } from '@heroicons/react/24/solid';
@@ -18,12 +19,16 @@ import purpleGamesFolderIcon from '../../assets/purple-games-folder-48.png';
 import redGamesFolderIcon from '../../assets/red-games-folder-48.png';
 
 // Map case file numbers to their folder icons
-const getCaseFileIcon = (caseFileNumber: number): string => {
+// The last case file always uses the red icon, regardless of total count.
+const getCaseFileIcon = (
+  caseFileNumber: number,
+  totalCaseFiles: number,
+): string => {
+  if (caseFileNumber === totalCaseFiles) return redGamesFolderIcon;
   const iconMap: Record<number, string> = {
     1: blueGamesFolderIcon,
     2: greenGamesFolderIcon,
     3: purpleGamesFolderIcon,
-    4: redGamesFolderIcon,
   };
   return iconMap[caseFileNumber] || blueGamesFolderIcon;
 };
@@ -35,6 +40,7 @@ interface GameCompleteProps {
   totalGuesses: number;
   blurTitleAndAsAmpersand?: boolean;
   caseFileNumber: number; // 1-4
+  totalCaseFiles?: number;
   onContinueToNextCase?: () => void;
   previousTotalScore?: number; // Total score before this case file
   isCurrentCaseFile?: boolean;
@@ -76,6 +82,7 @@ export const GameComplete: React.FC<GameCompleteProps> = ({
   totalGuesses,
   blurTitleAndAsAmpersand,
   caseFileNumber,
+  totalCaseFiles,
   onContinueToNextCase,
   previousTotalScore = 0,
   isCurrentCaseFile = true,
@@ -120,9 +127,10 @@ export const GameComplete: React.FC<GameCompleteProps> = ({
     // Mark animation as played
     saveCaseFileAnimationPlayed(puzzleDate, caseFileNumber);
 
-    // For case file #4, skip the counting animation entirely
+    // For the last case file, skip the counting animation entirely
     // (FinalGameComplete handles the animated score display)
-    if (caseFileNumber === 4) {
+    const puzzleCaseCount = getCaseFileCount(puzzleDate);
+    if (caseFileNumber === puzzleCaseCount) {
       setAnimatedScore(newTotalScore);
       setScoreAnimationComplete(true);
       return;
@@ -248,52 +256,59 @@ export const GameComplete: React.FC<GameCompleteProps> = ({
           </span>
         </div>
 
-        {/* Animated Total Score - only show for current case file, not case #4 (handled by FinalGameComplete) */}
-        {isCurrentCaseFile && caseFileNumber < 4 && (
-          <motion.div
-            className='text-center mt-4 mb-4'
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.3 }}
-          >
-            <div className='text-yellow-500 text-6xl font-bold'>
-              {animatedScore}
-            </div>
-            <div className='text-gray-400 text-sm mt-1'>Total Points</div>
-          </motion.div>
-        )}
-
-        {/* Continue Button - only show for case files 1-3 */}
-        {caseFileNumber < 4 && onContinueToNextCase && (
-          <div className='my-4 mx-auto max-w-[450px]'>
-            <button
-              disabled={!scoreAnimationComplete}
-              onClick={() => {
-                onContinueToNextCase();
-              }}
-              className={`w-full px-4 py-2 rounded bg-green-700 hover:bg-green-600 text-white text-sm font-semibold flex items-center justify-center gap-2 transition-opacity duration-300 ${
-                scoreAnimationComplete
-                  ? 'opacity-100'
-                  : 'opacity-0 pointer-events-none'
-              }`}
+        {/* Animated Total Score - only show for current case file, not last case (handled by FinalGameComplete) */}
+        {isCurrentCaseFile &&
+          caseFileNumber < getCaseFileCount(getUtcDateString()) && (
+            <motion.div
+              className='text-center mt-4 mb-4'
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.3 }}
             >
-              <span className='block'>
-                <PlayIcon className='inline w-5 h-5 mr-1 mt-[-1px]' />
-              </span>
-              <span className='block'>
-                <span className='mr-2 pb-2 whitespace-nowrap'>Continue to</span>{' '}
-                <span className='bg-gray-800/20 py-1 px-2 rounded whitespace-nowrap'>
-                  <img
-                    src={getCaseFileIcon(caseFileNumber + 1)}
-                    className='inline w-6 h-6 mr-1 mt-[-2px]'
-                    alt='Folder icon'
-                  />
-                  Case File #{caseFileNumber + 1}
+              <div className='text-yellow-500 text-6xl font-bold'>
+                {animatedScore}
+              </div>
+              <div className='text-gray-400 text-sm mt-1'>Total Points</div>
+            </motion.div>
+          )}
+
+        {/* Continue Button - only show for non-final case files */}
+        {caseFileNumber < getCaseFileCount(getUtcDateString()) &&
+          onContinueToNextCase && (
+            <div className='my-4 mx-auto max-w-[450px]'>
+              <button
+                disabled={!scoreAnimationComplete}
+                onClick={() => {
+                  onContinueToNextCase();
+                }}
+                className={`w-full px-4 py-2 rounded bg-green-700 hover:bg-green-600 text-white text-sm font-semibold flex items-center justify-center gap-2 transition-opacity duration-300 ${
+                  scoreAnimationComplete
+                    ? 'opacity-100'
+                    : 'opacity-0 pointer-events-none'
+                }`}
+              >
+                <span className='block'>
+                  <PlayIcon className='inline w-5 h-5 mr-1 mt-[-1px]' />
                 </span>
-              </span>
-            </button>
-          </div>
-        )}
+                <span className='block'>
+                  <span className='mr-2 pb-2 whitespace-nowrap'>
+                    Continue to
+                  </span>{' '}
+                  <span className='bg-gray-800/20 py-1 px-2 rounded whitespace-nowrap'>
+                    <img
+                      src={getCaseFileIcon(
+                        caseFileNumber + 1,
+                        totalCaseFiles ?? getCaseFileCount(getUtcDateString()),
+                      )}
+                      className='inline w-6 h-6 mr-1 mt-[-2px]'
+                      alt='Folder icon'
+                    />
+                    Case File #{caseFileNumber + 1}
+                  </span>
+                </span>
+              </button>
+            </div>
+          )}
 
         {/* YouTube embed 
           gameCompleteYoutubeEmbed: {

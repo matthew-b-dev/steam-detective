@@ -9,6 +9,7 @@ import {
 import { DocumentDuplicateIcon } from '@heroicons/react/24/solid';
 import type { UnifiedGameState } from '../utils';
 import { isLocalhost } from '../utils';
+import { getCaseFileCount } from '../demos';
 import useBodyScrollLock from '../hooks/useBodyScrollLock';
 import { sendFeedback } from '../lib/supabaseClient';
 
@@ -21,7 +22,7 @@ const LAUNCH_DATE = '2026-02-04';
 const STORAGE_KEY_PREFIX = 'steam-detective-state-';
 const IS_PROD = !isLocalhost();
 
-function getAllPuzzleDates(): string[] {
+const getAllPuzzleDates = (): string[] => {
   const start = new Date(LAUNCH_DATE + 'T00:00:00Z');
   const now = new Date();
   const today = new Date(
@@ -35,16 +36,16 @@ function getAllPuzzleDates(): string[] {
     dates.push(`${y}-${m}-${day}`);
   }
   return dates;
-}
+};
 
-function getStateForDate(dateStr: string): UnifiedGameState | null {
+const getStateForDate = (dateStr: string): UnifiedGameState | null => {
   try {
     const raw = localStorage.getItem(STORAGE_KEY_PREFIX + dateStr);
     return raw ? JSON.parse(raw) : null;
   } catch {
     return null;
   }
-}
+};
 
 interface ComputedStats {
   totalPossibleDays: number;
@@ -57,7 +58,7 @@ interface ComputedStats {
   bestStreak: number;
 }
 
-function computeStats(): ComputedStats {
+const computeStats = (): ComputedStats => {
   const allDates = getAllPuzzleDates();
   const totalPossibleDays = allDates.length;
 
@@ -79,7 +80,8 @@ function computeStats(): ComputedStats {
     }
 
     let dayAttempted = false;
-    for (let cf = 1; cf <= 4; cf++) {
+    const count = getCaseFileCount(dateStr);
+    for (let cf = 1; cf <= count; cf++) {
       const cfKey = `caseFile${cf}` as keyof UnifiedGameState;
       const cfState = state[cfKey] as
         | { isComplete?: boolean; isCorrect?: boolean }
@@ -152,31 +154,9 @@ function computeStats(): ComputedStats {
     currentStreak,
     bestStreak,
   };
-}
+};
 
-// Control points: [score, percentile of players beaten]
-const PERCENTILE_POINTS: [number, number][] = [
-  [0, 0],
-  [250, 50],
-  [320, 80],
-  [360, 90],
-  [370, 99],
-];
-
-function scoreToPercentile(score: number): number {
-  if (score <= PERCENTILE_POINTS[0][0]) return 0;
-  if (score >= PERCENTILE_POINTS[PERCENTILE_POINTS.length - 1][0]) return 99;
-  for (let i = 1; i < PERCENTILE_POINTS.length; i++) {
-    const [x0, y0] = PERCENTILE_POINTS[i - 1];
-    const [x1, y1] = PERCENTILE_POINTS[i];
-    if (score <= x1) {
-      return Math.round(y0 + ((score - x0) / (x1 - x0)) * (y1 - y0));
-    }
-  }
-  return 99;
-}
-
-function getAllSteamDetectiveStorage(): Record<string, string> {
+const getAllSteamDetectiveStorage = (): Record<string, string> => {
   const data: Record<string, string> = {};
   for (let i = 0; i < localStorage.length; i++) {
     const key = localStorage.key(i);
@@ -185,14 +165,13 @@ function getAllSteamDetectiveStorage(): Record<string, string> {
     }
   }
   return data;
-}
+};
 
-// ─── Count-up animation hook ────────────────────────────────────────────────
-function useCountUp(
+const useCountUp = (
   target: number,
   duration: number = 800,
   decimalPlaces: number = 0,
-): number {
+): number => {
   const [current, setCurrent] = useState(0);
   const rafRef = useRef<number | null>(null);
 
@@ -233,9 +212,8 @@ function useCountUp(
   }, [target, duration, decimalPlaces]);
 
   return current;
-}
+};
 
-// ─── Stat tile ───────────────────────────────────────────────────────────────
 const StatTile: React.FC<{
   label: string;
   overrideLabelStyle?: string;
@@ -280,7 +258,6 @@ const StatTile: React.FC<{
   </div>
 );
 
-// ─── Main component ───────────────────────────────────────────────────────────
 const StatsModal: React.FC<StatsModalProps> = ({ isOpen, onClose }) => {
   useBodyScrollLock(isOpen);
   const stats = isOpen ? computeStats() : null;
@@ -537,12 +514,6 @@ const StatsModal: React.FC<StatsModalProps> = ({ isOpen, onClose }) => {
                         )
                       }
                       overrideSublabelStyle='text-[13px] text-zinc-400 text-center leading-tight mt-1'
-                      sublabel={
-                        stats.averageScore !== null &&
-                        scoreToPercentile(stats.averageScore) >= 50
-                          ? `✨ That's better than ${scoreToPercentile(stats.averageScore)}% of players! ✨`
-                          : undefined
-                      }
                     />
                     {/* Not shown until I can figure out some kind of forgiveness system
                     <StatTile

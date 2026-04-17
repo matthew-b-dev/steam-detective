@@ -13,6 +13,7 @@ interface AnimatedTotalScoreDisplayProps {
   todayScores: number[];
   userPercentile: number | null;
   scoresLoading: boolean;
+  maxScore?: number;
 }
 
 const AnimatedTotalScoreDisplay: React.FC<AnimatedTotalScoreDisplayProps> = ({
@@ -20,6 +21,7 @@ const AnimatedTotalScoreDisplay: React.FC<AnimatedTotalScoreDisplayProps> = ({
   todayScores,
   userPercentile,
   scoresLoading,
+  maxScore = 400,
 }) => {
   const animationInProgress = useRef(false);
   const [animatedScore, setAnimatedScore] = useState(0);
@@ -245,8 +247,8 @@ const AnimatedTotalScoreDisplay: React.FC<AnimatedTotalScoreDisplayProps> = ({
       },
       xaxis: {
         min: 0,
-        max: 400,
-        tickAmount: 4,
+        max: maxScore,
+        tickAmount: maxScore / 100,
         labels: {
           style: { colors: '#9ca3af', fontSize: '11px' },
           formatter: (val: string) => `${parseInt(val)}`,
@@ -294,7 +296,10 @@ const AnimatedTotalScoreDisplay: React.FC<AnimatedTotalScoreDisplayProps> = ({
       legend: { show: false },
       annotations: {
         // Full-height vertical lines at each tick position
-        xaxis: [0, 100, 200, 300, 400].map((val) => ({
+        xaxis: Array.from(
+          { length: maxScore / 100 + 1 },
+          (_, i) => i * 100,
+        ).map((val) => ({
           x: val,
           borderColor: '#374151',
           strokeDashArray: 0,
@@ -341,7 +346,7 @@ const AnimatedTotalScoreDisplay: React.FC<AnimatedTotalScoreDisplayProps> = ({
         ],
       },
     }),
-    [todayScores.length, userScoreData, yBound],
+    [todayScores.length, userScoreData, yBound, maxScore],
   );
 
   const chartSeries = useMemo(

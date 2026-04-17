@@ -16,6 +16,7 @@ import ShareButton from '../ShareButton';
 import SteamDetectiveFeedbackButtons from './SteamDetectiveFeedbackButtons';
 import AnimatedTotalScoreDisplay from './AnimatedTotalScoreDisplay';
 import { useDailyGame } from '../../hooks/useDailyGame';
+import { getCaseFileCount } from '../../demos';
 import { ArrowPathIcon } from '@heroicons/react/20/solid';
 import toast from 'react-hot-toast';
 import GameIdeaCard from '../GameIdeaCard';
@@ -59,9 +60,10 @@ const FinalGameComplete: React.FC<FinalGameCompleteProps> = ({
   const game2 = useDailyGame(2);
   const game3 = useDailyGame(3);
   const game4 = useDailyGame(4);
-  const hasZoomedClue = [game1, game2, game3, game4].some(
-    (game) => game?.screenshotFocusPoint != null,
-  );
+  const hasZoomedClue = [game1, game2, game3, game4]
+    .filter(Boolean)
+    .some((game) => game?.screenshotFocusPoint != null);
+  const totalCaseFiles = getCaseFileCount(puzzleDate);
 
   // Send score first, then fetch all scores
   useEffect(() => {
@@ -78,14 +80,12 @@ const FinalGameComplete: React.FC<FinalGameCompleteProps> = ({
           hasSentScoreThisSession.current = true; // Prevent duplicate sends
           try {
             // Collect per-case-file guess counts from saved state
-            const caseGuesses = state
-              ? ([
-                  state.caseFile1?.totalGuesses ?? 7,
-                  state.caseFile2?.totalGuesses ?? 7,
-                  state.caseFile3?.totalGuesses ?? 7,
-                  state.caseFile4?.totalGuesses ?? 7,
-                ] as [number, number, number, number])
-              : undefined;
+            const caseGuesses: number[] = [];
+            for (let i = 1; i <= totalCaseFiles; i++) {
+              const cfKey = `caseFile${i}` as keyof typeof state;
+              const cfState = state?.[cfKey] as CaseFileState | undefined;
+              caseGuesses.push(cfState?.totalGuesses ?? 7);
+            }
             const gamesPlayed = Object.keys(localStorage).filter((k) =>
               k.startsWith('steam-detective-state-'),
             ).length;
@@ -132,7 +132,7 @@ const FinalGameComplete: React.FC<FinalGameCompleteProps> = ({
     };
 
     sendAndFetchScores();
-  }, [show, totalScore, puzzleDate]);
+  }, [show, totalScore, puzzleDate, totalCaseFiles]);
 
   // Generate share text
   const handleCopyToShare = useCallback(() => {
@@ -170,7 +170,7 @@ const FinalGameComplete: React.FC<FinalGameCompleteProps> = ({
 
     const caseFileEmojis = [];
 
-    for (let i = 1; i <= 4; i++) {
+    for (let i = 1; i <= totalCaseFiles; i++) {
       const caseFileKey = `caseFile${i}` as
         | 'caseFile1'
         | 'caseFile2'
@@ -203,7 +203,7 @@ const FinalGameComplete: React.FC<FinalGameCompleteProps> = ({
 
     navigator.clipboard.writeText(shareText);
     toast.success('Copied to clipboard!');
-  }, [totalScore, userRank, todayScores.length, puzzleDate]);
+  }, [totalScore, userRank, todayScores.length, puzzleDate, totalCaseFiles]);
 
   if (!show) return null;
 
@@ -224,6 +224,7 @@ const FinalGameComplete: React.FC<FinalGameCompleteProps> = ({
           todayScores={todayScores}
           userPercentile={userPercentile}
           scoresLoading={scoresLoading}
+          maxScore={totalCaseFiles * 100}
         />
 
         <div className='space-y-3'>
