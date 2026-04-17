@@ -5745,9 +5745,9 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/210970/ss_9c73ac83c8acfb69db6166f239fdba2ffa099b32.600x338.jpg',
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/210970/ss_6a7964a4dede8ad7d8b4e413e8b291defbbaa55b.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/210970/ss_fabb0939200a1f2bbb40b775c8e07645f21dc44a.600x338.jpg',
     shortDescription:
-      'You wake up, alone, on a strange island full of puzzles that will challenge and surprise you.',
+      'You wake up, alone, on a strange ||island|| full of ||puzzle||s that will challenge and surprise you.',
     releaseDate: 'Jan 26, 2016',
     developer: 'Thekla, Inc.',
     publisher: 'Thekla, Inc.',
@@ -5774,8 +5774,29 @@ export const steamGameDetails: SteamGameMap = {
       'Philosophical',
       'Relaxing',
     ],
-    blurredUserTags: ['Walking Simulator'],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: [
+      'Walking Simulator',
+      'Open World',
+      'Colorful',
+      'Indie',
+      'Difficult',
+      'Atmospheric',
+    ],
+    overrideCensoredTitle: 'T||he|| W||itnes||s',
+    clueOrder: ['review', 'desc', 'details+tags'],
+    debugProcessed: true,
+    debugRefined: true,
+    reviewClues: [
+      {
+        review: 'this is where i draw the line',
+        votedUp: true,
+        votesUp: 62,
+        votedFunny: 108,
+        weightedScore: undefined,
+        authorPlaytimeHours: 20.6,
+        timestamp: 1675054800,
+      },
+    ],
   },
   '211400': {
     name: 'Deadlight',
@@ -7406,14 +7427,15 @@ export const steamGameDetails: SteamGameMap = {
     name: 'Brutal Legend',
     appId: 225260,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/225260/ss_dc08f8689a8f19100c7bd3245d44a4f6aba86fb5.600x338.jpg',
-    secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/225260/ss_18d2dd8379122ca826a4e02ba652e7f624d7a79b.600x338.jpg',
+    secondaryScreenshot:
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/225260/ss_1c1c018a1d7b597bea836eec24dbfe4170ffb069.600x338.jpg',
     shortDescription:
-      "||Brütal Legend|| is an action-adventure that marries visceral action combat with open-world freedom. Set in a universe somewhere between Lord of the Rings and Spinal Tap, it's a fresh take on the action/driving genre, which in this case is full of imitation cover bands, demons intent on enslaving humanity and Heavy metal tunes.",
+      "_ _ _ _ _ _&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_ _ _ _ _ _&nbsp;&nbsp;&nbsp;is an action-adventure game from Double Fine Productions that marries visceral action combat with open-world freedom. Set in a universe somewhere between Lord of the Rings and Spinal Tap, it's a fresh take on the action/driving genre, which in this case is full of imitation cover bands, demons intent on enslaving humanity and ||Heavy metal|| tunes.",
+    originalReleaseDate: 'Oct 13, 2009 (PS3, X360)',
     releaseDate: 'Feb 26, 2013',
-    developer: 'Double Fine Productions',
-    publisher: 'Double Fine Productions',
+    developer: '||Double Fine Productions||',
+    publisher: '||Double Fine Productions||',
     tags: [],
     features: [],
     allReviewSummary: {
@@ -7437,7 +7459,28 @@ export const steamGameDetails: SteamGameMap = {
       'Gothic',
       'Action-Adventure',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: ['Music', 'Third Person', 'Hack and Slash'],
+    overrideCensoredTitle: 'B||rutal|| L||egen||d',
+    clueOrder: ['details+tags', 'review', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Medium',
+    reviewClues: [
+      {
+        review:
+          'Jack Black is the perfect person for this insane game. I will not elaborate any further.',
+        votedUp: true,
+        votesUp: 1,
+        weightedScore: undefined,
+        authorPlaytimeHours: 10.1,
+        timestamp: 1381795200,
+      },
+    ],
+    moreFromThisDeveloper: [
+      { id: 115120, name: 'Iron Brigade' },
+      { id: 246110, name: 'MASSIVE CHALICE' },
+      { id: 246090, name: 'Spacebase DF-9' },
+    ],
   },
   '225540': {
     name: 'Just Cause 3',
@@ -49073,9 +49116,10 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1824220/ss_52c26b2ce4b3a340962022e5c97af69e0dc38523.600x338.jpg',
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1824220/ss_ae43849a23f69f45e573d0aadb7ab3abfb1c97d2.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1824220/ss_3da2e1dd30880c0d6f525b5d4adad7f8024c2caf.600x338.jpg',
     shortDescription:
-      '||Chivalry 2|| is a multiplayer first person slasher inspired by epic medieval movie battles. Players are thrust into the action of every iconic moment of the era - from clashing swords, to storms of flaming arrows, to sprawling castle sieges and more.',
+      '" _ _ _v_ _ _ _&nbsp;&nbsp;&nbsp;&nbsp;_ "&nbsp;&nbsp;is a multiplayer first person slasher inspired by epic medieval movie battles. Players are thrust into the action of every iconic moment of the era - from clashing swords, to storms of flaming arrows, to sprawling castle sieges and more.',
+    originalReleaseDate: 'Jun 8, 2021 (Epic)',
     releaseDate: 'Jun 12, 2022',
     developer: 'Torn Banner Studios',
     publisher: 'Tripwire Presents',
@@ -49102,7 +49146,39 @@ export const steamGameDetails: SteamGameMap = {
       '3D',
       'Third Person',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: [
+      'Swordplay',
+      'Medieval',
+      'Massively Multiplayer',
+      'Hack and Slash',
+      'Gore',
+    ],
+    overrideCensoredTitle: 'C||hivalr||y ||2||',
+    clueOrder: ['review', 'tags', 'details', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
+    reviewClues: [
+      {
+        review:
+          'There are two types of people in this world:\n1) "FOR THE ORDER"\n2) "FOR THE GLORY OF AGATHA"',
+        votedUp: true,
+        votesUp: 55,
+        votedFunny: 13,
+        weightedScore: undefined,
+        authorPlaytimeHours: 28.9,
+        timestamp: 1655524800,
+      },
+      {
+        review:
+          'As a new player, this one was a little more forgiving to get into than the first game. Be warned, neither are all that approachable and the playerbase leans towards the sweaty side.',
+        votedUp: true,
+        votesUp: 3,
+        weightedScore: undefined,
+        authorPlaytimeHours: 76,
+        timestamp: 1772083162,
+      },
+    ],
   },
   '1845910': {
     name: 'Dragon Age: The Veilguard',
@@ -51333,13 +51409,16 @@ export const steamGameDetails: SteamGameMap = {
   },
   '2058180': {
     name: 'Judgment',
+    searchTerms: ['judgement'],
+    suggestedBy: 'aReize',
     appId: 2058180,
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2058180/ss_3ace0d9ef99534bcbb5a2b73f32826ab7b3bdc4e.600x338.jpg',
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2058180/ss_fb45b4875cf5968d301c9a4cf73f4c7ecca7bead.600x338.jpg',
     shortDescription:
-      'Fight for the truth and uncover the twisted crime running deep beneath the surface of Tokyo. In this legal thriller , the balance between justice and mercy teeters on the edge.',
+      '||RGG Studio|| proudly presents&nbsp;&nbsp;&nbsp;_ _ _ _ _ _ _ _&nbsp;&nbsp;, an action-adventure ||detective|| game that ||follows twisted crime running deep beneath the surface of Tokyo||. Play as Takayuki Yagami, a disgraced ||defense attorney turned detective||, as you claw your way through Kamurocho’s ||underground crime network and uncover the truth behind a string of grisly murders. In this legal thriller||, the balance between justice and mercy teeters on the edge.',
+    originalReleaseDate: 'Jun 25, 2019 (PS4)',
     releaseDate: 'Sep 14, 2022',
     developer: 'Ryu Ga Gotoku Studio',
     publisher: 'SEGA',
@@ -51353,7 +51432,7 @@ export const steamGameDetails: SteamGameMap = {
       'Action',
       'Adventure',
       "Beat 'em up",
-      'Action-Adventure',
+      'Detective',
       '3D Fighter',
       'Cinematic',
       '3D',
@@ -51366,7 +51445,22 @@ export const steamGameDetails: SteamGameMap = {
       'Dark',
       'Drama',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    clueOrder: ['desc', 'review', 'details+tags'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Hard',
+    reviewClues: [
+      {
+        review:
+          "J||udgment|| is like the Y||akuza|| games that it's a spinoff of, but you get to play Phoenix Wright that knows kungfu.",
+        votedUp: true,
+        votesUp: 200,
+        votedFunny: 58,
+        weightedScore: undefined,
+        authorPlaytimeHours: 23,
+        timestamp: 1665201600,
+      },
+    ],
   },
   '2072450': {
     name: 'Like a Dragon: Infinite Wealth',

@@ -497,11 +497,14 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile3: 'Caves of Qud',
     caseFile4: 'Titan Quest',
   },
-  /* 2026-04-18 
-  Credit: EsJay
-  Game (hard): ShellShock Live
-  */
   '2026-04-18': {
+    caseFile1: 'Chivalry 2',
+    caseFile2: 'The Witness',
+    caseFile3: 'Judgment',
+    caseFile4: 'Brutal Legend',
+  },
+  // 2026-04-19 Hard: AudioSurf
+  '2026-04-19': {
     caseFile1: 'Suicide Squad: Kill the Justice League',
     caseFile2: 'Fields of Mistria',
     caseFile3: "Don't Starve",
@@ -522,6 +525,7 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
 // Easy: State of Decay 2
 // Easy: Any AC Game (last 3/29): Revelations, Unity, (1), (2), Brotherhood, Rogue, Syndicate, Valhalla, Mirage
 
+// Med: Another Crab's Treasure
 // Med: Luck be a Landlord
 // Med: Gotham Knights
 // Med: Death's Door
@@ -530,7 +534,6 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
 // Med: Clustertruck
 
 // Hard: Cassette Beasts
-// Hard: TemTem
 // Hard: Shadow Tactics: Blades of the Shogun
 // Hard: Albion Online
 // Hard (Fully Refined): Tales of Arise
