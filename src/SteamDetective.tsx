@@ -18,8 +18,11 @@ import {
   getCurrentCaseFile,
   getTotalScore,
   saveAllCasesComplete,
+  isLocalhost,
+  eventFiredThisSession,
   type SteamDetectiveState,
 } from './utils';
+import { sendFeedback } from './lib/supabaseClient';
 import PuzzleDateTime from './components/PuzzleDateTime';
 import ResetPuzzleButton from './components/ResetPuzzleButton';
 import SteamDetectiveFooter from './components/SteamDetectiveFooter';
@@ -31,7 +34,7 @@ import { useGameActions } from './hooks/useGameActions';
 import MissedGuesses from './components/MissedGuesses';
 import { SteamDetectiveGameProvider } from './contexts/SteamDetectiveGameContext';
 import calendarIcon from './assets/calendar-48.png';
-import { XMarkIcon } from '@heroicons/react/16/solid';
+import { XMarkIcon, InformationCircleIcon } from '@heroicons/react/16/solid';
 import {
   GameInput,
   SkipButton,
@@ -46,6 +49,7 @@ import redGamesFolderIcon from './assets/red-games-folder-48.png';
 import analyzeIcon from './assets/analyze-48.png';
 
 const BANNER_3CASE_KEY = 'steam-detective-banner-3case-v1';
+const IS_PROD = !isLocalhost();
 
 // Map case file numbers to their folder icons
 // The last case file always uses the red icon, regardless of total count.
@@ -665,6 +669,25 @@ const SteamDetective: React.FC<SteamDetectiveProps> = ({
             </strong>{' '}
             instead of 4. Previous days' case files remain unchanged.{' '}
             <div className='mt-1'>
+              <a
+                href='https://github.com/matthew-b-dev/steam-detective/releases/tag/v2026-04-18'
+                target='_blank'
+                rel='noopener noreferrer'
+                className='inline-flex items-center gap-0.5 leading-none align-baseline text-blue-300 hover:text-white transition-colors underline decoration-dotted'
+                onClick={() => {
+                  if (
+                    IS_PROD &&
+                    !eventFiredThisSession('[Event] Clicked Banner More Info')
+                  )
+                    sendFeedback(
+                      'custom',
+                      '`[Event]` Clicked Banner More Info',
+                    );
+                }}
+              >
+                <InformationCircleIcon className='h-3 w-3 shrink-0' />
+                More Info
+              </a>
               <button
                 onClick={dismissBanner}
                 className='ml-2 inline-flex items-center gap-0.5 leading-none align-baseline text-blue-300 hover:text-white bg-transparent border-0 p-0 cursor-pointer transition-colors underline decoration-dotted'
