@@ -7474,17 +7474,25 @@ export const steamGameDetails: SteamGameMap = {
     reviewClues: [
       {
         review:
-          'Jack Black is the perfect person for this insane game. I will not elaborate any further.',
+          '||Jack|| Black is a perfect choice for this insane game. I will not elaborate any further.',
         votedUp: true,
         votesUp: 1,
         weightedScore: undefined,
         authorPlaytimeHours: 10.1,
         timestamp: 1381795200,
       },
+      {
+        review:
+          'Lemmy ||Kilmister|| is immortalized in this game as a ||bass playing necromancer||. 10/10 ',
+        votedUp: true,
+        votesUp: 8,
+        weightedScore: undefined,
+        authorPlaytimeHours: 5,
+        timestamp: 1770432690,
+      },
     ],
     moreFromThisDeveloper: [
       { id: 115120, name: 'Iron Brigade' },
-      { id: 246110, name: 'MASSIVE CHALICE' },
       { id: 246090, name: 'Spacebase DF-9' },
     ],
   },
@@ -49167,7 +49175,7 @@ export const steamGameDetails: SteamGameMap = {
     reviewClues: [
       {
         review:
-          'There are two types of people in this world:\n1) "FOR THE ORDER"\n2) "FOR THE GLORY OF AGATHA"',
+          'There are two types of people in this world:\n1) "FOR THE ORDER"\n2) "FOR THE GLORY OF ||AGATHA||"',
         votedUp: true,
         votesUp: 55,
         votedFunny: 13,
@@ -51415,8 +51423,6 @@ export const steamGameDetails: SteamGameMap = {
   },
   '2058180': {
     name: 'Judgment',
-    searchTerms: ['judgement'],
-    suggestedBy: 'aReize',
     appId: 2058180,
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2058180/ss_3ace0d9ef99534bcbb5a2b73f32826ab7b3bdc4e.600x338.jpg',
@@ -51452,9 +51458,11 @@ export const steamGameDetails: SteamGameMap = {
       'Drama',
     ],
     clueOrder: ['desc', 'review', 'details+tags'],
+    searchTerms: ['judgement'],
     debugProcessed: true,
     debugRefined: true,
     difficulty: 'Hard',
+    suggestedBy: 'aReize',
     reviewClues: [
       {
         review:
