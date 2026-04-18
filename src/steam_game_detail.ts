@@ -859,7 +859,7 @@ export const steamGameDetails: SteamGameMap = {
       'Historical',
       'Classic',
     ],
-    blurredUserTags: ['World War II', 'Zombies', 'First-Person', 'Moddable'],
+    blurredUserTags: ['Zombies', 'First-Person', 'Moddable'],
     overrideCensoredTitle: '||Call of Duty|| : W||orld at War||',
     clueOrder: ['review', 'tags', 'details', 'desc'],
     excludeOptions: ['Call of Duty: WWII'],

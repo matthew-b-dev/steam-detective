@@ -822,7 +822,9 @@ const SteamDetective: React.FC<SteamDetectiveProps> = ({
           })}
 
           {/* Show reset button if all cases are complete (or always on localhost) */}
-          {(allCasesComplete || window.location.hostname === 'localhost') && (
+          {(allCasesComplete ||
+            window.location?.hostname === 'localhost' ||
+            window.location?.href?.includes('/admin')) && (
             <div className='flex justify-center mb-4 mt-4'>
               <ResetPuzzleButton onResetPuzzle={handleResetPuzzle} />
             </div>
