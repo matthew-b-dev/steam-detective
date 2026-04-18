@@ -5747,7 +5747,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/210970/ss_fabb0939200a1f2bbb40b775c8e07645f21dc44a.600x338.jpg',
     shortDescription:
-      'You wake up, alone, on a strange ||island|| full of ||puzzle||s that will challenge and surprise you.',
+      'You wake up, alone, ||on|| a strange ||island|| full of ||puzzle||s that will challenge and surprise you.',
     releaseDate: 'Jan 26, 2016',
     developer: 'Thekla, Inc.',
     publisher: 'Thekla, Inc.',
