@@ -9,6 +9,7 @@ export interface Review {
   timestamp: number;
   reviewUrl?: string;
   authorPlaytimeAtReview?: number;
+  writtenDuringEarlyAccess?: boolean;
 }
 
 export interface ReviewSummary {
@@ -23,6 +24,7 @@ export interface SteamGame {
   appId: number;
   primaryScreenshot: string;
   secondaryScreenshot?: string;
+  webms?: string[]; // Optional webm video URLs. When provided, replaces the secondary screenshot clue with auto-looping webm video(s).
   shortDescription: string;
   releaseDate: string;
   earlyAccessDate?: string;

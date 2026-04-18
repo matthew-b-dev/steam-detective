@@ -262,6 +262,7 @@ const renderCensoredLineWithEditedMarker = (
   line: string,
   lineIdx: number,
 ): ReactElement[] => {
+  line = line.replace(/&nbsp;/g, '\u00A0');
   const parts = line.split(EDITED_FOR_LENGTH_RE);
   if (parts.length === 1)
     return renderCensoredDescription(line, `l${lineIdx}-`);

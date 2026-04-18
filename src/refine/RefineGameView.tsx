@@ -99,6 +99,10 @@ export const RefineGameView: React.FC<RefineGameViewProps> = ({
       : '',
   );
 
+  const [webmsJson, setWebmsJson] = useState(() =>
+    game.webms && game.webms.length > 0 ? JSON.stringify(game.webms) : '',
+  );
+
   const clueOrder: ClueType[] = (game.clueOrder ??
     DEFAULT_CLUE_ORDER) as ClueType[];
   const hasSsInOrder = clueOrder.includes('ss');
@@ -264,6 +268,25 @@ export const RefineGameView: React.FC<RefineGameViewProps> = ({
         parsed.every((s: unknown) => typeof s === 'string')
       ) {
         onUpdate({ searchTerms: parsed.length > 0 ? parsed : undefined });
+      }
+    } catch {
+      // ignore invalid json
+    }
+  };
+
+  const handleWebmsBlur = () => {
+    const trimmed = webmsJson.trim();
+    if (!trimmed) {
+      onUpdate({ webms: undefined });
+      return;
+    }
+    try {
+      const parsed = JSON.parse(trimmed);
+      if (
+        Array.isArray(parsed) &&
+        parsed.every((s: unknown) => typeof s === 'string')
+      ) {
+        onUpdate({ webms: parsed.length > 0 ? parsed : undefined });
       }
     } catch {
       // ignore invalid json
@@ -723,6 +746,39 @@ export const RefineGameView: React.FC<RefineGameViewProps> = ({
           isComplete={revealAll}
           onUpdate={onUpdate}
         />
+
+        {/* Webm Videos */}
+        <div className='px-4 py-3 border-t border-[rgba(255,255,255,0.06)]'>
+          <div className='flex items-center gap-2 mb-1'>
+            <span className='text-xs text-gray-400 uppercase'>
+              Webm Videos (replaces secondary screenshot clue)
+            </span>
+          </div>
+          <input
+            type='text'
+            value={webmsJson}
+            onChange={(e) => setWebmsJson(e.target.value)}
+            onBlur={handleWebmsBlur}
+            placeholder='["https://...store_item_assets/.../extras/abc.webm"]'
+            className='w-full bg-zinc-800 border border-zinc-600 rounded px-2 py-1 text-xs font-mono focus:outline-none focus:border-zinc-400'
+          />
+          {game.webms && game.webms.length > 0 && (
+            <div className='mt-3 space-y-3'>
+              {game.webms.map((url, idx) => (
+                <div key={idx} className='flex justify-center'>
+                  <video
+                    src={url}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className='max-w-full h-auto rounded-lg'
+                  />
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
 
         {/* Description */}
         <RefineDescription

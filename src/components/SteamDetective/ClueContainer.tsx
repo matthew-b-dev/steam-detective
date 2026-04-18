@@ -8,6 +8,7 @@ import { ClueDetails } from './ClueDetails';
 import { ClueTags } from './ClueTags';
 import { ClueReview } from './ClueReview';
 import { ClueMoreFromDeveloper } from './ClueMoreFromDeveloper';
+import { ClueWebm } from './ClueWebm';
 
 interface ClueContainerProps {
   caseFile: 'easy' | 'expert' | `casefile-${number}`;
@@ -42,13 +43,20 @@ export const ClueContainer: React.FC<ClueContainerProps> = ({ caseFile }) => {
     dailyGame.reviewClues ||
     (dailyGame.reviewClue ? [dailyGame.reviewClue] : []);
 
+  // When webms are provided, they replace the secondary screenshot clue.
+  const hasWebms = !!(dailyGame.webms && dailyGame.webms.length > 0);
+
   // When swapped, flip both slots together so secondaryScreenshot prop never
   // changes between defined and undefined - FsLightbox uses hook counts that
   // depend on the sources array length, so keeping it stable prevents crashes.
   // showClue7 is the dedicated secondary-screenshot slot used when the
   // details+tags+review combo is active (hasReviewClue is true but secondary
   // ss should still be shown independently).
-  const secondaryIsRevealed = showClue7 || (showClue5 && !hasReviewClue);
+  // When webms are present, they take the secondary screenshot slot instead.
+  const secondaryIsRevealed =
+    !hasWebms && (showClue7 || (showClue5 && !hasReviewClue));
+  const webmsRevealed =
+    hasWebms && (showClue7 || (showClue5 && !hasReviewClue));
   const mainScreenshot =
     secondaryIsRevealed && !primaryIsMain && dailyGame.secondaryScreenshot
       ? dailyGame.secondaryScreenshot
@@ -83,6 +91,14 @@ export const ClueContainer: React.FC<ClueContainerProps> = ({ caseFile }) => {
           blurTitleAndAsAmpersand={dailyGame.blurTitleAndAsAmpersand}
           overrideCensoredTitle={dailyGame.overrideCensoredTitle}
         />
+        {/* Webm clue(s) - canonical between title and primary screenshot */}
+        {hasWebms && (
+          <ClueWebm
+            webms={dailyGame.webms!}
+            show={webmsRevealed}
+            isComplete={isComplete}
+          />
+        )}
         {/* Screenshots - Clue 4 (primary) and Clue 5 (secondary) */}
         <ClueScreenshot
           screenshot={mainScreenshot}

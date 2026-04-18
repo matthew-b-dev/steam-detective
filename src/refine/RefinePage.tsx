@@ -35,6 +35,7 @@ const cloneGameMap = (map: SteamGameMap): SteamGameMap => {
         ? game.moreFromThisDeveloper.map((item) => ({ ...item }))
         : undefined,
       developerDescription: game.developerDescription,
+      webms: game.webms ? [...game.webms] : undefined,
     };
   }
   return clone;
@@ -241,6 +242,9 @@ export const RefinePage: React.FC = () => {
         lines.push(`    secondaryScreenshot:`);
         lines.push(`      ${JSON.stringify(game.secondaryScreenshot)},`);
       }
+      if (game.webms && game.webms.length > 0) {
+        lines.push(`    webms: ${JSON.stringify(game.webms)},`);
+      }
       lines.push(`    shortDescription:`);
       lines.push(`      ${JSON.stringify(game.shortDescription)},`);
       if (game.originalReleaseDate) {
@@ -359,6 +363,9 @@ export const RefinePage: React.FC = () => {
             lines.push(
               `        authorPlaytimeHoursAtRelease: ${review.authorPlaytimeHoursAtRelease},`,
             );
+          }
+          if (review.writtenDuringEarlyAccess) {
+            lines.push(`        writtenDuringEarlyAccess: true,`);
           }
           lines.push(`        timestamp: ${review.timestamp},`);
           lines.push(`      }${idx < game.reviewClues!.length - 1 ? ',' : ''}`);

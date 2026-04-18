@@ -828,11 +828,11 @@ export const steamGameDetails: SteamGameMap = {
     name: 'Call of Duty: World at War',
     appId: 10090,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/10090/0000006191.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/10090/0000006198.600x338.jpg',
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/10090/0000006192.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/10090/0000006193.600x338.jpg',
     shortDescription:
-      "||Call|| of ||Duty|| is back, redefining war like you've never experienced before. Building on the ||Call|| of ||Duty|| 4: Modern Warfare engine, ||Call of Duty: World at War|| immerses players into the most gritty and chaotic WWII combat ever experienced.",
+      "_ _ _ _&nbsp;&nbsp;&nbsp;_ _&nbsp;&nbsp;&nbsp;_ _ _ _&nbsp;&nbsp;&nbsp;is back, redefining war like you've never experienced before. Building on the ||Call of Duty 4: Modern Warfare|| engine, ||Call of Duty: World at War|| immerses players into the most gritty and chaotic ||WWII|| combat ever experienced.",
     releaseDate: 'Nov 18, 2008',
     developer: 'Treyarch',
     publisher: 'Activision',
@@ -859,7 +859,24 @@ export const steamGameDetails: SteamGameMap = {
       'Historical',
       'Classic',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: ['World War II', 'Zombies', 'First-Person', 'Moddable'],
+    overrideCensoredTitle: '||Call of Duty|| : W||orld at War||',
+    clueOrder: ['review', 'tags', 'details', 'desc'],
+    excludeOptions: ['Call of Duty: WWII'],
+    debugProcessed: true,
+    difficulty: 'Easy',
+    reviewClues: [
+      {
+        review:
+          'This is where it all started started: ||Zombie|| mode! [...] The opening scene is also a classic where a ||Japanese soldier|| burns a man with a cigarette. ... (edited for length)',
+        votedUp: true,
+        votesUp: 242,
+        votedFunny: 13,
+        weightedScore: undefined,
+        authorPlaytimeHours: 31,
+        timestamp: 1496462400,
+      },
+    ],
   },
   '10150': {
     name: 'Prototype',
@@ -5934,11 +5951,16 @@ export const steamGameDetails: SteamGameMap = {
     name: 'Starbound',
     appId: 211820,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/211820/ss_2dcc1e0c07f7597edc6556b31b8df9902fddac1a.600x338.jpg',
-    secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/211820/ss_c8bb844f59b490bbfee6d179879e47272044ca34.600x338.jpg',
+    secondaryScreenshot:
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/211820/ss_2dcc1e0c07f7597edc6556b31b8df9902fddac1a.600x338.jpg',
+    webms: [
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/211820/extras/6057f4c5586901e2e9f10c7438b9688c.webm',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/211820/extras/f6eedf2487c137f8dc2dc83788d403f8.webm',
+    ],
     shortDescription:
-      "You've fled your home, only to find yourself ||lost in space|| with a damaged ||ship||. Your only option is to ||beam|| down to the ||planet below||, repair your ||ship|| and set off to explore the ||universe||...",
+      'In&nbsp;&nbsp;S _ _ _ _ _ _ _ _&nbsp;&nbsp;, you create your own story - there’s no wrong way to play! You may choose to save the universe from the forces that destroyed your home, uncovering greater galactic mysteries in the process, or you may wish to forego a heroic journey entirely in favor of colonizing uncharted planets.',
+    earlyAccessDate: 'Dec 4, 2013',
     releaseDate: 'Jul 22, 2016',
     developer: 'Chucklefish',
     publisher: 'Chucklefish',
@@ -5970,9 +5992,22 @@ export const steamGameDetails: SteamGameMap = {
       'Atmospheric',
       'Sci-fi',
     ],
-    clueOrder: ['desc', 'tags', 'details'],
+    overrideCensoredTitle: 'St||arboun||d',
+    clueOrder: ['review', 'details+tags', 'desc'],
     debugProcessed: true,
-    difficulty: 'Hard',
+    debugRefined: true,
+    difficulty: 'Medium',
+    reviewClues: [
+      {
+        review:
+          'Announced very shortly AFTER the announcement of Re-Logic (Redgit)\'s&nbsp;&nbsp;||Terraria||&nbsp;&nbsp;,&nbsp;&nbsp;&nbsp;||Starbound|| was widely criticized for "cloning" its 2D pixel art style. It didn\'t help that it was also an open world ||survival craft|| game. What I love about&nbsp;&nbsp;||Starbound||&nbsp;&nbsp;though is instead of there being one worldspace, you have ||an immense galaxy of worlds||. ... (edited for length)',
+        votedUp: true,
+        votesUp: 2,
+        weightedScore: '0.54356849193572998',
+        authorPlaytimeHours: 136,
+        timestamp: 1767891469,
+      },
+    ],
   },
   '212070': {
     name: 'Star Conflict',
@@ -24125,10 +24160,11 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/526870/ss_077e7ea98621faeb5b4a73ea0aaa91f41c6f66c9.600x338.jpg',
     shortDescription:
-      '||Satisfactory|| is a first-person open-world ||factory|| building game with a dash of exploration and combat. Play alone or with friends, explore an alien planet, create multi-story ||factories||, and enter ||conveyor belt heaven||!',
+      '_ _ _ _ _ _ _ _ _ _ _ _&nbsp;&nbsp;&nbsp;is a first-person open-world ||factory building|| game with a dash of exploration and combat. Play alone or with friends, explore an alien planet, create multi-story ||factories||, and enter ||conveyor|| belt heaven!',
+    earlyAccessDate: 'Mar 19, 2019',
     releaseDate: 'Sep 10, 2024',
-    developer: 'Coffee Stain Studios',
-    publisher: 'Coffee Stain Publishing',
+    developer: '||Coffee Stain Studios||',
+    publisher: '||Coffee Stain Publishing||',
     tags: ['Adventure', 'Indie', 'Simulation', 'Strategy'],
     features: [],
     allReviewSummary: {
@@ -24138,10 +24174,10 @@ export const steamGameDetails: SteamGameMap = {
     userTags: [
       'Base-Building',
       'Automation',
-      'Open World',
+      'Singleplayer',
       'Multiplayer',
-      'Crafting',
       'Co-op',
+      'Crafting',
       'Building',
       'Resource Management',
       'Sandbox',
@@ -24156,10 +24192,31 @@ export const steamGameDetails: SteamGameMap = {
       'Singleplayer',
       'Indie',
     ],
-    clueOrder: ['desc', 'details', 'tags'],
+    blurredUserTags: [
+      'Exploration',
+      'Base-Building',
+      'Automation',
+      'Resource Management',
+      'Sandbox',
+    ],
+    overrideCensoredTitle: 'S||atisfactor||y',
+    clueOrder: ['review', 'details+tags', 'desc'],
     debugProcessed: true,
     debugRefined: true,
     difficulty: 'Easy',
+    reviewClues: [
+      {
+        review:
+          'I have never felt it more fundamentally necessary to ||demolish everything|| I have accomplished just to make it 10% ||more efficient||.',
+        votedUp: true,
+        votesUp: 533,
+        votedFunny: 268,
+        weightedScore: undefined,
+        authorPlaytimeHours: 246.4,
+        writtenDuringEarlyAccess: true,
+        timestamp: 1687305600,
+      },
+    ],
   },
   '527230': {
     name: 'For The King',

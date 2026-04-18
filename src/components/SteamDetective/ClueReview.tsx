@@ -15,7 +15,7 @@ interface ClueReviewProps {
 const formatTimestamp = (timestamp: number): string => {
   const date = new Date(timestamp * 1000);
   return date.toLocaleDateString('en-US', {
-    month: 'long',
+    month: 'short',
     day: 'numeric',
     year: 'numeric',
   });
@@ -32,6 +32,7 @@ const renderLineWithEditedMarker = (
   line: string,
   lineKey: string | number,
 ): ReactElement[] => {
+  line = line.replace(/&nbsp;/g, '\u00A0');
   const parts = line.split(EDITED_FOR_LENGTH_RE);
   if (parts.length === 1) return [<span key={lineKey}>{line}</span>];
   const result: ReactElement[] = [];
@@ -149,11 +150,25 @@ const ReviewCard: React.FC<{ review: Review; isComplete: boolean }> = ({
       </div>
 
       {/* Posted date */}
-      <div className='pt-2 px-2 text-[11px] text-gray-400 uppercase bg-[#101923]'>
+      <div className='pt-2 px-2 text-[11px] text-[#a0a08b] bg-[#101923]'>
         Posted:{' '}
-        <span className='text-gray-300 font-semibold'>
+        <span className='text-[#a0a08b] font-bold'>
           {formatTimestamp(review.timestamp)}
         </span>
+        {review.writtenDuringEarlyAccess && (
+          <div className='mt-2'>
+            <span
+              className='self-start text-[11px] font-bold uppercase tracking-wider px-1.5 py-[0px] mb-0.5 border'
+              style={{
+                color: '#9ac7f3',
+                borderColor: '#779abc',
+                backgroundColor: '#4d6c8b',
+              }}
+            >
+              Early Access Review
+            </span>
+          </div>
+        )}
       </div>
 
       {/* Review text */}

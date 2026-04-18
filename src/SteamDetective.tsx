@@ -257,6 +257,7 @@ const SteamDetectiveGame: React.FC<SteamDetectiveGameProps> = ({
 
     const canonicalPositions = {
       title: 0,
+      webm: 0.5, // between title and screenshot1
       screenshot1: 1,
       screenshot2: 2,
       desc: 3,
@@ -269,19 +270,24 @@ const SteamDetectiveGame: React.FC<SteamDetectiveGameProps> = ({
     // clueNames maps result array index (0-7) to canonical position key.
     // result[4] is showClue5 - it's used for the review clue when hasReviewInOrder,
     // or for the secondary screenshot otherwise.
+    const hasWebms = !!dailyGame?.webms?.length;
     const clueNames: (keyof typeof canonicalPositions)[] = [
       'tags',
       'details',
       'desc',
       'screenshot1',
-      hasReviewInOrder && !hasDetailsTags ? 'review' : 'screenshot2',
+      hasReviewInOrder && !hasDetailsTags
+        ? 'review'
+        : hasWebms
+          ? 'webm'
+          : 'screenshot2',
       'title',
-      'screenshot2', // slot[6]: secondary ss in details+tags+review combo
+      hasWebms ? 'webm' : 'screenshot2', // slot[6]: secondary ss or webm
       'moreFromDev', // slot[7]: more from this developer
     ];
     // When details+tags+review is active, review is already covered by slot[4]
-    // above (mapped as screenshot2 since secondary ss is now separate), and
-    // slot[6] holds the separately-revealed secondary screenshot.
+    // above (mapped as webm/screenshot2 since secondary ss is now separate), and
+    // slot[6] holds the separately-revealed secondary screenshot or webm.
     if (hasDetailsTags && hasReviewInOrder) {
       clueNames[4] = 'review';
     }
@@ -322,15 +328,17 @@ const SteamDetectiveGame: React.FC<SteamDetectiveGameProps> = ({
     // same screenshot widget as the primary), so no visible layout growth occurs.
     // Two slots are possible: slot[4] for the simple case, slot[6] when the
     // details+tags+review combo is active and the secondary gets its own slot.
+    // When webms are present, layout DOES grow (videos appear near top), so don't suppress.
     const secondaryScreenshotJustAutoRevealed =
-      (!hasReviewInOrder &&
+      !hasWebms &&
+      ((!hasReviewInOrder &&
         !hasDetailsTags &&
         !prevShowCluesRef.current[4] &&
         showClues[4]) ||
-      (hasDetailsTags &&
-        hasReviewInOrder &&
-        !prevShowCluesRef.current[6] &&
-        showClues[6]);
+        (hasDetailsTags &&
+          hasReviewInOrder &&
+          !prevShowCluesRef.current[6] &&
+          showClues[6]));
 
     const ssJustRevealedNonFirst =
       !isFirstClue &&

@@ -97,7 +97,7 @@ const renderRawReview = (text: string) => {
   const stripped = text.replace(/\|\|(.+?)\|\|/g, '$1');
   return stripped.split('\n').map((line, i, arr) => (
     <span key={i}>
-      {line}
+      {line.replace(/&nbsp;/g, '\u00A0')}
       {i < arr.length - 1 && <br />}
     </span>
   ));
@@ -113,6 +113,7 @@ const SteamReviewCard: React.FC<{
   editableTimestamp?: number;
   editableVotesUp?: number;
   editableVotedFunny?: number;
+  editableEarlyAccess?: boolean;
   onSelect: () => void;
   onMoveUp?: () => void;
   onMoveDown?: () => void;
@@ -126,6 +127,8 @@ const SteamReviewCard: React.FC<{
   onVotesUpChange?: (votes: number) => void;
   // eslint-disable-next-line no-unused-vars
   onVotedFunnyChange?: (funny: number) => void;
+  // eslint-disable-next-line no-unused-vars
+  onEarlyAccessChange?: (earlyAccess: boolean) => void;
 }> = ({
   review,
   isSelected,
@@ -135,6 +138,7 @@ const SteamReviewCard: React.FC<{
   editableTimestamp,
   editableVotesUp,
   editableVotedFunny,
+  editableEarlyAccess,
   onSelect,
   onMoveUp,
   onMoveDown,
@@ -143,6 +147,7 @@ const SteamReviewCard: React.FC<{
   onTimestampChange,
   onVotesUpChange,
   onVotedFunnyChange,
+  onEarlyAccessChange,
 }) => {
   const isRecommended = review.votedUp;
 
@@ -331,6 +336,15 @@ const SteamReviewCard: React.FC<{
             found this review funny
           </span>
         ) : null}
+        <label className='flex items-center gap-1.5 cursor-pointer mt-0.5'>
+          <input
+            type='checkbox'
+            checked={!!(editableEarlyAccess ?? review.writtenDuringEarlyAccess)}
+            onChange={(e) => onEarlyAccessChange?.(e.target.checked)}
+            className='accent-teal-500'
+          />
+          <span className='text-[11px] text-gray-400'>Early Access Review</span>
+        </label>
         {review.reviewUrl && (
           <a
             href={review.reviewUrl}
@@ -606,6 +620,15 @@ export const RefineReviews: React.FC<RefineReviewsProps> = ({
     onUpdate({ reviewClues: updated });
   };
 
+  const handleEarlyAccessChange = (index: number, earlyAccess: boolean) => {
+    const updated = [...selectedReviews];
+    updated[index] = {
+      ...updated[index],
+      writtenDuringEarlyAccess: earlyAccess || undefined,
+    };
+    onUpdate({ reviewClues: updated });
+  };
+
   if (loadError) {
     return (
       <div className='text-xs text-gray-500 italic px-1'>
@@ -669,6 +692,7 @@ export const RefineReviews: React.FC<RefineReviewsProps> = ({
                   editableTimestamp={orphan.timestamp}
                   editableVotesUp={orphan.votesUp}
                   editableVotedFunny={orphan.votedFunny}
+                  editableEarlyAccess={orphan.writtenDuringEarlyAccess}
                   onSelect={() => handleSelect(avIdx, orphan)}
                   onMoveUp={selIdx > 0 ? () => handleMoveUp(avIdx) : undefined}
                   onMoveDown={
@@ -681,6 +705,7 @@ export const RefineReviews: React.FC<RefineReviewsProps> = ({
                   onTimestampChange={(ts) => handleTimestampChange(selIdx, ts)}
                   onVotesUpChange={(v) => handleVotesUpChange(selIdx, v)}
                   onVotedFunnyChange={(f) => handleVotedFunnyChange(selIdx, f)}
+                  onEarlyAccessChange={(ea) => handleEarlyAccessChange(selIdx, ea)}
                 />
               </div>
             );
@@ -735,6 +760,7 @@ export const RefineReviews: React.FC<RefineReviewsProps> = ({
                 editableTimestamp={orphan.timestamp}
                 editableVotesUp={orphan.votesUp}
                 editableVotedFunny={orphan.votedFunny}
+                editableEarlyAccess={orphan.writtenDuringEarlyAccess}
                 onSelect={() => handleSelect(avIdx, orphan)}
                 onMoveUp={selIdx > 0 ? () => handleMoveUp(avIdx) : undefined}
                 onMoveDown={
@@ -747,6 +773,7 @@ export const RefineReviews: React.FC<RefineReviewsProps> = ({
                 onTimestampChange={(ts) => handleTimestampChange(selIdx, ts)}
                 onVotesUpChange={(v) => handleVotesUpChange(selIdx, v)}
                 onVotedFunnyChange={(f) => handleVotedFunnyChange(selIdx, f)}
+                onEarlyAccessChange={(ea) => handleEarlyAccessChange(selIdx, ea)}
               />
             </div>
           );
@@ -764,6 +791,7 @@ export const RefineReviews: React.FC<RefineReviewsProps> = ({
         const editableTimestamp = selectedReview?.timestamp;
         const editableVotesUp = selectedReview?.votesUp;
         const editableVotedFunny = selectedReview?.votedFunny;
+        const editableEarlyAccess = selectedReview?.writtenDuringEarlyAccess;
 
         return (
           <SteamReviewCard
@@ -776,6 +804,7 @@ export const RefineReviews: React.FC<RefineReviewsProps> = ({
             editableTimestamp={editableTimestamp}
             editableVotesUp={editableVotesUp}
             editableVotedFunny={editableVotedFunny}
+            editableEarlyAccess={editableEarlyAccess}
             onSelect={() => handleSelect(idx, review)}
             onMoveUp={isSelected ? () => handleMoveUp(idx) : undefined}
             onMoveDown={isSelected ? () => handleMoveDown(idx) : undefined}
@@ -800,6 +829,11 @@ export const RefineReviews: React.FC<RefineReviewsProps> = ({
             onVotedFunnyChange={
               isSelected
                 ? (f) => handleVotedFunnyChange(selectionIndex, f)
+                : undefined
+            }
+            onEarlyAccessChange={
+              isSelected
+                ? (ea) => handleEarlyAccessChange(selectionIndex, ea)
                 : undefined
             }
           />

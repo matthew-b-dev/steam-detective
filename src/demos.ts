@@ -500,13 +500,17 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile2: 'Brutal Legend',
     caseFile3: 'The Witness',
   },
+  '2026-04-19': {
+    caseFile1: 'Satisfactory',
+    caseFile2: 'Call of Duty: World at War',
+    caseFile3: 'Starbound',
+  },
   // 2026-04-19 Hard: Judgment (fully refined)
   // 2026-04-20 Hard: AudioSurf
-  '2026-04-19': {
+  '2026-04-20': {
     caseFile1: 'Suicide Squad: Kill the Justice League',
     caseFile2: 'Fields of Mistria',
     caseFile3: "Don't Starve",
-    caseFile4: 'Satisfactory',
   },
 };
 
@@ -516,7 +520,6 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
 // USE A SCREENSHOT CLUE
 // ****************
 
-// Easy: Ori and the Blind Forest
 // Easy: Split Fiction
 // Easy: Star Wars Battlefront II
 // Easy: Remnant II
