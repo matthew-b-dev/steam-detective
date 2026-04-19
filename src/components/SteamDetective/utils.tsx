@@ -75,6 +75,9 @@ const randomizeChar = (char: string): string => {
 
 // Helper to censor text by randomizing alphanumeric characters
 const censorText = (text: string): string => {
+  // With only 1 character, we just return 'B' because it guarantees we can see some kind of blur
+  // some characters it's difficult to see anything at all when they're blurred
+  if (text?.length === 1) return 'B';
   return text
     .split('')
     .map((char) => randomizeChar(char))

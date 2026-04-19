@@ -505,10 +505,16 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile2: 'Call of Duty: World at War',
     caseFile3: 'Starbound',
   },
-  // 2026-04-19 Hard: Judgment (fully refined)
-  // 2026-04-20 Hard: AudioSurf
   '2026-04-20': {
     caseFile1: 'Suicide Squad: Kill the Justice League',
+    caseFile2: 'Brotato',
+    caseFile3: 'CloverPit',
+  },
+  // 4/21 Core Keeper (Credit: Egg)
+  // 2026-04-** Hard: Judgment (fully refined)
+  // 2026-04-** Hard: AudioSurf
+  '2026-04-21': {
+    caseFile1: 'Split Fiction',
     caseFile2: 'Fields of Mistria',
     caseFile3: "Don't Starve",
   },

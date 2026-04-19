@@ -679,7 +679,6 @@ export const dummyGames: string[] = [
   'Kentucky Route Zero: The Complete Season',
   'Beyond a Steel Sky',
   'Ary and the Secret of Seasons',
-  'The Suicide of Rachel Foster',
   'Lost Words: Beyond the Page',
   'BPM: Bullets Per Minute',
   'Rune Factory 4 Special',
