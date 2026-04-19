@@ -18,11 +18,8 @@ import {
   getCurrentCaseFile,
   getTotalScore,
   saveAllCasesComplete,
-  isLocalhost,
-  eventFiredThisSession,
   type SteamDetectiveState,
 } from './utils';
-import { sendFeedback } from './lib/supabaseClient';
 import PuzzleDateTime from './components/PuzzleDateTime';
 import ResetPuzzleButton from './components/ResetPuzzleButton';
 import SteamDetectiveFooter from './components/SteamDetectiveFooter';
@@ -34,7 +31,6 @@ import { useGameActions } from './hooks/useGameActions';
 import MissedGuesses from './components/MissedGuesses';
 import { SteamDetectiveGameProvider } from './contexts/SteamDetectiveGameContext';
 import calendarIcon from './assets/calendar-48.png';
-import { XMarkIcon, InformationCircleIcon } from '@heroicons/react/16/solid';
 import {
   GameInput,
   SkipButton,
@@ -47,9 +43,6 @@ import greenGamesFolderIcon from './assets/green-games-folder-48.png';
 import purpleGamesFolderIcon from './assets/purple-games-folder-48.png';
 import redGamesFolderIcon from './assets/red-games-folder-48.png';
 import analyzeIcon from './assets/analyze-48.png';
-
-const BANNER_3CASE_KEY = 'steam-detective-banner-3case-v1';
-const IS_PROD = !isLocalhost();
 
 // Map case file numbers to their folder icons
 // The last case file always uses the red icon, regardless of total count.
@@ -649,83 +642,11 @@ const SteamDetective: React.FC<SteamDetectiveProps> = ({
     [sessionPuzzleDate],
   );
 
-  const [bannerDismissed, setBannerDismissed] = useState(
-    () => !!localStorage.getItem(BANNER_3CASE_KEY),
-  );
-
-  const dismissBanner = () => {
-    localStorage.setItem(BANNER_3CASE_KEY, '1');
-    setBannerDismissed(true);
-  };
-
   return (
     <div className='text-[#c7d5e0]'>
       <Toaster position='top-center' />
       <hr className='h-[1px] bg-gray-700 border-none mb-3'></hr>
 
-      {/* 3-case-file update banner */}
-      {!bannerDismissed && (
-        <div className='flex items-stretch text-xs sm:text-sm rounded overflow-hidden border border-blue-500/60 mb-3 bg-blue-900/30'>
-          <div className='text-xs flex items-center gap-1 sm:gap-1.5 bg-blue-700/50 border-r border-blue-500/60 px-2 py-1.5 whitespace-nowrap text-blue-100'>
-            <span className='font-bold'>Update:</span>
-            Apr 18
-          </div>
-          <div className='px-2 py-1.5 sm:px-3 sm:py-2.5 text-blue-100 flex-1'>
-            Moving forward, each day will have{' '}
-            <strong>
-              <u>3 Case Files</u>
-            </strong>{' '}
-            instead of 4. Previous days' case files remain unchanged.{' '}
-            <div className='mt-1'>
-              <a
-                href='https://github.com/matthew-b-dev/steam-detective/releases/tag/v2026-04-18'
-                target='_blank'
-                rel='noopener noreferrer'
-                className='inline-flex items-center gap-0.5 leading-none align-baseline text-blue-300 hover:text-white transition-colors underline decoration-dotted'
-                onClick={() => {
-                  if (
-                    IS_PROD &&
-                    !eventFiredThisSession('[Event] Clicked Banner More Info')
-                  )
-                    sendFeedback(
-                      'custom',
-                      '`[Event]` Clicked Banner More Info',
-                    );
-                }}
-              >
-                <InformationCircleIcon className='h-3 w-3 shrink-0' />
-                More Info
-              </a>
-              <button
-                onClick={dismissBanner}
-                className='ml-2 inline-flex items-center gap-0.5 leading-none align-baseline text-blue-300 hover:text-white bg-transparent border-0 p-0 cursor-pointer transition-colors underline decoration-dotted'
-              >
-                <XMarkIcon className='h-3 w-3 shrink-0' />
-                Dismiss
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
-
-      {/* Update banner */}
-      {/* 
-      <div className='flex items-stretch text-xs rounded overflow-hidden border border-gray-500 mb-3 bg-gray-600/20'>
-        <div className='flex items-center gap-1 bg-gray-800/40 border-r border-gray-600 px-2 py-1.5 font-semibold whitespace-nowrap text-white'>
-          <div className='flex align-middle'>
-            <InformationCircleIcon className='h-4 w-4 shrink-0 mr-1 relative top-[1px]' />
-            Update
-          </div>
-        </div>
-        <div className='px-2 py-1.5 text-gray-200'>
-          Game searching is now more flexible, potentially displaying search
-          results that don&apos;t <em>exactly</em> match the query.
-          <div className='mt-1.5'>
-            Thank you for your patience on this feature &lt;3
-          </div>
-        </div>
-      </div>
-      */}
       {/* If no demo configured for this date, show "brb" post-it note */}
       {!dailyGameCheck && (
         <>
