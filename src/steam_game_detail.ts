@@ -47054,9 +47054,9 @@ export const steamGameDetails: SteamGameMap = {
     name: 'Core Keeper',
     appId: 1621690,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1621690/ss_0c317ed9fbf20c3e7fc489d570ff84192e4914c2.600x338.jpg',
-    secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1621690/ss_1e162c49418038f8042c92810fe3c753449e204b.600x338.jpg',
+    secondaryScreenshot:
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1621690/ss_0c317ed9fbf20c3e7fc489d570ff84192e4914c2.600x338.jpg',
     webms: [
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1621690/extras/7d0fe41e0148d725600e4c3ceee0d090.webm',
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1621690/extras/570d36c082eef76958c981a15b1ab278.webm',
