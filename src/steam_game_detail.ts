@@ -46903,6 +46903,7 @@ export const steamGameDetails: SteamGameMap = {
   },
   '1605220': {
     name: 'Dune: Spice Wars',
+    searchTerms: ['dune spice wars'],
     appId: 1605220,
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1605220/ss_f7b1dc6b440e9f03bb88e4b6781f00656d92e1c5.600x338.jpg',
@@ -47061,7 +47062,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1621690/extras/570d36c082eef76958c981a15b1ab278.webm',
     ],
     shortDescription:
-      'In&nbsp;&nbsp;&nbsp;_ _ _ _&nbsp;&nbsp;&nbsp;_ _ _ _ _ _&nbsp;&nbsp;, awaken as an explorer in a long-forgotten cavern teeming with untold secrets. In this award-winning, 1-8 player mining sandbox adventure, your choices shape an epic journey. Harvest relics and resources, craft advanced tools, build your base, and explore a dynamically evolving world waiting to be unearthed. ',
+      'In&nbsp;&nbsp;&nbsp;C _ _ _&nbsp;&nbsp;&nbsp;_ _ _ _ _ _&nbsp;&nbsp;, awaken as an explorer in a long-forgotten cavern teeming with untold secrets. In this award-winning, 1-8 player mining sandbox adventure, your choices shape an epic journey. Harvest relics and resources, craft advanced tools, build your base, and explore a dynamically evolving world waiting to be unearthed. ',
     earlyAccessDate: 'Mar 8, 2022',
     releaseDate: 'Aug 27, 2024',
     developer: 'Pugstorm',
@@ -49823,15 +49824,17 @@ export const steamGameDetails: SteamGameMap = {
   },
   '1888930': {
     name: 'The Last of Us Part I',
+    searchTerms: ['tlou'],
     appId: 1888930,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1888930/ss_3f1805ecddafacee7f61f87cb8e4624435a83ee3.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1888930/ss_ea8b45bb65d05fafa911387df16399ead11e6878.600x338.jpg',
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1888930/ss_89fffc2857dcae29dee2a09f1be33d745610e19d.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1888930/ss_98b476104b239764ba2a3280b1a9e09a24701041.600x338.jpg',
     shortDescription:
-      'Discover the award-winning game that inspired the critically acclaimed television show. Guide Joel and Ellie through a post-apocalyptic America, and encounter unforgettable allies and enemies in ||The Last of Us||.',
+      'Discover the award-winning game that inspired the critically acclaimed television show. Guide ||Joel|| and ||Ellie|| through a post-apocalyptic America, and encounter unforgettable allies and enemies in ||The Last of Us||.',
+    originalReleaseDate: 'Sep 2, 2022 (PS5)',
     releaseDate: 'Mar 28, 2023',
-    developer: 'Naughty Dog LLC',
+    developer: '||Naughty Dog LLC||',
     publisher: 'PlayStation Publishing LLC',
     tags: [],
     features: [],
@@ -49844,7 +49847,7 @@ export const steamGameDetails: SteamGameMap = {
       'Post-apocalyptic',
       'Zombies',
       'Horror',
-      'Action-Adventure',
+      'Remake',
       'Shooter',
       'Singleplayer',
       'Third-Person Shooter',
@@ -49856,7 +49859,30 @@ export const steamGameDetails: SteamGameMap = {
       'Action',
       'Adventure',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: [
+      'Third-Person Shooter',
+      'Shooter',
+      'Singleplayer',
+      'Post-apocalyptic',
+      'Zombies',
+      'Horror',
+      'Survival',
+    ],
+    clueOrder: ['details+tags', 'review', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
+    reviewClues: [
+      {
+        review:
+          "I spoiled the whole game for myself on yt in 2013 when it was on PS3, but even after all these years, when I finally got a chance to play this game on PC, I'm still over the moon. I'm so glad they decided to port the remake to PC. This game is perfect, that's all that needs to be said.",
+        votedUp: true,
+        votesUp: 96,
+        weightedScore: undefined,
+        authorPlaytimeHours: 69.2,
+        timestamp: 1720843200,
+      },
+    ],
   },
   '1895880': {
     name: 'Ratchet & Clank: Rift Apart',
@@ -56359,8 +56385,8 @@ export const steamGameDetails: SteamGameMap = {
       'Horror',
     ],
     overrideCensoredTitle: 'C||lover||P||it||',
-    searchTerms: ['clover pit'],
     clueOrder: ['details+tags', 'review', 'desc'],
+    searchTerms: ['clover pit'],
     debugProcessed: true,
     debugRefined: true,
     difficulty: 'Hard',
@@ -56380,6 +56406,67 @@ export const steamGameDetails: SteamGameMap = {
     developerDescription:
       '||Panik Arcade|| is known for creating high-intensity, retro-styled games.',
   },
+  '1172710': {
+    name: 'Dune: Awakening',
+    searchTerms: ['dune awakening'],
+    appId: 1172710,
+    primaryScreenshot:
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1172710/ss_8f82e5566057ef9fc8f876e27849bac8326c7259.600x338.jpg',
+    secondaryScreenshot:
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1172710/45924e55eb2d04831e1e47f96949d6b673790fe4/ss_45924e55eb2d04831e1e47f96949d6b673790fe4.600x338.jpg',
+    shortDescription:
+      '||Dune: Awakening|| is a Multiplayer Open World ||Survival|| RPG where you can fully immerse yourself in the epic world of ||Dune||. Alone or with friends, explore the vast open world of ||Arrakis||, survive the ||sandworms||, build a home, craft an ||ornithopter||, and unravel the mystery of the missing F||remen||.',
+    releaseDate: 'Jun 10, 2025',
+    developer: 'Funcom',
+    publisher: 'Funcom',
+    tags: [],
+    features: [],
+    allReviewSummary: {
+      count: 64011,
+      rating: 'Mostly Positive',
+    },
+    userTags: [
+      'Open World Survival Craft',
+      'Survival',
+      'Open World',
+      'Sci-fi',
+      'Multiplayer',
+      'RPG',
+      'PvP',
+      'Base Building',
+      'Exploration',
+      'PvE',
+      'Building',
+      'Sandbox',
+      'Character Customization',
+      'Online Co-Op',
+    ],
+    overrideCensoredTitle: 'D||une||: A||wakenin||g',
+    clueOrder: ['desc', 'review', 'details+tags'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Medium',
+    reviewClues: [
+      {
+        review:
+          "I'm a solo player and I love the game, I just wish it was made more for people like me, and less massive guilds and ||deep desert|| PVP fests.",
+        votedUp: true,
+        votesUp: 267,
+        weightedScore: undefined,
+        authorPlaytimeHours: 85.6,
+        timestamp: 1750516800,
+      },
+      {
+        review:
+          "[...] I think the recent changes that have made half of the ||Deep Desert|| PvE as well as the changes to ||Ornithopter||'s speed with rockets goes a long away in quelling the PvP anxiety. ... (edited for length)",
+        votedUp: true,
+        votesUp: 1,
+        weightedScore: undefined,
+        authorPlaytimeHours: 83.3,
+        timestamp: 1750996800,
+      },
+    ],
+  },
 };
 
 // Special series/franchises where guesses containing the series name are considered "close"
@@ -56390,6 +56477,7 @@ export const CLOSE_GUESS_SERIES: string[] = [
   'bioshock',
   'borderlands',
   'derlands',
+  'dune',
   'call of duty',
   'chivalry',
   'cities:',

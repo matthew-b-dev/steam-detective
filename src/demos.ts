@@ -510,10 +510,14 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile2: 'Brotato',
     caseFile3: 'CloverPit',
   },
-  // 4/21 Core Keeper (Credit: Egg)
+  '2026-04-21': {
+    caseFile1: 'The Last of Us Part I',
+    caseFile2: 'Dune: Awakening',
+    caseFile3: 'Core Keeper',
+  },
   // 2026-04-** Hard: Judgment (fully refined)
   // 2026-04-** Hard: AudioSurf
-  '2026-04-21': {
+  '2026-04-22': {
     caseFile1: "Don't Starve",
     caseFile2: 'Fields of Mistria',
     caseFile3: 'Core Keeper',
