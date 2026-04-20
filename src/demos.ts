@@ -514,9 +514,9 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
   // 2026-04-** Hard: Judgment (fully refined)
   // 2026-04-** Hard: AudioSurf
   '2026-04-21': {
-    caseFile1: 'Split Fiction',
+    caseFile1: "Don't Starve",
     caseFile2: 'Fields of Mistria',
-    caseFile3: "Don't Starve",
+    caseFile3: 'Core Keeper',
   },
 };
 
