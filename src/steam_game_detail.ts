@@ -2642,13 +2642,13 @@ export const steamGameDetails: SteamGameMap = {
     name: 'Super Meat Boy',
     appId: 40800,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/40800/ss_2482dad154fa38c32195a5301891ec7d9cefa7da.600x338.jpg',
-    secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/40800/ss_652092068cc0d5e75fe3f199ad1bbc395806c1f2.600x338.jpg',
+    secondaryScreenshot:
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/40800/ss_2482dad154fa38c32195a5301891ec7d9cefa7da.600x338.jpg',
     shortDescription:
-      'The infamous, tough-as-nails platformer comes to Steam with a playable Head Crab character (Steam-exclusive)!',
+      "||Super Meat Boy|| is a tough as nails platformer where you play as an animated ||cube|| of ||meat|| who's trying to save his girlfriend (who happens to be made of ||bandages||) from an evil ||fetus|| in a ||jar|| wearing a ||tux||.",
     releaseDate: 'Nov 30, 2010',
-    developer: 'Team Meat',
+    developer: 'Team ||Meat||',
     publisher: '',
     tags: [],
     features: [],
@@ -2670,7 +2670,22 @@ export const steamGameDetails: SteamGameMap = {
       'Retro',
       'Controller',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    overrideCensoredTitle: 'Su||per|| M||eat|| B||oy||',
+    clueOrder: ['review', 'details+tags', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
+    reviewClues: [
+      {
+        review:
+          "i beat this game last year and it was the most difficult game i'd ever played. i told my friend, who had recommended me the game, it and it was not until then that i realized Dark World levels were even a thing. SIX MONTHS later I completed them.",
+        votedUp: true,
+        votesUp: 2,
+        weightedScore: undefined,
+        authorPlaytimeHours: 140,
+        timestamp: 1329696000,
+      },
+    ],
   },
   '41070': {
     name: 'Serious Sam 3: BFE',
@@ -7152,9 +7167,9 @@ export const steamGameDetails: SteamGameMap = {
     name: 'Insurgency',
     appId: 222880,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/222880/ss_4f5e3138708d1d7c9b0f724862bacc17dc2cbb77.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/222880/ss_18218f434fade7ff9dd2f16ac88bc636750b331b.600x338.jpg',
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/222880/ss_6390ad6d0a1e07c09ff635a62f66b7c462e46137.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/222880/ss_b33396e951326b8a025521a3594699a1dbd0f0c8.600x338.jpg',
     shortDescription:
       "Take to the streets for intense close quarters combat, where a team's survival depends upon securing crucial strongholds and destroying enemy supply in this multiplayer and cooperative Source Engine based experience.",
     releaseDate: 'Jan 22, 2014',
@@ -14808,8 +14823,11 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/312520/ss_cbd4e647d6b3bb3b311cb68fdf0cd8835d5919d7.600x338.jpg',
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/312520/ss_628274c84b196e270733f540139062f2787c4423.600x338.jpg',
+    webms: [
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/312520/extras/811ec7034a99eb80a328605f1f35881c.webm?t=1772227582',
+    ],
     shortDescription:
-      'You are a nomadic slugcat, both predator and prey in a broken ecosystem. Grab your spear and brave the industrial wastes, hunting enough food to survive, but be wary— other, bigger creatures have the same plan... and slugcats look delicious.',
+      'In&nbsp;&nbsp;_ _ _ _&nbsp;&nbsp;&nbsp;_ _ _ _ _&nbsp;&nbsp; you are a nomadic slugcat. You are both predator and prey in a broken ecosystem. Grab your spear and brave the industrial wastes, hunting enough food to survive, but be wary— other, bigger creatures have the same plan... and slugcats look delicious.',
     releaseDate: 'Mar 28, 2017',
     developer: 'Videocult',
     publisher: 'Akupara Games',
@@ -14836,7 +14854,32 @@ export const steamGameDetails: SteamGameMap = {
       'Metroidvania',
       'Survival Horror',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    overrideCensoredTitle: 'Ra||in|| Wo||rld||',
+    clueOrder: ['review', 'details+tags', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Hard',
+    reviewClues: [
+      {
+        review:
+          "||Rain World|| is not a metroidvania, and it's not an action platformer; it's an *ecosystem simulator*. [...] You're a lost little ||animal|| in an unforgiving world. ALWAYS CARRY A SPEAR. \n\nGood luck!",
+        votedUp: true,
+        votesUp: 139,
+        weightedScore: undefined,
+        authorPlaytimeHours: 619.3,
+        timestamp: 1710129600,
+      },
+      {
+        review:
+          'I like how you play as a ||cat|| thats a little slimy. A little goober if you will.',
+        votedUp: true,
+        votesUp: 386,
+        votedFunny: 128,
+        weightedScore: undefined,
+        authorPlaytimeHours: 228.1,
+        timestamp: 1512604800,
+      },
+    ],
   },
   '312530': {
     name: 'Duck Game',
@@ -46903,7 +46946,6 @@ export const steamGameDetails: SteamGameMap = {
   },
   '1605220': {
     name: 'Dune: Spice Wars',
-    searchTerms: ['dune spice wars'],
     appId: 1605220,
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1605220/ss_f7b1dc6b440e9f03bb88e4b6781f00656d92e1c5.600x338.jpg',
@@ -46938,6 +46980,7 @@ export const steamGameDetails: SteamGameMap = {
       'Multiplayer',
     ],
     clueOrder: ['tags', 'details', 'desc'],
+    searchTerms: ['dune spice wars'],
   },
   '1607250': {
     name: 'MY HERO ULTRA RUMBLE',
@@ -49824,7 +49867,6 @@ export const steamGameDetails: SteamGameMap = {
   },
   '1888930': {
     name: 'The Last of Us Part I',
-    searchTerms: ['tlou'],
     appId: 1888930,
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1888930/ss_ea8b45bb65d05fafa911387df16399ead11e6878.600x338.jpg',
@@ -49869,6 +49911,7 @@ export const steamGameDetails: SteamGameMap = {
       'Survival',
     ],
     clueOrder: ['details+tags', 'review', 'desc'],
+    searchTerms: ['tlou'],
     debugProcessed: true,
     debugRefined: true,
     difficulty: 'Easy',
@@ -52023,11 +52066,12 @@ export const steamGameDetails: SteamGameMap = {
     name: 'Sifu',
     appId: 2138710,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2138710/ss_9be1654f96e9fd6517fbe9107d76da245cbfaeb9.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2138710/ss_8bdc441c064f7ac1f75a33bb9f50e38110f38d28.600x338.jpg',
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2138710/ss_7f7fd03f973d0a1e5e9d481a2235402c19c0f0e5.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2138710/ss_12b1e46d8403a676c90dbbcfc8eb55ad57a2273d.600x338.jpg',
     shortDescription:
       '||Sifu|| is a realistic third-person brawler with tight Kung Fu combat mechanics and cinematic martial arts action embarking you on a path for revenge.',
+    originalReleaseDate: 'Feb 8, 2022 (Epic)',
     releaseDate: 'Mar 28, 2023',
     developer: 'Sloclap',
     publisher: 'Sloclap',
@@ -52042,11 +52086,11 @@ export const steamGameDetails: SteamGameMap = {
       'Martial Arts',
       "Beat 'em up",
       'Difficult',
-      'Third Person',
+      'Stylized',
       'Singleplayer',
-      'Souls-like',
+      'Fighting',
       'Crime',
-      'Indie',
+      'Third Person',
       'Blood',
       'Fighting',
       'Swordplay',
@@ -52054,7 +52098,23 @@ export const steamGameDetails: SteamGameMap = {
       'Dark',
       'Action Roguelike',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    overrideCensoredTitle: 'S||if||u',
+    clueOrder: ['details', 'review', 'tags', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Medium',
+    reviewClues: [
+      {
+        review:
+          'after 100 hours, im confident to try these moves out on REAL gangsters',
+        votedUp: true,
+        votesUp: 317,
+        weightedScore: undefined,
+        authorPlaytimeHours: 137.5,
+        timestamp: 1700802000,
+      },
+    ],
+    moreFromThisDeveloper: [{ id: 2138720, name: 'REMATCH' }],
   },
   '2141910': {
     name: 'Magic: The Gathering Arena',
@@ -56408,7 +56468,6 @@ export const steamGameDetails: SteamGameMap = {
   },
   '1172710': {
     name: 'Dune: Awakening',
-    searchTerms: ['dune awakening'],
     appId: 1172710,
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1172710/ss_8f82e5566057ef9fc8f876e27849bac8326c7259.600x338.jpg',
@@ -56443,6 +56502,7 @@ export const steamGameDetails: SteamGameMap = {
     ],
     overrideCensoredTitle: 'D||une||: A||wakenin||g',
     clueOrder: ['desc', 'review', 'details+tags'],
+    searchTerms: ['dune awakening'],
     debugProcessed: true,
     debugRefined: true,
     difficulty: 'Medium',
