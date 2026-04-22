@@ -25,6 +25,7 @@ export interface SteamGame {
   primaryScreenshot: string;
   secondaryScreenshot?: string;
   webms?: string[]; // Optional webm video URLs. When provided, replaces the secondary screenshot clue with auto-looping webm video(s).
+  webmKeepPlayingOnComplete?: boolean; // If true, webms will NOT be paused when the case file ends (they continue autoplaying).
   shortDescription: string;
   releaseDate: string;
   earlyAccessDate?: string;

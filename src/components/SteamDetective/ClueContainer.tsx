@@ -97,6 +97,7 @@ export const ClueContainer: React.FC<ClueContainerProps> = ({ caseFile }) => {
             webms={dailyGame.webms!}
             show={webmsRevealed}
             isComplete={isComplete}
+            keepPlayingOnComplete={dailyGame.webmKeepPlayingOnComplete}
           />
         )}
         {/* Screenshots - Clue 4 (primary) and Clue 5 (secondary) */}

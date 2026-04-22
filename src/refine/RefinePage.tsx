@@ -36,6 +36,7 @@ const cloneGameMap = (map: SteamGameMap): SteamGameMap => {
         : undefined,
       developerDescription: game.developerDescription,
       webms: game.webms ? [...game.webms] : undefined,
+      webmKeepPlayingOnComplete: game.webmKeepPlayingOnComplete,
     };
   }
   return clone;
@@ -244,6 +245,9 @@ export const RefinePage: React.FC = () => {
       }
       if (game.webms && game.webms.length > 0) {
         lines.push(`    webms: ${JSON.stringify(game.webms)},`);
+      }
+      if (game.webmKeepPlayingOnComplete) {
+        lines.push(`    webmKeepPlayingOnComplete: true,`);
       }
       lines.push(`    shortDescription:`);
       lines.push(`      ${JSON.stringify(game.shortDescription)},`);

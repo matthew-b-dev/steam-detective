@@ -6,20 +6,22 @@ interface ClueWebmProps {
   webms: string[];
   show: boolean;
   isComplete?: boolean;
+  keepPlayingOnComplete?: boolean;
 }
 
 export const ClueWebm: React.FC<ClueWebmProps> = ({
   webms,
   show,
   isComplete = false,
+  keepPlayingOnComplete = false,
 }) => {
   const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
 
   useEffect(() => {
-    if (isComplete) {
+    if (isComplete && !keepPlayingOnComplete) {
       videoRefs.current.forEach((v) => v?.pause());
     }
-  }, [isComplete]);
+  }, [isComplete, keepPlayingOnComplete]);
 
   useEffect(() => {
     if (show && !isComplete) {

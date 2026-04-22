@@ -764,6 +764,21 @@ export const RefineGameView: React.FC<RefineGameViewProps> = ({
           />
           {game.webms && game.webms.length > 0 && (
             <div className='mt-3 space-y-3'>
+              <label className='flex items-center gap-2 cursor-pointer'>
+                <input
+                  type='checkbox'
+                  checked={!!game.webmKeepPlayingOnComplete}
+                  onChange={(e) =>
+                    onUpdate({
+                      webmKeepPlayingOnComplete: e.target.checked || undefined,
+                    })
+                  }
+                  className='accent-teal-500'
+                />
+                <span className='text-xs text-gray-400'>
+                  Keep playing after case file ends
+                </span>
+              </label>
               {game.webms.map((url, idx) => (
                 <div key={idx} className='flex justify-center'>
                   <video

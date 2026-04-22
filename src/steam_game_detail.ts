@@ -14855,6 +14855,7 @@ export const steamGameDetails: SteamGameMap = {
       'Survival Horror',
     ],
     overrideCensoredTitle: 'Ra||in|| Wo||rld||',
+    webmKeepPlayingOnComplete: true,
     clueOrder: ['review', 'details+tags', 'desc'],
     debugProcessed: true,
     debugRefined: true,
