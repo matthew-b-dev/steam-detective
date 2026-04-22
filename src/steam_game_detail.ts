@@ -2678,7 +2678,7 @@ export const steamGameDetails: SteamGameMap = {
     reviewClues: [
       {
         review:
-          "i beat this game last year and it was the most difficult game i'd ever played. i told my friend, who had recommended me the game, and it was not until then that i realized Dark World levels were even a thing. SIX MONTHS later I completed them.",
+          "i beat this game last year and it was the most difficult game i'd ever played. i told my friend, who had recommended me the game, and it was not until then that i learned Dark World levels were even a thing. SIX MONTHS later I completed them.",
         votedUp: true,
         votesUp: 2,
         weightedScore: undefined,
