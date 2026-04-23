@@ -251,39 +251,54 @@ export const renderUncensoredDescription = (
 };
 
 // Helper to render review text with censored parts and newline support
-const EDITED_FOR_LENGTH_RE = /((?:\.\.\. )?\(edited for length\))/;
+const STYLED_MARKER_RE_G =
+  /(?:\.\.\. )?\(edited for length\)|\(Some game titles partially redacted\)/g;
 const editedForLengthStyle: React.CSSProperties = {
   fontStyle: 'italic',
   color: '#8a909a',
 };
 
 /**
- * Splits a line on EDITED_FOR_LENGTH, censors each surrounding segment,
- * and renders the marker itself with italic/dimmed styling.
+ * Splits a line on styled markers, censors each surrounding segment,
+ * and renders the markers themselves with italic/dimmed styling.
  */
 const renderCensoredLineWithEditedMarker = (
   line: string,
   lineIdx: number,
 ): ReactElement[] => {
   line = line.replace(/&nbsp;/g, '\u00A0');
-  const parts = line.split(EDITED_FOR_LENGTH_RE);
-  if (parts.length === 1)
-    return renderCensoredDescription(line, `l${lineIdx}-`);
   const result: ReactElement[] = [];
-  // split with a capturing group alternates: plain, match, plain, match, ...
-  parts.forEach((part, idx) => {
-    if (idx % 2 === 1) {
-      // captured match - the marker itself (with optional leading '...')
+  let lastIndex = 0;
+  let key = 0;
+  STYLED_MARKER_RE_G.lastIndex = 0;
+  let m: RegExpExecArray | null;
+  while ((m = STYLED_MARKER_RE_G.exec(line)) !== null) {
+    if (m.index > lastIndex) {
       result.push(
-        <span key={`${lineIdx}-efl${idx}`} style={editedForLengthStyle}>
-          {part}
-        </span>,
+        ...renderCensoredDescription(
+          line.substring(lastIndex, m.index),
+          `l${lineIdx}-s${key++}-`,
+        ),
       );
-    } else if (part) {
-      result.push(...renderCensoredDescription(part, `l${lineIdx}-s${idx}-`));
     }
-  });
-  return result;
+    result.push(
+      <span key={`${lineIdx}-mk${key++}`} style={editedForLengthStyle}>
+        {m[0]}
+      </span>,
+    );
+    lastIndex = m.index + m[0].length;
+  }
+  if (lastIndex < line.length) {
+    result.push(
+      ...renderCensoredDescription(
+        line.substring(lastIndex),
+        `l${lineIdx}-s${key++}-`,
+      ),
+    );
+  }
+  return result.length > 0
+    ? result
+    : renderCensoredDescription(line, `l${lineIdx}-`);
 };
 
 export const renderCensoredReview = (reviewText: string): ReactElement[] => {

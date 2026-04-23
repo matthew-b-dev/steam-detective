@@ -21,35 +21,45 @@ const formatTimestamp = (timestamp: number): string => {
   });
 };
 
-const EDITED_FOR_LENGTH_RE = /((?:\.\.\. )?\(edited for length\))/;
+const STYLED_MARKER_RE_G =
+  /(?:\.\.\. )?\(edited for length\)|\(Some game titles partially redacted\)/g;
 const editedForLengthStyle: React.CSSProperties = {
   fontStyle: 'italic',
   color: '#8a909a',
 };
 
-/** Splits a plain string on EDITED_FOR_LENGTH and renders the marker with special styling. */
+/** Renders a line with styled markers applied via exec loop. */
 const renderLineWithEditedMarker = (
   line: string,
   lineKey: string | number,
 ): ReactElement[] => {
   line = line.replace(/&nbsp;/g, '\u00A0');
-  const parts = line.split(EDITED_FOR_LENGTH_RE);
-  if (parts.length === 1) return [<span key={lineKey}>{line}</span>];
   const result: ReactElement[] = [];
-  // split with a capturing group alternates: plain, match, plain, match, ...
-  parts.forEach((part, idx) => {
-    if (idx % 2 === 1) {
-      // captured match - the marker itself (with optional leading '...')
+  let lastIndex = 0;
+  let key = 0;
+  STYLED_MARKER_RE_G.lastIndex = 0;
+  let m: RegExpExecArray | null;
+  while ((m = STYLED_MARKER_RE_G.exec(line)) !== null) {
+    if (m.index > lastIndex) {
       result.push(
-        <span key={`${lineKey}-efl${idx}`} style={editedForLengthStyle}>
-          {part}
+        <span key={`${lineKey}-t${key++}`}>
+          {line.substring(lastIndex, m.index)}
         </span>,
       );
-    } else if (part) {
-      result.push(<span key={`${lineKey}-p${idx}`}>{part}</span>);
     }
-  });
-  return result;
+    result.push(
+      <span key={`${lineKey}-m${key++}`} style={editedForLengthStyle}>
+        {m[0]}
+      </span>,
+    );
+    lastIndex = m.index + m[0].length;
+  }
+  if (lastIndex < line.length) {
+    result.push(
+      <span key={`${lineKey}-t${key++}`}>{line.substring(lastIndex)}</span>,
+    );
+  }
+  return result.length > 0 ? result : [<span key={lineKey}>{line}</span>];
 };
 
 const getUncensoredReview = (text: string): ReactElement[] => {

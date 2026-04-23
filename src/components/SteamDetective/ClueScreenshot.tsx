@@ -113,11 +113,15 @@ export const ClueScreenshot: React.FC<ClueScreenshotProps> = ({
               >
                 <motion.img
                   src={bothShown ? secondaryScreenshot : screenshot}
-                  alt='Game screenshot'
+                  alt='Loading ...'
                   className={`w-full h-full block ${screenshotLetterbox ? 'object-contain' : 'object-cover'}`}
                   draggable={false}
                   onContextMenu={(e) => e.preventDefault()}
-                  style={{ WebkitTouchCallout: 'none', ...largeZoomStyle }}
+                  style={{
+                    WebkitTouchCallout: 'none',
+                    color: 'rgb(104,104,104)',
+                    ...largeZoomStyle,
+                  }}
                   initial={{ filter: 'blur(10px)' }}
                   animate={{
                     filter: isMobileViewport
@@ -225,11 +229,15 @@ export const ClueScreenshot: React.FC<ClueScreenshotProps> = ({
                   <motion.img
                     key={screenshot}
                     src={screenshot}
-                    alt='Game screenshot'
+                    alt='Loading ...'
                     className='w-full h-full object-cover block brightness-75 group-hover:brightness-90'
                     draggable={false}
                     onContextMenu={(e) => e.preventDefault()}
-                    style={{ WebkitTouchCallout: 'none', ...thumbZoomStyle }}
+                    style={{
+                      WebkitTouchCallout: 'none',
+                      color: 'rgb(104,104,104)',
+                      ...thumbZoomStyle,
+                    }}
                     initial={{ filter: 'blur(10px)', opacity: 0 }}
                     animate={{ filter: 'blur(0px)', opacity: 1 }}
                     exit={{ filter: 'blur(10px)', opacity: 0 }}

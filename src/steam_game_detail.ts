@@ -47958,9 +47958,9 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1677280/2c8431f5d785215e33e308bc52dd03a1b9a8cbec/ss_2c8431f5d785215e33e308bc52dd03a1b9a8cbec.600x338.jpg',
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1677280/2383f24744ba457757c260f84735142fcb0ffd79/ss_2383f24744ba457757c260f84735142fcb0ffd79.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1677280/ss_c206acff6a8ac91b38ed63a97e4cef33c09cf760.600x338.jpg',
     shortDescription:
-      "||Company of Heroes 3|| combines heart-pounding combat with deeper strategic choices in a stunning Mediterranean theatre of war. In ||Company of Heroes 3||, every battle tells a story...what's yours?",
+      "_ _ _ _ _ _ _&nbsp;&nbsp;&nbsp;&nbsp;_ _&nbsp;&nbsp;&nbsp;&nbsp;_ _ _ _ _ _&nbsp;&nbsp;&nbsp;&nbsp;_&nbsp;&nbsp;brings the series' acclaimed authentic and tactical WWII gameplay to a stunning new setting. Immerse yourself in two epic campaigns, four unique multiplayer & co-op factions, and a breathtaking new theatre spanning from the sweeping deserts of North Africa to the rolling hills of Italy.",
     releaseDate: 'Feb 23, 2023',
     developer: 'Relic Entertainment',
     publisher: 'Relic Entertainment',
@@ -47987,7 +47987,35 @@ export const steamGameDetails: SteamGameMap = {
       'Military',
       'Top-Down',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: ['Wargame', 'Action RTS', 'Co-op', 'World War II', 'PvE'],
+    overrideCensoredTitle: 'Co||mpany|| o||f|| He||roes|| ||3||',
+    clueOrder: ['details+tags', 'review', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Medium',
+    reviewClues: [
+      {
+        review:
+          'Game is half of what ||Company of Heroes|| 2 was, and only a quarter of ||Company of Heroes||1. the community is still total garbage as well :~)',
+        votedUp: false,
+        votesUp: 4,
+        weightedScore: undefined,
+        authorPlaytimeHours: 80.3,
+        timestamp: 1772343875,
+      },
+      {
+        review:
+          "I enjoyed the Italian campaign. That said, recent updates/DLC's are exclusively focused on multiplayer. I have ZERO interest in multiplayer. ... (edited for length)",
+        votedUp: false,
+        votesUp: 36,
+        weightedScore: undefined,
+        authorPlaytimeHours: 150.2,
+        timestamp: 1771215582,
+      },
+    ],
+    moreFromThisDeveloper: [
+      { id: 1466860, name: 'Age of Empires IV: Anniversary Edition' },
+    ],
   },
   '1677740': {
     name: 'Stumble Guys',
@@ -51669,13 +51697,14 @@ export const steamGameDetails: SteamGameMap = {
   },
   '2058180': {
     name: 'Judgment',
+    overrideCensoredTitle: 'Ju||dgmen||t',
     appId: 2058180,
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2058180/ss_3ace0d9ef99534bcbb5a2b73f32826ab7b3bdc4e.600x338.jpg',
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2058180/ss_fb45b4875cf5968d301c9a4cf73f4c7ecca7bead.600x338.jpg',
     shortDescription:
-      '||RGG Studio|| proudly presents&nbsp;&nbsp;&nbsp;_ _ _ _ _ _ _ _&nbsp;&nbsp;, an action-adventure ||detective|| game that ||follows twisted crime running deep beneath the surface of Tokyo||. Play as Takayuki Yagami, a disgraced ||defense attorney turned detective||, as you claw your way through Kamurocho’s ||underground crime network and uncover the truth behind a string of grisly murders. In this legal thriller||, the balance between justice and mercy teeters on the edge.',
+      '||RGG Studio|| proudly presents&nbsp;&nbsp;&nbsp;J _ _ _ _ _ _ _&nbsp;&nbsp;, an action-adventure ||detective|| game that ||follows twisted crime running deep beneath the surface of Tokyo||. Play as Takayuki Yagami, a disgraced ||defense attorney turned detective||, as you claw your way through Kamurocho’s ||underground crime network and uncover the truth behind a string of grisly murders. In this legal thriller||, the balance between justice and mercy teeters on the edge.',
     originalReleaseDate: 'Jun 25, 2019 (PS4)',
     releaseDate: 'Sep 14, 2022',
     developer: 'Ryu Ga Gotoku Studio',
@@ -51703,8 +51732,8 @@ export const steamGameDetails: SteamGameMap = {
       'Dark',
       'Drama',
     ],
-    clueOrder: ['desc', 'review', 'details+tags'],
-    searchTerms: ['judgement'],
+    clueOrder: ['review', 'details+tags', 'desc'],
+    searchTerms: ['judgement', 'lost judgment', 'lost judgement'],
     debugProcessed: true,
     debugRefined: true,
     difficulty: 'Hard',
@@ -51712,7 +51741,7 @@ export const steamGameDetails: SteamGameMap = {
     reviewClues: [
       {
         review:
-          "J||udgment|| is like the Y||akuza|| games that it's a spinoff of, but you get to play Phoenix Wright that knows kungfu.",
+          "||Judgment|| is like the ||Yakuza|| games that it's a spinoff of, but you get to play Phoenix Wright that knows kungfu.",
         votedUp: true,
         votesUp: 200,
         votedFunny: 58,
@@ -56620,6 +56649,66 @@ export const steamGameDetails: SteamGameMap = {
         weightedScore: undefined,
         authorPlaytimeHours: 20.5,
         timestamp: 1769990400,
+      },
+    ],
+  },
+  '3065800': {
+    name: 'Marathon',
+    appId: 3065800,
+    primaryScreenshot:
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3065800/1a2035410e3637918229a6664d2835d036b71176/ss_1a2035410e3637918229a6664d2835d036b71176.600x338.jpg',
+    secondaryScreenshot:
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3065800/56d5dedc360ba2744057f5d58f577e40bcd1ac65/ss_56d5dedc360ba2744057f5d58f577e40bcd1ac65.600x338.jpg',
+    shortDescription:
+      'Scavenge the lost colony of Tau Ceti IV as a bio-cybernetic ||Runner|| in a PvPvE ||survival extraction FPS|| from the creators of ||Halo|| and ||Destiny||.',
+    releaseDate: 'Mar 5, 2026',
+    developer: '||Bungie||',
+    publisher: '||Bungie||',
+    tags: [],
+    features: [],
+    allReviewSummary: {
+      count: 35824,
+      rating: 'Very Positive',
+    },
+    userTags: [
+      'Extraction Shooter',
+      'PvP',
+      'Multiplayer',
+      'Sci-fi',
+      'Shooter',
+      'FPS',
+      'Futuristic',
+      'Stylized',
+      'First-Person',
+      'PvE',
+      'Cyberpunk',
+      'Gun Customization',
+      'Class-Based',
+      'Survival',
+      'Online Co-Op',
+    ],
+    blurredUserTags: [
+      'First-Person',
+      'Stylized',
+      'Futuristic',
+      'Extraction Shooter',
+      'Sci-fi',
+    ],
+    overrideCensoredTitle: 'Ma||ratho||n',
+    clueOrder: ['review', 'details+tags', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
+    reviewClues: [
+      {
+        review:
+          '_ _ _ _ _ _&nbsp;&nbsp;from&nbsp;&nbsp;_ _ _ _ _ _&nbsp;&nbsp;: too much.\n_ _ _&nbsp;&nbsp;&nbsp;R _ _ _ _ _ _&nbsp;&nbsp;: too little.\n||Marathon||&nbsp;&nbsp;: &nbsp;just right.\n\n(Some game titles partially redacted)',
+        votedUp: true,
+        votesUp: 624,
+        votedFunny: 34,
+        weightedScore: undefined,
+        authorPlaytimeHours: 39.3,
+        timestamp: 1776873518,
       },
     ],
   },

@@ -525,11 +525,14 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile2: 'LEGO Worlds',
     caseFile3: 'Cairn',
   },
-  // Gears 5
-  // Marathon https://steamcommunity.com/id/Jzzbeard/recommended/3065800/
-  // 2026-04-** Hard: Judgment (fully refined)
-  // 2026-04-** Hard: AudioSurf
   '2026-04-24': {
+    caseFile1: 'Marathon',
+    caseFile2: 'Company of Heroes 3',
+    caseFile3: 'Judgment',
+  },
+  // Gears 5
+  // Hard: AudioSurf
+  '2026-04-25': {
     caseFile1: "Don't Starve",
     caseFile2: 'Fields of Mistria',
     caseFile3: 'Core Keeper',

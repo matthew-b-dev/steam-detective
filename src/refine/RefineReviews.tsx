@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import type { ReactElement } from 'react';
 import type { Review, SteamGame } from '../types';
 import ThumbsUpIcon from '../assets/thumbsup.svg?react';
 import ThumbsDownIcon from '../assets/thumbsdown.svg?react';
@@ -92,12 +93,54 @@ const parseSteamReviewHtml = (
   };
 };
 
+const STYLED_MARKER_RE_G =
+  /(?:\.\.\. )?\(edited for length\)|\(Some game titles partially redacted\)/g;
+const markerStyle: React.CSSProperties = {
+  fontStyle: 'italic',
+  color: '#8a909a',
+};
+
+/** Render a single line with special styling applied to markers. */
+const renderStyledLine = (line: string, lineKey: string | number) => {
+  line = line.replace(/&nbsp;/g, '\u00A0');
+  const result: ReactElement[] = [];
+  let lastIndex = 0;
+  let key = 0;
+  STYLED_MARKER_RE_G.lastIndex = 0;
+  let m: RegExpExecArray | null;
+  while ((m = STYLED_MARKER_RE_G.exec(line)) !== null) {
+    if (m.index > lastIndex) {
+      result.push(
+        <span key={`${lineKey}-t${key++}`}>
+          {line.substring(lastIndex, m.index)}
+        </span>,
+      );
+    }
+    result.push(
+      <span key={`${lineKey}-m${key++}`} style={markerStyle}>
+        {m[0]}
+      </span>,
+    );
+    lastIndex = m.index + m[0].length;
+  }
+  if (lastIndex < line.length) {
+    result.push(
+      <span key={`${lineKey}-t${key++}`}>{line.substring(lastIndex)}</span>,
+    );
+  }
+  return result.length > 0 ? (
+    <span key={lineKey}>{result}</span>
+  ) : (
+    <span key={lineKey}>{line}</span>
+  );
+};
+
 /** Render review text with newlines. Strips any ||markers|| for the raw preview. */
 const renderRawReview = (text: string) => {
   const stripped = text.replace(/\|\|(.+?)\|\|/g, '$1');
   return stripped.split('\n').map((line, i, arr) => (
     <span key={i}>
-      {line.replace(/&nbsp;/g, '\u00A0')}
+      {renderStyledLine(line, i)}
       {i < arr.length - 1 && <br />}
     </span>
   ));
@@ -274,7 +317,8 @@ const SteamReviewCard: React.FC<{
             <div className='text-[10px] text-gray-500 mb-1'>
               Edit review text - use{' '}
               <code className='text-blue-400'>||text||</code> to censor/blur
-              portions. use "... (edited for length)" to cut off:
+              portions. use "... (edited for length)" to cut off. use "(Game
+              titles partially redacted)" to note redacted game names:
             </div>
             <textarea
               value={editableText ?? review.review}
@@ -705,7 +749,9 @@ export const RefineReviews: React.FC<RefineReviewsProps> = ({
                   onTimestampChange={(ts) => handleTimestampChange(selIdx, ts)}
                   onVotesUpChange={(v) => handleVotesUpChange(selIdx, v)}
                   onVotedFunnyChange={(f) => handleVotedFunnyChange(selIdx, f)}
-                  onEarlyAccessChange={(ea) => handleEarlyAccessChange(selIdx, ea)}
+                  onEarlyAccessChange={(ea) =>
+                    handleEarlyAccessChange(selIdx, ea)
+                  }
                 />
               </div>
             );
@@ -773,7 +819,9 @@ export const RefineReviews: React.FC<RefineReviewsProps> = ({
                 onTimestampChange={(ts) => handleTimestampChange(selIdx, ts)}
                 onVotesUpChange={(v) => handleVotesUpChange(selIdx, v)}
                 onVotedFunnyChange={(f) => handleVotedFunnyChange(selIdx, f)}
-                onEarlyAccessChange={(ea) => handleEarlyAccessChange(selIdx, ea)}
+                onEarlyAccessChange={(ea) =>
+                  handleEarlyAccessChange(selIdx, ea)
+                }
               />
             </div>
           );
