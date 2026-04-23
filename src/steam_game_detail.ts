@@ -15947,7 +15947,7 @@ export const steamGameDetails: SteamGameMap = {
     reviewClues: [
       {
         review:
-          "Licensed super heroes? Sure.\nRacing? That tracks.\nAn open world AND procedurally generated ||LEGO|| game? Never thought I'd see the day.",
+          "Movie tie-ins? Sure.\nRacing? That tracks.\nAn open world AND procedurally generated ||LEGO|| game? Never thought I'd see the day.",
         votedUp: true,
         votesUp: 3,
         weightedScore: undefined,
