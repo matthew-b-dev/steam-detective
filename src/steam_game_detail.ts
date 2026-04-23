@@ -14826,6 +14826,7 @@ export const steamGameDetails: SteamGameMap = {
     webms: [
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/312520/extras/811ec7034a99eb80a328605f1f35881c.webm?t=1772227582',
     ],
+    webmKeepPlayingOnComplete: true,
     shortDescription:
       'In&nbsp;&nbsp;_ _ _ _&nbsp;&nbsp;&nbsp;_ _ _ _ _&nbsp;&nbsp; you are a nomadic slugcat. You are both predator and prey in a broken ecosystem. Grab your spear and brave the industrial wastes, hunting enough food to survive, but be wary— other, bigger creatures have the same plan... and slugcats look delicious.',
     releaseDate: 'Mar 28, 2017',
@@ -14855,7 +14856,6 @@ export const steamGameDetails: SteamGameMap = {
       'Survival Horror',
     ],
     overrideCensoredTitle: 'Ra||in|| Wo||rld||',
-    webmKeepPlayingOnComplete: true,
     clueOrder: ['review', 'details+tags', 'desc'],
     debugProcessed: true,
     debugRefined: true,
@@ -15910,9 +15910,9 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/332310/ss_6e6745114b161326566b0780cd54bd813a701a1c.600x338.jpg',
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/332310/ss_1e794e1aaea9fc0272ed6b19b9fbd8e078b9e62d.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/332310/ss_e771b5142001d977784a121ac677185183d42a66.600x338.jpg',
     shortDescription:
-      'Experience a galaxy of ||Worlds|| made entirely from ||LEGO|| bricks. EXPLORE gigantic landscapes, DISCOVER countless surprises, and CREATE anything you can imagine by building with ||LEGO|| bricks.',
+      'EXPLORE. DISCOVER. CREATE. TOGETHER. ||LEGO Worlds|| is an open environment of procedurally-generated worlds made entirely of ||LEGO bricks|| which you can freely manipulate and dynamically populate with ||LEGO|| models. Create anything you can imagine one ||brick|| at a time',
     releaseDate: 'Mar 7, 2017',
     developer: 'TT Games',
     publisher: 'Warner Bros. Interactive Entertainment',
@@ -15931,7 +15931,7 @@ export const steamGameDetails: SteamGameMap = {
       'Multiplayer',
       'Exploration',
       'Family Friendly',
-      'Singleplayer',
+      'Creativity',
       'Third Person',
       'Funny',
       'Early Access',
@@ -15939,7 +15939,22 @@ export const steamGameDetails: SteamGameMap = {
       'Co-op',
       'Action',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: ['LEGO', 'Family Friendly'],
+    clueOrder: ['details+tags', 'review', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Medium',
+    reviewClues: [
+      {
+        review:
+          "Licensed super heroes? Sure.\nRacing? That tracks.\nAn open world AND procedurally generated ||LEGO|| game? Never thought I'd see the day.",
+        votedUp: true,
+        votesUp: 3,
+        weightedScore: undefined,
+        authorPlaytimeHours: 14.1,
+        timestamp: 1519862400,
+      },
+    ],
   },
   '332570': {
     name: 'Amazing Frog?',
@@ -22470,9 +22485,12 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/470220/ss_b050b244619bdc27bb3b2cf4b070334385fcbea7.600x338.jpg',
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/470220/ss_31903bb595a99d94dfd953300d3ddd6cf120a82b.600x338.jpg',
+    webms: [
+      'https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/470220/extras/332ed1b75e0a3ec8856ca3c605580dcf.webm',
+    ],
     shortDescription:
-      '||UNO|| is the iconic card game reimagined with a large variety of gameplay and customization options. Play solo or with friends, personalize your experience from rules to cosmetics, and try the Happy Hour!',
-    releaseDate: 'Jan 3, 2017',
+      'Match ||cards|| by ||color||, number, or ||symbol||, play ||action cards|| to spice things up, and race against others to ||empty your hand|| first. Don’t forget to ||shout "UNO"|| when you’re down ||to your last card||!',
+    releaseDate: 'Dec 8, 2016',
     developer: 'Ubisoft Entertainment',
     publisher: 'Ubisoft Entertainment',
     tags: [],
@@ -22498,7 +22516,31 @@ export const steamGameDetails: SteamGameMap = {
       'Local Multiplayer',
       'Replay Value',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: [
+      'Board Game',
+      'Funny',
+      'Strategy',
+      'Co-op',
+      'Online Co-Op',
+      'Casual',
+      'Tabletop',
+    ],
+    screenshotFocusPoint: [49, 31, 179],
+    clueOrder: ['review', 'desc', 'details+tags'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
+    reviewClues: [
+      {
+        review:
+          'A better version of ||UNO|| was included free with xbox live cameras in 2006. WHat compelled me to pay $10 for this verison i  dont know. The game is actually fine but I regret buying it because of the ||ubisoft|| launcher.',
+        votedUp: false,
+        votesUp: 81,
+        weightedScore: undefined,
+        authorPlaytimeHours: 14.4,
+        timestamp: 1520208000,
+      },
+    ],
   },
   '471710': {
     name: 'Rec Room',
@@ -56525,6 +56567,59 @@ export const steamGameDetails: SteamGameMap = {
         weightedScore: undefined,
         authorPlaytimeHours: 83.3,
         timestamp: 1750996800,
+      },
+    ],
+  },
+  '1588550': {
+    name: 'Cairn',
+    appId: 1588550,
+    primaryScreenshot:
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1588550/827a05c5af0d469f5e27bbd4e5b298be244f7fb4/ss_827a05c5af0d469f5e27bbd4e5b298be244f7fb4.600x338.jpg',
+    secondaryScreenshot:
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1588550/bae00fc0710749179c1f87d41aa4c1733f5fa9a0/ss_bae00fc0710749179c1f87d41aa4c1733f5fa9a0.600x338.jpg',
+    shortDescription:
+      'In&nbsp;&nbsp;_ _ _ _ _ _&nbsp;&nbsp;, reach a summit never before climbed. In this survival-climber from the creators of Furi and Haven, climb anywhere and plan your route carefully, managing pitons and resources to survive unforgiving Mount Kami. Discover what Aava is willing to sacrifice to achieve the ascent of a lifetime.',
+    releaseDate: 'Jan 29, 2026',
+    developer: 'The Game Bakers',
+    publisher: 'The Game Bakers',
+    tags: [],
+    features: [],
+    allReviewSummary: {
+      count: 64011,
+      rating: 'Very Positive',
+    },
+    userTags: [
+      'Stylized',
+      'Indie',
+      'Exploration',
+      'Adventure',
+      'Atmospheric',
+      'Singleplayer',
+      'Survival',
+      'Unforgiving',
+      'Sports',
+      'Action-Adventure',
+      'Difficult',
+      'Open World',
+      'Walking Simulator',
+      'Physics',
+      'Third Person',
+    ],
+    blurredUserTags: ['Sports', 'Survival'],
+    overrideCensoredTitle: 'C||air||n',
+    clueOrder: ['details+tags', 'review', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Medium',
+    reviewClues: [
+      {
+        review:
+          'As a ||climber|| of 10 years, this is the closest thing youll ever get in a video game to a true ||climbing|| experience. No ||stamina|| bars, no indicators. just feeling and intution to keep u on ||the wall||. Its a kinda short game if you just wanna "beat it", but alot of replayability if you wanna ||free solo||, explore, and take new harder ||routes|| your next go. As far as releases go, this is an amazing start to 2026!',
+        votedUp: true,
+        votesUp: 155,
+        weightedScore: undefined,
+        authorPlaytimeHours: 20.5,
+        timestamp: 1769990400,
       },
     ],
   },
