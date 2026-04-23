@@ -391,7 +391,6 @@ export const dummyGames: string[] = [
   'Bulletstorm: Full Clip Edition',
   'ELEX',
   'Berserk and The Band of the Hawk',
-  'LEGO Worlds',
   'Ultra Street Fighter II: The Final Challengers',
   'Pokken Tournament DX',
   'Rain World',
