@@ -10211,14 +10211,15 @@ export const steamGameDetails: SteamGameMap = {
     clueOrder: ['tags', 'details', 'desc'],
   },
   '248820': {
-    name: 'Risk of Rain (2013)',
+    name: 'Risk of Rain',
+    excludeOptions: ['Risk of Rain Returns'],
     appId: 248820,
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/248820/ss_9b26bb93397ea5bbb7906950c4ffa0d6e9203f7d.600x338.jpg',
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/248820/ss_9e1919fe4e37de4d153333fb012586fb63cb8999.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/248820/ss_bad30e7c79c66b1717b1259042bf9566762931d4.600x338.jpg',
     shortDescription:
-      '||Risk|| of ||Rain|| is an action platformer with roguelike elements. With permanent death as a primary feature, players will have to play their best to get as far as possible. Fight on a mysterious planet with randomly spawning enemies and bosses, either alone or with 3 friends in online co-op.',
+      '[[((R))isk of Rain]] is an action platformer with roguelike elements. With permanent death as a primary feature, players will have to play their best to get as far as possible. Fight on a mysterious planet with randomly spawning enemies and bosses, either alone or with 3 friends in online co-op.',
     releaseDate: 'Nov 8, 2013',
     developer: 'Hopoo Games',
     publisher: 'Gearbox Publishing',
@@ -10245,7 +10246,22 @@ export const steamGameDetails: SteamGameMap = {
       'Roguelite',
       'Multiplayer',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: ['Action Roguelike', 'Roguelike'],
+    clueOrder: ['review', 'details+tags', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Medium',
+    reviewClues: [
+      {
+        review:
+          'I have hundreds of hours in ||Risk of Rain|| 2, I had to check out the original to get a better understanding of one of my favorite games ever.\n\nIt is harder than ||RoR||2, and just as hectic.\nIt has more restricted controls, given that it is 2D.\nIt has items, characters, and enemies not found in ||RoR||2\nIt has an epic fight with Providence.\n... (edited for length)',
+        votedUp: true,
+        votesUp: 111,
+        weightedScore: undefined,
+        authorPlaytimeHours: 53.7,
+        timestamp: 1687392000,
+      },
+    ],
   },
   '249050': {
     name: 'Dungeon of the ENDLESS',
@@ -12926,9 +12942,9 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/286160/ss_203970c1dd0b8985f9f5c59767517bb7144fb6e9.600x338.jpg',
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/286160/ss_6a40bc382133371b901af29c60c53e0bd51cef4f.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/286160/ss_5ce53563d387f7e8fa914ff616c67a87f60c52c5.600x338.jpg',
     shortDescription:
-      '||Tabletop Simulator|| is the only simulator where you can let your aggression out by flipping the table! There are no rules to follow: just you, a physics sandbox, and your friends. Make your own online board games or play the thousands of community created mods. Unlimited gaming possibilities!',
+      '||Tabletop Simulator|| is the only ||simulator|| where you can ||let your aggression out|| by flipping the ||table||! There are no rules to follow: just you, a ||physics sandbox||, and your friends. Make your own online ||board games|| or play the thousands of community created mods. Unlimited gaming possibilities!',
     releaseDate: 'Jun 5, 2015',
     developer: 'Berserk Games',
     publisher: 'Berserk Games',
@@ -12960,7 +12976,48 @@ export const steamGameDetails: SteamGameMap = {
       'First-Person',
       'Indie',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: [
+      'Tabletop',
+      'Board Game',
+      'Sandbox',
+      'Card Game',
+      'VR',
+      'Trading Card Game',
+      'Physics',
+      'Moddable',
+    ],
+    overrideCensoredTitle: 'Ta||ble||t||op|| S||imulato||r',
+    clueOrder: ['details', 'tags', 'review', 'desc'],
+    reviewClues: [
+      {
+        review: 'low key piracy',
+        votedUp: true,
+        votesUp: 910,
+        votedFunny: 101,
+        weightedScore: '0.887030601501464844',
+        authorPlaytimeHours: 60,
+        timestamp: 1768025707,
+      },
+      {
+        review:
+          'I can finally play classic Warhammer 40k *AND* afford car payments. Games Workshop? I think you mean Steam Workshop.',
+        votedUp: true,
+        votesUp: 1010,
+        votedFunny: 362,
+        weightedScore: undefined,
+        authorPlaytimeHours: 15.8,
+        timestamp: 1608440400,
+      },
+    ],
+    moreFromThisDeveloper: [
+      {
+        id: 610693,
+        name: 'Battle For Greyport (DLC)',
+      },
+      { id: 433520, name: 'Darkest Night (DLC)' },
+      { id: 610705, name: 'Dawn of the Zeds (DLC)' },
+      { id: 1621112, name: 'Bristol 1350 (DLC)' },
+    ],
   },
   '286690': {
     name: 'Metro 2033 Redux',
@@ -37752,11 +37809,11 @@ export const steamGameDetails: SteamGameMap = {
     name: 'Gears 5',
     appId: 1097840,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1097840/ss_7f5ef63810c77809b65c19734ba66ea56cf15ee2.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1097840/ss_d4fb2917580c2db5f211891e00bda3ba1cf8d489.600x338.jpg',
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1097840/ss_9429a77bad31287dc7c68a6925eb893eeee65f5e.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1097840/ss_2dcba41c6f051b76f8843bc45e1c7249e63bdc49.600x338.jpg',
     shortDescription:
-      "From one of gaming's most acclaimed sagas, ||Gears|| is bigger than ever. With all-out war descending, Kait Diaz breaks away to uncover her connection to the enemy and discovers the true danger to Sera – herself.",
+      "From one of gaming's most acclaimed sagas, [[Gears of ((W))ar]] is bigger than ever. With all-out war descending, Kait Diaz breaks away to uncover her connection to the enemy and discovers the true danger to Sera – herself.",
     releaseDate: 'Sep 9, 2019',
     developer: 'The Coalition',
     publisher: 'Xbox Game Studios',
@@ -37783,7 +37840,24 @@ export const steamGameDetails: SteamGameMap = {
       'Open World',
       'Third Person',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    overrideCensoredTitle: 'G||ears|| 5',
+    clueOrder: ['review', 'details+tags', 'desc'],
+    searchTerms: ['gears of war 5'],
+    blurredUserTags: ['Third-Person Shooter'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
+    reviewClues: [
+      {
+        review:
+          'The Skiff is cool and all but I would rather ||The Coalition|| have just released the first ||4|| games on steam than have made this.',
+        votedUp: false,
+        votesUp: 1,
+        weightedScore: undefined,
+        authorPlaytimeHours: 29.8,
+        timestamp: 1772500764,
+      },
+    ],
   },
   '1102190': {
     name: 'Monster Train',
@@ -51697,7 +51771,6 @@ export const steamGameDetails: SteamGameMap = {
   },
   '2058180': {
     name: 'Judgment',
-    overrideCensoredTitle: 'Ju||dgmen||t',
     appId: 2058180,
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2058180/ss_3ace0d9ef99534bcbb5a2b73f32826ab7b3bdc4e.600x338.jpg',
@@ -51732,6 +51805,7 @@ export const steamGameDetails: SteamGameMap = {
       'Dark',
       'Drama',
     ],
+    overrideCensoredTitle: 'Ju||dgmen||t',
     clueOrder: ['review', 'details+tags', 'desc'],
     searchTerms: ['judgement', 'lost judgment', 'lost judgement'],
     debugProcessed: true,

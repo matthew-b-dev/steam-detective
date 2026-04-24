@@ -521,7 +521,6 @@ export const dummyGames: string[] = [
   'SNK 40th Anniversary Collection',
   'Little Dragons Cafe',
   'Horizon Chase Turbo',
-  'Risk of Rain',
   "Sid Meier's Civilization V",
   "Sid Meier's Civilization IV",
   "Sid Meier's Civilization III",

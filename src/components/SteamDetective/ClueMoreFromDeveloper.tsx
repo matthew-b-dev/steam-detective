@@ -111,7 +111,13 @@ export const ClueMoreFromDeveloper: React.FC<ClueMoreFromDeveloperProps> = ({
             </div>
           )}
         <div className='text-gray-400 text-sm mb-2 mt-3'>
-          {`${games.length > 1 ? 'Featured games' : 'Another game'} from this Developer${games.length > 1 ? ` (${games.length})` : ':'}`}
+          {(() => {
+            const hasNonGame = games.some((g) => g.name?.includes('DLC'));
+            const noun = hasNonGame ? 'product' : 'game';
+            return games.length > 1
+              ? `Featured ${noun}s from this Developer (${games.length})`
+              : `Another ${noun} from this Developer:`;
+          })()}
         </div>
         <div className='flex items-center gap-1'>
           {/* Left arrow - desktop only, always reserve space when overflowing */}
@@ -139,7 +145,7 @@ export const ClueMoreFromDeveloper: React.FC<ClueMoreFromDeveloperProps> = ({
             </button>
           )}
           <div
-            className={`relative bg-black/50 p-1 min-h-[90px] rounded ${isOverflowing ? 'flex-1' : 'w-fit'}`}
+            className={`relative bg-black/50 p-1 min-h-[90px] rounded min-w-0 ${isOverflowing ? 'flex-1' : 'w-fit'}`}
           >
             {/* Left fade — fades in when scrolled right */}
             <div
@@ -173,7 +179,8 @@ export const ClueMoreFromDeveloper: React.FC<ClueMoreFromDeveloperProps> = ({
                   key={game.id}
                   className='relative flex-shrink-0'
                   style={{
-                    scrollSnapAlign: 'start',
+                    scrollSnapAlign:
+                      snapActive && !isTouchDevice ? 'start' : 'none',
                     maxWidth: 180,
                   }}
                 >

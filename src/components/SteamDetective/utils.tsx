@@ -145,8 +145,37 @@ const bracketNoteStyle: React.CSSProperties = {
   color: '#8a909a',
 };
 
-// Matches ||censored|| or [bracket note]
-const DESCRIPTION_PATTERN = /\|\|(.+?)\|\||(\[[^\]]*\])/g;
+// Renders [[bracket]] content as React elements.
+// ((revealed)) tokens display their text; spaces become wide non-breaking gaps;
+// all other chars become underscores. Uses \u00A0 to prevent HTML space collapsing.
+const renderBracketContent = (text: string): ReactElement[] => {
+  type Token =
+    | { kind: 'reveal'; text: string }
+    | { kind: 'space' }
+    | { kind: 'under' };
+  const TOKEN_RE = /\(\((.+?)\)\)|( )|([\s\S])/g;
+  const tokens: Token[] = [];
+  let m: RegExpExecArray | null;
+  TOKEN_RE.lastIndex = 0;
+  while ((m = TOKEN_RE.exec(text)) !== null) {
+    if (m[1] !== undefined) tokens.push({ kind: 'reveal', text: m[1] });
+    else if (m[2] !== undefined) tokens.push({ kind: 'space' });
+    else tokens.push({ kind: 'under' });
+  }
+  return tokens.map((tok, i) => {
+    const isLast = i === tokens.length - 1;
+    if (tok.kind === 'space') {
+      return <span key={i}>{`\u00A0\u00A0\u00A0`}</span>;
+    } else if (tok.kind === 'reveal') {
+      return <span key={i}>{isLast ? tok.text : tok.text + '\u00A0'}</span>;
+    } else {
+      return <span key={i}>{isLast ? '_' : '_\u00A0'}</span>;
+    }
+  });
+};
+
+// Matches [[redacted]], ||censored||, or [bracket note] — in that order so [[ isn't eaten by [
+const DESCRIPTION_PATTERN = /\[\[(.+?)\]\]|\|\|(.+?)\|\||(\[[^\]]*\])/g;
 
 export const renderCensoredDescription = (
   description: string,
@@ -168,9 +197,24 @@ export const renderCensoredDescription = (
     }
 
     if (match[1] !== undefined) {
+      // [[text]] - underscore placeholder, no line break, padded
+      parts.push(
+        <span
+          key={`${keyPrefix}redacted-${match.index}`}
+          style={{
+            whiteSpace: 'nowrap',
+            paddingLeft: '0.35em',
+            paddingRight: '0.35em',
+          }}
+          className='select-none'
+        >
+          {renderBracketContent(match[1])}
+        </span>,
+      );
+    } else if (match[2] !== undefined) {
       // ||text|| - censored with blur
-      const censoredText = censorText(match[1]);
-      const len = match[1].length;
+      const censoredText = censorText(match[2]);
+      const len = match[2].length;
       const blurAmount = len === 1 ? '4px' : len === 2 ? '5px' : '7px';
       parts.push(
         <span
@@ -227,8 +271,12 @@ export const renderUncensoredDescription = (
     }
 
     if (match[1] !== undefined) {
+      // [[text]] - reveal actual text when uncensored (strip ((revealed)) wrappers)
+      const revealedText = match[1].replace(/\(\((.+?)\)\)/g, '$1');
+      parts.push(<span key={`redacted-${match.index}`}>{revealedText}</span>);
+    } else if (match[2] !== undefined) {
       // ||text|| - reveal uncensored
-      parts.push(<span key={`uncensored-${match.index}`}>{match[1]}</span>);
+      parts.push(<span key={`uncensored-${match.index}`}>{match[2]}</span>);
     } else {
       // [text] - bracket note, gray italic
       parts.push(

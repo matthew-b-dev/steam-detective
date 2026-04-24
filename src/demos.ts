@@ -530,9 +530,12 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile2: 'Company of Heroes 3',
     caseFile3: 'Judgment',
   },
-  // Gears 5
-  // Hard: AudioSurf
   '2026-04-25': {
+    caseFile1: 'Gears 5',
+    caseFile2: 'Tabletop Simulator',
+    caseFile3: 'Risk of Rain',
+  },
+  '2026-04-26': {
     caseFile1: "Don't Starve",
     caseFile2: 'Fields of Mistria',
     caseFile3: 'Core Keeper',
@@ -559,6 +562,7 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
 // Med: Tropico 4 (Last Tropico 3/15)
 // Med: Clustertruck
 
+// Hard: AudioSurf
 // Hard: Cassette Beasts
 // Hard: Shadow Tactics: Blades of the Shogun
 // Hard: Albion Online

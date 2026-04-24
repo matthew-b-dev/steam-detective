@@ -63,7 +63,11 @@ const renderLineWithEditedMarker = (
 };
 
 const getUncensoredReview = (text: string): ReactElement[] => {
-  const uncensored = text.replace(/\|\|(.+?)\|\|/g, '$1');
+  const uncensored = text
+    .replace(/\[\[(.+?)\]\]/g, (_, inner) =>
+      inner.replace(/\(\((.+?)\)\)/g, '$1'),
+    )
+    .replace(/\|\|(.+?)\|\|/g, '$1');
   return uncensored
     .split('\n')
     .flatMap((line, idx, arr) =>
