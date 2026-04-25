@@ -5336,7 +5336,7 @@ export const steamGameDetails: SteamGameMap = {
     reviewClues: [
       {
         review:
-          'I came back to this after being disappointed with the 2022 reboot. 9 years! This is where the story and gameplay really diverged from the originals. They kept trying with the series, but ultimately it\'s pretty clear they meant to "ground" concept in 2022. I think they realized that was a bad call and 2022 will be the last we see.\n\n... (edited for length)',
+          'I came back to this after being disappointed with the 2022 reboot. 9 years! This is where the story and gameplay really diverged from the originals. They kept trying with the series, but ultimately it\'s pretty clear they meant to "ground" the concept in 2022. That clearly didn\'t work out, and I think that will be the last of the series.\n\n... (edited for length)',
         votedUp: true,
         votesUp: 5,
         weightedScore: '0.596193432807922363',
@@ -15758,7 +15758,7 @@ export const steamGameDetails: SteamGameMap = {
     reviewClues: [
       {
         review:
-          'If anyone remembers games like ||Scorched|| Earth from the old days, [[((S))hellShock ((L))ive]] scratches that itc sort of anyway.',
+          'If anyone remembers games like ||Scorched|| Earth from the old days, [[((S))hellShock Live]] scratches that itc sort of anyway.',
         votedUp: true,
         votesUp: 116,
         weightedScore: undefined,
