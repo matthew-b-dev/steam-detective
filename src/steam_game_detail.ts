@@ -5289,17 +5289,17 @@ export const steamGameDetails: SteamGameMap = {
     clueOrder: ['tags', 'details', 'desc'],
   },
   '206420': {
-    name: 'Saints Row IV: Re-Elected',
+    name: 'Saints Row IV',
     appId: 206420,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/206420/ss_10f32f4ca88b479648cc08a4b7af269f3cb905ca.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/206420/ss_3750989bb2f99fb0ab07da509441bf47f1c88c7b.600x338.jpg',
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/206420/ss_92e54253c19f9536c3932caa7b8b581cea74e665.600x338.jpg',
     shortDescription:
       "Experience the insane antics of ||Saints Row IV||. The ||Saints|| have gone from the Penthouse to the White House - but Earth has been invaded and it's up to you to save it with an arsenal of superpowers and strange weapons, in the wildest open world game ever.",
     releaseDate: 'Aug 19, 2013',
-    developer: 'Deep Silver Volition',
-    publisher: 'Deep Silver',
+    developer: '||Volition||',
+    publisher: '||Deep Silver||',
     tags: ['Action', 'Adventure'],
     features: [],
     allReviewSummary: {
@@ -5313,7 +5313,7 @@ export const steamGameDetails: SteamGameMap = {
       'Co-op',
       'Third-Person Shooter',
       'Character Customization',
-      'Superhero',
+      'Superpowers',
       'Sandbox',
       'Funny',
       'Third Person',
@@ -5328,9 +5328,26 @@ export const steamGameDetails: SteamGameMap = {
       'Dark Humor',
       'Female Protagonist',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    overrideCensoredTitle: 'S||aint||s R||ow|| ||IV||',
+    clueOrder: ['review', 'details', 'tags', 'desc'],
     debugProcessed: true,
-    debugNotes: 'delete',
+    debugRefined: true,
+    difficulty: 'Easy',
+    reviewClues: [
+      {
+        review:
+          'I came back to this after being disappointed with the 2022 reboot. 9 years! This is where the story and gameplay really diverged from the originals. They kept trying with the series, but ultimately it\'s pretty clear they meant to "ground" concept in 2022. I think they realized that was a bad call and 2022 will be the last we see.\n\n... (edited for length)',
+        votedUp: true,
+        votesUp: 5,
+        weightedScore: '0.596193432807922363',
+        authorPlaytimeHours: 12,
+        timestamp: 1767830537,
+      },
+    ],
+    moreFromThisDeveloper: [
+      { id: 55110, name: 'Red Faction: Armageddon' },
+      { id: 273620, name: 'Freespace 2' },
+    ],
   },
   '206440': {
     name: 'To the Moon',
@@ -10212,7 +10229,6 @@ export const steamGameDetails: SteamGameMap = {
   },
   '248820': {
     name: 'Risk of Rain',
-    excludeOptions: ['Risk of Rain Returns'],
     appId: 248820,
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/248820/ss_9b26bb93397ea5bbb7906950c4ffa0d6e9203f7d.600x338.jpg',
@@ -10248,6 +10264,7 @@ export const steamGameDetails: SteamGameMap = {
     ],
     blurredUserTags: ['Action Roguelike', 'Roguelike'],
     clueOrder: ['review', 'details+tags', 'desc'],
+    excludeOptions: ['Risk of Rain Returns'],
     debugProcessed: true,
     debugRefined: true,
     difficulty: 'Medium',
@@ -13010,10 +13027,7 @@ export const steamGameDetails: SteamGameMap = {
       },
     ],
     moreFromThisDeveloper: [
-      {
-        id: 610693,
-        name: 'Battle For Greyport (DLC)',
-      },
+      { id: 610693, name: 'Battle For Greyport (DLC)' },
       { id: 433520, name: 'Darkest Night (DLC)' },
       { id: 610705, name: 'Dawn of the Zeds (DLC)' },
       { id: 1621112, name: 'Bristol 1350 (DLC)' },
@@ -15701,13 +15715,15 @@ export const steamGameDetails: SteamGameMap = {
   },
   '326460': {
     name: 'ShellShock Live',
+    suggestedBy: 'EsJay',
     appId: 326460,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/326460/ss_007acc13227e60aa81f8c7329899051686b8ffc6.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/326460/ss_f4a2ff2db71fcee6dabcfb2a94aa4f4588e5c65f.600x338.jpg',
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/326460/ss_672054f323627bd19e2b7b44e8501adbf6a6eb55.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/326460/ss_7f1d6724ba36ffb704f572ec53496f7a7213ceb3.600x338.jpg',
     shortDescription:
-      'Demolish your friends with hundreds of upgradable weapons shot from your customizable tank in this action-packed online multiplayer tanks game. Earn XP to level up and unlock new tanks, weapons, and gear. Fight against or alongside your friends for strategic team or free-for-all matches.',
+      'Demolish your friends with hundreds of upgradable weapons ||shot|| from your customizable ||tank|| in [[ShellShock Live]], an action-packed 2D online multiplayer ||tank||s game. Earn XP to level up and unlock new ||tank||s, weapons, and gear. Fight against or alongside your friends for strategic team or free-for-all matches.',
+    earlyAccessDate: 'Mar 11, 2015',
     releaseDate: 'May 22, 2020',
     developer: 'kChamp Games',
     publisher: 'kChamp Games',
@@ -15722,19 +15738,43 @@ export const steamGameDetails: SteamGameMap = {
       'Multiplayer',
       'Strategy',
       '2D',
+      'Sideview',
+      'Colorful',
       'Action',
-      'Turn-Based',
-      'Shooter',
+      'Turn-based',
       'Casual',
       'Online Co-Op',
-      'Early Access',
       'Massively Multiplayer',
       'Indie',
       'Colorful',
       'Turn-Based Strategy',
       'Co-op',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    overrideCensoredTitle: 'S||hell||S||hoc||k L||ive||',
+    clueOrder: ['desc', 'review', 'details+tags'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Hard',
+    reviewClues: [
+      {
+        review:
+          'If anyone remembers games like ||Scorched|| Earth from the old days, [[((S))hellShock ((L))ive]] scratches that itc sort of anyway.',
+        votedUp: true,
+        votesUp: 116,
+        weightedScore: undefined,
+        authorPlaytimeHours: 5.5,
+        timestamp: 1590206400,
+      },
+      {
+        review:
+          'Think old school Pc/Mac shareware "Pocket&nbsp;&nbsp;&nbsp;||Tank||s" with better options. Love it!',
+        votedUp: true,
+        votesUp: 77,
+        weightedScore: undefined,
+        authorPlaytimeHours: 2.6,
+        timestamp: 1590206400,
+      },
+    ],
   },
   '327030': {
     name: 'Worms W.M.D',
@@ -23848,11 +23888,15 @@ export const steamGameDetails: SteamGameMap = {
     name: 'Foxhole',
     appId: 505460,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/505460/ss_1c1d60f0dd0c75837caca2aff1babf66401e7984.600x338.jpg',
-    secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/505460/ss_0f46a6eb53224036d4e67c896ee87f5e364f34a4.600x338.jpg',
+    secondaryScreenshot:
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/505460/ss_1c1d60f0dd0c75837caca2aff1babf66401e7984.600x338.jpg',
+    webms: [
+      'https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/505460/extras/1d5b73f318011635dc293ba60ccdf44a.webm?t=1775152848',
+    ],
     shortDescription:
-      '||Foxhole|| is a massively multiplayer game where thousands of players shape the outcome of a persistent online war. Every individual soldier is a player that contributes to the war effort through logistics, base building, reconnaissance, combat, and more.',
+      '[[Fox((h))ole]] is a massively multiplayer WWII game where thousands of players shape the outcome of a persistent online war. Every individual soldier is a player that contributes to the war effort through logistics, base building, reconnaissance, combat, and more.',
+    earlyAccessDate: 'Jul 27, 2017',
     releaseDate: 'Sep 28, 2022',
     developer: 'Siege Camp',
     publisher: 'Siege Camp',
@@ -23879,7 +23923,24 @@ export const steamGameDetails: SteamGameMap = {
       'Top-Down Shooter',
       'Team-Based',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: ['Wargame', 'Military', 'War', 'World War II'],
+    overrideCensoredTitle: 'F||oxho||le',
+    clueOrder: ['details+tags', 'review', 'desc'],
+    searchTerms: ['fox hole'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Medium',
+    reviewClues: [
+      {
+        review:
+          '>Spawn\n>Turn on Voice Chat\n>Ask players what to do cause im new \n>Chill dude from Chile spends an hour teching me the basics of frontline and backline logistics and digging ||trenches||\n>gives me 3 commends\n10/10 playerbase',
+        votedUp: true,
+        votesUp: 366,
+        weightedScore: undefined,
+        authorPlaytimeHours: 6.2,
+        timestamp: 1723003200,
+      },
+    ],
   },
   '508440': {
     name: 'Totally Accurate Battle Simulator',
@@ -37840,10 +37901,10 @@ export const steamGameDetails: SteamGameMap = {
       'Open World',
       'Third Person',
     ],
+    blurredUserTags: ['Third-Person Shooter'],
     overrideCensoredTitle: 'G||ears|| 5',
     clueOrder: ['review', 'details+tags', 'desc'],
     searchTerms: ['gears of war 5'],
-    blurredUserTags: ['Third-Person Shooter'],
     debugProcessed: true,
     debugRefined: true,
     difficulty: 'Easy',

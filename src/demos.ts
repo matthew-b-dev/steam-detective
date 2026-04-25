@@ -536,9 +536,14 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile3: 'Risk of Rain',
   },
   '2026-04-26': {
+    caseFile1: 'Saints Row IV',
+    caseFile2: 'ShellShock Live',
+    caseFile3: 'Foxhole',
+  },
+  '2026-04-27': {
     caseFile1: "Don't Starve",
     caseFile2: 'Fields of Mistria',
-    caseFile3: 'Core Keeper',
+    caseFile3: 'Tales of Arise',
   },
 };
 

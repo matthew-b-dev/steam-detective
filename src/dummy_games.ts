@@ -517,6 +517,7 @@ export const dummyGames: string[] = [
   '11-11: Memories Retold',
   'Gravel',
   'The Inpatient',
+  'Saints Row: Gat out of Hell',
   'WarioWare Gold',
   'SNK 40th Anniversary Collection',
   'Little Dragons Cafe',
