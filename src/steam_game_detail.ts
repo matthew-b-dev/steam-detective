@@ -56815,6 +56815,7 @@ export const CLOSE_GUESS_SERIES: string[] = [
   'far cry',
   'final fantasy',
   'forza',
+  'gears',
   'ghost of',
   'god of war',
   'half-life',
