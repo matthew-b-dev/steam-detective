@@ -12986,7 +12986,7 @@ export const steamGameDetails: SteamGameMap = {
       'Physics',
       'Moddable',
     ],
-    overrideCensoredTitle: 'Ta||ble||t||op|| S||imulato||r',
+    overrideCensoredTitle: 'Ta||bletop|| S||imulato||r',
     clueOrder: ['details', 'tags', 'review', 'desc'],
     reviewClues: [
       {
@@ -13000,7 +13000,7 @@ export const steamGameDetails: SteamGameMap = {
       },
       {
         review:
-          'I can finally play classic Warhammer 40k *AND* afford car payments. Games Workshop? I think you mean Steam Workshop.',
+          'I can finally play classic ||Warhammer 40k|| *AND* afford car payments. Games Workshop? I think you mean Steam Workshop.',
         votedUp: true,
         votesUp: 1010,
         votedFunny: 362,
