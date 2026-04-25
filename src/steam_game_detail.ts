@@ -37816,7 +37816,7 @@ export const steamGameDetails: SteamGameMap = {
       "From one of gaming's most acclaimed sagas, [[Gears of ((W))ar]] is bigger than ever. With all-out war descending, Kait Diaz breaks away to uncover her connection to the enemy and discovers the true danger to Sera – herself.",
     releaseDate: 'Sep 9, 2019',
     developer: 'The Coalition',
-    publisher: 'Xbox Game Studios',
+    publisher: '||Xbox Game Studios||',
     tags: [],
     features: [],
     allReviewSummary: {
