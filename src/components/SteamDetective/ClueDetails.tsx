@@ -135,12 +135,12 @@ export const ClueDetails: React.FC<ClueDetailsProps> = ({
           : renderCensoredText(originalReleaseDate),
       )
     : null;
-  const displayDeveloper = isComplete
-    ? getUncensoredText(developer)
-    : renderCensoredText(developer);
-  const displayPublisher = isComplete
-    ? getUncensoredText(publisher)
-    : renderCensoredText(publisher);
+  const displayDeveloper = withStyledParens(
+    isComplete ? getUncensoredText(developer) : renderCensoredText(developer),
+  );
+  const displayPublisher = withStyledParens(
+    isComplete ? getUncensoredText(publisher) : renderCensoredText(publisher),
+  );
 
   return (
     <motion.div

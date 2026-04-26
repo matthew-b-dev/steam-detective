@@ -541,6 +541,11 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile3: 'Foxhole',
   },
   '2026-04-27': {
+    caseFile1: "Death's Door",
+    caseFile2: 'Gotham Knights',
+    caseFile3: 'AudioSurf',
+  },
+  '2026-04-28': {
     caseFile1: "Don't Starve",
     caseFile2: 'Fields of Mistria',
     caseFile3: 'Tales of Arise',
@@ -561,8 +566,6 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
 
 // Med: Another Crab's Treasure
 // Med: Luck be a Landlord
-// Med: Gotham Knights
-// Med: Death's Door
 // Med: WEBFISHING (60k rev)? needs work
 // Med: Tropico 4 (Last Tropico 3/15)
 // Med: Clustertruck

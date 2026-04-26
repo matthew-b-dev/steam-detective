@@ -1141,16 +1141,17 @@ export const steamGameDetails: SteamGameMap = {
   },
   '12900': {
     name: 'AudioSurf',
+    searchTerms: ['audio surf'],
     appId: 12900,
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/12900/0000007989.600x338.jpg',
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/12900/0000003582.600x338.jpg',
     shortDescription:
-      'Ride your music. ||Audiosurf|| is a music-adapting puzzle racer where you use your own music to create your own experience. The shape, the speed, and the mood of each ride is determined by the song you choose.',
+      'Ride your music. [[((A))udio((S))urf]] is a music-adapting puzzle racer where you use your own music to create your own experience. The shape, the speed, and the mood of each ride is determined by the song you choose. You earn points for clustering together blocks of the same color on the highway, and compete with others on the internet for the high score on your favorite songs.',
     releaseDate: 'Feb 15, 2008',
     developer: 'Dylan Fitterer',
-    publisher: '',
+    publisher: '(None)',
     tags: [],
     features: [],
     allReviewSummary: {
@@ -1158,11 +1159,11 @@ export const steamGameDetails: SteamGameMap = {
       rating: 'Overwhelmingly Positive',
     },
     userTags: [
-      'Music',
+      'Music-Based Procedural Generation',
       'Rhythm',
       'Indie',
       'Casual',
-      'Music-Based Procedural Generation',
+      'Music',
       'Arcade',
       'Colorful',
       'Singleplayer',
@@ -1174,7 +1175,20 @@ export const steamGameDetails: SteamGameMap = {
       'Replay Value',
       'Puzzle',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    screenshotLetterbox: true,
+    overrideCensoredTitle: 'A||udi||oS||ur||f',
+    clueOrder: ['details+tags', 'review', 'desc'],
+    reviewClues: [
+      {
+        review:
+          "On my 16th birthday in 2008 my friend showed me this game which had just come out. He had imported Spitfire by The Prodigy and was ||riding|| along to the music. I was completely blown away how well everything synced up automatically. The trippy visuals, darting between lanes, collecting notes, it all happened kind of magically. This is the first game I ever bought on steam and it's still one of my favorite rhythm games!",
+        votedUp: true,
+        votesUp: 3,
+        weightedScore: undefined,
+        authorPlaytimeHours: 13,
+        timestamp: 1771382111,
+      },
+    ],
   },
   '15100': {
     name: "Assassin's Creed",
@@ -15715,7 +15729,6 @@ export const steamGameDetails: SteamGameMap = {
   },
   '326460': {
     name: 'ShellShock Live',
-    suggestedBy: 'EsJay',
     appId: 326460,
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/326460/ss_f4a2ff2db71fcee6dabcfb2a94aa4f4588e5c65f.600x338.jpg',
@@ -15755,6 +15768,7 @@ export const steamGameDetails: SteamGameMap = {
     debugProcessed: true,
     debugRefined: true,
     difficulty: 'Hard',
+    suggestedBy: 'EsJay',
     reviewClues: [
       {
         review:
@@ -34254,15 +34268,16 @@ export const steamGameDetails: SteamGameMap = {
   },
   '894020': {
     name: "Death's Door",
+    searchTerms: ['deaths door'],
     appId: 894020,
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/894020/ss_dd9b5a2e40d3d512d1c978a5dfda5999c458a517.600x338.jpg',
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/894020/ss_46cbadf5477da2909c9ef5c4539a977314da03e0.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/894020/ss_adca43bf058172c358202d6cba1d8671fcd155cf.600x338.jpg',
     shortDescription:
       "Reaping souls of the dead and punching a clock might get monotonous but it's honest work for a Crow. The job gets lively when your assigned soul is stolen and you must track down a desperate thief to a realm untouched by death - where creatures grow far past their expiry.",
     releaseDate: 'Jul 20, 2021',
-    developer: 'Acid Nerve',
+    developer: '||Acid Nerve||',
     publisher: 'Devolver Digital',
     tags: [],
     features: [],
@@ -34271,12 +34286,12 @@ export const steamGameDetails: SteamGameMap = {
       rating: 'Very Positive',
     },
     userTags: [
-      'Souls-like',
       'Cute',
+      'Isometric',
+      '3D',
       'Cartoony',
-      '3D Platformer',
+      'Difficult',
       'Dark Fantasy',
-      'Action',
       'Adventure',
       'Action-Adventure',
       'Hack and Slash',
@@ -34287,25 +34302,31 @@ export const steamGameDetails: SteamGameMap = {
       'Dungeon Crawler',
       'Metroidvania',
     ],
-    clueOrder: ['tags', 'details', 'desc', 'review'],
+    blurredUserTags: [
+      'Cute',
+      'RPG',
+      'Cartoony',
+      'Action-Adventure',
+      'Hack and Slash',
+      'Difficult',
+    ],
+    clueOrder: ['details+tags', 'review', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
     reviewClues: [
       {
-        review: 'a fantastic blend of Bastion and The Legend of Zelda',
+        review:
+          "Damn, deeply devoted developer designed ||Death's||&nbsp;&nbsp;&nbsp;&nbsp;||Door||.\nDiscover dungeons, divine drama, delightfully depicted death\nDark daw's daunting duels demand deft digits.\nDynamite deal, definitely does deserve desire!",
         votedUp: true,
-        votesUp: 15,
+        votesUp: 210,
+        votedFunny: 126,
         weightedScore: undefined,
-        authorPlaytimeHours: 38.3,
-        timestamp: 1627776000,
-      },
-      {
-        review: "you're a bird with a sword",
-        votedUp: true,
-        votesUp: 3,
-        weightedScore: undefined,
-        authorPlaytimeHours: 27,
-        timestamp: 1770739849,
+        authorPlaytimeHours: 19.4,
+        timestamp: 1633147200,
       },
     ],
+    moreFromThisDeveloper: [{ id: 297130, name: 'Titan Souls' }],
   },
   '895400': {
     name: 'Deadside',
@@ -45818,13 +45839,14 @@ export const steamGameDetails: SteamGameMap = {
   },
   '1496790': {
     name: 'Gotham Knights',
+    searchTerms: ['gotham nights'],
     appId: 1496790,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1496790/ss_e1f659f60ca72876efc5fc65d51a85adf1a94d82.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1496790/ss_24d1f8d8d6feac32aa38079a3ce94dac4b022bf0.600x338.jpg',
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1496790/ss_6a31dc8e453dcedb0dd9a32590331c32638c0212.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1496790/ss_1ac423aefa860e5ed1d560bd29cab4a57097799b.600x338.jpg',
     shortDescription:
-      'Batman is dead. It is now up to the Batman Family - Batgirl, Nightwing, Red Hood, and Robin - to protect ||Gotham|| City.',
+      '||Batman|| is dead. A new expansive, criminal underworld has swept the streets of ||Gotham|| City. It is now up to the [[Gotham ((K))nights]] - ||Bat||girl, ||Nightwing||, Red ||Hood||, and ||Robin|| - to protect ||Gotham||, bring hope to its citizens, discipline to its cops, and fear to its criminals.',
     releaseDate: 'Oct 21, 2022',
     developer: 'Warner Bros. Games Montréal',
     publisher: 'Warner Bros. Games',
@@ -45851,7 +45873,23 @@ export const steamGameDetails: SteamGameMap = {
       'Action-Adventure',
       'Comic Book',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: ['Superhero'],
+    overrideCensoredTitle: 'G||oth||a||m|| Kn||ight||s',
+    clueOrder: ['review', 'details+tags', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Medium',
+    reviewClues: [
+      {
+        review:
+          'This game showed up on my radar after I watched the [[Gotham Knights]] TV series when it aired on The CW / HBO earlier this year. The only real narrative similarity is that ||Batman|| is dead and the game is based in ||Gotham|| City.\n\nAs for the game:\n- Has nothing to do with the A||rkham|| games series.\n- It feels/plays like a ♥♥♥♥ live service ||batman||-themed game.\n... (edited for length)',
+        votedUp: false,
+        votesUp: 3,
+        weightedScore: undefined,
+        authorPlaytimeHours: 17,
+        timestamp: 1700006400,
+      },
+    ],
   },
   '1501750': {
     name: 'Lords of the Fallen',
