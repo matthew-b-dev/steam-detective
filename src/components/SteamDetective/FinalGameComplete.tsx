@@ -270,13 +270,14 @@ const FinalGameComplete: React.FC<FinalGameCompleteProps> = ({
             See you then!
           </div>
 
-          <GameIdeaCard />
-
           {/* Feedback Buttons */}
           <SteamDetectiveFeedbackButtons
             isOpen={show}
+            puzzleDate={puzzleDate}
             hasZoomedClue={hasZoomedClue}
           />
+
+          <GameIdeaCard />
         </div>
       </div>
     </motion.div>

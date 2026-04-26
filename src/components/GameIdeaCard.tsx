@@ -366,7 +366,7 @@ const GameIdeaCard: React.FC = () => {
 
   return (
     <>
-      <div className='text-sm text-gray-400 text-center'>
+      <div className='text-sm text-gray-400 text-center border-t border-gray-700 pt-5'>
         Have an idea for a case file? You can{' '}
         <button
           onClick={() => {

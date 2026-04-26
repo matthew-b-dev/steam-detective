@@ -1,12 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import toast from 'react-hot-toast';
 import { motion, AnimatePresence } from 'framer-motion';
-import { sendFeedback } from '../../lib/supabaseClient';
+import { sendFeedback, fetchFeedbackCounts } from '../../lib/supabaseClient';
+import { getFeedbackVote, saveFeedbackVote } from '../../utils';
 
 interface SteamDetectiveFeedbackButtonsProps {
   isOpen: boolean;
+  puzzleDate: string;
   hasZoomedClue?: boolean;
 }
+
+type RatedFeedbackType = 'perfect' | 'too_easy' | 'too_hard';
 
 // Sanitize user input to prevent malicious content
 const sanitizeInput = (input: string): string => {
@@ -22,15 +26,44 @@ const sanitizeInput = (input: string): string => {
 
 const SteamDetectiveFeedbackButtons: React.FC<
   SteamDetectiveFeedbackButtonsProps
-> = ({ isOpen /* temp disabled hasZoomedClue */ }) => {
+> = ({ isOpen, puzzleDate /* temp disabled hasZoomedClue */ }) => {
   const [feedback, setFeedback] = useState<
     'steam_more' | 'steam_less' | 'perfect' | 'too_easy' | 'too_hard' | null
   >(null);
   const [showCustomInput, setShowCustomInput] = useState(false);
   const [customFeedback, setCustomFeedback] = useState('');
   const [isSending, setIsSending] = useState(false);
+  const [displayVote, setDisplayVote] = useState<RatedFeedbackType | null>(
+    null,
+  );
+  const [counts, setCounts] = useState<{
+    perfect: number;
+    too_easy: number;
+    too_hard: number;
+  } | null>(null);
+  // Tracks whether a real API vote has been sent this session (or was previously stored)
+  const hasRealVoteSent = useRef(false);
 
-  // Reset feedback when modal closes
+  // Load prior vote from localStorage and fetch counts on mount
+  useEffect(() => {
+    const stored = getFeedbackVote(puzzleDate);
+    if (stored) {
+      hasRealVoteSent.current = true;
+      setDisplayVote(stored);
+    }
+    fetchFeedbackCounts(puzzleDate).then((fetched) => {
+      if (!fetched) return; // leave counts as null (hides numbers) on fetch failure
+      // If the stored vote has 0 in the DB (player switched votes last session),
+      // show at least 1 to reflect their fake vote.
+      if (stored && fetched[stored] === 0) {
+        setCounts({ ...fetched, [stored]: 1 });
+      } else {
+        setCounts(fetched);
+      }
+    });
+  }, [puzzleDate]);
+
+  // Reset custom input state when modal closes
   useEffect(() => {
     if (!isOpen) {
       setTimeout(() => {
@@ -41,12 +74,28 @@ const SteamDetectiveFeedbackButtons: React.FC<
     }
   }, [isOpen]);
 
-  const handleFeedback = async (
-    type: 'steam_more' | 'steam_less' | 'perfect' | 'too_easy' | 'too_hard',
-  ) => {
-    setFeedback(type);
-    await sendFeedback(type);
-    toast.success('Feedback sent.', { duration: 2000 });
+  const handleRatedFeedback = (type: RatedFeedbackType) => {
+    if (displayVote === type) {
+      // Clicking the active button: visually "unvote" — no API call
+      setDisplayVote(null);
+      setCounts((prev) => (prev ? { ...prev, [type]: prev[type] - 1 } : prev));
+    } else {
+      const previous = displayVote;
+      setDisplayVote(type);
+      setCounts((prev) => {
+        if (!prev) return prev;
+        const updated = { ...prev, [type]: prev[type] + 1 };
+        if (previous) updated[previous] = updated[previous] - 1;
+        return updated;
+      });
+      // Always persist the current display vote so refresh shows the right button
+      saveFeedbackVote(puzzleDate, type);
+      // Only ever fire one real API call — the very first vote
+      if (!hasRealVoteSent.current) {
+        hasRealVoteSent.current = true;
+        sendFeedback(type);
+      }
+    }
   };
 
   /* temp disabled
@@ -72,7 +121,7 @@ const SteamDetectiveFeedbackButtons: React.FC<
     setIsSending(true);
     try {
       await sendFeedback('custom', `\`[Steam]\` ${sanitized}`);
-      setFeedback('perfect'); // Use existing feedback state to show success message
+      setFeedback('perfect'); // triggers the thanks message
       toast.success('Feedback sent.', { duration: 2000 });
     } catch {
       toast.error('Failed to send feedback.', { duration: 2000 });
@@ -80,6 +129,16 @@ const SteamDetectiveFeedbackButtons: React.FC<
       setIsSending(false);
     }
   };
+
+  const ratedButtons: {
+    type: RatedFeedbackType;
+    label: string;
+    emoji: string;
+  }[] = [
+    { type: 'perfect', label: 'Great', emoji: '⭐️' },
+    { type: 'too_easy', label: 'Too easy', emoji: '😴' },
+    { type: 'too_hard', label: 'Too hard', emoji: '😵‍💫' },
+  ];
 
   return (
     <div className='border-t border-gray-700 pt-3'>
@@ -113,29 +172,33 @@ const SteamDetectiveFeedbackButtons: React.FC<
               </div>
             )*/}
             <div className='flex flex-wrap gap-1 sm:gap-2 justify-center'>
+              {ratedButtons.map(({ type, label, emoji }) => {
+                const isVoted = displayVote === type;
+                const count = counts?.[type];
+                return (
+                  <button
+                    key={type}
+                    className={`px-1 sm:px-3 py-1.5 rounded text-xs font-semibold transition-colors min-h-[32px] text-white ${
+                      isVoted
+                        ? 'bg-blue-600 hover:bg-blue-500'
+                        : 'bg-gray-700 hover:bg-gray-600'
+                    }`}
+                    onClick={() => handleRatedFeedback(type)}
+                  >
+                    {emoji} {label}
+                    {count != null && (
+                      <span className='ml-1.5 font-mono font-normal bg-black/30 px-1 py-0.5 rounded text-gray-300'>
+                        {count}
+                      </span>
+                    )}
+                  </button>
+                );
+              })}
               <button
                 className='px-1 sm:px-3 py-1.5 rounded text-xs font-semibold transition-colors bg-gray-700 hover:bg-gray-600 text-white'
                 onClick={handleCustomFeedback}
               >
                 💬 Other
-              </button>
-              <button
-                className='px-1 sm:px-3 py-1.5 rounded text-xs font-semibold transition-colors bg-gray-700 hover:bg-gray-600 text-white'
-                onClick={() => handleFeedback('perfect')}
-              >
-                ⭐️ Great
-              </button>
-              <button
-                className='px-1 sm:px-3 py-1.5 rounded text-xs font-semibold transition-colors bg-gray-700 hover:bg-gray-600 text-white'
-                onClick={() => handleFeedback('too_easy')}
-              >
-                😴 Too easy
-              </button>
-              <button
-                className='px-1 sm:px-3 py-1.5 rounded text-xs font-semibold transition-colors bg-gray-700 hover:bg-gray-600 text-white'
-                onClick={() => handleFeedback('too_hard')}
-              >
-                😵‍💫 Too hard
               </button>
             </div>
           </motion.div>

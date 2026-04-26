@@ -1141,7 +1141,6 @@ export const steamGameDetails: SteamGameMap = {
   },
   '12900': {
     name: 'AudioSurf',
-    searchTerms: ['audio surf'],
     appId: 12900,
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/12900/0000007989.600x338.jpg',
@@ -1178,6 +1177,7 @@ export const steamGameDetails: SteamGameMap = {
     screenshotLetterbox: true,
     overrideCensoredTitle: 'A||udi||oS||ur||f',
     clueOrder: ['details+tags', 'review', 'desc'],
+    searchTerms: ['audio surf'],
     reviewClues: [
       {
         review:
@@ -6675,7 +6675,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/219740/ss_26b6414b4ae07cfc2e2d15bd6ff315a4678f00f3.600x338.jpg',
     shortDescription:
-      "||Don't Starve|| is an uncompromising wilderness survival game full of science and magic. Enter a strange and unexplored world full of strange creatures, dangers, and surprises. Gather resources to craft items and structures that match your survival style.",
+      "[[Don(('))t Starve]] is an uncompromising wilderness survival game full of science and magic. Enter a strange and unexplored world full of strange creatures, dangers, and surprises. Gather resources to craft items and structures that match your survival style.",
     releaseDate: 'Apr 23, 2013',
     developer: 'Klei Entertainment',
     publisher: 'Klei Entertainment',
@@ -6695,7 +6695,6 @@ export const steamGameDetails: SteamGameMap = {
       'Singleplayer',
       'Perma Death',
       'Top-Down',
-      'Open World',
       'Exploration',
       'Rogue-like',
       'Replay Value',
@@ -6705,11 +6704,27 @@ export const steamGameDetails: SteamGameMap = {
       'Survival Horror',
       'Horror',
     ],
-    clueOrder: ['tags', 'desc', 'details'],
+    clueOrder: ['details+tags', 'review', 'desc'],
     searchTerms: ['dont starve'],
     debugProcessed: true,
     debugRefined: true,
     difficulty: 'Medium',
+    reviewClues: [
+      {
+        review:
+          'The Tim Burton style fits this game perfectly, with a bit of survival, and fighting.\n\n>You will fight Giants, Spiders, Metal Chess Things\n>You will find Berries, Carrots, Bunnies\n>You will have to cook all of them if you want to survive.\n>You will have to build a shelter if you want to survive.\n>You will ||starve||.\n>But most importantly... YOU WILL DIE. A LOT.',
+        votedUp: true,
+        votesUp: 3013,
+        votedFunny: 2019,
+        weightedScore: undefined,
+        authorPlaytimeHours: 251,
+        timestamp: 1414555200,
+      },
+    ],
+    moreFromThisDeveloper: [
+      { id: 601840, name: 'Griftlands' },
+      { id: 6120, name: 'Shank' },
+    ],
   },
   '219890': {
     name: 'Antichamber',
@@ -26295,7 +26310,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/584400/ss_93ee106db863c16e00989ad9d51bcbea4af91ab0.600x338.jpg',
     shortDescription:
-      '||Sonic Mania|| is an all-new adventure with ||Sonic||, Tails, and Knuckles full of unique bosses, rolling 2D landscapes, and fun classic gameplay.',
+      '[[((S))onic Mania]] is an all-new adventure with ||Sonic||, ||Tails||, and ||Knuckles|| full of unique bosses, rolling 2D landscapes, and fun classic gameplay. It features a blend of reimagined classic levels and entirely new stages, including remixed zones from ||Sonic|| 1, 2, and 3.',
     releaseDate: 'Aug 29, 2017',
     developer: 'Christian Whitehead',
     publisher: 'SEGA',
@@ -26322,7 +26337,32 @@ export const steamGameDetails: SteamGameMap = {
       'Local Co-Op',
       'Casual',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    clueOrder: ['review', 'details+tags', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Medium',
+    reviewClues: [
+      {
+        review:
+          'Proof that fans *CAN* make better  video games than ||Sonic|| Team can',
+        votedUp: true,
+        votesUp: 193,
+        votedFunny: 93,
+        weightedScore: undefined,
+        authorPlaytimeHours: 68.8,
+        timestamp: 1507248000,
+      },
+      {
+        review:
+          '||Sega|| should just let Christian Whitehead run the ||Sonic|| Team at this point',
+        votedUp: true,
+        votesUp: 60,
+        votedFunny: 19,
+        weightedScore: undefined,
+        authorPlaytimeHours: 3,
+        timestamp: 1549170000,
+      },
+    ],
   },
   '585420': {
     name: 'Trailmakers',
@@ -34268,7 +34308,6 @@ export const steamGameDetails: SteamGameMap = {
   },
   '894020': {
     name: "Death's Door",
-    searchTerms: ['deaths door'],
     appId: 894020,
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/894020/ss_dd9b5a2e40d3d512d1c978a5dfda5999c458a517.600x338.jpg',
@@ -34311,6 +34350,7 @@ export const steamGameDetails: SteamGameMap = {
       'Difficult',
     ],
     clueOrder: ['details+tags', 'review', 'desc'],
+    searchTerms: ['deaths door'],
     debugProcessed: true,
     debugRefined: true,
     difficulty: 'Easy',
@@ -45839,7 +45879,6 @@ export const steamGameDetails: SteamGameMap = {
   },
   '1496790': {
     name: 'Gotham Knights',
-    searchTerms: ['gotham nights'],
     appId: 1496790,
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1496790/ss_24d1f8d8d6feac32aa38079a3ce94dac4b022bf0.600x338.jpg',
@@ -45876,6 +45915,7 @@ export const steamGameDetails: SteamGameMap = {
     blurredUserTags: ['Superhero'],
     overrideCensoredTitle: 'G||oth||a||m|| Kn||ight||s',
     clueOrder: ['review', 'details+tags', 'desc'],
+    searchTerms: ['gotham nights'],
     debugProcessed: true,
     debugRefined: true,
     difficulty: 'Medium',
@@ -52402,12 +52442,13 @@ export const steamGameDetails: SteamGameMap = {
     name: 'Fields of Mistria',
     appId: 2142790,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2142790/ss_468560d6cc336409644cfc1891e73d1ea26cb56e.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2142790/ss_11800c6902cd77d6363e9e64118a84af55d7c75b.600x338.jpg',
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2142790/ss_980c227a20de85c9a39bcdf574b77e9d43a9d2e4.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2142790/ss_468560d6cc336409644cfc1891e73d1ea26cb56e.600x338.jpg',
     shortDescription:
-      'Start your new life! Build the farm of your dreams as you discover a world brimming with possibilities. Magic, romance, and adventure all await you in this nostalgic farming / life sim RPG!',
-    releaseDate: 'Aug 5, 2024',
+      'Start your new life in [[((F))ields of Mistri((a))]]! Build the farm of your dreams as you discover a world brimming with possibilities. Magic, romance, and adventure all await you in this nostalgic farming / life sim RPG!',
+    earlyAccessDate: 'Aug 5, 2024',
+    releaseDate: '(Not yet released)',
     developer: 'NPC Studio',
     publisher: 'NPC Studio',
     tags: ['Indie', 'RPG', 'Simulation'],
@@ -52437,15 +52478,20 @@ export const steamGameDetails: SteamGameMap = {
       'Cooking',
       'Mining',
     ],
+    overrideCensoredTitle: 'F||ield||s o||f|| M||istri||a',
     clueOrder: ['details+tags', 'review', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Medium',
     reviewClues: [
       {
         review:
-          'Stardew Valley but anime. Truth be told, a lot of the features in this game are somewhat better than Stardew, especially the affinity with townsfolk.',
+          "We don't need to beat around the bush. [[Fields of Mistria]] is a Stardew Valley clone. But there are some key differences that make me enjoy it more.\nPixel graphics art style more reminiscent of 90s anime\nMagic/Spell casting\nNo de-spawning of items\nSave any time I want\nEasily move buildings around my farm\n... (edited for length)",
         votedUp: true,
         votesUp: 64,
         weightedScore: '0.840762555599212646',
         authorPlaytimeHours: 25,
+        writtenDuringEarlyAccess: true,
         timestamp: 1770739361,
       },
     ],

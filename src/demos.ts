@@ -548,11 +548,9 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
   '2026-04-28': {
     caseFile1: "Don't Starve",
     caseFile2: 'Fields of Mistria',
-    caseFile3: 'Tales of Arise',
+    caseFile3: 'Sonic Mania',
   },
 };
-
-// Suggestion: Escape Simulator
 
 // ****************
 // USE A SCREENSHOT CLUE
@@ -570,7 +568,6 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
 // Med: Tropico 4 (Last Tropico 3/15)
 // Med: Clustertruck
 
-// Hard: AudioSurf
 // Hard: Cassette Beasts
 // Hard: Shadow Tactics: Blades of the Shogun
 // Hard: Albion Online

@@ -63,9 +63,10 @@ const processTitleWord = (word: string): ReactElement => {
         </span>,
       );
     } else if (!/[a-zA-Z0-9]/.test(char)) {
-      // Non-alphanumeric characters (not in UNENCRYPTED_CHARS) get extra margins
+      // Apostrophes and similar punctuation get tighter spacing; other non-alphanumeric gets wider
+      const isApostrophe = char === "'" || char === '\u2019';
       chars.push(
-        <span key={`char-${i}`} className='mx-2'>
+        <span key={`char-${i}`} className={isApostrophe ? 'mx-0.5' : 'mx-2'}>
           {char}
         </span>,
       );

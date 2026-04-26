@@ -69,6 +69,30 @@ export const fetchNewSteamScores = async (
   return data?.map((row) => row.score) ?? [];
 };
 
+export const fetchFeedbackCounts = async (
+  date: string,
+): Promise<{ perfect: number; too_easy: number; too_hard: number } | null> => {
+  const counts = { perfect: 0, too_easy: 0, too_hard: 0 };
+
+  const { data, error } = await supabase
+    .from('feedback')
+    .select('feedback_type')
+    .eq('created_at', date)
+    .in('feedback_type', ['perfect', 'too_easy', 'too_hard']);
+
+  if (error) {
+    console.error('Error fetching feedback counts:', error);
+    return null;
+  }
+
+  for (const row of data ?? []) {
+    const type = row.feedback_type as keyof typeof counts;
+    if (type in counts) counts[type]++;
+  }
+
+  return counts;
+};
+
 // Daily dashboard queries
 export interface DailyScoreRow {
   score: number;

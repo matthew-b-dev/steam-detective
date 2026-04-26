@@ -119,6 +119,7 @@ export interface UnifiedGameState {
   totalScoreSent?: boolean; // Track if the total score has been sent to the database
   caseFileAnimationsPlayed?: boolean[]; // Track which case files have played their score animation
   playedOnReleaseDate?: boolean; // true = first interaction was on the puzzle's release day; false = played later; undefined = legacy (treated as true)
+  feedbackVote?: 'perfect' | 'too_easy' | 'too_hard'; // Which feedback button the player voted on
 }
 
 /**
@@ -614,6 +615,38 @@ export const getUnifiedState = (
   } catch (error) {
     console.error('Failed to get unified state:', error);
     return null;
+  }
+};
+
+/**
+ * Get the stored feedback vote for a puzzle date
+ */
+export const getFeedbackVote = (
+  puzzleDate: string,
+): 'perfect' | 'too_easy' | 'too_hard' | null => {
+  try {
+    const state = getUnifiedState(puzzleDate);
+    return state?.feedbackVote ?? null;
+  } catch {
+    return null;
+  }
+};
+
+/**
+ * Save the feedback vote for a puzzle date
+ */
+export const saveFeedbackVote = (
+  puzzleDate: string,
+  vote: 'perfect' | 'too_easy' | 'too_hard',
+): void => {
+  try {
+    const storageKey = getStorageKey(puzzleDate);
+    const saved = localStorage.getItem(storageKey);
+    const unifiedState: UnifiedGameState = saved ? JSON.parse(saved) : {};
+    unifiedState.feedbackVote = vote;
+    localStorage.setItem(storageKey, JSON.stringify(unifiedState));
+  } catch (error) {
+    console.error('Failed to save feedback vote:', error);
   }
 };
 
