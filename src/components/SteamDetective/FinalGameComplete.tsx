@@ -103,12 +103,10 @@ const FinalGameComplete: React.FC<FinalGameCompleteProps> = ({
 
         // Fetch all scores for today (after send completes)
         const scores = await fetchNewSteamScores(puzzleDate);
-        setTodayScores(scores);
 
         // Calculate percentile and rank (higher score is better, so count worse scores)
         const worseScores = scores.filter((score) => score < totalScore).length;
         const percentile = Math.round((worseScores / scores.length) * 100);
-        setUserPercentile(percentile);
 
         // Calculate rank
         const sortedScores = [...scores].sort((a, b) => b - a);
@@ -117,12 +115,12 @@ const FinalGameComplete: React.FC<FinalGameCompleteProps> = ({
         const countAtBottom = scores.filter((s) => s === minScore).length;
         const isTiedForWorst = isWorstScore && countAtBottom > 1;
 
-        let rank;
-        if (isTiedForWorst) {
-          rank = scores.length;
-        } else {
-          rank = sortedScores.findIndex((s) => s === totalScore) + 1;
-        }
+        const rank = isTiedForWorst
+          ? scores.length
+          : sortedScores.findIndex((s) => s === totalScore) + 1;
+
+        setTodayScores(scores);
+        setUserPercentile(percentile);
         setUserRank(rank);
       } catch (error) {
         console.error('Error in score sending/fetching:', error);

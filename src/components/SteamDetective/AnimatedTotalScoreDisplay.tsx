@@ -425,7 +425,7 @@ const AnimatedTotalScoreDisplay: React.FC<AnimatedTotalScoreDisplayProps> = ({
                     animationInProgress.current = false;
                   }, 300);
                 }, 200);
-              }, 300);
+              }, 350);
             }, 2000);
           }, 500);
         }
@@ -433,7 +433,7 @@ const AnimatedTotalScoreDisplay: React.FC<AnimatedTotalScoreDisplayProps> = ({
 
       requestAnimationFrame(animateToTotal);
     });
-  }, [scoresLoading, totalScore, totalPlayers, userRank]);
+  }, [scoresLoading, totalScore]);
 
   if (scoresLoading) {
     return (
@@ -456,7 +456,7 @@ const AnimatedTotalScoreDisplay: React.FC<AnimatedTotalScoreDisplayProps> = ({
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.8 }}
-            transition={{ duration: 0.3 }}
+            transition={{ duration: 0.15 }}
           >
             <div className=''>
               <div className='flex-col items-center flex'>
