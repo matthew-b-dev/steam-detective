@@ -3804,6 +3804,7 @@ export const steamGameDetails: SteamGameMap = {
       'Exploration',
       'Action',
     ],
+    screenshotLetterbox: true,
     clueOrder: ['tags', 'details', 'desc'],
   },
   '71250': {
@@ -42161,12 +42162,12 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1262560/ss_82adddc724f99986dafdfe5f713de45e12a4ece5.600x338.jpg',
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1262560/ss_4292ba4d468883bb13c619330229047f9ab197f7.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1262560/ss_6ebd31716756d81452bca2eda264987a330cd1f9.600x338.jpg',
     shortDescription:
-      "The open-world action in ||Need for Speed Most Wanted|| gives you the freedom to drive your way. ||Hit jumps and shortcuts||, switch cars, ||lie low|| or head for terrain that plays to your vehicle's unique strengths. ||Fight|| your way past ||cops and rivals|| using skill, high-end car tech and tons of ||nitrous||.",
-    releaseDate: 'Jun 18, 2020',
-    developer: 'Criterion Games',
-    publisher: 'Electronic Arts',
+      "The open-world action in [[Need ((f))or ((S))peed]] ||Most Wanted|| gives you the freedom to drive your way. Hit jumps and shortcuts, switch cars, lie low or head for terrain that plays to your vehicle's unique strengths. Fight your way past cops and rivals using skill, high-end car tech and tons of nitrous.",
+    releaseDate: 'Oct 30, 2012',
+    developer: '||Criterion Games||',
+    publisher: '||Electronic Arts||',
     tags: ['Action', 'Adventure', 'Racing'],
     features: [],
     allReviewSummary: {
@@ -42195,10 +42196,22 @@ export const steamGameDetails: SteamGameMap = {
       'Crime',
       'Local Co-Op',
     ],
-    clueOrder: ['desc', 'details', 'tags'],
+    blurredUserTags: ['Combat Racing', 'Action'],
+    clueOrder: ['review', 'details+tags', 'desc'],
     debugProcessed: true,
     debugRefined: true,
     difficulty: 'Easy',
+    reviewClues: [
+      {
+        review:
+          'Be warned: this has the same name as the 2005 game, but it\'s not a remake. Instead, this is a $20 game with $65 of DLC.\n"You can drive any car you discover"\n*finds a car\n*presses E\ntakes you immediately to the store page ',
+        votedUp: false,
+        votesUp: 7,
+        weightedScore: '0.593959689140319824',
+        authorPlaytimeHours: 1,
+        timestamp: 1353628800,
+      },
+    ],
   },
   '1262580': {
     name: 'Need for Speed Payback',
@@ -43344,13 +43357,19 @@ export const steamGameDetails: SteamGameMap = {
   },
   '1321440': {
     name: 'Cassette Beasts',
+    searchTerms: [
+      'casette beasts',
+      'cassett beasts',
+      'casete beasts',
+      'caset beasts',
+    ],
     appId: 1321440,
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1321440/ss_8c6d904950b675f8cb2e0255a1f5b06d7898bc5b.600x338.jpg',
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1321440/ss_580f8e3d83ab9357cface16e0272eb541f51984e.600x338.jpg',
     shortDescription:
-      "Collect awesome monsters to use during turn-based battles in this open-world RPG, now with online multiplayer mode. Combine any two monster forms using ||Cassette Beasts||' Fusion System to create unique and powerful new ones!",
+      'Collect awesome monsters to use during turn-based battles in this open-world RPG, now with online multiplayer mode. Combine any two monster forms using the [[((C))assette ((B))easts]] Fusion System to create unique and powerful new ones!',
     releaseDate: 'Apr 26, 2023',
     developer: 'Bytten Studio',
     publisher: 'Raw Fury',
@@ -43377,8 +43396,24 @@ export const steamGameDetails: SteamGameMap = {
       'Anime',
       'Pixel Graphics',
     ],
-    screenshotFocusPoint: [52, 0, 150],
-    clueOrder: ['tags', 'details', 'desc'],
+    screenshotFocusPoint: [52, 0, 100],
+    overrideCensoredTitle: 'C||asse||tt||e|| B||east||s',
+    clueOrder: ['review', 'details+tags', 'desc', 'ss'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Hard',
+    reviewClues: [
+      {
+        review:
+          'What do I think of [[Cassette Beasts]]? Well, some maniac decided to create unique sprites for every single ||fusion|| between every single 2 ||monsters|| in the game, and that alone deserves a positive review',
+        votedUp: true,
+        votesUp: 562,
+        votedFunny: 46,
+        weightedScore: undefined,
+        authorPlaytimeHours: 15,
+        timestamp: 1685678400,
+      },
+    ],
   },
   '1324130': {
     name: 'Stranded: Alien Dawn',
@@ -56929,6 +56964,72 @@ export const steamGameDetails: SteamGameMap = {
         authorPlaytimeHours: 39.3,
         timestamp: 1776873518,
       },
+    ],
+  },
+  '686060': {
+    name: 'Mewgenics',
+    appId: 686060,
+    primaryScreenshot:
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/686060/d8fca4059f3f9494d35c2ae50399a28b303fa3b3/ss_d8fca4059f3f9494d35c2ae50399a28b303fa3b3.600x338.jpg',
+    secondaryScreenshot:
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/686060/54d33c8cd2e23c2a278367b487449077d5f0bc49/ss_54d33c8cd2e23c2a278367b487449077d5f0bc49.600x338.jpg',
+    shortDescription:
+      'In [[Mewgenic((s))]], build the ultimate cat army through tactical breeding and send them into deep, challenging turn-based adventures. Draft abilities, collect items, and manipulate genetics across generations in this roguelike tactics game from the creators of The Binding of Isaac and The End is Nigh.',
+    releaseDate: 'Feb 10, 2026',
+    developer: '||Edmund McMillen, Tyler Glaiel||',
+    publisher: '||Edmund McMillen, Tyler Glaiel||',
+    tags: [],
+    features: [],
+    allReviewSummary: {
+      count: 42001,
+      rating: 'Very Positive',
+    },
+    userTags: [
+      'Turn-Based Tactics',
+      'Roguelite',
+      'Dark Humor',
+      'Turn-Based Strategy',
+      'Cats',
+      'Turn-Based Combat',
+      'RPG',
+      'Funny',
+      'Cute',
+      '2D',
+      'Comic Book',
+      'Horror',
+      'Cartoony',
+      'Surreal',
+      'Post-apocalyptic',
+    ],
+    overrideCensoredTitle: 'M||ew||g||eni||cs',
+    clueOrder: ['details', 'review', 'tags', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
+    reviewClues: [
+      {
+        review:
+          'This game is great for people who like ||cats||, toilet humor and deep tactical gameplay.',
+        votedUp: true,
+        votesUp: 443,
+        votedFunny: 59,
+        weightedScore: undefined,
+        authorPlaytimeHours: 42.9,
+        timestamp: 1776500443,
+      },
+      {
+        review:
+          'The announcement/teaser trailer for this game was released in October 2013. A little over 12 years later we have one of the best turn-based tactics roguelites ... maybe ever?\n... (edited for length)',
+        votedUp: true,
+        votesUp: 12,
+        weightedScore: undefined,
+        authorPlaytimeHours: 12.9,
+        timestamp: 1771459200,
+      },
+    ],
+    moreFromThisDeveloper: [
+      { id: 9500, name: 'Gish' },
+      { id: 1148650, name: 'The Legend of Bum-Bo' },
     ],
   },
 };

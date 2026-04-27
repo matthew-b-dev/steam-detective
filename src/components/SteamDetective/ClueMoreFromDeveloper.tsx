@@ -115,7 +115,7 @@ export const ClueMoreFromDeveloper: React.FC<ClueMoreFromDeveloperProps> = ({
             const hasNonGame = games.some((g) => g.name?.includes('DLC'));
             const noun = hasNonGame ? 'product' : 'game';
             return games.length > 1
-              ? `Featured ${noun}s from this Developer (${games.length})`
+              ? `Some other ${noun}s from this Developer (${games.length})`
               : `Another ${noun} from this Developer:`;
           })()}
         </div>

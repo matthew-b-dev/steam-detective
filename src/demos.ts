@@ -546,6 +546,11 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile3: 'AudioSurf',
   },
   '2026-04-28': {
+    caseFile1: 'Need for Speed Most Wanted',
+    caseFile2: 'Mewgenics',
+    caseFile3: 'Cassette Beasts',
+  },
+  '2026-04-29': {
     caseFile1: "Don't Starve",
     caseFile2: 'Fields of Mistria',
     caseFile3: 'Sonic Mania',
