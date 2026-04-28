@@ -551,6 +551,11 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile3: 'Cassette Beasts',
   },
   '2026-04-29': {
+    caseFile1: 'Sniper Elite 3',
+    caseFile2: 'Orcs Must Die! 2',
+    caseFile3: 'Neon White',
+  },
+  '2026-04-30': {
     caseFile1: "Don't Starve",
     caseFile2: 'Fields of Mistria',
     caseFile3: 'Sonic Mania',
@@ -561,6 +566,7 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
 // USE A SCREENSHOT CLUE
 // ****************
 
+// Easy: Dead Island 2
 // Easy: Split Fiction
 // Easy: Star Wars Battlefront II
 // Easy: Remnant II
@@ -573,7 +579,6 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
 // Med: Tropico 4 (Last Tropico 3/15)
 // Med: Clustertruck
 
-// Hard: Cassette Beasts
 // Hard: Shadow Tactics: Blades of the Shogun
 // Hard: Albion Online
 // Hard (Fully Refined): Tales of Arise

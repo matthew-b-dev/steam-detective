@@ -4689,7 +4689,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/201790/ss_7c1349076210cfe909a1da8deb368e8e3470fc26.600x338.jpg',
     shortDescription:
-      "You've tossed, burned and sliced them by the thousands – now orcs must die more than ever before! Grab a friend and slay orcs in untold numbers in this sequel to the 2011 AIAS Strategy Game of the Year from Robot Entertainment.",
+      "You've tossed, burned and sliced them by the thousands – now [[orcs must die]] more than ever before! Grab a friend and slay ||orcs|| in untold numbers in this sequel to the 2011 AIAS Strategy Game of the Year from Robot Entertainment.",
     releaseDate: 'Jul 30, 2012',
     developer: 'Robot Entertainment',
     publisher: 'Robot Entertainment',
@@ -4701,22 +4701,38 @@ export const steamGameDetails: SteamGameMap = {
     },
     userTags: [
       'Tower Defense',
-      'Co-op',
-      'Action',
+      'Third-Person Shooter',
+      'Sequel',
       'Strategy',
       'Online Co-Op',
       'Indie',
       'Multiplayer',
       'Third Person',
       'RPG',
-      'Third-Person Shooter',
+      'Action',
       'Adventure',
       'Comedy',
       'Singleplayer',
       'Cartoony',
       'Shooter',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    screenshotLetterbox: true,
+    overrideCensoredTitle: 'Or||cs|| M||ust|| D||ie||! ||2||',
+    clueOrder: ['details+tags', 'desc', 'review'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Medium',
+    reviewClues: [
+      {
+        review:
+          '[...] Some of the traps you used to love suck now. (swinging mace a.k.a. roof pendulum of win.) Each character gets their own unique trap and weapon, but beyond that they have the same access to traps, weapons, and spells.  \n\n"[[((O))rcs Must Die((!)) 2]]" &nbsp;&nbsp;is a fun AND funny tower defense game with a lot of shooter elements that allow you to solve missions in a number of ways, with some great survival challenge maps to have a blast with.\n... (edited for length)',
+        votedUp: true,
+        votesUp: 105,
+        weightedScore: undefined,
+        authorPlaytimeHours: 85.1,
+        timestamp: 1385528400,
+      },
+    ],
   },
   '201810': {
     name: 'Wolfenstein: The New Order',
@@ -8954,11 +8970,11 @@ export const steamGameDetails: SteamGameMap = {
     name: 'Sniper Elite 3',
     appId: 238090,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/238090/ss_214f6e7eb0b5d34597126a7df95f1394aa728a9e.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/238090/ss_ef8aa37396e2e63cf70749e1bc92ac28502b2d32.600x338.jpg',
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/238090/ss_364292f04c493223e788d9e13f94e1645beb1ace.600x338.jpg',
     shortDescription:
-      '||Sniper Elite 3|| is a tactical third-person shooter that combines stealth, gameplay choice and genre-defining ballistics with huge, open levels and the exotic terrain of World War 2 North Africa.',
+      'Observe. Plan. Execute. ADAPT. [[((S))niper Elite 3]]&nbsp;&nbsp;is a tactical third-person WWII shooter that combines stealth, gameplay choice and genre-defining ballistics with huge, open levels. Stalk your targets through the twisting canyons, lush oases and ancient cities in the third installment of this thrilling series.',
     releaseDate: 'Jun 27, 2014',
     developer: 'Rebellion',
     publisher: 'Rebellion',
@@ -8985,7 +9001,32 @@ export const steamGameDetails: SteamGameMap = {
       'Online Co-Op',
       'Gore',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: ['Sniper', 'Stealth', 'World War II'],
+    overrideCensoredTitle: 'Sn||iper|| E||li||t||e|| ||3||',
+    clueOrder: ['review', 'details+tags', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Medium',
+    reviewClues: [
+      {
+        review:
+          'This game taught me more about ||human anatomy|| than four years of medical school ever could',
+        votedUp: true,
+        votesUp: 1,
+        weightedScore: undefined,
+        authorPlaytimeHours: 54.4,
+        timestamp: 1420329600,
+      },
+      {
+        review:
+          'Good: \n - I appreciate the introduction of non-linear map design over the "corridor" style in all the previous games.\n\nBad:\n - Basically zero narrative continuity between missions. You are practically dropped in to disjointed levels.\n - Unprecedented jank/bugs compared to the last ||two|| titles. The game has been out for a month and it\'s still pretty bad.',
+        votedUp: false,
+        votesUp: 4,
+        weightedScore: undefined,
+        authorPlaytimeHours: 4.9,
+        timestamp: 1406505600,
+      },
+    ],
   },
   '238320': {
     name: 'Outlast',
@@ -43357,12 +43398,6 @@ export const steamGameDetails: SteamGameMap = {
   },
   '1321440': {
     name: 'Cassette Beasts',
-    searchTerms: [
-      'casette beasts',
-      'cassett beasts',
-      'casete beasts',
-      'caset beasts',
-    ],
     appId: 1321440,
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1321440/ss_8c6d904950b675f8cb2e0255a1f5b06d7898bc5b.600x338.jpg',
@@ -43399,6 +43434,12 @@ export const steamGameDetails: SteamGameMap = {
     screenshotFocusPoint: [52, 0, 100],
     overrideCensoredTitle: 'C||asse||tt||e|| B||east||s',
     clueOrder: ['review', 'details+tags', 'desc', 'ss'],
+    searchTerms: [
+      'casette beasts',
+      'cassett beasts',
+      'casete beasts',
+      'caset beasts',
+    ],
     debugProcessed: true,
     debugRefined: true,
     difficulty: 'Hard',
@@ -46315,9 +46356,9 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1533420/ss_27ea65326988eeeaa504bb8c0d2c892aae894b57.600x338.jpg',
     shortDescription:
-      '||Neon White|| is a single-player speedrunning FPS where you can sacrifice your guns for godlike parkour moves.',
+      '[[((N))eon W((h))ite]]&nbsp;&nbsp;is a single-player speedrunning FPS where you can sacrifice your guns for godlike parkour moves. You are ||White||, an assassin handpicked from Hell to compete with other demon slayers for a chance to live permanently in Heaven. The other assassins seem familiar, though…',
     releaseDate: 'Jun 16, 2022',
-    developer: 'Angel Matrix',
+    developer: 'Angel Matrix (Ben Esposito)',
     publisher: 'Annapurna Interactive',
     tags: [],
     features: [],
@@ -46342,7 +46383,46 @@ export const steamGameDetails: SteamGameMap = {
       'Adventure',
       '3D',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: [
+      'FPS',
+      '3D Platformer',
+      'Parkour',
+      'Platformer',
+      'Fast-Paced',
+      'Action',
+      'Anime',
+      'Precision Platformer',
+      'Shooter',
+    ],
+    overrideCensoredTitle: 'N||eo||n Wh||ite||',
+    clueOrder: ['details+tags', 'review', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Medium',
+    reviewClues: [
+      {
+        review:
+          "Speedrunning with the power of god and anime on your side.\n[...] The story is perfect 90s anime camp, they even got Steve Blum to voice the protagonist. I would recommend embracing the camp but if you can't, there is a skip button helpfully included.\n... (edited for length)",
+        votedUp: true,
+        votesUp: 5,
+        weightedScore: undefined,
+        authorPlaytimeHours: 27.6,
+        timestamp: 1771933605,
+      },
+      {
+        review:
+          'someone looked at csgo surfing and went yeah this needs more anime cringe\n\n13/10 game',
+        votedUp: true,
+        votesUp: 543,
+        votedFunny: 150,
+        weightedScore: undefined,
+        authorPlaytimeHours: 10.5,
+        timestamp: 1669611600,
+      },
+    ],
+    moreFromThisDeveloper: [{ id: 702670, name: 'Donut County' }],
+    developerDescription:
+      '[...] you may also know me as the creator of Donut County, a cute game where you play as hole in the ground. The story was inspired by my first apartment in LA where I was harassed daily by raccoons. Don’t worry, I’m doing fine now.',
   },
   '1544020': {
     name: 'The Callisto Protocol',
