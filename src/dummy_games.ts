@@ -473,6 +473,8 @@ export const dummyGames: string[] = [
   'Rogue Trooper Redux',
   'Guilty Gear Xrd REV 2',
   'ECHO',
+  'Dead Island: Riptide',
+  'Dead Island: Epidemic',
   'Warriors Orochi 4',
   'Shining Resonance Refrain',
   'The Swords of Ditto',

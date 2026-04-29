@@ -556,6 +556,11 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile3: 'Neon White',
   },
   '2026-04-30': {
+    caseFile1: 'Dead Island 2',
+    caseFile2: 'Slime Rancher 2',
+    caseFile3: 'Supraland',
+  },
+  '2026-05-01': {
     caseFile1: "Don't Starve",
     caseFile2: 'Fields of Mistria',
     caseFile3: 'Sonic Mania',
