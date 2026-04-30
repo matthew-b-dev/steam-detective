@@ -57260,7 +57260,7 @@ export const steamGameDetails: SteamGameMap = {
       'Colorful',
     ],
     screenshotFocusPoint: [43, 11, 250],
-    overrideCensoredTitle: 'O||nce|| U||pon|| ||a|| KA||TAMAR||I',
+    overrideCensoredTitle: 'O||nce|| U||pon|| ||a|| KA||TAMA||RI',
     clueOrder: ['review', 'details+tags', 'desc', 'ss'],
     debugProcessed: true,
     debugRefined: true,
