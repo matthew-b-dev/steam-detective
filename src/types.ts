@@ -50,10 +50,15 @@ export interface SteamGame {
     | 'tags'
     | 'ss'
     | 'review'
+    | 'extras'
     | 'details+tags'
-  )[]; // Custom order for first 3-4 clues. 'ss' inserts the primary screenshot into the order. 'review' inserts the review clues (replaces secondary screenshot). 'details+tags' bundles the Details and Tags clues into a single reveal step. The "More from this Developer" clue (if present) is always revealed together with the Details clue, keeping its canonical position between Tags and Reviews. Last fixed clues are always: (ss if not in order), (secondary screenshot or review), title. Default: ['tags', 'details', 'desc']
+  )[]; // Custom order for first 3-4 clues. 'ss' inserts the primary screenshot into the order. 'review' inserts the review clues (replaces secondary screenshot). 'extras' inserts the Extras clue (achievements, replaces secondary screenshot). 'details+tags' bundles the Details and Tags clues into a single reveal step. The "More from this Developer" clue (if present) is always revealed together with the Details clue, keeping its canonical position between Tags and Reviews. Last fixed clues are always: (ss if not in order), (secondary screenshot or review or extras), title. Default: ['tags', 'details', 'desc']
   reviewClue?: Review; // DEPRECATED: A specific review chosen as a clue (replaces secondary screenshot). Use reviewClues instead.
   reviewClues?: Review[]; // Array of reviews chosen as clues (replaces secondary screenshot). All reviews shown together. The review text may contain ||censored|| markers.
+  extrasClue?: {
+    achievements?: { name: string; desc?: string; img: string }[]; // Steam achievements to show (name + optional description + thumbnail URL)
+    achievementsTotal?: number; // Total achievements found during fetch (for display: "X of N")
+  }; // Optional extras clue (replaces secondary screenshot). Canonical position just above Review.
   searchTerms?: string[]; // Additional search terms/aliases for the dropdown
   excludeOptions?: string[]; // Game names to exclude from the search dropdown only for this puzzle
   features: string[];

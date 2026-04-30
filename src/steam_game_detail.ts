@@ -40,7 +40,20 @@ export const steamGameDetails: SteamGameMap = {
       'Platformer',
       'Science',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    clueOrder: ['details+tags', 'extras', 'desc'],
+    extrasClue: {
+      achievements: [
+        {
+          name: 'Partygoer',
+          img: 'https://cdn.fastly.steamstatic.com/steamcommunity/public/images/apps/400/portal_escape_testchambers.jpg',
+        },
+        {
+          name: 'Heartbreaker',
+          img: 'https://cdn.fastly.steamstatic.com/steamcommunity/public/images/apps/400/portal_beat_game.jpg',
+        },
+      ],
+      achievementsTotal: 15,
+    },
   },
   '420': {
     name: 'Half-Life 2: Episode Two',
@@ -22314,10 +22327,14 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/460790/ss_f8e45201f2f31c973a5405572a4367ddcffba359.600x338.jpg',
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/460790/ss_438168c4effdc8a3affef680e33efeb52fc372eb.600x338.jpg',
+    webms: [
+      'https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/460790/extras/e3bf72800d31558520bf24c2df2ae71f.webm?t=12312312',
+    ],
     shortDescription:
-      "PlatinumGames' universally acclaimed action masterpiece finally comes to PC. Experience the over-the-top stylish action in 60fps at unlocked HD resolutions. The definitive way to play: being bad never felt so good.",
+      "From PlatinumGames' legendary director Hideki Kamiya of Resident Evil and Devil May Cry fame.\n\n[[Bayonetta]]. The last survivor of an ancient witch clan who keep the balance between light, dark and chaos. Entombed to protect herself – and the world as we know it – [[Bayonetta]] is discovered and revived after 500 years, sparking a chain of events with cataclysmic repercussions.",
+    originalReleaseDate: 'Jan 5, 2010 (PS3, X360)',
     releaseDate: 'Apr 11, 2017',
-    developer: 'PlatinumGames',
+    developer: '||PlatinumGames||',
     publisher: 'SEGA',
     tags: [],
     features: [],
@@ -22329,8 +22346,6 @@ export const steamGameDetails: SteamGameMap = {
       'Action',
       'Female Protagonist',
       'Hack and Slash',
-      'Sexual Content',
-      'Nudity',
       'Singleplayer',
       'Spectacle fighter',
       'Great Soundtrack',
@@ -22342,7 +22357,36 @@ export const steamGameDetails: SteamGameMap = {
       'Fantasy',
       "Beat 'em up",
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: [
+      'Great Soundtrack',
+      'Female Protagonist',
+      'Action',
+      'Hack and Slash',
+      'Mature',
+      'Character Action Game',
+      'Adventure',
+      'Fast-Paced',
+    ],
+    overrideCensoredTitle: 'B||ayo||n||ett||a',
+    clueOrder: ['extras', 'details+tags', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
+    extrasClue: {
+      achievements: [
+        {
+          name: 'Truth In Its Purest Form',
+          desc: "Collect all of Antonio's Notes.",
+          img: 'https://cdn.fastly.steamstatic.com/steamcommunity/public/images/apps/460790/d5f6b6028252c9baf1bab614bcf5532d85439901.jpg',
+        },
+        {
+          name: 'Nice And Relaxed',
+          desc: 'Avert 10 enemy attacks with the [[Moon]] of [[Mahaa((-))Kalaa]] equipped.',
+          img: 'https://cdn.fastly.steamstatic.com/steamcommunity/public/images/apps/460790/29064e8860306e79d1db26f26d7777bbd7cf9fde.jpg',
+        },
+      ],
+      achievementsTotal: 50,
+    },
   },
   '460930': {
     name: "Tom Clancy's Ghost Recon Wildlands",
@@ -33672,11 +33716,11 @@ export const steamGameDetails: SteamGameMap = {
     name: 'Dicey Dungeons',
     appId: 861540,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/861540/ss_34c9e63f73c668bcde5dd4671e944c09e1c169b5.600x338.jpg',
-    secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/861540/ss_b61fb9b76ab03bdea062e7415001a9fd61e64f3f.600x338.jpg',
+    secondaryScreenshot:
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/861540/ss_34c9e63f73c668bcde5dd4671e944c09e1c169b5.600x338.jpg',
     shortDescription:
-      'Become a giant walking dice, explore dungeons and defy Lady Luck in this dice powered roguelike! Now featuring &quot;Reunion&quot;, a free DLC with six brand-new episodes!',
+      'Become a giant walking ||dice|| and explore [[dungeon((s))]] in "[[((D))icey Dungeon((s))]]" ! Fight monsters, find better loot, level up your heroes, and maybe even take down the Goddess of Fortune, Lady Luck herself. Balance your carefully planned strategies against the unknown of a dice roll.',
     releaseDate: 'Aug 13, 2019',
     developer: 'Terry Cavanagh',
     publisher: 'Terry Cavanagh',
@@ -33703,7 +33747,36 @@ export const steamGameDetails: SteamGameMap = {
       'Colorful',
       'Great Soundtrack',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: ['Card Game', 'Card Battler'],
+    overrideCensoredTitle: 'D||ice||y D||ungeon||s',
+    clueOrder: ['details+tags', 'extras', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Hard',
+    moreFromThisDeveloper: [
+      { id: 70300, name: 'VVVVVV' },
+      { id: 221640, name: 'Super Hexagon' },
+    ],
+    extrasClue: {
+      achievements: [
+        {
+          name: 'Lock all dice',
+          desc: 'Lock all enemy dice.',
+          img: 'https://cdn.fastly.steamstatic.com/steamcommunity/public/images/apps/861540/8f7b094b57b004cebba61b02e7f2146648ac8867.jpg',
+        },
+        {
+          name: 'Use limit break twice',
+          desc: 'Use your limit break twice in one turn.',
+          img: 'https://cdn.fastly.steamstatic.com/steamcommunity/public/images/apps/861540/fdc85850c1accc7161aa2a4d0f80f007b3b7ba14.jpg',
+        },
+        {
+          name: "Use Dragon's Tooth",
+          desc: "Use the Dragon's Tooth.",
+          img: 'https://cdn.fastly.steamstatic.com/steamcommunity/public/images/apps/861540/0074d06c3228ffe273e656352c0ea0da86691ef7.jpg',
+        },
+      ],
+      achievementsTotal: 53,
+    },
   },
   '861650': {
     name: 'Session: Skate Sim',
@@ -57151,6 +57224,69 @@ export const steamGameDetails: SteamGameMap = {
       { id: 1148650, name: 'The Legend of Bum-Bo' },
     ],
   },
+  '1880620': {
+    name: 'Once Upon a KATAMARI',
+    appId: 1880620,
+    primaryScreenshot:
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1880620/78e9098ff7dbbdfe202ba1ad324a15f10c73fb6a/ss_78e9098ff7dbbdfe202ba1ad324a15f10c73fb6a.600x338.jpg',
+    secondaryScreenshot:
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1880620/c2f4b2055f915e0433b063eadfd3272436f0df82/ss_c2f4b2055f915e0433b063eadfd3272436f0df82.600x338.jpg',
+    shortDescription:
+      "In this  [[Katamari]] story across time, the adage endures: Let The Good Times ||Roll||! Now onward through new worlds to ||roll|| up thy heart's desires and to restore the stars!",
+    releaseDate: 'Oct 23, 2025',
+    developer: 'RENGAME',
+    publisher: '||Bandai Namco Entertainment Inc.||',
+    tags: [],
+    features: [],
+    allReviewSummary: {
+      count: 1217,
+      rating: 'Very Positive',
+    },
+    userTags: [
+      'Action',
+      '3D',
+      'Adventure',
+      'Singleplayer',
+      'Colorful',
+      'Family Friendly',
+      'Controller',
+      'History',
+      'Casual',
+      'Tutorial',
+      'Great Soundtrack',
+      'Cute',
+      'Story Rich',
+      'Funny',
+      'Colorful',
+    ],
+    screenshotFocusPoint: [43, 11, 250],
+    overrideCensoredTitle: 'O||nce|| U||pon|| ||a|| KA||TAMAR||I',
+    clueOrder: ['review', 'details+tags', 'desc', 'ss'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
+    reviewClues: [
+      {
+        review:
+          'To quote ||the King of All Cosmos|| himself : \n"We are moved to tears by the sheer size of this thing. This is so incredible!"\n... (edited for length)',
+        votedUp: true,
+        votesUp: 11,
+        weightedScore: undefined,
+        authorPlaytimeHours: 27.1,
+        timestamp: 1762778400,
+      },
+      {
+        review:
+          'a stage called "Jurassic Period" but contains creatures from the Devonian to the Quaternary. literally unplayable',
+        votedUp: true,
+        votesUp: 163,
+        votedFunny: 171,
+        weightedScore: undefined,
+        authorPlaytimeHours: 27.4,
+        timestamp: 1763278400,
+      },
+    ],
+  },
 };
 
 // Special series/franchises where guesses containing the series name are considered "close"
@@ -57206,6 +57342,7 @@ export const CLOSE_GUESS_SERIES: string[] = [
   'pillars of eternity',
   'plants vs',
   'prototype',
+  'remnant',
   'resident evil',
   'runescape',
   'saints row',

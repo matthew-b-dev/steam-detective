@@ -9,6 +9,7 @@ import { ClueTags } from './ClueTags';
 import { ClueReview } from './ClueReview';
 import { ClueMoreFromDeveloper } from './ClueMoreFromDeveloper';
 import { ClueWebm } from './ClueWebm';
+import { ClueExtras } from './ClueExtras';
 
 interface ClueContainerProps {
   caseFile: 'easy' | 'expert' | `casefile-${number}`;
@@ -32,6 +33,7 @@ export const ClueContainer: React.FC<ClueContainerProps> = ({ caseFile }) => {
     showClue6,
     showClue7 = false,
     showClue8 = false,
+    showClue9 = false,
   ] = showClues;
   const [primaryIsMain, setPrimaryIsMain] = useState(true);
 
@@ -139,7 +141,7 @@ export const ClueContainer: React.FC<ClueContainerProps> = ({ caseFile }) => {
           show={showClue1}
           isComplete={isComplete}
         />
-        {/* More from this Developer clue - canonical between tags and review */}
+        {/* More from this Developer clue - canonical between tags and extras/review */}
         {dailyGame.moreFromThisDeveloper &&
           dailyGame.moreFromThisDeveloper.length > 0 && (
             <ClueMoreFromDeveloper
@@ -154,6 +156,15 @@ export const ClueContainer: React.FC<ClueContainerProps> = ({ caseFile }) => {
               isComplete={isComplete}
             />
           )}
+        {/* Extras clue - canonical second-to-last, between MFD and Review */}
+        {dailyGame.extrasClue && (
+          <ClueExtras
+            achievements={dailyGame.extrasClue.achievements}
+            achievementsTotal={dailyGame.extrasClue.achievementsTotal}
+            show={showClue9}
+            isComplete={isComplete}
+          />
+        )}
         {/* Review clue(s) - canonical last position, replaces secondary screenshot */}
         {hasReviewClue && (
           <ClueReview

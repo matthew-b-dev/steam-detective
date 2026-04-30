@@ -115,6 +115,7 @@ const SteamDetectiveGame: React.FC<SteamDetectiveGameProps> = ({
     false,
     false,
     false,
+    false,
   ]);
 
   // Preload folder icons
@@ -169,10 +170,15 @@ const SteamDetectiveGame: React.FC<SteamDetectiveGameProps> = ({
   const clueOrder = dailyGame?.clueOrder || ['tags', 'details', 'desc'];
   const hasSsInOrder = clueOrder.includes('ss');
   const hasReviewInOrder = clueOrder.includes('review');
+  const hasExtrasInOrder = clueOrder.includes('extras');
   const hasDetailsTags = clueOrder.includes('details+tags');
   // MFD is bundled with the Details reveal — derived from data, not clueOrder
   const hasMFD = (dailyGame?.moreFromThisDeveloper?.length ?? 0) > 0;
-  const configuredCount = clueOrder.length; // 3, 4, or (rarely) 5 if both ss+review
+  const hasExtras = !!(
+    dailyGame?.extrasClue &&
+    (dailyGame.extrasClue.achievements?.length ?? 0) > 0
+  );
+  const configuredCount = clueOrder.length; // 3, 4, or (rarely) 5 if both ss+review/extras
 
   const clueMapping: Record<string, number> = {
     tags: 1,
@@ -180,17 +186,29 @@ const SteamDetectiveGame: React.FC<SteamDetectiveGameProps> = ({
     desc: 3,
     ss: 4,
     review: 5,
+    extras: 9,
   };
 
   const getShowClues = (): boolean[] => {
-    // 8 slots: [tags, details, desc, primary_ss, review_or_secondary_ss, title, secondary_ss_when_details+tags+review, moreFromDev]
-    const result = [false, false, false, false, false, false, false, false];
+    // 9 slots: [tags, details, desc, primary_ss, review_or_secondary_ss, title, secondary_ss_when_details+tags+review, moreFromDev, extras]
+    const result = [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+    ];
 
     if (state.isComplete) {
       // Slot[6] is only for the secondary screenshot in the details+tags+review combo.
       // For all other configurations (including plain review without details+tags),
       // the secondary screenshot is never a clue and must not appear on completion.
       // Slot[7] is moreFromDev - show on completion only if game has it configured.
+      // Slot[8] is extras - show on completion only if game has it configured.
       return [
         true,
         true,
@@ -200,10 +218,11 @@ const SteamDetectiveGame: React.FC<SteamDetectiveGameProps> = ({
         true,
         hasDetailsTags && hasReviewInOrder,
         hasMFD,
+        hasExtras,
       ];
     }
 
-    for (let i = 0; i < state.currentClue && i < 8; i++) {
+    for (let i = 0; i < state.currentClue && i < 9; i++) {
       if (i < configuredCount && i < clueOrder.length) {
         const clueType = clueOrder[i];
         if (clueType === 'details+tags') {
@@ -218,7 +237,7 @@ const SteamDetectiveGame: React.FC<SteamDetectiveGameProps> = ({
         // (only when primary screenshot wasn't placed in the configured order via 'ss')
         result[3] = true;
       } else if (
-        (!hasReviewInOrder || hasDetailsTags) &&
+        ((!hasReviewInOrder && !hasExtrasInOrder) || hasDetailsTags) &&
         i === configuredCount + (!hasSsInOrder ? 1 : 0)
       ) {
         // Secondary screenshot auto-reveal: fires after primary screenshot.
@@ -256,12 +275,13 @@ const SteamDetectiveGame: React.FC<SteamDetectiveGameProps> = ({
       desc: 3,
       details: 4,
       tags: 5,
-      moreFromDev: 6, // between tags and review
-      review: 7, // review is canonical-last, below moreFromDev
+      moreFromDev: 6, // between tags and extras/review
+      extras: 7, // extras is second-to-last, below moreFromDev
+      review: 8, // review is canonical-last, below extras
     };
 
-    // clueNames maps result array index (0-7) to canonical position key.
-    // result[4] is showClue5 - it's used for the review clue when hasReviewInOrder,
+    // clueNames maps result array index (0-8) to canonical position key.
+    // result[4] is showClue5 - it's used for the review/extras clue when in order,
     // or for the secondary screenshot otherwise.
     const hasWebms = !!dailyGame?.webms?.length;
     const clueNames: (keyof typeof canonicalPositions)[] = [
@@ -271,12 +291,15 @@ const SteamDetectiveGame: React.FC<SteamDetectiveGameProps> = ({
       'screenshot1',
       hasReviewInOrder && !hasDetailsTags
         ? 'review'
-        : hasWebms
-          ? 'webm'
-          : 'screenshot2',
+        : hasExtrasInOrder && !hasDetailsTags
+          ? 'extras'
+          : hasWebms
+            ? 'webm'
+            : 'screenshot2',
       'title',
       hasWebms ? 'webm' : 'screenshot2', // slot[6]: secondary ss or webm
       'moreFromDev', // slot[7]: more from this developer
+      'extras', // slot[8]: extras clue
     ];
     // When details+tags+review is active, review is already covered by slot[4]
     // above (mapped as webm/screenshot2 since secondary ss is now separate), and
@@ -284,6 +307,8 @@ const SteamDetectiveGame: React.FC<SteamDetectiveGameProps> = ({
     if (hasDetailsTags && hasReviewInOrder) {
       clueNames[4] = 'review';
     }
+    // When details+tags+extras is active without review, extras uses slot[8] canonically
+    // so slot[4] gets mapped normally above. No override needed.
 
     const getLowestPosition = (clues: boolean[]): number => {
       let lowestPosition = -1;
@@ -325,6 +350,7 @@ const SteamDetectiveGame: React.FC<SteamDetectiveGameProps> = ({
     const secondaryScreenshotJustAutoRevealed =
       !hasWebms &&
       ((!hasReviewInOrder &&
+        !hasExtrasInOrder &&
         !hasDetailsTags &&
         !prevShowCluesRef.current[4] &&
         showClues[4]) ||
@@ -378,9 +404,10 @@ const SteamDetectiveGame: React.FC<SteamDetectiveGameProps> = ({
         ssJustRevealedNonFirst ||
         ssVisibleAndNewClueRevealed)
     ) {
-      // If MFD carousel is currently shown, add extra scroll to account for its height
+      // If MFD carousel or extras clue is currently shown, add extra scroll to account for its height
       const moreFromDevIsShown = showClues[7];
-      const scrollAmount = moreFromDevIsShown ? 380 : 220;
+      const extrasIsShown = showClues[8];
+      const scrollAmount = moreFromDevIsShown || extrasIsShown ? 380 : 220;
 
       setTimeout(() => {
         window.scrollBy({

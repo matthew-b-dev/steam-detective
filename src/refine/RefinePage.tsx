@@ -37,6 +37,14 @@ const cloneGameMap = (map: SteamGameMap): SteamGameMap => {
       developerDescription: game.developerDescription,
       webms: game.webms ? [...game.webms] : undefined,
       webmKeepPlayingOnComplete: game.webmKeepPlayingOnComplete,
+      extrasClue: game.extrasClue
+        ? {
+            achievements: game.extrasClue.achievements
+              ? game.extrasClue.achievements.map((a) => ({ ...a }))
+              : undefined,
+            achievementsTotal: game.extrasClue.achievementsTotal,
+          }
+        : undefined,
     };
   }
   return clone;
@@ -405,6 +413,30 @@ export const RefinePage: React.FC = () => {
         lines.push(
           `    moreFromThisDeveloper: ${JSON.stringify(game.moreFromThisDeveloper)},`,
         );
+      }
+      if (game.extrasClue) {
+        lines.push(`    extrasClue: {`);
+        if (
+          game.extrasClue.achievements &&
+          game.extrasClue.achievements.length > 0
+        ) {
+          lines.push(`      achievements: [`);
+          for (const ach of game.extrasClue.achievements) {
+            const descPart = ach.desc
+              ? `, desc: ${JSON.stringify(ach.desc)}`
+              : '';
+            lines.push(
+              `        { name: ${JSON.stringify(ach.name)}${descPart}, img: ${JSON.stringify(ach.img)} },`,
+            );
+          }
+          lines.push(`      ],`);
+        }
+        if (game.extrasClue.achievementsTotal != null) {
+          lines.push(
+            `      achievementsTotal: ${game.extrasClue.achievementsTotal},`,
+          );
+        }
+        lines.push(`    },`);
       }
       if (game.developerDescription) {
         lines.push(

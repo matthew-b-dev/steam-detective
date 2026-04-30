@@ -11,5 +11,6 @@ export { ClueDetails } from './ClueDetails';
 export { ClueTags } from './ClueTags';
 export { ClueMoreFromDeveloper } from './ClueMoreFromDeveloper';
 export { ClueWebm } from './ClueWebm';
+export { ClueExtras } from './ClueExtras';
 export { default as SteamDetectiveFeedbackButtons } from './SteamDetectiveFeedbackButtons';
 export * from './utils';

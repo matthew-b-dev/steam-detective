@@ -17,6 +17,7 @@ import { RefineDetails } from './RefineDetails.tsx';
 import { RefineTags } from './RefineTags.tsx';
 import { RefineReviews } from './RefineReviews.tsx';
 import { RefineMoreFromDeveloper } from './RefineMoreFromDeveloper.tsx';
+import { RefineExtras } from './RefineExtras.tsx';
 import ThumbsUpIcon from '../assets/thumbsup.svg?react';
 import ThumbsDownIcon from '../assets/thumbsdown.svg?react';
 import { renderCensoredReview } from '../components/SteamDetective/utils';
@@ -32,7 +33,14 @@ interface RefineGameViewProps {
   onUpdate: (patch: Partial<SteamGame>) => void;
 }
 
-type ClueType = 'desc' | 'details' | 'tags' | 'ss' | 'review' | 'details+tags';
+type ClueType =
+  | 'desc'
+  | 'details'
+  | 'tags'
+  | 'ss'
+  | 'review'
+  | 'extras'
+  | 'details+tags';
 
 const CLUE_LABELS: Record<ClueType, string> = {
   desc: 'Description',
@@ -40,6 +48,7 @@ const CLUE_LABELS: Record<ClueType, string> = {
   tags: 'Tags',
   ss: 'Screenshot',
   review: 'Review',
+  extras: 'Extras',
   'details+tags': 'Details+Tags',
 };
 
@@ -107,24 +116,44 @@ export const RefineGameView: React.FC<RefineGameViewProps> = ({
     DEFAULT_CLUE_ORDER) as ClueType[];
   const hasSsInOrder = clueOrder.includes('ss');
   const hasReviewInOrder = clueOrder.includes('review');
+  const hasExtrasInOrder = clueOrder.includes('extras');
   // MFD is no longer part of clueOrder — it's always bundled with Details
   const hasMFD = (game.moreFromThisDeveloper?.length ?? 0) > 0;
 
-  // Base order excludes 'review'
-  const baseClueOrder = clueOrder.filter((c) => c !== 'review') as ClueType[];
+  // Base order excludes 'review' and 'extras'
+  const baseClueOrder = clueOrder.filter(
+    (c) => c !== 'review' && c !== 'extras',
+  ) as ClueType[];
   // 1-indexed position of 'review' within the full clueOrder, or null
   const reviewOrderPosition: number | null = hasReviewInOrder
     ? clueOrder.indexOf('review') + 1
     : null;
+  // 1-indexed position of 'extras' within the full clueOrder, or null
+  const extrasOrderPosition: number | null = hasExtrasInOrder
+    ? clueOrder.indexOf('extras') + 1
+    : null;
 
-  /** Rebuild clueOrder by inserting 'review' back at its position into baseOrder. */
+  /**
+   * Rebuild clueOrder by inserting 'review' and/or 'extras' back at their
+   * 1-indexed positions into the base order. Insertions are applied
+   * right-to-left (descending position) to preserve correctness.
+   */
   const rebuildClueOrder = (
     newBase: ClueType[],
     newReviewPos: number | null,
+    newExtrasPos: number | null = extrasOrderPosition,
   ): ClueType[] => {
-    if (newReviewPos === null) return newBase;
     const result = [...newBase] as ClueType[];
-    result.splice(newReviewPos - 1, 0, 'review');
+    // Collect insertions sorted by position descending to avoid index shifts
+    const inserts: { pos: number; type: ClueType }[] = [];
+    if (newReviewPos !== null)
+      inserts.push({ pos: newReviewPos, type: 'review' });
+    if (newExtrasPos !== null)
+      inserts.push({ pos: newExtrasPos, type: 'extras' });
+    inserts.sort((a, b) => b.pos - a.pos);
+    for (const { pos, type } of inserts) {
+      result.splice(Math.min(pos - 1, result.length), 0, type);
+    }
     return result;
   };
 
@@ -304,13 +333,17 @@ export const RefineGameView: React.FC<RefineGameViewProps> = ({
     const newBase = [...baseClueOrder] as ClueType[];
     newBase[index] = value;
     onUpdate({
-      clueOrder: rebuildClueOrder(newBase, reviewOrderPosition),
+      clueOrder: rebuildClueOrder(
+        newBase,
+        reviewOrderPosition,
+        extrasOrderPosition,
+      ),
     });
   };
 
   const handleReviewPositionChange = (newPos: number) => {
     onUpdate({
-      clueOrder: rebuildClueOrder(baseClueOrder, newPos),
+      clueOrder: rebuildClueOrder(baseClueOrder, newPos, extrasOrderPosition),
     });
   };
 
@@ -328,7 +361,11 @@ export const RefineGameView: React.FC<RefineGameViewProps> = ({
       ) as ClueType[];
       newBase.splice(firstIdx >= 0 ? firstIdx : 0, 0, 'details+tags');
       onUpdate({
-        clueOrder: rebuildClueOrder(newBase, reviewOrderPosition),
+        clueOrder: rebuildClueOrder(
+          newBase,
+          reviewOrderPosition,
+          extrasOrderPosition,
+        ),
       });
     } else {
       // Replace 'details+tags' with 'tags' then 'details' at its position
@@ -336,7 +373,11 @@ export const RefineGameView: React.FC<RefineGameViewProps> = ({
       const newBase = [...baseClueOrder] as ClueType[];
       newBase.splice(idx, 1, 'tags', 'details');
       onUpdate({
-        clueOrder: rebuildClueOrder(newBase, reviewOrderPosition),
+        clueOrder: rebuildClueOrder(
+          newBase,
+          reviewOrderPosition,
+          extrasOrderPosition,
+        ),
       });
     }
   };
@@ -346,16 +387,51 @@ export const RefineGameView: React.FC<RefineGameViewProps> = ({
       // Enable: insert review at position 4 (or end of baseClueOrder if shorter)
       const defaultPos = Math.min(4, baseClueOrder.length + 1);
       onUpdate({
-        clueOrder: rebuildClueOrder(baseClueOrder, defaultPos),
+        clueOrder: rebuildClueOrder(
+          baseClueOrder,
+          defaultPos,
+          extrasOrderPosition,
+        ),
       });
     } else {
       // Disable: remove 'review' from clueOrder and clear both reviewClue and reviewClues
       onUpdate({
-        clueOrder: rebuildClueOrder(baseClueOrder, null),
+        clueOrder: rebuildClueOrder(baseClueOrder, null, extrasOrderPosition),
         reviewClue: undefined,
         reviewClues: undefined,
       });
     }
+  };
+
+  const handleExtrasClueToggle = (checked: boolean) => {
+    if (checked) {
+      // Enable: insert extras at position after base clues (after review if present)
+      const defaultPos = Math.min(
+        baseClueOrder.length + 1,
+        reviewOrderPosition
+          ? reviewOrderPosition + 1
+          : baseClueOrder.length + 1,
+      );
+      onUpdate({
+        clueOrder: rebuildClueOrder(
+          baseClueOrder,
+          reviewOrderPosition,
+          defaultPos,
+        ),
+      });
+    } else {
+      // Disable: remove 'extras' from clueOrder and clear extrasClue data
+      onUpdate({
+        clueOrder: rebuildClueOrder(baseClueOrder, reviewOrderPosition, null),
+        extrasClue: undefined,
+      });
+    }
+  };
+
+  const handleExtrasPositionChange = (newPos: number) => {
+    onUpdate({
+      clueOrder: rebuildClueOrder(baseClueOrder, reviewOrderPosition, newPos),
+    });
   };
 
   const handleMFDToggle = (checked: boolean) => {
@@ -514,7 +590,11 @@ export const RefineGameView: React.FC<RefineGameViewProps> = ({
                       'ss' as ClueType,
                     ];
                     onUpdate({
-                      clueOrder: rebuildClueOrder(newBase, reviewOrderPosition),
+                      clueOrder: rebuildClueOrder(
+                        newBase,
+                        reviewOrderPosition,
+                        extrasOrderPosition,
+                      ),
                     });
                   } else {
                     const withoutSs = baseClueOrder
@@ -524,6 +604,7 @@ export const RefineGameView: React.FC<RefineGameViewProps> = ({
                       clueOrder: rebuildClueOrder(
                         withoutSs.length === 3 ? withoutSs : DEFAULT_CLUE_ORDER,
                         reviewOrderPosition,
+                        extrasOrderPosition,
                       ),
                     });
                   }
@@ -571,6 +652,35 @@ export const RefineGameView: React.FC<RefineGameViewProps> = ({
                   <option value={2}>2</option>
                   <option value={3}>3</option>
                   <option value={4}>4</option>
+                </select>
+              </div>
+            )}
+            {/* Use Extras clue checkbox */}
+            <label className='flex items-center gap-2 cursor-pointer'>
+              <input
+                type='checkbox'
+                checked={hasExtrasInOrder}
+                onChange={(e) => handleExtrasClueToggle(e.target.checked)}
+                className='w-4 h-4 accent-amber-500'
+              />
+              <span className='text-xs text-amber-300'>Use Extras clue</span>
+            </label>
+            {/* Extras position dropdown */}
+            {hasExtrasInOrder && (
+              <div className='flex items-center gap-2'>
+                <span className='text-xs text-gray-400'>Extras @ Clue #</span>
+                <select
+                  value={extrasOrderPosition ?? baseClueOrder.length + 1}
+                  onChange={(e) =>
+                    handleExtrasPositionChange(Number(e.target.value))
+                  }
+                  className='bg-zinc-800 border border-zinc-600 rounded px-2 py-1 text-sm'
+                >
+                  <option value={1}>1</option>
+                  <option value={2}>2</option>
+                  <option value={3}>3</option>
+                  <option value={4}>4</option>
+                  <option value={5}>5</option>
                 </select>
               </div>
             )}
@@ -812,12 +922,21 @@ export const RefineGameView: React.FC<RefineGameViewProps> = ({
 
         {/* User Tags */}
         <RefineTags game={game} isComplete={revealAll} onUpdate={onUpdate} />
-        {/* More from this Developer section - canonical between tags and review */}
+        {/* More from this Developer section - canonical between tags and extras/review */}
         <div className='bg-[#171a21] rounded-lg px-4 py-4'>
           <div className='text-xs text-gray-400 uppercase tracking-wide mb-3'>
             More from this Developer
           </div>
           <RefineMoreFromDeveloper game={game} onUpdate={onUpdate} />
+        </div>
+        {/* Extras section - canonical second-to-last (above Review) */}
+        <div className='bg-[#171a21] rounded-lg px-4 py-4'>
+          <RefineExtras
+            game={game}
+            onUpdate={onUpdate}
+            hasExtrasInOrder={hasExtrasInOrder}
+            onToggleExtras={handleExtrasClueToggle}
+          />
         </div>
         {/* Reviews section - always shown so you can browse & select */}
         <div className='bg-[#171a21] rounded-lg px-4 py-4'>

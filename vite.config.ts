@@ -34,11 +34,13 @@ export default defineConfig({
       '/steam-review-proxy': {
         target: 'https://steamcommunity.com',
         changeOrigin: true,
+        followRedirects: true,
         rewrite: (path) => path.replace(/^\/steam-review-proxy/, ''),
       },
       '/steam-store-proxy': {
         target: 'https://store.steampowered.com',
         changeOrigin: true,
+        followRedirects: true,
         rewrite: (path) => path.replace(/^\/steam-store-proxy/, ''),
       },
     },
