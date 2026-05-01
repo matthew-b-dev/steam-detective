@@ -60,6 +60,7 @@ export interface SteamGame {
     achievementsTotal?: number; // Total achievements found during fetch (for display: "X of N")
   }; // Optional extras clue (replaces secondary screenshot). Canonical position just above Review.
   searchTerms?: string[]; // Additional search terms/aliases for the dropdown
+  noMatchTerms?: string[]; // Query tokens that should NOT match this game (prevents fuzzy false positives)
   excludeOptions?: string[]; // Game names to exclude from the search dropdown only for this puzzle
   features: string[];
   allReviewSummary: ReviewSummary;

@@ -27,6 +27,7 @@ const cloneGameMap = (map: SteamGameMap): SteamGameMap => {
         : undefined,
       clueOrder: game.clueOrder ? [...game.clueOrder] : undefined,
       searchTerms: game.searchTerms ? [...game.searchTerms] : undefined,
+      noMatchTerms: game.noMatchTerms ? [...game.noMatchTerms] : undefined,
       reviewClue: game.reviewClue ? { ...game.reviewClue } : undefined,
       reviewClues: game.reviewClues
         ? game.reviewClues.map((r) => ({ ...r }))
@@ -329,6 +330,9 @@ export const RefinePage: React.FC = () => {
       lines.push(`    clueOrder: ${JSON.stringify(effectiveClueOrder)},`);
       if (game.searchTerms && game.searchTerms.length > 0) {
         lines.push(`    searchTerms: ${JSON.stringify(game.searchTerms)},`);
+      }
+      if (game.noMatchTerms && game.noMatchTerms.length > 0) {
+        lines.push(`    noMatchTerms: ${JSON.stringify(game.noMatchTerms)},`);
       }
       if (game.excludeOptions && game.excludeOptions.length > 0) {
         lines.push(

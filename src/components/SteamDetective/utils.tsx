@@ -299,8 +299,7 @@ export const renderUncensoredDescription = (
 };
 
 // Helper to render review text with censored parts and newline support
-const STYLED_MARKER_RE_G =
-  /(?:\.\.\. )?\(edited for length\)|\(Some game titles partially redacted\)/g;
+const STYLED_MARKER_RE_G = /(?:\.\.\. )?\(edited for length\)|^\(.+\)$/g;
 const editedForLengthStyle: React.CSSProperties = {
   fontStyle: 'italic',
   color: '#8a909a',

@@ -566,6 +566,11 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile3: 'Dicey Dungeons',
   },
   '2026-05-02': {
+    caseFile1: 'Okami HD',
+    caseFile2: 'Chained Together',
+    caseFile3: 'The Alters',
+  },
+  '2026-05-03': {
     caseFile1: "Don't Starve",
     caseFile2: 'Fields of Mistria',
     caseFile3: 'Sonic Mania',
@@ -582,12 +587,14 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
 // Easy: State of Decay 2
 // Easy: Any AC Game (last 3/29): Revelations, Unity, (1), (2), Brotherhood, Rogue, Syndicate, Valhalla, Mirage
 
+// Med: Trackmania
 // Med: Another Crab's Treasure
 // Med: Luck be a Landlord
 // Med: WEBFISHING (60k rev)? needs work
 // Med: Tropico 4 (Last Tropico 3/15)
 // Med: Clustertruck
 
+// Hard: The Roottrees are Dead
 // Hard: Shadow Tactics: Blades of the Shogun
 // Hard: Albion Online
 // Hard (Fully Refined): Tales of Arise

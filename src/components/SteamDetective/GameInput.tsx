@@ -1,7 +1,11 @@
 import { useState, useMemo, useEffect } from 'react';
 import Select from 'react-select';
 import MiniSearch from 'minisearch';
-import { allGameNames, gameSearchTerms } from '../../all_game_names.generated';
+import {
+  allGameNames,
+  gameSearchTerms,
+  gameNoMatchTerms,
+} from '../../all_game_names.generated';
 import { arabicNumerals, digitNumerals, type MissedGuess } from '../../utils';
 import {
   SEARCH_DEBOUNCE_MS,
@@ -154,6 +158,17 @@ export const GameInput: React.FC<GameInputProps> = ({
       const excludeSet = new Set(excludeOptions);
       results = results.filter((r) => !excludeSet.has(r.id as string));
     }
+
+    // Suppress games whose noMatchTerms appear as tokens in the query.
+    // e.g. "The Alters" has noMatchTerms: ['aliens'] so searching "The Aliens" won't show it.
+    const queryTokens = new Set(
+      tokenize(debouncedInput).map((t) => t.toLowerCase()),
+    );
+    results = results.filter((r) => {
+      const blocked = gameNoMatchTerms[r.id as string];
+      if (!blocked || blocked.length === 0) return true;
+      return !blocked.some((term) => queryTokens.has(term.toLowerCase()));
+    });
 
     // Post-sort: prefer titles that start with the query over fuzzy/substring matches.
     // Tier 0: title starts with the full query string ("border" -> "Borderlands")

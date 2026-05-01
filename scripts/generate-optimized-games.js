@@ -67,6 +67,7 @@ if (!gameDetailsMatch) {
 console.log('🔍 Parsing game details...');
 const allGameNames = [];
 const gameSearchTermsMap = new Map(); // Map of game name -> search terms
+const gameNoMatchTermsMap = new Map(); // Map of game name -> no-match terms
 const gamesToInclude = {}; // In dev: all games, in prod: only demo games
 let unusedGameNames = [];
 
@@ -92,6 +93,15 @@ for (const match of gameEntryMatches) {
       try {
         const searchTerms = eval(searchTermsMatch[1]);
         gameSearchTermsMap.set(gameName, searchTerms);
+      } catch (e) {
+        // Ignore parse errors
+      }
+    }
+    const noMatchTermsMatch = gameObjText.match(/noMatchTerms:\s*(\[[^\]]+\])/);
+    if (noMatchTermsMatch) {
+      try {
+        const noMatchTerms = eval(noMatchTermsMatch[1]);
+        gameNoMatchTermsMap.set(gameName, noMatchTerms);
       } catch (e) {
         // Ignore parse errors
       }
@@ -236,6 +246,20 @@ generatedAllNames +=
 for (const [gameName, searchTerms] of gameSearchTermsMap.entries()) {
   const escapedName = gameName.replace(/'/g, "\\'");
   const escapedTerms = searchTerms
+    .map((term) => `'${term.replace(/'/g, "\\'")}'`)
+    .join(', ');
+  generatedAllNames += `  '${escapedName}': [${escapedTerms}],\n`;
+}
+generatedAllNames += '};\n';
+
+// Also export no-match terms map
+generatedAllNames +=
+  '\n// Map of game names to query tokens that should NOT match them (prevents fuzzy false positives)\n';
+generatedAllNames +=
+  'export const gameNoMatchTerms: Record<string, string[]> = {\n';
+for (const [gameName, noMatchTerms] of gameNoMatchTermsMap.entries()) {
+  const escapedName = gameName.replace(/'/g, "\\'");
+  const escapedTerms = noMatchTerms
     .map((term) => `'${term.replace(/'/g, "\\'")}'`)
     .join(', ');
   generatedAllNames += `  '${escapedName}': [${escapedTerms}],\n`;

@@ -161,10 +161,14 @@ export const RefineGameView: React.FC<RefineGameViewProps> = ({
   const gameOptions = useMemo(() => {
     const allGameNames = new Set<string>();
     const gameMap = new Map<string, string[]>();
+    const noMatchMap = new Map<string, string[]>();
 
     Object.values(allGames).forEach((g) => {
       allGameNames.add(g.name);
       gameMap.set(g.name, g.searchTerms || []);
+      if (g.noMatchTerms && g.noMatchTerms.length > 0) {
+        noMatchMap.set(g.name, g.noMatchTerms);
+      }
     });
 
     dummyGames.forEach((name) => {
@@ -179,6 +183,7 @@ export const RefineGameView: React.FC<RefineGameViewProps> = ({
         value: name,
         label: name,
         searchTerms: gameMap.get(name) || [],
+        noMatchTerms: noMatchMap.get(name),
       }))
       .sort((a, b) => a.label.localeCompare(b.label));
   }, [allGames]);
@@ -251,8 +256,19 @@ export const RefineGameView: React.FC<RefineGameViewProps> = ({
     };
 
     const scoreMap = new Map(results.map((r, i) => [r.id as string, i]));
+    const queryTokens = new Set(
+      debouncedSearchInput
+        .split(/[\s\-:._&|()]+/)
+        .map((t) => t.replace(/[^a-zA-Z0-9]/g, '').toLowerCase())
+        .filter((t) => t.length > 0),
+    );
     return gameOptions
       .filter((o) => scoreMap.has(o.value))
+      .filter((o) => {
+        const blocked = o.noMatchTerms;
+        if (!blocked || blocked.length === 0) return true;
+        return !blocked.some((term) => queryTokens.has(term.toLowerCase()));
+      })
       .sort((a, b) => {
         const ta = tier(a.value);
         const tb = tier(b.value);

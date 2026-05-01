@@ -73,6 +73,7 @@ export const ClueWebm: React.FC<ClueWebmProps> = ({
               loop
               muted
               playsInline
+              preload='auto'
               className='max-w-full h-auto rounded-lg'
               onPlaying={() =>
                 setLoadingStates((prev) => {

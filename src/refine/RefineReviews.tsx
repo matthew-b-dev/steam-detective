@@ -93,8 +93,7 @@ const parseSteamReviewHtml = (
   };
 };
 
-const STYLED_MARKER_RE_G =
-  /(?:\.\.\. )?\(edited for length\)|\(Some game titles partially redacted\)/g;
+const STYLED_MARKER_RE_G = /(?:\.\.\. )?\(edited for length\)|^\(.+\)$/g;
 const markerStyle: React.CSSProperties = {
   fontStyle: 'italic',
   color: '#8a909a',
