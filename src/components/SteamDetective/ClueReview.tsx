@@ -201,16 +201,15 @@ const ReviewCard: React.FC<{ review: Review; isComplete: boolean }> = ({
         >
           <img
             src={review.reviewer.avatarUrl}
-            alt={review.reviewer.name}
             className='flex-shrink-0 object-cover'
-            style={{ width: 32, height: 32 }}
+            style={{ width: 34, height: 34, border: '2px solid #5d5d5d' }}
           />
           <div className='flex flex-col'>
             <span className='text-[12px] text-gray-300 leading-tight'>
               {review.reviewer.name}
             </span>
             {review.reviewer.followers != null && (
-              <span className='text-[10px] text-gray-500 leading-tight'>
+              <span className='text-[10px] text-gray-400 leading-tight'>
                 {review.reviewer.followers.toLocaleString()} followers
               </span>
             )}

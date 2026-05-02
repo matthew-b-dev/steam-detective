@@ -169,7 +169,6 @@ export const dummyGames: string[] = [
   'Castlevania: Lords of Shadow 2',
   'Farming Simulator 15',
   'Hearthstone: Heroes of Warcraft',
-  'SMITE',
   "QUBE: Director's Cut",
   'Sunless Sea',
   'One Piece: Unlimited World Red',

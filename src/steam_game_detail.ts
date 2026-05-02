@@ -19128,12 +19128,12 @@ export const steamGameDetails: SteamGameMap = {
       achievements: [
         {
           name: 'Release the [[Kraken]]!',
-          desc: 'As [[Poseidon]] hit three or more enemy [[gods]] with your ultimate.',
+          desc: 'As [[Poseidon]] hit three or more enemy [[gods]] with your [[ultimate]].',
           img: 'https://cdn.fastly.steamstatic.com/steamcommunity/public/images/apps/386360/139cc1a8aae733f2011dfebf5bedd05d76d00a34.jpg',
         },
         {
           name: "Now It's A Party",
-          desc: 'As Maman Brigitte, hit 3 enemy [[gods]] with a single Explosion of Souls',
+          desc: 'As Maman Brigitte, hit 3 enemy [[gods]] with a single Explosion of Souls.',
           img: 'https://cdn.fastly.steamstatic.com/steamcommunity/public/images/apps/386360/1c74b4d5dfb8dbfb0d7ef105e7a83c63bd39ca7e.jpg',
         },
       ],
