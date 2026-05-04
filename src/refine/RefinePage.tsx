@@ -354,6 +354,11 @@ export const RefinePage: React.FC = () => {
       if (game.suggestedBy) {
         lines.push(`    suggestedBy: ${JSON.stringify(game.suggestedBy)},`);
       }
+      if (game.gameCompleteMessage) {
+        lines.push(
+          `    gameCompleteMessage: ${JSON.stringify(game.gameCompleteMessage)},`,
+        );
+      }
       if (game.gameCompleteYoutubeEmbed) {
         lines.push(
           `    gameCompleteYoutubeEmbed: ${JSON.stringify(game.gameCompleteYoutubeEmbed)},`,

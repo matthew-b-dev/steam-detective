@@ -45,6 +45,7 @@ interface GameCompleteProps {
   previousTotalScore?: number; // Total score before this case file
   isCurrentCaseFile?: boolean;
   suggestedBy?: string;
+  gameCompleteMessage?: string;
   gameCompleteYoutubeEmbed?: {
     url: string;
     textReveal?: string;
@@ -87,6 +88,7 @@ export const GameComplete: React.FC<GameCompleteProps> = ({
   previousTotalScore = 0,
   isCurrentCaseFile = true,
   suggestedBy,
+  gameCompleteMessage,
   gameCompleteYoutubeEmbed,
 }) => {
   const [animatedScore, setAnimatedScore] = useState(previousTotalScore);
@@ -210,6 +212,12 @@ export const GameComplete: React.FC<GameCompleteProps> = ({
           <div className='flex items-center justify-center gap-1 mb-2'>
             <StarIcon className='w-5 h-5 text-yellow-500' />
             <span className='text-white font-semibold'>Perfect</span>
+          </div>
+        )}
+        {/* Case File Complete Message */}
+        {gameCompleteMessage && (
+          <div className='text-center text-gray-300 text-sm mb-2'>
+            {gameCompleteMessage}
           </div>
         )}
         {/* Game Name */}

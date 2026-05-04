@@ -23121,9 +23121,9 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/482400/ss_f4a9713413a54cd9ffea88c84c3197d87012b0eb.600x338.jpg',
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/482400/ss_d8f11b2d84bb30139af1ebbb239e0bc84863a36d.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/482400/ss_11e02c61a9029c5a51a65d6667a5e4124b903b30.600x338.jpg',
     shortDescription:
-      'A first-person fight to the death in the depths of space!',
+      '[[((S))ystem Shock]] is the fully-fledged remake of the ground breaking First-Person Immersive Sim from 1994, combining cult  gameplay with all-new HD visuals; it even has the original voice actor of SHODAN, one of gaming’s most iconic villains. Witness the rebirth of one of the greatest and most influential Sci-fi games ever created.',
     releaseDate: 'May 30, 2023',
     developer: 'Nightdive Studios',
     publisher: 'Atari, Nightdive Studios',
@@ -23134,16 +23134,16 @@ export const steamGameDetails: SteamGameMap = {
       rating: 'Very Positive',
     },
     userTags: [
-      'Action',
+      'Remake',
       'Immersive Sim',
-      'Adventure',
+      'Action',
       'Cyberpunk',
       'Sci-fi',
       'Horror',
-      'Remake',
+      'Adventure',
       'FPS',
       'First-Person',
-      'Atmospheric',
+      'Kickstarter',
       'Singleplayer',
       'Survival Horror',
       'Space',
@@ -23155,11 +23155,34 @@ export const steamGameDetails: SteamGameMap = {
       'Kickstarter',
       'Survival',
     ],
-    blurredUserTags: ['Horror'],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: [
+      'Immersive Sim',
+      'Horror',
+      'Adventure',
+      'Action',
+      'Cyberpunk',
+      'Sci-fi',
+    ],
+    overrideCensoredTitle: 'S||yste||m S||h||o||ck||',
+    clueOrder: ['details+tags', 'extras', 'desc'],
     debugProcessed: true,
     debugRefined: true,
     difficulty: 'Hard',
+    extrasClue: {
+      achievements: [
+        {
+          name: 'En Garde!',
+          desc: 'Acquire a Laser Rapier',
+          img: 'https://cdn.fastly.steamstatic.com/steamcommunity/public/images/apps/482400/6cf9cdcb6c72f6efc0b12783669badae7731abe8.jpg',
+        },
+        {
+          name: 'All Patched Up',
+          desc: 'Use every type of Dermal Patch',
+          img: 'https://cdn.fastly.steamstatic.com/steamcommunity/public/images/apps/482400/592667b180c47e494d4780902e0078cb206b3d02.jpg',
+        },
+      ],
+      achievementsTotal: 46,
+    },
   },
   '485510': {
     name: 'Nioh',
@@ -25292,11 +25315,11 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/548570/ss_9d50fbd7a5d8d9ed26818d2cba9d49c776f75d86.600x338.jpg',
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/548570/ss_97a617a66863191842c1d8ec71dd3947fd14f6fb.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/548570/ss_74bfa9f1c8064d0e63a7d2b5f03158ec819add76.600x338.jpg',
     shortDescription:
-      '||RAGE 2|| brings together two studio powerhouses – Avalanche Studios, masters of open world insanity, and id Software, creators of the first-person shooter – to deliver a carnival of carnage where you can go anywhere, shoot anything, and explode everything.',
+      '[[RAGE 2]] brings together two studio powerhouses – Avalanche Studios, masters of open world insanity, and id Software, creators of the first-person shooter – to deliver a carnival of carnage where you can go anywhere, shoot anything, and explode everything.',
     releaseDate: 'May 13, 2019',
-    developer: 'id Software',
+    developer: '||id Software|| , ||Avalanche Studios||',
     publisher: 'Bethesda Softworks',
     tags: [],
     features: [],
@@ -25309,9 +25332,9 @@ export const steamGameDetails: SteamGameMap = {
       'FPS',
       'Open World',
       'Post-apocalyptic',
-      'Vehicular Combat',
+      'Sequel',
       'Automobile Sim',
-      'Singleplayer',
+      'Vehicular Combat',
       'Gore',
       'Shooter',
       'Violent',
@@ -25321,7 +25344,26 @@ export const steamGameDetails: SteamGameMap = {
       'Exploration',
       'Funny',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    overrideCensoredTitle: 'R||AGE 2||',
+    clueOrder: ['extras', 'details', 'tags', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Medium',
+    extrasClue: {
+      achievements: [
+        {
+          name: 'Overly driven',
+          desc: 'Reach an Overdrive multiplier of 10',
+          img: 'https://cdn.fastly.steamstatic.com/steamcommunity/public/images/apps/548570/40e0deb81de0a906209e16a160ee84bc6854fbdc.jpg',
+        },
+        {
+          name: 'Off With Their Heads',
+          desc: 'Headshot a total of 100 enemies using the Wingstick',
+          img: 'https://cdn.fastly.steamstatic.com/steamcommunity/public/images/apps/548570/0c3a56b184d24558a420cd02b41a460c5ebed3e9.jpg',
+        },
+      ],
+      achievementsTotal: 64,
+    },
   },
   '550650': {
     name: 'Black Squad',
@@ -41431,7 +41473,7 @@ export const steamGameDetails: SteamGameMap = {
       },
     ],
     moreFromThisDeveloper: [
-      { id: 32370, name: 'STAR WARS™ Knights of the Old Republic™' },
+      { id: 32370, name: 'STAR WARS Knights of the Old Republic' },
     ],
   },
   '1238060': {
@@ -43069,14 +43111,14 @@ export const steamGameDetails: SteamGameMap = {
     name: 'STAR WARS: The Old Republic',
     appId: 1286830,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1286830/ss_582b40b9dea8273368826afd425f541aa859bbe6.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1286830/ss_4c0af2dc7d9d63dee90cb5a8d1ebbe4d630ca70f.600x338.jpg',
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1286830/ss_23613f91ee765a1e4e647a183261aeb2ecbc2c86.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1286830/ss_40af51178b6f01c61267e151ff1949eb5b19807a.600x338.jpg',
     shortDescription:
-      '||STAR WARS: The Old Republic|| is a free-to-play MMORPG that puts you at the center of your own story-driven saga. Play as a ||Jedi||, ||Sith||, ||Bounty Hunter||, or one of many other iconic ||STAR WARS|| roles ||in the galaxy far, far away over three thousand years before the classic films.||',
+      '[[STAR WARS(( :))]] ||The Old Republic|| is a free-to-play ||MMORPG|| that puts you at the center of your own story-driven saga. Play as a&nbsp;&nbsp;||Jedi||,&nbsp;&nbsp;||Sith||,&nbsp;&nbsp;||Bounty Hunter||, or one of many other iconic [[STAR WARS]] roles ||in the galaxy far, far away|| over three thousand years before the classic films.',
     releaseDate: 'Dec 20, 2011',
-    developer: 'Broadsword, ||Bio||ware',
-    publisher: '||Electronic Arts||',
+    developer: '||Bioware|| , Broadsword',
+    publisher: 'Electronic Arts',
     tags: ['Massively Multiplayer', 'RPG', 'Free To Play'],
     features: [],
     allReviewSummary: {
@@ -43105,11 +43147,38 @@ export const steamGameDetails: SteamGameMap = {
       'Great Soundtrack',
       'Controller',
     ],
-    blurredUserTags: ['Sci-fi'],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: [
+      'Sci-fi',
+      'MMORPG',
+      'Massively Multiplayer',
+      'Free to Play',
+      'Open World',
+    ],
+    overrideCensoredTitle: 'S||TAR|| W||ARS||: ||The Old Republic||',
+    clueOrder: ['review', 'details+tags', 'desc'],
     debugProcessed: true,
     debugRefined: true,
     difficulty: 'Hard',
+    reviewClues: [
+      {
+        review: 'i would die for HK-||51||',
+        votedUp: true,
+        votesUp: 353,
+        votedFunny: 14,
+        weightedScore: undefined,
+        authorPlaytimeHours: 40,
+        timestamp: 1327536000,
+      },
+      {
+        review:
+          "It was made official today. Development/maintenance of ||SWTOR|| has been fully taken over by Broadsword. While I'm optimistic about the implications of that change for this game, that does not bode well for ||BioWare|| as a studio. [...] \n... (edited for length)",
+        votedUp: true,
+        votesUp: 1,
+        weightedScore: 0.5,
+        authorPlaytimeHours: 782,
+        timestamp: 1686582400,
+      },
+    ],
   },
   '1288320': {
     name: 'Way of the Hunter',

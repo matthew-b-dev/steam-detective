@@ -66,6 +66,7 @@ export interface SteamGame {
   features: string[];
   allReviewSummary: ReviewSummary;
   suggestedBy?: string;
+  gameCompleteMessage?: string; // Optional message displayed above the "Case File #x Solved!" / "The answer was:" line on the case file completion screen
   gameCompleteYoutubeEmbed?: {
     url: string; // YouTube watch URL, e.g. https://www.youtube.com/watch?v=...
     textReveal?: string; // If set, show this text instead of the embed; clicking it reveals the embed

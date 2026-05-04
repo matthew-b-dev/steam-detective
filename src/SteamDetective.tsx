@@ -209,12 +209,18 @@ const SteamDetectiveGame: React.FC<SteamDetectiveGameProps> = ({
       // the secondary screenshot is never a clue and must not appear on completion.
       // Slot[7] is moreFromDev - show on completion only if game has it configured.
       // Slot[8] is extras - show on completion only if game has it configured.
+      // Slot[4] is review-or-secondary-ss. It must only be true when:
+      //   - review is in order (ClueReview renders here), OR
+      //   - no extras in order (secondary screenshot auto-reveals here), OR
+      //   - details+tags combo is active (secondary screenshot also auto-reveals here).
+      // When extras IS in clueOrder (and no review/details+tags), secondary screenshot
+      // was never shown during gameplay and must not appear on completion.
       return [
         true,
         true,
         true,
         true,
-        true,
+        hasReviewInOrder || !hasExtrasInOrder || hasDetailsTags,
         true,
         hasDetailsTags && hasReviewInOrder,
         hasMFD,
@@ -513,6 +519,7 @@ const SteamDetectiveGame: React.FC<SteamDetectiveGameProps> = ({
           previousTotalScore={previousTotalScore}
           isCurrentCaseFile={isCurrentCaseFile}
           suggestedBy={dailyGame.suggestedBy}
+          gameCompleteMessage={dailyGame.gameCompleteMessage}
           gameCompleteYoutubeEmbed={dailyGame.gameCompleteYoutubeEmbed}
         />
         <ClueContainer caseFile={`casefile-${caseFileNumber}`} />

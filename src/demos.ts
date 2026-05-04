@@ -576,6 +576,12 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile3: 'Sam & Max Hit the Road',
   },
   '2026-05-04': {
+    caseFile1: 'STAR WARS: The Old Republic',
+    caseFile2: 'RAGE 2',
+    caseFile3: 'System Shock',
+  },
+  // Hard: Octodad: Dadliest Catch
+  '2026-05-05': {
     caseFile1: "Don't Starve",
     caseFile2: 'Fields of Mistria',
     caseFile3: 'Sonic Mania',
