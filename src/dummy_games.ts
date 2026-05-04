@@ -327,7 +327,6 @@ export const dummyGames: string[] = [
   'Mantis Burn Racing',
   'God Eater 2: Rage Burst',
   'Rez Infinite',
-  'Resident Evil 4',
   'Gravity Rush Remastered',
   'Shu',
   'Yo-Kai Watch 2',

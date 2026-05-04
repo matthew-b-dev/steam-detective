@@ -580,8 +580,13 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile2: 'RAGE 2',
     caseFile3: 'System Shock',
   },
-  // Hard: Octodad: Dadliest Catch
   '2026-05-05': {
+    caseFile1: 'Resident Evil 5',
+    caseFile2: 'Octodad: Dadliest Catch',
+    caseFile3: 'Scribblenauts Unlimited',
+  },
+  // Hard: Octodad: Dadliest Catch
+  '2026-05-06': {
     caseFile1: "Don't Starve",
     caseFile2: 'Fields of Mistria',
     caseFile3: 'Sonic Mania',

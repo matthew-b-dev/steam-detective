@@ -224,7 +224,7 @@ const ReviewCard: React.FC<{ review: Review; isComplete: boolean }> = ({
           style={{ borderColor: 'rgba(255,255,255,0.08)' }}
         >
           {review.votesUp === 0 ? (
-            <span>No one found this review helpful</span>
+            <span>No one has rated this review as helpful yet</span>
           ) : (
             <span>
               {review.votesUp.toLocaleString()}{' '}

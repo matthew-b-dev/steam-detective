@@ -352,7 +352,7 @@ const SteamReviewCard: React.FC<{
           ) : (
             <span>
               {(editableVotesUp ?? review.votesUp) === 0
-                ? 'No one found this review helpful'
+                ? 'No one has rated this review as helpful yet'
                 : `${(editableVotesUp ?? review.votesUp).toLocaleString()} ${(editableVotesUp ?? review.votesUp) === 1 ? 'person' : 'people'} found this review helpful`}
             </span>
           )
