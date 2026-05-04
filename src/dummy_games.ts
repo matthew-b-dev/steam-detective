@@ -740,7 +740,6 @@ export const dummyGames: string[] = [
   'Fight Crab',
   'Kingdom Hearts III: ReMind',
   'Spellbreak',
-  'Sam & Max Save The World Remastered',
   'Genshin Impact',
   'Fury Unleashed',
   'Just Cause',

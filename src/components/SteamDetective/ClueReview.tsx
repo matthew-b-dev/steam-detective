@@ -125,7 +125,7 @@ const ReviewCard: React.FC<{ review: Review; isComplete: boolean }> = ({
     <div>
       {/* Header: thumb + title + hours */}
       <div
-        className='flex items-start gap-3 border-b bg-[#101923]'
+        className='flex items-center gap-3 border-b bg-[#101923]'
         style={{ borderColor: 'rgba(255,255,255,0.1)' }}
       >
         {/* Thumb icon */}
@@ -187,10 +187,36 @@ const ReviewCard: React.FC<{ review: Review; isComplete: boolean }> = ({
       {/* Review text */}
       <div
         key={isComplete ? 'uncensored' : 'censored'}
-        className='py-2 px-2 text-sm text-gray-200 leading-relaxed bg-[#101923]'
+        className={`py-2 px-2 text-sm text-gray-200 leading-relaxed bg-[#101923] ${review.reviewer ? 'border-b' : ''}`}
+        style={{ borderColor: 'rgba(255,255,255,0.1)' }}
       >
         {renderedText}
       </div>
+
+      {/* Reviewer row */}
+      {review.reviewer && (
+        <div
+          className='flex items-center gap-3 px-2 py-2 bg-[#101923]'
+          style={{ borderColor: 'rgba(255,255,255,0.1)' }}
+        >
+          <img
+            src={review.reviewer.avatarUrl}
+            alt={review.reviewer.name}
+            className='flex-shrink-0 object-cover'
+            style={{ width: 32, height: 32 }}
+          />
+          <div className='flex flex-col'>
+            <span className='text-[12px] text-gray-300 leading-tight'>
+              {review.reviewer.name}
+            </span>
+            {review.reviewer.followers != null && (
+              <span className='text-[10px] text-gray-500 leading-tight'>
+                {review.reviewer.followers.toLocaleString()} followers
+              </span>
+            )}
+          </div>
+        </div>
+      )}
 
       {/* Footer: helpful count */}
       {(review.votesUp >= 0 || (review.votedFunny ?? 0) > 0) && (
@@ -198,13 +224,6 @@ const ReviewCard: React.FC<{ review: Review; isComplete: boolean }> = ({
           className='py-2 text-[11px] text-gray-400 border-t flex flex-col gap-0.5'
           style={{ borderColor: 'rgba(255,255,255,0.08)' }}
         >
-          {(review.votedFunny ?? 0) > 0 && (
-            <span>
-              {review.votedFunny!.toLocaleString()}{' '}
-              {review.votedFunny === 1 ? 'person' : 'people'} found this review
-              funny
-            </span>
-          )}
           {review.votesUp === 0 ? (
             <span>No one found this review helpful</span>
           ) : (
@@ -212,6 +231,13 @@ const ReviewCard: React.FC<{ review: Review; isComplete: boolean }> = ({
               {review.votesUp.toLocaleString()}{' '}
               {review.votesUp === 1 ? 'person' : 'people'} found this review
               helpful
+            </span>
+          )}
+          {(review.votedFunny ?? 0) > 0 && (
+            <span>
+              {review.votedFunny!.toLocaleString()}{' '}
+              {review.votedFunny === 1 ? 'person' : 'people'} found this review
+              funny
             </span>
           )}
         </div>

@@ -19066,9 +19066,10 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/386360/ss_b49630110e5c4603dc4d5a46acda198a8b2a5dde.600x338.jpg',
     shortDescription:
-      "Join 40+ million players in ||SMITE||, the ||Battle||ground of the ||Gods||! Wield ||Thor's hammer||, turn your foes to stone as ||Medusa||, or flex your ||divine|| power as one of 100+ other ||mythological|| icons. Become ||a God|| and play FREE today!",
+      "Join 40+ million players in [[SMITE]], the MOBA Battleground of the ||Gods||! Wield ||Thor's|| hammer, turn your foes to stone as ||Medusa||, or flex your ||divine|| power as one of 100+ other ||mythological|| icons. Become a ||God|| and play FREE today!",
+    originalReleaseDate: 'Mar 25, 2014 (Standalone)',
     releaseDate: 'Sep 8, 2015',
-    developer: 'Titan Forge Games',
+    developer: '||Titan|| Forge Games',
     publisher: 'Hi-Rez Studios',
     tags: [
       'Action',
@@ -19083,7 +19084,7 @@ export const steamGameDetails: SteamGameMap = {
     ],
     features: [],
     allReviewSummary: {
-      count: 752,
+      count: 119908,
       rating: 'Mostly Positive',
     },
     userTags: [
@@ -19108,11 +19109,36 @@ export const steamGameDetails: SteamGameMap = {
       'Casual',
       'Strategy RPG',
     ],
-    blurredUserTags: ['Mythology', 'Third Person'],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: [
+      'Mythology',
+      'MOBA',
+      'Strategy',
+      'MMORPG',
+      'Team-Based',
+      'Nostalgia',
+      'Free to Play',
+      'Third Person',
+    ],
+    overrideCensoredTitle: 'S||MIT||E',
+    clueOrder: ['details+tags', 'extras', 'desc'],
     debugProcessed: true,
     debugRefined: true,
     difficulty: 'Easy',
+    extrasClue: {
+      achievements: [
+        {
+          name: 'Release the [[Kraken]]!',
+          desc: 'As [[Poseidon]] hit three or more enemy [[gods]] with your ultimate.',
+          img: 'https://cdn.fastly.steamstatic.com/steamcommunity/public/images/apps/386360/139cc1a8aae733f2011dfebf5bedd05d76d00a34.jpg',
+        },
+        {
+          name: "Now It's A Party",
+          desc: 'As Maman Brigitte, hit 3 enemy [[gods]] with a single Explosion of Souls',
+          img: 'https://cdn.fastly.steamstatic.com/steamcommunity/public/images/apps/386360/1c74b4d5dfb8dbfb0d7ef105e7a83c63bd39ca7e.jpg',
+        },
+      ],
+      achievementsTotal: 319,
+    },
   },
   '386940': {
     name: 'Ultimate Chicken Horse',
@@ -44810,11 +44836,11 @@ export const steamGameDetails: SteamGameMap = {
     name: 'Cruelty Squad',
     appId: 1388770,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1388770/ss_dddae3edc786197aeb01c6db8c0cdf4bce9a8bb9.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1388770/ss_aec690a2ac46f81dfb2f3d86843fed3c33b68a44.600x338.jpg',
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1388770/ss_5234b051b742a8cf758fc35895ca563880de1001.600x338.jpg',
     shortDescription:
-      'An immersive power fantasy simulator with tactical stealth elements set in a sewage infused garbage world',
+      "[[Cruelty Squa((d))]] is a psychedelic tactical first person shooter set in the hardcore gig economy of corporate liquidations. You're an emotionally dead combat-substance fueled grunt of [[Cruelty Squa((d))]], a depraved subsidiary company tasked with performing wetworks for its host conglomerate. Will you make the Corporate Arch Demoness proud or succumb to bitter tears of failure?",
     releaseDate: 'Jun 15, 2021',
     developer: 'Consumer Softproducts',
     publisher: 'Consumer Softproducts',
@@ -44833,7 +44859,7 @@ export const steamGameDetails: SteamGameMap = {
       'Psychedelic',
       'Shooter',
       'Cyberpunk',
-      'First-Person',
+      'First Person',
       'Dark Humor',
       'Lore-Rich',
       'Dystopian',
@@ -44841,7 +44867,29 @@ export const steamGameDetails: SteamGameMap = {
       'Stylized',
       'Action',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    overrideCensoredTitle: 'C||ruelt||y ||S||q||ua||d',
+    clueOrder: ['review', 'details+tags', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Hard',
+    reviewClues: [
+      {
+        review:
+          "||Cruelty Squad|| is extremely unsettling and very, very cool. It's like if Angelfire and Geocities had a baby, then that baby had a baby with a haunted build of Deus Ex.",
+        votedUp: true,
+        votesUp: 1117,
+        votedFunny: 405,
+        weightedScore: undefined,
+        authorPlaytimeHours: 14.2,
+        timestamp: 1626912000,
+        reviewer: {
+          name: 'Jeff Gerstmann',
+          avatarUrl:
+            'https://avatars.fastly.steamstatic.com/e665a3a01fa7b34b66383383db2fa8c2ef1cafab_medium.jpg',
+          followers: 937,
+        },
+      },
+    ],
   },
   '1390350': {
     name: 'Webbed',
@@ -55142,9 +55190,6 @@ export const steamGameDetails: SteamGameMap = {
         timestamp: 1719115200,
       },
     ],
-    extrasClue: {
-      achievementsTotal: 16,
-    },
   },
   '2593370': {
     name: 'The Hungry Lamb: Traveling in the Late Ming Dynasty',
@@ -57425,6 +57470,52 @@ export const steamGameDetails: SteamGameMap = {
     extrasClue: {
       achievementsTotal: 56,
     },
+  },
+  '355170': {
+    name: 'Sam & Max Hit the Road',
+    appId: 355170,
+    primaryScreenshot:
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/355170/ss_7c6244de4ee31bbf5e1ad708ddf0087572a4b2b5.600x338.jpg',
+    secondaryScreenshot:
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/355170/ss_9fe242903da2e4a994f3605649e0b6ac8d23f6a6.600x338.jpg',
+    shortDescription:
+      'Grab your nightstick, squeal like a siren, and hit the road with [[Sam]] & [[Max]], Freelance Police, as they attempt to crack their toughest case.',
+    originalReleaseDate: 'Jan 1, 1993',
+    releaseDate: 'Nov 16, 2018',
+    developer: 'Lucasfilm',
+    publisher: 'Lucasfilm, Disney',
+    tags: [],
+    features: [],
+    allReviewSummary: {
+      count: 811,
+      rating: 'Very Positive',
+    },
+    userTags: [
+      'Point & Click',
+      'Adventure',
+      'Detective',
+      'Cult Classic',
+      "1990's",
+      'Puzzle',
+      'Comedy',
+      'Singleplayer',
+      'Funny',
+      'Story Rich',
+      'America',
+      'Retro',
+      'Classic',
+      'Blood',
+      'Pixel Graphics',
+    ],
+    screenshotLetterbox: true,
+    screenshotFocusPoint: [20, 2, 175],
+    zoomLabelPosition: 'tr',
+    overrideCensoredTitle: 'S||am|| & M||ax|| H||it|| t||he|| R||oad||',
+    clueOrder: ['ss', 'details', 'tags', 'desc'],
+    searchTerms: ['sam and max hit the road'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Medium',
   },
 };
 

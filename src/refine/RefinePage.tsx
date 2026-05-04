@@ -384,6 +384,15 @@ export const RefinePage: React.FC = () => {
             lines.push(`        writtenDuringEarlyAccess: true,`);
           }
           lines.push(`        timestamp: ${review.timestamp},`);
+          if (review.reviewer) {
+            const followersPart =
+              review.reviewer.followers != null
+                ? `, followers: ${review.reviewer.followers}`
+                : '';
+            lines.push(
+              `        reviewer: { name: ${JSON.stringify(review.reviewer.name)}, avatarUrl: ${JSON.stringify(review.reviewer.avatarUrl)}${followersPart} },`,
+            );
+          }
           lines.push(`      }${idx < game.reviewClues!.length - 1 ? ',' : ''}`);
         });
         lines.push(`    ],`);
@@ -410,6 +419,15 @@ export const RefinePage: React.FC = () => {
           );
         }
         lines.push(`        timestamp: ${game.reviewClue.timestamp},`);
+        if (game.reviewClue.reviewer) {
+          const followersPart =
+            game.reviewClue.reviewer.followers != null
+              ? `, followers: ${game.reviewClue.reviewer.followers}`
+              : '';
+          lines.push(
+            `        reviewer: { name: ${JSON.stringify(game.reviewClue.reviewer.name)}, avatarUrl: ${JSON.stringify(game.reviewClue.reviewer.avatarUrl)}${followersPart} },`,
+          );
+        }
         lines.push(`      }`);
         lines.push(`    ],`);
       }

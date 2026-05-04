@@ -571,6 +571,11 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile3: 'The Alters',
   },
   '2026-05-03': {
+    caseFile1: 'SMITE',
+    caseFile2: 'Cruelty Squad',
+    caseFile3: 'Sam & Max Hit the Road',
+  },
+  '2026-05-04': {
     caseFile1: "Don't Starve",
     caseFile2: 'Fields of Mistria',
     caseFile3: 'Sonic Mania',
@@ -587,6 +592,7 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
 // Easy: State of Decay 2
 // Easy: Any AC Game (last 3/29): Revelations, Unity, (1), (2), Brotherhood, Rogue, Syndicate, Valhalla, Mirage
 
+// Med: Hello Neighbor
 // Med: Trackmania
 // Med: Another Crab's Treasure
 // Med: Luck be a Landlord

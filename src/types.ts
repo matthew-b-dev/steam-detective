@@ -10,6 +10,7 @@ export interface Review {
   reviewUrl?: string;
   authorPlaytimeAtReview?: number;
   writtenDuringEarlyAccess?: boolean;
+  reviewer?: { name: string; avatarUrl: string; followers?: number }; // Optional: identifies who wrote the review
 }
 
 export interface ReviewSummary {
