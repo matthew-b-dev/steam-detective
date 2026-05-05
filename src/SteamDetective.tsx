@@ -402,18 +402,40 @@ const SteamDetectiveGame: React.FC<SteamDetectiveGameProps> = ({
     // Title reveal (slot[5]) should never trigger an auto-scroll.
     const titleJustRevealed = !prevShowCluesRef.current[5] && showClues[5];
 
+    // When MFD is bundled with Details (slot[7] = slot[1]), its canonical position (6)
+    // is already higher than Tags (5). So when Tags (slot[0]) is newly revealed,
+    // currentLowestPosition stays at 6 (MFD) and no scroll fires. Detect this explicitly.
+    const tagsJustRevealedWithMFD =
+      !prevShowCluesRef.current[0] && showClues[0] && showClues[7];
+
+    // When Tags (slot[0]) was already shown and Details+MFD (slot[1]+slot[7]) are
+    // newly revealed together, the scroll fires (moreFromDev pos 6 > tags pos 5) but
+    // uses the large 380 amount because moreFromDevIsShown=true. Use the short variant
+    // instead since the viewport is already near the bottom of the Tags clue.
+    const detailsAndMFDJustRevealedWhileTagsShown =
+      prevShowCluesRef.current[0] &&
+      !prevShowCluesRef.current[1] &&
+      showClues[1] &&
+      showClues[7];
+
     if (
       !titleJustRevealed &&
       clueContainerBottomNearViewportBottom() &&
       !isFirstClue &&
       (currentLowestPosition > prevLowestPosition ||
         ssJustRevealedNonFirst ||
-        ssVisibleAndNewClueRevealed)
+        ssVisibleAndNewClueRevealed ||
+        tagsJustRevealedWithMFD ||
+        detailsAndMFDJustRevealedWhileTagsShown)
     ) {
       // If MFD carousel or extras clue is currently shown, add extra scroll to account for its height
       const moreFromDevIsShown = showClues[7];
       const extrasIsShown = showClues[8];
-      const scrollAmount = moreFromDevIsShown || extrasIsShown ? 380 : 220;
+      let scrollAmount =
+        (moreFromDevIsShown || extrasIsShown) && !tagsJustRevealedWithMFD
+          ? 380
+          : 220;
+      if (detailsAndMFDJustRevealedWhileTagsShown) scrollAmount = 320;
 
       setTimeout(() => {
         window.scrollBy({

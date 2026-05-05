@@ -9208,7 +9208,8 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/238460/ss_12f325ff88e27bc6b8dd2656000737ed3fa5fb13.600x338.jpg',
     shortDescription:
-      "Welcome to ||BattleBlock Theater||! You've got no where to go but up...on stage. Play single player or co-op to free your friends and save Hatty Hattington! Jump, solve and battle your way through a mysterious theater inhabited by highly technological felines.",
+      "Welcome to [[((B))attleBlock ((T))heater]]! You've got no where to go but up...on stage. Play single player or co-op to free your friends and save Hatty Hattington! Jump, solve and battle your way through a mysterious [[((t))heater]] inhabited by highly technological felines.",
+    originalReleaseDate: 'Apr 3, 2013 (X360)',
     releaseDate: 'May 15, 2014',
     developer: 'The Behemoth',
     publisher: 'The Behemoth',
@@ -9240,8 +9241,32 @@ export const steamGameDetails: SteamGameMap = {
       'Puzzle',
       'Narration',
     ],
+    blurredUserTags: [
+      'Cats',
+      'Comedy',
+      'Level Editor',
+      'Multiplayer',
+      'Online Co-Op',
+      'Funny',
+    ],
     blurScreenshotQuarter: 'bottom',
-    clueOrder: ['tags', 'details', 'desc'],
+    overrideCensoredTitle: 'Ba||ttle||B||loc||k T||heate||r',
+    clueOrder: ['extras', 'tags', 'details', 'desc'],
+    searchTerms: ['battle block theatre', 'battleblock theatre'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Hard',
+    moreFromThisDeveloper: [{ id: 204360, name: 'Castle Crashers' }],
+    extrasClue: {
+      achievements: [
+        {
+          name: 'Secret Hat Hunter',
+          desc: 'Collect 10 Golden Hats.',
+          img: 'https://cdn.fastly.steamstatic.com/steamcommunity/public/images/apps/238460/fafa18fcac71d98a869051e85f726b4d163090ac.jpg',
+        },
+      ],
+      achievementsTotal: 30,
+    },
   },
   '238960': {
     name: 'Path of Exile',
@@ -30201,7 +30226,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/692890/ss_b32ae626ffecd9fe70f7ea4ddbf34485662bb71d.600x338.jpg',
     shortDescription:
-      "||Roboquest|| is a fast FPS Roguelite in a scorched futureworld. You're a rebooted Guardian, ready to kick some metal ass! Fight with your buddy or by yourself and annihilate hordes of deadly bots in ever-changing environments.",
+      "[[Roboquest]] is a fast First-Person Shooter Roguelite in a scorched futureworld. You're a rebooted Guardian, ready to kick some metal ass! Fight with your buddy or by yourself and annihilate hordes of deadly bots in ever-changing environments.",
     releaseDate: 'Nov 7, 2023',
     developer: 'RyseUp Studios',
     publisher: 'RyseUp Studios',
@@ -30228,7 +30253,25 @@ export const steamGameDetails: SteamGameMap = {
       'Sci-fi',
       'Multiplayer',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: ['FPS', 'Shooter', 'Looter Shooter'],
+    overrideCensoredTitle: 'R||obo||q||ues||t',
+    clueOrder: ['review', 'details+tags', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Hard',
+    reviewClues: [
+      {
+        review:
+          'if you press space bar in loading screen then the hoverbus jumps',
+        votedUp: true,
+        votesUp: 236,
+        votedFunny: 74,
+        weightedScore: undefined,
+        authorPlaytimeHours: 46.3,
+        writtenDuringEarlyAccess: true,
+        timestamp: 1623384000,
+      },
+    ],
   },
   '698670': {
     name: 'Scorn',
@@ -51887,11 +51930,12 @@ export const steamGameDetails: SteamGameMap = {
     name: 'MARVEL SNAP',
     appId: 1997040,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1997040/ss_568db1e13add2aa3fb563d9477eb07fe655e10c5.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1997040/012149a12287c8458e878d60188eba8360386e2d/ss_012149a12287c8458e878d60188eba8360386e2d.600x338.jpg',
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1997040/ss_5ba602d69cf8ff8e1ab55eba4854ace31d09593a.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1997040/19ca9629dd7846507d6fe0f8374fda8f290d19d8/ss_19ca9629dd7846507d6fe0f8374fda8f290d19d8.600x338.jpg',
     shortDescription:
-      "||MARVEL SNAP|| is a fast-paced Collectible Card Game that reimagines the genre with innovative mechanics. Winner of multiple awards like 'Best Strategy Game' and 'Breakthrough Game of the Year,' we invite you to join millions of players worldwide – Jump right in!",
+      '[[MARVEL SNAP]] is a fast-paced Collectible Card Game that reimagines the genre with innovative mechanics. Learn the basics in minutes, then master the depth of deckbuilding, locations, and knowing exactly when to [[SNAP]] on your opponent. Each card in your deck is a [[MARVEL]] ||Super Hero|| or ||Villain|| with their own unique ability.',
+    earlyAccessDate: 'Oct 18, 2022',
     releaseDate: 'Aug 22, 2023',
     developer: 'Second Dinner Studios, Inc.',
     publisher: '',
@@ -51918,7 +51962,32 @@ export const steamGameDetails: SteamGameMap = {
       'Controller',
       'Action',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    overrideCensoredTitle: 'M||ARVE||L S||NA||P',
+    clueOrder: ['review', 'details+tags', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
+    reviewClues: [
+      {
+        review:
+          "I'm playing this only because of Ben Brode. He was the OG developer from ||Hearthstone|| and his contribution was invaluable to the community.",
+        votedUp: true,
+        votesUp: 65,
+        weightedScore: undefined,
+        authorPlaytimeHours: 62.3,
+        writtenDuringEarlyAccess: true,
+        timestamp: 1666065600,
+      },
+      {
+        review:
+          '1000s of hours and 100s of dollars wasted on this game all for the greedy devs to kill it with sickening monetization tactics.',
+        votedUp: false,
+        votesUp: 62,
+        weightedScore: undefined,
+        authorPlaytimeHours: 1007.6,
+        timestamp: 1751947200,
+      },
+    ],
   },
   '1999360': {
     name: 'Placid Plastic Duck Simulator',

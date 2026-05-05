@@ -585,8 +585,12 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile2: 'Octodad: Dadliest Catch',
     caseFile3: 'Scribblenauts Unlimited',
   },
-  // Hard: Octodad: Dadliest Catch
   '2026-05-06': {
+    caseFile1: 'MARVEL SNAP',
+    caseFile2: 'Roboquest',
+    caseFile3: 'BattleBlock Theater',
+  },
+  '2026-05-07': {
     caseFile1: "Don't Starve",
     caseFile2: 'Fields of Mistria',
     caseFile3: 'Sonic Mania',
