@@ -21785,16 +21785,19 @@ export const steamGameDetails: SteamGameMap = {
   },
   '438100': {
     name: 'VRChat',
+    searchTerms: ['vr chat'],
     appId: 438100,
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/438100/ss_1577335ddadd96c338c16a747758290b4214eb85.600x338.jpg',
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/438100/ss_31f674ab2a2cdf3d72ff7e8155100f4539a65a72.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/438100/ss_d4351d713e0dc6210d5c275060f611c6adb13df2.600x338.jpg',
     shortDescription:
-      'Join our growing community as you explore, play, and help craft the future of social VR. Create worlds and custom avatars. Welcome to ||VRChat||.',
-    releaseDate: 'Feb 1, 2017',
-    developer: 'VRChat Inc.',
-    publisher: 'VRChat Inc.',
+      'In [[VRChat]], there are hundreds of thousands of worlds, millions of avatars – all created by the users. No matter what you’re into, there’s a space in [[VRChat]] for you. And if there isn’t, we’ll give you the tools to make your dream a reality.',
+    originalReleaseDate: 'Jan 16, 2014 (Beta)',
+    earlyAccessDate: 'Feb 1, 2017',
+    releaseDate: '(Not yet released)',
+    developer: '||VRChat Inc.||',
+    publisher: '||VRChat Inc.||',
     tags: [],
     features: [],
     allReviewSummary: {
@@ -21804,8 +21807,8 @@ export const steamGameDetails: SteamGameMap = {
     userTags: [
       'VR',
       'Free to Play',
+      'Social',
       'Multiplayer',
-      'Anime',
       'Memes',
       'Funny',
       'Massively Multiplayer',
@@ -21818,7 +21821,23 @@ export const steamGameDetails: SteamGameMap = {
       'MMORPG',
       'Comedy',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: ['VR', 'Social'],
+    overrideCensoredTitle: 'V||R||C||hat||',
+    clueOrder: ['review', 'details+tags', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
+    reviewClues: [
+      {
+        review:
+          'Learned about this game around the same time most other people did in 2018 when it went viral with the "do ||you know the way||?" memes. Been (mostly) enjoying it ever since.',
+        votedUp: true,
+        votesUp: 6,
+        weightedScore: undefined,
+        authorPlaytimeHours: 1174.3,
+        timestamp: 1739577600,
+      },
+    ],
   },
   '440900': {
     name: 'Conan Exiles',
@@ -26569,10 +26588,10 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/584400/ss_93ee106db863c16e00989ad9d51bcbea4af91ab0.600x338.jpg',
     shortDescription:
-      '[[((S))onic Mania]] is an all-new adventure with ||Sonic||, ||Tails||, and ||Knuckles|| full of unique bosses, rolling 2D landscapes, and fun classic gameplay. It features a blend of reimagined classic levels and entirely new stages, including remixed zones from ||Sonic|| 1, 2, and 3.',
+      '[[Sonic Mania]] is an all-new adventure with ||Sonic||, ||Tails||, and ||Knuckles|| full of unique bosses, rolling 2D landscapes, and fun classic gameplay. It features a blend of reimagined classic levels and entirely new stages, including remixed zones from ||Sonic|| 1, 2, and 3.',
     releaseDate: 'Aug 29, 2017',
     developer: 'Christian Whitehead',
-    publisher: 'SEGA',
+    publisher: '||SEGA||',
     tags: [],
     features: [],
     allReviewSummary: {
@@ -26596,6 +26615,7 @@ export const steamGameDetails: SteamGameMap = {
       'Local Co-Op',
       'Casual',
     ],
+    blurredUserTags: ['Retro', '2D', 'Platformer'],
     clueOrder: ['review', 'details+tags', 'desc'],
     debugProcessed: true,
     debugRefined: true,
@@ -26613,7 +26633,7 @@ export const steamGameDetails: SteamGameMap = {
       },
       {
         review:
-          '||Sega|| should just let Christian Whitehead run the ||Sonic|| Team at this point',
+          '||Sega|| should just let Christian Whitehead run the ||Sonic|| team at this point',
         votedUp: true,
         votesUp: 60,
         votedFunny: 19,
@@ -38329,11 +38349,11 @@ export const steamGameDetails: SteamGameMap = {
     name: 'Monster Train',
     appId: 1102190,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1102190/ss_edce778e9006c559cc347542ba2a61ed1461c945.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1102190/ss_622feb3c33c2c6cd07dc8bab01809183e0b9dce0.600x338.jpg',
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1102190/ss_de1c1453ce68155196cf15143047a615f28aee34.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1102190/ss_edce778e9006c559cc347542ba2a61ed1461c945.600x338.jpg',
     shortDescription:
-      "||Monster Train|| is a strategic roguelike deck building game with a twist. Set on a train to hell, you'll use tactical decision making to defend multiple vertical battlegrounds. With real time competitive multiplayer and endless replayability, ||Monster Train|| is always on time.",
+      "[[Monster Train]] is always on time. Delve into a strategic roguelike deck building game with a twist. ||Set on a train to hell||, you'll use tactical decision making to defend multiple vertical battlegrounds. With real time competitive multiplayer and endless replayability, ",
     releaseDate: 'May 21, 2020',
     developer: 'Shiny Shoe',
     publisher: 'Good Shepherd Entertainment',
@@ -38360,7 +38380,36 @@ export const steamGameDetails: SteamGameMap = {
       'Choices Matter',
       'Procedural Generation',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: [
+      'Card Game',
+      'Deckbuilding',
+      'Card Battler',
+      'Turn-Based Tactics',
+      'Roguelike',
+      'Turn-Based Strategy',
+      'Difficult',
+      'PvP',
+      'Strategy',
+    ],
+    screenshotFocusPoint: [50, 1, 108],
+    overrideCensoredTitle: '||Monste||r T||rai||n',
+    clueOrder: ['details+tags', 'review', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Hard',
+    reviewClues: [
+      {
+        review:
+          "♪ ♫ If you liked to Slay [[the Spire]],\nYou'll love to SAVE the [[((P))yre]] ♪ ♫",
+        votedUp: true,
+        votesUp: 108,
+        votedFunny: 138,
+        weightedScore: undefined,
+        authorPlaytimeHours: 167.3,
+        timestamp: 1590465600,
+      },
+    ],
+    moreFromThisDeveloper: [{ id: 1062810, name: 'Inkbound' }],
   },
   '1105670': {
     name: 'The Last Spell',
