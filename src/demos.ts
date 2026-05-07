@@ -595,9 +595,14 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile2: 'Monster Train',
     caseFile3: 'Sonic Mania',
   },
-  // FINAL FANTASY XVI
-  // Poker Night at the Inventory; since 2010 never thought i would see strong bad again
   '2026-05-08': {
+    caseFile1: 'HELLDIVERS 2',
+    caseFile2: 'Kerbal Space Program 2',
+    caseFile3: 'Poker Night at the Inventory',
+  },
+  // Easy: FINAL FANTASY XVI
+  // Med: Spyro Reignited Trilogy
+  '2026-05-09': {
     caseFile1: "Don't Starve",
     caseFile2: 'Fields of Mistria',
     caseFile3: 'Dwarf Fortress',

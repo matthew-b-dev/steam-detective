@@ -21785,7 +21785,6 @@ export const steamGameDetails: SteamGameMap = {
   },
   '438100': {
     name: 'VRChat',
-    searchTerms: ['vr chat'],
     appId: 438100,
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/438100/ss_1577335ddadd96c338c16a747758290b4214eb85.600x338.jpg',
@@ -21821,9 +21820,10 @@ export const steamGameDetails: SteamGameMap = {
       'MMORPG',
       'Comedy',
     ],
-    blurredUserTags: ['VR', 'Social'],
+    blurredUserTags: ['Social'],
     overrideCensoredTitle: 'V||R||C||hat||',
     clueOrder: ['review', 'details+tags', 'desc'],
+    searchTerms: ['vr chat'],
     debugProcessed: true,
     debugRefined: true,
     difficulty: 'Easy',
@@ -25742,14 +25742,18 @@ export const steamGameDetails: SteamGameMap = {
     name: 'HELLDIVERS 2',
     appId: 553850,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/553850/ss_0c79f56fc7be1bd0102f2ca1c92c8f0900daf4fb.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/553850/ss_5dde7ea6922800dfece2a3a319cb68e4f6f67949.600x338.jpg',
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/553850/ss_33e684e9cb2517af1599f0ca2b57d65ee82c2e51.600x338.jpg',
+    webms: [
+      'https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/553850/extras/4fb677a524eaf9318620399defcc00b4.webm?t=1770747641',
+    ],
+    webmKeepPlayingOnComplete: true,
     shortDescription:
-      "The Galaxy's Last Line of Offence. Enlist in the Helldivers and join the fight for freedom across a hostile galaxy in a fast, frantic, and ferocious third-person shooter.",
+      "The Galaxy's Last Line of Offence. Enlist in the [[((H))elldivers]] and join the fight for freedom across a hostile galaxy in a fast, frantic, and ferocious third-person shooter.",
     releaseDate: 'Feb 8, 2024',
-    developer: 'Arrowhead Game Studios',
-    publisher: 'PlayStation Publishing LLC',
+    developer: '||Arrowhead Game Studios||',
+    publisher: '||PlayStation Publishing LLC||',
     tags: [],
     features: [],
     allReviewSummary: {
@@ -25765,12 +25769,36 @@ export const steamGameDetails: SteamGameMap = {
       'Action',
       'Co-op',
       'Sci-fi',
-      'Extraction Shooter',
+      'Comedy',
       'Capitalism',
       'Space',
       'Third Person',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: ['Capitalism', 'Sci-fi'],
+    overrideCensoredTitle: 'H||ELLDIVE||RS ||2||',
+    clueOrder: ['extras', 'details+tags', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
+    moreFromThisDeveloper: [
+      { id: 258970, name: 'Gauntlet™ Slayer Edition' },
+      { id: 42910, name: 'Magicka' },
+    ],
+    extrasClue: {
+      achievements: [
+        {
+          name: 'The taller they are...',
+          desc: 'Defeat a Bile Titan.',
+          img: 'https://cdn.fastly.steamstatic.com/steamcommunity/public/images/apps/553850/0e8e179496f071323789167ae58805111b393a69.jpg',
+        },
+        {
+          name: 'That which does not kill you...',
+          desc: 'Be injured in all limbs at the same time.',
+          img: 'https://cdn.fastly.steamstatic.com/steamcommunity/public/images/apps/553850/e3223dcbe3a7543d4fb4c425b83ce2a496965d0f.jpg',
+        },
+      ],
+      achievementsTotal: 38,
+    },
   },
   '554620': {
     name: 'Life is Strange: Before the Storm',
@@ -35597,10 +35625,11 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/954850/ss_dd14514813830a14b5797d318da8c64e7a3cf756.600x338.jpg',
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/954850/ss_d881b2a7f0045d1407523241fdbe0122ca181d27.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/954850/ss_82668f4515c128dec6945971e537e34a1015d4d6.600x338.jpg',
     shortDescription:
-      '||Kerbal Space Program 2|| is the sequel to the acclaimed space-flight simulation game ||Kerbal|| ||Space|| ||Program||. Enter the next generation of space adventure with exciting new parts, stunning visuals, fully revamped UI and Map View, and rich new environments to explore.',
-    releaseDate: 'Feb 24, 2023',
+      '[[Kerbal Space Program 2]] is the sequel to the acclaimed space-flight simulation game ||Kerbal|| ||Space|| ||Program||. Enter the next generation of space adventure with exciting new parts, stunning visuals, fully revamped UI and Map View, and rich new environments to explore.',
+    earlyAccessDate: 'Feb 24, 2023',
+    releaseDate: '(Not yet released)',
     developer: 'Intercept Games',
     publisher: 'Private Division',
     tags: [],
@@ -35626,7 +35655,42 @@ export const steamGameDetails: SteamGameMap = {
       'Singleplayer',
       'Early Access',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: [
+      'Space',
+      'Exploration',
+      'Science',
+      'Open World',
+      'Simulation',
+      'Difficult',
+      'Physics',
+    ],
+    overrideCensoredTitle: 'K||erba||l Sp||ace|| P||rogram|| ||2||',
+    clueOrder: ['details+tags', 'review', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Medium',
+    reviewClues: [
+      {
+        review:
+          "All members of the development team have been laid off, with nobody working on the game any longer, yet they're still advertising all the early access stretch goals. How is this even allowed?",
+        votedUp: false,
+        votesUp: 1167,
+        weightedScore: undefined,
+        authorPlaytimeHours: 59.6,
+        writtenDuringEarlyAccess: true,
+        timestamp: 1719979200,
+      },
+      {
+        review:
+          'Buy [[Kerbal Space Program]] 1 instead. It is better than this abandoned game and has more features.',
+        votedUp: false,
+        votesUp: 296,
+        weightedScore: undefined,
+        authorPlaytimeHours: 5.1,
+        writtenDuringEarlyAccess: true,
+        timestamp: 1777195521,
+      },
+    ],
   },
   '955050': {
     name: 'Bright Memory',
@@ -57784,6 +57848,59 @@ export const steamGameDetails: SteamGameMap = {
     debugRefined: true,
     difficulty: 'Medium',
   },
+  '3897800': {
+    name: 'Poker Night at the Inventory',
+    appId: 3897800,
+    primaryScreenshot:
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3897800/c3d799c03b853f65085fa495de3ff04e209d6f8b/ss_c3d799c03b853f65085fa495de3ff04e209d6f8b.600x338.jpg',
+    secondaryScreenshot:
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3897800/1b6e639440b4b4f7d3dcab5e7318ad534445a28d/ss_1b6e639440b4b4f7d3dcab5e7318ad534445a28d.600x338.jpg',
+    shortDescription:
+      "Seven years after [[((P))oker Night at the ((I))nventory]] closed its doors, this underground social club has reopened for business. Play No Limit Texas Hold'em with four video game icons in a high-stakes battle of cards, bets, and trash talk.",
+    releaseDate: '5 Mar, 2026',
+    developer: 'Skunkape Games',
+    publisher: 'Skunkape Games',
+    tags: [],
+    features: [],
+    allReviewSummary: {
+      count: 5761,
+      rating: 'Overwhelmingly Positive',
+    },
+    userTags: [
+      'Remaster',
+      'Cult Classic',
+      'Gambling',
+      'Card Game',
+      'Comedy',
+      'Cartoon',
+      '3D',
+      'Singleplayer',
+      'Cartoony',
+      'Conversation',
+      'Comic Book',
+      'Indie',
+      'Controller',
+      'Cult Classic',
+      'Psychological Horror',
+    ],
+    overrideCensoredTitle: 'P||oke||r N||ight|| ||at|| ||the|| I||nventory||',
+    clueOrder: ['review', 'details+tags', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Hard',
+    reviewClues: [
+      {
+        review:
+          'In 2019 when the original game was removed from Steam I found out after-the-fact that I had lost my last opportunity to get The Iron Curtain promotional minigun unlock for ||TF2||. I am very pleased to report that it is available again in the remaster!',
+        votedUp: true,
+        votesUp: 250,
+        votedFunny: 86,
+        weightedScore: undefined,
+        authorPlaytimeHours: 4.9,
+        timestamp: 1778193367,
+      },
+    ],
+  },
 };
 
 // Special series/franchises where guesses containing the series name are considered "close"
@@ -57818,6 +57935,7 @@ export const CLOSE_GUESS_SERIES: string[] = [
   'ghost of',
   'god of war',
   'half-life',
+  'helldivers',
   'horizon',
   'jurassic',
   'just cause',
