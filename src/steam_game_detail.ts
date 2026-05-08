@@ -24571,9 +24571,9 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/521890/ss_f4bf74bcbf51a0d3b5b7a0497018e824f2ec092c.600x338.jpg',
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/521890/ss_ac219a7c078de280a6ab21c39d925d3f1c8bb4a8.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/521890/ss_9341a234c2bba8b79b724018cc29c770a53200ac.600x338.jpg',
     shortDescription:
-      "||Hello Neighbor|| is a Stealth Horror Game about sneaking into your neighbor's house and figuring out what he's hiding in the basement. Play against an advanced AI that learns from your actions.",
+      "[[Hello Neighbor]] is a Stealth Horror Game about sneaking into your [[neighbor]]'s ||house|| and figuring out what he's hiding in the ||basement||. Play against an advanced AI that learns from your actions.",
     releaseDate: 'Dec 8, 2017',
     developer: 'Dynamic Pixels',
     publisher: 'tinyBuild',
@@ -24600,7 +24600,39 @@ export const steamGameDetails: SteamGameMap = {
       'FPS',
       'Psychological Horror',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: [
+      '3D Platformer',
+      'Action-Adventure',
+      'Survival',
+      'Story Rich',
+      'Survival Horror',
+    ],
+    overrideCensoredTitle: 'He||llo|| Ne||ighbor||',
+    clueOrder: ['review', 'details+tags', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Medium',
+    reviewClues: [
+      {
+        review:
+          "This game had such an interesting concept in the first 2 alphas.An AI that learns from you and adjusted to your playstyle seemed amazing, especially since this is an indie game. ||Now it is just youtube bait, and another steam cashgrab||. There are so many bugs and unpolished mechanics that it simply isn't worth $30 now.\n(edited for length)\n",
+        votedUp: false,
+        votesUp: 305,
+        weightedScore: undefined,
+        authorPlaytimeHours: 9.1,
+        timestamp: 1513141200,
+      },
+      {
+        review:
+          "Act 1..okey, little bit short\nAct 2..hm, that’s pretty good\nAct 3..yeah, we’ve seen all of it, something new?\nEND OF THE GAME\n\nI'm dissapointed :(\n",
+        votedUp: false,
+        votesUp: 425,
+        votedFunny: 19,
+        weightedScore: undefined,
+        authorPlaytimeHours: 36.4,
+        timestamp: 1512882000,
+      },
+    ],
   },
   '524220': {
     name: 'NieR:Automata',
@@ -27459,8 +27491,11 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/602960/ss_cdf5cbde141fb93a0b23c6adca5378f73e1beeca.600x338.jpg',
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/602960/ss_3f76fab8878cc134ec1e0032ab91797eed96722d.600x338.jpg',
+    webms: [
+      'https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/602960/extras/5de098d3ee52e264270bf221e8adeecf.webm?t=1776271911',
+    ],
     shortDescription:
-      "||Barotrauma|| is a 2D co-op submarine simulator – in space, with survival horror and RPG elements. Steer your submarine, complete missions, fight monsters, fix leaks, operate machinery, man the guns and craft items, and stay alert: danger in ||Barotrauma|| doesn't announce itself!",
+      "[[Barotrauma]] is a 2D co-op submarine simulator – in space, with survival horror and RPG elements. Steer your submarine, complete missions, fight monsters, fix leaks, operate machinery, man the guns and craft items, and stay alert: danger in [[Barotrauma]] doesn't announce itself!",
     releaseDate: 'Mar 13, 2023',
     developer: 'FakeFish, Undertow Games',
     publisher: 'Daedalic Entertainment',
@@ -27472,11 +27507,11 @@ export const steamGameDetails: SteamGameMap = {
     },
     userTags: [
       'Co-op',
-      'Multiplayer',
+      '2D',
       'Survival',
       'Submarine',
       'Survival Horror',
-      '2D',
+      'Multiplayer',
       'Horror',
       'Underwater',
       'Simulation',
@@ -27491,10 +27526,28 @@ export const steamGameDetails: SteamGameMap = {
       'Singleplayer',
       'Naval',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: ['Submarine', 'Underwater'],
+    overrideCensoredTitle: 'B||aro||t||raum||a',
+    clueOrder: ['review', 'details+tags', 'desc'],
+    searchTerms: ['barotrama', 'borrowtrama', 'barotroma', 'borow trauma'],
     debugProcessed: true,
     debugRefined: true,
     difficulty: 'Hard',
+    reviewClues: [
+      {
+        review:
+          'While hunting down a swarm of ||Mudraptors||, we got blindsided by several ||Hammerheads|| from the rear. What followed was a desperate scramble for ||pressure|| suits as our ||sub|| quickly ||flooded|| and several ||Mudraptors|| found their way inside. [...] After a total of nearly 20 minutes of pure chaos, our ||submarine|| began to pump ||out water||, and we limped our way back to ||port||. Somehow, through all of it, none of us perished. [...]\n\nThe very next mission I got crushed by a random piece of falling ice and died instantly. 10/10 game\n(edited for length)',
+        votedUp: true,
+        votesUp: 364,
+        votedFunny: 104,
+        weightedScore: undefined,
+        authorPlaytimeHours: 144.1,
+        timestamp: 1681099200,
+      },
+    ],
+    extrasClue: {
+      achievementsTotal: 76,
+    },
   },
   '603850': {
     name: 'Age of History II',
@@ -48468,9 +48521,9 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1659420/ss_a1816dd536122dd740043c2b9440136503904215.600x338.jpg',
     shortDescription:
-      "Play as Nathan Drake and Chloe Frazer in their own standalone adventures as they confront their pasts and forge their own legacies. This game includes the critically acclaimed single-player stories from both ||UNCHARTED|| 4: A Thief's End and ||UNCHARTED||: The Lost Legacy.",
+      "Play as ||Nathan Drake|| and ||Chloe Frazer|| in their ||own standalone adventures as they confront their pasts and forge their own legacies||. This ||collection|| brings ||Naughty Dog||'s ||cinematic|| storytelling and globe-trotting franchise to PC players for the first time.",
     releaseDate: 'Oct 19, 2022',
-    developer: 'Naughty Dog LLC, Iron Galaxy Studios',
+    developer: '||Naughty Dog LLC||',
     publisher: 'PlayStation Publishing LLC',
     tags: ['Adventure'],
     features: [],
@@ -48500,7 +48553,28 @@ export const steamGameDetails: SteamGameMap = {
       'Platformer',
       'Funny',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    overrideCensoredTitle:
+      'U||NCHARTE||D: ||Legacy|| ||of|| ||Thieves|| ||Collection||',
+    clueOrder: ['desc', 'details', 'tags', 'extras'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
+    suggestedBy: 'EsJay',
+    extrasClue: {
+      achievements: [
+        {
+          name: 'First Treasure',
+          desc: 'Find a Treasure',
+          img: 'https://cdn.fastly.steamstatic.com/steamcommunity/public/images/apps/1659420/5b56cf8aa354a6c22692db84f6c94b2696bb5fe2.jpg',
+        },
+        {
+          name: 'Jungle Gym',
+          desc: 'Perform 5 grapple swings in a row without touching the ground',
+          img: 'https://cdn.fastly.steamstatic.com/steamcommunity/public/images/apps/1659420/5439a06e0025d9749bb5589ac195c1fb70a946fd.jpg',
+        },
+      ],
+      achievementsTotal: 101,
+    },
   },
   '1669000': {
     name: 'Age of Wonders 4',

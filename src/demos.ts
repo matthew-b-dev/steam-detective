@@ -600,9 +600,14 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile2: 'Kerbal Space Program 2',
     caseFile3: 'Poker Night at the Inventory',
   },
+  '2026-05-09': {
+    caseFile1: 'UNCHARTED: Legacy of Thieves Collection',
+    caseFile2: 'Hello Neighbor',
+    caseFile3: 'Barotrauma',
+  },
   // Easy: FINAL FANTASY XVI
   // Med: Spyro Reignited Trilogy
-  '2026-05-09': {
+  '2026-05-10': {
     caseFile1: "Don't Starve",
     caseFile2: 'Fields of Mistria',
     caseFile3: 'Dwarf Fortress',
