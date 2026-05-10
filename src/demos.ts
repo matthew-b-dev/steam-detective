@@ -610,9 +610,13 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile2: 'World War Z',
     caseFile3: 'Hardspace: Shipbreaker',
   },
-  // Easy: FINAL FANTASY XVI
-  // Med: Spyro Reignited Trilogy
   '2026-05-11': {
+    caseFile1: 'FINAL FANTASY XVI',
+    caseFile2: 'Far Cry 3: Blood Dragon',
+    caseFile3: 'Evil West',
+  },
+  // Spyro Reignited Trilogy
+  '2026-05-12': {
     caseFile1: "Don't Starve",
     caseFile2: 'Fields of Mistria',
     caseFile3: 'Dwarf Fortress',

@@ -8305,14 +8305,15 @@ export const steamGameDetails: SteamGameMap = {
     clueOrder: ['tags', 'details', 'desc'],
   },
   '233270': {
-    name: 'Far Cry 3 - Blood Dragon',
+    name: 'Far Cry 3: Blood Dragon',
+    overrideCensoredTitle: 'F||ar|| C||ry|| ||3||: B||lood|| D||ragon||',
     appId: 233270,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/233270/ss_4670702422e948a9666c29814ac6cfdb941c5a4a.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/233270/ss_602b7c88ab725ccabfd8ad7c94fb536875c329ad.600x338.jpg',
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/233270/ss_ec219fdc637cf6e740bcafae01c484bafd6b55bf.600x338.jpg',
     shortDescription:
-      "||Far|| ||Cry|| 3: ||Blood|| ||Dragon|| is THE Kick-Ass Cyber Shooter.Welcome to an 80's vision of the future. The year is 2007 and you are Sargent Rex Colt, a Mark IV Cyber Commando. Your mission: get the girl, kill the baddies, and save the world.",
+      "||Far Cry 3: Blood Dragon is THE Kick-Ass Cyber Shooter.|| Welcome to an 80's vision of the future. The year is 2007 and you are ||Sargent Rex|| Colt, a Mark IV ||Cyber Commando||. Your mission: get the girl, kill the baddies, and save the world.",
     releaseDate: 'May 1, 2013',
     developer: 'Ubisoft Montreal',
     publisher: 'Ubisoft',
@@ -8339,7 +8340,26 @@ export const steamGameDetails: SteamGameMap = {
       'Funny',
       'First-Person',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: ['Open World'],
+    clueOrder: ['desc', 'tags', 'details', 'review'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Medium',
+    reviewClues: [
+      {
+        review:
+          "[[Far Cry 3((:)) Blood Dragon]] may as well be called Cyperpunk 2007. Despite the name, doesn't really have anything to do with [[Far Cry 3]], it's just in the same engine.\n(edited for length)",
+        votedUp: true,
+        votesUp: 34,
+        votedFunny: 3,
+        weightedScore: undefined,
+        authorPlaytimeHours: 6.6,
+        timestamp: 1390262400,
+      },
+    ],
+    extrasClue: {
+      achievementsTotal: 19,
+    },
   },
   '233290': {
     name: 'Murdered: Soul Suspect',
@@ -37783,11 +37803,11 @@ export const steamGameDetails: SteamGameMap = {
     name: 'Evil West',
     appId: 1065310,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1065310/ss_1b789d8ba2b3d248349ab3d1fef87b5e680a7e55.600x338.jpg',
-    secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1065310/ss_feae13d5c4d396ab932842ea24159689b1c3fc85.600x338.jpg',
+    secondaryScreenshot:
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1065310/ss_c7a46c0fb9be02377b4e136280a01b3b86d77488.600x338.jpg',
     shortDescription:
-      'A dark menace consumes the Old ||West||. In solo or coop, fight with style in visceral, explosive combat against bloodthirsty monstrosities. Eradicate the vampiric hordes with your lightning-fueled gauntlet and become a Wild ||West|| Superhero.',
+      'A dark menace consumes the Old [[West]]. In solo or coop, fight with style in visceral, explosive combat against bloodthirsty monstrosities. Eradicate the vampiric hordes with your lightning-fueled gauntlet and become a Wild [[West]] Superhero.',
     releaseDate: 'Nov 21, 2022',
     developer: 'Flying Wild Hog',
     publisher: 'Focus Entertainment',
@@ -37800,7 +37820,7 @@ export const steamGameDetails: SteamGameMap = {
     userTags: [
       'Western',
       'Action-Adventure',
-      "Beat 'em up",
+      '3D',
       'Co-op',
       'Third-Person Shooter',
       'Vampire',
@@ -37814,7 +37834,36 @@ export const steamGameDetails: SteamGameMap = {
       'Singleplayer',
       'Online Co-Op',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: ['Western', 'Demons', 'Vampire'],
+    clueOrder: ['details+tags', 'extras', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Hard',
+    moreFromThisDeveloper: [
+      { id: 1036890, name: 'Shadow Warrior 3: Definitive Edition' },
+      { id: 324800, name: 'Shadow Warrior 2' },
+      { id: 233130, name: 'Shadow Warrior' },
+    ],
+    extrasClue: {
+      achievements: [
+        {
+          name: 'Spark of Hope',
+          desc: 'Activate the Supercharged Mode for the first time',
+          img: 'https://cdn.fastly.steamstatic.com/steamcommunity/public/images/apps/1065310/d2e594dcd754dba9d86b17552273d683ab49d5bb.jpg',
+        },
+        {
+          name: 'Slam Champion',
+          desc: 'Slam enemies 100 times',
+          img: 'https://cdn.fastly.steamstatic.com/steamcommunity/public/images/apps/1065310/a9f79c224a4425c149ca27a51d326446d2c05705.jpg',
+        },
+        {
+          name: 'Pew Pew Die',
+          desc: 'Kill at least 30 enemies with each electrically-augmented firearm',
+          img: 'https://cdn.fastly.steamstatic.com/steamcommunity/public/images/apps/1065310/003261b21739476ec23039645eae5b7d69dba802.jpg',
+        },
+      ],
+      achievementsTotal: 30,
+    },
   },
   '1066780': {
     name: 'Transport Fever 2',
@@ -49449,7 +49498,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1766740/ss_656dfa0b4bcf63fa5e4b58b9c08a246fcca7fa4a.600x338.jpg',
     shortDescription:
-      'Navigate an open-world island in an old train, upgrade it over time, and use it to fight an evil spider train named ||Charles||.',
+      'Navigate an open-world island in an old ||train||, upgrade it over time, and use it to fight an evil spider ||train|| named [[Charles]].',
     releaseDate: 'Dec 9, 2022',
     developer: 'Two Star Games',
     publisher: 'Two Star Games',
@@ -49476,7 +49525,10 @@ export const steamGameDetails: SteamGameMap = {
       'Indie',
       'Psychological Horror',
     ],
+    blurredUserTags: ['Trains'],
     clueOrder: ['tags', 'details', 'desc'],
+    developerDescription:
+      'Gavin Eisenbeisz, (born: 2001 [age 24–25])[1] also known as Two Star Games is an American game developer and YouTuber. He is mostly known for creating the game Choo-Choo Charles on his own using Unreal Engine. He uploaded Devlogs for the game on YouTube. ',
   },
   '1771300': {
     name: 'Kingdom Come: Deliverance II',
@@ -55388,7 +55440,8 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2515020/ss_7620e893321e1661bdf821617f349196c2b0019f.600x338.jpg',
     shortDescription:
-      'An epic dark fantasy where fates are decided by mighty Eikons and the Dominants who wield them. This is the tale of Clive Rosfield, a tragic warrior who swears revenge on the Dark Eikon Ifrit, a mysterious entity that leaves naught but calamity in its wake.',
+      '[[FINAL FANTASY ((X))VI]]&nbsp;&nbsp;is an epic dark fantasy where fates are decided by mighty Eikons and the Dominants who wield them. This is the tale of Clive Rosfield, a tragic warrior who swears revenge on the Dark Eikon Ifrit, a mysterious entity that leaves naught but calamity in its wake.',
+    originalReleaseDate: 'Jun 22, 2023 (PS5)',
     releaseDate: 'Sep 17, 2024',
     developer: 'Square Enix',
     publisher: 'Square Enix',
@@ -55401,7 +55454,7 @@ export const steamGameDetails: SteamGameMap = {
     userTags: [
       'Action RPG',
       'Story Rich',
-      'Spectacle fighter',
+      'Third Person',
       'JRPG',
       'Action',
       'Fantasy',
@@ -55415,7 +55468,22 @@ export const steamGameDetails: SteamGameMap = {
       'Magic',
       'Drama',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: ['Fantasy', 'Dark Fantasy'],
+    overrideCensoredTitle: 'F||INAL|| F||ANTASY|| X||VI||',
+    clueOrder: ['extras', 'tags', 'details', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
+    extrasClue: {
+      achievements: [
+        {
+          name: 'You Can Pet the Dog',
+          desc: 'Pet Torgal 5 times.',
+          img: 'https://cdn.fastly.steamstatic.com/steamcommunity/public/images/apps/2515020/908aabe981a03da3fbd71dce1abaab3b2d954877.jpg',
+        },
+      ],
+      achievementsTotal: 69,
+    },
   },
   '2527500': {
     name: 'MiSide',
