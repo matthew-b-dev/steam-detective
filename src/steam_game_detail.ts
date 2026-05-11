@@ -47961,7 +47961,7 @@ export const steamGameDetails: SteamGameMap = {
     userTags: [
       'City Builder',
       'Strategy',
-      'Survival',
+      'Sequel',
       'Resource Management',
       'Post-apocalyptic',
       'Simulation',
@@ -47981,7 +47981,6 @@ export const steamGameDetails: SteamGameMap = {
       'Management',
       'Singleplayer',
       'City Builder',
-      'Survival',
       'Post-apocalyptic',
       'Simulation',
     ],
@@ -48001,10 +48000,6 @@ export const steamGameDetails: SteamGameMap = {
         authorPlaytimeHours: 38.4,
         timestamp: 1727395200,
       },
-    ],
-    moreFromThisDeveloper: [
-      { id: 323190, name: 'Frostpunk', blurred: true },
-      { id: 1601570, name: 'The Alters' },
     ],
   },
   '1604030': {
