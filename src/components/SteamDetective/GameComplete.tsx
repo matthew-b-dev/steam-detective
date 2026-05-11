@@ -309,7 +309,7 @@ export const GameComplete: React.FC<GameCompleteProps> = ({
                         totalCaseFiles ?? getCaseFileCount(getUtcDateString()),
                       )}
                       className='inline w-6 h-6 mr-1 mt-[-2px]'
-                      alt='Folder icon'
+                      alt=''
                     />
                     Case File #{caseFileNumber + 1}
                   </span>

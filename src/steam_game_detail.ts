@@ -650,7 +650,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/8190/ss_1e816081cb2576e404ff64c7754b1cb70cb7a937.600x338.jpg',
     shortDescription:
-      'Dive into an adrenaline-fuelled free-roaming adventure with 400 square miles of rugged terrain and hundreds of weapons and vehicles.',
+      '||Dive into an adrenaline-fuelled free-roaming adventure||. As agent ||Rico Rodriguez||, your orders are to find and kill your friend and mentor who has disappeared on the island paradise of ||Panau||. ||There, you must cause maximum chaos by land, sea and air to shift the balance of power||.',
     releaseDate: 'Mar 23, 2010',
     developer: 'Avalanche Studios',
     publisher: 'Square Enix',
@@ -674,7 +674,37 @@ export const steamGameDetails: SteamGameMap = {
       'Exploration',
       'Funny',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: [
+      'Destruction',
+      'Third-Person Shooter',
+      'Sandbox',
+      'Multiplayer',
+      'Singleplayer',
+      'Adventure',
+    ],
+    clueOrder: ['desc', 'details+tags', 'extras'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
+    moreFromThisDeveloper: [
+      { id: 234140, name: 'Mad Max' },
+      { id: 548570, name: 'RAGE 2' },
+    ],
+    extrasClue: {
+      achievements: [
+        {
+          name: 'Welcome to Panau',
+          desc: 'Complete story mission 1.',
+          img: 'https://cdn.fastly.steamstatic.com/steamcommunity/public/images/apps/8190/e3d9e9ec6bca53495bb10ff810c060fd23a748c1.jpg',
+        },
+        {
+          name: 'Parachute Climber',
+          desc: 'Open the parachute and then land on foot 300 meters above the starting height.',
+          img: 'https://cdn.fastly.steamstatic.com/steamcommunity/public/images/apps/8190/990706fb185655ad1dcffebacf90cf007083e390.jpg',
+        },
+      ],
+      achievementsTotal: 50,
+    },
   },
   '8870': {
     name: 'BioShock Infinite',
@@ -8306,7 +8336,6 @@ export const steamGameDetails: SteamGameMap = {
   },
   '233270': {
     name: 'Far Cry 3: Blood Dragon',
-    overrideCensoredTitle: 'F||ar|| C||ry|| ||3||: B||lood|| D||ragon||',
     appId: 233270,
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/233270/ss_602b7c88ab725ccabfd8ad7c94fb536875c329ad.600x338.jpg',
@@ -8341,6 +8370,7 @@ export const steamGameDetails: SteamGameMap = {
       'First-Person',
     ],
     blurredUserTags: ['Open World'],
+    overrideCensoredTitle: 'F||ar|| C||ry|| ||3||: B||lood|| D||ragon||',
     clueOrder: ['desc', 'tags', 'details', 'review'],
     debugProcessed: true,
     debugRefined: true,
@@ -36646,10 +36676,10 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/996580/ss_971529dd86fc64c4505e54fabb1847ec47118a5d.600x338.jpg',
     shortDescription:
-      "Same sick burns, same smoldering attitude, now all scaled up in stunning HD, ||Spyro|| is back in the ||Spyro Reignited Trilogy||! Rekindle the fire with remastered versions of the original three games, ||Spyro|| the Dragon, ||Spyro|| 2: Ripto's Rage! and ||Spyro||: Year of the Dragon.",
+      "Same sick burns, same smoldering attitude, now all scaled up in stunning HD, [[Spyro]] is back in the [[Spyro Reignited Trilogy]]! Rekindle the fire with remastered versions of the original three games, ||Spyro the Dragon||, [[Spyro 2]]: Ripto's Rage! and ||Spyro: Year of the Dragon||.",
     releaseDate: 'Sep 3, 2019',
-    developer: 'Toys for Bob',
-    publisher: 'Activision',
+    developer: '||Toys for Bob||',
+    publisher: '||Activision||',
     tags: [],
     features: [],
     allReviewSummary: {
@@ -36658,9 +36688,9 @@ export const steamGameDetails: SteamGameMap = {
     },
     userTags: [
       '3D Platformer',
-      'Adventure',
-      'Dragons',
       'Remake',
+      'Dragons',
+      'Adventure',
       'Family Friendly',
       'Action',
       'Classic',
@@ -36673,7 +36703,34 @@ export const steamGameDetails: SteamGameMap = {
       'Cult Classic',
       'Cartoony',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: ['Dragons'],
+    overrideCensoredTitle: 'Sp||yro|| Re||ignited|| Tr||ilogy||',
+    clueOrder: ['review', 'details+tags', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
+    reviewClues: [
+      {
+        review:
+          'Everything about this remake is so fantastic. Except for flying levels. Those suck',
+        votedUp: true,
+        votesUp: 131,
+        votedFunny: 43,
+        weightedScore: undefined,
+        authorPlaytimeHours: 12.1,
+        timestamp: 1571616000,
+      },
+      {
+        review:
+          'Whoever made the flying challenge levels should be put on some kind of list',
+        votedUp: true,
+        votesUp: 108,
+        votedFunny: 96,
+        weightedScore: undefined,
+        authorPlaytimeHours: 22.8,
+        timestamp: 1571184000,
+      },
+    ],
   },
   '997010': {
     name: 'Police Simulator: Patrol Officers',
@@ -46040,7 +46097,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1455840/ss_5388583373f0895184a83c4db492e6f6dff5af2d.600x338.jpg',
     shortDescription:
-      '||Dorfromantik|| is a peaceful building strategy and puzzle game where you create a beautiful and ever-growing village landscape by placing tiles. Explore a variety of colorful biomes, discover and unlock new tiles and complete quests to fill your world with life!',
+      '[[((D))orfromantik]] is a peaceful building strategy and puzzle game where you create a beautiful and ever-growing village landscape by placing hexagonal tiles. Explore a variety of colorful biomes, discover and unlock new tiles and complete quests to fill your world with life!',
     releaseDate: 'Apr 28, 2022',
     developer: 'Toukana Interactive',
     publisher: 'Toukana Interactive',
@@ -46067,8 +46124,46 @@ export const steamGameDetails: SteamGameMap = {
       'Logic',
       'Indie',
     ],
-    overrideCensoredTitle: 'D||or||fr||omantik||',
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: [
+      'Board Game',
+      'Turn-Based Strategy',
+      'Sandbox',
+      'Simulation',
+      'City Builder',
+    ],
+    overrideCensoredTitle: 'D||or||fr||omanti||k',
+    clueOrder: ['review', 'details+tags', 'desc'],
+    searchTerms: [
+      'dorf romatic',
+      'dwarf romantik',
+      'dwarfromantic',
+      'dwarfromantik',
+    ],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Hard',
+    reviewClues: [
+      {
+        review:
+          'This is a game where you slowly perish on a blade forged from your own compromises.',
+        votedUp: true,
+        votesUp: 165,
+        votedFunny: 91,
+        weightedScore: undefined,
+        authorPlaytimeHours: 102.3,
+        timestamp: 1681704000,
+      },
+      {
+        review: '||Hex||agons are the bestagons!',
+        votedUp: true,
+        votesUp: 272,
+        votedFunny: 207,
+        weightedScore: undefined,
+        authorPlaytimeHours: 22.5,
+        writtenDuringEarlyAccess: true,
+        timestamp: 1618804800,
+      },
+    ],
   },
   '1458140': {
     name: 'Pacific Drive',
@@ -47849,11 +47944,11 @@ export const steamGameDetails: SteamGameMap = {
     name: 'Frostpunk 2',
     appId: 1601580,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1601580/5fcef70d6bc626f4c0cfc74826c3a27125bd1376/ss_5fcef70d6bc626f4c0cfc74826c3a27125bd1376.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1601580/ss_59e20f3f919c8ba8d436779163be1961c2ad136f.600x338.jpg',
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1601580/c6ef7c158fb7021f840c9ef00331265b9a34ecf1/ss_c6ef7c158fb7021f840c9ef00331265b9a34ecf1.600x338.jpg',
     shortDescription:
-      'Develop, expand, and advance your city in a society survival game set 30 years after an apocalyptic blizzard ravaged Earth. In ||Frostpunk 2||, you face not only the perils of never-ending winter, but also the powerful factions that watch your every step inside the Council Hall.',
+      'Develop, expand, and advance your city in a society ||survival|| game set 30 years after an apocalyptic ||blizzard|| ravaged Earth. In [[Frostpunk 2]], you face not only the perils of never-ending ||winter||, but also the powerful factions that watch your every step inside the Council Hall.',
     releaseDate: 'Sep 20, 2024',
     developer: '11 bit studios',
     publisher: '11 bit studios',
@@ -47880,7 +47975,37 @@ export const steamGameDetails: SteamGameMap = {
       'Political Sim',
       'Politics',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: [
+      'Steampunk',
+      'Base Building',
+      'Management',
+      'Singleplayer',
+      'City Builder',
+      'Survival',
+      'Post-apocalyptic',
+      'Simulation',
+    ],
+    overrideCensoredTitle: 'F||rostp||un||k|| ||2||',
+    clueOrder: ['review', 'details+tags', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Medium',
+    reviewClues: [
+      {
+        review:
+          'I had some minor gripes with this game. But after a short, incredibly productive stay in Thought-Correction Prison, I have realized that those concerns were misguided. Trust in The Steward.',
+        votedUp: true,
+        votesUp: 411,
+        votedFunny: 283,
+        weightedScore: undefined,
+        authorPlaytimeHours: 38.4,
+        timestamp: 1727395200,
+      },
+    ],
+    moreFromThisDeveloper: [
+      { id: 323190, name: 'Frostpunk', blurred: true },
+      { id: 1601570, name: 'The Alters' },
+    ],
   },
   '1604030': {
     name: 'V Rising',

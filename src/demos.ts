@@ -615,8 +615,13 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile2: 'Far Cry 3: Blood Dragon',
     caseFile3: 'Evil West',
   },
-  // Spyro Reignited Trilogy
   '2026-05-12': {
+    caseFile1: 'Spyro Reignited Trilogy',
+    caseFile2: 'Frostpunk 2',
+    caseFile3: 'Dorfromantik',
+  },
+  // Easy: Just Cause 2 (fully refined)
+  '2026-05-13': {
     caseFile1: "Don't Starve",
     caseFile2: 'Fields of Mistria',
     caseFile3: 'Dwarf Fortress',
