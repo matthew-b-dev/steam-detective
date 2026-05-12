@@ -620,8 +620,12 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile2: 'Frostpunk 2',
     caseFile3: 'Dorfromantik',
   },
-  // Easy: Just Cause 2 (fully refined)
   '2026-05-13': {
+    caseFile1: 'Just Cause 2',
+    caseFile2: 'A Plague Tale: Innocence',
+    caseFile3: 'Streets of Rogue',
+  },
+  '2026-05-14': {
     caseFile1: "Don't Starve",
     caseFile2: 'Fields of Mistria',
     caseFile3: 'Dwarf Fortress',

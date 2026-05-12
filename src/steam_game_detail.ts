@@ -648,7 +648,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/8190/ss_8d164f548b7861512aa6e13cd8d274098ade7e92.600x338.jpg',
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/8190/ss_1e816081cb2576e404ff64c7754b1cb70cb7a937.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/8190/ss_99b24792c4e2da969651e1c18563b11f3ebc603c.600x338.jpg',
     shortDescription:
       '||Dive into an adrenaline-fuelled free-roaming adventure||. As agent ||Rico Rodriguez||, your orders are to find and kill your friend and mentor who has disappeared on the island paradise of ||Panau||. ||There, you must cause maximum chaos by land, sea and air to shift the balance of power||.',
     releaseDate: 'Mar 23, 2010',
@@ -686,10 +686,7 @@ export const steamGameDetails: SteamGameMap = {
     debugProcessed: true,
     debugRefined: true,
     difficulty: 'Easy',
-    moreFromThisDeveloper: [
-      { id: 234140, name: 'Mad Max' },
-      { id: 548570, name: 'RAGE 2' },
-    ],
+    moreFromThisDeveloper: [{ id: 234140, name: 'Mad Max' }],
     extrasClue: {
       achievements: [
         {
@@ -24377,11 +24374,14 @@ export const steamGameDetails: SteamGameMap = {
     name: 'Streets of Rogue',
     appId: 512900,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/512900/ss_9fc33552a95fada32c6bc0a75b6d899244c4779c.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/512900/ss_8122938569ac3e6caa7e327baa186504ae7556ad.600x338.jpg',
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/512900/ss_8122938569ac3e6caa7e327baa186504ae7556ad.600x338.jpg',
+    webms: [
+      'https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/512900/extras/87d4315f29d56da6ef15add1bf302b45.webm?t=1758274145',
+    ],
     shortDescription:
-      "Fight, sneak, and hack your way through randomly generated cities. It's like Nuclear Throne meets Deus Ex, mixed with the anarchy of GTA. ||Rogue||-lite meets immersive sim, and goes completely insane.",
+      "[[Streets of ((R))ogue]] is a 2D Top-down Rogue-lite immersive sim, and goes completely insane. Fight, sneak, and hack your way through randomly generated cities. It's like Nuclear Throne meets Deus Ex, mixed with the anarchy of GTA. ",
     releaseDate: 'Jul 12, 2019',
     developer: 'Matt Dabrowski',
     publisher: 'tinyBuild',
@@ -24408,7 +24408,26 @@ export const steamGameDetails: SteamGameMap = {
       'Stealth',
       'Great Soundtrack',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: ['Roguelite', 'Action Roguelike', 'Roguelike'],
+    clueOrder: ['extras', 'details+tags', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Hard',
+    extrasClue: {
+      achievements: [
+        {
+          name: 'Ironic Killer',
+          desc: 'Kill someone by throwing a Gravestone at them',
+          img: 'https://cdn.fastly.steamstatic.com/steamcommunity/public/images/apps/512900/b18a5187a2aad67ed9ae6182142a340cff000ea6.jpg',
+        },
+        {
+          name: 'Fountain of Life',
+          desc: 'Poison a water body with Resurrection Shampoo',
+          img: 'https://cdn.fastly.steamstatic.com/steamcommunity/public/images/apps/512900/e793901bb1a22a2ec2463399be19c40cdf147332.jpg',
+        },
+      ],
+      achievementsTotal: 52,
+    },
   },
   '516750': {
     name: 'My Summer Car',
@@ -31694,9 +31713,9 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/752590/ss_8433438bf03b7f524e6cf3ac81e99e96be2188c8.600x338.jpg',
     shortDescription:
-      'Follow the grim tale of young ||Amicia|| and ||her|| little brother Hugo, in a heartrending journey through the darkest hours of history.',
+      'Follow the grim tale of young ||Amicia|| and her little brother Hugo in ||A Plague Tale: Innocence||, a heartrending journey through the darkest hours of history.',
     releaseDate: 'May 14, 2019',
-    developer: 'Asobo Studio',
+    developer: '||Asobo Studio||',
     publisher: 'Focus Entertainment',
     tags: ['Action', 'Adventure'],
     features: [],
@@ -31726,11 +31745,30 @@ export const steamGameDetails: SteamGameMap = {
       'Post-apocalyptic',
       'Walking Simulator',
     ],
+    blurredUserTags: ['Female Protagonist', 'Medieval', 'Dark'],
     blurScreenshotQuarter: 'top',
-    clueOrder: ['tags', 'details', 'desc'],
+    clueOrder: ['details+tags', 'review', 'desc'],
     debugProcessed: true,
     debugRefined: true,
-    difficulty: 'Hard',
+    difficulty: 'Medium',
+    reviewClues: [
+      {
+        review: 'The [[((R))at((s))]] of Us.\n\n(review partially redacted)',
+        votedUp: true,
+        votesUp: 61,
+        votedFunny: 125,
+        weightedScore: undefined,
+        authorPlaytimeHours: 19.5,
+        timestamp: 1559779200,
+      },
+    ],
+    moreFromThisDeveloper: [
+      { id: 2537590, name: 'Microsoft Flight Simulator 2024' },
+      { id: 331750, name: 'Disney•Pixar WALL-E' },
+    ],
+    extrasClue: {
+      achievementsTotal: 35,
+    },
   },
   '753640': {
     name: 'Outer Wilds',
