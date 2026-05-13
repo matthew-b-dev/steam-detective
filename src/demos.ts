@@ -626,6 +626,13 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile3: 'Streets of Rogue',
   },
   '2026-05-14': {
+    caseFile1: 'Mass Effect 2',
+    caseFile2: 'Superliminal',
+    caseFile3: 'Monster Hunter Stories 2: Wings of Ruin',
+  },
+  // Friday: Tekken 8
+  // Friday: One Finger Death Punch
+  '2026-05-15': {
     caseFile1: "Don't Starve",
     caseFile2: 'Fields of Mistria',
     caseFile3: 'Dwarf Fortress',

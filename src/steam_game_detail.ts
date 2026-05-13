@@ -37380,8 +37380,12 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1049410/ss_ec116fe04a78f76212934c3aa20bf8b38681683d.600x338.jpg',
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1049410/ss_4a2b446656c93cd3575acc42650ffb79723b020d.600x338.jpg',
+    webms: [
+      'https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1049410/extras/0fba88666e70764c2d30dd74e4ad99f0.webm?t=1755294276',
+    ],
     shortDescription:
-      'Perception is reality. In this mind-bending first-person puzzler, you escape a surreal dream world through solving impossible puzzles using the ambiguity of depth and perspective.',
+      'Perception is reality in [[Superliminal]]. In this mind-bending first-person puzzler, you escape a surreal dream world through solving impossible puzzles using the ambiguity of depth and perspective.',
+    originalReleaseDate: 'Nov 12, 2019 (Epic)',
     releaseDate: 'Nov 5, 2020',
     developer: 'Pillow Castle',
     publisher: 'Pillow Castle',
@@ -37408,7 +37412,26 @@ export const steamGameDetails: SteamGameMap = {
       'Psychological Horror',
       '3D Vision',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: ['Narration', 'Psychedelic', 'Story Rich', 'Thriller'],
+    clueOrder: ['extras', 'details+tags', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Medium',
+    extrasClue: {
+      achievements: [
+        {
+          name: 'Why Are You Like This?',
+          desc: 'Clone an object way too many times',
+          img: 'https://cdn.fastly.steamstatic.com/steamcommunity/public/images/apps/1049410/8ac64e41de9ad5bbd67febd64d2b237ab06d7a91.jpg',
+        },
+        {
+          name: 'Dream Sculptor',
+          desc: 'Upload a dream to the workshop',
+          img: 'https://cdn.fastly.steamstatic.com/steamcommunity/public/images/apps/1049410/3a0a676755bb3ade772461fad7bdc0a86311d9c1.jpg',
+        },
+      ],
+      achievementsTotal: 27,
+    },
   },
   '1049590': {
     name: 'Eternal Return',
@@ -43177,14 +43200,14 @@ export const steamGameDetails: SteamGameMap = {
     name: 'Monster Hunter Stories 2: Wings of Ruin',
     appId: 1277400,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1277400/ss_fbbd608be7804aa499420ebe5596889b8909a392.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1277400/ss_2cc9be650148777d9132f66e8505df748b4d1d85.600x338.jpg',
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1277400/ss_e869a68f8a36e894766a1c94824fc7c26436ed7e.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1277400/ss_334f4d54d6977a1b09742a40223d08998c853e58.600x338.jpg',
     shortDescription:
-      'A new adventure awaits you in this second installment of the turn-based RPG series set in the world of ||Monster|| ||Hunter||! Become a Rider and form bonds with friendly monsters known as Monsties to fight alongside them as you take part in an epic story.',
+      'A new adventure awaits you in this second installment of the turn-based RPG series set in the world of [[Monster Hunter]]! Become a Rider and form bonds with friendly [[monster((s))]] known as [[Monst((ies))]] to fight alongside them as you take part in an epic story.',
     releaseDate: 'Jul 8, 2021',
-    developer: 'CAPCOM Co., Ltd.',
-    publisher: 'CAPCOM Co., Ltd.',
+    developer: '||CAPCOM Co., Ltd.||',
+    publisher: '||CAPCOM Co., Ltd.||',
     tags: [],
     features: [],
     allReviewSummary: {
@@ -43193,8 +43216,8 @@ export const steamGameDetails: SteamGameMap = {
     },
     userTags: [
       'RPG',
+      'Turn-based',
       'Adventure',
-      'JRPG',
       'Exploration',
       'Creature Collector',
       'Dragons',
@@ -43208,7 +43231,38 @@ export const steamGameDetails: SteamGameMap = {
       'PvE',
       'Emotional',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: [
+      'Cartoony',
+      'Fantasy',
+      'Third Person',
+      'Exploration',
+      'Creature Collector',
+      'Dragons',
+      '3D',
+      'Adventure',
+    ],
+    overrideCensoredTitle:
+      'M||onste||r H||unter|| S||torie||s ||2||: ||Wings|| ||of|| ||Ruin||',
+    clueOrder: ['details+tags', 'review', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Hard',
+    reviewClues: [
+      {
+        review:
+          "This series is a cute little deviation from the franchise's main formula. It's like ||Pokemon||, but you kidnap their children instead.",
+        votedUp: true,
+        votesUp: 98,
+        votedFunny: 57,
+        weightedScore: undefined,
+        authorPlaytimeHours: 111.1,
+        timestamp: 1712635200,
+      },
+    ],
+    moreFromThisDeveloper: [{ id: 2054970, name: "Dragon's Dogma 2" }],
+    extrasClue: {
+      achievementsTotal: 48,
+    },
   },
   '1280770': {
     name: 'Redmatch 2',
@@ -58308,6 +58362,68 @@ export const steamGameDetails: SteamGameMap = {
         timestamp: 1435363200,
       },
     ],
+  },
+  '2362420': {
+    name: 'Mass Effect 2',
+    appId: 2362420,
+    primaryScreenshot:
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2362420/ss_71ad1e34f9d1bd6cf8038dc6d0746d3ece8c2c0c.600x338.jpg',
+    secondaryScreenshot:
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2362420/ss_2d1b0413d708b2d61b689a9578bbd2fbdaf3ab8f.600x338.jpg',
+    shortDescription:
+      "Are you prepared to lose everything to save the galaxy? You'll need to be, Commander [[((S))hepar((d))]]. It's time to bring together your greatest allies and recruit the galaxy's fighting elite to continue the resistance against the invading [[((R))eaper((s))]].",
+    releaseDate: 'Jan 26, 2010',
+    developer: '||BioWare||',
+    publisher: '||Electronic Arts||',
+    tags: [],
+    features: [],
+    allReviewSummary: {
+      count: 18004,
+      rating: 'Very Positive',
+    },
+    userTags: [
+      'RPG',
+      'Action',
+      'Third-Person Shooter',
+      'Sci-fi',
+      'Space',
+      'Choices Matter',
+      'Story Rich',
+      'Singleplayer',
+      'Adventure',
+      'Cinematic',
+      'Romance',
+      'Third Person',
+      'Character Customization',
+      'Shooter',
+      'Atmospheric',
+    ],
+    blurredUserTags: [
+      'Cinematic',
+      'Action',
+      'Third-Person Shooter',
+      'Sci-fi',
+      'Space',
+      'Choices Matter',
+      'Adventure',
+    ],
+    blurScreenshotQuarter: 'bottom',
+    clueOrder: ['details+tags', 'review', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
+    reviewClues: [
+      {
+        review:
+          'My favorite RPG of all time. Uploading my game Save to import my character from ||the first game|| was a bit cumbersome but this game is still somehow working well after all these years.',
+        votedUp: true,
+        votesUp: 4,
+        weightedScore: undefined,
+        authorPlaytimeHours: 19.8,
+        timestamp: 1733806800,
+      },
+    ],
+    moreFromThisDeveloper: [{ id: 624060, name: 'Shattered Steel (1996)' }],
   },
 };
 
