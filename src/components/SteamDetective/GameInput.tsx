@@ -46,6 +46,7 @@ const gameSearch = new MiniSearch({
     'nameCompact',
     'nameNumerals',
     'nameWordNumerals',
+    'nameAmpExpanded',
     'searchTerms',
   ],
   idField: 'id',
@@ -60,6 +61,7 @@ gameSearch.addAll(
     nameCompact: compactName(name),
     nameNumerals: arabicNumerals(name),
     nameWordNumerals: digitNumerals(name),
+    nameAmpExpanded: name.replace(/\s*&\s*/g, ' and '),
     searchTerms: (gameSearchTerms[name] ?? []).join(' '),
   })),
 );

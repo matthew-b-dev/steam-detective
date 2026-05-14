@@ -630,9 +630,13 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile2: 'Superliminal',
     caseFile3: 'Monster Hunter Stories 2: Wings of Ruin',
   },
-  // Friday: Tekken 8
-  // Friday: One Finger Death Punch
   '2026-05-15': {
+    caseFile1: 'Forza Horizon 4',
+    caseFile2: 'TEKKEN 8',
+    caseFile3: 'Command & Conquer Red Alert 3',
+  },
+  // Saturday: One Finger Death Punch
+  '2026-05-16': {
     caseFile1: "Don't Starve",
     caseFile2: 'Fields of Mistria',
     caseFile3: 'Dwarf Fortress',

@@ -1515,14 +1515,14 @@ export const steamGameDetails: SteamGameMap = {
     name: 'Command & Conquer Red Alert 3',
     appId: 17480,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/17480/0000006501.600x338.jpg',
-    secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/17480/0000006502.600x338.jpg',
+    secondaryScreenshot:
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/17480/0000006508.600x338.jpg',
     shortDescription:
-      'The desperate leadership of a doomed Soviet Union travels back in time to change history and restore the glory of Mother Russia.',
-    releaseDate: 'Jan 8, 2009',
-    developer: 'EA Los Angeles',
-    publisher: 'Electronic Arts',
+      'The desperate leadership of a doomed Soviet Union travels back in time to change history and restore the glory of Mother Russia. The time travel mission goes awry, creating an alternate timeline where technology has followed an entirely different evolution, and World War III is raging. The Empire of the Rising Sun has risen in the East, making World War III a three-way struggle between the Soviets, the Allies, and the Empire.',
+    releaseDate: 'Oct 28, 2008',
+    developer: '||EA Los Angeles||',
+    publisher: '||Electronic Arts||',
     tags: [],
     features: [],
     allReviewSummary: {
@@ -1531,9 +1531,9 @@ export const steamGameDetails: SteamGameMap = {
     },
     userTags: [
       'Strategy',
-      'Family Friendly',
-      'Level Editor',
       'RTS',
+      'Warfare',
+      'FMV',
       'Action',
       'Multiplayer',
       'Base Building',
@@ -1546,7 +1546,34 @@ export const steamGameDetails: SteamGameMap = {
       'Sci-fi',
       'Co-op Campaign',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    screenshotLetterbox: true,
+    blurScreenshotQuarter: 'bottom',
+    overrideCensoredTitle: 'C||ommand|| & C||onquer|| R||ed|| A||lert|| ||3||',
+    clueOrder: ['desc', 'details+tags', 'review'],
+    excludeOptions: ['Command & Conquer Remastered Collection'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Medium',
+    reviewClues: [
+      {
+        review:
+          '[[Red Alert 3]] is a decent game. But it marks the first in the series not developed by Westwood ... and it shows.',
+        votedUp: true,
+        votesUp: 4,
+        weightedScore: undefined,
+        authorPlaytimeHours: 6.7,
+        timestamp: 1772605347,
+      },
+      {
+        review: 'Tim curry goes to space',
+        votedUp: true,
+        votesUp: 46,
+        votedFunny: 18,
+        weightedScore: undefined,
+        authorPlaytimeHours: 53.3,
+        timestamp: 1687665600,
+      },
+    ],
   },
   '19680': {
     name: 'Alice: Madness Returns',
@@ -37375,7 +37402,6 @@ export const steamGameDetails: SteamGameMap = {
   },
   '1049410': {
     name: 'Superliminal',
-    overrideCensoredTitle: 'Su||perlimin||al',
     appId: 1049410,
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1049410/ss_ec116fe04a78f76212934c3aa20bf8b38681683d.600x338.jpg',
@@ -37414,6 +37440,7 @@ export const steamGameDetails: SteamGameMap = {
       '3D Vision',
     ],
     blurredUserTags: ['Narration', 'Psychedelic', 'Story Rich', 'Thriller'],
+    overrideCensoredTitle: 'Su||perlimin||al',
     clueOrder: ['extras', 'details+tags', 'desc'],
     debugProcessed: true,
     debugRefined: true,
@@ -43833,11 +43860,12 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1293830/ss_e88792a0331f460d913ac05203f7c1b12112b14c.600x338.jpg',
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1293830/ss_d2046bdb2f6acdf9b88c3c168e9eaec38495f063.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1293830/ss_ae4d2485f415b08ba4c00195d29680369e23405a.600x338.jpg',
     shortDescription:
-      "Dynamic seasons change everything at the world's greatest automotive festival. Go it alone or team up with others to explore beautiful and historic Britain in a shared open world.",
+      'Dynamic seasons change everything at the world’s greatest automotive festival. Go it alone or team up with others to explore beautiful and historic Britain in a shared open world. Collect, modify and drive over 450 cars. Race, stunt, create and explore – choose your own path to become a [[((F))orza Horizon]] Superstar.',
+    originalReleaseDate: 'Oct 2, 2018 (Microsoft)',
     releaseDate: 'Mar 9, 2021',
-    developer: 'Playground Games',
+    developer: '||Playground|| Games',
     publisher: 'Xbox Game Studios',
     tags: ['Racing'],
     features: [],
@@ -43867,7 +43895,37 @@ export const steamGameDetails: SteamGameMap = {
       'First-Person',
       'Funny',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: [
+      'Open World',
+      'Driving',
+      'Multiplayer',
+      'Automobile Sim',
+      'Online Co-Op',
+      'Singleplayer',
+      'Controller',
+      'Simulation',
+      'Realistic',
+    ],
+    overrideCensoredTitle: 'F||orza|| H||orizo||n ||4||',
+    clueOrder: ['details+tags', 'extras', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
+    extrasClue: {
+      achievements: [
+        {
+          name: 'Auto Barn',
+          desc: 'Find and restore your first Barn Find.',
+          img: 'https://cdn.fastly.steamstatic.com/steamcommunity/public/images/apps/1293830/58cb08811517e98fd2a1106051dae5aa081a3ef0.jpg',
+        },
+        {
+          name: 'Taxi!!!',
+          desc: 'Complete the first chapter of "Isha\'s Taxis".',
+          img: 'https://cdn.fastly.steamstatic.com/steamcommunity/public/images/apps/1293830/8e2fe03321a73b6a61179f0eba8549263f418712.jpg',
+        },
+      ],
+      achievementsTotal: 178,
+    },
   },
   '1296610': {
     name: 'Peglin',
@@ -49828,9 +49886,9 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1778820/ss_62e6ec252bc1a641e8e42dba07f23631d5da85e6.600x338.jpg',
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1778820/ss_99dabe34abc0f92adc39d7099908c9540be7eb3f.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1778820/ss_853e5ffd8d75e9b5aa171e0b332d026866e1b5af.600x338.jpg',
     shortDescription:
-      '||TEKKEN 8|| is the latest addition to the ||TEKKEN|| series, the pinnacle of 3D fighting games. Join the fight with over 32 characters and bear witness to the next installment in this epic saga. Get ready for the biggest and best ||TEKKEN|| game ever made!',
+      '[[TEKKEN 8]] is the latest addition to the [[TEKKEN]] series, the pinnacle of 3D fighting games. Join the fight with over 32 characters and bear witness to the next installment in this epic saga. Get ready for the biggest and best [[TEKKEN]] game ever made!',
     releaseDate: 'Jan 25, 2024',
     developer: 'Bandai Namco Studios Inc.',
     publisher: 'Bandai Namco Entertainment',
@@ -49854,7 +49912,24 @@ export const steamGameDetails: SteamGameMap = {
       'Character Customization',
       'Martial Arts',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: ['3D Fighter', 'eSports', 'Competitive'],
+    overrideCensoredTitle: 'T||EKKE||N ||8||',
+    clueOrder: ['details+tags', 'review', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
+    reviewClues: [
+      {
+        review:
+          '> Started the game\n> Jin speaks Japanese\n> Leroy speaks English\n> They understand each other',
+        votedUp: true,
+        votesUp: 2332,
+        votedFunny: 925,
+        weightedScore: undefined,
+        authorPlaytimeHours: 19.2,
+        timestamp: 1706158800,
+      },
+    ],
   },
   '1782120': {
     name: 'ZERO Sievert',
@@ -58441,6 +58516,7 @@ export const CLOSE_GUESS_SERIES: string[] = [
   'chivalry',
   'cities:',
   'civilization',
+  'command & conquer',
   'creed',
   'crusader kings',
   'darkest dungeon',

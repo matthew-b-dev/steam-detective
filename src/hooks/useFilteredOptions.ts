@@ -2,12 +2,13 @@ import { useMemo } from 'react';
 import type { SteamGame } from '../types';
 import type { MissedGuess } from '../utils';
 
-// Helper function to normalize strings by removing accents
+// Helper function to normalize strings by removing accents and treating "&" and "and" as equivalent
 const normalizeString = (str: string): string => {
   return str
     .normalize('NFD')
     .replace(/[\u0300-\u036f]/g, '')
-    .toLowerCase();
+    .toLowerCase()
+    .replace(/\s*&\s*/g, ' and ');
 };
 
 interface GameOption {

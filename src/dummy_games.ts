@@ -865,6 +865,8 @@ export const dummyGames: string[] = [
   'Pac-Man World Re-Pac',
   'The Chant',
   'Dolmen',
+  'Command & Conquer Red Alert 2',
+  'Command & Conquer Red Alert',
   'Far Cry 5',
   'Far Cry 6',
   'Far Cry 2',
