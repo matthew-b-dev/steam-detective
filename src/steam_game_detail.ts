@@ -37375,6 +37375,7 @@ export const steamGameDetails: SteamGameMap = {
   },
   '1049410': {
     name: 'Superliminal',
+    overrideCensoredTitle: 'Su||perlimin||al',
     appId: 1049410,
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1049410/ss_ec116fe04a78f76212934c3aa20bf8b38681683d.600x338.jpg',
