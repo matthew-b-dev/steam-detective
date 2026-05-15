@@ -10,7 +10,12 @@ import {
 import grayImg from '../../assets/gray.jpg';
 
 interface ClueMoreFromDeveloperProps {
-  games: { id: number; name: string; blurred?: boolean }[];
+  games: {
+    id: number;
+    name: string;
+    blurred?: boolean;
+    headerOverride?: string;
+  }[];
   developerDescription?: string;
   censoredDeveloperDescription?: ReactElement[];
   show: boolean;
@@ -188,36 +193,47 @@ export const ClueMoreFromDeveloper: React.FC<ClueMoreFromDeveloperProps> = ({
                   <div className='text-white text-[10px] text-center truncate mb-0.5 w-full select-none'>
                     {game.blurred && !isComplete ? '???' : game.name || ''}
                   </div>
-                  <img
-                    src={
-                      game.blurred && !isComplete
-                        ? grayImg
-                        : `https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/${game.id}/header.jpg`
-                    }
-                    alt=''
-                    className='w-full rounded select-none'
-                    draggable={false}
+                  <div
+                    className='w-full rounded overflow-hidden'
                     style={{
-                      display: 'block',
+                      aspectRatio: '460 / 215',
                       ...(game.blurred && !isComplete
                         ? { border: '2px dashed white' }
                         : {}),
                     }}
-                    onLoad={handleImageLoad}
-                    onError={handleImageLoad}
-                    onContextMenu={(e) => e.preventDefault()}
-                    {...((!game.blurred || isComplete) && game.name
-                      ? {
-                          'data-tooltip-id': 'mfd-tooltip',
-                          'data-tooltip-content': game.name,
-                        }
-                      : game.blurred && !isComplete
+                  >
+                    <img
+                      src={
+                        game.blurred && !isComplete
+                          ? grayImg
+                          : (game.headerOverride ??
+                            `https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/${game.id}/header.jpg`)
+                      }
+                      alt=''
+                      className='w-full h-full select-none'
+                      draggable={false}
+                      style={{
+                        display: 'block',
+                        objectFit: 'contain',
+                        background: 'black',
+                      }}
+                      onLoad={handleImageLoad}
+                      onError={handleImageLoad}
+                      onContextMenu={(e) => e.preventDefault()}
+                      {...((!game.blurred || isComplete) && game.name
                         ? {
                             'data-tooltip-id': 'mfd-tooltip',
-                            'data-tooltip-content': 'A game in the same series',
+                            'data-tooltip-content': game.name,
                           }
-                        : {})}
-                  />
+                        : game.blurred && !isComplete
+                          ? {
+                              'data-tooltip-id': 'mfd-tooltip',
+                              'data-tooltip-content':
+                                'A game in the same series',
+                            }
+                          : {})}
+                    />
+                  </div>
                   {/* Text overlay for blurred/redacted games */}
                   {game.blurred && !isComplete && (
                     <div className='absolute inset-0 rounded flex flex-col items-center justify-center pointer-events-none uppercase text-white text-[14px] font-bold tracking-widest'>

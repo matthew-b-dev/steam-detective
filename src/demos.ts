@@ -635,8 +635,13 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile2: 'TEKKEN 8',
     caseFile3: 'Command & Conquer Red Alert 3',
   },
-  // Saturday: One Finger Death Punch
   '2026-05-16': {
+    caseFile1: 'The Witcher 2: Assassins of Kings',
+    caseFile2: 'Middle-earth: Shadow of War',
+    caseFile3: 'Dungeon Defenders',
+  },
+  // Saturday: One Finger Death Punch
+  '2026-05-17': {
     caseFile1: "Don't Starve",
     caseFile2: 'Fields of Mistria',
     caseFile3: 'Dwarf Fortress',

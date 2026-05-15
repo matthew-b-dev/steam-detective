@@ -1740,12 +1740,13 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/20920/ss_50472c40c90b4771382458f8e1c691793c63e1b0.600x338.jpg',
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/20920/ss_2bce7b672342632a75cb9a6d225fa0b1d04455d8.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/20920/ss_7113e666480f25b2e57b1def241d8ac43a4b8ab8.600x338.jpg',
     shortDescription:
-      'A time of untold chaos has come. Mighty forces clash behind the scenes in a struggle for power and influence. The Northern Kingdoms mobilize for war. But armies on the march are not enough to stop a bloody conspiracy...',
-    releaseDate: 'Apr 16, 2012',
-    developer: 'CD PROJEKT RED',
-    publisher: 'CD PROJEKT RED, 1C-SoftClub',
+      'The ||second|| installment in the RPG saga about professional monster slayer ||Geralt of Rivia||, [[The Witcher 2]] spins a mature, thought-provoking tale to produce one of the most elaborate and unique role-playing series ever released on PC. ',
+    releaseDate: 'May 17, 2011',
+    developer: '||CD PROJEKT RED||',
+    publisher: '||CD PROJEKT RED||',
+    excludeOptions: ['The Witcher'],
     tags: ['RPG'],
     features: [],
     allReviewSummary: {
@@ -1760,7 +1761,7 @@ export const steamGameDetails: SteamGameMap = {
       'Choices Matter',
       'Singleplayer',
       'Third Person',
-      'Nudity',
+      'Action',
       'Adventure',
       'Dark Fantasy',
       'Multiple Endings',
@@ -1774,14 +1775,23 @@ export const steamGameDetails: SteamGameMap = {
       'Magic',
       'Dark',
     ],
-    blurredUserTags: ['Nudity'],
     overrideCensoredTitle:
-      '||The|| W||itcher 2||: A||ssassins|| o||f|| K||ings||',
-    clueOrder: ['tags', 'details', 'desc'],
+      '||The|| W||itche||r ||2||: A||ssassins|| o||f|| K||ings||',
+    clueOrder: ['extras', 'details+tags', 'desc'],
     debugProcessed: true,
     debugRefined: true,
     difficulty: 'Easy',
     debugNotes: 'delete',
+    extrasClue: {
+      achievements: [
+        {
+          name: 'Gambler',
+          desc: 'Win an arm wrestling match, a Dice Poker game, and a fist fight.',
+          img: 'https://cdn.fastly.steamstatic.com/steamcommunity/public/images/apps/20920/e9b992147724c89f31adea05f51e42dd3a85852c.jpg',
+        },
+      ],
+      achievementsTotal: 52,
+    },
   },
   '21000': {
     name: 'LEGO Batman: The Videogame',
@@ -3687,7 +3697,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/65800/ss_ae947199ba474a6fd5829ab17db98884d8ca0a9e.600x338.jpg',
     shortDescription:
-      'Create a hero from one of four classes to save Etheria in this 4-player coop Tower Defense Action-RPG. Includes Steam exclusive Portal gun &amp; TF2 familiars!',
+      '[[((D))ungeon Defenders]] is a Tower Defense Action-RPG where you must save the land of Etheria from an Ancient Evil! Create a hero from one of four distinct classes to fight back wave after wave of enemies by summoning defenses and directly participating in the action-packed combat!',
     releaseDate: 'Oct 18, 2011',
     developer: 'Chromatic Games',
     publisher: 'Chromatic Games',
@@ -3698,12 +3708,12 @@ export const steamGameDetails: SteamGameMap = {
       rating: 'Very Positive',
     },
     userTags: [
-      'Multiplayer',
       'Online Co-Op',
       'Tower Defense',
-      'Singleplayer',
+      '3D',
+      'Multiplayer',
       'Strategy',
-      'Survival',
+      'Magic',
       'Action RPG',
       'Character Customization',
       'Tactical',
@@ -3714,7 +3724,31 @@ export const steamGameDetails: SteamGameMap = {
       'PvE',
       'Strategy RPG',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    overrideCensoredTitle: 'D||ungeo||n D||efender||s',
+    clueOrder: ['extras', 'details+tags', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Hard',
+    extrasClue: {
+      achievements: [
+        {
+          name: 'Defender of Etheria',
+          desc: 'Reached Hero Level 70',
+          img: 'https://cdn.fastly.steamstatic.com/steamcommunity/public/images/apps/65800/4c8b703ac78ec5223d770e1ccf5c0a5dae091406.jpg',
+        },
+        {
+          name: 'Master Banker',
+          desc: 'Stored 15,000,000 Mana in your Mana Bank',
+          img: 'https://cdn.fastly.steamstatic.com/steamcommunity/public/images/apps/65800/99a9c60df66e4f8f6abea3178b083befbe21f820.jpg',
+        },
+        {
+          name: 'Survivalist',
+          desc: 'Reached Survival Wave 15 on Medium Difficulty',
+          img: 'https://cdn.fastly.steamstatic.com/steamcommunity/public/images/apps/65800/4b960653769d2e66529dfdd21a2167da38ae6442.jpg',
+        },
+      ],
+      achievementsTotal: 118,
+    },
   },
   '65930': {
     name: 'The Bureau: XCOM Declassified',
@@ -17367,10 +17401,10 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/356190/ss_10afae02830aee12600b55fedf05a10af070187c.600x338.jpg',
     shortDescription:
-      'Experience an epic open-world brought to life by the award-winning Nemesis System. Forge a new Ring of Power, conquer Fortresses in massive battles and dominate Mordor with your personal orc army in ||Middle-earth: Shadow of War||.',
+      'Experience an epic open-world brought to life by the award-winning Nemesis System. Forge a new ||Ring of Power||, conquer Fortresses in massive battles and dominate ||Mordor|| with your personal orc army in [[Middle((-))earth(( :)) Shadow of War]].',
     releaseDate: 'Oct 9, 2017',
-    developer: 'Monolith Productions',
-    publisher: 'WB Games',
+    developer: '||Monolith Productions||',
+    publisher: '||WB Games||',
     tags: ['Action', 'Adventure', 'RPG'],
     features: [],
     allReviewSummary: {
@@ -17378,11 +17412,11 @@ export const steamGameDetails: SteamGameMap = {
       rating: 'Very Positive',
     },
     userTags: [
+      'Fantasy',
       'Open World',
       'Action',
       'RPG',
       'Singleplayer',
-      'Fantasy',
       'Adventure',
       'Third Person',
       'Violent',
@@ -17399,8 +17433,50 @@ export const steamGameDetails: SteamGameMap = {
       'Strategy',
       'Multiplayer',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
-    searchTerms: ['middle earth: shadow of war'],
+    blurredUserTags: [
+      'Third Person',
+      'Violent',
+      'Stealth',
+      'Gore',
+      'Adventure',
+      'Open World',
+      'Action',
+      'RPG',
+    ],
+    overrideCensoredTitle: 'M||iddle||-e||art||h: S||hadow|| o||f|| ||War||',
+    clueOrder: ['details+tags', 'extras', 'desc'],
+    searchTerms: [
+      'middle earth: shadow of war',
+      'middleearth shadow of war',
+      'middle-earth shadow of war',
+    ],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
+    moreFromThisDeveloper: [
+      {
+        id: 3884520,
+        name: 'Blood (1997)',
+        headerOverride:
+          'https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3884520/f4294688632638f6b8b73485958c37753d324383/capsule_231x87.jpg?t=1773966561',
+      },
+      { id: 299050, name: 'Blood II: The Chosen (1998)' },
+    ],
+    extrasClue: {
+      achievements: [
+        {
+          name: 'Follower Perks',
+          desc: 'Use a Training Order to give a Follower a gang.',
+          img: 'https://cdn.fastly.steamstatic.com/steamcommunity/public/images/apps/356190/a72c40a7ce9afadce66f05d169b32a6731f084a4.jpg',
+        },
+        {
+          name: 'The Operative',
+          desc: "Turn all of a Warchief's bodyguards (minimum 2) into spies, then confront him.",
+          img: 'https://cdn.fastly.steamstatic.com/steamcommunity/public/images/apps/356190/aed0a0882ece4f2f34ef94c45bb0190f73b6d5a7.jpg',
+        },
+      ],
+      achievementsTotal: 72,
+    },
   },
   '356670': {
     name: "Spooky's Jump Scare Mansion",
@@ -58527,6 +58603,7 @@ export const CLOSE_GUESS_SERIES: string[] = [
   'doom',
   'dragon age',
   'dragon ball',
+  'dungeon defenders',
   'elder scrolls',
   'fallout',
   'far cry',
