@@ -640,8 +640,12 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile2: 'Middle-earth: Shadow of War',
     caseFile3: 'Dungeon Defenders',
   },
-  // Saturday: One Finger Death Punch
   '2026-05-17': {
+    caseFile1: 'Detroit: Become Human',
+    caseFile2: 'One Finger Death Punch',
+    caseFile3: 'XCOM: Enemy Unknown',
+  },
+  '2026-05-18': {
     caseFile1: "Don't Starve",
     caseFile2: 'Fields of Mistria',
     caseFile3: 'Dwarf Fortress',

@@ -361,6 +361,10 @@ const SteamDetectiveGame: React.FC<SteamDetectiveGameProps> = ({
         !prevShowCluesRef.current[4] &&
         showClues[4]) ||
         (hasDetailsTags &&
+          !hasReviewInOrder &&
+          !prevShowCluesRef.current[4] &&
+          showClues[4]) ||
+        (hasDetailsTags &&
           hasReviewInOrder &&
           !prevShowCluesRef.current[6] &&
           showClues[6]));

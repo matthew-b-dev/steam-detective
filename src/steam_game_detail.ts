@@ -1746,7 +1746,6 @@ export const steamGameDetails: SteamGameMap = {
     releaseDate: 'May 17, 2011',
     developer: '||CD PROJEKT RED||',
     publisher: '||CD PROJEKT RED||',
-    excludeOptions: ['The Witcher'],
     tags: ['RPG'],
     features: [],
     allReviewSummary: {
@@ -1778,6 +1777,7 @@ export const steamGameDetails: SteamGameMap = {
     overrideCensoredTitle:
       '||The|| W||itche||r ||2||: A||ssassins|| o||f|| K||ings||',
     clueOrder: ['extras', 'details+tags', 'desc'],
+    excludeOptions: ['The Witcher'],
     debugProcessed: true,
     debugRefined: true,
     difficulty: 'Easy',
@@ -4692,13 +4692,13 @@ export const steamGameDetails: SteamGameMap = {
     name: 'XCOM: Enemy Unknown',
     appId: 200510,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/200510/ss_12de960c8e7c85ea1d2a2ce935fd8e0d30f5532e.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/200510/ss_584d579a3bd2af0cf0b2e3f6b8c4514f3592ab36.600x338.jpg',
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/200510/ss_6d46d29e8bb4ef57a50dbed3defb4e3e1f929a98.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/200510/ss_4bf506608db295053810bd434e7ac342292d97b4.600x338.jpg',
     shortDescription:
-      'The ||XCOM: Enemy Unknown|| - Slingshot Pack is Now Available!',
+      'The original ||XCOM|| series is widely regarded as one of the best ever made and has now been fully rebooted by the ||strategy|| experts at ||Firaxis|| Games. [[XCOM((:)) Enemy Unknown]] will expand on that legacy with an entirely new ||invasion|| story, enemies and technologies to fight ||aliens|| and defend ||Earth||. ',
     releaseDate: 'Oct 8, 2012',
-    developer: 'Firaxis Games',
+    developer: '||Firaxis Games||',
     publisher: '2K',
     tags: [],
     features: [],
@@ -4723,7 +4723,25 @@ export const steamGameDetails: SteamGameMap = {
       'Perma Death',
       'Multiplayer',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    clueOrder: ['ss', 'extras', 'desc', 'details+tags'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
+    extrasClue: {
+      achievements: [
+        {
+          name: 'What Wonders Await',
+          desc: 'Complete a Research Project.',
+          img: 'https://cdn.fastly.steamstatic.com/steamcommunity/public/images/apps/200510/51e6e07a99dd8321720a5486eb6e45a1fc6059d2.jpg',
+        },
+        {
+          name: 'Theory...',
+          desc: 'Build a Laboratory.',
+          img: 'https://cdn.fastly.steamstatic.com/steamcommunity/public/images/apps/200510/1a56162ec1e8cd7ca985345be5a73b2b86b700ab.jpg',
+        },
+      ],
+      achievementsTotal: 85,
+    },
   },
   '200710': {
     name: 'Torchlight II',
@@ -11832,7 +11850,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/264200/ss_a1abdbece885d15fdad61fbf7b938e3e7d36afff.600x338.jpg',
     shortDescription:
-      'Experience cinematic kung-fu battles in the fastest, most intense brawler the indie world has ever seen! With the unique 1:1 response system of ||One Finger Death Punch||, players will feel the immediate feedback of every bone-crunching hit. Pay tribute to the masters using five classic kung-fu styles mixed with additional weapons.',
+      'Experience cinematic kung-fu battles in the fastest, most intense brawler the indie world has ever seen! With the unique 1:1 response system of [[((O))ne Finger Death ((P))unch]], players will feel the immediate feedback of every bone-crunching hit. Pay tribute to the masters using five classic kung-fu styles mixed with additional weapons.',
     releaseDate: 'Mar 3, 2014',
     developer: 'Silver Dollar Games',
     publisher: 'Silver Dollar Games',
@@ -11846,7 +11864,7 @@ export const steamGameDetails: SteamGameMap = {
       'Action',
       '2D Fighter',
       'Fast-Paced',
-      'Indie',
+      'Side-view',
       "Beat 'em up",
       'Fighting',
       'Singleplayer',
@@ -11859,7 +11877,26 @@ export const steamGameDetails: SteamGameMap = {
       'Rhythm',
       'Great Soundtrack',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    overrideCensoredTitle: 'O||ne|| F||inge||r D||eath|| P||unch||',
+    clueOrder: ['extras', 'details+tags', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Hard',
+    extrasClue: {
+      achievements: [
+        {
+          name: "So it's Just Two Buttons?",
+          desc: 'Complete the opening tutorial.',
+          img: 'https://cdn.fastly.steamstatic.com/steamcommunity/public/images/apps/264200/9dbdf3074086947f0a234927bd913b09e2a9ed46.jpg',
+        },
+        {
+          name: 'Those Bad Guys are Called Brawlers',
+          desc: 'Learn to fight brawlers.',
+          img: 'https://cdn.fastly.steamstatic.com/steamcommunity/public/images/apps/264200/7251309c225755de15806f71f89529c0cbf30f16.jpg',
+        },
+      ],
+      achievementsTotal: 152,
+    },
   },
   '264710': {
     name: 'Subnautica',
@@ -41427,11 +41464,12 @@ export const steamGameDetails: SteamGameMap = {
     name: 'Detroit: Become Human',
     appId: 1222140,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1222140/ss_9c900def2b1d9a003b7d3e202ea2a7556a36e081.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1222140/ss_d843de340cec5939af9cff19c467371f26a9b4b1.600x338.jpg',
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1222140/ss_3011c05e404043e3bfed1f6de7fe12ffd58ddc9b.600x338.jpg',
     shortDescription:
-      '||Detroit: Become Human|| puts the destiny of both mankind and androids in your hands, taking you to a near future where machines have become more intelligent than humans. Every choice you make affects the outcome of the game, with one of the most intricately branching narratives ever created.',
+      '[[((D))etroit(( :)) Become Human]] puts the destiny of both mankind and androids in your hands, taking you to a near future where machines have become more intelligent than humans. Every choice you make affects the outcome of the game, with one of the most intricately branching narratives ever created.',
+    originalReleaseDate: 'May 25, 2018 (PS4)',
     releaseDate: 'Jun 18, 2020',
     developer: 'Quantic Dream',
     publisher: 'Quantic Dream',
@@ -41442,15 +41480,15 @@ export const steamGameDetails: SteamGameMap = {
       rating: 'Very Positive',
     },
     userTags: [
+      'Futuristic',
       'Choices Matter',
-      'Story Rich',
       'Multiple Endings',
       'Cinematic',
       'Singleplayer',
-      'Emotional',
-      'Futuristic',
-      'Robots',
       'Sci-fi',
+      'Story Rich',
+      'Robots',
+      'Emotional',
       'Adventure',
       'Beautiful',
       'Atmospheric',
@@ -41463,7 +41501,45 @@ export const steamGameDetails: SteamGameMap = {
       'Violent',
       'Female Protagonist',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: ['Robots', 'Futuristic'],
+    overrideCensoredTitle: 'D||etroi||t: B||ecome|| H||uman||',
+    clueOrder: ['review', 'tags', 'details', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
+    reviewClues: [
+      {
+        review: '28 stab wounds',
+        votedUp: true,
+        votesUp: 359,
+        votedFunny: 125,
+        weightedScore: undefined,
+        authorPlaytimeHours: 5.7,
+        timestamp: 1607385600,
+      },
+      {
+        review: '28 stab wounds out of 28',
+        votedUp: true,
+        votesUp: 241,
+        votedFunny: 667,
+        weightedScore: undefined,
+        authorPlaytimeHours: 14.3,
+        timestamp: 1592712000,
+      },
+      {
+        review: '28 STAB WOUNDS',
+        votedUp: true,
+        votesUp: 374,
+        votedFunny: 212,
+        weightedScore: undefined,
+        authorPlaytimeHours: 75.8,
+        timestamp: 1667797200,
+      },
+    ],
+    moreFromThisDeveloper: [
+      { id: 960910, name: 'Heavy Rain' },
+      { id: 960990, name: 'Beyond: Two Souls' },
+    ],
   },
   '1222670': {
     name: 'The Sims 4',
