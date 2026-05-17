@@ -646,6 +646,12 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile3: 'XCOM: Enemy Unknown',
   },
   '2026-05-18': {
+    caseFile1: 'Need for Speed Unbound',
+    caseFile2: 'Metro Exodus',
+    caseFile3: 'Dune: Spice Wars',
+  },
+  // Graveyard Keeper
+  '2026-05-19': {
     caseFile1: "Don't Starve",
     caseFile2: 'Fields of Mistria',
     caseFile3: 'Dwarf Fortress',
