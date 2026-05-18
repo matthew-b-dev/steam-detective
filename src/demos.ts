@@ -650,8 +650,12 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile2: 'Metro Exodus',
     caseFile3: 'Dune: Spice Wars',
   },
-  // Graveyard Keeper
   '2026-05-19': {
+    caseFile1: 'Call of Duty: Modern Warfare 2',
+    caseFile2: 'Quantum Break',
+    caseFile3: 'Graveyard Keeper',
+  },
+  '2026-05-20': {
     caseFile1: "Don't Starve",
     caseFile2: 'Fields of Mistria',
     caseFile3: 'Dwarf Fortress',

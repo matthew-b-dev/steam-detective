@@ -606,7 +606,7 @@ export const steamGameDetails: SteamGameMap = {
     difficulty: 'Easy',
   },
   '7940': {
-    name: 'Call of Duty 4: Modern Warfare (2007)',
+    name: 'Call of Duty 4: Modern Warfare',
     appId: 7940,
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/7940/0000002987.600x338.jpg',
@@ -956,14 +956,14 @@ export const steamGameDetails: SteamGameMap = {
     clueOrder: ['tags', 'details', 'desc'],
   },
   '10180': {
-    name: 'Call of Duty: Modern Warfare 2 (2009)',
+    name: 'Call of Duty: Modern Warfare 2',
     appId: 10180,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/10180/ss_51a130e076354ed7aa025fda1ef9ba62c3ed767a.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/10180/ss_6a0b262647f584bf40f91b812a4e6cc8e37ba808.600x338.jpg',
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/10180/ss_9a8893322d2e4718bb3ad762fa2d9deb07a012a6.600x338.jpg',
     shortDescription:
-      'The most-anticipated game of the year and the sequel to the best-selling first-person action game of all time, ||Modern|| ||Warfare|| 2 continues the gripping and heart-racing action as players face off against a new threat dedicated to bringing the world to the brink of collapse.',
+      '[[Call of Duty(( :)) Modern Warfare 2]] is the most-anticipated game of the year and the sequel to the best-selling first-person action game of all time,  continues the gripping and heart-racing action as players face off against a new threat dedicated to bringing the world to the brink of collapse.',
     releaseDate: 'Nov 11, 2009',
     developer: 'Infinity Ward',
     publisher: 'Activision',
@@ -990,7 +990,35 @@ export const steamGameDetails: SteamGameMap = {
       'Controller',
       'Atmospheric',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    clueOrder: ['extras', 'tags', 'details', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
+    excludeOptions: [
+      'Call of Duty: Modern Warfare',
+      'Call of Duty: Modern Warfare II',
+      'Call of Duty: Modern Warfare III',
+    ],
+    extrasClue: {
+      achievements: [
+        {
+          name: 'The Pawn',
+          desc: "Assault Makarov's safe house.",
+          img: 'https://cdn.fastly.steamstatic.com/steamcommunity/public/images/apps/10180/91482d413f149c7c33ba1340e99abb046634026b.jpg',
+        },
+        {
+          name: 'Black Diamond',
+          desc: "Complete 'Cliffhanger' on any Difficulty.",
+          img: 'https://cdn.fastly.steamstatic.com/steamcommunity/public/images/apps/10180/2b262d371d326d8fff38988a0309cf2a33eb3bda.jpg',
+        },
+        {
+          name: 'Turistas',
+          desc: "Complete 'Takedown' and 'The Hornet's Nest' on any Difficulty.",
+          img: 'https://cdn.fastly.steamstatic.com/steamcommunity/public/images/apps/10180/ac04b989469ec1d527ff5e7ec32105d3bfb69343.jpg',
+        },
+      ],
+      achievementsTotal: 50,
+    },
   },
   '10500': {
     name: 'Total War: EMPIRE',
@@ -4533,7 +4561,7 @@ export const steamGameDetails: SteamGameMap = {
     debugNotes: 'delete',
   },
   '115300': {
-    name: 'Call of Duty: Modern Warfare 3 (2011)',
+    name: 'Call of Duty: Modern Warfare 3',
     appId: 115300,
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/115300/ss_990f54dedf70e6b264a73c6eb6a5102f1d8544b7.600x338.jpg',
@@ -19899,43 +19927,6 @@ export const steamGameDetails: SteamGameMap = {
     ],
     clueOrder: ['tags', 'details', 'desc'],
   },
-  '393080': {
-    name: 'Call of Duty: Modern Warfare Remastered (2017)',
-    appId: 393080,
-    primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/393080/ss_baab41763828721dd15f6dcba7c860b091a732ed.600x338.jpg',
-    secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/393080/ss_2b4d64fa2d2bf220b977313d0dfddc8cdb2a69d8.600x338.jpg',
-    shortDescription:
-      'One of the most critically-acclaimed games in history, ||Call|| of ||Duty||: ||Modern|| ||Warfare|| is back, remastered in true high-definition, featuring improved textures, physically based rendering, high-dynamic range lighting and much more.',
-    releaseDate: 'Jul 27, 2017',
-    developer: 'Raven Software',
-    publisher: 'Activision',
-    tags: [],
-    features: [],
-    allReviewSummary: {
-      count: 15228,
-      rating: 'Mixed',
-    },
-    userTags: [
-      'FPS',
-      'Singleplayer',
-      'Multiplayer',
-      'Shooter',
-      'Action',
-      'War',
-      'Military',
-      'First-Person',
-      'Controller',
-      'Violent',
-      'Story Rich',
-      'Remake',
-      'Co-op',
-      'Classic',
-      'Stealth',
-    ],
-    clueOrder: ['tags', 'details', 'desc'],
-  },
   '393380': {
     name: 'Squad',
     appId: 393380,
@@ -20761,8 +20752,8 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/412020/ss_a19efaf5f0a6279be0e64815b8dd4534b76bb334.600x338.jpg',
     shortDescription:
       'The year is 2036. A quarter-century after nuclear war devastated the earth, a few thousand survivors still cling to existence beneath the ruins of ||Moscow||, in the ||tunnels of the Metro||. [[Metro Exodus]] is an epic, story-driven first person shooter from 4A Games that blends deadly combat and stealth with exploration and survival horror in one of the most immersive game worlds ever created.',
-    releaseDate: 'Feb 15, 2020',
     originalReleaseDate: 'Feb 15, 2019 (Epic)',
+    releaseDate: 'Feb 15, 2020',
     developer: '||4A Games||',
     publisher: 'Deep Silver',
     tags: ['Action'],
@@ -23199,9 +23190,9 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/474960/ss_72b6160576d81ac4a6e526954f0a87838bf7af66.600x338.jpg',
     shortDescription:
-      'From Remedy Entertainment, the masters of cinematic action games, comes ||Quantum Break||, a time-amplified suspenseful blockbuster. The ||Quantum Break|| experience is part game, part live action show—where decisions in one dramatically affect the other.',
+      'From Remedy Entertainment, the masters of cinematic action games, comes [[Quantum ((B))reak]], a time-altering suspenseful blockbuster. The experience is part game, part live action show - where decisions in one dramatically affect the other.',
     releaseDate: 'Sep 29, 2016',
-    developer: 'Remedy Entertainment',
+    developer: '||Remedy Entertainment||',
     publisher: 'Xbox Game Studios',
     tags: [],
     features: [],
@@ -23226,7 +23217,31 @@ export const steamGameDetails: SteamGameMap = {
       'Shooter',
       'Bullet Time',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: ['Time Manipulation'],
+    overrideCensoredTitle: 'Q||u||a||ntum|| B||reak||',
+    clueOrder: ['review', 'details+tags', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Medium',
+    reviewClues: [
+      {
+        review:
+          "I think this game is brilliant, I knew from the start it was a mixture of TV show with video game, and I think it's important that people understand that before they play.\n(edited for length)",
+        votedUp: true,
+        votesUp: 81,
+        weightedScore: undefined,
+        authorPlaytimeHours: 26.5,
+        timestamp: 1615611600,
+      },
+      {
+        review: 'Rest in Peace, Lance Reddick :(',
+        votedUp: true,
+        votesUp: 196,
+        weightedScore: undefined,
+        authorPlaytimeHours: 15.1,
+        timestamp: 1679097600,
+      },
+    ],
   },
   '475150': {
     name: 'Titan Quest',
@@ -27515,13 +27530,14 @@ export const steamGameDetails: SteamGameMap = {
   },
   '599140': {
     name: 'Graveyard Keeper',
+    overrideCensoredTitle: 'G||raveyar||d K||eeper||',
     appId: 599140,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/599140/ss_7616d4343808620c0853a9ee5f1e21597a20b042.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/599140/ss_2edf1779ad9992da1ae8f0f982a80f8945506154.600x338.jpg',
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/599140/ss_9533ec3b7abd3300e9873dcd0d2bd5794a8fe54b.600x338.jpg',
     shortDescription:
-      'Build and manage a medieval graveyard while facing ethical dilemmas and making questionable decisions. Welcome to ||Graveyard Keeper||, the most inaccurate medieval cemetery sim of the year.',
+      'Build and manage a medieval [[graveyar((d))]] while facing ethical dilemmas and making questionable decisions. Do you really want to spend money on that proper burger meat for the witch-burning festival, when you have so many resources lying around? Welcome to [[Graveyar((d)) Keeper]], the most inaccurate medieval ||cemetery|| sim of the year. ',
     releaseDate: 'Aug 15, 2018',
     developer: 'Lazy Bear Games',
     publisher: 'tinyBuild',
@@ -27534,21 +27550,44 @@ export const steamGameDetails: SteamGameMap = {
     userTags: [
       'Pixel Graphics',
       'Crafting',
-      'RPG',
-      'Simulation',
-      'Management',
-      'Sandbox',
-      'Indie',
-      'Singleplayer',
       'Medieval',
       'Building',
+      'Management',
+      'Simulation',
+      'Indie',
+      'Singleplayer',
+      'RPG',
+      'Agriculture',
       'Adventure',
       'Dark Humor',
       'Agriculture',
       '2D',
       'Story Rich',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    clueOrder: ['extras', 'details+tags', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Medium',
+    extrasClue: {
+      achievements: [
+        {
+          name: 'First slice',
+          desc: 'Got your first slice of meat. Smells a little strange, but looks like ordinary meat...',
+          img: 'https://cdn.fastly.steamstatic.com/steamcommunity/public/images/apps/599140/49b97c3f9c1580ccf8c1bad21229f60cb86b7ca3.jpg',
+        },
+        {
+          name: 'Sashimi master',
+          desc: "Made 30 slices. You've got the perfect size slice pretty much down.",
+          img: 'https://cdn.fastly.steamstatic.com/steamcommunity/public/images/apps/599140/feaa922dfe8616049d3e5775f867850e91377f42.jpg',
+        },
+        {
+          name: 'Landlord',
+          desc: 'Bought your first land in the Village. By cheating a sick and helpless old man.',
+          img: 'https://cdn.fastly.steamstatic.com/steamcommunity/public/images/apps/599140/7ca5b696babb905431359fd7731659df1aada3ee.jpg',
+        },
+      ],
+      achievementsTotal: 125,
+    },
   },
   '601150': {
     name: 'Devil May Cry 5',
