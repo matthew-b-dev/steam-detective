@@ -27,6 +27,7 @@ const isLocalhost =
 const isRefinePage = isLocalhost && window.location.pathname === '/refine';
 const isGamesPage = isLocalhost && window.location.pathname === '/games';
 const isDailyDashPage = window.location.pathname === '/dailydash';
+const isArchivesPage = window.location.pathname === '/archives';
 
 if (isRefinePage) {
   import('./refine/RefinePage').then(({ RefinePage }) => {
@@ -47,6 +48,13 @@ if (isRefinePage) {
     document.title = 'Daily Dashboard';
     ReactDOM.createRoot(document.getElementById('root')!).render(
       <DailyDashboard />,
+    );
+  });
+} else if (isArchivesPage) {
+  import('./challenges/ChallengesIndex').then(({ ChallengesIndex }) => {
+    document.title = 'Case File Archives — SteamDetective';
+    ReactDOM.createRoot(document.getElementById('root')!).render(
+      <ChallengesIndex />,
     );
   });
 } else {

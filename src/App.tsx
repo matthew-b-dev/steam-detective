@@ -4,6 +4,7 @@ import useBodyScrollLock from './hooks/useBodyScrollLock';
 import {
   QuestionMarkCircleIcon,
   ChartBarIcon,
+  ArchiveBoxIcon,
 } from '@heroicons/react/16/solid';
 import './App.css';
 import SteamDetective from './SteamDetective';
@@ -119,6 +120,25 @@ function App() {
         <div className='w-full max-w-[750px] p-2 sm:p-6'>
           <div className='relative mb-2 sm:mb-6'>
             <div className='flex items-start justify-between sm:justify-center gap-2 sm:gap-0'>
+              {/* LEFT: How to play button (desktop only) */}
+              <button
+                className='hidden sm:flex sm:absolute sm:left-0 sm:top-0 text-gray-400 hover:text-gray-300 transition-colors items-center gap-1 px-3 py-1 border border-zinc-700 rounded'
+                onClick={() => {
+                  setShowHelp(true);
+                  if (
+                    IS_PROD &&
+                    !eventFiredThisSession('[Help] Opened how to Play')
+                  )
+                    sendFeedback('custom', '`[Help]` Opened How To Play');
+                }}
+              >
+                <QuestionMarkCircleIcon className='h-4 w-4' />
+                <span className='text-sm font-semibold relative top-[-1px]'>
+                  How to play
+                </span>
+              </button>
+
+              {/* CENTER: Logo */}
               <div className='flex flex-col items-start sm:items-center flex-1 sm:flex-initial'>
                 <h1
                   className='text-lg sm:text-4xl mb-[-5px] sm:py-0 sm:mb-0 font-black relative right-[-2px] sm:right-[0px]'
@@ -155,10 +175,13 @@ function App() {
                   </span>
                 </p>
               </div>
+
+              {/* RIGHT: My Stats + Archives buttons */}
               <div className='flex items-center gap-2 sm:absolute sm:right-0 sm:top-1/2 sm:-translate-y-1/2'>
                 <div className='flex sm:block'>
+                  {/* How to play on mobile */}
                   <button
-                    className='text-gray-400 w-full justify-center hover:text-gray-300 transition-colors flex items-center gap-1 px-2 bg-transparent sm:border-1 sm:border-zinc-700 sm:px-3 sm:py-1'
+                    className='sm:hidden text-gray-400 w-full justify-center hover:text-gray-300 transition-colors flex items-center gap-1 px-2 bg-transparent'
                     onClick={() => {
                       setShowHelp(true);
                       if (
@@ -169,12 +192,10 @@ function App() {
                     }}
                   >
                     <QuestionMarkCircleIcon className='h-6 w-6 sm:h-4 sm:w-4' />
-                    <span className='text-sm font-semibold hidden sm:inline relative top-[-1px]'>
-                      How to play
-                    </span>
                   </button>
+                  {/* My Stats */}
                   <button
-                    className='relative text-gray-400 w-full justify-center sm:mt-2 hover:text-gray-300 transition-colors flex items-center gap-1 px-2 bg-transparent sm:border-1 sm:border-zinc-700 sm:px-3 sm:py-1'
+                    className='relative text-gray-400 w-full justify-center sm:mt-2 hover:text-gray-300 transition-colors flex items-center gap-1 px-2 bg-transparent sm:border sm:border-zinc-700 sm:px-3 sm:py-1 sm:rounded'
                     onClick={() => {
                       setShowStats(true);
                       if (
@@ -192,6 +213,21 @@ function App() {
                       My Stats
                     </span>
                   </button>
+                  {/* Archives */}
+                  <div className='relative inline-flex'>
+                    <a
+                      href='/archives'
+                      className='text-gray-400 hover:text-gray-300 transition-colors flex items-center gap-1 px-2 sm:mt-2 sm:border sm:border-zinc-700 sm:px-3 sm:py-1 sm:rounded'
+                    >
+                      <ArchiveBoxIcon className='h-6 w-6 sm:h-4 sm:w-4' />
+                      <span className='text-sm font-semibold hidden sm:inline relative top-[-1px]'>
+                        Archives
+                      </span>
+                    </a>
+                    <span className='absolute top-0 -right-2 bg-yellow-500 text-black text-[10px] font-bold px-1 py-0 rounded'>
+                      New
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>

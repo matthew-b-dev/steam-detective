@@ -732,7 +732,7 @@ const SteamDetective: React.FC<SteamDetectiveProps> = ({
           onClick={onDatePickerClick}
         >
           <img src={calendarIcon} className='w-6 h-6 mr-2' alt='Calendar' />
-          <span className='text-sm font-semibold underline decoration-dashed decoration-gray-200'>
+          <span className='text-sm font-semibold underline decoration-dashed decoration-1 decoration-gray-200'>
             {puzzleDate} <span className='text-gray-300'>(UTC)</span>
           </span>
         </button>

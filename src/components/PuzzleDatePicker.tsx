@@ -249,11 +249,18 @@ const PuzzleDatePicker: React.FC<PuzzleDatePickerProps> = ({
         ) : (
           <>
             <div className='mb-4'>
-              <h2 className='text-xl font-bold text-gray-100'>
-                Select Puzzle Date
-              </h2>
+              <h2 className='text-xl font-bold text-gray-100'>Select Date</h2>
               <p className='text-sm text-gray-400 mt-1'>
-                Choose a different puzzle date
+                Choose a different date
+              </p>
+              <p className='text-xs text-center mt-2'>
+                <a href='/archives' className=' transition-colors'>
+                  ⭐ New: The{' '}
+                  <span className='underline text-blue-400 '>
+                    Archives page
+                  </span>{' '}
+                  shows days ranked by difficulty and total plays!
+                </a>
               </p>
             </div>
 
