@@ -206,13 +206,6 @@ export const ChallengesPage: React.FC = () => {
           {noData ? (
             <div className='py-16 text-center text-zinc-500'>
               <p className='text-sm'>No data available yet.</p>
-              <p className='mt-1 text-xs'>
-                Run{' '}
-                <code className='rounded bg-zinc-800 px-1 py-0.5 text-zinc-300'>
-                  npm run generate-challenges
-                </code>{' '}
-                to generate rankings.
-              </p>
             </div>
           ) : allPlayed ? (
             <div className='py-16 text-center'>

@@ -52,7 +52,7 @@ if (isRefinePage) {
   });
 } else if (isArchivesPage) {
   import('./challenges/ChallengesIndex').then(({ ChallengesIndex }) => {
-    document.title = 'Case File Archives — SteamDetective';
+    document.title = 'Case File Archives';
     ReactDOM.createRoot(document.getElementById('root')!).render(
       <ChallengesIndex />,
     );

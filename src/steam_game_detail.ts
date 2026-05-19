@@ -991,14 +991,14 @@ export const steamGameDetails: SteamGameMap = {
       'Atmospheric',
     ],
     clueOrder: ['extras', 'tags', 'details', 'desc'],
-    debugProcessed: true,
-    debugRefined: true,
-    difficulty: 'Easy',
     excludeOptions: [
       'Call of Duty: Modern Warfare',
       'Call of Duty: Modern Warfare II',
       'Call of Duty: Modern Warfare III',
     ],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
     extrasClue: {
       achievements: [
         {
@@ -8289,14 +8289,15 @@ export const steamGameDetails: SteamGameMap = {
     name: 'Killing Floor 2',
     appId: 232090,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/232090/ss_12163b780191f084acf7cdf54e2e98e4129e297a.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/232090/ss_e2a49c649cde0f214b1cbeab7005b6f43d1c4ab7.600x338.jpg',
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/232090/ss_01ab15f45fb088b7e6f5d21128517a5711f7362a.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/232090/ss_4c7443b26b32632f2fdf7876f128a2b50294f78b.600x338.jpg',
     shortDescription:
-      'In ||KILLING FLOOR 2||, players descend into continental Europe after it has been overrun by horrific, murderous clones called Zeds that were created by rogue elements of the Horzine Corporation. 6-player Co-Op & 12-player VS Zed-slaughtering mayhem.',
+      'In [[KILLING ((F))LOOR 2]] , players descend into continental Europe after it has been overrun by horrific, murderous clones called Zeds that were created by rogue elements of the Horzine Corporation. Not all have given up hope though... players will descend into zed-laden hot zones and exterminate them.',
+    earlyAccessDate: 'Apr 21, 2015',
     releaseDate: 'Nov 18, 2016',
-    developer: 'Tripwire Interactive',
-    publisher: 'Tripwire Interactive',
+    developer: '||Tripwire Interactive||',
+    publisher: '||Tripwire Interactive||',
     tags: ['Action'],
     features: [],
     allReviewSummary: {
@@ -8310,9 +8311,9 @@ export const steamGameDetails: SteamGameMap = {
       'Gore',
       'FPS',
       'Post-apocalyptic',
+      'Shooter',
       'Hack and Slash',
       'Horror',
-      'Shooter',
       'Action',
       'Moddable',
       'First-Person',
@@ -8325,7 +8326,33 @@ export const steamGameDetails: SteamGameMap = {
       'Character Customization',
       'Dark',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: ['Zombies'],
+    overrideCensoredTitle: 'K||illin||g F||loor|| ||2||',
+    clueOrder: ['review', 'details+tags', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
+    reviewClues: [
+      {
+        review: 'How to ruin friendship:\nStep 1: Weld the door',
+        votedUp: true,
+        votesUp: 147,
+        votedFunny: 87,
+        weightedScore: undefined,
+        authorPlaytimeHours: 659,
+        writtenDuringEarlyAccess: true,
+        timestamp: 1430092800,
+      },
+      {
+        review:
+          "They promised they wouldn't put weapons behind a paywall. Now they're going to... and an extreme one at that. $10 for a weapon? Get real.",
+        votedUp: false,
+        votesUp: 184,
+        weightedScore: undefined,
+        authorPlaytimeHours: 43.2,
+        timestamp: 1462406400,
+      },
+    ],
   },
   '232430': {
     name: 'Gone Home',
@@ -27530,7 +27557,6 @@ export const steamGameDetails: SteamGameMap = {
   },
   '599140': {
     name: 'Graveyard Keeper',
-    overrideCensoredTitle: 'G||raveyar||d K||eeper||',
     appId: 599140,
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/599140/ss_2edf1779ad9992da1ae8f0f982a80f8945506154.600x338.jpg',
@@ -27564,6 +27590,7 @@ export const steamGameDetails: SteamGameMap = {
       '2D',
       'Story Rich',
     ],
+    overrideCensoredTitle: 'G||raveyar||d K||eeper||',
     clueOrder: ['extras', 'details+tags', 'desc'],
     debugProcessed: true,
     debugRefined: true,
@@ -51747,11 +51774,11 @@ export const steamGameDetails: SteamGameMap = {
     name: 'Plants vs. Zombies Garden Warfare 2',
     appId: 1922560,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1922560/ss_e91dfdfc1ef370eeb8bc6d294152838fa04267b8.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1922560/ss_beecbd9329c2b1f28562f0eaea6229491af1405f.600x338.jpg',
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1922560/ss_ef67fa9f527cda423e8864dbe1399495a771339b.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1922560/ss_e91dfdfc1ef370eeb8bc6d294152838fa04267b8.600x338.jpg',
     shortDescription:
-      'Ready the Peashooters and prepare for the craziest, funniest shooter in the universe: ||Plants vs. Zombies Garden Warfare 2||.',
+      'Ready the Peashooters and prepare for the craziest, funniest shooter in the universe: [[Plants vs((.)) Zombies]] [[Garden Warfare 2]]. Dr. Zomboss has conquered Suburbia and transformed it into a zombie-filled, ||plant||-free paradise. Help the ||plants|| reclaim their turf in the new 24-player Herbal Assault, or choose your side in 4-player co-op or solo play. ',
     releaseDate: 'May 16, 2022',
     developer: 'PopCap',
     publisher: 'Electronic Arts',
@@ -51768,7 +51795,7 @@ export const steamGameDetails: SteamGameMap = {
       'Third-Person Shooter',
       'Multiplayer',
       'Funny',
-      'Action',
+      '3D',
       'Character Customization',
       'Shooter',
       'Team-Based',
@@ -51778,8 +51805,27 @@ export const steamGameDetails: SteamGameMap = {
       'Cartoon',
       'Cute',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: ['Zombies'],
+    clueOrder: ['extras', 'tags', 'details', 'desc'],
     searchTerms: ['plants vs zombies garden warfare 2'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Hard',
+    extrasClue: {
+      achievements: [
+        {
+          name: "It's My Island",
+          desc: 'Reach the boss wave using the Flag of Power in the Backyard Battleground.',
+          img: 'https://cdn.fastly.steamstatic.com/steamcommunity/public/images/apps/1922560/a6400753346f365a880569856dd7b3484aedbc82.jpg',
+        },
+        {
+          name: "You've Goat to Be Kidding Me!",
+          desc: 'As Rose, Goatify 100 ||Zombies||.',
+          img: 'https://cdn.fastly.steamstatic.com/steamcommunity/public/images/apps/1922560/c79ea15220e0c95e20947b7ba8cdbf567493fc1e.jpg',
+        },
+      ],
+      achievementsTotal: 63,
+    },
   },
   '1928420': {
     name: 'Farlight 84',
@@ -52623,11 +52669,11 @@ export const steamGameDetails: SteamGameMap = {
     name: 'Mortal Kombat 1',
     appId: 1971870,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1971870/ss_7eb14734a264570367c607698371e492415f48a4.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1971870/ss_92b72baad7981e46d9717991510ff28b04186b23.600x338.jpg',
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1971870/ss_29b0a9e87d5a4981d7403994b661c43117a87d84.600x338.jpg',
     shortDescription:
-      'Discover a reborn ||Mortal|| ||Kombat||™ Universe created by the Fire God Liu Kang. ||Mortal|| ||Kombat||™ 1 ushers in a new era of the iconic franchise with a new fighting system, game modes, and fatalities!',
+      'Discover a reborn [[Mortal Kombat]] Universe created by the Fire God Liu Kang. [[Mortal Kombat 1]] ushers in a new era of the iconic franchise with a new fighting system, game modes, and ||fatalities||!',
     releaseDate: 'Sep 19, 2023',
     developer: 'NetherRealm Studios',
     publisher: 'Warner Bros. Games',
@@ -52654,7 +52700,14 @@ export const steamGameDetails: SteamGameMap = {
       '2.5D',
       'Atmospheric',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    clueOrder: ['details', 'tags', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
+    moreFromThisDeveloper: [{ id: 627270, name: 'Injustice 2' }],
+    extrasClue: {
+      achievementsTotal: 50,
+    },
   },
   '1974050': {
     name: 'Torchlight: Infinite',
@@ -58807,6 +58860,7 @@ export const CLOSE_GUESS_SERIES: string[] = [
   'horizon',
   'jurassic',
   'just cause',
+  'killing floor',
   'lego',
   'life is strange',
   'like a dragon',
@@ -58817,6 +58871,7 @@ export const CLOSE_GUESS_SERIES: string[] = [
   'metro',
   'middle-earth',
   'monster hunter',
+  'mortal kombat',
   'mount and blade',
   'need for speed',
   'ori and',

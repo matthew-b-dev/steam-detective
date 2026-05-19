@@ -656,6 +656,11 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile3: 'Graveyard Keeper',
   },
   '2026-05-20': {
+    caseFile1: 'Mortal Kombat 1',
+    caseFile2: 'Killing Floor 2',
+    caseFile3: 'Plants vs. Zombies Garden Warfare 2',
+  },
+  '2026-05-21': {
     caseFile1: "Don't Starve",
     caseFile2: 'Fields of Mistria',
     caseFile3: 'Dwarf Fortress',
