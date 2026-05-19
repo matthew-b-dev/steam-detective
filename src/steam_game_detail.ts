@@ -27665,7 +27665,7 @@ export const steamGameDetails: SteamGameMap = {
     reviewClues: [
       {
         review:
-          '||Devil May Cry 5 is great because its combat is still some of the best ever made:|| fast, deep, and endlessly stylish. Seven years later, it still stands up thanks to its tight gameplay design, smooth controls, strong performance, and visuals that aged well. ||DMC5 focuses on|| pure action mastery, which keeps it fun and replayable.',
+          '||Devil May Cry 5|| is great because its combat is still some of the best ever made: fast, deep, and endlessly stylish. Seven years later, it still stands up thanks to its tight gameplay design, smooth controls, strong performance, and visuals that aged well. ||DMC5 focuses on|| pure action mastery, which keeps it fun and replayable.',
         votedUp: true,
         votesUp: 6,
         weightedScore: '0.537572264671325684',

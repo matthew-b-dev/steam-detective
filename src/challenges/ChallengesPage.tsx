@@ -43,13 +43,37 @@ const getCompletedDates = (): Set<string> => {
   return completed;
 };
 
-export const ChallengesPage: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<TabKey>('most_difficult');
-  const [pages, setPages] = useState<Record<TabKey, number>>({
+const SESSION_TAB_KEY = 'archives-active-tab';
+const SESSION_PAGES_KEY = 'archives-pages';
+
+const readSessionTab = (): TabKey => {
+  try {
+    const v = sessionStorage.getItem(SESSION_TAB_KEY);
+    if (v && TABS.some((t) => t.key === v)) return v as TabKey;
+  } catch {
+    /* sessionStorage unavailable */
+  }
+  return 'most_difficult';
+};
+
+const readSessionPages = (): Record<TabKey, number> => {
+  const defaults: Record<TabKey, number> = {
     most_difficult: 1,
     least_difficult: 1,
     most_played: 1,
-  });
+  };
+  try {
+    const v = sessionStorage.getItem(SESSION_PAGES_KEY);
+    if (v) return { ...defaults, ...JSON.parse(v) };
+  } catch {
+    /* sessionStorage unavailable */
+  }
+  return defaults;
+};
+
+export const ChallengesPage: React.FC = () => {
+  const [activeTab, setActiveTab] = useState<TabKey>(readSessionTab);
+  const [pages, setPages] = useState<Record<TabKey, number>>(readSessionPages);
 
   const [hidePlayedDates, setHidePlayedDates] = useState(false);
 
@@ -60,6 +84,22 @@ export const ChallengesPage: React.FC = () => {
       sendFeedback('custom', '`[Event]` Visited Archives Page');
     }
   }, [IS_PROD]);
+
+  useEffect(() => {
+    try {
+      sessionStorage.setItem(SESSION_TAB_KEY, activeTab);
+    } catch {
+      /* unavailable */
+    }
+  }, [activeTab]);
+
+  useEffect(() => {
+    try {
+      sessionStorage.setItem(SESSION_PAGES_KEY, JSON.stringify(pages));
+    } catch {
+      /* unavailable */
+    }
+  }, [pages]);
 
   const completedDates = useMemo(() => getCompletedDates(), []);
 
