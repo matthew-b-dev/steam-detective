@@ -63,7 +63,22 @@ export const ChallengesPage: React.FC = () => {
 
   const completedDates = useMemo(() => getCompletedDates(), []);
 
-  const allDates: string[] = challengesData[activeTab] ?? [];
+  const allDates: string[] = useMemo(() => {
+    const dates: string[] = challengesData[activeTab] ?? [];
+
+    if (activeTab === 'least_difficult') {
+      // Adjust April Fools challenge such that it's never in the top 10 at the least
+      const APRIL_FOOLS = '2026-04-01';
+      const idx = dates.indexOf(APRIL_FOOLS);
+      if (idx !== -1 && idx < 10) {
+        const adjusted = [...dates];
+        adjusted.splice(idx, 1);
+        adjusted.splice(10, 0, APRIL_FOOLS);
+        return adjusted;
+      }
+    }
+    return dates;
+  }, [activeTab]);
   const dates = hidePlayedDates
     ? allDates.filter((d) => !completedDates.has(d))
     : allDates;
