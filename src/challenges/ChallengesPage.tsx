@@ -97,7 +97,7 @@ export const ChallengesPage: React.FC = () => {
     {};
 
   return (
-    <div className='min-h-screen bg-zinc-950 text-zinc-100'>
+    <div className='min-h-screen text-zinc-100'>
       <div className='mx-auto max-w-2xl'>
         {/* Header — matches App.tsx logo style */}
         <div className='border-b border-zinc-800 px-4 py-3 sm:px-6'>
@@ -261,7 +261,7 @@ export const ChallengesPage: React.FC = () => {
                     </th>
                   </tr>
                 </thead>
-                <tbody>
+                <tbody className='bg-[#080a08]/90'>
                   {visibleDates.map((date, idx) => {
                     const rank = startIdx + idx + 1;
                     const played = completedDates.has(date);
@@ -270,7 +270,7 @@ export const ChallengesPage: React.FC = () => {
                         key={date}
                         className={[
                           'border-b border-zinc-800/60 transition-colors hover:bg-zinc-800/40',
-                          idx % 2 === 0 ? 'bg-zinc-900/30' : '',
+                          idx % 2 === 0 ? 'bg-[#0D0D0D]/60' : '',
                         ].join(' ')}
                       >
                         <td className='w-10 py-1.5 pl-2 text-xs text-zinc-600 sm:pl-3'>

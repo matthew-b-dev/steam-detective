@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "type": "module",
   "scripts": {
-    "predev": "node scripts/generate-optimized-games.js",
+    "predev": "node scripts/generate-optimized-games.js && node scripts/generate-challenges-data.js",
     "dev": "vite",
     "generate-challenges": "node scripts/generate-challenges-data.js",
     "prebuild": "node scripts/generate-optimized-games.js --production && node scripts/generate-challenges-data.js",
