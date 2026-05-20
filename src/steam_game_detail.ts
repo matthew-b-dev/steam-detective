@@ -922,14 +922,14 @@ export const steamGameDetails: SteamGameMap = {
     name: 'Prototype',
     appId: 10150,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/10150/0000008853.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/10150/0000008858.600x338.jpg',
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/10150/0000008854.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/10150/0000008861.600x338.jpg',
     shortDescription:
-      'You are the ||Prototype||, Alex Mercer, a man without memory armed with amazing shape-shifting abilities, hunting your way to the heart of the conspiracy which created you; making those responsible pay. Fast &amp; Deadly Shape-Shifting Combat: Reconfigure your body to the situation at hand.',
+      'You are the [[Prototype]], Alex Mercer, a man without memory armed with amazing ||shape-shifting|| abilities, hunting your way to the heart of the conspiracy which created you; making those responsible pay. Fast & Deadly ||Shape-Shifting|| Combat: ||Reconfigure|| your ||body|| to the situation at hand.',
     releaseDate: 'Jun 10, 2009',
     developer: 'Radical Entertainment',
-    publisher: 'Activision',
+    publisher: '||Activision||',
     tags: [],
     features: [],
     allReviewSummary: {
@@ -953,7 +953,24 @@ export const steamGameDetails: SteamGameMap = {
       'Story Rich',
       'Sandbox',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: ['Parkour', 'Superhero', 'Gore'],
+    overrideCensoredTitle: 'P||roto||t||ype||',
+    clueOrder: ['details+tags', 'review', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
+    reviewClues: [
+      {
+        review:
+          "THIS is how you do a superhero game. Though, maybe that word doesn't fully apply here :)",
+        votedUp: true,
+        votesUp: 54,
+        votedFunny: 41,
+        weightedScore: undefined,
+        authorPlaytimeHours: 0.9,
+        timestamp: 1385424000,
+      },
+    ],
   },
   '10180': {
     name: 'Call of Duty: Modern Warfare 2',
@@ -6814,7 +6831,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/219150/ss_bdf28f59652e53e725d96d94cdc8db97fc277cf2.600x338.jpg',
     shortDescription:
-      '||Hotline Miami|| is a high-octane action game overflowing with raw brutality, hard-boiled gunplay and skull crushing close combat.',
+      '[[Hotline M((i))ami]] is a high-octane action game overflowing with raw brutality, hard-boiled gunplay and skull crushing close combat. Set in an alternative 1989 [[M((i))ami]], you will assume the role of a mysterious antihero on a murderous rampage against the shady underworld at the behest of voices on your answering machine.',
     releaseDate: 'Oct 23, 2012',
     developer: 'Dennaton Games',
     publisher: 'Devolver Digital',
@@ -6826,11 +6843,11 @@ export const steamGameDetails: SteamGameMap = {
     },
     userTags: [
       'Great Soundtrack',
-      'Violent',
+      '2D',
       'Action',
       'Indie',
-      'Pixel Graphics',
       'Top-Down',
+      'Pixel Graphics',
       'Gore',
       '1980s',
       'Fast-Paced',
@@ -6846,7 +6863,25 @@ export const steamGameDetails: SteamGameMap = {
       'Addictive',
       'Music',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    excludeOptions: ['Hotline Miami 2: Wrong Number'],
+    blurredUserTags: ['Gore', '1980s', 'Fast-Paced', 'Retro', 'Pixel Graphics'],
+    overrideCensoredTitle: 'H||otline|| Mi||ami||',
+    clueOrder: ['extras', 'details+tags', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
+    extrasClue: {
+      achievements: [
+        {
+          name: 'Karma',
+          desc: 'Die 1000 times.',
+          achievePercent: '26.6%',
+          showAchievePercent: true,
+          img: 'https://cdn.fastly.steamstatic.com/steamcommunity/public/images/apps/219150/b7704c6f5c1937af1ce22ec2a6b4c8de844ff848.jpg',
+        },
+      ],
+      achievementsTotal: 35,
+    },
   },
   '219640': {
     name: 'Chivalry: Medieval Warfare',
@@ -52020,13 +52055,14 @@ export const steamGameDetails: SteamGameMap = {
   },
   '1938010': {
     name: 'WILD HEARTS',
+    overrideCensoredTitle: 'W||ILD|| H||EART||S',
     appId: 1938010,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1938010/ss_4233515fd9b5df6ae550989f134b09f813ad4f7e.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1938010/ss_06b924ca6c47c7c10b6397447dcbe1de64e1896e.600x338.jpg',
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1938010/ss_01040d18883546fd3ad9e16da35bc6d497b780a5.600x338.jpg',
     shortDescription:
-      'Master ancient tech to hunt down giant beasts. ||WILD HEARTS||™ is a twist on the hunting genre where technology gives you a fighting chance against giant nature-infused beasts. Hunt alone or with friends.',
+      'Master ancient tech to hunt down giant beasts. [[Wild Hea((r))t((s))]] is a twist on the hunting genre where technology gives you a fighting chance against giant nature-infused beasts. Hunt alone or with friends.',
     releaseDate: 'Feb 16, 2023',
     developer: 'KOEI TECMO GAMES CO., LTD.',
     publisher: 'Electronic Arts',
@@ -52053,7 +52089,18 @@ export const steamGameDetails: SteamGameMap = {
       '3D',
       'Souls-like',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    clueOrder: ['review', 'details', 'tags', 'desc'],
+    reviewClues: [
+      {
+        review:
+          "I just don't understand how it isn't fixed yet after more than a month after release. On paper, the game is great, I got a crazy Karakuri Staff build, fought all the endgame ||kemono||, everything. Except ... that was all locked at 30 FPS with stuttering on an RTX 3080. Its not worth getting if it cannot be played properly. Maybe buy it on PS5 if you have one.",
+        votedUp: false,
+        votesUp: 282,
+        weightedScore: undefined,
+        authorPlaytimeHours: 18.4,
+        timestamp: 1679184000,
+      },
+    ],
   },
   '1940340': {
     name: 'Darkest Dungeon II',

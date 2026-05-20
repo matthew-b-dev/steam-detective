@@ -14,6 +14,7 @@ interface FetchedAchievement {
   name: string;
   desc?: string;
   img: string;
+  achievePercent?: string;
 }
 
 export const RefineExtras: React.FC<RefineExtrasProps> = ({
@@ -29,6 +30,10 @@ export const RefineExtras: React.FC<RefineExtrasProps> = ({
   }>({ loading: true, error: null, achievements: null });
   // Index-based selection to correctly handle achievements with duplicate images
   const [selectedAchievementIndices, setSelectedAchievementIndices] = useState<
+    Set<number>
+  >(() => new Set());
+  // Index-based set tracking which selected achievements should show their percent
+  const [showAchievePercentIndices, setShowAchievePercentIndices] = useState<
     Set<number>
   >(() => new Set());
 
@@ -60,12 +65,17 @@ export const RefineExtras: React.FC<RefineExtrasProps> = ({
         const img = row.querySelector<HTMLImageElement>('img');
         const h3 = row.querySelector<HTMLElement>('h3');
         const h5 = row.querySelector<HTMLElement>('h5');
+        const percentEl = row.querySelector<HTMLElement>(
+          '.achieveTxtHolder .achievePercent',
+        );
         if (img?.src && h3?.textContent?.trim()) {
           const desc = h5?.textContent?.trim() || undefined;
+          const achievePercent = percentEl?.textContent?.trim() || undefined;
           results.push({
             name: h3.textContent.trim(),
             img: img.src,
             ...(desc ? { desc } : {}),
+            ...(achievePercent ? { achievePercent } : {}),
           });
         }
       });
@@ -85,6 +95,18 @@ export const RefineExtras: React.FC<RefineExtrasProps> = ({
             .filter((i) => i !== -1),
         );
         setSelectedAchievementIndices(initialIndices);
+        // Pre-populate showAchievePercentIndices from saved data
+        const savedShowPercent = new Set(
+          (game.extrasClue?.achievements ?? [])
+            .filter((a) => a.showAchievePercent)
+            .map((a) => a.name),
+        );
+        const initialShowPercent = new Set(
+          achievements
+            .map((a, i) => (savedShowPercent.has(a.name) ? i : -1))
+            .filter((i) => i !== -1),
+        );
+        setShowAchievePercentIndices(initialShowPercent);
         setFetchState({ loading: false, error: null, achievements });
       })
       .catch((err) => {
@@ -111,15 +133,63 @@ export const RefineExtras: React.FC<RefineExtrasProps> = ({
 
   const toggleAchievement = (idx: number) => {
     const newIndices = new Set(selectedAchievementIndices);
+    let currentShowIndices = showAchievePercentIndices;
     if (newIndices.has(idx)) {
       newIndices.delete(idx);
+      // Clean up show-percent state for deselected achievement
+      const newShowIndices = new Set(showAchievePercentIndices);
+      newShowIndices.delete(idx);
+      setShowAchievePercentIndices(newShowIndices);
+      currentShowIndices = newShowIndices;
     } else {
       newIndices.add(idx);
     }
     setSelectedAchievementIndices(newIndices);
     const newList = [...newIndices]
       .sort((a, b) => a - b)
-      .map((i) => fetchedAchievements![i]);
+      .map((i) => {
+        const ach = fetchedAchievements![i];
+        return {
+          name: ach.name,
+          ...(ach.desc ? { desc: ach.desc } : {}),
+          img: ach.img,
+          ...(ach.achievePercent ? { achievePercent: ach.achievePercent } : {}),
+          ...(currentShowIndices.has(i)
+            ? { showAchievePercent: true as const }
+            : {}),
+        };
+      });
+    onUpdate({
+      extrasClue: {
+        achievements: newList.length > 0 ? newList : undefined,
+        achievementsTotal:
+          fetchedAchievements?.length ?? game.extrasClue?.achievementsTotal,
+      },
+    });
+  };
+
+  const toggleShowPercent = (fetchedIdx: number) => {
+    const newShowIndices = new Set(showAchievePercentIndices);
+    if (newShowIndices.has(fetchedIdx)) {
+      newShowIndices.delete(fetchedIdx);
+    } else {
+      newShowIndices.add(fetchedIdx);
+    }
+    setShowAchievePercentIndices(newShowIndices);
+    const newList = [...selectedAchievementIndices]
+      .sort((a, b) => a - b)
+      .map((i) => {
+        const ach = fetchedAchievements![i];
+        return {
+          name: ach.name,
+          ...(ach.desc ? { desc: ach.desc } : {}),
+          img: ach.img,
+          ...(ach.achievePercent ? { achievePercent: ach.achievePercent } : {}),
+          ...(newShowIndices.has(i)
+            ? { showAchievePercent: true as const }
+            : {}),
+        };
+      });
     onUpdate({
       extrasClue: {
         achievements: newList.length > 0 ? newList : undefined,
@@ -253,6 +323,40 @@ export const RefineExtras: React.FC<RefineExtrasProps> = ({
               ))}
             </div>
           )}
+          {/* Per-achievement "show percent" checkboxes — only shown after fetch */}
+          {!fetchLoading &&
+            fetchedAchievements &&
+            [...selectedAchievementIndices]
+              .sort((a, b) => a - b)
+              .some((i) => fetchedAchievements[i]?.achievePercent) && (
+              <div className='flex flex-col gap-1 pt-1'>
+                {[...selectedAchievementIndices]
+                  .sort((a, b) => a - b)
+                  .map((fetchedIdx) => {
+                    const ach = fetchedAchievements[fetchedIdx];
+                    if (!ach?.achievePercent) return null;
+                    return (
+                      <label
+                        key={fetchedIdx}
+                        className='flex items-center gap-2 text-xs text-gray-300 cursor-pointer select-none'
+                      >
+                        <input
+                          type='checkbox'
+                          checked={showAchievePercentIndices.has(fetchedIdx)}
+                          onChange={() => toggleShowPercent(fetchedIdx)}
+                          className='w-3 h-3 accent-amber-500'
+                        />
+                        <span className='truncate text-gray-400'>
+                          {ach.name}
+                        </span>
+                        <span className='text-gray-500 italic'>
+                          show % ({ach.achievePercent})
+                        </span>
+                      </label>
+                    );
+                  })}
+              </div>
+            )}
         </div>
       )}
     </div>

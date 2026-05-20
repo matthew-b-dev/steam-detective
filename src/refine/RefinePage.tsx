@@ -452,8 +452,14 @@ export const RefinePage: React.FC = () => {
             const descPart = ach.desc
               ? `, desc: ${JSON.stringify(ach.desc)}`
               : '';
+            const percentPart = ach.achievePercent
+              ? `, achievePercent: ${JSON.stringify(ach.achievePercent)}`
+              : '';
+            const showPercentPart = ach.showAchievePercent
+              ? `, showAchievePercent: true`
+              : '';
             lines.push(
-              `        { name: ${JSON.stringify(ach.name)}${descPart}, img: ${JSON.stringify(ach.img)} },`,
+              `        { name: ${JSON.stringify(ach.name)}${descPart}${percentPart}${showPercentPart}, img: ${JSON.stringify(ach.img)} },`,
             );
           }
           lines.push(`      ],`);

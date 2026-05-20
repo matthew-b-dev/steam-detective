@@ -661,6 +661,11 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile3: 'Plants vs. Zombies Garden Warfare 2',
   },
   '2026-05-21': {
+    caseFile1: 'Hotline Miami',
+    caseFile2: 'Prototype',
+    caseFile3: 'WILD HEARTS',
+  },
+  '2026-05-22': {
     caseFile1: "Don't Starve",
     caseFile2: 'Fields of Mistria',
     caseFile3: 'Dwarf Fortress',

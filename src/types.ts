@@ -62,7 +62,13 @@ export interface SteamGame {
   reviewClue?: Review; // DEPRECATED: A specific review chosen as a clue (replaces secondary screenshot). Use reviewClues instead.
   reviewClues?: Review[]; // Array of reviews chosen as clues (replaces secondary screenshot). All reviews shown together. The review text may contain ||censored|| markers.
   extrasClue?: {
-    achievements?: { name: string; desc?: string; img: string }[]; // Steam achievements to show (name + optional description + thumbnail URL)
+    achievements?: {
+      name: string;
+      desc?: string;
+      img: string;
+      achievePercent?: string;
+      showAchievePercent?: boolean;
+    }[]; // Steam achievements to show (name + optional description + thumbnail URL). achievePercent stores the "X% of players" stat; showAchievePercent controls whether it is displayed in the clue.
     achievementsTotal?: number; // Total achievements found during fetch (for display: "X of N")
   }; // Optional extras clue (replaces secondary screenshot). Canonical position just above Review.
   searchTerms?: string[]; // Additional search terms/aliases for the dropdown

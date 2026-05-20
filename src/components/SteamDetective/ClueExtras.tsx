@@ -1,8 +1,18 @@
 import { motion } from 'framer-motion';
-import { clueVariants, renderCensoredDescription, renderUncensoredDescription } from './utils';
+import {
+  clueVariants,
+  renderCensoredDescription,
+  renderUncensoredDescription,
+} from './utils';
 
 interface ClueExtrasProps {
-  achievements?: { name: string; desc?: string; img: string }[];
+  achievements?: {
+    name: string;
+    desc?: string;
+    img: string;
+    achievePercent?: string;
+    showAchievePercent?: boolean;
+  }[];
   achievementsTotal?: number;
   show: boolean;
   isComplete?: boolean;
@@ -14,7 +24,9 @@ export const ClueExtras: React.FC<ClueExtrasProps> = ({
   show,
   isComplete = false,
 }) => {
-  const renderText = isComplete ? renderUncensoredDescription : renderCensoredDescription;
+  const renderText = isComplete
+    ? renderUncensoredDescription
+    : renderCensoredDescription;
   const hasAchievements = (achievements?.length ?? 0) > 0;
 
   if (!hasAchievements) return null;
@@ -62,19 +74,20 @@ export const ClueExtras: React.FC<ClueExtrasProps> = ({
                 />
                 <div className='flex flex-col justify-center'>
                   <span className='text-sm text-gray-200 leading-snug'>
-                    {renderText(
-                      achievement.name,
-                      `ach-name-${idx}-`,
-                    )}
+                    {renderText(achievement.name, `ach-name-${idx}-`)}
                   </span>
                   {achievement.desc && (
                     <span className='text-xs text-gray-400 leading-snug mt-0.5'>
-                      {renderText(
-                        achievement.desc,
-                        `ach-desc-${idx}-`,
-                      )}
+                      {renderText(achievement.desc, `ach-desc-${idx}-`)}
                     </span>
                   )}
+                  {achievement.showAchievePercent &&
+                    achievement.achievePercent && (
+                      <span className='text-xs text-gray-400 italic leading-snug mt-0.5'>
+                        Achieved by <b>{achievement.achievePercent}</b> of
+                        players
+                      </span>
+                    )}
                 </div>
               </div>
             ))}
