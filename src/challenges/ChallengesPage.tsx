@@ -45,6 +45,7 @@ const getCompletedDates = (): Set<string> => {
 
 const SESSION_TAB_KEY = 'archives-active-tab';
 const SESSION_PAGES_KEY = 'archives-pages';
+const SESSION_HIDE_PLAYED_KEY = 'archives-hide-played';
 
 const readSessionTab = (): TabKey => {
   try {
@@ -54,6 +55,16 @@ const readSessionTab = (): TabKey => {
     /* sessionStorage unavailable */
   }
   return 'most_difficult';
+};
+
+const readSessionHidePlayed = (): boolean => {
+  try {
+    const v = sessionStorage.getItem(SESSION_HIDE_PLAYED_KEY);
+    if (v !== null) return v === 'true';
+  } catch {
+    /* sessionStorage unavailable */
+  }
+  return false;
 };
 
 const readSessionPages = (): Record<TabKey, number> => {
@@ -74,8 +85,9 @@ const readSessionPages = (): Record<TabKey, number> => {
 export const ChallengesPage: React.FC = () => {
   const [activeTab, setActiveTab] = useState<TabKey>(readSessionTab);
   const [pages, setPages] = useState<Record<TabKey, number>>(readSessionPages);
-
-  const [hidePlayedDates, setHidePlayedDates] = useState(false);
+  const [hidePlayedDates, setHidePlayedDates] = useState<boolean>(
+    readSessionHidePlayed,
+  );
 
   const IS_PROD = !isLocalhost();
 
@@ -92,6 +104,14 @@ export const ChallengesPage: React.FC = () => {
       /* unavailable */
     }
   }, [activeTab]);
+
+  useEffect(() => {
+    try {
+      sessionStorage.setItem(SESSION_HIDE_PLAYED_KEY, String(hidePlayedDates));
+    } catch {
+      /* unavailable */
+    }
+  }, [hidePlayedDates]);
 
   useEffect(() => {
     try {
@@ -122,8 +142,8 @@ export const ChallengesPage: React.FC = () => {
   const dates = hidePlayedDates
     ? allDates.filter((d) => !completedDates.has(d))
     : allDates;
-  const currentPage = pages[activeTab];
   const totalPages = Math.max(1, Math.ceil(dates.length / PAGE_SIZE));
+  const currentPage = Math.min(pages[activeTab], totalPages);
   const startIdx = (currentPage - 1) * PAGE_SIZE;
   const visibleDates = dates.slice(startIdx, startIdx + PAGE_SIZE);
 
