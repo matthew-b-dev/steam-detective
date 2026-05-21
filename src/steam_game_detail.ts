@@ -3947,11 +3947,11 @@ export const steamGameDetails: SteamGameMap = {
     name: 'VVVVVV',
     appId: 70300,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/70300/ss_4ba9fa1829414a6739bee4d7008f8e68bb03e0a8.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/70300/ss_41e8b749b3a1200eefe002edd5f743b0a6aacbfc.600x338.jpg',
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/70300/ss_a7dc7971405b1fa3c5640da773fc595a2b5944cd.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/70300/ss_3018b946a8a5df32f162e31f78db5863d743154b.600x338.jpg',
     shortDescription:
-      '||VVVVVV|| is a platform game all about exploring one simple mechanical idea - what if you reversed gravity instead of jumping?',
+      '[[VVVVVV]] is a 2D platformer game all about exploring one simple mechanical idea - what if you reversed gravity instead of jumping?',
     releaseDate: 'Sep 7, 2010',
     developer: 'Terry Cavanagh',
     publisher: 'Terry Cavanagh',
@@ -3975,8 +3975,34 @@ export const steamGameDetails: SteamGameMap = {
       'Exploration',
       'Action',
     ],
+    blurredUserTags: ['Precision Platformer', 'Platformer', '2D Platformer'],
     screenshotLetterbox: true,
-    clueOrder: ['tags', 'details', 'desc'],
+    clueOrder: ['review', 'details+tags', 'desc'],
+    searchTerms: ['VVVVVVVVVVVV'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Medium',
+    reviewClues: [
+      {
+        review: 'It has its ups and downs',
+        votedUp: true,
+        votesUp: 14,
+        votedFunny: 86,
+        weightedScore: undefined,
+        authorPlaytimeHours: 7.4,
+        timestamp: 1288051200,
+      },
+      {
+        review:
+          '[...] collect all 20 "Trinkets" and you\'ll gain access to the secret lab. Just talk to Viola once you\'ve found all of the trinkets and you\'ll be teleported there. The Secret Lab is an area where your "trophies" are stored ... (edited for length)',
+        votedUp: true,
+        votesUp: 0,
+        weightedScore: undefined,
+        authorPlaytimeHours: 2.1,
+        timestamp: 1297641600,
+      },
+    ],
+    moreFromThisDeveloper: [{ id: 861540, name: 'Dicey Dungeons' }],
   },
   '71250': {
     name: 'Sonic Adventure DX',
@@ -4384,14 +4410,14 @@ export const steamGameDetails: SteamGameMap = {
     name: 'Alan Wake',
     appId: 108710,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/108710/ss_a5677f5c091e71a55be04ba6b5e7a691c9e1cb3a.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/108710/ss_d38ba82c0dbd317ac8c44c79c31dd3463486f313.600x338.jpg',
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/108710/ss_eefd34b9a772f23775749d108f9c93f35b73ee0c.600x338.jpg',
     shortDescription:
-      'A Dark Presence stalks the small town of Bright Falls, pushing ||Alan Wake|| to the brink of sanity in his fight to unravel the mystery and save his love.',
+      'Presented in the style of a TV series, [[Alan ((W))ake]] features the trademark Remedy storytelling and pulse-pounding action sequences. When the wife of the best-selling writer [[Alan ((W))ake]] disappears on their vacation, his search turns up pages from a thriller he doesn’t even remember writing. A Dark Presence stalks the small town of Bright Falls, pushing ||Wake|| to the brink of sanity in his fight to unravel the mystery and save his love. ',
     releaseDate: 'Feb 16, 2012',
-    developer: 'Remedy Entertainment',
-    publisher: 'Remedy Entertainment',
+    developer: '||Remedy Entertainment||',
+    publisher: '||Remedy Entertainment||',
     tags: [],
     features: [],
     allReviewSummary: {
@@ -4415,7 +4441,38 @@ export const steamGameDetails: SteamGameMap = {
       'Supernatural',
       'Dark',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: ['Psychological Horror'],
+    overrideCensoredTitle: 'A||lan|| W||ake||',
+    clueOrder: ['details+tags', 'extras', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
+    moreFromThisDeveloper: [{ id: 108700, name: 'Death Rally (1996)' }],
+    extrasClue: {
+      achievements: [
+        {
+          name: "Bright Falls' Finest",
+          desc: 'Call for help.',
+          achievePercent: '56.3%',
+          img: 'https://cdn.fastly.steamstatic.com/steamcommunity/public/images/apps/108710/6ad9a3ee1e0564d67f73afaa123f7f38eee87c8a.jpg',
+        },
+        {
+          name: 'Under a Thin Layer of Skin',
+          desc: 'Defy the park ranger.',
+          achievePercent: '49.5%',
+          img: 'https://cdn.fastly.steamstatic.com/steamcommunity/public/images/apps/108710/cb2729488c7190f485bc9743e632f7559c37611f.jpg',
+        },
+        {
+          name: 'Sound and Fury',
+          desc: 'Kill four Taken with a single flashbang.',
+          achievePercent: '34.3%',
+          img: 'https://cdn.fastly.steamstatic.com/steamcommunity/public/images/apps/108710/050ee5015f74e30ed392401d5b9f156703594f60.jpg',
+        },
+      ],
+      achievementsTotal: 67,
+    },
+    developerDescription:
+      'Based in Espoo, ||Finland|| and founded in 1995, we have always aimed to create impactful games that break media boundaries and feature iconic characters, compelling narrative and stylized gameplay.',
   },
   '109600': {
     name: 'Neverwinter',
@@ -6863,10 +6920,10 @@ export const steamGameDetails: SteamGameMap = {
       'Addictive',
       'Music',
     ],
-    excludeOptions: ['Hotline Miami 2: Wrong Number'],
     blurredUserTags: ['Gore', '1980s', 'Fast-Paced', 'Retro', 'Pixel Graphics'],
     overrideCensoredTitle: 'H||otline|| Mi||ami||',
     clueOrder: ['extras', 'details+tags', 'desc'],
+    excludeOptions: ['Hotline Miami 2: Wrong Number'],
     debugProcessed: true,
     debugRefined: true,
     difficulty: 'Easy',
@@ -43729,18 +43786,19 @@ export const steamGameDetails: SteamGameMap = {
     name: 'Guild Wars 2',
     appId: 1284210,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1284210/ss_7f65b15609337bc9572dca6e8d8581b68eda5cc9.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1284210/ss_b3618fdfd2b0ba2769d99f07b65501647a329265.600x338.jpg',
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1284210/ss_4b7455bd82c363c7c39136159b35966fe65b3b20.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1284210/ss_a4e94a02fcf6c667feda35a2cabcf3a6779ea1c5.600x338.jpg',
     shortDescription:
-      '||Guild Wars 2|| is an award-winning online roleplaying game with fast-paced action combat, deep character customization, and no subscription fee required. Choose from an arsenal of professions and weapons, explore a vast open world, compete in PVP modes and more. Join over 16 million players now!',
+      '[[Guild War((s)) 2]] is an award-winning MMORPG with fast-paced action combat, deep character customization, and no subscription fee required. Choose from an arsenal of professions and weapons, explore a vast open world, compete in PVP modes and more. Join over 16 million players now!',
+    originalReleaseDate: 'Aug 28, 2012 (Standalone)',
     releaseDate: 'Aug 23, 2022',
     developer: 'ArenaNet',
     publisher: 'ArenaNet, NCSOFT',
     tags: ['Adventure', 'Massively Multiplayer', 'RPG', 'Free To Play'],
     features: [],
     allReviewSummary: {
-      count: 305,
+      count: 27743,
       rating: 'Very Positive',
     },
     userTags: [
@@ -43765,7 +43823,23 @@ export const steamGameDetails: SteamGameMap = {
       'Story Rich',
       'Singleplayer',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: ['MMORPG', 'Massively Multiplayer', 'Free to Play'],
+    overrideCensoredTitle: 'G||uild|| W||ars|| ||2||',
+    clueOrder: ['review', 'details+tags', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
+    reviewClues: [
+      {
+        review:
+          "If you want a relaxed, easy experience, make an Engineer and go for the Mechanist specialization. You can clear all end game content with little trouble.\n\nIf robots, bombs, guns, and ranged combat aren't your style, try making a Necromancer, and specialize as a Reaper. You can clear all content with a badass scythe, cool spells, and undead minions.\n\nIf neither of those are for you, roll a Revenant and enjoy any of its specializations. They're busted and supremely powerful. The Vindicator specialization destroys everything in its path with a giant two-handed sword.\n(edited for length)",
+        votedUp: true,
+        votesUp: 204,
+        weightedScore: undefined,
+        authorPlaytimeHours: 3411.9,
+        timestamp: 1684123200,
+      },
+    ],
   },
   '1284410': {
     name: 'GWENT: The Witcher Card Game',
@@ -52055,7 +52129,6 @@ export const steamGameDetails: SteamGameMap = {
   },
   '1938010': {
     name: 'WILD HEARTS',
-    overrideCensoredTitle: 'W||ILD|| H||EART||S',
     appId: 1938010,
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1938010/ss_06b924ca6c47c7c10b6397447dcbe1de64e1896e.600x338.jpg',
@@ -52089,6 +52162,7 @@ export const steamGameDetails: SteamGameMap = {
       '3D',
       'Souls-like',
     ],
+    overrideCensoredTitle: 'W||ILD|| H||EART||S',
     clueOrder: ['review', 'details', 'tags', 'desc'],
     reviewClues: [
       {
@@ -57936,9 +58010,9 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3527290/9c500124c060f162f111afa679bf5d3a32b3fb40/ss_9c500124c060f162f111afa679bf5d3a32b3fb40.600x338.jpg',
     shortDescription:
-      '||PEAK|| is a co-op climbing game where the slightest mistake can spell your doom. Either solo or as a group of lost nature scouts, your only hope of rescue from a mysterious island is to scale the mountain at its center. Do you have what it takes to reach the ||PEAK||?',
+      '[[PEAK]] is a co-op climbing game where the slightest mistake can spell your doom. Either solo or as a group of lost nature scouts, your only hope of rescue from a mysterious island is to scale the mountain at its center. Do you have what it takes to ||reach the PEAK||?',
     releaseDate: 'Jun 16, 2025',
-    developer: 'Team PEAK',
+    developer: 'Team ||PEAK||',
     publisher: 'Aggro Crab, Landfall',
     tags: ['Action', 'Adventure', 'Indie'],
     features: [],
@@ -57946,8 +58020,54 @@ export const steamGameDetails: SteamGameMap = {
       count: 114576,
       rating: 'Overwhelmingly Positive',
     },
-    userTags: [],
-    clueOrder: ['tags', 'details', 'desc'],
+    userTags: [
+      'Multiplayer',
+      'Online Co-Op',
+      'Co-op',
+      'Physics',
+      'Adventure',
+      'Exploration',
+      'First-Person',
+      'Comedy',
+      '3D',
+      'Procedural Generation',
+    ],
+    clueOrder: ['review', 'details+tags', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
+    reviewClues: [
+      {
+        review:
+          'Had some fun times with my daughter.\nironically i found it easier when she is the ||ghost||, guide me the way .....',
+        votedUp: true,
+        votesUp: 1302,
+        votedFunny: 636,
+        weightedScore: undefined,
+        authorPlaytimeHours: 15.5,
+        timestamp: 1750219200,
+      },
+      {
+        review:
+          "It's a good game, but it would be better if there was a strangle button that I can use on my friends when they eat all the food like a greedy piece of lard",
+        votedUp: true,
+        votesUp: 1996,
+        votedFunny: 1517,
+        weightedScore: undefined,
+        authorPlaytimeHours: 47.3,
+        timestamp: 1750305600,
+      },
+      {
+        review:
+          "Told my friends with panic in my voice that the lava is rising even though it wasn't, one friend panicked and died because of it. 10/10 game",
+        votedUp: true,
+        votesUp: 814,
+        votedFunny: 473,
+        weightedScore: undefined,
+        authorPlaytimeHours: 14.3,
+        timestamp: 1750392000,
+      },
+    ],
   },
   '3595230': {
     name: 'Call of Duty: Modern Warfare II',
@@ -58872,6 +58992,7 @@ export const steamGameDetails: SteamGameMap = {
 // Special series/franchises where guesses containing the series name are considered "close"
 export const CLOSE_GUESS_SERIES: string[] = [
   'age of empires',
+  'alan wake',
   'anno',
   'arma',
   'bioshock',

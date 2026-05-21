@@ -666,6 +666,12 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile3: 'WILD HEARTS',
   },
   '2026-05-22': {
+    caseFile1: 'Guild Wars 2',
+    caseFile2: 'Alan Wake',
+    caseFile3: 'VVVVVV',
+  },
+  // Monday: PEAK
+  '2026-05-23': {
     caseFile1: "Don't Starve",
     caseFile2: 'Fields of Mistria',
     caseFile3: 'Dwarf Fortress',
