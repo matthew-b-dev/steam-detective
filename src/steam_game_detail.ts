@@ -4416,6 +4416,7 @@ export const steamGameDetails: SteamGameMap = {
     shortDescription:
       'Presented in the style of a TV series, [[Alan ((W))ake]] features the trademark Remedy storytelling and pulse-pounding action sequences. When the wife of the best-selling writer [[Alan ((W))ake]] disappears on their vacation, his search turns up pages from a thriller he doesn’t even remember writing. A Dark Presence stalks the small town of Bright Falls, pushing ||Wake|| to the brink of sanity in his fight to unravel the mystery and save his love. ',
     releaseDate: 'Feb 16, 2012',
+    originalReleaseDate: 'May 18, 2010 (X360)',
     developer: '||Remedy Entertainment||',
     publisher: '||Remedy Entertainment||',
     tags: [],
