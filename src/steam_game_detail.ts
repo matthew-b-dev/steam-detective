@@ -4415,8 +4415,8 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/108710/ss_eefd34b9a772f23775749d108f9c93f35b73ee0c.600x338.jpg',
     shortDescription:
       'Presented in the style of a TV series, [[Alan ((W))ake]] features the trademark Remedy storytelling and pulse-pounding action sequences. When the wife of the best-selling writer [[Alan ((W))ake]] disappears on their vacation, his search turns up pages from a thriller he doesn’t even remember writing. A Dark Presence stalks the small town of Bright Falls, pushing ||Wake|| to the brink of sanity in his fight to unravel the mystery and save his love. ',
-    releaseDate: 'Feb 16, 2012',
     originalReleaseDate: 'May 18, 2010 (X360)',
+    releaseDate: 'Feb 16, 2012',
     developer: '||Remedy Entertainment||',
     publisher: '||Remedy Entertainment||',
     tags: [],
@@ -13792,7 +13792,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/288470/ss_d9e0637ee3f125befd682a0c622e3612b134fa50.600x338.jpg',
     shortDescription:
-      'FOR EVERY CHOICE, A CONSEQUENCE.Fully re-mastered with HD visuals and audio, ||Fable Anniversary|| is a stunning rendition of the original game that will delight faithful fans and new players alike! The all new Heroic difficulty setting will test the mettle of even the most hardcore ||Fable|| fan.',
+      'FOR EVERY CHOICE, A CONSEQUENCE. Fully re-mastered with HD visuals and audio, [[Fable Anniversary]] is a stunning rendition of the original game that will delight faithful fans and new players alike! The all new Heroic difficulty setting will test the mettle of even the most hardcore ||Fable|| fan.',
     releaseDate: 'Sep 12, 2014',
     developer: 'Lionhead Studios',
     publisher: 'Xbox Game Studios',
@@ -13803,15 +13803,15 @@ export const steamGameDetails: SteamGameMap = {
       rating: 'Very Positive',
     },
     userTags: [
+      'Remaster',
       'RPG',
-      'Open World',
+      'Choices Matter',
       'Fantasy',
-      'Singleplayer',
       'Adventure',
       'Classic',
-      'Choices Matter',
-      'Remake',
+      'Singleplayer',
       'Action RPG',
+      'Third Person',
       'Atmospheric',
       'Third Person',
       'Story Rich',
@@ -13819,7 +13819,19 @@ export const steamGameDetails: SteamGameMap = {
       'Action',
       'Comedy',
     ],
+    blurScreenshotQuarter: 'bottom',
     clueOrder: ['tags', 'details', 'desc'],
+    extrasClue: {
+      achievements: [
+        {
+          name: 'From The Smallest Acorn',
+          desc: 'Every tall oak tree needs to have its acorn moment, this is yours.',
+          achievePercent: '84.4%',
+          img: 'https://cdn.fastly.steamstatic.com/steamcommunity/public/images/apps/288470/1781fbe0c7f6ddb4354e4750d4037936cb177113.jpg',
+        },
+      ],
+      achievementsTotal: 50,
+    },
   },
   '289070': {
     name: "Sid Meier's Civilization VI",
@@ -23662,11 +23674,11 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/485510/ss_744edaca2857bdb6cfae5eddddf38b01456b27d6.600x338.jpg',
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/485510/ss_a3e52866214ca618474a13372c092ae42d922069.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/485510/ss_d211be4ecfb2ec61fcd1b3bee44797d00828a8ac.600x338.jpg',
     shortDescription:
-      'Ready to die? Experience the newest brutal action game from Team NINJA and Koei Tecmo Games. In the age of samurai, a lone traveler lands on the shores of Japan. He must fight his way through the vicious warriors and supernatural Yokai that infest the land in order to find that which he seeks.',
+      'Ready to die? [[Nioh]] is the newest brutal action game from Team NINJA and Koei Tecmo Games. In the age of samurai, a lone traveler lands on the shores of Japan. He must fight his way through the vicious warriors and supernatural Yokai that infest the land in order to find that which he seeks.',
     releaseDate: 'Nov 7, 2017',
-    developer: 'KOEI TECMO GAMES CO., LTD.',
+    developer: 'Team Ninja, KOEI TECMO',
     publisher: 'KOEI TECMO GAMES CO., LTD.',
     tags: [],
     features: [],
@@ -23691,7 +23703,28 @@ export const steamGameDetails: SteamGameMap = {
       'Historical',
       'Loot',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: [
+      'Souls-like',
+      'Hack and Slash',
+      'Singleplayer',
+      'Action RPG',
+      'Ninja',
+    ],
+    clueOrder: ['extras', 'tags', 'details', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Medium',
+    extrasClue: {
+      achievements: [
+        {
+          name: 'End Times',
+          desc: 'Defeated Derrick the Executioner.',
+          achievePercent: '16.1%',
+          img: 'https://cdn.fastly.steamstatic.com/steamcommunity/public/images/apps/485510/893caf68e749765c5c1fb8f41f23e805e9feba79.jpg',
+        },
+      ],
+      achievementsTotal: 79,
+    },
   },
   '488790': {
     name: 'South Park: The Fractured But Whole',
@@ -54254,11 +54287,11 @@ export const steamGameDetails: SteamGameMap = {
     name: 'Warhammer 40,000: Rogue Trader',
     appId: 2186680,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2186680/ss_08b5137eea0f70b4bb14ac6370453c1214de7b20.600x338.jpg',
-    secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2186680/ss_0efe2642d9a2c7147c8d9dcc816c19de335992f4.600x338.jpg',
+    secondaryScreenshot:
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2186680/ss_08b5137eea0f70b4bb14ac6370453c1214de7b20.600x338.jpg',
     shortDescription:
-      'Made in a close partnership with ||Games|| Workshop, ||Warhammer 40,000: Rogue Trader|| is a story-rich classical RPG from Owlcat Games, developers of the critically acclaimed game, Pathfinder: Wrath of the Righteous.',
+      '||Warhammer 40,000: Rogue Trader|| is a story-rich classical RPG from Owlcat Games, developers of the critically acclaimed game, Pathfinder: Wrath of the Righteous. Begin your adventure aboard your personal, giant ||void||ship, traveling between the multitude of systems within the ||Koronus|| Expanse, a barely charted and incredibly perilous region of space.',
     releaseDate: 'Dec 7, 2023',
     developer: 'Owlcat Games',
     publisher: 'Owlcat Games',
@@ -54290,11 +54323,28 @@ export const steamGameDetails: SteamGameMap = {
       'Turn-Based Combat',
       'Online Co-Op',
     ],
-    overrideCensoredTitle: 'W||arhammer|| 40||,000: Rogue Trader||',
-    clueOrder: ['tags', 'details', 'desc'],
+    overrideCensoredTitle: '||Warhammer|| ||40||,||000||: R||ogue|| T||rade||r',
+    clueOrder: ['desc', 'details+tags', 'review'],
+    searchTerms: [
+      'Warhammer 40000 rogue trader',
+      'warhammer 40k rogue trader',
+      '40k rogue trader',
+      'warhammer 40,0000 rogue trader',
+    ],
     debugProcessed: true,
     debugRefined: true,
     difficulty: 'Medium',
+    reviewClues: [
+      {
+        review:
+          "My dad got me into the original tabletop ||Warhammer 40k||: [[((R))ogue ((T))rader]] back around 1988, and this somehow feels exactly like the old sessions. All these years later I'm finally able to relive wandering into uncharted space and slaying Chaos cultists in the name of the Emperor.",
+        votedUp: true,
+        votesUp: 6,
+        weightedScore: '0.567401468753814697',
+        authorPlaytimeHours: 88,
+        timestamp: 1768608898,
+      },
+    ],
   },
   '2187290': {
     name: 'Wall World',
@@ -57595,11 +57645,12 @@ export const steamGameDetails: SteamGameMap = {
     name: "Assassin's Creed Mirage",
     appId: 3035570,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3035570/7333a21ec2f874f5b5a09064b1770852bb269b86/ss_7333a21ec2f874f5b5a09064b1770852bb269b86.600x338.jpg',
-    secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3035570/c57033e45330656cda1316de6dbd67bec7a8bcdd/ss_c57033e45330656cda1316de6dbd67bec7a8bcdd.600x338.jpg',
+    secondaryScreenshot:
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3035570/7333a21ec2f874f5b5a09064b1770852bb269b86/ss_7333a21ec2f874f5b5a09064b1770852bb269b86.600x338.jpg',
     shortDescription:
       'Become a deadly Master Assassin in this action-adventure game. Explore the streets of ninth-century Baghdad through the eyes of Basim. Take down your targets while seeking justice as part of the Hidden Ones.',
+    originalReleaseDate: 'Oct 5, 2023 (Epic/Ubi)',
     releaseDate: 'Oct 17, 2024',
     developer: 'Ubisoft Bordeaux',
     publisher: 'Ubisoft',
@@ -57626,8 +57677,23 @@ export const steamGameDetails: SteamGameMap = {
       'Story Rich',
       'Atmospheric',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: ['Parkour', 'Adventure', 'RPG', 'Assassin'],
+    clueOrder: ['extras', 'tags', 'details', 'desc'],
     searchTerms: ['assassins creed mirage'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
+    extrasClue: {
+      achievements: [
+        {
+          name: 'Hoarder',
+          desc: 'Save up 2007 dirhams',
+          achievePercent: '28.6%',
+          img: 'https://cdn.fastly.steamstatic.com/steamcommunity/public/images/apps/3035570/ef36eb688e9cd349e173d36b4cb9639022f620cc.jpg',
+        },
+      ],
+      achievementsTotal: 61,
+    },
   },
   '3070070': {
     name: 'TCG Card Shop Simulator',
