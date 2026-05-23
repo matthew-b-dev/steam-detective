@@ -675,8 +675,14 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile2: 'Nioh',
     caseFile3: 'Warhammer 40,000: Rogue Trader',
   },
-  // Monday: PEAK
   '2026-05-24': {
+    caseFile1: 'DOOM (2016)',
+    caseFile2: 'Crusader Kings III',
+    caseFile3: 'Sanctum',
+  },
+  // Tuesday: Hitman 2
+  // Monday: PEAK
+  '2026-05-25': {
     caseFile1: "Don't Starve",
     caseFile2: 'Fields of Mistria',
     caseFile3: 'Dwarf Fortress',

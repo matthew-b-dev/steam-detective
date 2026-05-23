@@ -19095,17 +19095,17 @@ export const steamGameDetails: SteamGameMap = {
     difficulty: 'Medium',
   },
   '379720': {
-    name: 'DOOM',
+    name: 'DOOM (2016)',
     appId: 379720,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/379720/ss_f989e793786bf1d6459da1139a484203efef1447.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/379720/ss_28e126c5530b5f81726501ec73e51c66fd325bc2.600x338.jpg',
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/379720/ss_ac05e086b8f0580bc95970fbb6f18a7e4fe65404.600x338.jpg',
     shortDescription:
-      'Now includes all three premium DLC packs (Unto the Evil, Hell Followed, and Bloodfall), maps, modes, and weapons, as well as all feature updates including Arcade Mode, Photo Mode, and the latest Update 6.66, which brings further multiplayer improvements as well as revamps multiplayer progression.',
+      'Developed by ||id software||, the studio that pioneered the first-person shooter genre and created multiplayer Deathmatch, ||DOOM|| returns as a brutally fun and challenging modern-day shooter experience.',
     releaseDate: 'May 12, 2016',
-    developer: 'id Software',
-    publisher: 'Bethesda Softworks',
+    developer: '||id Software||',
+    publisher: '||Bethesda Softworks||',
     tags: ['Action'],
     features: [],
     allReviewSummary: {
@@ -19114,10 +19114,10 @@ export const steamGameDetails: SteamGameMap = {
     },
     userTags: [
       'FPS',
-      'Gore',
+      'Great Soundtrack',
       'Action',
       'Shooter',
-      'Great Soundtrack',
+      'Gore',
       'Demons',
       'First-Person',
       'Multiplayer',
@@ -19134,7 +19134,30 @@ export const steamGameDetails: SteamGameMap = {
       'Violent',
       'Co-op',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: ['Demons', 'Gore'],
+    overrideCensoredTitle: '||DOO||M',
+    clueOrder: ['extras', 'details', 'tags', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
+    moreFromThisDeveloper: [{ id: 9180, name: 'Commander Keen' }],
+    extrasClue: {
+      achievements: [
+        {
+          name: 'IPXSETUP.EXE',
+          desc: 'Win a Multiplayer match',
+          achievePercent: '11.7%',
+          img: 'https://cdn.fastly.steamstatic.com/steamcommunity/public/images/apps/379720/6872551a9a2a6c012726a6fe814befbaf74990df.jpg',
+        },
+        {
+          name: 'IDDQD',
+          desc: 'Upgrade all Runes',
+          achievePercent: '3.2%',
+          img: 'https://cdn.fastly.steamstatic.com/steamcommunity/public/images/apps/379720/60dc127e52da228b5c5c3823994c7c1a2dad2f2d.jpg',
+        },
+      ],
+      achievementsTotal: 54,
+    },
   },
   '380600': {
     name: 'Fishing Planet',
@@ -40393,14 +40416,14 @@ export const steamGameDetails: SteamGameMap = {
     name: 'Crusader Kings III',
     appId: 1158310,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1158310/ba7f77f7eb96d48f267e970583ddaa32b3b5eb98/ss_ba7f77f7eb96d48f267e970583ddaa32b3b5eb98.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1158310/927b699bb755884d14c31ccdfc7ffe2211730ca7/ss_927b699bb755884d14c31ccdfc7ffe2211730ca7.600x338.jpg',
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1158310/8776b7e4b345cfb7dcdb5888ecf04cc96e47a015/ss_8776b7e4b345cfb7dcdb5888ecf04cc96e47a015.600x338.jpg',
     shortDescription:
-      "Love, fight, scheme, and claim greatness. Determine your noble house's legacy in the sprawling grand strategy of ||Crusader Kings III||. Death is only the beginning as you guide your dynasty's bloodline in the rich and larger-than-life simulation of the Middle Ages.",
+      "Love, fight, scheme, and claim greatness. Determine your noble house's legacy in the sprawling Grand Strategy of [[Crusader Kings III]]. Death is only the beginning as you guide your ||dynasty's|| bloodline in the rich and larger-than-life simulation of the Middle Ages.",
     releaseDate: 'Sep 1, 2020',
-    developer: 'Paradox Development Studio',
-    publisher: 'Paradox Interactive',
+    developer: '||Paradox Development Studio||',
+    publisher: '||Paradox Interactive||',
     tags: ['RPG', 'Simulation', 'Strategy'],
     features: [],
     allReviewSummary: {
@@ -40429,11 +40452,31 @@ export const steamGameDetails: SteamGameMap = {
       'Multiplayer',
       'Real-Time with Pause',
     ],
-    blurredUserTags: ['Medieval', 'Historical'],
-    clueOrder: ['details', 'tags', 'desc'],
+    blurredUserTags: [
+      'Medieval',
+      'Grand Strategy',
+      'Life Sim',
+      'Historical',
+      'RPG',
+      'Sandbox',
+    ],
+    overrideCensoredTitle: 'C||rusader|| K||i||n||gs|| ||III||',
+    clueOrder: ['review', 'tags', 'details', 'desc'],
     debugProcessed: true,
     debugRefined: true,
-    difficulty: 'Hard',
+    difficulty: 'Medium',
+    reviewClues: [
+      {
+        review:
+          "It's a significant evolution in the series. The Hooks system is great. Despite what some people are saying I think the fully animated 3D portraits are a welcome modernization over the static 2D ones in the previous games.\n(edited for length)",
+        votedUp: true,
+        votesUp: 9,
+        weightedScore: '0.62622988224029541',
+        authorPlaytimeHours: 21,
+        timestamp: 1601337600,
+      },
+    ],
+    moreFromThisDeveloper: [{ id: 529340, name: 'Victoria 3' }],
   },
   '1158940': {
     name: 'Blazing Sails',
@@ -59053,6 +59096,63 @@ export const steamGameDetails: SteamGameMap = {
       },
     ],
     moreFromThisDeveloper: [{ id: 624060, name: 'Shattered Steel (1996)' }],
+  },
+  '91600': {
+    name: 'Sanctum',
+    appId: 91600,
+    primaryScreenshot:
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/91600/ss_098a2dc8e0896da29f56f6be946df55fd68eb601.600x338.jpg',
+    secondaryScreenshot:
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/91600/ss_ad467997f2c8b46b2d156ff0ea6466829411590a.600x338.jpg',
+    shortDescription:
+      "You think Tower Defense games are all about building? You thought wrong. [[Sanctu((m))]] is not your average Tower Defense title. When the havoc starts, you get to join the fray! As one of the world's first First Person Shooter - Tower Defense games, [[Sanctu((m))]] has taken the best of both worlds to deliver an epic, one-of-a-kind experience.",
+    releaseDate: 'Apr 15, 2011',
+    developer: 'Coffee Stain Studios',
+    publisher: 'Coffee Stain Publishing',
+    tags: [],
+    features: [],
+    allReviewSummary: {
+      count: 2216,
+      rating: 'Very Positive',
+    },
+    userTags: [
+      'Tower Defense',
+      'FPS',
+      'Strategy',
+      'Co-op',
+      'Action',
+      'Indie',
+      'Sci-fi',
+      'Multiplayer',
+      'First-Person',
+      'Online Co-Op',
+      'Shooter',
+      'Female Protagonist',
+      'Singleplayer',
+      'Casual',
+      'Great Soundtrack',
+    ],
+    blurredUserTags: ['Tower Defense', 'Strategy'],
+    overrideCensoredTitle: 'S||anctu||m',
+    clueOrder: ['details+tags', 'review', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Hard',
+    reviewClues: [
+      {
+        review:
+          'As far as I know this was the first ever fusion of FPS and tower defense .. or at least the first commercially successful one. While I would argue games have released since then that have done it better, this game still holds up pretty well.\n(edited for length)',
+        votedUp: true,
+        votesUp: 16,
+        weightedScore: undefined,
+        authorPlaytimeHours: 47.7,
+        timestamp: 1772841600,
+      },
+    ],
+    moreFromThisDeveloper: [
+      { id: 526870, name: 'Satisfactory' },
+      { id: 265930, name: 'Goat Simulator' },
+    ],
   },
 };
 
