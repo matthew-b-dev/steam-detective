@@ -16785,43 +16785,6 @@ export const steamGameDetails: SteamGameMap = {
     ],
     clueOrder: ['tags', 'details', 'desc'],
   },
-  '335300': {
-    name: 'DARK SOULS II: Scholar of the First Sin',
-    appId: 335300,
-    primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/335300/ss_589f08dc4d8580785923c89749101a15014bcdf9.600x338.jpg',
-    secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/335300/ss_724c043f3005c09c71e683e4d4b633711d7ccd49.600x338.jpg',
-    shortDescription:
-      "||DARK SOULS II: Scholar of the First Sin|| brings the franchise's renowned obscurity &amp; gripping gameplay to a new level. Join the dark journey and experience overwhelming enemy encounters, diabolical hazards, and unrelenting challenge.",
-    releaseDate: 'Apr 1, 2015',
-    developer: 'FromSoftware, Inc.',
-    publisher: 'Bandai Namco Entertainment',
-    tags: [],
-    features: [],
-    allReviewSummary: {
-      count: 125903,
-      rating: 'Very Positive',
-    },
-    userTags: [
-      'Souls-like',
-      'Dark Fantasy',
-      'RPG',
-      'Difficult',
-      'Action',
-      'Third Person',
-      'Atmospheric',
-      'Action RPG',
-      'Character Customization',
-      'Co-op',
-      'Multiplayer',
-      'Fantasy',
-      'Adventure',
-      'Medieval',
-      'Dark',
-    ],
-    clueOrder: ['tags', 'details', 'desc'],
-  },
   '335670': {
     name: 'LISA: The Painful',
     appId: 335670,
@@ -18832,14 +18795,17 @@ export const steamGameDetails: SteamGameMap = {
     name: 'DARK SOULS III',
     appId: 374320,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/374320/ss_5efd318b85a3917d1c6e717f4cb813b47547cd6f.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/374320/ss_1318a04ef11d87f38aebe6d47a96124f8f888ca8.600x338.jpg',
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/374320/ss_1c0fa39091901496d77cf4cecfea4ffb056d6452.600x338.jpg',
+    webms: [
+      'https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/374320/extras/b6d4d107eb7a5134984e711364fa4f2e.webm?t=1748630784',
+    ],
     shortDescription:
-      '||Dark Souls|| continues to push the boundaries with the latest, ambitious chapter in the critically-acclaimed and genre-defining series. Prepare yourself and Embrace The ||Darkness||!',
+      '[[Dark Souls]] continues to push the boundaries with the third, ambitious chapter in the critically-acclaimed and GENRE-DEFINING series. Prepare yourself and Embrace The ||Dark||ness!',
     releaseDate: 'Apr 11, 2016',
-    developer: 'FromSoftware, Inc.',
-    publisher: 'FromSoftware, Inc., Bandai Namco Entertainment',
+    developer: '||FromSoftware, Inc.||',
+    publisher: '||FromSoftware, Inc., Bandai Namco Entertainment||',
     tags: ['Action'],
     features: [],
     allReviewSummary: {
@@ -18848,8 +18814,8 @@ export const steamGameDetails: SteamGameMap = {
     },
     userTags: [
       'Souls-like',
-      'Dark Fantasy',
       'Difficult',
+      'Dark Fantasy',
       'RPG',
       'Atmospheric',
       'Lore-Rich',
@@ -18868,10 +18834,28 @@ export const steamGameDetails: SteamGameMap = {
       'Character Customization',
       'Replay Value',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: ['Souls-like', 'Difficult'],
+    overrideCensoredTitle: 'D||ark|| S||ouls|| ||III||',
+    clueOrder: ['extras', 'details+tags', 'desc'],
     debugProcessed: true,
     debugRefined: true,
     difficulty: 'Easy',
+    extrasClue: {
+      achievements: [
+        {
+          name: 'Dancer of the Boreal Valley',
+          achievePercent: '47.9%',
+          img: 'https://cdn.fastly.steamstatic.com/steamcommunity/public/images/apps/374320/331e956b8c41dd91027aca5636edc809179ed46f.jpg',
+        },
+        {
+          name: 'Master of Miracles',
+          desc: 'Acquire all miracles.',
+          achievePercent: '6.5%',
+          img: 'https://cdn.fastly.steamstatic.com/steamcommunity/public/images/apps/374320/2fdd1aefd7acc55e55346fe483ae0b1e7f456e78.jpg',
+        },
+      ],
+      achievementsTotal: 43,
+    },
   },
   '376210': {
     name: 'The Isle',
@@ -24344,7 +24328,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/501300/ss_b33a742463deb8564a382e1744febceaa91a5bab.600x338.jpg',
     shortDescription:
-      "||What Remains of Edith Finch|| is a collection of strange tales about a family in Washington state. As ||Edith||, you'll explore the colossal ||Finch|| house, searching for stories as she explores her family history and tries to figure out why she's the last one in her family left alive.",
+      "[[What Remains of ((E)))dith ((F))inch]] is a collection of strange tales about a family in Washington state. As [[((E)))dith]], you'll explore the colossal [[((F))inch]] house, searching for stories as she explores her family history and tries to figure out why she's the last one in her family left alive.",
     releaseDate: 'Apr 24, 2017',
     developer: 'Giant Sparrow',
     publisher: 'Annapurna Interactive',
@@ -24371,6 +24355,7 @@ export const steamGameDetails: SteamGameMap = {
       'Short',
       'Drama',
     ],
+    blurredUserTags: ['Walking Simulator'],
     clueOrder: ['tags', 'details', 'desc'],
   },
   '502500': {
@@ -26549,43 +26534,6 @@ export const steamGameDetails: SteamGameMap = {
       'RTS',
       'Economy',
       'Action',
-    ],
-    clueOrder: ['tags', 'details', 'desc'],
-  },
-  '570940': {
-    name: 'DARK SOULS: REMASTERED',
-    appId: 570940,
-    primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/570940/ss_3a71463e4ccaf28c5c27f6cf8d32a3a125f45404.600x338.jpg',
-    secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/570940/ss_92b2ba470cbfdb8839b649b3f478e5531dd81a17.600x338.jpg',
-    shortDescription:
-      'Then, there was fire. Re-experience the critically acclaimed, genre-defining game that started it all. Beautifully remastered, return to Lordran in stunning high-definition detail running at 60fps.',
-    releaseDate: 'May 23, 2018',
-    developer: 'QLOC',
-    publisher: 'FromSoftware, Inc.',
-    tags: [],
-    features: [],
-    allReviewSummary: {
-      count: 145890,
-      rating: 'Very Positive',
-    },
-    userTags: [
-      'Souls-like',
-      'Dark Fantasy',
-      'RPG',
-      'Difficult',
-      'Action',
-      'Dark',
-      'Fantasy',
-      'Atmospheric',
-      'Great Soundtrack',
-      'Action RPG',
-      'Lore-Rich',
-      'Adventure',
-      'Multiplayer',
-      'Exploration',
-      'Third Person',
     ],
     clueOrder: ['tags', 'details', 'desc'],
   },
@@ -34618,14 +34566,14 @@ export const steamGameDetails: SteamGameMap = {
     name: 'HITMAN 2',
     appId: 863550,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/863550/ss_425ab1fa29823f7dd675cc62e5cb36260462a578.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/863550/ss_983b6e18f733cd7a2dee82a6676c95d1c35e3baa.600x338.jpg',
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/863550/ss_125a77369fad60ed898a789c99981e2b929dd297.600x338.jpg',
     shortDescription:
-      "Travel the globe and ||track your targets|| across exotic sandbox locations in ||HITMAN 2||. From sun-drenched streets to dark and dangerous rainforests, nowhere is safe from the world's ||most creative assassin||, ||Agent 47|| in the ultimate spy thriller story.",
+      "Travel the globe and ||track your targets|| across exotic sandbox locations in ||HITMAN 2||. From sun-drenched streets of Miami to dark and dangerous rainforests of Colombia, nowhere is safe from the world's most creative ||assassin||, ||Agent 47|| in the ultimate ||spy thriller|| story.",
     releaseDate: 'Nov 13, 2018',
-    developer: 'IO Interactive A/S',
-    publisher: 'IO Interactive A/S',
+    developer: '||IO Interactive A/S||',
+    publisher: '||IO Interactive A/S||',
     tags: ['Action'],
     features: [],
     allReviewSummary: {
@@ -34640,7 +34588,7 @@ export const steamGameDetails: SteamGameMap = {
       'Third Person',
       'Multiplayer',
       'Violent',
-      'Open World',
+      'Third-Person Shooter',
       'Sandbox',
       'Strategy',
       'Puzzle',
@@ -34654,10 +34602,31 @@ export const steamGameDetails: SteamGameMap = {
       'Great Soundtrack',
       'Nudity',
     ],
-    clueOrder: ['details', 'desc', 'tags'],
+    blurredUserTags: ['Stealth', 'Assassin', 'Violent', 'Strategy'],
+    overrideCensoredTitle: 'H||ITM||A||N|| ||2||',
+    clueOrder: ['details+tags', 'desc', 'extras'],
+    searchTerms: ['hitman ii'],
     debugProcessed: true,
     debugRefined: true,
     difficulty: 'Medium',
+    moreFromThisDeveloper: [{ id: 1347780, name: 'Freedom Fighters' }],
+    extrasClue: {
+      achievements: [
+        {
+          name: 'Chameleon',
+          desc: 'Change your disguise during The Final Test.',
+          achievePercent: '28.5%',
+          img: 'https://cdn.fastly.steamstatic.com/steamcommunity/public/images/apps/863550/bb889e504ede2caa6ab71e0345bda1b78f0b61ee.jpg',
+        },
+        {
+          name: 'Security Defeated',
+          desc: 'Arrange matters so that a guard finds a discarded weapon and moves it into the hangar.',
+          achievePercent: '11.1%',
+          img: 'https://cdn.fastly.steamstatic.com/steamcommunity/public/images/apps/863550/98ac6342cc04f52e3a196350b285c38ef663878d.jpg',
+        },
+      ],
+      achievementsTotal: 146,
+    },
   },
   '865360': {
     name: 'We Were Here Together',
@@ -42499,19 +42468,19 @@ export const steamGameDetails: SteamGameMap = {
     name: 'Battlefield 3',
     appId: 1238820,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1238820/ss_3e59b961834a4ef2d36e600db373049927cb2f0f.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1238820/ss_2ee2d601c10fb9db2d9adf31f42183e7465927be.600x338.jpg',
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1238820/ss_8fce61feee86b183dd6c0b38270ea445017c2794.600x338.jpg',
     shortDescription:
-      'Enjoy total freedom to fight the way you want. Explore 29 massive multiplayer maps and use loads of vehicles, weapons, and gadgets to help you turn up the heat. Every second of battle gets you closer to unlocking tons of extras and moving up in the Ranks. So get in the action.',
-    releaseDate: 'Jun 11, 2020',
-    developer: 'DICE',
+      'Ramp up the intensity in [[Battlefield 3]] and enjoy total freedom to fight the way you want. Explore 29 massive multiplayer maps and use loads of vehicles, weapons, and gadgets to help you turn up the heat. The 4 player classes - ||Assault||, ||Engineer||, ||Support||, and ||Recon|| - each have specialties, and working together is key to victory. So get in the action.',
+    releaseDate: 'Oct 28, 2011',
+    developer: '||DICE||',
     publisher: 'Electronic Arts',
     tags: [],
     features: [],
     allReviewSummary: {
       count: 17527,
-      rating: 'Mixed',
+      rating: 'Mostly Positive',
     },
     userTags: [
       'Action',
@@ -42530,7 +42499,33 @@ export const steamGameDetails: SteamGameMap = {
       'Violent',
       'Co-op',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: ['PvP', 'Destruction'],
+    overrideCensoredTitle: 'B||attlefiel||d ||3||',
+    clueOrder: ['review', 'tags', 'details', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
+    reviewClues: [
+      {
+        review:
+          "Whose idea was it force people to browse for a server in a web browser outside of the game? The previous ||battlefield|| games didn't need that. That experience is worse in every way. The gameplay is fine but that is awful.",
+        votedUp: false,
+        votesUp: 7,
+        weightedScore: undefined,
+        authorPlaytimeHours: 5.1,
+        timestamp: 1319846400,
+      },
+      {
+        review:
+          "i legitimately thought something was wrong with my game when my screen blurred every time an ||enemy shot|| near me. no, that's just the ||suppression|| mechanic.",
+        votedUp: false,
+        votesUp: 25,
+        votedFunny: 4,
+        weightedScore: undefined,
+        authorPlaytimeHours: 4.4,
+        timestamp: 1320451200,
+      },
+    ],
   },
   '1238840': {
     name: 'Battlefield 1',
@@ -59162,6 +59157,7 @@ export const CLOSE_GUESS_SERIES: string[] = [
   'alan wake',
   'anno',
   'arma',
+  'battlefield',
   'bioshock',
   'borderlands',
   'derlands',
@@ -59192,6 +59188,7 @@ export const CLOSE_GUESS_SERIES: string[] = [
   'god of war',
   'half-life',
   'helldivers',
+  'hitman',
   'horizon',
   'jurassic',
   'just cause',

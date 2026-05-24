@@ -680,9 +680,13 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile2: 'Crusader Kings III',
     caseFile3: 'Sanctum',
   },
-  // Tuesday: Hitman 2
-  // Monday: PEAK
   '2026-05-25': {
+    caseFile1: 'DARK SOULS III',
+    caseFile2: 'HITMAN 2',
+    caseFile3: 'Battlefield 3',
+  },
+  // Monday: PEAK
+  '2026-05-26': {
     caseFile1: "Don't Starve",
     caseFile2: 'Fields of Mistria',
     caseFile3: 'Dwarf Fortress',
@@ -699,11 +703,9 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
 // Easy: State of Decay 2
 // Easy: Any AC Game (last 3/29): Revelations, Unity, (1), (2), Brotherhood, Rogue, Syndicate, Valhalla, Mirage
 
-// Med: Hello Neighbor
 // Med: Trackmania
 // Med: Another Crab's Treasure
 // Med: Luck be a Landlord
-// Med: WEBFISHING (60k rev)? needs work
 // Med: Tropico 4 (Last Tropico 3/15)
 // Med: Clustertruck
 
