@@ -13160,7 +13160,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/282440/ss_8e373017aa4c196d03de4ad628d3347a938481ce.600x338.jpg',
     shortDescription:
-      'Experience the most exciting and fast-paced FPS gameplay while competing with players from around the world in over 100 arenas, a dozen game modes, and with persistent career stats tracking, in this online features-focused successor to ||Quake|| III Arena.',
+      'Experience the most exciting and fast-paced FPS gameplay while competing with players from around the world in over 100 arenas, a dozen game modes, and with persistent career stats tracking, in this online features-focused successor to [[Quak((e))]]&nbsp;&nbsp;||III Arena||.',
     releaseDate: 'Sep 17, 2014',
     developer: 'id Software',
     publisher: 'Bethesda Softworks',
@@ -13184,7 +13184,27 @@ export const steamGameDetails: SteamGameMap = {
       'Difficult',
       'Cult Classic',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    clueOrder: ['tags', 'details', 'desc', 'review'],
+    reviewClues: [
+      {
+        review:
+          '[...] People are saying this used be a "browser game" which is only barely true. Your browser was downloading a NATIVE plugin (not pure web tech), downloading assets, etc. That\'s actually why you can\'t play this game through the browser anymore ... browsers stopped supporting plugins.\n(edited for length)',
+        votedUp: true,
+        votesUp: 2,
+        weightedScore: undefined,
+        authorPlaytimeHours: 12.6,
+        timestamp: 1740182400,
+      },
+      {
+        review:
+          '/callvote map bloodrun duel\nWe used to solve disputes this way.',
+        votedUp: true,
+        votesUp: 0,
+        weightedScore: undefined,
+        authorPlaytimeHours: 3.9,
+        timestamp: 1771713664,
+      },
+    ],
   },
   '282800': {
     name: '100% Orange Juice',
@@ -18357,10 +18377,11 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/367500/ss_a4636ec6717324f707d542f195c624698dc020d4.600x338.jpg',
     shortDescription:
-      "Set in a huge open world, ||Dragon's Dogma: Dark Arisen|| presents a rewarding action combat experience.",
+      "Set in a huge open world, [[Dragon((' s)) Dogm((a :)) Dark Arisen]] presents a rewarding action combat experience. Players embark on an epic adventure in a rich, living world with three AI companions, known as Pawns. These partners fight independently, demonstrating prowess and ability that they have developed based on traits learned from each player.",
+    originalReleaseDate: 'May 22, 2012 (PS3, X360)',
     releaseDate: 'Jan 15, 2016',
-    developer: 'Capcom',
-    publisher: 'Capcom',
+    developer: '||Capcom||',
+    publisher: '||Capcom||',
     tags: [],
     features: [],
     allReviewSummary: {
@@ -18384,7 +18405,23 @@ export const steamGameDetails: SteamGameMap = {
       'Atmospheric',
       'Great Soundtrack',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: ['Dragons'],
+    clueOrder: ['review', 'tags', 'details', 'ss', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Hard',
+    reviewClues: [
+      {
+        review:
+          'It turns out that all I ever wanted in a game is a devastating two-handed attack that takes ELEVEN SECONDS to fully charge up. Landing this attack is the greatest feeling that can be experienced in a videogame. \n\nArc of Deliverance, my beloved.',
+        votedUp: true,
+        votesUp: 0,
+        weightedScore: undefined,
+        authorPlaytimeHours: 58.9,
+        timestamp: 1456444800,
+      },
+    ],
+    moreFromThisDeveloper: [{ id: 221040, name: 'Resident Evil 6' }],
   },
   '367520': {
     name: 'Hollow Knight',
@@ -58111,7 +58148,7 @@ export const steamGameDetails: SteamGameMap = {
     name: 'PEAK',
     appId: 3527290,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3527290/bac7b90dffb456afecc4517a3e1d69362b95d15b/ss_bac7b90dffb456afecc4517a3e1d69362b95d15b.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3527290/471f445657aaf8b8c1d039389e5dcc6a8bcc32c5/ss_471f445657aaf8b8c1d039389e5dcc6a8bcc32c5.600x338.jpg',
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3527290/9c500124c060f162f111afa679bf5d3a32b3fb40/ss_9c500124c060f162f111afa679bf5d3a32b3fb40.600x338.jpg',
     shortDescription:
@@ -58137,6 +58174,7 @@ export const steamGameDetails: SteamGameMap = {
       '3D',
       'Procedural Generation',
     ],
+    blurredUserTags: ['Comedy', 'Exploration', 'Procedural Generation'],
     clueOrder: ['review', 'details+tags', 'desc'],
     debugProcessed: true,
     debugRefined: true,
@@ -58144,27 +58182,7 @@ export const steamGameDetails: SteamGameMap = {
     reviewClues: [
       {
         review:
-          'Had some fun times with my daughter.\nironically i found it easier when she is the ||ghost||, guide me the way .....',
-        votedUp: true,
-        votesUp: 1302,
-        votedFunny: 636,
-        weightedScore: undefined,
-        authorPlaytimeHours: 15.5,
-        timestamp: 1750219200,
-      },
-      {
-        review:
-          "It's a good game, but it would be better if there was a strangle button that I can use on my friends when they eat all the food like a greedy piece of lard",
-        votedUp: true,
-        votesUp: 1996,
-        votedFunny: 1517,
-        weightedScore: undefined,
-        authorPlaytimeHours: 47.3,
-        timestamp: 1750305600,
-      },
-      {
-        review:
-          "Told my friends with panic in my voice that the lava is rising even though it wasn't, one friend panicked and died because of it. 10/10 game",
+          "We were in the Caldera biome and I told my friends with panic in my voice that the lava is rising even though it wasn't, one friend panicked so badly they jumped into the lava. 10/10 game",
         votedUp: true,
         votesUp: 814,
         votedFunny: 473,
@@ -58173,6 +58191,9 @@ export const steamGameDetails: SteamGameMap = {
         timestamp: 1750392000,
       },
     ],
+    extrasClue: {
+      achievementsTotal: 54,
+    },
   },
   '3595230': {
     name: 'Call of Duty: Modern Warfare II',
@@ -59149,6 +59170,65 @@ export const steamGameDetails: SteamGameMap = {
       { id: 265930, name: 'Goat Simulator' },
     ],
   },
+  '2200': {
+    name: 'Quake III Arena',
+    appId: 2200,
+    primaryScreenshot:
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2200/0000000283.600x338.jpg',
+    secondaryScreenshot:
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2200/0000000284.600x338.jpg',
+    shortDescription:
+      'The greatest warriors of all time and space have been summoned to battle for the amusement of an ancient alien race. Discover three new modes: One-Flag CTF, Overload, and Harvester. Wield a variety of guns and power-ups as you fight for glory against ruthless combatants in this fast-paced single-player and multiplayer FPS.',
+    releaseDate: 'Dec 5, 1999',
+    developer: 'id Software',
+    publisher: 'id Software',
+    tags: [],
+    features: [],
+    allReviewSummary: {
+      count: 2405,
+      rating: 'Overwhelmingly Positive',
+    },
+    userTags: [
+      'FPS',
+      'Arena Shooter',
+      'Action',
+      'Classic',
+      'Multiplayer',
+      'Shooter',
+      'Competitive',
+      "1990's",
+      'First-Person',
+      'Gore',
+      'Fast-Paced',
+      'Difficult',
+      'Singleplayer',
+      'Sci-fi',
+      'Moddable',
+    ],
+    screenshotLetterbox: true,
+    clueOrder: ['review', 'desc', 'tags', 'details'],
+    searchTerms: ['quake 3 arena', 'quake 3'],
+    excludeOptions: ['Quake Live', 'Quake Champions'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
+    reviewClues: [
+      {
+        review:
+          'in this household we settle our differences with a short but powerful 3-word phrase:\n"/callvote map ztn3tourney1"',
+        votedUp: true,
+        votesUp: 312,
+        votedFunny: 40,
+        weightedScore: undefined,
+        authorPlaytimeHours: 1521.8,
+        timestamp: 1369440000,
+      },
+    ],
+    moreFromThisDeveloper: [
+      { id: 1148590, name: 'DOOM 64' },
+      { id: 2270, name: 'Wolfenstein 3D' },
+    ],
+  },
 };
 
 // Special series/franchises where guesses containing the series name are considered "close"
@@ -59213,6 +59293,7 @@ export const CLOSE_GUESS_SERIES: string[] = [
   'pillars of eternity',
   'plants vs',
   'prototype',
+  'quake',
   'remnant',
   'resident evil',
   'runescape',

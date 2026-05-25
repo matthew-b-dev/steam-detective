@@ -685,8 +685,12 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile2: 'HITMAN 2',
     caseFile3: 'Battlefield 3',
   },
-  // Monday: PEAK
   '2026-05-26': {
+    caseFile1: 'PEAK',
+    caseFile2: "Dragon's Dogma: Dark Arisen",
+    caseFile3: 'Quake III Arena',
+  },
+  '2026-05-27': {
     caseFile1: "Don't Starve",
     caseFile2: 'Fields of Mistria',
     caseFile3: 'Dwarf Fortress',

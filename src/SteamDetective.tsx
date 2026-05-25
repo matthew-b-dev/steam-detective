@@ -369,11 +369,23 @@ const SteamDetectiveGame: React.FC<SteamDetectiveGameProps> = ({
           !prevShowCluesRef.current[6] &&
           showClues[6]));
 
+    // When review (slot[4]) was already shown before ss is revealed, the screenshot
+    // appears ABOVE review/tags/details in the layout (canonical pos 1 vs 8/5/4).
+    // Scrolling down would move the user away from the new screenshot content.
+    const ssRevealedWhileReviewAlreadyShown =
+      hasSsInOrder &&
+      hasReviewInOrder &&
+      !hasDetailsTags &&
+      screenshotNowVisible &&
+      !screenshotWasVisible &&
+      prevShowCluesRef.current[4]; // review slot was already visible
+
     const ssJustRevealedNonFirst =
       !isFirstClue &&
       hasSsInOrder &&
       screenshotNowVisible &&
-      !screenshotWasVisible;
+      !screenshotWasVisible &&
+      !ssRevealedWhileReviewAlreadyShown;
 
     const ssVisibleAndNewClueRevealed =
       !isFirstClue &&
@@ -422,6 +434,21 @@ const SteamDetectiveGame: React.FC<SteamDetectiveGameProps> = ({
       showClues[1] &&
       showClues[7];
 
+    // For the exact order ['review', 'desc', 'tags', 'details'], review (canonical pos 8)
+    // is revealed first and permanently anchors currentLowestPosition at 8. When tags
+    // (pos 5) is revealed after desc (pos 3), it appears below desc and does grow the
+    // container downward, but the canonical-lowest check never fires. Detect explicitly.
+    const isReviewDescTagsDetailsOrder =
+      clueOrder.length === 4 &&
+      clueOrder[0] === 'review' &&
+      clueOrder[1] === 'desc' &&
+      clueOrder[2] === 'tags' &&
+      clueOrder[3] === 'details';
+    const tagsRevealedInReviewDescTagsDetailsOrder =
+      isReviewDescTagsDetailsOrder &&
+      !prevShowCluesRef.current[0] &&
+      showClues[0]; // tags (slot[0]) just revealed
+
     if (
       !titleJustRevealed &&
       clueContainerBottomNearViewportBottom() &&
@@ -430,7 +457,8 @@ const SteamDetectiveGame: React.FC<SteamDetectiveGameProps> = ({
         ssJustRevealedNonFirst ||
         ssVisibleAndNewClueRevealed ||
         tagsJustRevealedWithMFD ||
-        detailsAndMFDJustRevealedWhileTagsShown)
+        detailsAndMFDJustRevealedWhileTagsShown ||
+        tagsRevealedInReviewDescTagsDetailsOrder)
     ) {
       // If MFD carousel or extras clue is currently shown, add extra scroll to account for its height
       const moreFromDevIsShown = showClues[7];

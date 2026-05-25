@@ -828,6 +828,7 @@ export const dummyGames: string[] = [
   'Actraiser Renaissance',
   'Paradise Lost',
   'Quake',
+  'Quake II',
   'The Legend of Nayuta: Boundless Trails',
   'Earth Defense Force: World Brothers',
   'Where the Heart Leads',
