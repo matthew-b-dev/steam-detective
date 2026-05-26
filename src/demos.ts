@@ -691,6 +691,11 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile3: 'Quake III Arena',
   },
   '2026-05-27': {
+    caseFile1: 'Titanfall 2',
+    caseFile2: 'Total War: WARHAMMER II',
+    caseFile3: "Another Crab's Treasure",
+  },
+  '2026-05-28': {
     caseFile1: "Don't Starve",
     caseFile2: 'Fields of Mistria',
     caseFile3: 'Dwarf Fortress',
@@ -708,7 +713,6 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
 // Easy: Any AC Game (last 3/29): Revelations, Unity, (1), (2), Brotherhood, Rogue, Syndicate, Valhalla, Mirage
 
 // Med: Trackmania
-// Med: Another Crab's Treasure
 // Med: Luck be a Landlord
 // Med: Tropico 4 (Last Tropico 3/15)
 // Med: Clustertruck

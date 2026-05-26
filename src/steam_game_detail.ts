@@ -27503,11 +27503,11 @@ export const steamGameDetails: SteamGameMap = {
     name: 'Total War: WARHAMMER II',
     appId: 594570,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/594570/ss_25005f9028374d9e65149cea78be864968c0a1dc.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/594570/5fcac158a3a4566c5e08cd11b3a5dee4e776102e/ss_5fcac158a3a4566c5e08cd11b3a5dee4e776102e.600x338.jpg',
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/594570/ss_48c4d7b7c0ae11978b6f29fe58c3006802ee9651.600x338.jpg',
     shortDescription:
-      'Strategy gaming perfected. A breath-taking campaign of exploration, expansion and conquest across a fantasy world. Turn-based civilisation management and real-time epic strategy battles with thousands of troops and monsters at your command.',
+      'Creative Assembly - in collaboration with Games Workshop - have perfected strategy gaming in their second [[((T))otal War(( :)) Warhammer]] entry. A breath-taking campaign of exploration, expansion and conquest across a fantasy world. Turn-based civilisation management and real-time epic strategy battles with thousands of troops and monsters at your command.',
     releaseDate: 'Sep 28, 2017',
     developer: 'CREATIVE ASSEMBLY',
     publisher: 'SEGA',
@@ -27539,7 +27539,29 @@ export const steamGameDetails: SteamGameMap = {
       'Dinosaurs',
       'Great Soundtrack',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: ['Games Workshop', 'War'],
+    overrideCensoredTitle: 'T||otal|| W||ar||: W||arhamme||r ||II||',
+    clueOrder: ['extras', 'tags', 'details', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Medium',
+    extrasClue: {
+      achievements: [
+        {
+          name: 'Yarrrrr!!!',
+          desc: 'Control the pirate city of Sartosa.',
+          achievePercent: '30.9%',
+          img: 'https://cdn.fastly.steamstatic.com/steamcommunity/public/images/apps/594570/4f4c2e55410ffc2a5ff65f20a66c107b44d4e7da.jpg',
+        },
+        {
+          name: 'The Stuff of Legend',
+          desc: 'Win a campaign battle in which you are outnumbered 10-to-1.',
+          achievePercent: '30.2%',
+          img: 'https://cdn.fastly.steamstatic.com/steamcommunity/public/images/apps/594570/c6d23bfe20c1a4dcd240cd85c388b33baa9d9b88.jpg',
+        },
+      ],
+      achievementsTotal: 152,
+    },
   },
   '594650': {
     name: 'Hunt: Showdown 1896',
@@ -42327,11 +42349,12 @@ export const steamGameDetails: SteamGameMap = {
     name: 'Titanfall 2',
     appId: 1237970,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1237970/ss_d5c13576c0ab4e6ca93b51aa39aa74271672e75f.600x338.jpg',
-    secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1237970/ss_9ed56a85aef47554156999dfbd4091d225da2a47.600x338.jpg',
+    secondaryScreenshot:
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1237970/ss_d5c13576c0ab4e6ca93b51aa39aa74271672e75f.600x338.jpg',
     shortDescription:
       'Respawn Entertainment gives you the most advanced titan technology in its new, single player campaign & multiplayer experience. Combine & conquer with new titans & pilots, deadlier weapons, & customization and progression systems that help you and your titan flow as one unstoppable killing force.',
+    originalReleaseDate: 'Oct 28, 2016 (Origin)',
     releaseDate: 'Jun 18, 2020',
     developer: 'Respawn Entertainment',
     publisher: 'Electronic Arts',
@@ -42343,15 +42366,15 @@ export const steamGameDetails: SteamGameMap = {
     },
     userTags: [
       'FPS',
+      'Futuristic',
       'Mechs',
+      'Parkour',
+      'Singleplayer',
       'Multiplayer',
       'Shooter',
-      'Singleplayer',
-      'Action',
-      'Parkour',
       'Sci-fi',
       'First-Person',
-      'Futuristic',
+      'Action',
       'PvP',
       'Military',
       'Combat',
@@ -42363,7 +42386,25 @@ export const steamGameDetails: SteamGameMap = {
       'Co-op',
       'Gore',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: ['Mechs'],
+    overrideCensoredTitle: 'T||ita||nf||all|| ||2||',
+    clueOrder: ['review', 'tags', 'details', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
+    reviewClues: [
+      {
+        review:
+          'Battlefield 1 release: Oct 21, 2016\n||Titanfall 2|| release: Oct 28, 2016\nCoD: Inf. Warfare release: Nov 4, 2016\n\nThey released their shooter smack dab in the middle of the 2 biggest shooters of 2016. Any chance for longevity and a healthy player that the game may have had was pretty much dead on arrival. This game is truly a gem in the rough.\n(edited for length)',
+        votedUp: true,
+        votesUp: 1074,
+        votedFunny: 22,
+        weightedScore: undefined,
+        authorPlaytimeHours: 10.4,
+        timestamp: 1593057600,
+      },
+    ],
+    moreFromThisDeveloper: [{ id: 1172470, name: 'Apex Legends' }],
   },
   '1238000': {
     name: 'Mass Effect: Andromeda',
@@ -51647,10 +51688,10 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1887840/ss_10836c42549d86386bdae21c997a58630137d603.600x338.jpg',
     shortDescription:
-      'In a vibrant undersea kingdom on the verge of collapse, a hermit crab embarks on a treasure hunt to buy back his repossessed shell. The second game from AGGRO CRAB.',
+      '||Another Crab’s Treasure is a soulslike adventure set in a crumbling underwater world. As Kril the hermit crab,|| you’ll need to wear the trash around you ||as shells to withstand attacks from enemies many times your size||. Embark on an epic ||treasure hunt|| to buy back your ||repossessed shell||, and discover the dark secrets behind the ||polluted ocean||.',
     releaseDate: 'Apr 25, 2024',
-    developer: 'Aggro Crab',
-    publisher: 'Aggro Crab',
+    developer: '||Aggro Crab||',
+    publisher: '||Aggro Crab||',
     tags: [],
     features: [],
     allReviewSummary: {
@@ -51674,8 +51715,35 @@ export const steamGameDetails: SteamGameMap = {
       '3D',
       'Dark Fantasy',
     ],
+    blurredUserTags: ['Cartoony', 'Funny', 'Dark Humor'],
     overrideCensoredTitle: "An||other|| C||rab||'||s|| T||reasure||",
-    clueOrder: ['tags', 'details', 'desc'],
+    clueOrder: ['desc', 'details+tags', 'review'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Medium',
+    reviewClues: [
+      {
+        review: 'Shellden Ring',
+        votedUp: true,
+        votesUp: 410,
+        votedFunny: 227,
+        weightedScore: undefined,
+        authorPlaytimeHours: 11,
+        timestamp: 1719460800,
+      },
+      {
+        review: 'dark shoals\nfloodborne\nlies of sea',
+        votedUp: true,
+        votesUp: 1605,
+        votedFunny: 813,
+        weightedScore: undefined,
+        authorPlaytimeHours: 30.1,
+        timestamp: 1714190400,
+      },
+    ],
+    extrasClue: {
+      achievementsTotal: 38,
+    },
   },
   '1888160': {
     name: 'ARMORED CORE VI FIRES OF RUBICON',
