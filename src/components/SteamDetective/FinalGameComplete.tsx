@@ -19,7 +19,6 @@ import { useDailyGame } from '../../hooks/useDailyGame';
 import { getCaseFileCount } from '../../demos';
 import { ArrowPathIcon } from '@heroicons/react/20/solid';
 import toast from 'react-hot-toast';
-import GameIdeaCard from '../GameIdeaCard';
 import { dailyMessages } from '../../dailyMessages';
 
 interface CaseFileState {
@@ -274,8 +273,6 @@ const FinalGameComplete: React.FC<FinalGameCompleteProps> = ({
             puzzleDate={puzzleDate}
             hasZoomedClue={hasZoomedClue}
           />
-
-          <GameIdeaCard />
         </div>
       </div>
     </motion.div>

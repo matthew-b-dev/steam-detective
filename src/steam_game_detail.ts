@@ -42917,9 +42917,9 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1245620/ss_943bf6fe62352757d9070c1d33e50b92fe8539f1.600x338.jpg',
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1245620/ss_dcdac9e4b26ac0ee5248bfd2967d764fd00cdb42.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1245620/ss_e0316c76f8197405c1312d072b84331dd735d60b.600x338.jpg',
     shortDescription:
-      'THE CRITICALLY ACCLAIMED FANTASY ACTION RPG. Rise, Tarnished, and be guided by grace to brandish the power of the ||Elden Ring|| and become an Elden Lord in the Lands Between.',
+      'Rise, Tarnished, and be guided by grace to brandish the power of the [[Elden Ring]] and become an ||Elden Lord|| in the Lands Between.',
     releaseDate: 'Feb 24, 2022',
     developer: 'FromSoftware, Inc.',
     publisher: 'FromSoftware, Inc., Bandai Namco Entertainment',
@@ -42951,7 +42951,38 @@ export const steamGameDetails: SteamGameMap = {
       'Character Customization',
       'Family Friendly',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: ['Souls-like'],
+    overrideCensoredTitle: 'E||LDE||N R||ING||',
+    clueOrder: ['review', 'desc', 'tags', 'details'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
+    reviewClues: [
+      {
+        review:
+          'Encountering and fighting a Bear is a more terrifying experience than fighting literal gods in this game',
+        votedUp: true,
+        votesUp: 375,
+        votedFunny: 92,
+        weightedScore: undefined,
+        authorPlaytimeHours: 300.1,
+        timestamp: 1664582400,
+      },
+      {
+        review:
+          '"||I am Malenia. Blade of Miquella. And|| I have never known defeat."\nPrepare to hear this a few times :)\n(edited for length)',
+        votedUp: true,
+        votesUp: 302,
+        votedFunny: 166,
+        weightedScore: undefined,
+        authorPlaytimeHours: 63,
+        timestamp: 1652486400,
+      },
+    ],
+    moreFromThisDeveloper: [
+      { id: 374320, name: 'DARK SOULS™ III' },
+      { id: 236430, name: 'DARK SOULS™ II' },
+    ],
   },
   '1248130': {
     name: 'Farming Simulator 22',
@@ -43896,9 +43927,9 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1284190/ss_4d9dc40278682339d3687ab7489935e2fc2ad2f8.600x338.jpg',
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1284190/ss_f212f88a36949b32fe343348f78fef1b78c93b2e.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1284190/ss_2f2df5084b59f88a4cab552065a9618551a0a8ff.600x338.jpg',
     shortDescription:
-      'A space survival open world terraforming crafting game, designed for 1 to 10 players. Alter the ecosystem of an inhospitable planet to render it habitable for humanity. Survive, gather resources, and build your base. Then, generate oxygen, warmth, and pressure to create a brand new biosphere.',
+      '[[The Planet ((C))rafter]] is a space survival open world terraforming crafting game, designed for 1 to 10 players. Alter the ecosystem of an inhospitable ||planet|| to render it habitable for humanity. Survive, gather resources, and build your base. Then, generate oxygen, warmth, and pressure to create a brand new biosphere.',
     releaseDate: 'Apr 10, 2024',
     developer: 'Miju Games',
     publisher: 'Miju Games',
@@ -43930,7 +43961,29 @@ export const steamGameDetails: SteamGameMap = {
       'Immersive Sim',
       'Aliens',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: ['Base-Building', 'Space'],
+    overrideCensoredTitle: 'T||he|| P||lanet|| C||rafte||r',
+    clueOrder: ['extras', 'details+tags', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Medium',
+    extrasClue: {
+      achievements: [
+        {
+          name: 'What could go wrong?',
+          desc: 'Craft your first nuclear reactor',
+          achievePercent: '76.3%',
+          img: 'https://cdn.fastly.steamstatic.com/steamcommunity/public/images/apps/1284190/68612014915b92cc5b7aca48f00374b760773ad3.jpg',
+        },
+        {
+          name: 'Genetic Engineer',
+          desc: 'Craft your first DNA Manipulator',
+          achievePercent: '55.4%',
+          img: 'https://cdn.fastly.steamstatic.com/steamcommunity/public/images/apps/1284190/94abf85ec0b5d4b395f2a619e55c8f6161e14500.jpg',
+        },
+      ],
+      achievementsTotal: 55,
+    },
   },
   '1284210': {
     name: 'Guild Wars 2',
@@ -57090,12 +57143,13 @@ export const steamGameDetails: SteamGameMap = {
     name: 'Path of Exile 2',
     appId: 2694490,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2694490/e2d559c229fc8e66cefae1f19370fa4ccd2fc712/ss_e2d559c229fc8e66cefae1f19370fa4ccd2fc712.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2694490/ss_2f4e929d04f39cda41c4bed0494d913001f97976.600x338.jpg',
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2694490/2430433b358a16fe2c9dd4b883eb955d8a252c3c/ss_2430433b358a16fe2c9dd4b883eb955d8a252c3c.600x338.jpg',
     shortDescription:
-      '||Path of Exile 2|| is a next generation Action RPG from Grinding Gear Games, featuring co-op for up to six players. Set years after the original ||Path|| of ||Exile||, you will return to the dark world of Wraeclast and seek to end the corruption that is spreading.',
-    releaseDate: 'Dec 6, 2024',
+      'Set years after the original [[Path ((o))f Exile]], you will return to the dark world of Wraeclast and seek to end the corruption that is spreading.',
+    earlyAccessDate: 'Dec 6, 2024',
+    releaseDate: '(Not yet released)',
     developer: 'Grinding Gear Games',
     publisher: 'Grinding Gear Games',
     tags: [],
@@ -57109,16 +57163,35 @@ export const steamGameDetails: SteamGameMap = {
       'Hack and Slash',
       'RPG',
       'Isometric',
-      'MMORPG',
+      'Online Co-Op',
       'Loot',
       'Dark Fantasy',
-      'Souls-like',
+      'Multiplayer',
       'Action',
-      'Dungeon Crawler',
+      'Early Access',
       'Adventure',
       'Multiplayer',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    overrideCensoredTitle: 'P||ath|| o||f|| E||xile|| ||2||',
+    clueOrder: ['review', 'tags', 'details', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Medium',
+    reviewClues: [
+      {
+        review:
+          "The Good: WASD Movement. I genuinely thought I would hate it along with the new dodge roll. Turns out it's great.\n\nThe Bad: Changes to ||flasks||. I guess I am in the minority but I actually LIKED having 5. Only being able to use 2, one for ||life|| and one for ||mana||, is far less fun. I miss the customization.",
+        votedUp: true,
+        votesUp: 19,
+        weightedScore: undefined,
+        authorPlaytimeHours: 52.5,
+        writtenDuringEarlyAccess: true,
+        timestamp: 1735430400,
+      },
+    ],
+    moreFromThisDeveloper: [
+      { id: 238960, name: 'Path of Exile', blurred: true },
+    ],
   },
   '2695940': {
     name: 'PANICORE',

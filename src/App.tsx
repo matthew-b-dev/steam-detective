@@ -214,20 +214,15 @@ function App() {
                     </span>
                   </button>
                   {/* Archives */}
-                  <div className='relative inline-flex'>
-                    <a
-                      href='/archives'
-                      className='text-gray-400 hover:text-gray-300 transition-colors flex items-center gap-1 px-2 sm:mt-2 sm:border sm:border-zinc-700 sm:px-3 sm:py-1 sm:rounded'
-                    >
-                      <ArchiveBoxIcon className='h-6 w-6 sm:h-4 sm:w-4' />
-                      <span className='text-sm font-semibold hidden sm:inline relative top-[-1px]'>
-                        Archives
-                      </span>
-                    </a>
-                    <span className='absolute top-0 -right-2 bg-yellow-500 text-black text-[10px] font-bold px-1 py-0 rounded'>
-                      New
+                  <a
+                    href='/archives'
+                    className='text-gray-400 hover:text-gray-300 transition-colors flex items-center gap-1 px-2 sm:mt-2 sm:border sm:border-zinc-700 sm:px-3 sm:py-1 sm:rounded'
+                  >
+                    <ArchiveBoxIcon className='h-6 w-6 sm:h-4 sm:w-4' />
+                    <span className='text-sm font-semibold hidden sm:inline relative top-[-1px]'>
+                      Archives
                     </span>
-                  </div>
+                  </a>
                 </div>
               </div>
             </div>

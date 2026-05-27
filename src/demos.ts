@@ -696,6 +696,11 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile3: "Another Crab's Treasure",
   },
   '2026-05-28': {
+    caseFile1: 'ELDEN RING',
+    caseFile2: 'Path of Exile 2',
+    caseFile3: 'The Planet Crafter',
+  },
+  '2026-05-29': {
     caseFile1: "Don't Starve",
     caseFile2: 'Fields of Mistria',
     caseFile3: 'Dwarf Fortress',
