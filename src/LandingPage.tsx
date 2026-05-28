@@ -95,15 +95,19 @@ const getRandomDate = (forceAll: boolean): { date: string; clear: boolean } => {
   }
 
   // Prefer never-started dates; only fall back to started-but-unfinished if none remain
+  // The puzzles were not at a very high standard before this date :~)
+  const PREFER_AFTER = '2026-03-03';
   if (notStarted.length > 0) {
-    const pool = notStarted.slice(-30);
+    const recent = notStarted.filter((d) => d > PREFER_AFTER);
+    const pool = recent.length > 0 ? recent : notStarted;
     return {
       date: pool[Math.floor(Math.random() * pool.length)],
       clear: false,
     };
   }
   if (startedIncomplete.length > 0) {
-    const pool = startedIncomplete.slice(-30);
+    const recent = startedIncomplete.filter((d) => d > PREFER_AFTER);
+    const pool = recent.length > 0 ? recent : startedIncomplete;
     return { date: pool[Math.floor(Math.random() * pool.length)], clear: true };
   }
   return { date: all[Math.floor(Math.random() * all.length)], clear: true };
