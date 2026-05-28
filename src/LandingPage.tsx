@@ -171,8 +171,9 @@ export const LandingPage = () => {
           <div className='w-full max-w-2xl text-left text-xs sm:text-sm rounded border border-blue-500/60 mb-6 bg-blue-900/20 px-3 py-3 text-blue-100'>
             <p className='leading-relaxed'>
               Daily trivia challenges have come to an end after 120 consecutive
-              days. Thank you all for playing along and sharing such helpful
-              feedback along the way! Please feel free to drop me a line:{' '}
+              days. The site will remain up (it's hosted for free). Thank you
+              all so much for playing along and sharing awesome feedback along
+              the way! Please feel free to drop me a line:{' '}
               <p>
                 <a
                   href='https://discord.com/users/150504839762149376'
