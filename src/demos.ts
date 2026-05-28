@@ -701,6 +701,15 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile3: 'The Planet Crafter',
   },
   '2026-05-29': {
+    caseFile1: 'Red Dead Redemption 2',
+    caseFile2: '7 Days to Die',
+    caseFile3: 'Trackmania',
+  },
+  // Easy: Portal 2
+  // Easy: Hollow Knight: Silksong
+  // Medium: The Elder Scrolls IV: Oblivion
+  // Final day: Portal
+  '2026-05-30': {
     caseFile1: "Don't Starve",
     caseFile2: 'Fields of Mistria',
     caseFile3: 'Dwarf Fortress',

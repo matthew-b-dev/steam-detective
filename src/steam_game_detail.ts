@@ -13,7 +13,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/400/0000002583.600x338.jpg',
     shortDescription:
-      '||Portal|| is a new single player game from Valve. Set in the mysterious Aperture Science Laboratories, ||Portal|| has been called one of the most innovative new games on the horizon and will offer gamers hours of unique gameplay.',
+      '[[Portal]] is a new single player game from ||Valve||. Set in the mysterious ||Aperture|| Science Laboratories, [[Portal]] has been called one of the most innovative new games on the horizon and will offer gamers hours of unique gameplay.',
     releaseDate: 'Oct 10, 2007',
     developer: 'Valve',
     publisher: 'Valve',
@@ -40,20 +40,21 @@ export const steamGameDetails: SteamGameMap = {
       'Platformer',
       'Science',
     ],
-    clueOrder: ['details+tags', 'extras', 'desc'],
-    extrasClue: {
-      achievements: [
-        {
-          name: 'Partygoer',
-          img: 'https://cdn.fastly.steamstatic.com/steamcommunity/public/images/apps/400/portal_escape_testchambers.jpg',
-        },
-        {
-          name: 'Heartbreaker',
-          img: 'https://cdn.fastly.steamstatic.com/steamcommunity/public/images/apps/400/portal_beat_game.jpg',
-        },
-      ],
-      achievementsTotal: 15,
-    },
+    clueOrder: ['review', 'tags', 'desc', 'details'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
+    reviewClues: [
+      {
+        review:
+          'Can we all agree that ||Ellen McLain||\'s voice acting shoots this game into the stratosphere? Fun fact .. ||Mclain|| voice acted in all 5 titles that were included in the ||Orange Box||.\n\n||Mclain|| voices G||LaDOS||&nbsp;&nbsp;in this one, the administrator in ||TF2||, and the "||Combine|| over-watch" voice in ||HL2||, ||HL2 EP1||, ||HL2 EP2||.',
+        votedUp: true,
+        votesUp: 3,
+        weightedScore: undefined,
+        authorPlaytimeHours: 5.9,
+        timestamp: 1267488000,
+      },
+    ],
   },
   '420': {
     name: 'Half-Life 2: Episode Two',
@@ -11018,9 +11019,10 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/251570/766ed3debfe7b894fbb5650aa89fa213fa254d5d/ss_766ed3debfe7b894fbb5650aa89fa213fa254d5d.600x338.jpg',
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/251570/2d243d95de4989b37df448f29de123f0d662088c/ss_2d243d95de4989b37df448f29de123f0d662088c.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/251570/8aff547df25c2d393fbdef2977dc109806de3112/ss_8aff547df25c2d393fbdef2977dc109806de3112.600x338.jpg',
     shortDescription:
-      '||7 Days to Die|| is an open-world game that is a unique combination of first-person shooter, survival horror, tower defense, and role-playing games. Play the definitive zombie survival sandbox RPG that came first. Navezgane awaits!',
+      '[[7 Days to Die]] is an open-world game that is a unique combination of first-person shooter, survival horror, tower defense, and role-playing games. Play the definitive zombie survival sandbox RPG that came first. Navezgane awaits!',
+    earlyAccessDate: 'Dec 13, 2013 (Alpha)',
     releaseDate: 'Jul 25, 2024',
     developer: 'The Fun Pimps',
     publisher: 'The Fun Pimps Entertainment LLC',
@@ -11034,11 +11036,11 @@ export const steamGameDetails: SteamGameMap = {
       'Survival',
       'Zombies',
       'Multiplayer',
-      'Open World',
+      'Voxel',
       'Open World Survival Craft',
       'Base-Building',
       'Post-apocalyptic',
-      'Voxel',
+      'Open World',
       'Online Co-Op',
       'Building',
       'Exploration',
@@ -11052,7 +11054,29 @@ export const steamGameDetails: SteamGameMap = {
       'Strategy',
       'Procedural Generation',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: [
+      'Zombies',
+      'Post-apocalyptic',
+      'Building',
+      'Survival',
+      'Open World',
+    ],
+    clueOrder: ['review', 'details+tags', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Medium',
+    reviewClues: [
+      {
+        review:
+          'This game was a treasure from Alpha1 (2013) up to around Alpha16 (2017), even with horrible graphics and performance. In 2025, it’s a horrible game with great graphics.\n\nWe went from: "Dig a huge pit so ||zombies fall in and you can finish them off at the bottom!||"\nTo: "||Zombies|| can fall from 100m ||without taking any damage!||"\n\n(edited for length)',
+        votedUp: false,
+        votesUp: 1155,
+        votedFunny: 15,
+        weightedScore: undefined,
+        authorPlaytimeHours: 1802.8,
+        timestamp: 1755907200,
+      },
+    ],
   },
   '252410': {
     name: 'SteamWorld Dig',
@@ -40972,14 +40996,14 @@ export const steamGameDetails: SteamGameMap = {
     name: 'Red Dead Redemption 2',
     appId: 1174180,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1174180/ss_66b553f4c209476d3e4ce25fa4714002cc914c4f.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1174180/ss_4ce07ae360b166f0f650e9a895a3b4b7bf15e34f.600x338.jpg',
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1174180/ss_bac60bacbf5da8945103648c08d27d5e202444ca.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1174180/ss_66b553f4c209476d3e4ce25fa4714002cc914c4f.600x338.jpg',
     shortDescription:
-      '||Arthur Morgan|| and the ||Van der Linde|| Gang are outlaws on the run. With federal agents and ||bounty hunters|| massing on their heels, the gang must ||rob||, ||steal||, and fight their way across the rugged heartland in order to survive.',
+      '||Arthur Morgan|| and the ||Van der Linde Gang|| are ||outlaws|| on the run. With ||federal|| agents and ||bounty hunters|| massing on their heels, the ||gang|| must ||rob||, ||steal||, and fight their way across the ||rugged heartland|| in order to survive.',
     releaseDate: 'Dec 5, 2019',
-    developer: 'R||ockstar|| ||Games||',
-    publisher: 'R||ockstar|| ||Games||',
+    developer: 'Rockstar Games',
+    publisher: 'Rockstar Games',
     tags: ['Action', 'Adventure'],
     features: [],
     allReviewSummary: {
@@ -40988,8 +41012,8 @@ export const steamGameDetails: SteamGameMap = {
     },
     userTags: [
       'Open World',
-      'Story Rich',
       'Western',
+      'Story Rich',
       'Adventure',
       'Multiplayer',
       'Action',
@@ -41008,10 +41032,27 @@ export const steamGameDetails: SteamGameMap = {
       'First-Person',
       'FPS',
     ],
-    clueOrder: ['details', 'desc', 'tags'],
+    clueOrder: ['extras', 'desc', 'tags', 'details'],
     debugProcessed: true,
     debugRefined: true,
-    difficulty: 'Medium',
+    difficulty: 'Easy',
+    extrasClue: {
+      achievements: [
+        {
+          name: 'Artificial Intelligence',
+          desc: 'Discover the fate of Marko Dragic.',
+          achievePercent: '5.6%',
+          img: 'https://cdn.fastly.steamstatic.com/steamcommunity/public/images/apps/1174180/2c1db095cc0aa079bf967a38e967846754ca87a3.jpg',
+        },
+        {
+          name: 'Zoologist',
+          desc: 'Study every animal across all states.',
+          achievePercent: '3.3%',
+          img: 'https://cdn.fastly.steamstatic.com/steamcommunity/public/images/apps/1174180/7d617edd1fe18419760f6f365a274c4fbe40567c.jpg',
+        },
+      ],
+      achievementsTotal: 51,
+    },
   },
   '1177980': {
     name: 'Little Kitty, Big City',
@@ -54837,7 +54878,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2225070/408190ffc2160a8e0786ac5118ddc1f94b5b9b6a/ss_408190ffc2160a8e0786ac5118ddc1f94b5b9b6a.600x338.jpg',
     shortDescription:
-      '||Trackmania|| – the unique racing game that combines precision and creativity. Play for free across five stunning environments, race on the best player-made tracks every week, and climb your regional rankings.',
+      '[[Trackmania]] : the unique racing game that combines precision and creativity. Play for free across five stunning environments, race on the best player-made tracks every week, and climb your regional rankings.',
     releaseDate: 'Feb 2, 2023',
     developer: 'Nadeo',
     publisher: 'Ubisoft',
@@ -54864,7 +54905,39 @@ export const steamGameDetails: SteamGameMap = {
       'Driving',
       'Time Attack',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: ['Racing', 'Controller'],
+    overrideCensoredTitle: 'T||rack||m||ania||',
+    clueOrder: ['review', 'tags', 'details', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Medium',
+    reviewClues: [
+      {
+        review:
+          'A great entry in a fantastic franchise. A lot of people get hung up on the subscription aspect of it, but the developers have established a pretty good cadence of quarterly additions at this point.',
+        votedUp: true,
+        votesUp: 314,
+        weightedScore: undefined,
+        authorPlaytimeHours: 9.2,
+        timestamp: 1677369600,
+        reviewer: {
+          name: 'Jeff Gerstmann',
+          avatarUrl:
+            'https://avatars.fastly.steamstatic.com/e665a3a01fa7b34b66383383db2fa8c2ef1cafab_medium.jpg',
+          followers: 940,
+        },
+      },
+      {
+        review:
+          '>Realize game isn\'t free and you can only play exactly 10&nbsp;&nbsp;||tracks||&nbsp;&nbsp;without paying\n>Find user-defined tags for this product\n>Click plus sign next to tags\n>Report "Free to Play"',
+        votedUp: false,
+        votesUp: 154,
+        votedFunny: 4,
+        weightedScore: undefined,
+        authorPlaytimeHours: 0.3,
+        timestamp: 1705467600,
+      },
+    ],
   },
   '2231380': {
     name: "Tom Clancy's Ghost Recon Breakpoint",
