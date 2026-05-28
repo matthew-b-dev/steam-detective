@@ -6,9 +6,7 @@
 
 ## What is this thing?
 
-SteamDetective.wtf is a daily web-based trivia game challenging players' knowledge of PC (Steam) games. Each day, players work through four mystery games, themed as "Case Files". Clues for each "Case File" are revealed one at a time, and the fewer guesses it takes to identify the game, the higher the score.
-
-At least for the moment, some number of people are actually playing this game every day!
+SteamDetective.wtf was a daily web-based trivia game challenging players' knowledge of PC (Steam) games. In each challenge, players work through several mystery games, themed as "Case Files". Clues for each "Case File" are revealed one at a time, and the fewer guesses it takes to identify the game, the higher the score.
 
 ---
 
@@ -106,7 +104,6 @@ Metrics shown for the selected date:
 - **Score Percentiles** - 0th, 10th, 25th, 50th, 75th, 90th, 100th
 - **Submissions by Hour (UTC)** - bar chart showing the submission rate throughout the day
 
-I will confess that I have a borderline unhealthy obsession with this screen.
 
 <img width="702" height="745" alt="image" src="https://github.com/user-attachments/assets/a9b222c2-e92a-4e3a-b9b5-9a24b5996365" />
 
@@ -136,7 +133,6 @@ Any time a score is posted (a row is inserted into the `scores` table) or feedba
 
 ### Running this app locally
 
-If you're the type of person that wanted to run this app locally, I get the feeling you don't need instructions for that but hey.
 
 ```bash
 npm install

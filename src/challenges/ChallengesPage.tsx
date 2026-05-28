@@ -285,7 +285,7 @@ export const ChallengesPage: React.FC = () => {
           ) : allPlayed ? (
             <div className='py-16 text-center'>
               <p className='text-lg font-semibold text-green-400'>
-                🎉 You've played every daily challenge!
+                🎉 You've played every challenge!
               </p>
               <p className='mt-2 text-sm text-zinc-400'>
                 Turn off the filter to browse all dates.

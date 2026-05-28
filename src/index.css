@@ -104,13 +104,6 @@ body::before {
   pointer-events: none;
 
   background-color: #101211;
-  background-image: repeating-linear-gradient(
-    45deg,
-    transparent,
-    transparent 35px,
-    rgba(255, 255, 255, 0.008) 35px,
-    rgba(255, 255, 255, 0.008) 70px
-  );
 }
 /* Post-it note styles */
 .note {

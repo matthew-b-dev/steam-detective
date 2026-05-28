@@ -5,23 +5,21 @@ import {
   QuestionMarkCircleIcon,
   ChartBarIcon,
   ArchiveBoxIcon,
+  HomeIcon,
 } from '@heroicons/react/16/solid';
 import './App.css';
 import SteamDetective from './SteamDetective';
-import HelpModal from './components/HelpModal';
 import StatsModal from './components/StatsModal';
+import HelpModal from './components/HelpModal';
 import PuzzleDatePicker from './components/PuzzleDatePicker';
 import { config } from './config';
 import {
   getUtcDateString,
   clearPuzzleState,
-  getRealUtcDateString,
-  isDateSelectable,
   isLocalhost,
   eventFiredThisSession,
 } from './utils';
 import { sendFeedback } from './lib/supabaseClient';
-import { getDateFromRoute } from './demos';
 import analyzeIcon from './assets/analyze-48.png';
 import calendarIcon from './assets/calendar-48.png';
 import blueGamesFolderIcon from './assets/games-folder-48.png';
@@ -69,27 +67,6 @@ function App() {
     }
   }, []);
 
-  // Check if URL has /d/{date} matching today, and if so, redirect to /
-  // Also redirect if the date is not within the selectable range
-  useEffect(() => {
-    const routeDate = getDateFromRoute();
-    const realToday = getRealUtcDateString();
-
-    if (routeDate) {
-      // If route date matches today or is not selectable, redirect to /
-      // On localhost, skip the selectable check to allow future dates
-      if (
-        routeDate === realToday ||
-        (IS_PROD &&
-          !isDateSelectable(routeDate) &&
-          !window?.location?.href?.includes('/admin'))
-      ) {
-        // Force a full page reload to properly load today's puzzle state
-        window.location.href = '/';
-      }
-    }
-  }, []);
-
   const handleResetPuzzle = () => {
     setShowResetConfirm(true);
   };
@@ -105,13 +82,7 @@ function App() {
   };
 
   const handleDateSelect = (dateStr: string) => {
-    // If they clicked Today
-    if (dateStr === getRealUtcDateString()) {
-      window.location.href = `/`;
-    } else {
-      // Navigate to the selected date
-      window.location.href = `/d/${dateStr}`;
-    }
+    window.location.href = `/d/${dateStr}`;
   };
 
   return (
@@ -120,65 +91,85 @@ function App() {
         <div className='w-full max-w-[750px] p-2 sm:p-6'>
           <div className='relative mb-2 sm:mb-6'>
             <div className='flex items-start justify-between sm:justify-center gap-2 sm:gap-0'>
-              {/* LEFT: How to play button (desktop only) */}
-              <button
-                className='hidden sm:flex sm:absolute sm:left-0 sm:top-0 text-gray-400 hover:text-gray-300 transition-colors items-center gap-1 px-3 py-1 border border-zinc-700 rounded'
-                onClick={() => {
-                  setShowHelp(true);
-                  if (
-                    IS_PROD &&
-                    !eventFiredThisSession('[Help] Opened how to Play')
-                  )
-                    sendFeedback('custom', '`[Help]` Opened How To Play');
-                }}
-              >
-                <QuestionMarkCircleIcon className='h-4 w-4' />
-                <span className='text-sm font-semibold relative top-[-1px]'>
-                  How to play
-                </span>
-              </button>
+              {/* LEFT: Home + How to play buttons (desktop only) */}
+              <div className='hidden sm:flex sm:absolute sm:left-0 sm:top-0 sm:flex-col sm:gap-2'>
+                <a
+                  href='/'
+                  className='text-gray-400 hover:text-gray-300 transition-colors flex items-center justify-center gap-1 px-3 py-1 border border-zinc-700 rounded'
+                >
+                  <HomeIcon className='h-4 w-4' />
+                  <span className='text-sm font-semibold relative top-[-1px]'>
+                    Home
+                  </span>
+                </a>
+                <button
+                  className='bg-transparent text-gray-400 hover:text-gray-300 transition-colors flex items-center justify-center gap-1 px-3 py-1 border border-zinc-700 rounded'
+                  onClick={() => {
+                    setShowHelp(true);
+                    if (
+                      IS_PROD &&
+                      !eventFiredThisSession('[Help] Opened how to Play')
+                    )
+                      sendFeedback('custom', '`[Help]` Opened How To Play');
+                  }}
+                >
+                  <QuestionMarkCircleIcon className='h-4 w-4' />
+                  <span className='text-sm font-semibold relative top-[-1px]'>
+                    How to play
+                  </span>
+                </button>
+              </div>
 
               {/* CENTER: Logo */}
               <div className='flex flex-col items-start sm:items-center flex-1 sm:flex-initial'>
-                <h1
-                  className='text-lg sm:text-4xl mb-[-5px] sm:py-0 sm:mb-0 font-black relative right-[-2px] sm:right-[0px]'
-                  style={{
-                    fontFamily: 'Playfair Display, serif',
-                    letterSpacing: '-0.04em',
-                  }}
+                <a
+                  href='/'
+                  className='no-underline'
+                  style={{ textDecoration: 'none', color: 'inherit' }}
                 >
-                  <span className='text-gray-300'>Steam</span>
-                  Detective
-                  <span
+                  <h1
+                    className='text-lg sm:text-4xl mb-[-5px] sm:py-0 sm:mb-0 font-black relative right-[-2px] sm:right-[0px]'
                     style={{
-                      fontFamily: 'serif',
-                      letterSpacing: '-0.03em',
+                      fontFamily: 'Playfair Display, serif',
+                      letterSpacing: '-0.04em',
                     }}
-                    className='text-gray-400 sm:text-gray-500'
                   >
-                    <span>.</span>
-                    <span className='italic text-yellow-500'>wtf</span>
-                  </span>
-                </h1>
-                <p
-                  className='text-gray-400 text-sm block pl-[2px] sm:pl-0 relative top-[-4px] sm:top-[-8px]'
-                  style={{
-                    letterSpacing: '-0.04em',
-                  }}
-                >
-                  <span className='underline decoration-2 decoration-zinc-700'>
-                    A daily{' '}
-                    <span className='hidden sm:inline'>
-                      <i>Steam game</i>
-                    </span>{' '}
-                    trivia challenge
-                  </span>
-                </p>
+                    <span className='text-gray-300'>Steam</span>
+                    Detective
+                    <span
+                      style={{
+                        fontFamily: 'serif',
+                        letterSpacing: '-0.03em',
+                      }}
+                      className='text-gray-400 sm:text-gray-500'
+                    >
+                      <span>.</span>
+                      <span className='italic text-yellow-500'>wtf</span>
+                    </span>
+                  </h1>
+                  <p
+                    className='text-gray-400 text-sm block pl-[2px] sm:pl-0 relative top-[-4px] sm:top-[-8px] sm:text-center'
+                    style={{
+                      letterSpacing: '-0.04em',
+                    }}
+                  >
+                    <span className='underline decoration-2 decoration-zinc-700'>
+                      PC game trivia challenges
+                    </span>
+                  </p>
+                </a>
               </div>
 
               {/* RIGHT: My Stats + Archives buttons */}
               <div className='flex items-center gap-2 sm:absolute sm:right-0 sm:top-1/2 sm:-translate-y-1/2'>
                 <div className='flex sm:block'>
+                  {/* Home on mobile */}
+                  <a
+                    href='/'
+                    className='sm:hidden text-gray-400 justify-center hover:text-gray-300 transition-colors flex items-center gap-1 px-2'
+                  >
+                    <HomeIcon className='h-6 w-6' />
+                  </a>
                   {/* How to play on mobile */}
                   <button
                     className='sm:hidden text-gray-400 w-full justify-center hover:text-gray-300 transition-colors flex items-center gap-1 px-2 bg-transparent'

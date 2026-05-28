@@ -7,7 +7,7 @@ import useBodyScrollLock from '../hooks/useBodyScrollLock';
 interface PuzzleDatePickerProps {
   isOpen: boolean;
   onClose: () => void;
-  currentPuzzleDate: string; // YYYY-MM-DD format
+  currentPuzzleDate?: string; // YYYY-MM-DD format; omit to open with no date highlighted
   // eslint-disable-next-line no-unused-vars
   onDateSelect: (dateString: string) => void;
 }
@@ -27,11 +27,16 @@ const PuzzleDatePicker: React.FC<PuzzleDatePickerProps> = ({
 
   // Minimum selectable date: Feb 4, 2026 UTC
   const minDate = new CalendarDate(2026, 2, 4);
+  // Maximum selectable date: Jun 3, 2026 (120th and final puzzle)
+  const maxDate = new CalendarDate(2026, 6, 3);
 
-  // Parse the current puzzle date
-  const [puzzleYear, puzzleMonth, puzzleDay] = currentPuzzleDate
-    .split('-')
-    .map(Number);
+  // Parse the current puzzle date (if any); day 0 means no highlight
+  const parsedParts = currentPuzzleDate
+    ? currentPuzzleDate.split('-').map(Number)
+    : [];
+  const puzzleYear = parsedParts[0] ?? 2026;
+  const puzzleMonth = parsedParts[1] ?? 2; // default to Feb 2026 (first puzzle month)
+  const puzzleDay = parsedParts[2] ?? 0;
 
   const [currentMonth, setCurrentMonth] = useState(puzzleMonth);
   const [currentYear, setCurrentYear] = useState(puzzleYear);
@@ -144,8 +149,8 @@ const PuzzleDatePicker: React.FC<PuzzleDatePickerProps> = ({
 
     // Don't allow navigating past the max date month
     if (
-      nextYear > realUtcDate.year ||
-      (nextYear === realUtcDate.year && nextMonth > realUtcDate.month)
+      nextYear > maxDate.year ||
+      (nextYear === maxDate.year && nextMonth > maxDate.month)
     ) {
       return;
     }
@@ -172,6 +177,11 @@ const PuzzleDatePicker: React.FC<PuzzleDatePickerProps> = ({
     return date.compare(minDate) < 0;
   };
 
+  const isAfterMaxDate = (day: number): boolean => {
+    const date = new CalendarDate(currentYear, currentMonth, day);
+    return date.compare(maxDate) > 0;
+  };
+
   const getDayClassName = (day: number): string => {
     const base = 'w-full h-full rounded transition-colors';
     if (isCurrentPuzzle(day) && isCompleted(day))
@@ -181,6 +191,7 @@ const PuzzleDatePicker: React.FC<PuzzleDatePickerProps> = ({
     if (isCompleted(day))
       return `${base} bg-green-800 hover:bg-green-700 text-green-100 font-semibold`;
     if (isBeforeMinDate(day)) return `${base} text-gray-600 cursor-not-allowed`;
+    if (isAfterMaxDate(day)) return `${base} text-gray-600 cursor-not-allowed`;
     if (isDateDisabled(day))
       return `${base} text-gray-600 disabled:cursor-not-allowed disabled:hover:bg-transparent`;
     return `${base} hover:bg-zinc-700`;
@@ -214,17 +225,12 @@ const PuzzleDatePicker: React.FC<PuzzleDatePickerProps> = ({
   ];
 
   const canGoNext =
-    currentYear < realUtcDate.year ||
-    (currentYear === realUtcDate.year && currentMonth < realUtcDate.month);
+    currentYear < maxDate.year ||
+    (currentYear === maxDate.year && currentMonth < maxDate.month);
 
   const canGoPrevious =
     currentYear > minDate.year ||
     (currentYear === minDate.year && currentMonth > minDate.month);
-
-  const todayIsSelected =
-    realUtcDate.year === puzzleYear &&
-    realUtcDate.month === puzzleMonth &&
-    realUtcDate.day === puzzleDay;
 
   return (
     <motion.div
@@ -255,7 +261,7 @@ const PuzzleDatePicker: React.FC<PuzzleDatePickerProps> = ({
               </p>
               <p className='text-xs text-center mt-2'>
                 <a href='/archives' className=' transition-colors'>
-                  ⭐ New: The{' '}
+                  The{' '}
                   <span className='underline text-blue-400 '>
                     Archives page
                   </span>{' '}
@@ -300,10 +306,13 @@ const PuzzleDatePicker: React.FC<PuzzleDatePickerProps> = ({
                       <>
                         <button
                           onClick={() => {
-                            if (!isBeforeMinDate(day)) handleDayClick(day);
+                            if (!isBeforeMinDate(day) && !isAfterMaxDate(day))
+                              handleDayClick(day);
                           }}
                           disabled={
-                            isDateDisabled(day) && !isBeforeMinDate(day)
+                            isDateDisabled(day) &&
+                            !isBeforeMinDate(day) &&
+                            !isAfterMaxDate(day)
                           }
                           className={getDayClassName(day)}
                         >
@@ -313,7 +322,12 @@ const PuzzleDatePicker: React.FC<PuzzleDatePickerProps> = ({
                           <div className='pointer-events-none absolute bottom-full left-1/2 -translate-x-1/2 mb-1 w-max max-w-[11rem] rounded bg-zinc-900 border border-zinc-600 px-2 py-1 text-xs text-gray-300 text-center invisible group-hover:visible group-focus-within:visible z-10'>
                             The first ever puzzle was Feb 4, 2026.
                           </div>
-                        )}
+                        )}{' '}
+                        {isAfterMaxDate(day) && (
+                          <div className='pointer-events-none absolute bottom-full left-1/2 -translate-x-1/2 mb-1 w-max max-w-[11rem] rounded bg-zinc-900 border border-zinc-600 px-2 py-1 text-xs text-gray-300 text-center invisible group-hover:visible group-focus-within:visible z-10'>
+                            The final puzzle was Jun 3, 2026.
+                          </div>
+                        )}{' '}
                       </>
                     ) : (
                       <div />
@@ -338,19 +352,6 @@ const PuzzleDatePicker: React.FC<PuzzleDatePickerProps> = ({
                 </div>
               </div>
               <div className='flex'>
-                {!todayIsSelected && (
-                  <button
-                    onClick={() => {
-                      const todayStr = `${realUtcDate.year}-${String(realUtcDate.month).padStart(2, '0')}-${String(realUtcDate.day).padStart(2, '0')}`;
-                      setIsLoading(true);
-                      onDateSelect(todayStr);
-                    }}
-                    className='px-3 py-1 mr-2 text-sm text-black bg-yellow-500 hover:bg-yellow-600 rounded transition disabled:opacity-50 disabled:cursor-not-allowed'
-                  >
-                    Today
-                  </button>
-                )}
-
                 <button
                   onClick={onClose}
                   className='px-3 py-1 text-sm bg-zinc-700 hover:bg-zinc-600 rounded transition'

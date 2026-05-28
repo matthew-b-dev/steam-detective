@@ -143,7 +143,7 @@ const SteamDetectiveFeedbackButtons: React.FC<
   return (
     <div className='border-t border-gray-700 pt-3'>
       <p className='text-center text-xs text-gray-400'>
-        Provide <b>anonymous</b> feedback on today's challenge.
+        Provide <b>anonymous</b> feedback on this challenge.
       </p>
       <AnimatePresence mode='wait'>
         {feedback === null && !showCustomInput ? (

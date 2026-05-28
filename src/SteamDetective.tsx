@@ -10,7 +10,6 @@ import { Toaster } from 'react-hot-toast';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   getPuzzleDate,
-  getTimeUntilNextGame,
   getUtcDateString,
   clearPuzzleState,
   getUnifiedState,
@@ -381,9 +380,6 @@ const SteamDetective: React.FC<SteamDetectiveProps> = ({
   const puzzleDate = getPuzzleDate();
   // Lock the puzzle date at mount so all operations in this session use a consistent date.
   const [sessionPuzzleDate] = useState(() => getUtcDateString());
-  const [timeLeft] = useState<{ h: number; m: number }>(() =>
-    getTimeUntilNextGame(),
-  );
 
   // Check if this is a demo day or if we should show "brb"
   const dailyGameCheck = useDailyGame(1);
@@ -626,9 +622,7 @@ const SteamDetective: React.FC<SteamDetectiveProps> = ({
           )}
         </>
       )}
-      {dailyGameCheck && (
-        <PuzzleDateTime puzzleDate={puzzleDate} timeLeft={timeLeft} />
-      )}
+      {dailyGameCheck && <PuzzleDateTime puzzleDate={puzzleDate} />}
       <SteamDetectiveFooter />
     </div>
   );

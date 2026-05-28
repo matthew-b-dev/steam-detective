@@ -31,7 +31,7 @@ const HelpModal: React.FC<HelpModalProps> = ({ isOpen, onClose }) => {
 
         <ul className='space-y-3 mb-6 text-left list-disc pl-6 text-sm'>
           <li>
-            <b>SteamDetective.wtf</b> is a daily <i>Steam game</i> trivia
+            <b>SteamDetective.wtf</b> is a <i>Steam game</i> trivia
             puzzle/challenge where you <b>guess Steam games</b> based on clues
             revealed one at a time.
           </li>

@@ -28,6 +28,8 @@ const isRefinePage = isLocalhost && window.location.pathname === '/refine';
 const isGamesPage = isLocalhost && window.location.pathname === '/games';
 const isDailyDashPage = window.location.pathname === '/dailydash';
 const isArchivesPage = window.location.pathname === '/archives';
+const isLandingPage =
+  window.location.pathname === '/' && !window.location.search.startsWith('?/');
 
 if (isRefinePage) {
   import('./refine/RefinePage').then(({ RefinePage }) => {
@@ -55,6 +57,13 @@ if (isRefinePage) {
     document.title = 'Case File Archives';
     ReactDOM.createRoot(document.getElementById('root')!).render(
       <ChallengesIndex />,
+    );
+  });
+} else if (isLandingPage) {
+  import('./LandingPage').then(({ LandingPage }) => {
+    document.title = 'SteamDetective.wtf';
+    ReactDOM.createRoot(document.getElementById('root')!).render(
+      <LandingPage />,
     );
   });
 } else {
