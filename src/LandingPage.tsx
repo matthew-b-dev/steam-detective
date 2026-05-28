@@ -28,7 +28,7 @@ const DEBUG_RANDOM_DATE: string | null = null;
 // The 120th puzzle date (Feb 4 + 119 days = June 3, 2026)
 const PUZZLE_END_DATE = new Date('2026-06-03T00:00:00Z');
 
-// Farewell banner — shown until June 10 UTC
+// Farewell banner - shown until June 10 UTC
 const BANNER_END_DATE = new Date('2026-06-10T00:00:00Z');
 const WAVE_DATE = '2026-06-05';
 const WAVE_STORAGE_KEY = 'steam-detective-farewell-wave';
@@ -36,7 +36,7 @@ const WAVE_STORAGE_KEY = 'steam-detective-farewell-wave';
 const DiscordIcon = () => (
   <svg
     viewBox='0 0 24 24'
-    className='h-3 w-3 fill-current shrink-0'
+    className='h-4 w-4 fill-current shrink-0'
     aria-hidden='true'
   >
     <path d='M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057.1 18.08.11 18.102.127 18.117a19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z' />
@@ -71,21 +71,42 @@ const computeAllComplete = (): boolean => {
   });
 };
 
-const getRandomDate = (forceAll: boolean): string => {
-  if (DEBUG_RANDOM_DATE) return DEBUG_RANDOM_DATE;
+const getRandomDate = (forceAll: boolean): { date: string; clear: boolean } => {
+  if (DEBUG_RANDOM_DATE) return { date: DEBUG_RANDOM_DATE, clear: true };
   const all = buildDatePool();
-  if (forceAll) return all[Math.floor(Math.random() * all.length)];
-  const incomplete = all.filter((dateStr) => {
+  if (forceAll)
+    return { date: all[Math.floor(Math.random() * all.length)], clear: true };
+
+  const notStarted: string[] = [];
+  const startedIncomplete: string[] = [];
+
+  for (const dateStr of all) {
     const raw = localStorage.getItem(`steam-detective-state-${dateStr}`);
-    if (!raw) return true;
-    try {
-      return JSON.parse(raw).allCasesComplete !== true;
-    } catch {
-      return true;
+    if (!raw) {
+      notStarted.push(dateStr);
+    } else {
+      try {
+        if (JSON.parse(raw).allCasesComplete !== true)
+          startedIncomplete.push(dateStr);
+      } catch {
+        notStarted.push(dateStr);
+      }
     }
-  });
-  const pool = incomplete.length > 0 ? incomplete.slice(-14) : all;
-  return pool[Math.floor(Math.random() * pool.length)];
+  }
+
+  // Prefer never-started dates; only fall back to started-but-unfinished if none remain
+  if (notStarted.length > 0) {
+    const pool = notStarted.slice(-30);
+    return {
+      date: pool[Math.floor(Math.random() * pool.length)],
+      clear: false,
+    };
+  }
+  if (startedIncomplete.length > 0) {
+    const pool = startedIncomplete.slice(-30);
+    return { date: pool[Math.floor(Math.random() * pool.length)], clear: true };
+  }
+  return { date: all[Math.floor(Math.random() * all.length)], clear: true };
 };
 
 export const LandingPage = () => {
@@ -170,44 +191,43 @@ export const LandingPage = () => {
         {new Date() < BANNER_END_DATE && (
           <div className='w-full max-w-2xl text-left text-xs sm:text-sm rounded border border-blue-500/60 mb-6 bg-blue-900/20 px-3 py-3 text-blue-100'>
             <p className='leading-relaxed'>
-              Daily trivia challenges have come to an end after 120 consecutive
+              This daily trivia run has come to an end after 120 consecutive
               days. The site will remain up (it's hosted for free). Thank you
               all so much for playing along and sharing awesome feedback along
-              the way! Please feel free to drop me a line:{' '}
-              <p>
-                <a
-                  href='https://discord.com/users/150504839762149376'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  className='mr-1 inline-flex items-center gap-0.5 underline text-blue-300 hover:text-white transition-colors relative top-[2px]'
-                >
-                  <div className='relative top-[1px]'>
+              the way!
+              <br />
+              You're welcome to drop me a line:{' '}
+              <span className='block mt-1 ml-1 relative -top-[2px]'>
+                <span className='mr-1 inline-flex items-center gap-1.5 relative top-[4px]'>
+                  <span className='relative top-[1px]'>
                     <DiscordIcon />
-                  </div>
-                  toup
-                </a>{' '}
-                |{' '}
+                  </span>
+                  <code className='font-mono bg-black/20 rounded px-1 py-0.5 text-blue-200'>
+                    toup_
+                  </code>
+                </span>{' '}
+                <span className='text-gray-400'>|</span>{' '}
                 <a
                   href='mailto:hello@steamdetective.wtf'
                   className='ml-1 underline text-blue-300 hover:text-white transition-colors'
                 >
                   hello@steamdetective.wtf
                 </a>{' '}
-              </p>
+              </span>
             </p>
             <div className='mt-2.5'>
               <button
                 onClick={handleWave}
                 disabled={hasWaved}
-                className={`inline-flex items-center gap-1.5 px-2.5 py-1 text-sm transition-colors ${
+                className={`inline-flex items-center gap-1.5 px-2.5 pb-1 pt-[1px] text-sm transition-colors ${
                   hasWaved
                     ? 'bg-blue-500/20 border border-blue-400 text-blue-100 cursor-default'
-                    : 'bg-zinc-800 border border-transparent hover:bg-zinc-700 text-zinc-300'
+                    : 'bg-[#1B253C] border border-transparent hover:bg-[#304167] text-zinc-300'
                 }`}
-                style={{ borderRadius: '9999px' }}
+                style={{ borderRadius: '10px' }}
               >
-                <span>👋</span>
-                <span className='text-xs font-medium'>
+                <span className='text-xl leading-none'>👋</span>
+                <span className='text-md pt-1 pr-1 font-medium'>
                   {waveCount === null ? '…' : waveCount}
                 </span>
               </button>
@@ -219,7 +239,7 @@ export const LandingPage = () => {
         <div className='flex flex-col items-center gap-3 w-full max-w-xs sm:max-w-none'>
           {/* How to Play - mobile: 1st, desktop: 2nd */}
           <button
-            className='sm:order-2 flex items-center justify-center gap-2 transition-colors w-full sm:w-auto px-6 py-3 bg-transparent border border-zinc-700 hover:border-zinc-500 text-gray-400 hover:text-gray-200 font-semibold text-sm rounded-xl sm:border-0 sm:p-1 sm:-mt-1 sm:text-zinc-400 sm:hover:text-zinc-200 sm:font-normal sm:underline'
+            className='order-2 sm:order-2 flex items-center justify-center gap-2 transition-colors w-full sm:w-auto px-6 py-3 bg-transparent border border-zinc-700 hover:border-zinc-500 text-gray-400 hover:text-gray-200 font-semibold text-sm rounded-xl sm:border-0 sm:p-1 sm:-mt-1 sm:text-zinc-400 sm:hover:text-zinc-200 sm:font-normal sm:underline'
             onClick={() => {
               setShowHelp(true);
               if (
@@ -233,8 +253,8 @@ export const LandingPage = () => {
             How to Play
           </button>
 
-          {/* Main CTA — Random Challenge */}
-          <div className='sm:order-1 relative flex items-stretch w-full sm:w-auto'>
+          {/* Main CTA - Random Challenge */}
+          <div className='order-1 sm:order-1 relative flex items-stretch w-full sm:w-auto'>
             <button
               className={`flex items-center justify-center gap-2.5 flex-1 sm:flex-initial px-7 py-4 bg-blue-700 hover:bg-blue-600 active:bg-blue-800 text-white font-bold text-base transition-colors border border-blue-500${allComplete ? '' : ' border-r-0'}`}
               style={{
@@ -242,8 +262,8 @@ export const LandingPage = () => {
               }}
               onClick={() => {
                 const forceAll = randomMode === 'all';
-                const date = getRandomDate(forceAll);
-                if (forceAll || DEBUG_RANDOM_DATE) {
+                const { date, clear } = getRandomDate(forceAll);
+                if (clear) {
                   localStorage.removeItem(`steam-detective-state-${date}`);
                 }
                 window.location.href = `/d/${date}`;
@@ -251,7 +271,7 @@ export const LandingPage = () => {
             >
               <svg
                 xmlns='http://www.w3.org/2000/svg'
-                className='h-5 w-5'
+                className='h-6 w-6'
                 viewBox='0,0,256,256'
               >
                 <g fill='currentColor' fillRule='nonzero'>
@@ -285,7 +305,7 @@ export const LandingPage = () => {
                       {(['unplayed', 'all'] as const).map((mode) => (
                         <button
                           key={mode}
-                          className={`w-full flex items-center gap-3 px-4 py-2.5 text-sm transition-colors ${
+                          className={`w-full flex items-center gap-3 px-4 py-2.5 text-sm transition-colors whitespace-nowrap ${
                             randomMode === mode
                               ? 'text-white'
                               : 'text-zinc-400 hover:text-white hover:bg-zinc-800'
@@ -319,7 +339,7 @@ export const LandingPage = () => {
           </div>
 
           {/* Browse | Pick Date | My Stats*/}
-          <div className='sm:order-3 flex flex-col sm:flex-row gap-3 w-full sm:w-auto mt-0 sm:mt-5'>
+          <div className='order-3 sm:order-3 flex flex-col sm:flex-row gap-3 w-full sm:w-auto mt-0 sm:mt-5'>
             {/* Pick a Challenge Date - mobile: 1st, desktop: 2nd */}
             <button
               className='sm:order-2 flex items-center justify-center gap-2 px-6 py-3 bg-transparent border border-zinc-700 hover:border-zinc-500 text-gray-400 hover:text-gray-200 font-semibold text-sm rounded-xl transition-colors w-full sm:w-auto'

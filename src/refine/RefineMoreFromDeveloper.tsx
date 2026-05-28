@@ -130,7 +130,7 @@ export const RefineMoreFromDeveloper: React.FC<
         <div className='border border-blue-600/50 rounded p-3 space-y-2 bg-blue-900/10'>
           <div className='text-xs text-blue-300 font-semibold'>
             Found {previewItems.length} game
-            {previewItems.length !== 1 ? 's' : ''} — preview:
+            {previewItems.length !== 1 ? 's' : ''} - preview:
           </div>
           <div className='flex gap-2 overflow-x-auto pb-1'>
             {previewItems.map((item) => (

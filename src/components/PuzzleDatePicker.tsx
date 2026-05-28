@@ -35,7 +35,7 @@ const PuzzleDatePicker: React.FC<PuzzleDatePickerProps> = ({
     ? currentPuzzleDate.split('-').map(Number)
     : [];
   const puzzleYear = parsedParts[0] ?? 2026;
-  const puzzleMonth = parsedParts[1] ?? 2; // default to Feb 2026 (first puzzle month)
+  const puzzleMonth = parsedParts[1] ?? 5; // default to May 2026 when no date provided
   const puzzleDay = parsedParts[2] ?? 0;
 
   const [currentMonth, setCurrentMonth] = useState(puzzleMonth);
