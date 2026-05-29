@@ -213,7 +213,7 @@ export const renderCensoredDescription = (
       );
     } else if (match[2] !== undefined) {
       // ||text|| - censored with blur
-      const censoredText = censorText(match[2]);
+      const censoredText = hashSeededCensorText(match[2]);
       const len = match[2].length;
       const blurAmount = len === 1 ? '4px' : len === 2 ? '5px' : '7px';
       parts.push(

@@ -705,11 +705,15 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile2: '7 Days to Die',
     caseFile3: 'Trackmania',
   },
+  '2026-05-30': {
+    caseFile1: 'The Elder Scrolls IV: Oblivion',
+    caseFile2: 'Team Fortress 2',
+    caseFile3: 'Nioh 2',
+  },
   // Easy: Portal 2
   // Easy: Hollow Knight: Silksong
-  // Medium: The Elder Scrolls IV: Oblivion
   // Final day: Portal
-  '2026-05-30': {
+  '2026-05-31': {
     caseFile1: "Don't Starve",
     caseFile2: 'Fields of Mistria',
     caseFile3: 'Dwarf Fortress',
