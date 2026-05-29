@@ -120,9 +120,11 @@ export const LandingPage = () => {
   const [allComplete] = useState(
     () => DEBUG_ALL_COMPLETE || computeAllComplete(),
   );
-  const [randomMode, setRandomMode] = useState<'unplayed' | 'all'>(() =>
-    allComplete ? 'all' : 'unplayed',
-  );
+  const [randomMode, setRandomMode] = useState<'unplayed' | 'all'>(() => {
+    const stored = localStorage.getItem('steam-detective-random-mode');
+    if (stored === 'unplayed' || stored === 'all') return stored;
+    return allComplete ? 'all' : 'unplayed';
+  });
   const [showRandomMenu, setShowRandomMenu] = useState(false);
   const [waveCount, setWaveCount] = useState<number | null>(null);
   const [hasWaved, setHasWaved] = useState(
@@ -186,7 +188,7 @@ export const LandingPage = () => {
         <p className='text-gray-400 text-sm sm:text-base max-w-sm sm:max-w-md mb-4 leading-relaxed'>
           A collection of{' '}
           <span className='text-gray-100 font-semibold'>
-            120 PC game trivia challenges
+            120 PC Game trivia challenges
           </span>{' '}
           which were released daily from February through June 2026.
         </p>
@@ -196,9 +198,8 @@ export const LandingPage = () => {
           <div className='w-full max-w-2xl text-left text-xs sm:text-sm rounded border border-blue-500/60 mb-6 bg-blue-900/20 px-3 py-3 text-blue-100'>
             <p className='leading-relaxed'>
               This daily trivia run has come to an end after 120 consecutive
-              days. The site will remain up (it's hosted for free). Thank you
-              all so much for playing along and sharing awesome feedback along
-              the way!
+              days. The site will remain up (it's hosted for free). Thank you so
+              much for playing along and sharing awesome feedback along the way!
               <br />
               You're welcome to drop me a line:{' '}
               <span className='block mt-1 ml-1 relative -top-[2px]'>
@@ -243,7 +244,7 @@ export const LandingPage = () => {
         <div className='flex flex-col items-center gap-3 w-full max-w-xs sm:max-w-none'>
           {/* How to Play - mobile: 1st, desktop: 2nd */}
           <button
-            className='order-2 sm:order-2 flex items-center justify-center gap-2 transition-colors w-full sm:w-auto px-6 py-3 bg-transparent border border-zinc-700 hover:border-zinc-500 text-gray-400 hover:text-gray-200 font-semibold text-sm rounded-xl sm:border-0 sm:p-1 sm:-mt-1 sm:text-zinc-400 sm:hover:text-zinc-200 sm:font-normal sm:underline'
+            className='order-2 sm:order-2 flex items-center justify-center gap-2 transition-colors w-full sm:w-auto px-6 py-3 bg-transparent border border-zinc-700 hover:border-zinc-500 text-gray-300 hover:text-gray-100 font-semibold text-sm rounded-xl sm:border-0 sm:p-1 sm:-mt-1 sm:text-zinc-400 sm:hover:text-zinc-200 sm:font-normal sm:underline'
             onClick={() => {
               setShowHelp(true);
               if (
@@ -263,6 +264,7 @@ export const LandingPage = () => {
               className={`flex items-center justify-center gap-2.5 flex-1 sm:flex-initial px-7 py-4 bg-blue-700 hover:bg-blue-600 active:bg-blue-800 text-white font-bold text-base transition-colors border border-blue-500${allComplete ? '' : ' border-r-0'}`}
               style={{
                 borderRadius: allComplete ? '0.75rem' : '0.75rem 0 0 0.75rem',
+                boxShadow: 'inset -10px 0 10px -5px rgba(0, 0, 0, 0.13)',
               }}
               onClick={() => {
                 const forceAll = randomMode === 'all';
@@ -294,7 +296,7 @@ export const LandingPage = () => {
                   onClick={() => setShowRandomMenu((m) => !m)}
                   aria-label='Random mode settings'
                 >
-                  <Cog6ToothIcon className='h-4 w-4' />
+                  <Cog6ToothIcon className='h-5 w-5' />
                 </button>
                 {showRandomMenu && (
                   <>
@@ -316,6 +318,10 @@ export const LandingPage = () => {
                           }`}
                           onClick={() => {
                             setRandomMode(mode);
+                            localStorage.setItem(
+                              'steam-detective-random-mode',
+                              mode,
+                            );
                             setShowRandomMenu(false);
                           }}
                         >
@@ -346,7 +352,7 @@ export const LandingPage = () => {
           <div className='order-3 sm:order-3 flex flex-col sm:flex-row gap-3 w-full sm:w-auto mt-0 sm:mt-5'>
             {/* Pick a Challenge Date - mobile: 1st, desktop: 2nd */}
             <button
-              className='sm:order-2 flex items-center justify-center gap-2 px-6 py-3 bg-transparent border border-zinc-700 hover:border-zinc-500 text-gray-400 hover:text-gray-200 font-semibold text-sm rounded-xl transition-colors w-full sm:w-auto'
+              className='sm:order-2 flex items-center justify-center gap-2 px-6 py-3 bg-transparent border border-zinc-700 hover:border-zinc-500 text-gray-300 hover:text-gray-100 font-semibold text-sm rounded-xl transition-colors w-full sm:w-auto'
               onClick={() => setShowDatePicker(true)}
             >
               <CalendarDaysIcon className='h-5 w-5' />
@@ -355,13 +361,13 @@ export const LandingPage = () => {
             {/* Browse Challenges - mobile: 2nd, desktop: 1st */}
             <a
               href='/archives'
-              className='sm:order-1 flex items-center justify-center gap-2 px-6 py-3 border border-zinc-700 hover:border-zinc-500 text-gray-400 hover:text-gray-200 font-semibold text-sm rounded-xl transition-colors w-full sm:w-[12.375rem]'
+              className='sm:order-1 flex items-center justify-center gap-2 px-6 py-3 border border-zinc-700 hover:border-zinc-500 text-gray-300 hover:text-gray-100 font-semibold text-sm rounded-xl transition-colors w-full sm:w-[12.375rem]'
             >
               <ArchiveBoxIcon className='h-5 w-5' />
               Browse Challenges
             </a>
             <button
-              className='sm:order-3 flex items-center justify-center gap-2 px-6 py-3 bg-transparent border border-zinc-700 hover:border-zinc-500 text-gray-400 hover:text-gray-200 font-semibold text-sm rounded-xl transition-colors w-full sm:w-[12.375rem]'
+              className='sm:order-3 flex items-center justify-center gap-2 px-6 py-3 bg-transparent border border-zinc-700 hover:border-zinc-500 text-gray-300 hover:text-gray-100 font-semibold text-sm rounded-xl transition-colors w-full sm:w-[12.375rem]'
               onClick={() => {
                 setShowStats(true);
                 if (

@@ -24,7 +24,7 @@ const ResetPuzzleButton: React.FC<ResetPuzzleButtonProps> = ({
         ) : (
           <>
             <ArrowPathIcon className='w-4 h-4 -scale-x-100' />
-            Reset this puzzle
+            Reset this challenge
           </>
         )}
       </button>
@@ -40,7 +40,7 @@ const ResetPuzzleButton: React.FC<ResetPuzzleButtonProps> = ({
     >
       <div className='flex flex-col items-center gap-2'>
         <span className='text-sm text-gray-300'>
-          Are you sure you want to reset this puzzle?
+          Are you sure you want to reset this challenge?
         </span>
         <div className='flex gap-2'>
           <button

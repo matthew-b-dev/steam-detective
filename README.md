@@ -26,9 +26,8 @@ Points are awarded per case file based on how many guesses were used:
 | 6       | 35     |
 | DNF     | 0      |
 
-The maximum score per day is 400 (four case files, each solved on the first guess).
 
-After all four case files are completed, the player's total score is submitted anonymously to Supabase and compared against all other scores for that date. A scatter plot renders every submission along the 0–400 axis, with the player's own position highlighted.
+After all of case files are completed for a daily challenge, the player's total score is submitted anonymously to Supabase and compared against all other scores for that date. A scatter plot renders every submission with the player's own position highlighted.
 
 The share output copied to clipboard looks like:
 

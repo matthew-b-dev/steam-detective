@@ -250,18 +250,15 @@ const PuzzleDatePicker: React.FC<PuzzleDatePickerProps> = ({
         {isLoading ? (
           <div className='flex flex-col items-center justify-center py-12'>
             <div className='animate-spin rounded-full h-16 w-16 border-b-2 border-white'></div>
-            <p className='mt-4 text-gray-300'>Loading puzzle...</p>
+            <p className='mt-4 text-gray-300'>Loading challenge...</p>
           </div>
         ) : (
           <>
             <div className='mb-4'>
               <h2 className='text-xl font-bold text-gray-100'>Select Date</h2>
-              <p className='text-sm text-gray-400 mt-1'>
-                Choose a different date
-              </p>
-              <p className='text-xs text-center mt-2'>
+              <p className='text-xs text-left mt-2'>
                 <a href='/archives' className=' transition-colors'>
-                  The{' '}
+                  Note: the{' '}
                   <span className='underline text-blue-400 '>
                     Archives page
                   </span>{' '}
@@ -320,12 +317,12 @@ const PuzzleDatePicker: React.FC<PuzzleDatePickerProps> = ({
                         </button>
                         {isBeforeMinDate(day) && (
                           <div className='pointer-events-none absolute bottom-full left-1/2 -translate-x-1/2 mb-1 w-max max-w-[11rem] rounded bg-zinc-900 border border-zinc-600 px-2 py-1 text-xs text-gray-300 text-center invisible group-hover:visible group-focus-within:visible z-10'>
-                            The first ever puzzle was Feb 4, 2026.
+                            The first ever challenge was Feb 4, 2026.
                           </div>
                         )}{' '}
                         {isAfterMaxDate(day) && (
                           <div className='pointer-events-none absolute bottom-full left-1/2 -translate-x-1/2 mb-1 w-max max-w-[11rem] rounded bg-zinc-900 border border-zinc-600 px-2 py-1 text-xs text-gray-300 text-center invisible group-hover:visible group-focus-within:visible z-10'>
-                            The final puzzle was Jun 3, 2026.
+                            The final challenge was Jun 3, 2026.
                           </div>
                         )}{' '}
                       </>
