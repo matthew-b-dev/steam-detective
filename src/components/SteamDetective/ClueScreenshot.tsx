@@ -125,9 +125,11 @@ export const ClueScreenshot: React.FC<ClueScreenshotProps> = ({
                   initial={{ filter: 'blur(10px)' }}
                   animate={{
                     filter:
-                      isMobileViewport && !screenshotLetterbox
-                        ? `blur(0px) brightness(${isBrightened ? 1.62 : 1.25})`
-                        : `blur(0px) brightness(${isBrightened ? 1.45 : 1})`,
+                      isMobileViewport && screenshotLetterbox
+                        ? 'none'
+                        : isMobileViewport
+                          ? `blur(0px) brightness(${isBrightened ? 1.62 : 1.25})`
+                          : `blur(0px) brightness(${isBrightened ? 1.45 : 1})`,
                   }}
                   exit={{ filter: 'blur(10px)' }}
                   transition={{ duration: 0.2 }}
