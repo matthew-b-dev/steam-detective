@@ -710,10 +710,15 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile2: 'Team Fortress 2',
     caseFile3: 'Nioh 2',
   },
+  '2026-05-31': {
+    caseFile1: 'Grand Theft Auto IV',
+    caseFile2: 'Black Mesa',
+    caseFile3: 'Hollow Knight',
+  },
   // Easy: Portal 2
   // Easy: Hollow Knight: Silksong
   // Final day: Portal
-  '2026-05-31': {
+  '2026-06-01': {
     caseFile1: "Don't Starve",
     caseFile2: 'Fields of Mistria',
     caseFile3: 'Dwarf Fortress',

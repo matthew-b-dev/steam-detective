@@ -1220,12 +1220,13 @@ export const steamGameDetails: SteamGameMap = {
     name: 'Grand Theft Auto IV',
     appId: 12210,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/12210/0000006360.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/12210/0000006371.600x338.jpg',
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/12210/0000006361.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/12210/0000006362.600x338.jpg',
     shortDescription:
-      "Niko Bellic, Johnny Klebitz and Luis Lopez all have one thing in common - they live in the worst city in America. Liberty City worships money and status, and is heaven for those who have them and a living nightmare for those who don't.",
-    releaseDate: 'Mar 24, 2020',
+      'What does the American Dream mean today? For ||Niko Bellic||&nbsp;&nbsp;, fresh off ||the boat from Europe||&nbsp;&nbsp;, it is the hope he can escape his past. For his&nbsp;||cousin||&nbsp;&nbsp;, ||Roman||&nbsp;&nbsp;, it is the vision that together they ||can find fortune in Liberty City, gateway to the land of opportunity||.',
+    originalReleaseDate: 'Apr 29, 2008 (PS3, X360)',
+    releaseDate: 'Dec 3, 2008',
     developer: 'Rockstar North',
     publisher: 'Rockstar Games',
     tags: [],
@@ -1238,7 +1239,7 @@ export const steamGameDetails: SteamGameMap = {
       'Open World',
       'Action',
       'Crime',
-      'Automobile Sim',
+      'Driving',
       'Multiplayer',
       'Third Person',
       'Adventure',
@@ -1251,7 +1252,29 @@ export const steamGameDetails: SteamGameMap = {
       'Atmospheric',
       'Classic',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: ['Moddable', 'Crime'],
+    screenshotLetterbox: true,
+    clueOrder: ['extras', 'desc', 'tags', 'details'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
+    extrasClue: {
+      achievements: [
+        {
+          name: 'King of QUB3D',
+          desc: 'Beat the High Score in QUB3D.',
+          achievePercent: '2.1%',
+          img: 'https://cdn.fastly.steamstatic.com/steamcommunity/public/images/apps/12210/44441ac92bd14d000e1652088754170ffc01f8a0.jpg',
+        },
+        {
+          name: 'Gobble Gobble',
+          desc: 'Score 3 strikes in a row, a "turkey", in 10-pin bowling.',
+          achievePercent: '4.4%',
+          img: 'https://cdn.fastly.steamstatic.com/steamcommunity/public/images/apps/12210/787d54cda636cd56bc368f94d5be4c00282f5a7e.jpg',
+        },
+      ],
+      achievementsTotal: 55,
+    },
   },
   '12900': {
     name: 'AudioSurf',
@@ -18104,11 +18127,16 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/362890/ss_b106c27ff03bb3162a6875dd22c4ce440e9694c4.600x338.jpg',
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/362890/ss_9857cad0e29e5cd905f1f9b6be3e20357a6ecb92.600x338.jpg',
-    shortDescription: 'Relive Half-Life.',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/362890/ss_9c9ce8a803b06375d46e58204e6554facdd30543.600x338.jpg',
+    webms: [
+      'https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/362890/extras/90628820dd51e4587eda3a2bcb03f592.webm?t=1747193649',
+      'https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/362890/extras/f7bb2433b064b6114d6ff7e5c0ebac8f.webm?t=1747193649',
+    ],
+    shortDescription:
+      'You are ||Gordon Freeman||, a theoretical physicist at the [[Black Mesa]] Research Facility. When a routine experiment goes horribly wrong, ||you must fight your way through an interdimensional alien invasion, and a bloodthirsty military clean-up crew in order to save the science team... and the world!||',
     releaseDate: 'Mar 6, 2020',
-    developer: 'Crowbar Collective',
-    publisher: 'Crowbar Collective',
+    developer: '||Crowbar|| Collective',
+    publisher: '||Crowbar|| Collective',
     tags: [],
     features: [],
     allReviewSummary: {
@@ -18118,13 +18146,13 @@ export const steamGameDetails: SteamGameMap = {
     userTags: [
       'FPS',
       'Remake',
-      'Action',
+      'Classic',
       'Sci-fi',
       'First-Person',
       'Singleplayer',
       'Shooter',
       'Atmospheric',
-      'Classic',
+      'Action',
       'Story Rich',
       'Great Soundtrack',
       'Aliens',
@@ -18132,7 +18160,20 @@ export const steamGameDetails: SteamGameMap = {
       'Adventure',
       'Horror',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: ['Sci-fi', 'Classic'],
+    clueOrder: ['ss', 'review', 'details+tags', 'desc'],
+    difficulty: 'Hard',
+    reviewClues: [
+      {
+        review:
+          "I'm not sure that is fully appreciated here that this game was a SIXTEEN YEAR volunteer fan project that transformed from a mod to full-on commercial release.\n(edited for length)",
+        votedUp: true,
+        votesUp: 231,
+        weightedScore: undefined,
+        authorPlaytimeHours: 14.3,
+        timestamp: 1648425600,
+      },
+    ],
   },
   '362930': {
     name: 'Garfield Kart',
@@ -18496,7 +18537,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/367520/ss_d5b6edd94e77ba6db31c44d8a3c09d807ab27751.600x338.jpg',
     shortDescription:
-      'Forge your own path in ||Hollow Knight||! An epic action adventure through a vast ruined kingdom of insects and heroes. Explore twisting caverns, battle tainted creatures and befriend bizarre bugs, all in a classic, hand-drawn 2D style.',
+      'Forge your own path in ||Hollow Knight||! An epic action adventure through a vast ruined kingdom of ||insects|| and heroes. Explore twisting ||caverns||, battle tainted ||creatures|| and befriend bizarre ||bugs||, all in a ||classic, hand-drawn 2D|| style.',
     releaseDate: 'Feb 24, 2017',
     developer: 'Team Cherry',
     publisher: 'Team Cherry',
@@ -18510,8 +18551,8 @@ export const steamGameDetails: SteamGameMap = {
       'Metroidvania',
       'Souls-like',
       'Platformer',
-      'Great Soundtrack',
       '2D',
+      'Great Soundtrack',
       'Difficult',
       'Indie',
       'Singleplayer',
@@ -18528,7 +18569,27 @@ export const steamGameDetails: SteamGameMap = {
       'Controller',
       'Side Scroller',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: [
+      'Souls-like',
+      'Singleplayer',
+      'Atmospheric',
+      'Exploration',
+      'Great Soundtrack',
+    ],
+    clueOrder: ['review', 'desc', 'tags', 'details'],
+    difficulty: 'Easy',
+    reviewClues: [
+      {
+        review:
+          "My favorite quote:\n\" *sigh* ... Bapanada \"\n\nI don't know what it means - I don't speak her language - but I have SUCH a crush on her. She's probably close to three times as tall as I am, and I doubt she can hardly see me over the counter, and yet I still walk into her little shop - pretending like I'm looking to buy a ||map|| or a ||pin||.\n\n||Iselda||, my beloved <3",
+        votedUp: true,
+        votesUp: 331,
+        votedFunny: 220,
+        weightedScore: '0.76127856969833374',
+        authorPlaytimeHours: 112,
+        timestamp: 1492300800,
+      },
+    ],
   },
   '368070': {
     name: 'Sniper Ghost Warrior 3',
@@ -59549,6 +59610,7 @@ export const CLOSE_GUESS_SERIES: string[] = [
   'gears',
   'ghost of',
   'god of war',
+  'grand theft auto',
   'half-life',
   'helldivers',
   'hitman',
