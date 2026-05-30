@@ -18537,7 +18537,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/367520/ss_d5b6edd94e77ba6db31c44d8a3c09d807ab27751.600x338.jpg',
     shortDescription:
-      'Forge your own path in ||Hollow Knight||! An epic action adventure through a vast ruined kingdom of ||insects|| and heroes. Explore twisting ||caverns||, battle tainted ||creatures|| and befriend bizarre ||bugs||, all in a ||classic, hand-drawn 2D|| style.',
+      '||Forge your own path in Hollow Knight!|| An epic action adventure through a vast ||ruined|| kingdom of ||insects|| and heroes. Explore twisting ||caverns||, battle tainted ||creatures|| and befriend bizarre ||bugs||, all in a ||classic, hand-drawn 2D|| style.',
     releaseDate: 'Feb 24, 2017',
     developer: 'Team Cherry',
     publisher: 'Team Cherry',
