@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { VideoCameraIcon } from '@heroicons/react/24/solid';
+import { sendFeedback } from './lib/supabaseClient';
+import { isLocalhost, eventFiredThisSession } from './utils';
 
 export const dailyMessages: Record<string, React.ReactNode> = {
   '2026-04-01': (
@@ -20,7 +22,14 @@ export const dailyMessages: Record<string, React.ReactNode> = {
         <div>
           <div className='flex justify-center'>
             <button
-              onClick={() => setOpen((o) => !o)}
+              onClick={() => {
+                setOpen((o) => !o);
+                if (
+                  !isLocalhost() &&
+                  !eventFiredThisSession('[Event] Bapanada')
+                )
+                  sendFeedback('custom', '`[Event]` Bapanada');
+              }}
               className='flex items-center gap-1 cursor-pointer bg-zinc-800'
             >
               <VideoCameraIcon className='w-6 h-6 shrink-0 mr-1' />
