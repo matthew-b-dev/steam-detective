@@ -4,12 +4,12 @@ import {
   ChartBarIcon,
   ArchiveBoxIcon,
   CalendarDaysIcon,
-  Cog6ToothIcon,
 } from '@heroicons/react/24/solid';
 import HelpModal from './components/HelpModal';
 import StatsModal from './components/StatsModal';
 import PuzzleDatePicker from './components/PuzzleDatePicker';
 import SteamDetectiveFooter from './components/SteamDetectiveFooter';
+import { RandomChallengeButton } from './components/RandomChallengeButton';
 import { eventFiredThisSession, isLocalhost } from './utils';
 import {
   sendFeedback,
@@ -18,15 +18,6 @@ import {
 } from './lib/supabaseClient';
 
 const IS_PROD = !isLocalhost();
-
-// Toggle to preview the landing page as if all challenges are completed
-const DEBUG_ALL_COMPLETE = false;
-
-// Force random date selection to always return this date (null = disabled)
-const DEBUG_RANDOM_DATE: string | null = null;
-
-// The 120th puzzle date (Feb 4 + 119 days = June 3, 2026)
-const PUZZLE_END_DATE = new Date('2026-06-03T00:00:00Z');
 
 // Farewell banner - shown until June 10 UTC
 const BANNER_END_DATE = new Date('2026-06-10T00:00:00Z');
@@ -43,89 +34,10 @@ const DiscordIcon = () => (
   </svg>
 );
 
-const buildDatePool = (): string[] => {
-  const start = new Date('2026-02-04T00:00:00Z');
-  const now = new Date();
-  const todayUTC = new Date(
-    Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate()),
-  );
-  const maxDate = todayUTC < PUZZLE_END_DATE ? todayUTC : PUZZLE_END_DATE;
-  const all: string[] = [];
-  const d = new Date(start);
-  while (d <= maxDate) {
-    all.push(d.toISOString().slice(0, 10));
-    d.setUTCDate(d.getUTCDate() + 1);
-  }
-  return all;
-};
-
-const computeAllComplete = (): boolean => {
-  return buildDatePool().every((dateStr) => {
-    const raw = localStorage.getItem(`steam-detective-state-${dateStr}`);
-    if (!raw) return false;
-    try {
-      return JSON.parse(raw).allCasesComplete === true;
-    } catch {
-      return false;
-    }
-  });
-};
-
-const getRandomDate = (forceAll: boolean): { date: string; clear: boolean } => {
-  if (DEBUG_RANDOM_DATE) return { date: DEBUG_RANDOM_DATE, clear: true };
-  const all = buildDatePool();
-  if (forceAll)
-    return { date: all[Math.floor(Math.random() * all.length)], clear: true };
-
-  const notStarted: string[] = [];
-  const startedIncomplete: string[] = [];
-
-  for (const dateStr of all) {
-    const raw = localStorage.getItem(`steam-detective-state-${dateStr}`);
-    if (!raw) {
-      notStarted.push(dateStr);
-    } else {
-      try {
-        if (JSON.parse(raw).allCasesComplete !== true)
-          startedIncomplete.push(dateStr);
-      } catch {
-        notStarted.push(dateStr);
-      }
-    }
-  }
-
-  // Prefer never-started dates; only fall back to started-but-unfinished if none remain
-  // The puzzles were not at a very high standard before this date :~)
-  const PREFER_AFTER = '2026-03-03';
-  if (notStarted.length > 0) {
-    const recent = notStarted.filter((d) => d > PREFER_AFTER);
-    const pool = recent.length > 0 ? recent : notStarted;
-    return {
-      date: pool[Math.floor(Math.random() * pool.length)],
-      clear: false,
-    };
-  }
-  if (startedIncomplete.length > 0) {
-    const recent = startedIncomplete.filter((d) => d > PREFER_AFTER);
-    const pool = recent.length > 0 ? recent : startedIncomplete;
-    return { date: pool[Math.floor(Math.random() * pool.length)], clear: true };
-  }
-  return { date: all[Math.floor(Math.random() * all.length)], clear: true };
-};
-
 export const LandingPage = () => {
   const [showHelp, setShowHelp] = useState(false);
   const [showStats, setShowStats] = useState(false);
   const [showDatePicker, setShowDatePicker] = useState(false);
-  const [allComplete] = useState(
-    () => DEBUG_ALL_COMPLETE || computeAllComplete(),
-  );
-  const [randomMode, setRandomMode] = useState<'unplayed' | 'all'>(() => {
-    const stored = localStorage.getItem('steam-detective-random-mode');
-    if (stored === 'unplayed' || stored === 'all') return stored;
-    return allComplete ? 'all' : 'unplayed';
-  });
-  const [showRandomMenu, setShowRandomMenu] = useState(false);
   const [waveCount, setWaveCount] = useState<number | null>(null);
   const [hasWaved, setHasWaved] = useState(
     () => !!localStorage.getItem(WAVE_STORAGE_KEY),
@@ -190,7 +102,7 @@ export const LandingPage = () => {
           <span className='text-gray-100 font-semibold'>
             120 PC Game trivia challenges
           </span>{' '}
-          which were released daily from February through June 2026.
+          which were released daily from February to June 2026.
         </p>
 
         {/* Farewell banner */}
@@ -259,93 +171,8 @@ export const LandingPage = () => {
           </button>
 
           {/* Main CTA - Random Challenge */}
-          <div className='order-1 sm:order-1 relative flex items-stretch w-full sm:w-auto'>
-            <button
-              className={`flex items-center justify-center gap-2.5 flex-1 sm:flex-initial px-7 py-4 bg-blue-700 hover:bg-blue-600 active:bg-blue-800 text-white font-bold text-base transition-colors border border-blue-500${allComplete ? '' : ' border-r-0'}`}
-              style={{
-                borderRadius: allComplete ? '0.75rem' : '0.75rem 0 0 0.75rem',
-                boxShadow: 'inset -10px 0 10px -5px rgba(0, 0, 0, 0.13)',
-              }}
-              onClick={() => {
-                const forceAll = randomMode === 'all';
-                const { date, clear } = getRandomDate(forceAll);
-                if (clear) {
-                  localStorage.removeItem(`steam-detective-state-${date}`);
-                }
-                window.location.href = `/d/${date}`;
-              }}
-            >
-              <svg
-                xmlns='http://www.w3.org/2000/svg'
-                className='h-6 w-6'
-                viewBox='0,0,256,256'
-              >
-                <g fill='currentColor' fillRule='nonzero'>
-                  <g transform='scale(5.33333,5.33333)'>
-                    <path d='M40.018,11.05l-11.686,-6.017c-0.001,0 -0.002,-0.001 -0.003,-0.001c-2.711,-1.39 -5.948,-1.388 -8.661,0.001l-11.686,6.017c-1.839,0.947 -2.982,2.82 -2.982,4.889v16.121c0,2.069 1.143,3.943 2.982,4.89l11.688,6.018c1.354,0.694 2.842,1.041 4.328,1.041c1.488,0 2.976,-0.347 4.333,-1.042l11.686,-6.017c1.84,-0.947 2.982,-2.82 2.982,-4.89v-16.121c0.001,-2.069 -1.142,-3.942 -2.981,-4.889zM24,11c1.381,0 2.5,0.672 2.5,1.5c0,0.828 -1.119,1.5 -2.5,1.5c-1.381,0 -2.5,-0.672 -2.5,-1.5c0,-0.828 1.119,-1.5 2.5,-1.5zM9.5,25c-0.828,0 -1.5,-1.119 -1.5,-2.5c0,-1.381 0.672,-2.5 1.5,-2.5c0.828,0 1.5,1.119 1.5,2.5c0,1.381 -0.672,2.5 -1.5,2.5zM13.5,31c-0.828,0 -1.5,-1.119 -1.5,-2.5c0,-1.381 0.672,-2.5 1.5,-2.5c0.828,0 1.5,1.119 1.5,2.5c0,1.381 -0.672,2.5 -1.5,2.5zM17.5,37c-0.828,0 -1.5,-1.119 -1.5,-2.5c0,-1.381 0.672,-2.5 1.5,-2.5c0.828,0 1.5,1.119 1.5,2.5c0,1.381 -0.672,2.5 -1.5,2.5zM31.5,35c-0.828,0 -1.5,-1.119 -1.5,-2.5c0,-1.381 0.672,-2.5 1.5,-2.5c0.828,0 1.5,1.119 1.5,2.5c0,1.381 -0.672,2.5 -1.5,2.5zM36.5,26c-0.828,0 -1.5,-1.119 -1.5,-2.5c0,-1.381 0.672,-2.5 1.5,-2.5c0.828,0 1.5,1.119 1.5,2.5c0,1.381 -0.672,2.5 -1.5,2.5zM39.138,16.857l-10.832,5.089c-0.884,0.46 -1.834,0.753 -2.806,0.908v16.632c0,0.829 -0.672,1.5 -1.5,1.5c-0.828,0 -1.5,-0.671 -1.5,-1.5v-16.637c-0.984,-0.159 -1.952,-0.458 -2.859,-0.93l-10.779,-5.062c-0.75,-0.352 -1.072,-1.246 -0.72,-1.995c0.352,-0.751 1.246,-1.073 1.995,-0.72l10.832,5.089c1.918,0.995 4.144,0.993 6.007,0.026l10.886,-5.115c0.749,-0.353 1.643,-0.03 1.995,0.72c0.353,0.75 0.031,1.643 -0.719,1.995z' />
-                  </g>
-                </g>
-              </svg>
-              Random Challenge
-            </button>
-            {!allComplete && (
-              <div className='relative flex'>
-                <button
-                  className='flex items-center justify-center px-3 bg-blue-600 hover:bg-blue-500 active:bg-blue-700 border border-blue-500 transition-colors text-white'
-                  style={{ borderRadius: '0 0.75rem 0.75rem 0' }}
-                  onClick={() => setShowRandomMenu((m) => !m)}
-                  aria-label='Random mode settings'
-                >
-                  <Cog6ToothIcon className='h-5 w-5' />
-                </button>
-                {showRandomMenu && (
-                  <>
-                    <div
-                      className='fixed inset-0 z-10'
-                      onClick={() => setShowRandomMenu(false)}
-                    />
-                    <div className='absolute right-0 top-full mt-2 w-56 bg-zinc-900 border border-zinc-700 rounded-xl shadow-2xl z-20 py-1'>
-                      <p className='px-4 pt-2 pb-1 text-xs text-zinc-500 font-semibold uppercase tracking-wider'>
-                        Random mode
-                      </p>
-                      {(['unplayed', 'all'] as const).map((mode) => (
-                        <button
-                          key={mode}
-                          className={`w-full flex items-center gap-3 px-4 py-2.5 text-sm transition-colors whitespace-nowrap ${
-                            randomMode === mode
-                              ? 'text-white'
-                              : 'text-zinc-400 hover:text-white hover:bg-zinc-800'
-                          }`}
-                          onClick={() => {
-                            setRandomMode(mode);
-                            localStorage.setItem(
-                              'steam-detective-random-mode',
-                              mode,
-                            );
-                            setShowRandomMenu(false);
-                          }}
-                        >
-                          <span
-                            className={`w-4 h-4 rounded-full border-2 flex items-center justify-center flex-shrink-0 ${
-                              randomMode === mode
-                                ? 'border-blue-500'
-                                : 'border-zinc-600'
-                            }`}
-                          >
-                            {randomMode === mode && (
-                              <span className='w-2 h-2 rounded-full bg-blue-500' />
-                            )}
-                          </span>
-                          {mode === 'unplayed'
-                            ? 'Unplayed challenges only'
-                            : 'All challenges'}
-                        </button>
-                      ))}
-                    </div>
-                  </>
-                )}
-              </div>
-            )}
+          <div className='order-1 sm:order-1 w-full sm:w-auto'>
+            <RandomChallengeButton size='hero' />
           </div>
 
           {/* Browse | Pick Date | My Stats*/}

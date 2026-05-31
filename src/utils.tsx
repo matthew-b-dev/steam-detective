@@ -715,3 +715,80 @@ export const eventFiredThisSession = (eventName: string): boolean => {
   sessionStorage.setItem(key, 'true');
   return false;
 };
+
+const PUZZLE_POOL_START = '2026-02-04T00:00:00Z';
+const PUZZLE_POOL_END = '2026-06-03T00:00:00Z';
+const PUZZLE_POOL_PREFER_AFTER = '2026-03-03';
+
+export const buildDatePool = (): string[] => {
+  const start = new Date(PUZZLE_POOL_START);
+  const now = new Date();
+  const todayUTC = new Date(
+    Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate()),
+  );
+  const endDate = new Date(PUZZLE_POOL_END);
+  const maxDate = todayUTC < endDate ? todayUTC : endDate;
+  const all: string[] = [];
+  const d = new Date(start);
+  while (d <= maxDate) {
+    all.push(d.toISOString().slice(0, 10));
+    d.setUTCDate(d.getUTCDate() + 1);
+  }
+  return all;
+};
+
+export const computeAllComplete = (): boolean => {
+  return buildDatePool().every((dateStr) => {
+    const raw = localStorage.getItem(`steam-detective-state-${dateStr}`);
+    if (!raw) return false;
+    try {
+      return JSON.parse(raw).allCasesComplete === true;
+    } catch {
+      return false;
+    }
+  });
+};
+
+export const getRandomDate = (
+  forceAll: boolean,
+): { date: string; clear: boolean } => {
+  const all = buildDatePool();
+  if (forceAll)
+    return { date: all[Math.floor(Math.random() * all.length)], clear: true };
+
+  const notStarted: string[] = [];
+  const startedIncomplete: string[] = [];
+
+  for (const dateStr of all) {
+    const raw = localStorage.getItem(`steam-detective-state-${dateStr}`);
+    if (!raw) {
+      notStarted.push(dateStr);
+    } else {
+      try {
+        if (JSON.parse(raw).allCasesComplete !== true)
+          startedIncomplete.push(dateStr);
+      } catch {
+        notStarted.push(dateStr);
+      }
+    }
+  }
+
+  // Prefer never-started dates; only fall back to started-but-unfinished if none remain
+  // The puzzles were not at a very high standard before this date :~)
+  if (notStarted.length > 0) {
+    const recent = notStarted.filter((d) => d > PUZZLE_POOL_PREFER_AFTER);
+    const pool = recent.length > 0 ? recent : notStarted;
+    return {
+      date: pool[Math.floor(Math.random() * pool.length)],
+      clear: false,
+    };
+  }
+  if (startedIncomplete.length > 0) {
+    const recent = startedIncomplete.filter(
+      (d) => d > PUZZLE_POOL_PREFER_AFTER,
+    );
+    const pool = recent.length > 0 ? recent : startedIncomplete;
+    return { date: pool[Math.floor(Math.random() * pool.length)], clear: true };
+  }
+  return { date: all[Math.floor(Math.random() * all.length)], clear: true };
+};

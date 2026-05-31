@@ -19,7 +19,6 @@ import {
   saveAllCasesComplete,
   type SteamDetectiveState,
 } from './utils';
-import PuzzleDateTime from './components/PuzzleDateTime';
 import ResetPuzzleButton from './components/ResetPuzzleButton';
 import SteamDetectiveFooter from './components/SteamDetectiveFooter';
 import { getCaseFileCount } from './demos';
@@ -129,6 +128,7 @@ const SteamDetectiveGame: React.FC<SteamDetectiveGameProps> = ({
   // Flash animation when guesses remaining changes
   useEffect(() => {
     if (state.guessesRemaining < 6 && !state.isComplete) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setFlashGuesses(true);
       const timer = setTimeout(() => setFlashGuesses(false), 200);
       return () => clearTimeout(timer);
@@ -622,7 +622,6 @@ const SteamDetective: React.FC<SteamDetectiveProps> = ({
           )}
         </>
       )}
-      {dailyGameCheck && <PuzzleDateTime puzzleDate={puzzleDate} />}
       <SteamDetectiveFooter />
     </div>
   );

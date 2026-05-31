@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { motion } from 'framer-motion';
+import { RandomChallengeButton } from '../RandomChallengeButton';
 import {
   sendNewSteamScore,
   fetchNewSteamScores,
@@ -246,6 +247,12 @@ const FinalGameComplete: React.FC<FinalGameCompleteProps> = ({
             puzzleDate={puzzleDate}
             hasZoomedClue={hasZoomedClue}
           />
+          <div className='border-t border-gray-700 !mt-6'>
+            <p className='text-center text-xs text-gray-400 my-2'>Go again?</p>
+            <div className='flex justify-center mb-3'>
+              <RandomChallengeButton size='compact' />
+            </div>
+          </div>
         </div>
       </div>
     </motion.div>
