@@ -138,6 +138,19 @@ export function useClueAutoScroll({
           !prevShowCluesRef.current[6] &&
           showClues[6]));
 
+    // For the exact order ['review', 'details+tags', 'ss', 'desc']:
+    // review is revealed first (canonical pos 8), then details+tags+mfd are inserted
+    // ABOVE it (canonical pos 4/5/6), then ss is inserted further above (canonical pos 1).
+    // Neither details+tags nor ss actually extend the bottom of the layout, so
+    // suppress both tagsJustRevealedWithMFD and ssJustRevealedNonFirst for this order.
+    // desc (clue 4) correctly fires via ssVisibleAndNewClueRevealed instead.
+    const isReviewDetailstagssSsDescOrder =
+      clueOrder.length === 4 &&
+      clueOrder[0] === 'review' &&
+      clueOrder[1] === 'details+tags' &&
+      clueOrder[2] === 'ss' &&
+      clueOrder[3] === 'desc';
+
     // When review (slot[4]) was already shown before ss is revealed, the screenshot
     // appears ABOVE review/tags/details in the layout (canonical pos 1 vs 8/5/4).
     // Scrolling down would move the user away from the new screenshot content.
@@ -154,7 +167,8 @@ export function useClueAutoScroll({
       hasSsInOrder &&
       screenshotNowVisible &&
       !screenshotWasVisible &&
-      !ssRevealedWhileReviewAlreadyShown;
+      !ssRevealedWhileReviewAlreadyShown &&
+      !isReviewDetailstagssSsDescOrder;
 
     const ssVisibleAndNewClueRevealed =
       !isFirstClue &&
@@ -191,7 +205,10 @@ export function useClueAutoScroll({
     // is already higher than Tags (5). So when Tags (slot[0]) is newly revealed,
     // currentLowestPosition stays at 6 (MFD) and no scroll fires. Detect this explicitly.
     const tagsJustRevealedWithMFD =
-      !prevShowCluesRef.current[0] && showClues[0] && showClues[7];
+      !prevShowCluesRef.current[0] &&
+      showClues[0] &&
+      showClues[7] &&
+      !isReviewDetailstagssSsDescOrder;
 
     // When Tags (slot[0]) was already shown and Details+MFD (slot[1]+slot[7]) are
     // newly revealed together, the scroll fires (moreFromDev pos 6 > tags pos 5) but

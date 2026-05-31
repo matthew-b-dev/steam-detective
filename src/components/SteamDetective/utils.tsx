@@ -121,7 +121,7 @@ const bracketNoteStyle: React.CSSProperties = {
 // Renders [[bracket]] content as React elements.
 // ((revealed)) tokens display their text; spaces become wide non-breaking gaps;
 // all other chars become underscores. Uses \u00A0 to prevent HTML space collapsing.
-const renderBracketContent = (text: string): ReactElement[] => {
+export const renderBracketContent = (text: string): ReactElement[] => {
   type Token =
     | { kind: 'reveal'; text: string }
     | { kind: 'space' }

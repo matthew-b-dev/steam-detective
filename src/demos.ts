@@ -715,10 +715,15 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile2: 'Black Mesa',
     caseFile3: 'Hollow Knight',
   },
+  '2026-06-01': {
+    caseFile1: 'Subnautica',
+    caseFile2: 'ARC Raiders',
+    caseFile3: 'Call of Juarez',
+  },
   // Easy: Portal 2
   // Easy: Hollow Knight: Silksong
   // Final day: Portal
-  '2026-06-01': {
+  '2026-06-02': {
     caseFile1: "Don't Starve",
     caseFile2: 'Fields of Mistria',
     caseFile3: 'Dwarf Fortress',
@@ -735,7 +740,6 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
 // Easy: State of Decay 2
 // Easy: Any AC Game (last 3/29): Revelations, Unity, (1), (2), Brotherhood, Rogue, Syndicate, Valhalla, Mirage
 
-// Med: Trackmania
 // Med: Luck be a Landlord
 // Med: Tropico 4 (Last Tropico 3/15)
 // Med: Clustertruck
