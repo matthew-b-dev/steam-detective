@@ -18124,6 +18124,7 @@ export const steamGameDetails: SteamGameMap = {
   '362890': {
     name: 'Black Mesa',
     appId: 362890,
+    blurScreenshotQuarter: 'bottom',
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/362890/ss_b106c27ff03bb3162a6875dd22c4ce440e9694c4.600x338.jpg',
     secondaryScreenshot:
