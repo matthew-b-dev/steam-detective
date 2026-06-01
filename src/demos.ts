@@ -720,10 +720,15 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile2: 'ARC Raiders',
     caseFile3: 'Call of Juarez',
   },
+  '2026-06-02': {
+    caseFile1: 'Hollow Knight: Silksong',
+    caseFile2: 'Apex Legends',
+    caseFile3: 'BeamNG.drive',
+  },
   // Easy: Portal 2
   // Easy: Hollow Knight: Silksong
   // Final day: Portal
-  '2026-06-02': {
+  '2026-06-03': {
     caseFile1: "Don't Starve",
     caseFile2: 'Fields of Mistria',
     caseFile3: 'Dwarf Fortress',

@@ -13393,13 +13393,14 @@ export const steamGameDetails: SteamGameMap = {
   },
   '284160': {
     name: 'BeamNG.drive',
+    searchTerms: ['beamng.drive', 'ng.d', 'ng.drive'],
     appId: 284160,
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/284160/ss_ae4c258e6f13ddf00ee8e72be8bd0b0fc5e67801.600x338.jpg',
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/284160/ss_50b8ba7ff80d50af3bd6b1b4e326849555a952a2.600x338.jpg',
     shortDescription:
-      'A dynamic soft-body physics vehicle simulator capable of doing just about anything.',
+      '[[Beam((N))G((.))((d))rive]] is an incredibly realistic driving game with near-limitless possibilities. Our soft-body physics engine simulates every component of a vehicle in real time, resulting in true-to-life behavior. With years of meticulous design, intensive research and experience, the simulation authentically recreates the excitement of real world driving. ',
     releaseDate: 'May 29, 2015',
     developer: '||BeamNG||',
     publisher: '||BeamNG||',
@@ -13430,7 +13431,35 @@ export const steamGameDetails: SteamGameMap = {
       'Action',
       'Flight',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: ['Driving', 'Automobile Sim', 'Racing', 'Destruction'],
+    overrideCensoredTitle: 'B||eamN||G.d||riv||e',
+    clueOrder: ['review', 'details+tags', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Hard',
+    reviewClues: [
+      {
+        review:
+          "Got sold on this game while I was in college when I saw some gifs on reddit showing off the absurdly realistic ||physics simulation||. TEN YEARS later I'm still playing, married w/ children, and it's still in early access LOL. ",
+        votedUp: true,
+        votesUp: 49,
+        votedFunny: 18,
+        weightedScore: '0.797481536865234375',
+        authorPlaytimeHours: 812.1,
+        writtenDuringEarlyAccess: true,
+        timestamp: 1754265600,
+      },
+      {
+        review: 'cool game. weird name.',
+        votedUp: true,
+        votesUp: 415,
+        votedFunny: 149,
+        weightedScore: '0.699459075927734375',
+        authorPlaytimeHours: 5,
+        writtenDuringEarlyAccess: true,
+        timestamp: 1772496000,
+      },
+    ],
   },
   '285190': {
     name: 'Warhammer 40,000: Dawn of War III',
@@ -37714,18 +37743,63 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1030300/09ccaa6c16f158f9df8298feb5d196098506a028/ss_09ccaa6c16f158f9df8298feb5d196098506a028.600x338.jpg',
     shortDescription:
-      'Discover a vast, haunted kingdom in ||Hollow Knight: Silksong||! Explore, fight and survive as you ascend to the peak of a land ruled by ||silk|| and song.',
+      'Discover a vast, haunted kingdom in [[Hollow Knight(( :)) Silksong]] ! Explore, fight and survive as you ascend to the peak of a land ruled by ||silk|| and ||song||.',
     releaseDate: 'Sep 4, 2025',
-    developer: 'Team Cherry',
-    publisher: 'Team Cherry',
+    developer: '||Team Cherry||',
+    publisher: '||Team Cherry||',
     tags: ['Action', 'Adventure', 'Indie'],
     features: [],
     allReviewSummary: {
-      count: 133480,
+      count: 373950,
       rating: 'Very Positive',
     },
-    userTags: [],
-    clueOrder: ['desc', 'tags', 'details'],
+    userTags: [
+      'Metroidvania',
+      '2D',
+      'Indie',
+      'Difficult',
+      'Atmospheric',
+      'Great Soundtrack',
+      'Platformer',
+      'Exploration',
+      'Female Protagonist',
+      'Adventure',
+    ],
+    blurredUserTags: [
+      'Metroidvania',
+      'Adventure',
+      'Great Soundtrack',
+      'Exploration',
+      'Female Protagonist',
+      'Difficult',
+      'Atmospheric',
+    ],
+    clueOrder: ['review', 'details+tags', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
+    reviewClues: [
+      {
+        review:
+          "||丝之歌||简体中文翻译组，或者是某个人，你这辈子从出生到现在有收到过信赖与称赞吗？\n如果有，那我觉得你在撒谎，\n如果没有，那很理所当然了。\n\n(Translation)\nTo ||the Silksong|| Simplified Chinese translation team, or a specific individual among them: have you ever received trust and praise once in your life from the moment you were born until now? If you have, then I think you are lying; if you haven't, well, that makes perfect sense.",
+        votedUp: false,
+        votesUp: 3037,
+        votedFunny: 489,
+        weightedScore: undefined,
+        authorPlaytimeHours: 91.9,
+        timestamp: 1757116800,
+      },
+      {
+        review:
+          "游戏是个好游戏，可惜中文翻译就是一坨屎，等什么时候中文翻译能切合原英文文本的涵义，届时再改好评\n\n(Translation)\nIt's a good game, but unfortunately the Chinese translation is a piece of ♥♥♥♥. When the Chinese translation can finally match the actual meaning of the original English text, I will change my review to positive.",
+        votedUp: false,
+        votesUp: 49,
+        votedFunny: 10,
+        weightedScore: undefined,
+        authorPlaytimeHours: 72.1,
+        timestamp: 1760587200,
+      },
+    ],
   },
   '1030840': {
     name: 'Mafia',
@@ -41002,13 +41076,14 @@ export const steamGameDetails: SteamGameMap = {
     name: 'Apex Legends',
     appId: 1172470,
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1172470/d86d5fe798addd4ff7219938f891268affb1ea2d/ss_d86d5fe798addd4ff7219938f891268affb1ea2d.600x338.jpg',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1172470/899528308ad54733c8fc1ae825adb57195bface1/ss_899528308ad54733c8fc1ae825adb57195bface1.600x338.jpg',
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1172470/f786d0d1e567be0e5a801a62855970f9b6bae6fd/ss_f786d0d1e567be0e5a801a62855970f9b6bae6fd.600x338.jpg',
     shortDescription:
-      '||Apex Legends|| is the award-winning, free-to-play Hero Shooter from Respawn Entertainment. Master an ever-growing roster of legendary characters with powerful abilities, and experience strategic squad play and innovative gameplay in the next evolution of Hero Shooter and Battle Royale.',
+      '[[Apex Legends]] is the award-winning, free-to-play Hero Shooter Battle Royale from Respawn Entertainment. Master an ever-growing roster of legendary characters with powerful abilities, and experience strategic squad play and innovative gameplay in the next evolution of Hero Shooter and Battle Royale.',
+    originalReleaseDate: 'Feb 4, 2019 (Origin)',
     releaseDate: 'Nov 4, 2020',
-    developer: 'Respawn',
+    developer: '||Respawn||',
     publisher: 'Electronic Arts',
     tags: [],
     features: [],
@@ -41033,7 +41108,34 @@ export const steamGameDetails: SteamGameMap = {
       'Loot',
       'Survival',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    clueOrder: ['review', 'details', 'tags', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
+    reviewClues: [
+      {
+        review:
+          "Today's the day. I don't care that I needed to wait a year and a half for this to come to Steam. I don't care that I am starting in season 7. I'm not buying a game on perhaps the worst launcher/digital storefront on PC.",
+        votedUp: true,
+        votesUp: 141,
+        votedFunny: 6,
+        weightedScore: undefined,
+        authorPlaytimeHours: 3.9,
+        timestamp: 1604534400,
+      },
+      {
+        review:
+          "it is DECENT. yes at this point there's nothing more to be said about this game that hasn't already been said. It has more than a million reviews on steam if you count globally. It has more reviews than Left 4 Dead 2, Stardew Valley, and Cyberpunk 2077. I doubt that I have anything unique to offer.",
+        votedUp: true,
+        votesUp: 2,
+        weightedScore: undefined,
+        authorPlaytimeHours: 85.3,
+        timestamp: 1778803200,
+      },
+    ],
+    extrasClue: {
+      achievementsTotal: 12,
+    },
   },
   '1172620': {
     name: 'Sea of Thieves',
