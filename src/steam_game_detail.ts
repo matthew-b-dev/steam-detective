@@ -40,6 +40,7 @@ export const steamGameDetails: SteamGameMap = {
       'Platformer',
       'Science',
     ],
+    blurredUserTags: ['Comedy', 'Female Protagonist', 'Funny'],
     clueOrder: ['review', 'tags', 'desc', 'details'],
     debugProcessed: true,
     debugRefined: true,
@@ -47,7 +48,7 @@ export const steamGameDetails: SteamGameMap = {
     reviewClues: [
       {
         review:
-          'Can we all agree that ||Ellen McLain||\'s voice acting shoots this game into the stratosphere? Fun fact .. ||Mclain|| voice acted in all 5 titles that were included in the ||Orange Box||.\n\n||Mclain|| voices G||LaDOS||&nbsp;&nbsp;in this one, the administrator in ||TF2||, and the "||Combine|| over-watch" voice in ||HL2||, ||HL2 EP1||, ||HL2 EP2||.',
+          'Can we all agree that ||Ellen McLain||\'s voice acting shoots this game into the stratosphere? Fun fact .. ||Mclain|| voice acted in all 5 titles that were included in the ||Orange||&nbsp;&nbsp;&nbsp;||Box||.\n\n||Mclain|| voices G||LaDOS||&nbsp;&nbsp;in this one, the administrator in ||TF2||, and the "||Combine|| over-watch" voice in ||HL2||, ||HL2 EP1||, ||HL2 EP2||.',
         votedUp: true,
         votesUp: 3,
         weightedScore: undefined,
@@ -9615,7 +9616,7 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/238960/64397e0157e9982baeeb11267527df618ae320a0/ss_64397e0157e9982baeeb11267527df618ae320a0.600x338.jpg',
     shortDescription:
-      'You are an Exile, struggling to survive on the dark continent of Wraeclast, as you fight to earn power that will allow you to exact your revenge against those who wronged you. ||Path of Exile|| is an online Action RPG set in a dark fantasy world. The game is completely free and will never be pay-to-win.',
+      'You are an [[Exil((e))]], struggling to survive on the dark continent of ||Wraeclast||, as you fight to earn power that will allow you to exact your revenge against those who wronged you. [[Path of Exil((e))]] is an online Action RPG set in a dark fantasy world. The game is completely free and will never be pay-to-win.',
     releaseDate: 'Oct 23, 2013',
     developer: 'Grinding Gear Games',
     publisher: 'Grinding Gear Games',
@@ -9629,16 +9630,16 @@ export const steamGameDetails: SteamGameMap = {
     ],
     features: [],
     allReviewSummary: {
-      count: 545,
+      count: 247325,
       rating: 'Very Positive',
     },
     userTags: [
       'Free to Play',
       'Dark Fantasy',
-      'Action RPG',
+      'ARPG',
       'Hack and Slash',
       'Loot',
-      'MMORPG',
+      'Action RPG',
       'Multiplayer',
       'Dungeon Crawler',
       'Isometric',
@@ -9654,7 +9655,48 @@ export const steamGameDetails: SteamGameMap = {
       'Fantasy',
       'Adventure',
     ],
-    clueOrder: ['tags', 'details', 'desc'],
+    blurredUserTags: [
+      'Loot',
+      'Hack and Slash',
+      'Dungeon Crawler',
+      'Character Customization',
+      'Action RPG',
+      'Multiplayer',
+      'Isometric',
+      'Dark Fantasy',
+      'ARPG',
+    ],
+    overrideCensoredTitle: 'P||ath|| ||of|| E||xil||e',
+    clueOrder: ['review', 'details+tags', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
+    reviewClues: [
+      {
+        review:
+          '21000 hours in, I think my most consistent death is still getting charged and chain-stunlocked by a pack of ||Rhoas|| in Act 1.',
+        votedUp: true,
+        votesUp: 715,
+        votedFunny: 204,
+        weightedScore: undefined,
+        authorPlaytimeHours: 21241.7,
+        timestamp: 1771804800,
+      },
+      {
+        review: 'game is good.',
+        votedUp: true,
+        votesUp: 647,
+        votedFunny: 587,
+        weightedScore: undefined,
+        authorPlaytimeHours: 23876.2,
+        authorPlaytimeAtReview: 11984.7,
+        authorPlaytimeHoursAtRelease: 11984.7,
+        timestamp: 1507694400,
+      },
+    ],
+    extrasClue: {
+      achievementsTotal: 127,
+    },
   },
   '239030': {
     name: 'Papers, Please',
@@ -59794,6 +59836,68 @@ export const steamGameDetails: SteamGameMap = {
     moreFromThisDeveloper: [
       { id: 239140, name: 'Dying Light' },
       { id: 383150, name: 'Dead Island Definitive Edition' },
+    ],
+  },
+  '2622380': {
+    name: 'ELDEN RING NIGHTREIGN',
+    appId: 2622380,
+    primaryScreenshot:
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2622380/ss_0b9594934db8a1457c915e200f9d0d9b447a3df4.600x338.jpg',
+    secondaryScreenshot:
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2622380/ss_edfd360b92d6f9b983b759fd837e664b86cd9563.600x338.jpg',
+    shortDescription:
+      '[[Elden Rin((g)) Nightreign]] is a standalone adventure within the [[Elden Rin((g))]] universe. Join forces with other players to take on the creeping night and the dangers within. Three ||Nightfarers|| will have two full days to explore the land of ||Limveld|| as they hunt one of the terrifying ||Nightlords||. ',
+    releaseDate: '29 May, 2025',
+    developer: '||FromSoftware, Inc.||',
+    publisher: '||FromSoftware, Inc.||',
+    tags: [],
+    features: [],
+    allReviewSummary: {
+      count: 94127,
+      rating: 'Very Positive',
+    },
+    userTags: [
+      'Souls-like',
+      'Online Co-Op',
+      'Multiplayer',
+      'Roguelike',
+      'Co-Op',
+      'Singleplayer',
+      'PvE',
+      'Third Person',
+      'Action',
+      'Roguelite',
+      'Action RPG',
+      'Open World',
+      'RPG',
+      'Dark',
+      '3D',
+    ],
+    blurredUserTags: ['Souls-like'],
+    clueOrder: ['review', 'details+tags', 'desc'],
+    debugProcessed: true,
+    debugRefined: true,
+    difficulty: 'Easy',
+    reviewClues: [
+      {
+        review:
+          'Why strictly 3 people? Let me duo with my mate... we always have a random person join and just ||run off and die||.',
+        votedUp: false,
+        votesUp: 5752,
+        weightedScore: undefined,
+        authorPlaytimeHours: 11.3,
+        timestamp: 1748491200,
+      },
+      {
+        review:
+          "On release, my best friend and I reached out to another friend of ours, just so we didn't have to play co-op with a rando. Now that they've released 2 player co-op, we've completely ghosted him. Sorry Eric ... you were holding us back.",
+        votedUp: true,
+        votesUp: 314,
+        votedFunny: 310,
+        weightedScore: undefined,
+        authorPlaytimeHours: 173.7,
+        timestamp: 1754366400,
+      },
     ],
   },
 };

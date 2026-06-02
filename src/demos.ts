@@ -725,19 +725,13 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile2: 'Apex Legends',
     caseFile3: 'BeamNG.drive',
   },
-  // Easy: Portal 2
-  // Easy: Hollow Knight: Silksong
-  // Final day: Portal
   '2026-06-03': {
-    caseFile1: "Don't Starve",
-    caseFile2: 'Fields of Mistria',
-    caseFile3: 'Dwarf Fortress',
+    caseFile1: 'Portal',
+    caseFile2: 'Path of Exile',
+    caseFile3: 'ELDEN RING NIGHTREIGN',
   },
+  // :)
 };
-
-// ****************
-// USE A SCREENSHOT CLUE
-// ****************
 
 // Easy: Split Fiction
 // Easy: Star Wars Battlefront II
