@@ -3,6 +3,7 @@ import {
   getReviewColorClass,
   clueVariants,
   hashSeededCensorText,
+  renderBracketContent,
 } from './utils';
 import type { ReviewSummary } from '../../types';
 import type { ReactElement } from 'react';
@@ -28,15 +29,15 @@ export const ClueDetails: React.FC<ClueDetailsProps> = ({
   show,
   isComplete = false,
 }) => {
-  // Helper to render text with censored parts (||text||)
+  // Helper to render text with censored parts (||text||) and redacted parts ([[text]])
   const renderCensoredText = (text: string): ReactElement[] => {
     const parts: ReactElement[] = [];
-    const pattern = /\|\|(.+?)\|\|/g;
+    const pattern = /\[\[(.+?)\]\]|\|\|(.+?)\|\|/g;
     let lastIndex = 0;
     let match;
 
     while ((match = pattern.exec(text)) !== null) {
-      // Add text before the censored part
+      // Add text before the match
       if (match.index > lastIndex) {
         parts.push(
           <span key={`text-${lastIndex}`}>
@@ -45,22 +46,39 @@ export const ClueDetails: React.FC<ClueDetailsProps> = ({
         );
       }
 
-      // Add censored text with blur
-      const censoredText = hashSeededCensorText(match[1]);
-      parts.push(
-        <span
-          key={`censored-${match.index}`}
-          style={{ filter: 'blur(6px)' }}
-          className='select-none'
-        >
-          {censoredText}
-        </span>,
-      );
+      if (match[1] !== undefined) {
+        // [[text]] - underscore placeholder
+        parts.push(
+          <span
+            key={`redacted-${match.index}`}
+            style={{
+              whiteSpace: 'nowrap',
+              paddingLeft: '0.35em',
+              paddingRight: '0.35em',
+            }}
+            className='select-none'
+          >
+            {renderBracketContent(match[1])}
+          </span>,
+        );
+      } else {
+        // ||text|| - censored with blur
+        const censoredText = hashSeededCensorText(match[2]);
+        parts.push(
+          <span
+            key={`censored-${match.index}`}
+            style={{ filter: 'blur(6px)' }}
+            className='select-none'
+          >
+            {censoredText}
+          </span>,
+        );
+      }
 
       lastIndex = pattern.lastIndex;
     }
 
-    // Add remaining text after last censored part
+    // Add remaining text after last match
     if (lastIndex < text.length) {
       parts.push(
         <span key={`text-${lastIndex}`}>{text.slice(lastIndex)}</span>,
@@ -70,9 +88,13 @@ export const ClueDetails: React.FC<ClueDetailsProps> = ({
     return parts;
   };
 
-  // Remove censorship markers (||text||) when showing uncensored version
+  // Remove censorship/redaction markers when showing uncensored version
   const getUncensoredText = (text: string) => {
-    return text.replace(/\|\|(.+?)\|\|/g, '$1');
+    return text
+      .replace(/\[\[(.+?)\]\]/g, (_, inner) =>
+        inner.replace(/\(\((.+?)\)\)/g, '$1'),
+      )
+      .replace(/\|\|(.+?)\|\|/g, '$1');
   };
 
   // Wrap parenthetical suffixes like " (South Korea)" in a subtler italic style.

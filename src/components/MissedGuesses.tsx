@@ -34,6 +34,19 @@ const MissedGuesses: React.FC<MissedGuessesProps> = ({ missedGuesses }) => {
           to happen. I'm so sorry. 😅
         </div>
       )}
+      {/* Half-Life / Black Mesa mixup */}
+      {missedGuesses.some((g) => g.isClose && g.name === 'Half-Life') && (
+        <div className='mt-1 text-sm'>
+          <span
+            key='Half-Life'
+            className={`flex items-center rounded px-2 py-1 text-sm text-yellow-500 bg-yellow-900/30`}
+          >
+            Half-Life is an extremely close guess but this game does not have
+            "Half-Life" in its name. Instead, the developers chose a name taken
+            from something integral to the game itself.
+          </span>
+        </div>
+      )}
       {missedGuesses.some(
         (g) => g.isClose && g.name === 'Like a Dragon: Infinite Wealth',
       ) && (

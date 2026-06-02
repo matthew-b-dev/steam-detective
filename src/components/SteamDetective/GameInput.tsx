@@ -148,7 +148,8 @@ export const GameInput: React.FC<GameInputProps> = ({
     if (!debouncedInput || debouncedEffectiveLength < 3) return [];
 
     let results = gameSearch.search(debouncedInput, {
-      prefix: true,
+      prefix: (term, index, terms) =>
+        index === terms.length - 1 || term.length >= 2,
       fuzzy: SEARCH_FUZZY,
       combineWith: 'AND',
       boost: { name: 2 },

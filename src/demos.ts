@@ -701,15 +701,37 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
     caseFile3: 'The Planet Crafter',
   },
   '2026-05-29': {
-    caseFile1: "Don't Starve",
-    caseFile2: 'Fields of Mistria',
-    caseFile3: 'Dwarf Fortress',
+    caseFile1: 'Red Dead Redemption 2',
+    caseFile2: '7 Days to Die',
+    caseFile3: 'Trackmania',
   },
+  '2026-05-30': {
+    caseFile1: 'The Elder Scrolls IV: Oblivion',
+    caseFile2: 'Team Fortress 2',
+    caseFile3: 'Nioh 2',
+  },
+  '2026-05-31': {
+    caseFile1: 'Grand Theft Auto IV',
+    caseFile2: 'Black Mesa',
+    caseFile3: 'Hollow Knight',
+  },
+  '2026-06-01': {
+    caseFile1: 'Subnautica',
+    caseFile2: 'ARC Raiders',
+    caseFile3: 'Call of Juarez',
+  },
+  '2026-06-02': {
+    caseFile1: 'Hollow Knight: Silksong',
+    caseFile2: 'Apex Legends',
+    caseFile3: 'BeamNG.drive',
+  },
+  '2026-06-03': {
+    caseFile1: 'Portal',
+    caseFile2: 'Path of Exile',
+    caseFile3: 'ELDEN RING NIGHTREIGN',
+  },
+  // :)
 };
-
-// ****************
-// USE A SCREENSHOT CLUE
-// ****************
 
 // Easy: Split Fiction
 // Easy: Star Wars Battlefront II
@@ -717,7 +739,6 @@ export const STEAM_DETECTIVE_DEMO_DAYS: {
 // Easy: State of Decay 2
 // Easy: Any AC Game (last 3/29): Revelations, Unity, (1), (2), Brotherhood, Rogue, Syndicate, Valhalla, Mirage
 
-// Med: Trackmania
 // Med: Luck be a Landlord
 // Med: Tropico 4 (Last Tropico 3/15)
 // Med: Clustertruck

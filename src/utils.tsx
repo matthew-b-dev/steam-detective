@@ -267,6 +267,11 @@ export const isCloseGuess = (guess: string, targetName: string): boolean => {
   const guessLower = guess.toLowerCase();
   const targetLower = targetName.toLowerCase();
 
+  // A one-off :) ... "Half-Life" is a close guess for "Black Mesa"
+  if (guessLower === 'half-life' && targetLower === 'black mesa') {
+    return true;
+  }
+
   // Special case: if both contain a known series/franchise name, consider them close
   for (const series of CLOSE_GUESS_SERIES) {
     if (guessLower.includes(series) && targetLower.includes(series)) {

@@ -1,4 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { VideoCameraIcon } from '@heroicons/react/24/solid';
+import { sendFeedback } from './lib/supabaseClient';
+import { isLocalhost, eventFiredThisSession } from './utils';
 
 export const dailyMessages: Record<string, React.ReactNode> = {
   '2026-04-01': (
@@ -12,6 +15,45 @@ export const dailyMessages: Record<string, React.ReactNode> = {
       Aprilvis! Primeiro de abril! Prima Aprilis! 愚人节快乐 !
     </div>
   ),
+  '2026-05-31': (() => {
+    const BapanadaMessage = () => {
+      const [open, setOpen] = useState(false);
+      return (
+        <div>
+          <div className='flex justify-center'>
+            <button
+              onClick={() => {
+                setOpen((o) => !o);
+                if (
+                  !isLocalhost() &&
+                  !eventFiredThisSession('[Event] Bapanada')
+                )
+                  sendFeedback('custom', '`[Event]` Bapanada');
+              }}
+              className='flex items-center gap-1 cursor-pointer bg-zinc-800'
+            >
+              <VideoCameraIcon className='w-6 h-6 shrink-0 mr-1' />
+              <i>*sigh*</i> ... Bapanada
+            </button>
+          </div>
+          {open && (
+            <div className='mt-2 w-full'>
+              <div className='relative w-full pb-[56.25%]'>
+                <iframe
+                  className='absolute inset-0 w-full h-full'
+                  src='https://www.youtube.com/embed/s8GpIX1aIiI?controls=0'
+                  title='Bapanada'
+                  allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+                  allowFullScreen
+                />
+              </div>
+            </div>
+          )}
+        </div>
+      );
+    };
+    return <BapanadaMessage />;
+  })(),
 };
 
 /*

@@ -57,33 +57,6 @@ export const decodeHtmlEntities = (text: string): string => {
   return textarea.value;
 };
 
-// Helper to randomize a character while preserving type
-const randomizeChar = (char: string): string => {
-  if (/[A-Z]/.test(char)) {
-    // Random uppercase letter
-    return String.fromCharCode(65 + Math.floor(Math.random() * 26));
-  } else if (/[a-z]/.test(char)) {
-    // Random lowercase letter
-    return String.fromCharCode(97 + Math.floor(Math.random() * 26));
-  } else if (/[0-9]/.test(char)) {
-    // Random digit
-    return Math.floor(Math.random() * 10).toString();
-  }
-  // Keep everything else (spaces, punctuation, ™, ©, etc.)
-  return char;
-};
-
-// Helper to censor text by randomizing alphanumeric characters
-const censorText = (text: string): string => {
-  // With only 1 character, we just return 'B' because it guarantees we can see some kind of blur
-  // some characters it's difficult to see anything at all when they're blurred
-  if (text?.length === 1) return 'B';
-  return text
-    .split('')
-    .map((char) => randomizeChar(char))
-    .join('');
-};
-
 // Uppercase letters available for random substitution (excludes I and L)
 const UPPER_POOL = 'ABCDEFGHJKMNOPQRSTUVWXYZ';
 // Lowercase letters available for random substitution (excludes i and l)
@@ -148,7 +121,7 @@ const bracketNoteStyle: React.CSSProperties = {
 // Renders [[bracket]] content as React elements.
 // ((revealed)) tokens display their text; spaces become wide non-breaking gaps;
 // all other chars become underscores. Uses \u00A0 to prevent HTML space collapsing.
-const renderBracketContent = (text: string): ReactElement[] => {
+export const renderBracketContent = (text: string): ReactElement[] => {
   type Token =
     | { kind: 'reveal'; text: string }
     | { kind: 'space' }
@@ -213,7 +186,7 @@ export const renderCensoredDescription = (
       );
     } else if (match[2] !== undefined) {
       // ||text|| - censored with blur
-      const censoredText = censorText(match[2]);
+      const censoredText = hashSeededCensorText(match[2]);
       const len = match[2].length;
       const blurAmount = len === 1 ? '4px' : len === 2 ? '5px' : '7px';
       parts.push(
