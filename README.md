@@ -6,7 +6,7 @@
 
 ## What is this thing?
 
-SteamDetective.wtf was a daily web-based trivia game challenging players' knowledge of PC (Steam) games. In each challenge, players work through several mystery games, themed as "Case Files". Clues for each "Case File" are revealed one at a time, and the fewer guesses it takes to identify the game, the higher the score.
+SteamDetective.wtf is a web-based trivia game challenging players' knowledge of PC (Steam) games. In each challenge, players work through several mystery games, themed as "Case Files". Clues for each "Case File" are revealed one at a time, and the fewer guesses it takes to identify the game, the higher the score.
 
 ---
 
@@ -27,7 +27,7 @@ Points are awarded per case file based on how many guesses were used:
 | DNF     | 0      |
 
 
-After all of case files are completed for a daily challenge, the player's total score is submitted anonymously to Supabase and compared against all other scores for that date. A scatter plot renders every submission with the player's own position highlighted.
+After all the case files are completed for a daily challenge, the player's total score is submitted anonymously to Supabase and compared against all other scores for that date. A scatter plot renders every submission with the player's own position highlighted.
 
 The share output copied to clipboard looks like:
 

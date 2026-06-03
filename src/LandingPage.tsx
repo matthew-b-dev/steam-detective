@@ -110,8 +110,9 @@ export const LandingPage = () => {
           <div className='w-full max-w-2xl text-left text-xs sm:text-sm rounded border border-blue-500/60 mb-6 bg-blue-900/20 px-3 py-3 text-blue-100'>
             <p className='leading-relaxed'>
               This daily trivia run has come to an end after 120 consecutive
-              days. The site will remain up (it's hosted for free). Thank you so
-              much for playing along and sharing awesome feedback along the way!
+              days. The site will stay up indefinitely (it's hosted for free).
+              Thank you so much for playing along and sharing awesome feedback
+              along the way!
               <br />
               You're welcome to drop me a line:{' '}
               <span className='block mt-1 ml-1 relative -top-[2px]'>
