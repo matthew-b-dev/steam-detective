@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 import {
   QuestionMarkCircleIcon,
   ChartBarIcon,
@@ -44,7 +44,7 @@ export const LandingPage = () => {
   );
 
   useEffect(() => {
-    if (new Date() < BANNER_END_DATE) {
+    if (new Date() > BANNER_END_DATE) {
       fetchFeedbackCounts(WAVE_DATE).then((counts) => {
         if (counts) setWaveCount(counts.perfect);
       });
@@ -69,6 +69,10 @@ export const LandingPage = () => {
   const handleDateSelect = (dateStr: string) => {
     window.location.href = `/d/${dateStr}`;
   };
+
+  const hasRetired = useMemo(() => {
+    return new Date() > BANNER_END_DATE;
+  }, []);
 
   return (
     <div
@@ -106,7 +110,7 @@ export const LandingPage = () => {
         </p>
 
         {/* Farewell banner */}
-        {new Date() < BANNER_END_DATE && (
+        {!hasRetired && (
           <div className='w-full max-w-2xl text-left text-xs sm:text-sm rounded border border-blue-500/60 mb-6 bg-blue-900/20 px-3 py-3 text-blue-100'>
             <p className='leading-relaxed'>
               This daily trivia run has come to an end after 120 consecutive
@@ -154,7 +158,9 @@ export const LandingPage = () => {
         )}
 
         {/* Buttons */}
-        <div className='flex flex-col items-center gap-3 w-full max-w-xs sm:max-w-none'>
+        <div
+          className={`flex flex-col items-center gap-3 w-full max-w-xs sm:max-w-none ${hasRetired ? 'mt-6' : ''}`}
+        >
           {/* How to Play - mobile: 1st, desktop: 2nd */}
           <button
             className='order-2 sm:order-2 flex items-center justify-center gap-2 transition-colors w-full sm:w-auto px-6 py-3 bg-transparent border border-zinc-700 hover:border-zinc-500 text-gray-300 hover:text-gray-100 font-semibold text-sm rounded-xl sm:border-0 sm:p-1 sm:-mt-1 sm:text-zinc-400 sm:hover:text-zinc-200 sm:font-normal sm:underline'
