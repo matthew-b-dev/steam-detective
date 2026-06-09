@@ -44,7 +44,7 @@ export const LandingPage = () => {
   );
 
   useEffect(() => {
-    if (new Date() > BANNER_END_DATE) {
+    if (new Date() < BANNER_END_DATE) {
       fetchFeedbackCounts(WAVE_DATE).then((counts) => {
         if (counts) setWaveCount(counts.perfect);
       });
